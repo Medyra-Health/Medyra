@@ -3,11 +3,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  serverExternalPackages: ['mongodb'],
   experimental: {
-    // Remove if not using Server Components
-    serverComponentsExternalPackages: ['mongodb'],
     serverActions: {
-      allowedOrigins: process.env.NEXT_PUBLIC_BASE_URL ? [new URL(process.env.NEXT_PUBLIC_BASE_URL).hostname, '*'] : ['*'],
+      bodySizeLimit: '2mb',
+      allowedOrigins: ['*'],
     },
   },
   webpack(config, { dev }) {
