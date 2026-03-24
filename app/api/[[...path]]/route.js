@@ -283,6 +283,7 @@ async function handleRoute(request, { params }) {
 
       const reports = await db.collection('reports')
         .find({ userId })
+        .project({ extractedText: 0 }) // Exclude large text field
         .sort({ createdAt: -1 })
         .limit(50)
         .toArray()
