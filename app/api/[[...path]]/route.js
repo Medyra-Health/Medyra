@@ -11,7 +11,13 @@ import Stripe from 'stripe'
 let mongoClient
 let db
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
-const visionClient = new vision.ImageAnnotatorClient()
+
+// Initialize Google Vision with base64 credentials
+const googleCredentials = JSON.parse(
+  Buffer.from(process.env.GOOGLE_CREDENTIALS_BASE64, 'base64').toString()
+)
+const visionClient = new vision.ImageAnnotatorClient({ credentials: googleCredentials })
+
 const stripe = new Stripe(process.env.STRIPE_API_KEY)
 
 // MongoDB connection
