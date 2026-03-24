@@ -7,7 +7,7 @@ const nextConfig = {
     // Remove if not using Server Components
     serverComponentsExternalPackages: ['mongodb'],
     serverActions: {
-      allowedOrigins: ['med-explain-1.preview.emergentagent.com', 'med-explain-1.cluster-10.preview.emergentcf.cloud'],
+      allowedOrigins: process.env.NEXT_PUBLIC_BASE_URL ? [new URL(process.env.NEXT_PUBLIC_BASE_URL).hostname, '*'] : ['*'],
     },
   },
   webpack(config, { dev }) {
