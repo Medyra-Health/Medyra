@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import Anthropic from '@anthropic-ai/sdk'
-import vision from '@google-cloud/vision'
+//import vision from '@google-cloud/vision'
 import pdfParse from 'pdf-parse'
 import Stripe from 'stripe'
 
@@ -106,6 +106,9 @@ async function extractTextFromPDF(buffer) {
 
 // Extract text from image using Google Vision
 async function extractTextFromImage(buffer) {
+  if (!visionClient) {
+    throw new Error('Google Vision is not configured. Please upload a PDF or text file instead.')
+  }
   try {
     const [result] = await visionClient.documentTextDetection({
       image: { content: buffer }
