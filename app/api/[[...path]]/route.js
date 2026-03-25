@@ -12,13 +12,21 @@ let mongoClient
 let db
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
-// Initialize Google Vision with base64 credentials
-const googleCredentials = JSON.parse(
-  Buffer.from(process.env.GOOGLE_CREDENTIALS_BASE64, 'base64').toString()
-)
-const visionClient = new vision.ImageAnnotatorClient({ credentials: googleCredentials })
 
-const stripe = new Stripe(process.env.STRIPE_API_KEY)
+// Optional: only initialize Google Vision if base64 creds exist
+let visionClient = null
+if (process.env.GOOGLE_CREDENTIALS_BASE64) {
+  try {
+    const googleCredentials = JSON.parse(
+      Buffer.from(process.env.GOOGLE_CREDENTIALS_BASE64, 'base64').toString()
+    )
+    visionClient = new vision.ImageAnnotatorClient({ credentials: googleCredentials })
+  } catch (err) {
+    console.warn('Google Vision not initialized:', err.message)
+  }
+}
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 // MongoDB connection
 async function connectToMongo() {
