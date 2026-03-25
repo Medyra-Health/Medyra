@@ -14,30 +14,36 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
 
 // Optional: only initialize Google Vision if base64 creds exist
-let visionClient = null
+let visionClient = null;
 if (process.env.GOOGLE_CREDENTIALS_BASE64) {
   try {
     const googleCredentials = JSON.parse(
       Buffer.from(process.env.GOOGLE_CREDENTIALS_BASE64, 'base64').toString()
-    )
-    visionClient = new vision.ImageAnnotatorClient({ credentials: googleCredentials })
+    );
+    visionClient = new vision.ImageAnnotatorClient({ credentials: googleCredentials });
   } catch (err) {
-    console.warn('Google Vision not initialized:', err.message)
+    console.warn('Google Vision skipped:', err.message);
   }
 }
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
+const stripe = process.env.STRIPE_SECRET_KEY 
+  ? new Stripe(process.env.STRIPE_SECRET_KEY) 
+  : null;
 
 // MongoDB connection
 async function connectToMongo() {
   if (!mongoClient) {
-    mongoClient = new MongoClient(process.env.MONGO_URL)
-    await mongoClient.connect()
-    db = mongoClient.db(process.env.DB_NAME)
+    const uri = process.env.MONGO_URL;
+    const dbName = process.env.DB_NAME || 'medyra';
+    
+    if (!uri) throw new Error('MONGO_URL is not defined');
+    
+    mongoClient = new MongoClient(uri);
+    await mongoClient.connect();
+    db = mongoClient.db(dbName);
   }
-  return db
+  return db;
 }
-
 // Helper function to handle CORS
 function handleCORS(response) {
   response.headers.set('Access-Control-Allow-Origin', process.env.CORS_ORIGINS || '*')
