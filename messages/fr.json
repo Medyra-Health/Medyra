@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "upload": "Télécharger un rapport",
+    "pricing": "Tarifs",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "language": "Langue"
+  },
+  "hero": {
+    "title": "Comprendre vos rapports médicaux",
+    "subtitle": "en langage simple",
+    "description": "Téléchargez vos résultats de laboratoire et obtenez des explications alimentées par l'IA qui ont vraiment du sens. Aucun diplôme médical requis.",
+    "cta": "Essayer un rapport gratuit",
+    "disclaimer": "Ceci est une information éducative, pas un avis médical. Consultez toujours votre médecin."
+  },
+  "features": {
+    "ai": {
+      "title": "Explications alimentées par l'IA",
+      "desc": "L'IA avancée décompose la terminologie médicale complexe en langage simple"
+    },
+    "secure": {
+      "title": "Conforme au RGPD",
+      "desc": "Vos données sont cryptées et automatiquement supprimées après 30 jours"
+    },
+    "fast": {
+      "title": "Résultats instantanés",
+      "desc": "Obtenez l'explication de votre rapport en moins de 60 secondes"
+    }
+  },
+  "upload": {
+    "title": "Télécharger un rapport médical",
+    "description": "Téléchargez vos résultats de laboratoire au format PDF, image (JPG/PNG) ou texte",
+    "dragDrop": "Glissez-déposez votre fichier ici",
+    "or": "ou cliquez pour parcourir",
+    "camera": "Prendre une photo",
+    "analyzing": "Analyse de votre rapport...",
+    "extracting": "Extraction du texte...",
+    "processing": "Traitement avec l'IA...",
+    "formats": "Formats supportés: PDF, JPG, PNG, TXT",
+    "maxSize": "Taille max: 10MB"
+  },
+  "dashboard": {
+    "welcome": "Bienvenue",
+    "yourPlan": "Votre forfait",
+    "usage": "Utilisation",
+    "recentReports": "Rapports récents",
+    "noReports": "Aucun rapport pour le moment",
+    "uploadFirst": "Téléchargez votre premier rapport médical pour commencer",
+    "viewAll": "Tout voir",
+    "stats": "Statistiques",
+    "totalReports": "Rapports totaux",
+    "thisMonth": "Ce mois-ci"
+  },
+  "report": {
+    "disclaimer": "Avertissement médical",
+    "disclaimerText": "Ceci est une information éducative, pas un avis médical. Consultez toujours votre médecin pour des conseils médicaux personnalisés.",
+    "summary": "Résumé",
+    "testResults": "Résultats des tests",
+    "normal": "Normal",
+    "high": "Élevé",
+    "low": "Faible",
+    "critical": "Critique",
+    "yourResult": "Votre résultat",
+    "normalRange": "Plage normale",
+    "whatThisMeans": "Ce que cela signifie",
+    "whatThisTests": "Ce que ce test mesure",
+    "questionsForDoctor": "Questions à poser à votre médecin",
+    "askQuestion": "Poser une question de suivi",
+    "copy": "Copier l'explication",
+    "share": "Partager avec le médecin",
+    "exportPDF": "Exporter en PDF",
+    "print": "Imprimer"
+  },
+  "pricing": {
+    "title": "Choisissez votre forfait",
+    "subtitle": "Commencez gratuitement, passez à la version supérieure à tout moment",
+    "free": {
+      "name": "Gratuit",
+      "price": "0€",
+      "period": "/mois",
+      "features": ["1 rapport par mois", "Explication en langage simple", "Mise en évidence de la plage normale", "Support de base"]
+    },
+    "personal": {
+      "name": "Personnel",
+      "price": "9€",
+      "period": "/mois",
+      "popular": "Plus populaire",
+      "features": ["Rapports illimités", "Historique des rapports", "Chat de suivi", "Export PDF", "Support par email"]
+    },
+    "subscribe": "S'abonner",
+    "currentPlan": "Forfait actuel"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Soumettre",
+    "close": "Fermer"
+  },
+  "errors": {
+    "fileRequired": "Veuillez sélectionner un fichier à télécharger",
+    "fileTooLarge": "La taille du fichier doit être inférieure à 10MB",
+    "unsupportedFormat": "Format de fichier non supporté",
+    "uploadFailed": "Échec du téléchargement. Veuillez réessayer.",
+    "analysisFailed": "Échec de l'analyse. Veuillez réessayer.",
+    "unauthorized": "Veuillez vous connecter pour continuer",
+    "limitReached": "Limite d'utilisation atteinte. Veuillez passer à un forfait supérieur."
+  }
+}
