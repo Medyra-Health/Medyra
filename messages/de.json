@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "dashboard": "Dashboard",
+    "upload": "Bericht hochladen",
+    "pricing": "Preise",
+    "signIn": "Anmelden",
+    "signOut": "Abmelden",
+    "language": "Sprache"
+  },
+  "hero": {
+    "title": "Verstehen Sie Ihre medizinischen Berichte",
+    "subtitle": "in einfacher Sprache",
+    "description": "Laden Sie Ihre Laborergebnisse hoch und erhalten Sie KI-gestützte Erklärungen, die tatsächlich Sinn ergeben. Kein Medizinstudium erforderlich.",
+    "cta": "Kostenlosen Bericht testen",
+    "disclaimer": "Dies sind Bildungsinformationen, keine medizinische Beratung. Konsultieren Sie immer Ihren Arzt."
+  },
+  "features": {
+    "ai": {
+      "title": "KI-gestützte Erklärungen",
+      "desc": "Fortschrittliche KI zerlegt komplexe medizinische Terminologie in einfache Sprache"
+    },
+    "secure": {
+      "title": "DSGVO-konform",
+      "desc": "Ihre Daten sind verschlüsselt und werden nach 30 Tagen automatisch gelöscht"
+    },
+    "fast": {
+      "title": "Sofortige Ergebnisse",
+      "desc": "Lassen Sie Ihren Bericht in unter 60 Sekunden erklären"
+    }
+  },
+  "upload": {
+    "title": "Medizinischen Bericht hochladen",
+    "description": "Laden Sie Ihre Laborergebnisse im PDF-, Bild- (JPG/PNG) oder Textformat hoch",
+    "dragDrop": "Ziehen Sie Ihre Datei hierher",
+    "or": "oder klicken Sie zum Durchsuchen",
+    "camera": "Foto aufnehmen",
+    "analyzing": "Ihr Bericht wird analysiert...",
+    "extracting": "Text wird extrahiert...",
+    "processing": "Verarbeitung mit KI...",
+    "formats": "Unterstützt: PDF, JPG, PNG, TXT",
+    "maxSize": "Maximale Größe: 10MB"
+  },
+  "dashboard": {
+    "welcome": "Willkommen",
+    "yourPlan": "Ihr Plan",
+    "usage": "Nutzung",
+    "recentReports": "Aktuelle Berichte",
+    "noReports": "Noch keine Berichte",
+    "uploadFirst": "Laden Sie Ihren ersten medizinischen Bericht hoch, um zu beginnen",
+    "viewAll": "Alle anzeigen",
+    "stats": "Statistiken",
+    "totalReports": "Gesamtberichte",
+    "thisMonth": "Diesen Monat"
+  },
+  "report": {
+    "disclaimer": "Medizinischer Haftungsausschluss",
+    "disclaimerText": "Dies sind Bildungsinformationen, keine medizinische Beratung. Konsultieren Sie immer Ihren Arzt für personalisierte medizinische Beratung.",
+    "summary": "Zusammenfassung",
+    "testResults": "Testergebnisse",
+    "normal": "Normal",
+    "high": "Hoch",
+    "low": "Niedrig",
+    "critical": "Kritisch",
+    "yourResult": "Ihr Ergebnis",
+    "normalRange": "Normalbereich",
+    "whatThisMeans": "Was das bedeutet",
+    "whatThisTests": "Was dieser Test misst",
+    "questionsForDoctor": "Fragen an Ihren Arzt",
+    "askQuestion": "Eine Folgefrage stellen",
+    "copy": "Erklärung kopieren",
+    "share": "Mit Arzt teilen",
+    "exportPDF": "PDF exportieren",
+    "print": "Drucken"
+  },
+  "pricing": {
+    "title": "Wählen Sie Ihren Plan",
+    "subtitle": "Beginnen Sie kostenlos, upgraden Sie jederzeit",
+    "free": {
+      "name": "Kostenlos",
+      "price": "€0",
+      "period": "/Mo",
+      "features": ["1 Bericht pro Monat", "Verständliche Erklärung", "Normalbereich-Markierungen", "Basis-Support"]
+    },
+    "personal": {
+      "name": "Persönlich",
+      "price": "€9",
+      "period": "/Mo",
+      "popular": "Am beliebtesten",
+      "features": ["Unbegrenzte Berichte", "Berichtsverlauf", "Follow-up-Chat", "PDF-Export", "E-Mail-Support"]
+    },
+    "subscribe": "Abonnieren",
+    "currentPlan": "Aktueller Plan"
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "back": "Zurück",
+    "next": "Weiter",
+    "submit": "Absenden",
+    "close": "Schließen"
+  },
+  "errors": {
+    "fileRequired": "Bitte wählen Sie eine Datei zum Hochladen aus",
+    "fileTooLarge": "Dateigröße muss weniger als 10MB betragen",
+    "unsupportedFormat": "Nicht unterstütztes Dateiformat",
+    "uploadFailed": "Upload fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "analysisFailed": "Analyse fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "unauthorized": "Bitte melden Sie sich an, um fortzufahren",
+    "limitReached": "Nutzungslimit erreicht. Bitte upgraden Sie Ihren Plan."
+  }
+}
