@@ -1,28 +1,34 @@
-const withPWA = require('next-pwa')({
-  dest: 'public',
-  register: true,
-  skipWaiting: true,
-  disable: process.env.NODE_ENV === 'development'
-});
-
 const nextConfig = {
-  reactStrictMode: true,
+  images: { unoptimized: true },
   serverExternalPackages: ['mongodb'],
+  turbopack: {
+    root: __dirname,
+  },
   experimental: {
-    serverActions: {
-      bodySizeLimit: '10mb',
-      allowedOrigins: ['*'],
-    },
+    serverActions: { bodySizeLimit: '10mb' }
   },
-  images: {
-    domains: ['localhost', 'medyra.de'],
-    formats: ['image/avif', 'image/webp'],
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: '/api/:path*'
+      }
+    ]
   },
-  i18n: {
-    locales: ['en', 'de', 'bn', 'fr', 'es', 'it', 'pt', 'nl', 'pl', 'tr', 'ar', 'zh', 'ja', 'ko', 'hi', 'ru'],
-    defaultLocale: 'en',
-    localeDetection: true,
-  },
-};
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Frame-Options', value: 'ALLOWALL' },
+          { key: 'Content-Security-Policy', value: 'frame-ancestors *;' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, OPTIONS' },
+          { key: 'Access-Control-Allow-Headers', value: '*' },
+        ]
+      }
+    ]
+  }
+}
 
-module.exports = withPWA(nextConfig);
+module.exports = nextConfig
