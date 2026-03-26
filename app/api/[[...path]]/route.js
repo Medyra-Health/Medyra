@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import Anthropic from '@anthropic-ai/sdk'
-import vision from '@google-cloud/vision'
+//import vision from '@google-cloud/vision'
 import pdfParse from 'pdf-parse'
 import Stripe from 'stripe'
 
@@ -36,63 +36,38 @@ try {
   console.error('Failed to initialize Google Vision:', error.message)
 }
 
-const stripe = new Stripe(process.env.STRIPE_API_KEY || 'sk_test_default')
 
-// ============================================================================
-// DATABASE CONNECTION (Vercel-optimized)
-// ============================================================================
-
-async function connectToMongo() {
-  // Return existing connection
-  if (db && mongoClient) {
-    try {
-      // Test the connection
-      await db.admin().ping()
-      return db
-    } catch (error) {
-      console.log('MongoDB connection lost, reconnecting...')
-      mongoClient = null
-      db = null
-    }
-  }
-
-  // Prevent multiple simultaneous connections
-  if (isConnecting) {
-    await new Promise(resolve => setTimeout(resolve, 100))
-    return connectToMongo()
-  }
-
+// Optional: only initialize Google Vision if base64 creds exist
+let visionClient = null;
+if (process.env.GOOGLE_CREDENTIALS_BASE64) {
   try {
-    isConnecting = true
-    
-    if (!process.env.MONGO_URL) {
-      throw new Error('MONGO_URL environment variable is not set')
-    }
-
-    mongoClient = new MongoClient(process.env.MONGO_URL, {
-      maxPoolSize: 10,
-      minPoolSize: 2,
-      maxIdleTimeMS: 30000,
-      serverSelectionTimeoutMS: 5000,
-    })
-    
-    await mongoClient.connect()
-    db = mongoClient.db(process.env.DB_NAME || 'medyra')
-    
-    console.log('✅ MongoDB connected successfully')
-    return db
-  } catch (error) {
-    console.error('❌ MongoDB connection error:', error.message)
-    throw new Error(`Database connection failed: ${error.message}`)
-  } finally {
-    isConnecting = false
+    const googleCredentials = JSON.parse(
+      Buffer.from(process.env.GOOGLE_CREDENTIALS_BASE64, 'base64').toString()
+    );
+    visionClient = new vision.ImageAnnotatorClient({ credentials: googleCredentials });
+  } catch (err) {
+    console.warn('Google Vision skipped:', err.message);
   }
 }
 
-// ============================================================================
-// CORS HANDLER
-// ============================================================================
+const stripe = process.env.STRIPE_SECRET_KEY 
+  ? new Stripe(process.env.STRIPE_SECRET_KEY) 
+  : null;
 
+async function connectToMongo() {
+  if (!mongoClient) {
+    const uri = process.env.MONGO_URL;
+    const dbName = process.env.DB_NAME || 'medyra';
+    
+    if (!uri) throw new Error('MONGO_URL is not defined');
+    
+    mongoClient = new MongoClient(uri);
+    await mongoClient.connect();
+    db = mongoClient.db(dbName);
+  }
+  return db;
+}
+// Helper function to handle CORS
 function handleCORS(response) {
   response.headers.set('Access-Control-Allow-Origin', process.env.CORS_ORIGINS || '*')
   response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
@@ -163,9 +138,8 @@ async function extractTextFromPDF(buffer) {
 
 async function extractTextFromImage(buffer) {
   if (!visionClient) {
-    throw new Error('Google Vision API is not configured. Please set GOOGLE_CREDENTIALS_BASE64 environment variable.')
+    throw new Error('Google Vision is not configured. Please upload a PDF or text file instead.')
   }
-
   try {
     console.log('🖼️  Extracting text from image with Google Vision...')
     
