@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "upload": "Upload Report",
+    "pricing": "Pricing",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Understand Your Medical Reports",
+    "subtitle": "in Plain Language",
+    "description": "Upload your lab results and get AI-powered explanations that actually make sense. No medical degree required.",
+    "cta": "Try Free Report",
+    "disclaimer": "This is educational information, not medical advice. Always consult your doctor."
+  },
+  "features": {
+    "ai": {
+      "title": "AI-Powered Explanations",
+      "desc": "Advanced AI breaks down complex medical terminology into simple language"
+    },
+    "secure": {
+      "title": "GDPR Compliant",
+      "desc": "Your data is encrypted and automatically deleted after 30 days"
+    },
+    "fast": {
+      "title": "Instant Results",
+      "desc": "Get your report explained in under 60 seconds"
+    }
+  },
+  "upload": {
+    "title": "Upload Medical Report",
+    "description": "Upload your lab results in PDF, image (JPG/PNG), or text format",
+    "dragDrop": "Drag & drop your file here",
+    "or": "or click to browse",
+    "camera": "Take Photo",
+    "analyzing": "Analyzing your report...",
+    "extracting": "Extracting text...",
+    "processing": "Processing with AI...",
+    "formats": "Supported: PDF, JPG, PNG, TXT",
+    "maxSize": "Max size: 10MB"
+  },
+  "dashboard": {
+    "welcome": "Welcome",
+    "yourPlan": "Your Plan",
+    "usage": "Usage",
+    "recentReports": "Recent Reports",
+    "noReports": "No reports yet",
+    "uploadFirst": "Upload your first medical report to get started",
+    "viewAll": "View All",
+    "stats": "Statistics",
+    "totalReports": "Total Reports",
+    "thisMonth": "This Month"
+  },
+  "report": {
+    "disclaimer": "Medical Disclaimer",
+    "disclaimerText": "This is educational information, not medical advice. Always consult your doctor for personalized medical guidance.",
+    "summary": "Summary",
+    "testResults": "Test Results",
+    "normal": "Normal",
+    "high": "High",
+    "low": "Low",
+    "critical": "Critical",
+    "yourResult": "Your result",
+    "normalRange": "Normal range",
+    "whatThisMeans": "What this means",
+    "whatThisTests": "What this test measures",
+    "questionsForDoctor": "Questions to Ask Your Doctor",
+    "askQuestion": "Ask a follow-up question",
+    "copy": "Copy explanation",
+    "share": "Share with doctor",
+    "exportPDF": "Export PDF",
+    "print": "Print"
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "subtitle": "Start with free, upgrade anytime",
+    "free": {
+      "name": "Free",
+      "price": "€0",
+      "period": "/mo",
+      "features": ["1 report per month", "Plain-language explanation", "Normal range highlights", "Basic support"]
+    },
+    "personal": {
+      "name": "Personal",
+      "price": "€9",
+      "period": "/mo",
+      "popular": "Most Popular",
+      "features": ["Unlimited reports", "Report history", "Follow-up chat", "PDF export", "Email support"]
+    },
+    "subscribe": "Subscribe",
+    "currentPlan": "Current Plan"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "close": "Close"
+  },
+  "errors": {
+    "fileRequired": "Please select a file to upload",
+    "fileTooLarge": "File size must be less than 10MB",
+    "unsupportedFormat": "Unsupported file format",
+    "uploadFailed": "Upload failed. Please try again.",
+    "analysisF ailed": "Analysis failed. Please try again.",
+    "unauthorized": "Please sign in to continue",
+    "limitReached": "Usage limit reached. Please upgrade your plan."
+  }
+}
