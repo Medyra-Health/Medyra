@@ -3,14 +3,5 @@
   "installCommand": "yarn install",
   "devCommand": "yarn dev",
   "framework": "nextjs",
-  "regions": ["fra1"],
-  "env": {
-    "MONGO_URL": "@mongo_url",
-    "DB_NAME": "@db_name",
-    "ANTHROPIC_API_KEY": "@anthropic_api_key",
-    "GOOGLE_CREDENTIALS_BASE64": "@google_credentials_base64",
-    "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY": "@next_public_clerk_publishable_key",
-    "CLERK_SECRET_KEY": "@clerk_secret_key",
-    "STRIPE_API_KEY": "@stripe_api_key"
-  }
+  "regions": ["fra1"]
 }
