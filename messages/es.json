@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "upload": "Subir informe",
+    "pricing": "Precios",
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "language": "Idioma"
+  },
+  "hero": {
+    "title": "Comprende tus informes médicos",
+    "subtitle": "en lenguaje sencillo",
+    "description": "Sube tus resultados de laboratorio y obtén explicaciones impulsadas por IA que realmente tienen sentido. No se requiere título médico.",
+    "cta": "Probar informe gratis",
+    "disclaimer": "Esta es información educativa, no consejo médico. Siempre consulta a tu médico."
+  },
+  "features": {
+    "ai": {
+      "title": "Explicaciones impulsadas por IA",
+      "desc": "La IA avanzada desglosa la terminología médica compleja en lenguaje simple"
+    },
+    "secure": {
+      "title": "Cumple con GDPR",
+      "desc": "Tus datos están encriptados y se eliminan automáticamente después de 30 días"
+    },
+    "fast": {
+      "title": "Resultados instantáneos",
+      "desc": "Obtén tu informe explicado en menos de 60 segundos"
+    }
+  },
+  "upload": {
+    "title": "Subir informe médico",
+    "description": "Sube tus resultados de laboratorio en formato PDF, imagen (JPG/PNG) o texto",
+    "dragDrop": "Arrastra y suelta tu archivo aquí",
+    "or": "o haz clic para explorar",
+    "camera": "Tomar foto",
+    "analyzing": "Analizando tu informe...",
+    "extracting": "Extrayendo texto...",
+    "processing": "Procesando con IA...",
+    "formats": "Soportados: PDF, JPG, PNG, TXT",
+    "maxSize": "Tamaño máx: 10MB"
+  },
+  "dashboard": {
+    "welcome": "Bienvenido",
+    "yourPlan": "Tu plan",
+    "usage": "Uso",
+    "recentReports": "Informes recientes",
+    "noReports": "Aún no hay informes",
+    "uploadFirst": "Sube tu primer informe médico para comenzar",
+    "viewAll": "Ver todos",
+    "stats": "Estadísticas",
+    "totalReports": "Informes totales",
+    "thisMonth": "Este mes"
+  },
+  "report": {
+    "disclaimer": "Descargo médico",
+    "disclaimerText": "Esta es información educativa, no consejo médico. Siempre consulta a tu médico para orientación médica personalizada.",
+    "summary": "Resumen",
+    "testResults": "Resultados de pruebas",
+    "normal": "Normal",
+    "high": "Alto",
+    "low": "Bajo",
+    "critical": "Crítico",
+    "yourResult": "Tu resultado",
+    "normalRange": "Rango normal",
+    "whatThisMeans": "Qué significa esto",
+    "whatThisTests": "Qué mide esta prueba",
+    "questionsForDoctor": "Preguntas para tu médico",
+    "askQuestion": "Hacer una pregunta de seguimiento",
+    "copy": "Copiar explicación",
+    "share": "Compartir con médico",
+    "exportPDF": "Exportar PDF",
+    "print": "Imprimir"
+  },
+  "pricing": {
+    "title": "Elige tu plan",
+    "subtitle": "Comienza gratis, actualiza en cualquier momento",
+    "free": {
+      "name": "Gratis",
+      "price": "0€",
+      "period": "/mes",
+      "features": ["1 informe por mes", "Explicación en lenguaje simple", "Destacados de rango normal", "Soporte básico"]
+    },
+    "personal": {
+      "name": "Personal",
+      "price": "9€",
+      "period": "/mes",
+      "popular": "Más popular",
+      "features": ["Informes ilimitados", "Historial de informes", "Chat de seguimiento", "Exportar PDF", "Soporte por email"]
+    },
+    "subscribe": "Suscribirse",
+    "currentPlan": "Plan actual"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "submit": "Enviar",
+    "close": "Cerrar"
+  },
+  "errors": {
+    "fileRequired": "Por favor selecciona un archivo para subir",
+    "fileTooLarge": "El tamaño del archivo debe ser menor a 10MB",
+    "unsupportedFormat": "Formato de archivo no soportado",
+    "uploadFailed": "Subida fallida. Por favor intenta de nuevo.",
+    "analysisFailed": "Análisis fallido. Por favor intenta de nuevo.",
+    "unauthorized": "Por favor inicia sesión para continuar",
+    "limitReached": "Límite de uso alcanzado. Por favor actualiza tu plan."
+  }
+}
