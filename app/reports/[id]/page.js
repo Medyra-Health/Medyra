@@ -3,7 +3,7 @@
 import { use, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useUser } from '@clerk/nextjs'
-import { FileText, AlertTriangle, CheckCircle, MessageSquare, Send } from 'lucide-react'
+import { FileText, AlertTriangle, CheckCircle, MessageSquare, Send, ArrowLeft } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
@@ -95,9 +95,9 @@ export default function ReportDetailPage({ params }) {
       case 'critical':
       case 'high':
       case 'low':
-        return <AlertTriangle className="h-5 w-5" />
+        return <AlertTriangle className="h-4 w-4" />
       case 'normal':
-        return <CheckCircle className="h-5 w-5" />
+        return <CheckCircle className="h-4 w-4" />
       default:
         return null
     }
@@ -117,28 +117,35 @@ export default function ReportDetailPage({ params }) {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/dashboard" className="flex items-center space-x-2">
-            <FileText className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">Medyra</span>
-          </Link>
-          <div className="flex items-center space-x-2">
-            <LanguageSwitcher />
-            <Link href="/dashboard">
-              <Button variant="ghost">{t('report.backToDashboard')}</Button>
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex justify-between items-center">
+            <Link href="/dashboard" className="flex items-center space-x-2">
+              <FileText className="h-7 w-7 text-blue-600" />
+              <span className="text-xl font-bold text-gray-900 hidden sm:inline">Medyra</span>
             </Link>
+            <div className="flex items-center space-x-2">
+              <LanguageSwitcher />
+              <Link href="/dashboard">
+                <Button variant="ghost" size="sm" className="hidden sm:flex">
+                  {t('report.backToDashboard')}
+                </Button>
+                <Button variant="ghost" size="sm" className="flex sm:hidden">
+                  <ArrowLeft className="h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-8 max-w-5xl">
+      <div className="container mx-auto px-4 py-6 max-w-4xl">
         {/* Disclaimer Alert */}
-        <div className="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6 mb-8">
-          <div className="flex gap-4">
-            <AlertTriangle className="h-6 w-6 text-yellow-600 flex-shrink-0 mt-1" />
+        <div className="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-4 mb-6">
+          <div className="flex gap-3">
+            <AlertTriangle className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-0.5" />
             <div>
-              <h3 className="font-bold text-yellow-900 text-lg mb-2">{t('report.disclaimer')}</h3>
-              <p className="text-yellow-800">
+              <h3 className="font-bold text-yellow-900 mb-1">{t('report.disclaimer')}</h3>
+              <p className="text-yellow-800 text-sm">
                 {explanation.disclaimer || t('report.disclaimerText')}
               </p>
             </div>
@@ -146,16 +153,21 @@ export default function ReportDetailPage({ params }) {
         </div>
 
         {/* Report Info */}
-        <Card className="mb-6">
-          <CardHeader>
-            <div className="flex justify-between items-start">
-              <div>
-                <CardTitle>{report.fileName}</CardTitle>
-                <CardDescription>
+        <Card className="mb-4">
+          <CardHeader className="pb-3">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
+              <div className="min-w-0">
+                <CardTitle className="text-base truncate">{report.fileName}</CardTitle>
+                <CardDescription className="text-xs mt-1">
                   {t('report.uploadedOn')} {new Date(report.createdAt).toLocaleString()}
                 </CardDescription>
               </div>
-              <Button onClick={() => setChatOpen(!chatOpen)} variant="outline">
+              <Button
+                onClick={() => setChatOpen(!chatOpen)}
+                variant="outline"
+                size="sm"
+                className="flex-shrink-0 w-full sm:w-auto"
+              >
                 <MessageSquare className="mr-2 h-4 w-4" />
                 {t('report.askQuestions')}
               </Button>
@@ -165,49 +177,52 @@ export default function ReportDetailPage({ params }) {
 
         {/* Summary */}
         {explanation.summary && (
-          <Card className="mb-6">
-            <CardHeader>
-              <CardTitle>{t('report.summary')}</CardTitle>
+          <Card className="mb-4">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base">{t('report.summary')}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700 leading-relaxed">{explanation.summary}</p>
+              <p className="text-gray-700 leading-relaxed text-sm">{explanation.summary}</p>
             </CardContent>
           </Card>
         )}
 
         {/* Test Results */}
         {explanation.tests && explanation.tests.length > 0 && (
-          <div className="space-y-4 mb-6">
-            <h2 className="text-2xl font-bold">{t('report.testResults')}</h2>
+          <div className="space-y-3 mb-4">
+            <h2 className="text-xl font-bold">{t('report.testResults')}</h2>
             {explanation.tests.map((test, index) => (
               <Card key={index} className={`border-l-4 ${getFlagColor(test.flag)}`}>
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="flex items-center gap-2">
+                <CardHeader className="pb-2">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                    <div className="min-w-0">
+                      <CardTitle className="flex items-center gap-2 text-base">
                         {test.name}
                         {getFlagIcon(test.flag)}
                       </CardTitle>
-                      <CardDescription>
+                      <CardDescription className="text-xs mt-1">
                         {t('report.yourResult')}: <span className="font-semibold">{test.value}</span>
                         {test.normalRange && (
-                          <span className="ml-2">({t('report.normalRange')}: {test.normalRange})</span>
+                          <span className="ml-1">({t('report.normalRange')}: {test.normalRange})</span>
                         )}
                       </CardDescription>
                     </div>
-                    <Badge variant={test.flag === 'normal' ? 'default' : 'destructive'}>
+                    <Badge
+                      variant={test.flag === 'normal' ? 'default' : 'destructive'}
+                      className="self-start flex-shrink-0"
+                    >
                       {getFlagLabel(test.flag)}
                     </Badge>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-3">
+                <CardContent className="space-y-2 pt-0">
                   <div>
-                    <h4 className="font-semibold text-sm text-gray-700 mb-1">{t('report.whatThisTests')}:</h4>
-                    <p className="text-sm text-gray-600">{test.explanation}</p>
+                    <h4 className="font-semibold text-xs text-gray-700 mb-1">{t('report.whatThisTests')}:</h4>
+                    <p className="text-xs text-gray-600">{test.explanation}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm text-gray-700 mb-1">{t('report.whatThisMeans')}:</h4>
-                    <p className="text-sm text-gray-600">{test.interpretation}</p>
+                    <h4 className="font-semibold text-xs text-gray-700 mb-1">{t('report.whatThisMeans')}:</h4>
+                    <p className="text-xs text-gray-600">{test.interpretation}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -217,17 +232,17 @@ export default function ReportDetailPage({ params }) {
 
         {/* Questions for Doctor */}
         {explanation.questionsForDoctor && explanation.questionsForDoctor.length > 0 && (
-          <Card className="mb-6">
-            <CardHeader>
-              <CardTitle>{t('report.questionsForDoctor')}</CardTitle>
-              <CardDescription>{t('report.discussWithPhysician')}</CardDescription>
+          <Card className="mb-4">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base">{t('report.questionsForDoctor')}</CardTitle>
+              <CardDescription className="text-xs">{t('report.discussWithPhysician')}</CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2">
                 {explanation.questionsForDoctor.map((q, index) => (
                   <li key={index} className="flex gap-3">
-                    <span className="text-blue-600 font-semibold">{index + 1}.</span>
-                    <span className="text-gray-700">{q}</span>
+                    <span className="text-blue-600 font-semibold text-sm flex-shrink-0">{index + 1}.</span>
+                    <span className="text-gray-700 text-sm">{q}</span>
                   </li>
                 ))}
               </ul>
@@ -237,21 +252,21 @@ export default function ReportDetailPage({ params }) {
 
         {/* Follow-up Chat */}
         {chatOpen && (
-          <Card className="mt-6">
-            <CardHeader>
-              <CardTitle>{t('report.askQuestion')}</CardTitle>
-              <CardDescription>{t('report.moreInfo')}</CardDescription>
+          <Card className="mt-4">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base">{t('report.askQuestion')}</CardTitle>
+              <CardDescription className="text-xs">{t('report.moreInfo')}</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {chatHistory.map((chat, index) => (
                   <div key={index} className="space-y-2">
                     <div className="bg-blue-50 p-3 rounded-lg">
-                      <p className="font-semibold text-sm text-blue-900">{t('report.you')}:</p>
+                      <p className="font-semibold text-xs text-blue-900">{t('report.you')}:</p>
                       <p className="text-sm text-gray-700">{chat.question}</p>
                     </div>
                     <div className="bg-gray-50 p-3 rounded-lg">
-                      <p className="font-semibold text-sm text-gray-900">{t('report.ai')}:</p>
+                      <p className="font-semibold text-xs text-gray-900">{t('report.ai')}:</p>
                       <p className="text-sm text-gray-700 whitespace-pre-wrap">{chat.answer}</p>
                     </div>
                   </div>
@@ -264,8 +279,9 @@ export default function ReportDetailPage({ params }) {
                     onChange={(e) => setQuestion(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && sendQuestion()}
                     disabled={sending}
+                    className="text-sm"
                   />
-                  <Button onClick={sendQuestion} disabled={sending || !question.trim()}>
+                  <Button onClick={sendQuestion} disabled={sending || !question.trim()} size="sm">
                     {sending ? t('report.sending') : <Send className="h-4 w-4" />}
                   </Button>
                 </div>
