@@ -58,25 +58,34 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <FileText className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">Medyra</span>
-          </Link>
-          <div className="flex items-center space-x-4">
-            <span className="text-sm text-gray-600">{t('dashboard.welcome')}, {user?.firstName || 'User'}</span>
-            <LanguageSwitcher />
-            <UserButton afterSignOutUrl="/" />
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex justify-between items-center">
+            <Link href="/" className="flex items-center space-x-2">
+              <FileText className="h-7 w-7 text-blue-600" />
+              <span className="text-xl font-bold text-gray-900">Medyra</span>
+            </Link>
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <span className="hidden sm:block text-sm text-gray-600 truncate max-w-[120px]">
+                {t('dashboard.welcome')}, {user?.firstName || 'User'}
+              </span>
+              <LanguageSwitcher />
+              <UserButton afterSignOutUrl="/" />
+            </div>
           </div>
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
+      <div className="container mx-auto px-4 py-6">
+        {/* Welcome on mobile */}
+        <p className="sm:hidden text-sm text-gray-600 mb-4">
+          {t('dashboard.welcome')}, {user?.firstName || 'User'}
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
           {/* Subscription Status */}
           <Card>
-            <CardHeader>
-              <CardTitle>{t('dashboard.yourPlan')}</CardTitle>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base">{t('dashboard.yourPlan')}</CardTitle>
               <CardDescription>
                 <Badge variant={subscription?.tier === 'free' ? 'secondary' : 'default'}>
                   {subscription?.tier?.toUpperCase() || 'FREE'}
@@ -91,14 +100,14 @@ export default function DashboardPage() {
                 </div>
                 <Progress value={usagePercentage} className="h-2" />
                 {usagePercentage >= 80 && (
-                  <p className="text-sm text-orange-600 flex items-center gap-1">
-                    <AlertCircle className="h-4 w-4" />
+                  <p className="text-xs text-orange-600 flex items-center gap-1">
+                    <AlertCircle className="h-3 w-3" />
                     {t('dashboard.approachingLimit')}
                   </p>
                 )}
               </div>
               {subscription?.tier === 'free' && (
-                <Link href="/pricing" className="mt-4 block">
+                <Link href="/pricing" className="mt-3 block">
                   <Button className="w-full" size="sm">{t('dashboard.upgradePlan')}</Button>
                 </Link>
               )}
@@ -107,18 +116,18 @@ export default function DashboardPage() {
 
           {/* Quick Actions */}
           <Card>
-            <CardHeader>
-              <CardTitle>{t('dashboard.quickActions')}</CardTitle>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base">{t('dashboard.quickActions')}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
               <Link href="/upload">
-                <Button className="w-full" variant="outline">
+                <Button className="w-full" variant="outline" size="sm">
                   <Upload className="mr-2 h-4 w-4" />
                   {t('dashboard.uploadNew')}
                 </Button>
               </Link>
               <Link href="/reports">
-                <Button className="w-full" variant="outline">
+                <Button className="w-full" variant="outline" size="sm">
                   <FileText className="mr-2 h-4 w-4" />
                   {t('dashboard.viewAllReports')}
                 </Button>
@@ -127,12 +136,12 @@ export default function DashboardPage() {
           </Card>
 
           {/* Stats */}
-          <Card>
-            <CardHeader>
-              <CardTitle>{t('dashboard.stats')}</CardTitle>
+          <Card className="sm:col-span-2 md:col-span-1">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base">{t('dashboard.stats')}</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">{t('dashboard.totalReports')}</span>
                   <span className="font-semibold">{reports.length}</span>
@@ -148,45 +157,45 @@ export default function DashboardPage() {
 
         {/* Recent Reports */}
         <Card>
-          <CardHeader>
+          <CardHeader className="pb-2">
             <div className="flex justify-between items-center">
-              <CardTitle>{t('dashboard.recentReports')}</CardTitle>
+              <CardTitle className="text-base">{t('dashboard.recentReports')}</CardTitle>
               <Link href="/reports">
-                <Button variant="ghost" size="sm">
-                  {t('dashboard.viewAll')} <ChevronRight className="ml-1 h-4 w-4" />
+                <Button variant="ghost" size="sm" className="text-xs">
+                  {t('dashboard.viewAll')} <ChevronRight className="ml-1 h-3 w-3" />
                 </Button>
               </Link>
             </div>
           </CardHeader>
           <CardContent>
             {reports.length === 0 ? (
-              <div className="text-center py-12">
-                <FileText className="mx-auto h-12 w-12 text-gray-400" />
-                <h3 className="mt-4 text-lg font-medium text-gray-900">{t('dashboard.noReports')}</h3>
-                <p className="mt-2 text-sm text-gray-500">{t('dashboard.uploadFirst')}</p>
+              <div className="text-center py-10">
+                <FileText className="mx-auto h-10 w-10 text-gray-400" />
+                <h3 className="mt-3 text-base font-medium text-gray-900">{t('dashboard.noReports')}</h3>
+                <p className="mt-1 text-sm text-gray-500">{t('dashboard.uploadFirst')}</p>
                 <Link href="/upload" className="mt-4 inline-block">
-                  <Button>
+                  <Button size="sm">
                     <Upload className="mr-2 h-4 w-4" />
                     {t('dashboard.uploadNew')}
                   </Button>
                 </Link>
               </div>
             ) : (
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {reports.slice(0, 5).map((report) => (
                   <Link key={report.id} href={`/reports/${report.id}`}>
-                    <div className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 transition-colors">
-                      <div className="flex items-center space-x-3">
-                        <FileText className="h-8 w-8 text-blue-600" />
-                        <div>
-                          <p className="font-medium">{report.fileName}</p>
-                          <p className="text-sm text-gray-500 flex items-center gap-1">
+                    <div className="flex items-center justify-between p-3 border rounded-lg hover:bg-gray-50 transition-colors">
+                      <div className="flex items-center space-x-3 min-w-0">
+                        <FileText className="h-7 w-7 text-blue-600 flex-shrink-0" />
+                        <div className="min-w-0">
+                          <p className="font-medium text-sm truncate">{report.fileName}</p>
+                          <p className="text-xs text-gray-500 flex items-center gap-1">
                             <Clock className="h-3 w-3" />
                             {new Date(report.createdAt).toLocaleDateString()}
                           </p>
                         </div>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-gray-400" />
+                      <ChevronRight className="h-4 w-4 text-gray-400 flex-shrink-0" />
                     </div>
                   </Link>
                 ))}
