@@ -10,6 +10,7 @@ export default function robots() {
           '/reports/',
           '/api/',
           '/success',
+          '/admin',
         ],
       },
     ],

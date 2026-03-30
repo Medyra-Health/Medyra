@@ -1,0 +1,360 @@
+'use client'
+
+import { useUser } from '@clerk/nextjs'
+import { useRouter } from 'next/navigation'
+import { useEffect, useState, useCallback } from 'react'
+import {
+  Users, FileText, DollarSign, TrendingUp, RefreshCw,
+  Crown, Shield, AlertCircle
+} from 'lucide-react'
+import {
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
+  Legend, ResponsiveContainer
+} from 'recharts'
+
+const ADMIN_EMAIL = 'abralur28@gmail.com'
+const REFRESH_INTERVAL = 5 * 60 * 1000 // 5 minutes
+
+const TIER_COLORS = {
+  free: 'bg-gray-100 text-gray-700',
+  onetime: 'bg-blue-100 text-blue-700',
+  personal: 'bg-indigo-100 text-indigo-700',
+  family: 'bg-purple-100 text-purple-700',
+  clinic: 'bg-green-100 text-green-700',
+}
+
+function StatCard({ title, value, sub, icon: Icon, color = 'blue' }) {
+  const colorMap = {
+    blue: 'bg-blue-50 text-blue-600',
+    green: 'bg-green-50 text-green-600',
+    purple: 'bg-purple-50 text-purple-600',
+    orange: 'bg-orange-50 text-orange-600',
+  }
+  return (
+    <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+      <div className="flex items-start justify-between">
+        <div>
+          <p className="text-sm text-gray-500 mb-1">{title}</p>
+          <p className="text-3xl font-bold text-gray-900">{value ?? '—'}</p>
+          {sub && <p className="text-xs text-gray-400 mt-1">{sub}</p>}
+        </div>
+        <div className={`p-2.5 rounded-lg ${colorMap[color]}`}>
+          <Icon className="h-5 w-5" />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function TierBadge({ tier }) {
+  return (
+    <span className={`text-xs font-medium px-2 py-0.5 rounded-full capitalize ${TIER_COLORS[tier] || TIER_COLORS.free}`}>
+      {tier || 'free'}
+    </span>
+  )
+}
+
+function formatDate(d) {
+  if (!d) return '—'
+  return new Date(d).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
+}
+
+function formatShortDate(str) {
+  if (!str) return ''
+  const [, m, d] = str.split('-')
+  return `${d}/${m}`
+}
+
+export default function AdminPage() {
+  const { user, isLoaded } = useUser()
+  const router = useRouter()
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [lastRefresh, setLastRefresh] = useState(null)
+
+  const fetchStats = useCallback(async () => {
+    try {
+      setError(null)
+      const res = await fetch('/api/admin/stats')
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}))
+        throw new Error(body.error || `HTTP ${res.status}`)
+      }
+      const json = await res.json()
+      setData(json)
+      setLastRefresh(new Date())
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
+  }, [])
+
+  // Auth guard
+  useEffect(() => {
+    if (!isLoaded) return
+    if (!user) { router.replace('/'); return }
+    const email = user.emailAddresses?.[0]?.emailAddress
+    if (email !== ADMIN_EMAIL) { router.replace('/'); return }
+    fetchStats()
+  }, [isLoaded, user, router, fetchStats])
+
+  // Auto-refresh every 5 minutes
+  useEffect(() => {
+    const interval = setInterval(fetchStats, REFRESH_INTERVAL)
+    return () => clearInterval(interval)
+  }, [fetchStats])
+
+  if (!isLoaded || (loading && !data)) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <RefreshCw className="h-8 w-8 text-blue-500 animate-spin mx-auto mb-3" />
+          <p className="text-gray-500 text-sm">Loading admin dashboard…</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (error && !data) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center max-w-sm">
+          <AlertCircle className="h-8 w-8 text-red-500 mx-auto mb-3" />
+          <p className="text-gray-800 font-medium mb-1">Failed to load stats</p>
+          <p className="text-gray-500 text-sm mb-4">{error}</p>
+          <button
+            onClick={fetchStats}
+            className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  const { users, reports, revenue, subscriptionBreakdown, recentUsers, recentReports, chartData } = data
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Shield className="h-6 w-6 text-blue-600" />
+            <div>
+              <h1 className="text-lg font-bold text-gray-900">Admin Dashboard</h1>
+              <p className="text-xs text-gray-400">Medyra · {user?.emailAddresses?.[0]?.emailAddress}</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            {lastRefresh && (
+              <span className="text-xs text-gray-400 hidden sm:block">
+                Updated {lastRefresh.toLocaleTimeString()}
+              </span>
+            )}
+            <button
+              onClick={() => { setLoading(true); fetchStats() }}
+              disabled={loading}
+              className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-blue-600 disabled:opacity-50"
+            >
+              <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
+              <span className="hidden sm:inline">Refresh</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-6">
+
+        {/* Stat cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <StatCard
+            title="Total Users"
+            value={users.total.toLocaleString()}
+            sub={`+${users.today} today · +${users.thisWeek} this week`}
+            icon={Users}
+            color="blue"
+          />
+          <StatCard
+            title="Reports Analyzed"
+            value={reports.total.toLocaleString()}
+            sub={`+${reports.today} today · avg ${reports.avgPerUser}/user`}
+            icon={FileText}
+            color="purple"
+          />
+          <StatCard
+            title="Total Revenue"
+            value={`€${revenue.total}`}
+            sub={`€${revenue.thisMonth} this month`}
+            icon={DollarSign}
+            color="green"
+          />
+          <StatCard
+            title="Paid Users"
+            value={revenue.paidUsers.toLocaleString()}
+            sub={`${revenue.freeUsers} on free plan`}
+            icon={Crown}
+            color="orange"
+          />
+        </div>
+
+        {/* Chart + Subscription breakdown */}
+        <div className="grid lg:grid-cols-3 gap-4">
+          {/* Line chart */}
+          <div className="lg:col-span-2 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+            <h2 className="text-sm font-semibold text-gray-700 mb-4">Activity — Last 30 Days</h2>
+            {chartData && chartData.length > 0 ? (
+              <ResponsiveContainer width="100%" height={220}>
+                <LineChart data={chartData} margin={{ top: 4, right: 8, bottom: 4, left: 0 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                  <XAxis
+                    dataKey="date"
+                    tickFormatter={formatShortDate}
+                    tick={{ fontSize: 11 }}
+                    interval="preserveStartEnd"
+                  />
+                  <YAxis tick={{ fontSize: 11 }} allowDecimals={false} width={28} />
+                  <Tooltip
+                    labelFormatter={l => `Date: ${l}`}
+                    contentStyle={{ fontSize: 12, borderRadius: 8 }}
+                  />
+                  <Legend wrapperStyle={{ fontSize: 12 }} />
+                  <Line
+                    type="monotone"
+                    dataKey="signups"
+                    stroke="#3b82f6"
+                    strokeWidth={2}
+                    dot={false}
+                    name="New Users"
+                  />
+                  <Line
+                    type="monotone"
+                    dataKey="reports"
+                    stroke="#8b5cf6"
+                    strokeWidth={2}
+                    dot={false}
+                    name="Reports"
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            ) : (
+              <div className="h-[220px] flex items-center justify-center text-gray-400 text-sm">
+                No data for the last 30 days
+              </div>
+            )}
+          </div>
+
+          {/* Subscription breakdown */}
+          <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+            <h2 className="text-sm font-semibold text-gray-700 mb-4">Plan Breakdown</h2>
+            <div className="space-y-3">
+              {subscriptionBreakdown.length > 0 ? subscriptionBreakdown.map(s => (
+                <div key={s.tier} className="flex items-center justify-between">
+                  <TierBadge tier={s.tier} />
+                  <div className="flex items-center gap-2">
+                    <div className="w-20 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-blue-500 rounded-full"
+                        style={{ width: `${Math.min(100, (s.count / users.total) * 100)}%` }}
+                      />
+                    </div>
+                    <span className="text-sm font-semibold text-gray-800 w-6 text-right">{s.count}</span>
+                  </div>
+                </div>
+              )) : (
+                <p className="text-sm text-gray-400">No data</p>
+              )}
+            </div>
+            <div className="mt-4 pt-4 border-t border-gray-100 flex justify-between text-xs text-gray-500">
+              <span>Active subscriptions</span>
+              <span className="font-semibold text-gray-800">{revenue.activeSubscriptions}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Recent users table */}
+        <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+          <div className="px-5 py-4 border-b border-gray-100">
+            <h2 className="text-sm font-semibold text-gray-700">Recent Users</h2>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-50 text-xs text-gray-500 uppercase tracking-wide">
+                  <th className="px-5 py-3 text-left">Email</th>
+                  <th className="px-5 py-3 text-left">Plan</th>
+                  <th className="px-5 py-3 text-left">Reports</th>
+                  <th className="px-5 py-3 text-left">Joined</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {recentUsers.length > 0 ? recentUsers.map(u => (
+                  <tr key={u.id} className="hover:bg-gray-50 transition-colors">
+                    <td className="px-5 py-3 text-gray-800 font-medium max-w-[200px] truncate">{u.email}</td>
+                    <td className="px-5 py-3"><TierBadge tier={u.tier} /></td>
+                    <td className="px-5 py-3 text-gray-600">{u.reportCount}</td>
+                    <td className="px-5 py-3 text-gray-400 whitespace-nowrap">{formatDate(u.createdAt)}</td>
+                  </tr>
+                )) : (
+                  <tr>
+                    <td colSpan={4} className="px-5 py-8 text-center text-gray-400">No users yet</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Recent reports table */}
+        <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+          <div className="px-5 py-4 border-b border-gray-100">
+            <h2 className="text-sm font-semibold text-gray-700">Recent Reports</h2>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-50 text-xs text-gray-500 uppercase tracking-wide">
+                  <th className="px-5 py-3 text-left">File</th>
+                  <th className="px-5 py-3 text-left">User</th>
+                  <th className="px-5 py-3 text-left">Status</th>
+                  <th className="px-5 py-3 text-left">Date</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {recentReports.length > 0 ? recentReports.map(r => (
+                  <tr key={r.id} className="hover:bg-gray-50 transition-colors">
+                    <td className="px-5 py-3 text-gray-800 font-medium max-w-[200px] truncate">{r.fileName}</td>
+                    <td className="px-5 py-3 text-gray-500 max-w-[180px] truncate">{r.userEmail}</td>
+                    <td className="px-5 py-3">
+                      <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
+                        r.status === 'completed'
+                          ? 'bg-green-100 text-green-700'
+                          : r.status === 'failed'
+                          ? 'bg-red-100 text-red-700'
+                          : 'bg-yellow-100 text-yellow-700'
+                      }`}>
+                        {r.status}
+                      </span>
+                    </td>
+                    <td className="px-5 py-3 text-gray-400 whitespace-nowrap">{formatDate(r.createdAt)}</td>
+                  </tr>
+                )) : (
+                  <tr>
+                    <td colSpan={4} className="px-5 py-8 text-center text-gray-400">No reports yet</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p className="text-xs text-gray-300 text-center pb-4">
+          Auto-refreshes every 5 minutes · Admin access only
+        </p>
+      </main>
+    </div>
+  )
+}
