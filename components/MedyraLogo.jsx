@@ -39,7 +39,7 @@ export default function MedyraLogo({ size = 'md', showTagline = false, className
           fontWeight: 700,
           fontSize: s.fontSize,
           letterSpacing: '0.04em',
-          color: '#E8F5F0',
+          color: '#0D1F19',
           lineHeight: 1,
         }}>
           <span style={{ fontWeight: 800 }}>M</span>edyra
