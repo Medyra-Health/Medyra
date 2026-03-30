@@ -126,6 +126,14 @@ export default async function RootLayout({ children }) {
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
           <meta name="apple-mobile-web-app-title" content="Medyra" />
           <link rel="apple-touch-icon" href="/icon-192.png" />
+          {/* Google Analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8Y2GQCSSS" />
+          <script dangerouslySetInnerHTML={{ __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Q8Y2GQCSSS');
+          `}} />
         </head>
         <body className={`${inter.className} pb-16 md:pb-0`}>
           <NextIntlClientProvider locale={locale} messages={messages}>
