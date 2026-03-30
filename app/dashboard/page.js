@@ -3,7 +3,7 @@
 import { useUser } from '@clerk/nextjs'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { FileText, Upload, Clock, AlertCircle, ChevronRight } from 'lucide-react'
+import { Upload, Clock, AlertCircle, ChevronRight } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { UserButton } from '@clerk/nextjs'
 import { useTranslations } from 'next-intl'
@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Progress } from '@/components/ui/progress'
+import MedyraLogo, { MedyraIcon } from '@/components/MedyraLogo'
 
 export default function DashboardPage() {
   const { user, isLoaded } = useUser()
@@ -20,9 +21,7 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    if (isLoaded && user) {
-      fetchData()
-    }
+    if (isLoaded && user) fetchData()
   }, [isLoaded, user])
 
   async function fetchData() {
@@ -31,10 +30,8 @@ export default function DashboardPage() {
         fetch('/api/subscription'),
         fetch('/api/reports')
       ])
-
       const subData = await subRes.json()
       const reportsData = await reportsRes.json()
-
       setSubscription(subData)
       setReports(reportsData.reports || [])
     } catch (error) {
@@ -46,8 +43,8 @@ export default function DashboardPage() {
 
   if (!isLoaded || loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+      <div className="min-h-screen bg-[#040C08] flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-400"></div>
       </div>
     )
   }
@@ -55,17 +52,15 @@ export default function DashboardPage() {
   const usagePercentage = subscription ? (subscription.currentUsage / subscription.usageLimit) * 100 : 0
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white border-b">
+    <div className="min-h-screen bg-[#040C08]">
+      <header className="bg-[#060D0B] border-b border-emerald-900/30">
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <FileText className="h-7 w-7 text-blue-600" />
-              <span className="text-xl font-bold text-gray-900">Medyra</span>
+            <Link href="/">
+              <MedyraLogo size="md" />
             </Link>
             <div className="flex items-center space-x-2 sm:space-x-3">
-              <span className="hidden sm:block text-sm text-gray-600 truncate max-w-[120px]">
+              <span className="hidden sm:block text-sm text-[#E8F5F0]/50 truncate max-w-[120px]">
                 {t('dashboard.welcome')}, {user?.firstName || 'User'}
               </span>
               <LanguageSwitcher />
@@ -76,13 +71,11 @@ export default function DashboardPage() {
       </header>
 
       <div className="container mx-auto px-4 py-6">
-        {/* Welcome on mobile */}
-        <p className="sm:hidden text-sm text-gray-600 mb-4">
+        <p className="sm:hidden text-sm text-[#E8F5F0]/50 mb-4">
           {t('dashboard.welcome')}, {user?.firstName || 'User'}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-          {/* Subscription Status */}
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-base">{t('dashboard.yourPlan')}</CardTitle>
@@ -100,7 +93,7 @@ export default function DashboardPage() {
                 </div>
                 <Progress value={usagePercentage} className="h-2" />
                 {usagePercentage >= 80 && (
-                  <p className="text-xs text-orange-600 flex items-center gap-1">
+                  <p className="text-xs text-orange-400 flex items-center gap-1">
                     <AlertCircle className="h-3 w-3" />
                     {t('dashboard.approachingLimit')}
                   </p>
@@ -108,13 +101,12 @@ export default function DashboardPage() {
               </div>
               {subscription?.tier === 'free' && (
                 <Link href="/pricing" className="mt-3 block">
-                  <Button className="w-full" size="sm">{t('dashboard.upgradePlan')}</Button>
+                  <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-[#060D0B] font-semibold" size="sm">{t('dashboard.upgradePlan')}</Button>
                 </Link>
               )}
             </CardContent>
           </Card>
 
-          {/* Quick Actions */}
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-base">{t('dashboard.quickActions')}</CardTitle>
@@ -128,14 +120,13 @@ export default function DashboardPage() {
               </Link>
               <Link href="/reports">
                 <Button className="w-full" variant="outline" size="sm">
-                  <FileText className="mr-2 h-4 w-4" />
+                  <MedyraIcon size={16} className="mr-2" />
                   {t('dashboard.viewAllReports')}
                 </Button>
               </Link>
             </CardContent>
           </Card>
 
-          {/* Stats */}
           <Card className="sm:col-span-2 md:col-span-1">
             <CardHeader className="pb-2">
               <CardTitle className="text-base">{t('dashboard.stats')}</CardTitle>
@@ -143,11 +134,11 @@ export default function DashboardPage() {
             <CardContent>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-600">{t('dashboard.totalReports')}</span>
+                  <span className="text-sm text-[#E8F5F0]/50">{t('dashboard.totalReports')}</span>
                   <span className="font-semibold">{reports.length}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-600">{t('dashboard.thisMonth')}</span>
+                  <span className="text-sm text-[#E8F5F0]/50">{t('dashboard.thisMonth')}</span>
                   <span className="font-semibold">{subscription?.currentUsage || 0}</span>
                 </div>
               </div>
@@ -155,13 +146,12 @@ export default function DashboardPage() {
           </Card>
         </div>
 
-        {/* Recent Reports */}
         <Card>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-center">
               <CardTitle className="text-base">{t('dashboard.recentReports')}</CardTitle>
               <Link href="/reports">
-                <Button variant="ghost" size="sm" className="text-xs">
+                <Button variant="ghost" size="sm" className="text-xs text-emerald-400 hover:text-emerald-300">
                   {t('dashboard.viewAll')} <ChevronRight className="ml-1 h-3 w-3" />
                 </Button>
               </Link>
@@ -170,11 +160,11 @@ export default function DashboardPage() {
           <CardContent>
             {reports.length === 0 ? (
               <div className="text-center py-10">
-                <FileText className="mx-auto h-10 w-10 text-gray-400" />
-                <h3 className="mt-3 text-base font-medium text-gray-900">{t('dashboard.noReports')}</h3>
-                <p className="mt-1 text-sm text-gray-500">{t('dashboard.uploadFirst')}</p>
+                <MedyraIcon size={40} className="mx-auto opacity-30" />
+                <h3 className="mt-3 text-base font-medium text-[#E8F5F0]">{t('dashboard.noReports')}</h3>
+                <p className="mt-1 text-sm text-[#E8F5F0]/50">{t('dashboard.uploadFirst')}</p>
                 <Link href="/upload" className="mt-4 inline-block">
-                  <Button size="sm">
+                  <Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-[#060D0B] font-semibold">
                     <Upload className="mr-2 h-4 w-4" />
                     {t('dashboard.uploadNew')}
                   </Button>
@@ -184,18 +174,18 @@ export default function DashboardPage() {
               <div className="space-y-2">
                 {reports.slice(0, 5).map((report) => (
                   <Link key={report.id} href={`/reports/${report.id}`}>
-                    <div className="flex items-center justify-between p-3 border rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="flex items-center justify-between p-3 border border-emerald-900/20 rounded-lg hover:bg-emerald-950/30 transition-colors">
                       <div className="flex items-center space-x-3 min-w-0">
-                        <FileText className="h-7 w-7 text-blue-600 flex-shrink-0" />
+                        <MedyraIcon size={28} className="flex-shrink-0" />
                         <div className="min-w-0">
-                          <p className="font-medium text-sm truncate">{report.fileName}</p>
-                          <p className="text-xs text-gray-500 flex items-center gap-1">
+                          <p className="font-medium text-sm text-[#E8F5F0] truncate">{report.fileName}</p>
+                          <p className="text-xs text-[#E8F5F0]/40 flex items-center gap-1">
                             <Clock className="h-3 w-3" />
                             {new Date(report.createdAt).toLocaleDateString()}
                           </p>
                         </div>
                       </div>
-                      <ChevronRight className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                      <ChevronRight className="h-4 w-4 text-[#E8F5F0]/30 flex-shrink-0" />
                     </div>
                   </Link>
                 ))}
