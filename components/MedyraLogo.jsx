@@ -22,13 +22,16 @@ export function MedyraIcon({ size = 48, className = '' }) {
   )
 }
 
-export default function MedyraLogo({ size = 'md', showTagline = false, className = '' }) {
+// variant: 'light' = dark text (for white/light backgrounds)
+//          'dark'  = light text (for dark backgrounds)
+export default function MedyraLogo({ size = 'md', showTagline = false, variant = 'light', className = '' }) {
   const sizes = {
     sm: { icon: 26, fontSize: '18px' },
     md: { icon: 34, fontSize: '24px' },
     lg: { icon: 48, fontSize: '34px' },
   }
   const s = sizes[size] || sizes.md
+  const textColor = variant === 'dark' ? '#E8F5F0' : '#0D1F19'
 
   return (
     <div className={`flex items-center gap-3 ${className}`}>
@@ -39,22 +42,23 @@ export default function MedyraLogo({ size = 'md', showTagline = false, className
           fontWeight: 700,
           fontSize: s.fontSize,
           letterSpacing: '0.04em',
-          color: '#0D1F19',
+          color: textColor,
           lineHeight: 1,
         }}>
           <span style={{ fontWeight: 800 }}>M</span>edyra
         </span>
         {showTagline && (
           <span style={{
-            fontFamily: 'var(--font-dm-sans, "DM Sans", sans-serif)',
-            fontWeight: 200,
-            fontSize: '8px',
-            letterSpacing: '0.32em',
-            color: 'rgba(16,185,129,0.5)',
+            fontFamily: 'sans-serif',
+            fontWeight: 300,
+            fontSize: '7px',
+            letterSpacing: '0.28em',
+            color: 'rgba(16,185,129,0.6)',
             textTransform: 'uppercase',
             marginTop: '5px',
+            whiteSpace: 'nowrap',
           }}>
-            Your health, finally explained.
+            Understand Your Medical Reports
           </span>
         )}
       </div>
