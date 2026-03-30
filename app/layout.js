@@ -9,14 +9,96 @@ import MobileNav from '@/components/MobileNav'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Medyra - Understand Your Medical Reports',
-  description: 'AI-powered medical lab report explanations in plain language',
+  metadataBase: new URL('https://medyra.de'),
+
+  title: {
+    default: 'Medyra — Understand Your Medical Reports in Plain Language',
+    template: '%s | Medyra',
+  },
+  description:
+    'Upload your lab results and get AI-powered explanations in plain language. Instantly understand your blood test, TSH, HbA1c, cholesterol, and more. GDPR compliant, 16 languages, results in 60 seconds. Made in Germany.',
+
+  keywords: [
+    'medical report explanation',
+    'lab results AI',
+    'understand blood test results',
+    'lab report explainer',
+    'medical terminology explained',
+    'AI medical report',
+    'blood test explained',
+    'what does my lab report mean',
+    'TSH explanation',
+    'HbA1c meaning',
+    'cholesterol results explained',
+    'GDPR health AI',
+    'Laborbefund verstehen',
+    'Blutbild erklären',
+    'Befund erklären KI',
+    'medical AI Germany',
+    'Medyra',
+  ],
+
+  authors: [{ name: 'Medyra', url: 'https://medyra.de' }],
+  creator: 'Medyra',
+  publisher: 'Medyra',
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+
+  openGraph: {
+    type: 'website',
+    url: 'https://medyra.de',
+    siteName: 'Medyra',
+    title: 'Medyra — Understand Your Medical Reports in Plain Language',
+    description:
+      'Upload your lab results and get AI-powered explanations in plain language. GDPR compliant, 16 languages, results in 60 seconds.',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Medyra — Medical Report Explainer',
+      },
+    ],
+    locale: 'en_US',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Medyra — Understand Your Medical Reports in Plain Language',
+    description:
+      'Upload your lab results and get clear AI-powered explanations. GDPR compliant. Made in Germany.',
+    images: ['/opengraph-image'],
+  },
+
+  alternates: {
+    canonical: 'https://medyra.de',
+  },
+
   manifest: '/manifest.json',
   themeColor: '#2563eb',
+
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
     title: 'Medyra',
+  },
+
+  category: 'health',
+
+  other: {
+    'geo.region': 'DE',
+    'geo.placename': 'Germany',
+    'language': 'en, de, fr, es, it, pt, nl, pl, tr, ar, zh, ja, ko, hi, bn, ru',
   },
 }
 

@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { useState } from 'react'
+import JsonLd from '@/components/JsonLd'
 
 export default function LandingPage() {
   const t = useTranslations()
@@ -22,6 +23,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd />
 
       {/* Navigation */}
       <nav className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-50">
