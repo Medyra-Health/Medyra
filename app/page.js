@@ -28,7 +28,9 @@ export default function LandingPage() {
       <nav className="border-b border-gray-200 bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
-            <MedyraLogo size="md" />
+            <div className="bg-[#060D0B] rounded-xl px-3 py-2">
+              <MedyraLogo size="sm" variant="dark" showTagline />
+            </div>
 
             {/* Desktop nav */}
             <div className="hidden md:flex items-center space-x-2">
@@ -268,7 +270,7 @@ export default function LandingPage() {
       <footer className="bg-gray-900 border-t border-gray-800 text-white py-10">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center mb-4">
-            <MedyraLogo size="sm" />
+            <MedyraLogo size="sm" variant="dark" />
           </div>
           <p className="text-gray-400 mb-4 text-sm">{t('footer.tagline')}</p>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400">

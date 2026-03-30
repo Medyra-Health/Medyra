@@ -57,7 +57,9 @@ export default function DashboardPage() {
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
             <Link href="/">
-              <MedyraLogo size="md" />
+              <div className="bg-[#060D0B] rounded-xl px-3 py-2">
+                <MedyraLogo size="sm" variant="dark" showTagline />
+              </div>
             </Link>
             <div className="flex items-center space-x-2 sm:space-x-3">
               <span className="hidden sm:block text-sm text-gray-500 truncate max-w-[120px]">

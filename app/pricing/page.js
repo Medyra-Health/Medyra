@@ -57,7 +57,9 @@ export default function PricingPage() {
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
             <Link href="/">
-              <MedyraLogo size="md" />
+              <div className="bg-[#060D0B] rounded-xl px-3 py-2">
+                <MedyraLogo size="sm" variant="dark" showTagline />
+              </div>
             </Link>
             <div className="flex items-center gap-2">
               <LanguageSwitcher />
@@ -187,7 +189,7 @@ export default function PricingPage() {
       <footer className="bg-gray-900 border-t border-gray-800 text-white py-8 mt-16">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center mb-3">
-            <MedyraLogo size="sm" />
+            <MedyraLogo size="sm" variant="dark" />
           </div>
           <p className="text-gray-500 text-xs">{t('footer.copyright')}</p>
         </div>
