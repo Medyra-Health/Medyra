@@ -68,8 +68,8 @@ export default function ReportDetailPage({ params }) {
 
   if (loading || !report) {
     return (
-      <div className="min-h-screen bg-[#040C08] flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-400"></div>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"></div>
       </div>
     )
   }
@@ -78,11 +78,11 @@ export default function ReportDetailPage({ params }) {
 
   const getFlagColor = (flag) => {
     switch (flag) {
-      case 'critical': return 'text-red-400 bg-red-950/30 border-red-900/40'
-      case 'high': return 'text-orange-400 bg-orange-950/30 border-orange-900/40'
-      case 'low': return 'text-yellow-400 bg-yellow-950/30 border-yellow-900/40'
-      case 'normal': return 'text-emerald-400 bg-emerald-950/30 border-emerald-900/40'
-      default: return 'text-[#E8F5F0]/50 bg-[#040C08] border-emerald-900/20'
+      case 'critical': return 'text-red-600 bg-red-50 border-red-200'
+      case 'high': return 'text-orange-600 bg-orange-50 border-orange-200'
+      case 'low': return 'text-yellow-700 bg-yellow-50 border-yellow-200'
+      case 'normal': return 'text-emerald-600 bg-emerald-50 border-emerald-200'
+      default: return 'text-gray-500 bg-gray-50 border-gray-200'
     }
   }
 
@@ -105,8 +105,8 @@ export default function ReportDetailPage({ params }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#040C08]">
-      <header className="bg-[#060D0B] border-b border-emerald-900/30">
+    <div className="min-h-screen bg-gray-50">
+      <header className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
             <Link href="/dashboard">
@@ -115,10 +115,10 @@ export default function ReportDetailPage({ params }) {
             <div className="flex items-center space-x-2">
               <LanguageSwitcher />
               <Link href="/dashboard">
-                <Button variant="ghost" size="sm" className="hidden sm:flex text-[#E8F5F0]/70 hover:text-[#E8F5F0] hover:bg-emerald-950/50">
+                <Button variant="ghost" size="sm" className="hidden sm:flex text-gray-700 hover:text-gray-900 hover:bg-gray-50">
                   {t('report.backToDashboard')}
                 </Button>
-                <Button variant="ghost" size="sm" className="flex sm:hidden text-[#E8F5F0]/70 hover:bg-emerald-950/50">
+                <Button variant="ghost" size="sm" className="flex sm:hidden text-gray-700 hover:bg-gray-50">
                   <ArrowLeft className="h-4 w-4" />
                 </Button>
               </Link>
@@ -128,12 +128,12 @@ export default function ReportDetailPage({ params }) {
       </header>
 
       <div className="container mx-auto px-4 py-6 max-w-4xl">
-        <div className="bg-yellow-950/30 border-2 border-yellow-900/40 rounded-lg p-4 mb-6">
+        <div className="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-4 mb-6">
           <div className="flex gap-3">
-            <AlertTriangle className="h-5 w-5 text-yellow-500 flex-shrink-0 mt-0.5" />
+            <AlertTriangle className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-0.5" />
             <div>
-              <h3 className="font-bold text-yellow-400 mb-1">{t('report.disclaimer')}</h3>
-              <p className="text-yellow-400/70 text-sm">{explanation.disclaimer || t('report.disclaimerText')}</p>
+              <h3 className="font-bold text-yellow-700 mb-1">{t('report.disclaimer')}</h3>
+              <p className="text-yellow-800 text-sm">{explanation.disclaimer || t('report.disclaimerText')}</p>
             </div>
           </div>
         </div>
@@ -161,14 +161,14 @@ export default function ReportDetailPage({ params }) {
               <CardTitle className="text-base">{t('report.summary')}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[#E8F5F0]/70 leading-relaxed text-sm">{explanation.summary}</p>
+              <p className="text-gray-700 leading-relaxed text-sm">{explanation.summary}</p>
             </CardContent>
           </Card>
         )}
 
         {explanation.tests && explanation.tests.length > 0 && (
           <div className="space-y-3 mb-4">
-            <h2 className="text-xl font-bold text-[#E8F5F0]">{t('report.testResults')}</h2>
+            <h2 className="text-xl font-bold text-gray-900">{t('report.testResults')}</h2>
             {explanation.tests.map((test, index) => (
               <Card key={index} className={`border-l-4 ${getFlagColor(test.flag)}`}>
                 <CardHeader className="pb-2">
@@ -190,12 +190,12 @@ export default function ReportDetailPage({ params }) {
                 </CardHeader>
                 <CardContent className="space-y-2 pt-0">
                   <div>
-                    <h4 className="font-semibold text-xs text-[#E8F5F0]/50 mb-1">{t('report.whatThisTests')}:</h4>
-                    <p className="text-xs text-[#E8F5F0]/70">{test.explanation}</p>
+                    <h4 className="font-semibold text-xs text-gray-500 mb-1">{t('report.whatThisTests')}:</h4>
+                    <p className="text-xs text-gray-700">{test.explanation}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-xs text-[#E8F5F0]/50 mb-1">{t('report.whatThisMeans')}:</h4>
-                    <p className="text-xs text-[#E8F5F0]/70">{test.interpretation}</p>
+                    <h4 className="font-semibold text-xs text-gray-500 mb-1">{t('report.whatThisMeans')}:</h4>
+                    <p className="text-xs text-gray-700">{test.interpretation}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -213,8 +213,8 @@ export default function ReportDetailPage({ params }) {
               <ul className="space-y-2">
                 {explanation.questionsForDoctor.map((q, index) => (
                   <li key={index} className="flex gap-3">
-                    <span className="text-emerald-400 font-semibold text-sm flex-shrink-0">{index + 1}.</span>
-                    <span className="text-[#E8F5F0]/70 text-sm">{q}</span>
+                    <span className="text-emerald-600 font-semibold text-sm flex-shrink-0">{index + 1}.</span>
+                    <span className="text-gray-700 text-sm">{q}</span>
                   </li>
                 ))}
               </ul>
@@ -232,13 +232,13 @@ export default function ReportDetailPage({ params }) {
               <div className="space-y-3">
                 {chatHistory.map((chat, index) => (
                   <div key={index} className="space-y-2">
-                    <div className="bg-emerald-950/40 border border-emerald-900/30 p-3 rounded-lg">
-                      <p className="font-semibold text-xs text-emerald-400">{t('report.you')}:</p>
-                      <p className="text-sm text-[#E8F5F0]/70">{chat.question}</p>
+                    <div className="bg-emerald-50 border border-emerald-200 p-3 rounded-lg">
+                      <p className="font-semibold text-xs text-emerald-700">{t('report.you')}:</p>
+                      <p className="text-sm text-gray-700">{chat.question}</p>
                     </div>
-                    <div className="bg-[#060D0B] border border-emerald-900/20 p-3 rounded-lg">
-                      <p className="font-semibold text-xs text-[#E8F5F0]/40">{t('report.ai')}:</p>
-                      <p className="text-sm text-[#E8F5F0]/70 whitespace-pre-wrap">{chat.answer}</p>
+                    <div className="bg-gray-50 border border-gray-200 p-3 rounded-lg">
+                      <p className="font-semibold text-xs text-gray-400">{t('report.ai')}:</p>
+                      <p className="text-sm text-gray-700 whitespace-pre-wrap">{chat.answer}</p>
                     </div>
                   </div>
                 ))}
@@ -251,7 +251,7 @@ export default function ReportDetailPage({ params }) {
                     disabled={sending}
                     className="text-sm"
                   />
-                  <Button onClick={sendQuestion} disabled={sending || !question.trim()} size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-[#060D0B]">
+                  <Button onClick={sendQuestion} disabled={sending || !question.trim()} size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white">
                     {sending ? t('report.sending') : <Send className="h-4 w-4" />}
                   </Button>
                 </div>
