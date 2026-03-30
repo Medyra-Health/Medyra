@@ -7,7 +7,7 @@ import { useUser } from '@clerk/nextjs';
 
 export default function MobileNav() {
   const pathname = usePathname();
-  const { user, isSignedIn } = useUser();
+  const { isSignedIn } = useUser();
 
   const navItems = [
     { href: '/', icon: Home, label: 'Home' },
@@ -17,20 +17,19 @@ export default function MobileNav() {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 md:hidden z-50">
+    <nav className="fixed bottom-0 left-0 right-0 bg-[#040C08] border-t border-emerald-900/30 md:hidden z-50">
       <div className="flex justify-around items-center h-16">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = pathname === item.href;
-          
           return (
             <Link
               key={item.href}
               href={item.href}
               className={`flex flex-col items-center justify-center flex-1 h-full gap-1 transition-colors ${
-                isActive 
-                  ? 'text-blue-600 dark:text-blue-400' 
-                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100'
+                isActive
+                  ? 'text-emerald-400'
+                  : 'text-[#E8F5F0]/40 hover:text-[#E8F5F0]/70'
               }`}
             >
               <Icon className="w-6 h-6" />

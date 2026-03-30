@@ -1,12 +1,13 @@
 import { ClerkProvider } from '@clerk/nextjs'
 import { NextIntlClientProvider } from 'next-intl'
-import { Inter } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import { cookies } from 'next/headers'
 import './globals.css'
 import { Toaster } from 'sonner'
 import MobileNav from '@/components/MobileNav'
 
 const inter = Inter({ subsets: ['latin'] })
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-playfair' })
 
 export const metadata = {
   metadataBase: new URL('https://medyra.de'),
@@ -85,7 +86,7 @@ export const metadata = {
   },
 
   manifest: '/manifest.json',
-  themeColor: '#2563eb',
+  themeColor: '#10B981',
 
   appleWebApp: {
     capable: true,
@@ -118,10 +119,10 @@ export default async function RootLayout({ children }) {
 
   return (
     <ClerkProvider>
-      <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+      <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${inter.className} ${playfair.variable}`}>
         <head>
           <link rel="manifest" href="/manifest.json" />
-          <meta name="theme-color" content="#2563eb" />
+          <meta name="theme-color" content="#10B981" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
           <meta name="apple-mobile-web-app-title" content="Medyra" />
@@ -135,7 +136,7 @@ export default async function RootLayout({ children }) {
             gtag('config', 'G-Q8Y2GQCSSS');
           `}} />
         </head>
-        <body className={`${inter.className} pb-16 md:pb-0`}>
+        <body className="pb-16 md:pb-0">
           <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
             <MobileNav />
