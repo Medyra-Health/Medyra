@@ -57,9 +57,7 @@ export default function PricingPage() {
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
             <Link href="/">
-              <div className="bg-[#060D0B] rounded-xl px-3 py-2">
-                <MedyraLogo size="sm" variant="dark" showTagline />
-              </div>
+              <MedyraLogo size="md" />
             </Link>
             <div className="flex items-center gap-2">
               <LanguageSwitcher />
