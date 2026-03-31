@@ -28,9 +28,7 @@ export default function LandingPage() {
       <nav className="border-b border-gray-200 bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
-            <div className="bg-[#060D0B] rounded-xl px-3 py-2">
-              <MedyraLogo size="sm" variant="dark" showTagline />
-            </div>
+            <MedyraLogo size="md" />
 
             {/* Desktop nav */}
             <div className="hidden md:flex items-center space-x-2">
