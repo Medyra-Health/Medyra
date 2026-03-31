@@ -5,6 +5,7 @@ import { cookies } from 'next/headers'
 import './globals.css'
 import { Toaster } from 'sonner'
 import MobileNav from '@/components/MobileNav'
+import CookieBanner from '@/components/CookieBanner'
 
 const inter = Inter({ subsets: ['latin'] })
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-playfair' })
@@ -140,6 +141,7 @@ export default async function RootLayout({ children }) {
           <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
             <MobileNav />
+            <CookieBanner />
           </NextIntlClientProvider>
           <Toaster position="top-center" richColors />
         </body>
