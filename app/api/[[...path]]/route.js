@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb'
 import { v4 as uuidv4 } from 'uuid'
 import { NextResponse } from 'next/server'
-import { auth } from '@clerk/nextjs/server'
+import { auth, currentUser } from '@clerk/nextjs/server'
 import Anthropic from '@anthropic-ai/sdk'
 import pdfParse from 'pdf-parse'
 import Stripe from 'stripe'
@@ -198,6 +198,15 @@ async function getAIExplanation(extractedText) {
 
 const ADMIN_EMAIL = 'abralur28@gmail.com'
 
+async function isAdminUser() {
+  try {
+    const user = await currentUser()
+    return user?.emailAddresses?.some(e => e.emailAddress === ADMIN_EMAIL) || false
+  } catch {
+    return false
+  }
+}
+
 async function ensureUserExists(userId, database) {
   const user = await database.collection('users').findOne({ clerkId: userId })
   if (!user) {
@@ -207,17 +216,14 @@ async function ensureUserExists(userId, database) {
       createdAt: new Date(),
       updatedAt: new Date()
     })
-    return { tier: 'free', limit: 1, used: 0, allowed: true, email: null }
+    return { tier: 'free', limit: 1, used: 0, allowed: true }
   }
   const sub = user.subscription || { tier: 'free', usageLimit: 1, currentUsage: 0 }
-  const email = user.email || null
-  const isAdmin = email === ADMIN_EMAIL
   return {
-    tier: isAdmin ? 'admin' : sub.tier,
-    limit: isAdmin ? 999999 : sub.usageLimit,
+    tier: sub.tier,
+    limit: sub.usageLimit,
     used: sub.currentUsage,
-    allowed: isAdmin ? true : sub.currentUsage < sub.usageLimit,
-    email
+    allowed: sub.currentUsage < sub.usageLimit
   }
 }
 
@@ -248,9 +254,12 @@ async function handleAnalyzeReport(request) {
   }
 
   const database = await connectToMongo()
-  const usageCheck = await ensureUserExists(userId, database)
+  const [usageCheck, admin] = await Promise.all([
+    ensureUserExists(userId, database),
+    isAdminUser()
+  ])
 
-  if (!usageCheck.allowed) {
+  if (!usageCheck.allowed && !admin) {
     return handleCORS(NextResponse.json({
       error: 'Usage limit reached. Please upgrade your plan.',
       tier: usageCheck.tier,
@@ -386,16 +395,20 @@ async function handleGetSubscription() {
   const { userId } = await auth()
   if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
   const database = await connectToMongo()
-  const info = await ensureUserExists(userId, database)
+  const [info, admin] = await Promise.all([
+    ensureUserExists(userId, database),
+    isAdminUser()
+  ])
+  const tier = admin ? 'admin' : info.tier
+  const usageLimit = admin ? 999999 : info.limit
+  const remaining = admin ? 999999 : Math.max(0, info.limit - info.used)
   return handleCORS(NextResponse.json({
     success: true,
-    subscription: {
-      tier: info.tier,
-      status: 'active',
-      usageLimit: info.limit,
-      currentUsage: info.used,
-      remaining: info.limit - info.used
-    }
+    tier,
+    status: 'active',
+    usageLimit,
+    currentUsage: info.used,
+    remaining
   }))
 }
 
