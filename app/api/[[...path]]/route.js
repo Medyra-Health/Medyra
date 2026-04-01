@@ -130,13 +130,28 @@ async function extractTextFromPDF(buffer) {
   return text
 }
 
-async function extractTextFromImage(buffer) {
-  const client = await getVisionClient()
-  if (!client) throw new Error('Image OCR not configured. Please upload a PDF or text file.')
-  const [result] = await client.documentTextDetection({
-    image: { content: buffer.toString('base64') }
+async function extractTextFromImage(buffer, mimeType) {
+  const validMime = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'].includes(mimeType)
+    ? mimeType
+    : 'image/jpeg'
+  const response = await anthropic.messages.create({
+    model: 'claude-haiku-4-5-20251001',
+    max_tokens: 4096,
+    messages: [{
+      role: 'user',
+      content: [
+        {
+          type: 'image',
+          source: { type: 'base64', media_type: validMime, data: buffer.toString('base64') }
+        },
+        {
+          type: 'text',
+          text: 'Extract all text from this medical report image. Return only the raw extracted text, no commentary.'
+        }
+      ]
+    }]
   })
-  const fullText = result.fullTextAnnotation?.text?.trim() || ''
+  const fullText = response.content[0].text.trim()
   if (!fullText || fullText.length < 10) throw new Error('No readable text found in image')
   return fullText
 }
@@ -147,7 +162,7 @@ async function extractTextFromImage(buffer) {
 
 async function getAIExplanation(extractedText) {
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-5',
+    model: 'claude-sonnet-4-6',
     max_tokens: 4096,
     system: MEDICAL_PROMPT,
     messages: [{
@@ -254,7 +269,7 @@ async function handleAnalyzeReport(request) {
     if (fileType === 'application/pdf' || file.name.endsWith('.pdf')) {
       extractedText = await extractTextFromPDF(buffer)
     } else if (fileType.startsWith('image/') || /\.(jpg|jpeg|png|webp)$/i.test(file.name)) {
-      extractedText = await extractTextFromImage(buffer)
+      extractedText = await extractTextFromImage(buffer, fileType)
     } else if (fileType === 'text/plain' || file.name.endsWith('.txt')) {
       extractedText = buffer.toString('utf-8').trim()
     } else {
