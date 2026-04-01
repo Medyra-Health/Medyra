@@ -173,7 +173,16 @@ async function getAIExplanation(extractedText) {
   })
 
   let text = response.content[0].text.trim()
-  text = text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim()
+
+  // Strip markdown code fences
+  text = text.replace(/```json\n?/gi, '').replace(/```\n?/g, '').trim()
+
+  // Find the outermost JSON object even if the model added preamble/postamble text
+  const jsonStart = text.indexOf('{')
+  const jsonEnd = text.lastIndexOf('}')
+  if (jsonStart !== -1 && jsonEnd > jsonStart) {
+    text = text.substring(jsonStart, jsonEnd + 1)
+  }
 
   try {
     const parsed = JSON.parse(text)
@@ -183,9 +192,10 @@ async function getAIExplanation(extractedText) {
     if (!Array.isArray(parsed.questionsForDoctor)) parsed.questionsForDoctor = []
     return parsed
   } catch {
+    // Last resort: return structured error so the page still renders cleanly
     return {
       disclaimer: 'This is educational information, not medical advice. Consult your doctor.',
-      summary: text.substring(0, 500),
+      summary: 'We could not fully parse this report. Please try uploading again or use a clearer scan.',
       tests: [],
       questionsForDoctor: ['What do these results mean?', 'Do I need follow-up tests?', 'Any lifestyle changes needed?']
     }
@@ -363,11 +373,15 @@ async function handleChat(request, reportId) {
   const { question } = body
   if (!question?.trim()) return handleCORS(NextResponse.json({ error: 'Question required' }, { status: 400 }))
 
+  // Build context-aware system prompt that includes the report data
+  const reportContext = report.explanation
+    ? `\n\nHere is the patient's medical report analysis you should use to answer questions:\n${JSON.stringify(report.explanation, null, 2)}`
+    : ''
+  const chatSystemPrompt = MEDICAL_PROMPT + reportContext
+
+  // Messages MUST start with role:'user' — Anthropic rejects assistant-first arrays
   const messages = []
-  if (report.explanation) {
-    messages.push({ role: 'assistant', content: JSON.stringify(report.explanation) })
-  }
-  if (Array.isArray(report.conversations)) {
+  if (Array.isArray(report.conversations) && report.conversations.length > 0) {
     report.conversations.forEach(c => {
       messages.push({ role: 'user', content: c.question })
       messages.push({ role: 'assistant', content: c.answer })
@@ -376,9 +390,9 @@ async function handleChat(request, reportId) {
   messages.push({ role: 'user', content: question })
 
   const response = await anthropic.messages.create({
-    model: 'claude-3-5-sonnet-20241022',
+    model: 'claude-sonnet-4-6',
     max_tokens: 2048,
-    system: MEDICAL_PROMPT,
+    system: chatSystemPrompt,
     messages
   })
   const answer = response.content[0].text
