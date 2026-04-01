@@ -13,22 +13,83 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { toast } from 'sonner'
 import MedyraLogo from '@/components/MedyraLogo'
 
+const MAX_BYTES = 4 * 1024 * 1024 // 4 MB
+
+// Compress an image file to JPEG, targeting < MAX_BYTES
+async function compressImage(file) {
+  return new Promise((resolve, reject) => {
+    const img = new Image()
+    const url = URL.createObjectURL(file)
+    img.onload = () => {
+      URL.revokeObjectURL(url)
+      const canvas = document.createElement('canvas')
+      let { width, height } = img
+      // Scale down if very large
+      const MAX_DIM = 2000
+      if (width > MAX_DIM || height > MAX_DIM) {
+        const ratio = Math.min(MAX_DIM / width, MAX_DIM / height)
+        width = Math.round(width * ratio)
+        height = Math.round(height * ratio)
+      }
+      canvas.width = width
+      canvas.height = height
+      const ctx = canvas.getContext('2d')
+      ctx.drawImage(img, 0, 0, width, height)
+
+      // Try progressively lower quality until under limit
+      const tryQuality = (q) => {
+        canvas.toBlob((blob) => {
+          if (!blob) return reject(new Error('Image compression failed'))
+          if (blob.size <= MAX_BYTES || q <= 0.3) {
+            resolve(new File([blob], file.name.replace(/\.[^.]+$/, '.jpg'), { type: 'image/jpeg' }))
+          } else {
+            tryQuality(Math.round((q - 0.1) * 10) / 10)
+          }
+        }, 'image/jpeg', q)
+      }
+      tryQuality(0.85)
+    }
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('Could not read image')) }
+    img.src = url
+  })
+}
+
 export default function UploadPage() {
-  const { user, isLoaded } = useUser()
+  const { isLoaded } = useUser()
   const router = useRouter()
   const t = useTranslations()
   const [uploading, setUploading] = useState(false)
   const [progress, setProgress] = useState('')
+  const [sizeError, setSizeError] = useState(false)
 
   const onDrop = useCallback(async (acceptedFiles) => {
     if (acceptedFiles.length === 0) return
-    const file = acceptedFiles[0]
+    setSizeError(false)
+    let file = acceptedFiles[0]
     setUploading(true)
     setProgress(t('upload.analyzing'))
+
     try {
+      // Auto-compress images that are too large
+      if (file.type.startsWith('image/') && file.size > MAX_BYTES) {
+        setProgress('Compressing image…')
+        try {
+          file = await compressImage(file)
+        } catch {
+          // If compression fails, continue anyway — server will reject if still too large
+        }
+      }
+
+      // Check PDF/TXT size before uploading — can't compress in browser
+      if (!file.type.startsWith('image/') && file.size > MAX_BYTES) {
+        setSizeError(true)
+        throw new Error('FILE_TOO_LARGE')
+      }
+
       const formData = new FormData()
       formData.append('file', file)
       setProgress(t('upload.extracting'))
+
       const response = await fetch('/api/reports/analyze', { method: 'POST', body: formData })
       if (!response.ok) {
         let errorMsg = t('errors.uploadFailed')
@@ -36,20 +97,23 @@ export default function UploadPage() {
           const error = await response.json()
           errorMsg = error.error || errorMsg
         } catch {
-          if (response.status === 413) errorMsg = 'File too large. Please upload a file under 4MB.'
+          if (response.status === 413) { setSizeError(true); errorMsg = 'FILE_TOO_LARGE' }
           else if (response.status === 401) errorMsg = t('errors.unauthorized')
           else if (response.status === 429) errorMsg = t('errors.limitReached')
           else errorMsg = response.statusText || errorMsg
         }
         throw new Error(errorMsg)
       }
+
       setProgress(t('upload.processing'))
       const data = await response.json()
       toast.success(t('common.success'))
       router.push(`/reports/${data.reportId}`)
     } catch (error) {
       console.error('Upload error:', error)
-      toast.error(error.message || t('errors.analysisFailed'))
+      if (error.message !== 'FILE_TOO_LARGE') {
+        toast.error(error.message || t('errors.analysisFailed'))
+      }
     } finally {
       setUploading(false)
       setProgress('')
@@ -101,6 +165,27 @@ export default function UploadPage() {
           </div>
         </div>
 
+        {/* Size error help box */}
+        {sizeError && (
+          <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+            <div className="flex gap-3">
+              <AlertCircle className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 className="font-semibold text-red-700 mb-1 text-sm">File too large (max 4 MB)</h3>
+                <p className="text-xs text-red-700 mb-2">
+                  Your PDF is over 4 MB. Please compress it first — it only takes a few seconds:
+                </p>
+                <ul className="text-xs text-red-700 space-y-1 list-none">
+                  <li>• <strong>ilovepdf.com/compress_pdf</strong> — free, no sign-up</li>
+                  <li>• <strong>smallpdf.com/compress-pdf</strong> — free online</li>
+                  <li>• On Mac: open in Preview → Export as PDF → choose "Reduce File Size"</li>
+                  <li>• On Windows: print to PDF with "Microsoft Print to PDF" at lower quality</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
+
         <Card>
           <CardHeader>
             <CardTitle className="text-lg">{t('upload.title')}</CardTitle>
@@ -134,6 +219,7 @@ export default function UploadPage() {
                     <span className="px-2 py-1 bg-gray-100 rounded">PNG</span>
                     <span className="px-2 py-1 bg-gray-100 rounded">TXT</span>
                   </div>
+                  <p className="text-xs text-gray-400">Max 4 MB · Images auto-compressed</p>
                 </div>
               )}
             </div>
