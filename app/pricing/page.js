@@ -22,6 +22,7 @@ export default function PricingPage() {
     key,
     name: t(`pricing.tiers.${key}.name`),
     price: t(`pricing.tiers.${key}.price`),
+    originalPrice: t(`pricing.tiers.${key}.originalPrice`),
     period: t(`pricing.tiers.${key}.period`),
     description: t(`pricing.tiers.${key}.desc`),
     features: t.raw(`pricing.tiers.${key}.features`),
@@ -74,7 +75,9 @@ export default function PricingPage() {
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-3">{t('pricing.title')}</h1>
-          <p className="text-lg text-gray-500">{t('pricing.subtitle')}</p>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold text-sm mt-1">
+            {t('pricing.subtitle')}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 max-w-7xl mx-auto">
@@ -84,14 +87,25 @@ export default function PricingPage() {
               className={`flex flex-col ${tier.highlighted ? 'border-emerald-600 border-2 shadow-lg ring-1 ring-emerald-600/20' : 'border-gray-200'}`}
             >
               <CardHeader className="pb-3">
-                {tier.highlighted && (
-                  <Badge className="mb-2 w-fit bg-emerald-500 text-white">{t('pricing.mostPopular')}</Badge>
-                )}
+                <div className="flex items-center gap-2 flex-wrap mb-1">
+                  {tier.highlighted && (
+                    <Badge className="w-fit bg-emerald-500 text-white">{t('pricing.mostPopular')}</Badge>
+                  )}
+                  {tier.originalPrice && (
+                    <Badge className="w-fit bg-orange-500 text-white text-xs">{t('pricing.launchBadge')}</Badge>
+                  )}
+                </div>
                 <CardTitle className="text-base">{tier.name}</CardTitle>
-                <div className="mt-2 flex items-baseline gap-0.5">
+                <div className="mt-2 flex items-baseline gap-1.5">
+                  {tier.originalPrice && (
+                    <span className="text-base text-gray-400 line-through">{tier.originalPrice}</span>
+                  )}
                   <span className="text-3xl font-bold text-gray-900">{tier.price}</span>
                   <span className="text-gray-400 text-sm">{tier.period}</span>
                 </div>
+                {tier.originalPrice && (
+                  <p className="text-xs text-orange-600 font-medium mt-0.5">{t('pricing.launchNote')}</p>
+                )}
                 <CardDescription className="text-xs mt-1">{tier.description}</CardDescription>
               </CardHeader>
 
