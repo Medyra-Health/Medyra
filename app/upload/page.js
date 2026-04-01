@@ -1,7 +1,7 @@
 'use client'
 
 import { useUser } from '@clerk/nextjs'
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { useDropzone } from 'react-dropzone'
@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { toast } from 'sonner'
 import MedyraLogo from '@/components/MedyraLogo'
+import ConsentModal from '@/components/ConsentModal'
 
 const MAX_BYTES = 4 * 1024 * 1024 // 4 MB
 
@@ -61,11 +62,19 @@ export default function UploadPage() {
   const [uploading, setUploading] = useState(false)
   const [progress, setProgress] = useState('')
   const [sizeError, setSizeError] = useState(false)
+  const [consentStatus, setConsentStatus] = useState('loading') // 'loading' | 'consented' | 'needed' | 'declined'
+  const [pendingFile, setPendingFile] = useState(null)
 
-  const onDrop = useCallback(async (acceptedFiles) => {
-    if (acceptedFiles.length === 0) return
+  useEffect(() => {
+    if (!isLoaded) return
+    fetch('/api/consent')
+      .then(r => r.json())
+      .then(d => setConsentStatus(d.consented ? 'consented' : 'needed'))
+      .catch(() => setConsentStatus('needed'))
+  }, [isLoaded])
+
+  async function processFile(file) {
     setSizeError(false)
-    let file = acceptedFiles[0]
     setUploading(true)
     setProgress(t('upload.analyzing'))
 
@@ -118,13 +127,24 @@ export default function UploadPage() {
       setUploading(false)
       setProgress('')
     }
-  }, [router, t])
+  }
+
+  const onDrop = useCallback((acceptedFiles) => {
+    if (acceptedFiles.length === 0) return
+    const file = acceptedFiles[0]
+    if (consentStatus === 'consented') {
+      processFile(file)
+    } else {
+      setPendingFile(file)
+      setConsentStatus('needed')
+    }
+  }, [consentStatus])
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: { 'application/pdf': ['.pdf'], 'image/*': ['.png', '.jpg', '.jpeg'], 'text/plain': ['.txt'] },
     maxFiles: 1,
-    disabled: uploading
+    disabled: uploading || consentStatus === 'loading'
   })
 
   if (!isLoaded) {
@@ -133,6 +153,48 @@ export default function UploadPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Consent modal — shown when user tries to upload without consent */}
+      {consentStatus === 'needed' && pendingFile && (
+        <ConsentModal
+          onAccept={() => {
+            setConsentStatus('consented')
+            const f = pendingFile
+            setPendingFile(null)
+            processFile(f)
+          }}
+          onDecline={() => {
+            setPendingFile(null)
+            setConsentStatus('declined')
+          }}
+        />
+      )}
+
+      {/* Declined state */}
+      {consentStatus === 'declined' && (
+        <div className="fixed inset-0 z-40 flex items-center justify-center p-4 bg-gray-50">
+          <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8 text-center">
+            <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <AlertCircle className="h-7 w-7 text-gray-400" />
+            </div>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">Upload not available</h2>
+            <p className="text-sm text-gray-500 mb-1 leading-relaxed">
+              You chose not to consent to health data processing. No data was stored.
+            </p>
+            <p className="text-sm text-gray-500 mb-6 leading-relaxed">
+              You can change your mind at any time — just click "Upload Report" again and we will ask again.
+            </p>
+            <div className="space-y-2">
+              <Button onClick={() => setConsentStatus('needed')} className="w-full bg-emerald-500 hover:bg-emerald-600 text-white">
+                I changed my mind — show consent again
+              </Button>
+              <Link href="/dashboard" className="block">
+                <Button variant="ghost" className="w-full text-gray-500">Back to Dashboard</Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
       <header className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
