@@ -31,8 +31,17 @@ export default function UploadPage() {
       setProgress(t('upload.extracting'))
       const response = await fetch('/api/reports/analyze', { method: 'POST', body: formData })
       if (!response.ok) {
-        const error = await response.json()
-        throw new Error(error.error || t('errors.uploadFailed'))
+        let errorMsg = t('errors.uploadFailed')
+        try {
+          const error = await response.json()
+          errorMsg = error.error || errorMsg
+        } catch {
+          if (response.status === 413) errorMsg = 'File too large. Please upload a file under 4MB.'
+          else if (response.status === 401) errorMsg = t('errors.unauthorized')
+          else if (response.status === 429) errorMsg = t('errors.limitReached')
+          else errorMsg = response.statusText || errorMsg
+        }
+        throw new Error(errorMsg)
       }
       setProgress(t('upload.processing'))
       const data = await response.json()

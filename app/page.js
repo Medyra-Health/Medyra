@@ -6,13 +6,23 @@ import { Brain, Shield, Clock, ChevronRight, Menu, X, ArrowRight, AlertTriangle,
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import JsonLd from '@/components/JsonLd'
 import MedyraLogo from '@/components/MedyraLogo'
 
 export default function LandingPage() {
   const t = useTranslations()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [slide, setSlide] = useState(0)
+  const SLIDE_COUNT = 4
+
+  const nextSlide = useCallback(() => setSlide(s => (s + 1) % SLIDE_COUNT), [])
+  const prevSlide = useCallback(() => setSlide(s => (s - 1 + SLIDE_COUNT) % SLIDE_COUNT), [])
+
+  useEffect(() => {
+    const id = setInterval(nextSlide, 4500)
+    return () => clearInterval(id)
+  }, [nextSlide])
 
   const howItWorksSteps = ['step1', 'step2', 'step3', 'step4'].map((step, i) => ({
     step: String(i + 1),
@@ -107,21 +117,11 @@ export default function LandingPage() {
                   {t('hero.cta')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </SignInButton>
-              <Link href="/pricing" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="text-base px-8 w-full border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900">
-                  {t('hero.secondaryCta')}
-                </Button>
-              </Link>
             </SignedOut>
             <SignedIn>
               <Link href="/upload" className="w-full sm:w-auto">
                 <Button size="lg" className="text-base px-8 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold">
                   {t('nav.upload')} <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href="/pricing" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="text-base px-8 w-full border-gray-300 text-gray-700 hover:bg-gray-50">
-                  {t('hero.secondaryCta')}
                 </Button>
               </Link>
             </SignedIn>
@@ -339,6 +339,153 @@ export default function LandingPage() {
               <Clock className="h-10 w-10 text-emerald-600 mb-4" />
               <h3 className="font-semibold text-lg text-gray-900 mb-2">{t('features.fast.title')}</h3>
               <p className="text-gray-500 text-sm">{t('features.fast.desc')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Post Carousel */}
+      <section className="py-16 md:py-24 bg-gray-900 overflow-hidden">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Trusted by patients across 16 languages</h2>
+            <p className="text-gray-400 text-lg">From Germany to the world — understand your health in your own language.</p>
+          </div>
+
+          <div className="relative">
+            {/* Slides */}
+            <div className="overflow-hidden rounded-2xl">
+              {/* Slide 0 — EN Hook */}
+              <div className={`transition-all duration-500 ${slide === 0 ? 'block' : 'hidden'}`}>
+                <div className="bg-[#040C08] rounded-2xl p-8 md:p-12 relative overflow-hidden min-h-[340px] flex flex-col justify-between">
+                  <div className="absolute inset-0 pointer-events-none" style={{background:'radial-gradient(ellipse at 30% 70%, rgba(16,185,129,0.08) 0%, transparent 60%)'}} />
+                  <div className="relative">
+                    <div className="flex items-center gap-3 mb-6">
+                      <svg width="28" height="33" viewBox="0 0 88 104" fill="none"><rect x="26" y="16" width="48" height="62" rx="7" stroke="rgba(16,185,129,0.1)" strokeWidth="1.2" fill="rgba(16,185,129,0.015)"/><rect x="16" y="9" width="48" height="62" rx="7" stroke="rgba(16,185,129,0.22)" strokeWidth="1.4" fill="rgba(4,12,8,0.85)"/><rect x="5" y="2" width="52" height="68" rx="7" stroke="rgba(16,185,129,0.58)" strokeWidth="1.5" fill="#040C08"/><path d="M31 53 L35 53 L38 45 L42 65 L46 35 L50 53 L54 47 L58 53 L86 53" stroke="#10B981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/><circle cx="35" cy="53" r="2.6" fill="#10B981" opacity="0.9"/></svg>
+                      <span style={{fontFamily:'var(--font-playfair, "Playfair Display", Georgia, serif)', fontWeight:700, fontSize:'20px', color:'#E8F5F0', letterSpacing:'0.04em'}}>Medyra</span>
+                    </div>
+                    <h3 style={{fontFamily:'var(--font-playfair, "Playfair Display", Georgia, serif)', fontWeight:700, fontSize:'clamp(28px,4vw,42px)', lineHeight:1.15, color:'#E8F5F0'}}>
+                      Your lab results,<br /><em style={{fontStyle:'italic', color:'#10B981'}}>finally clear.</em>
+                    </h3>
+                    <p className="mt-4 text-sm font-light max-w-md" style={{color:'rgba(232,245,240,0.55)', lineHeight:1.6}}>
+                      Stop Googling medical terms at 2am. Upload your report and get a plain-language explanation in under 60 seconds.
+                    </p>
+                  </div>
+                  <div className="relative mt-6 text-xs tracking-widest uppercase font-medium" style={{color:'#10B981', letterSpacing:'0.22em'}}>medyra.de · Free to start →</div>
+                  <svg className="absolute bottom-6 right-0 opacity-20 pointer-events-none" width="200" height="44" viewBox="0 0 200 44" fill="none"><path d="M0 22 L45 22 L53 9 L62 35 L71 2 L80 22 L88 15 L97 22 L200 22" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
+                </div>
+              </div>
+
+              {/* Slide 1 — Before/After EN */}
+              <div className={`transition-all duration-500 ${slide === 1 ? 'block' : 'hidden'}`}>
+                <div className="bg-[#040C08] rounded-2xl p-8 md:p-12 relative overflow-hidden min-h-[340px] flex flex-col justify-between">
+                  <div className="absolute inset-0 pointer-events-none" style={{background:'radial-gradient(ellipse at 80% 20%, rgba(16,185,129,0.06) 0%, transparent 55%)'}} />
+                  <div className="relative">
+                    <div className="flex items-center gap-3 mb-5">
+                      <svg width="24" height="28" viewBox="0 0 88 104" fill="none"><rect x="5" y="2" width="52" height="68" rx="7" stroke="rgba(16,185,129,0.58)" strokeWidth="1.5" fill="#040C08"/><path d="M31 53 L35 53 L38 45 L42 65 L46 35 L50 53 L54 47 L58 53 L86 53" stroke="#10B981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/><circle cx="35" cy="53" r="2.6" fill="#10B981" opacity="0.9"/></svg>
+                      <span style={{fontFamily:'var(--font-playfair, "Playfair Display", Georgia, serif)', fontWeight:700, fontSize:'18px', color:'#E8F5F0'}}>Medyra</span>
+                    </div>
+                    <h3 style={{fontFamily:'var(--font-playfair, "Playfair Display", Georgia, serif)', fontWeight:700, fontSize:'clamp(20px,3vw,28px)', color:'#E8F5F0', lineHeight:1.2}}>What your doctor gave you — explained.</h3>
+                  </div>
+                  <div className="relative grid grid-cols-2 gap-3 mt-5 flex-1">
+                    <div className="rounded-xl p-4" style={{background:'rgba(255,255,255,0.03)', border:'1px solid rgba(255,255,255,0.06)'}}>
+                      <p className="text-xs tracking-widest uppercase mb-3" style={{color:'rgba(255,255,255,0.25)'}}>Your report</p>
+                      {[['HbA1c','6.1% ↑'],['eGFR','58 mL/min ↓'],['CRP','12.4 mg/L ↑↑'],['Ferritin','11 µg/L ↓']].map(([k,v]) => (
+                        <div key={k} className="flex justify-between text-xs mb-1.5" style={{color:'rgba(232,245,240,0.4)'}}><span>{k}</span><span className="font-semibold">{v}</span></div>
+                      ))}
+                      <p className="text-center text-xs mt-2 italic" style={{color:'rgba(232,245,240,0.2)'}}>What does this mean?</p>
+                    </div>
+                    <div className="rounded-xl p-4" style={{background:'rgba(16,185,129,0.04)', border:'1px solid rgba(16,185,129,0.15)'}}>
+                      <p className="text-xs tracking-widest uppercase mb-3" style={{color:'rgba(16,185,129,0.6)'}}>Medyra explains</p>
+                      {[['Blood sugar','slightly high — discuss pre-diabetes'],['Kidneys','mildly reduced — monitor'],['Inflammation','elevated — see doctor'],['Iron','low — may cause fatigue']].map(([k,v]) => (
+                        <div key={k} className="text-xs mb-1.5" style={{color:'rgba(232,245,240,0.7)'}}><span style={{color:'#10B981', fontWeight:500}}>{k}</span> {v}</div>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="relative mt-4 text-xs tracking-widest uppercase" style={{color:'rgba(16,185,129,0.4)', letterSpacing:'0.18em'}}>medyra.de · Free first report</p>
+                </div>
+              </div>
+
+              {/* Slide 2 — DE Hook */}
+              <div className={`transition-all duration-500 ${slide === 2 ? 'block' : 'hidden'}`}>
+                <div className="bg-[#040C08] rounded-2xl p-8 md:p-12 relative overflow-hidden min-h-[340px] flex flex-col justify-between" style={{background:'linear-gradient(155deg, #040C08 0%, #050F0A 100%)'}}>
+                  <div className="absolute inset-0 pointer-events-none" style={{background:'radial-gradient(ellipse at 70% 30%, rgba(16,185,129,0.07) 0%, transparent 55%)'}} />
+                  <div className="relative">
+                    <div className="flex items-center gap-3 mb-6">
+                      <svg width="28" height="33" viewBox="0 0 88 104" fill="none"><rect x="26" y="16" width="48" height="62" rx="7" stroke="rgba(16,185,129,0.1)" strokeWidth="1.2" fill="rgba(16,185,129,0.015)"/><rect x="16" y="9" width="48" height="62" rx="7" stroke="rgba(16,185,129,0.22)" strokeWidth="1.4" fill="rgba(4,12,8,0.85)"/><rect x="5" y="2" width="52" height="68" rx="7" stroke="rgba(16,185,129,0.58)" strokeWidth="1.5" fill="#040C08"/><path d="M31 53 L35 53 L38 45 L42 65 L46 35 L50 53 L54 47 L58 53 L86 53" stroke="#10B981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/><circle cx="35" cy="53" r="2.6" fill="#10B981" opacity="0.9"/></svg>
+                      <span style={{fontFamily:'var(--font-playfair, "Playfair Display", Georgia, serif)', fontWeight:700, fontSize:'20px', color:'#E8F5F0', letterSpacing:'0.04em'}}>Medyra</span>
+                    </div>
+                    <h3 style={{fontFamily:'var(--font-playfair, "Playfair Display", Georgia, serif)', fontWeight:700, fontSize:'clamp(28px,4vw,40px)', lineHeight:1.2, color:'#E8F5F0'}}>
+                      Dein Befund,<br /><em style={{fontStyle:'italic', color:'#10B981'}}>endlich verständlich.</em>
+                    </h3>
+                    <p className="mt-4 text-sm font-light max-w-md" style={{color:'rgba(232,245,240,0.55)', lineHeight:1.6}}>
+                      Schluss mit dem nächtlichen Googeln von Laborwerten. Lade deinen Befund hoch und erhalte in unter 60 Sekunden eine klare Erklärung.
+                    </p>
+                  </div>
+                  <div className="relative mt-6 text-xs tracking-widest uppercase font-medium" style={{color:'#10B981', letterSpacing:'0.22em'}}>medyra.de · Kostenlos starten →</div>
+                  <svg className="absolute bottom-6 right-0 opacity-20 pointer-events-none" width="200" height="44" viewBox="0 0 200 44" fill="none"><path d="M0 22 L45 22 L53 9 L62 35 L71 2 L80 22 L88 15 L97 22 L200 22" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
+                </div>
+              </div>
+
+              {/* Slide 3 — Features DE */}
+              <div className={`transition-all duration-500 ${slide === 3 ? 'block' : 'hidden'}`}>
+                <div className="bg-[#040C08] rounded-2xl p-8 md:p-12 relative overflow-hidden min-h-[340px] flex flex-col justify-between">
+                  <div className="absolute inset-0 pointer-events-none" style={{background:'radial-gradient(ellipse at 80% 80%, rgba(16,185,129,0.06) 0%, transparent 55%)'}} />
+                  <div className="relative">
+                    <div className="flex items-center gap-3 mb-5">
+                      <svg width="24" height="28" viewBox="0 0 88 104" fill="none"><rect x="5" y="2" width="52" height="68" rx="7" stroke="rgba(16,185,129,0.58)" strokeWidth="1.5" fill="#040C08"/><path d="M31 53 L35 53 L38 45 L42 65 L46 35 L50 53 L54 47 L58 53 L86 53" stroke="#10B981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/><circle cx="35" cy="53" r="2.6" fill="#10B981" opacity="0.9"/></svg>
+                      <span style={{fontFamily:'var(--font-playfair, "Playfair Display", Georgia, serif)', fontWeight:700, fontSize:'18px', color:'#E8F5F0'}}>Medyra</span>
+                    </div>
+                    <h3 style={{fontFamily:'var(--font-playfair, "Playfair Display", Georgia, serif)', fontWeight:700, fontSize:'clamp(22px,3vw,32px)', color:'#E8F5F0', lineHeight:1.2}}>
+                      Medizinbefunde<br /><em style={{fontStyle:'italic', color:'#10B981'}}>auf einen Blick.</em>
+                    </h3>
+                  </div>
+                  <div className="relative mt-5 flex flex-col gap-4 flex-1 justify-center">
+                    {[
+                      ['Kostenlos starten', 'Erster Bericht gratis, keine Kreditkarte nötig'],
+                      ['DSGVO-konform', 'In Deutschland entwickelt, Daten nach 30 Tagen gelöscht'],
+                      ['60 Sekunden', 'Ergebnis schneller als eine Google-Suche'],
+                      ['16 Sprachen', 'Ideal für Expats & internationale Patienten'],
+                    ].map(([title, desc]) => (
+                      <div key={title} className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{background:'#10B981'}} />
+                        <p className="text-sm font-light" style={{color:'rgba(232,245,240,0.7)', lineHeight:1.5}}>
+                          <span style={{color:'#E8F5F0', fontWeight:500}}>{title}</span> — {desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="relative mt-5 text-xs tracking-widest uppercase" style={{color:'rgba(16,185,129,0.4)', letterSpacing:'0.18em'}}>medyra.de</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Controls */}
+            <div className="flex items-center justify-center gap-4 mt-6">
+              <button
+                onClick={prevSlide}
+                className="w-9 h-9 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:border-emerald-500 hover:text-emerald-400 transition-colors"
+                aria-label="Previous"
+              >
+                <ChevronRight className="h-4 w-4 rotate-180" />
+              </button>
+              <div className="flex gap-2">
+                {Array.from({length: SLIDE_COUNT}).map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setSlide(i)}
+                    className={`h-1.5 rounded-full transition-all ${i === slide ? 'w-6 bg-emerald-400' : 'w-1.5 bg-gray-600 hover:bg-gray-500'}`}
+                    aria-label={`Slide ${i + 1}`}
+                  />
+                ))}
+              </div>
+              <button
+                onClick={nextSlide}
+                className="w-9 h-9 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:border-emerald-500 hover:text-emerald-400 transition-colors"
+                aria-label="Next"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
             </div>
           </div>
         </div>
