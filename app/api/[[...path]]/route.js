@@ -119,6 +119,19 @@ You MUST respond with VALID JSON only (no markdown, no code blocks):
 flag must be: "normal", "high", "low", or "critical"
 Return ONLY valid JSON. No other text.`
 
+const CHAT_PROMPT = `You are Medyra AI — a friendly, empathetic health assistant that helps patients understand their medical reports.
+
+RULES:
+- Respond in clear, plain language — no jargon
+- Never diagnose conditions or prescribe treatments
+- Always encourage the patient to consult their doctor for medical decisions
+- Be warm and reassuring, not scary
+- Give specific, helpful answers based on the patient's actual report data provided in the context
+- When referencing past reports, mention the date/time to help the patient track trends
+- Keep answers concise but complete (2-5 sentences unless a longer explanation is truly needed)
+- End every response with a gentle reminder to discuss findings with their doctor if the topic is clinical
+- NEVER respond with JSON — always respond in natural conversational text`
+
 // ============================================================================
 // FILE PROCESSING
 // ============================================================================
@@ -366,23 +379,41 @@ async function handleChat(request, reportId) {
   const { userId } = await auth()
   if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
   const database = await connectToMongo()
-  const report = await database.collection('reports').findOne({ id: reportId, userId })
+
+  // Fetch current report + all other reports for this user (history)
+  const [report, allReports] = await Promise.all([
+    database.collection('reports').findOne({ id: reportId, userId }),
+    database.collection('reports')
+      .find({ userId }, { projection: { extractedText: 0 } })
+      .sort({ createdAt: -1 })
+      .limit(10)
+      .toArray()
+  ])
   if (!report) return handleCORS(NextResponse.json({ error: 'Report not found' }, { status: 404 }))
 
   const body = await request.json()
   const { question } = body
   if (!question?.trim()) return handleCORS(NextResponse.json({ error: 'Question required' }, { status: 400 }))
 
-  // Build context-aware system prompt that includes the report data
-  const reportContext = report.explanation
-    ? `\n\nHere is the patient's medical report analysis you should use to answer questions:\n${JSON.stringify(report.explanation, null, 2)}`
+  // Build rich context: current report + patient history from all reports
+  const currentCtx = report.explanation
+    ? `\n\n=== CURRENT REPORT (${new Date(report.createdAt).toLocaleDateString()}: ${report.fileName}) ===\n${JSON.stringify(report.explanation, null, 2)}`
     : ''
-  const chatSystemPrompt = MEDICAL_PROMPT + reportContext
 
-  // Messages MUST start with role:'user' — Anthropic rejects assistant-first arrays
+  const historyCtx = allReports.length > 1
+    ? '\n\n=== PATIENT REPORT HISTORY (for trend analysis) ===\n' +
+      allReports
+        .filter(r => r.id !== reportId && r.explanation)
+        .map(r => `--- ${new Date(r.createdAt).toLocaleDateString()} (${r.fileName}) ---\nSummary: ${r.explanation?.summary || 'N/A'}\nTests: ${JSON.stringify(r.explanation?.tests || [], null, 2)}`)
+        .join('\n\n')
+    : ''
+
+  const chatSystemPrompt = CHAT_PROMPT + currentCtx + historyCtx
+
+  // Messages MUST start with role:'user'
   const messages = []
   if (Array.isArray(report.conversations) && report.conversations.length > 0) {
-    report.conversations.forEach(c => {
+    report.conversations.slice(-10).forEach(c => {
       messages.push({ role: 'user', content: c.question })
       messages.push({ role: 'assistant', content: c.answer })
     })
@@ -391,7 +422,7 @@ async function handleChat(request, reportId) {
 
   const response = await anthropic.messages.create({
     model: 'claude-sonnet-4-6',
-    max_tokens: 2048,
+    max_tokens: 1024,
     system: chatSystemPrompt,
     messages
   })
@@ -598,6 +629,27 @@ async function handleRoute(request) {
     // Clerk webhook
     if (route === '/webhook/clerk' && method === 'POST') {
       return handleClerkWebhook(request)
+    }
+
+    // Consent: GET = check, POST = grant
+    if (route === '/consent' && method === 'GET') {
+      const { userId } = await auth()
+      if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+      const database = await connectToMongo()
+      const user = await database.collection('users').findOne({ clerkId: userId })
+      return handleCORS(NextResponse.json({ consented: !!(user?.consentGiven), consentDate: user?.consentDate || null }))
+    }
+    if (route === '/consent' && method === 'POST') {
+      const { userId } = await auth()
+      if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+      const body = await request.json()
+      const database = await connectToMongo()
+      await database.collection('users').updateOne(
+        { clerkId: userId },
+        { $set: { consentGiven: true, consentDate: new Date(), consentVersion: body.version || '1.0', updatedAt: new Date() } },
+        { upsert: true }
+      )
+      return handleCORS(NextResponse.json({ success: true }))
     }
 
     return handleCORS(NextResponse.json({

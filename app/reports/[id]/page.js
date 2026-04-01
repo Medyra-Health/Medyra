@@ -373,11 +373,14 @@ export default function ReportDetailPage({ params }) {
           <div className="w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col" style={{ height: '440px' }}>
             {/* Chat header */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-emerald-50 rounded-t-2xl">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="font-semibold text-sm text-gray-800">Ask AI about your results</span>
+              <div className="flex items-center gap-2 min-w-0">
+                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
+                <div className="min-w-0">
+                  <p className="font-semibold text-sm text-gray-800 leading-none">Medyra AI</p>
+                  <p className="text-xs text-gray-400 leading-none mt-0.5">Powered by Claude · Educational only</p>
+                </div>
               </div>
-              <button onClick={() => setChatOpen(false)} className="text-gray-400 hover:text-gray-600 p-1">
+              <button onClick={() => setChatOpen(false)} className="text-gray-400 hover:text-gray-600 p-1 flex-shrink-0">
                 <X className="h-4 w-4" />
               </button>
             </div>
@@ -385,12 +388,38 @@ export default function ReportDetailPage({ params }) {
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-3 space-y-3">
               {chatHistory.length === 0 && (
-                <div className="text-center py-6">
-                  <MessageSquare className="h-8 w-8 text-gray-300 mx-auto mb-2" />
-                  <p className="text-xs text-gray-400">Ask anything about your results</p>
-                  <div className="mt-3 space-y-1">
-                    {['What should I do about my critical values?', 'Which results need urgent attention?', 'What lifestyle changes could help?'].map(q => (
-                      <button key={q} onClick={() => setQuestion(q)} className="w-full text-left text-xs text-emerald-600 bg-emerald-50 hover:bg-emerald-100 rounded-lg px-3 py-1.5 transition-colors border border-emerald-100">
+                <div className="py-4">
+                  <p className="text-xs text-gray-400 text-center mb-3">Hi! I've read your report. Ask me anything:</p>
+                  <div className="space-y-1.5">
+                    {[
+                      'Summarise the most important findings for me',
+                      'Which results need urgent attention?',
+                      'What should I ask my doctor?',
+                      'How do my results compare to last time?',
+                    ].map(q => (
+                      <button
+                        key={q}
+                        disabled={sending}
+                        onClick={async () => {
+                          setQuestion('')
+                          setSending(true)
+                          try {
+                            const response = await fetch(`/api/reports/${reportId}/chat`, {
+                              method: 'POST',
+                              headers: { 'Content-Type': 'application/json' },
+                              body: JSON.stringify({ question: q })
+                            })
+                            if (!response.ok) throw new Error('Failed')
+                            const data = await response.json()
+                            setChatHistory(prev => [...prev, { question: q, answer: data.answer, timestamp: new Date() }])
+                          } catch {
+                            toast.error(t('errors.analysisFailed'))
+                          } finally {
+                            setSending(false)
+                          }
+                        }}
+                        className="w-full text-left text-xs text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-lg px-3 py-2 transition-colors border border-emerald-100 disabled:opacity-50"
+                      >
                         {q}
                       </button>
                     ))}
