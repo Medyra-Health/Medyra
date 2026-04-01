@@ -32,9 +32,6 @@ export default function LandingPage() {
 
             {/* Desktop nav */}
             <div className="hidden md:flex items-center space-x-2">
-              <Link href="/pricing">
-                <Button variant="ghost" size="sm" className="text-gray-700 hover:text-gray-900 hover:bg-gray-50">{t('nav.pricing')}</Button>
-              </Link>
               <LanguageSwitcher />
               <SignedOut>
                 <SignInButton mode="modal">
@@ -48,7 +45,7 @@ export default function LandingPage() {
                 <Link href="/dashboard">
                   <Button variant="ghost" size="sm" className="text-gray-700 hover:text-gray-900 hover:bg-gray-50">{t('nav.dashboard')}</Button>
                 </Link>
-                <UserButton afterSignOutUrl="/" />
+                <UserButton signOutUrl="/" />
               </SignedIn>
             </div>
 
@@ -66,9 +63,6 @@ export default function LandingPage() {
 
           {mobileMenuOpen && (
             <div className="md:hidden pt-3 pb-2 border-t border-gray-200 mt-3 space-y-1">
-              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="ghost" className="w-full justify-start text-gray-700 hover:text-gray-900 hover:bg-gray-50">{t('nav.pricing')}</Button>
-              </Link>
               <SignedOut>
                 <SignInButton mode="modal">
                   <Button variant="ghost" className="w-full justify-start text-gray-700 hover:text-gray-900 hover:bg-gray-50" onClick={() => setMobileMenuOpen(false)}>
@@ -85,7 +79,7 @@ export default function LandingPage() {
                 <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}>
                   <Button variant="ghost" className="w-full justify-start text-gray-700 hover:text-gray-900 hover:bg-gray-50">{t('nav.dashboard')}</Button>
                 </Link>
-                <div className="px-2 py-1"><UserButton afterSignOutUrl="/" /></div>
+                <div className="px-2 py-1"><UserButton signOutUrl="/" /></div>
               </SignedIn>
             </div>
           )}
@@ -218,8 +212,117 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Features */}
+      {/* Interactive Demo */}
       <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">See It in Action</h2>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">Upload a report, get a clear explanation in seconds — here is what the experience looks like.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-4 items-start">
+            {/* Step 1 — Upload */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full bg-emerald-500 text-white text-sm font-bold flex items-center justify-center flex-shrink-0">1</div>
+                <span className="font-semibold text-gray-900">Upload your report</span>
+              </div>
+              <div className="border-2 border-dashed border-gray-200 rounded-xl p-6 text-center bg-gray-50">
+                <div className="w-10 h-10 mx-auto mb-2 text-gray-300">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" /></svg>
+                </div>
+                <p className="text-xs text-gray-400 font-medium">Drop PDF, JPG, PNG or TXT</p>
+                <div className="mt-3 flex flex-wrap justify-center gap-1">
+                  {['PDF', 'JPG', 'PNG', 'TXT'].map(f => (
+                    <span key={f} className="px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded text-xs font-medium">{f}</span>
+                  ))}
+                </div>
+              </div>
+              <p className="text-xs text-gray-400 text-center mt-3">Encrypted · deleted after 30 days</p>
+            </div>
+
+            {/* Step 2 — Processing */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full bg-emerald-500 text-white text-sm font-bold flex items-center justify-center flex-shrink-0">2</div>
+                <span className="font-semibold text-gray-900">AI reads & explains</span>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 border border-emerald-100">
+                  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
+                  <span className="text-xs text-emerald-700">Extracting text from document…</span>
+                </div>
+                <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 border border-emerald-100">
+                  <div className="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" />
+                  <span className="text-xs text-emerald-700">Identifying all test values…</span>
+                </div>
+                <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 border border-emerald-100">
+                  <div className="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" />
+                  <span className="text-xs text-emerald-700">Generating plain-language explanation…</span>
+                </div>
+              </div>
+              <div className="mt-4 text-center">
+                <span className="text-2xl font-bold text-emerald-600">~30s</span>
+                <p className="text-xs text-gray-400 mt-1">Average processing time</p>
+              </div>
+            </div>
+
+            {/* Step 3 — Result */}
+            <div className="rounded-2xl border border-emerald-200 bg-white p-5 shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full bg-emerald-500 text-white text-sm font-bold flex items-center justify-center flex-shrink-0">3</div>
+                <span className="font-semibold text-gray-900">Your report, explained</span>
+              </div>
+              <div className="space-y-2">
+                <div className="border-l-4 border-emerald-400 pl-3 py-1">
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs font-semibold text-gray-700">TSH</span>
+                    <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-medium">Normal</span>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-0.5">Thyroid function is within healthy range.</p>
+                </div>
+                <div className="border-l-4 border-orange-400 pl-3 py-1">
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs font-semibold text-gray-700">HbA1c</span>
+                    <span className="text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full font-medium">High</span>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-0.5">Slightly elevated — discuss pre-diabetes risk with your doctor.</p>
+                </div>
+                <div className="border-l-4 border-red-400 pl-3 py-1">
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs font-semibold text-gray-700">CRP</span>
+                    <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-medium">Critical</span>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-0.5">Inflammation marker elevated — see your doctor soon.</p>
+                </div>
+              </div>
+              <div className="mt-3 pt-3 border-t border-gray-100">
+                <p className="text-xs text-gray-400 flex items-center gap-1"><CheckCircle className="h-3 w-3 text-emerald-500" /> + Questions to ask your doctor included</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <SignedOut>
+              <SignInButton mode="modal">
+                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-10">
+                  Try It Free — No Credit Card <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </SignInButton>
+            </SignedOut>
+            <SignedIn>
+              <Link href="/upload">
+                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-10">
+                  Upload My Report <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </SignedIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="rounded-xl border border-gray-200 bg-white p-6">
@@ -244,6 +347,9 @@ export default function LandingPage() {
       {/* Pricing CTA Strip */}
       <section className="bg-emerald-500 py-16">
         <div className="container mx-auto px-4 text-center max-w-2xl">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-semibold mb-4 border border-white/30">
+            🎉 Launch Special — 50% off all paid plans
+          </div>
           <h2 className="text-3xl font-bold text-white mb-3">{t('pricingCta.title')}</h2>
           <p className="text-white/70 mb-8 text-lg">{t('pricingCta.subtitle')}</p>
           <Link href="/pricing">
@@ -251,7 +357,7 @@ export default function LandingPage() {
               {t('pricingCta.cta')} <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
-          <p className="text-white/60 text-sm mt-4">Plans from €0/month · No credit card required</p>
+          <p className="text-white/60 text-sm mt-4">Plans from €0/month · No credit card required · Cancel anytime</p>
         </div>
       </section>
 
