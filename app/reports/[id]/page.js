@@ -40,8 +40,15 @@ export default function ReportDetailPage({ params }) {
       const response = await fetch(`/api/reports/${reportId}`)
       if (!response.ok) throw new Error('Failed to load report')
       const data = await response.json()
-      setReport(data.report)
-      setChatHistory(data.report.conversations || [])
+      const r = data.report
+      // Guard: if explanation was stored as a string (old parse failure), re-parse it
+      if (r && typeof r.explanation === 'string') {
+        try { r.explanation = JSON.parse(r.explanation) } catch { r.explanation = { summary: r.explanation, tests: [], questionsForDoctor: [] } }
+      }
+      setReport(r)
+      setChatHistory(r.conversations || [])
+      // Auto-open chat after a short delay so the user sees the prompt
+      setTimeout(() => setChatOpen(true), 1800)
     } catch (error) {
       console.error('Error:', error)
       toast.error(t('errors.uploadFailed'))
