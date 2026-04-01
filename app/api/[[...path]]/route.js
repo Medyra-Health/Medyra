@@ -196,6 +196,8 @@ async function getAIExplanation(extractedText) {
 // USER MANAGEMENT
 // ============================================================================
 
+const ADMIN_EMAIL = 'abralur28@gmail.com'
+
 async function ensureUserExists(userId, database) {
   const user = await database.collection('users').findOne({ clerkId: userId })
   if (!user) {
@@ -205,14 +207,17 @@ async function ensureUserExists(userId, database) {
       createdAt: new Date(),
       updatedAt: new Date()
     })
-    return { tier: 'free', limit: 1, used: 0, allowed: true }
+    return { tier: 'free', limit: 1, used: 0, allowed: true, email: null }
   }
   const sub = user.subscription || { tier: 'free', usageLimit: 1, currentUsage: 0 }
+  const email = user.email || null
+  const isAdmin = email === ADMIN_EMAIL
   return {
-    tier: sub.tier,
-    limit: sub.usageLimit,
+    tier: isAdmin ? 'admin' : sub.tier,
+    limit: isAdmin ? 999999 : sub.usageLimit,
     used: sub.currentUsage,
-    allowed: sub.currentUsage < sub.usageLimit
+    allowed: isAdmin ? true : sub.currentUsage < sub.usageLimit,
+    email
   }
 }
 
