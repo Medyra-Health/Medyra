@@ -4,7 +4,7 @@ import MedyraLogo from '@/components/MedyraLogo'
 export const metadata = {
   title: 'How to Read Your Lab Results in Germany as an Expat | Medyra',
   description:
-    'A plain-language guide for expats in Germany on how to understand their Laborbefund — from common abbreviations to knowing when a value outside the reference range actually matters.',
+    'A plain language guide for expats in Germany on how to understand their Laborbefund — from common abbreviations to knowing when a value outside the reference range actually matters.',
   alternates: { canonical: 'https://medyra.de/blog/how-to-read-lab-results-germany-expat' },
   openGraph: {
     title: 'How to Read Your Lab Results in Germany as an Expat',
@@ -177,7 +177,7 @@ export default function BlogPost() {
           </p>
           <p>
             Tools like <strong>Medyra</strong> can help: upload your German Laborbefund and receive a
-            plain-language explanation of each value in your preferred language, with flags for values outside
+            plain language explanation of each value in your preferred language, with flags for values outside
             the reference range and suggested questions to ask your doctor. This is particularly useful if
             you are managing a chronic condition and receive regular labs, or if you want to understand
             results before your appointment rather than during it.
@@ -194,8 +194,8 @@ export default function BlogPost() {
             <li>A Laborbefund lists your test results, units, and reference ranges</li>
             <li>Arrows (↑↓) or letters (H/L) flag values outside the reference range</li>
             <li>Reference ranges on your report are specific to your age and sex — always compare against those, not generic online values</li>
-            <li>A single mildly out-of-range value in an otherwise healthy person is often not cause for alarm</li>
-            <li>Use Medyra to get a plain-language explanation of your report in your own language</li>
+            <li>A single mildly out of range value in an otherwise healthy person is often not cause for alarm</li>
+            <li>Use Medyra to get a plain language explanation of your report in your own language</li>
           </ul>
         </div>
 

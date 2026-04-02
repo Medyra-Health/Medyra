@@ -8,7 +8,7 @@ export const metadata = {
   alternates: { canonical: 'https://medyra.de/blog' },
   openGraph: {
     title: 'Health & Lab Results Blog — Medyra',
-    description: 'Plain-language guides to understanding your lab results and medical reports.',
+    description: 'Plain language guides to understanding your lab results and medical reports.',
     url: 'https://medyra.de/blog',
   },
 }
@@ -58,7 +58,7 @@ export default function BlogPage() {
           <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-2">Medyra Blog</p>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Health & Lab Results</h1>
           <p className="text-gray-500 text-base leading-relaxed">
-            Plain-language guides for understanding your medical reports. No jargon — just clear explanations written for patients.
+            Plain language guides for understanding your medical reports. No jargon — just clear explanations written for patients.
           </p>
         </div>
 

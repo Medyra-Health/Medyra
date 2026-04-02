@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Upload, Clock, AlertCircle, ChevronRight, Infinity, FileText, TrendingUp, Crown, Zap, Star } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
-import { UserButton } from '@clerk/nextjs'
+import MedyraUserButton from '@/components/MedyraUserButton'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -14,10 +14,10 @@ import { Progress } from '@/components/ui/progress'
 import MedyraLogo, { MedyraIcon } from '@/components/MedyraLogo'
 
 const PLAN_META = {
-  free:     { label: 'Free',     color: 'bg-gray-100 text-gray-700',       border: 'border-gray-200',    icon: null,    limit: 1,      features: ['1 report/month', 'Plain-language explanation', 'Flagged abnormal values'] },
-  onetime:  { label: 'One-Time', color: 'bg-blue-100 text-blue-700',       border: 'border-blue-200',    icon: Zap,     limit: 2,      features: ['Full AI explanation', 'Follow-up chat', 'PDF export'] },
-  personal: { label: 'Personal', color: 'bg-emerald-100 text-emerald-700', border: 'border-emerald-200', icon: Star,    limit: 999999, features: ['Unlimited reports', 'Full history', 'Follow-up chat', 'PDF export'] },
-  family:   { label: 'Family',   color: 'bg-purple-100 text-purple-700',   border: 'border-purple-200',  icon: Star,    limit: 999999, features: ['Unlimited reports', 'Full history', 'Follow-up chat', 'Priority support'] },
+  free:     { label: 'Free',     color: 'bg-gray-100 text-gray-700',       border: 'border-gray-200',    icon: null,    limit: 1,      features: ['1 report/month', 'Plain language explanation', 'Flagged abnormal values'] },
+  onetime:  { label: 'One-Time', color: 'bg-blue-100 text-blue-700',       border: 'border-blue-200',    icon: Zap,     limit: 2,      features: ['Full AI explanation', 'Follow up chat', 'PDF export'] },
+  personal: { label: 'Personal', color: 'bg-emerald-100 text-emerald-700', border: 'border-emerald-200', icon: Star,    limit: 999999, features: ['Unlimited reports', 'Full history', 'Follow up chat', 'PDF export'] },
+  family:   { label: 'Family',   color: 'bg-purple-100 text-purple-700',   border: 'border-purple-200',  icon: Star,    limit: 999999, features: ['Unlimited reports', 'Full history', 'Follow up chat', 'Priority support'] },
   clinic:   { label: 'Clinic',   color: 'bg-indigo-100 text-indigo-700',   border: 'border-indigo-200',  icon: Crown,   limit: 999999, features: ['Unlimited patients', 'API access', 'Custom branding', 'Dedicated support'] },
   admin:    { label: 'Admin',    color: 'bg-orange-100 text-orange-700',   border: 'border-orange-200',  icon: Crown,   limit: 999999, features: ['Unlimited everything', 'Full access', 'Admin dashboard'] },
 }
@@ -78,7 +78,7 @@ export default function DashboardPage() {
                 {t('dashboard.welcome')}, {user?.firstName || 'User'}
               </span>
               <LanguageSwitcher />
-              <UserButton signOutUrl="/" />
+              <MedyraUserButton />
             </div>
           </div>
         </div>
