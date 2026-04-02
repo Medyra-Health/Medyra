@@ -132,6 +132,16 @@ RULES:
 - End every response with a gentle reminder to discuss findings with their doctor if the topic is clinical
 - NEVER respond with JSON — always respond in natural conversational text`
 
+// Chat quotas per subscription tier (questions per report)
+const CHAT_LIMITS = {
+  free:     5,
+  onetime:  15,
+  personal: Infinity,
+  family:   Infinity,
+  clinic:   Infinity,
+  admin:    Infinity,
+}
+
 // ============================================================================
 // FILE PROCESSING
 // ============================================================================
@@ -380,14 +390,16 @@ async function handleChat(request, reportId) {
   if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
   const database = await connectToMongo()
 
-  // Fetch current report + all other reports for this user (history)
-  const [report, allReports] = await Promise.all([
+  // Fetch current report + all user reports (for history context)
+  const [report, allReports, usageInfo, admin] = await Promise.all([
     database.collection('reports').findOne({ id: reportId, userId }),
     database.collection('reports')
       .find({ userId }, { projection: { extractedText: 0 } })
       .sort({ createdAt: -1 })
       .limit(10)
-      .toArray()
+      .toArray(),
+    ensureUserExists(userId, database),
+    isAdminUser(),
   ])
   if (!report) return handleCORS(NextResponse.json({ error: 'Report not found' }, { status: 404 }))
 
@@ -395,7 +407,22 @@ async function handleChat(request, reportId) {
   const { question } = body
   if (!question?.trim()) return handleCORS(NextResponse.json({ error: 'Question required' }, { status: 400 }))
 
-  // Build rich context: current report + patient history from all reports
+  // Enforce per-report chat limit based on tier
+  const tier = admin ? 'admin' : (usageInfo.tier || 'free')
+  const chatLimit = CHAT_LIMITS[tier] ?? CHAT_LIMITS.free
+  const chatUsed = Array.isArray(report.conversations) ? report.conversations.length : 0
+
+  if (chatUsed >= chatLimit) {
+    return handleCORS(NextResponse.json({
+      error: 'Chat limit reached for this report. Upgrade your plan for more questions.',
+      chatUsed,
+      chatLimit: chatLimit === Infinity ? null : chatLimit,
+      chatRemaining: 0,
+      limitReached: true,
+    }, { status: 429 }))
+  }
+
+  // Build rich context: current report + patient history
   const currentCtx = report.explanation
     ? `\n\n=== CURRENT REPORT (${new Date(report.createdAt).toLocaleDateString()}: ${report.fileName}) ===\n${JSON.stringify(report.explanation, null, 2)}`
     : ''
@@ -424,16 +451,31 @@ async function handleChat(request, reportId) {
     model: 'claude-sonnet-4-6',
     max_tokens: 1024,
     system: chatSystemPrompt,
-    messages
+    messages,
   })
   const answer = response.content[0].text
+  const newChatUsed = chatUsed + 1
+  const chatRemaining = chatLimit === Infinity ? null : Math.max(0, chatLimit - newChatUsed)
 
   await database.collection('reports').updateOne(
     { id: reportId },
     { $push: { conversations: { question, answer, timestamp: new Date() } } }
   )
 
-  return handleCORS(NextResponse.json({ success: true, answer }))
+  // Track global chat usage on user document for admin analytics
+  await database.collection('users').updateOne(
+    { clerkId: userId },
+    { $inc: { totalChatMessages: 1 }, $set: { lastChatAt: new Date() } }
+  )
+
+  return handleCORS(NextResponse.json({
+    success: true,
+    answer,
+    chatUsed: newChatUsed,
+    chatLimit: chatLimit === Infinity ? null : chatLimit,
+    chatRemaining,
+    limitReached: chatRemaining === 0,
+  }))
 }
 
 async function handleGetSubscription() {
