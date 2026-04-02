@@ -41,7 +41,14 @@ export default function LandingPage() {
             <MedyraLogo size="md" />
 
             {/* Desktop nav */}
-            <div className="hidden md:flex items-center space-x-2">
+            <div className="hidden md:flex items-center gap-1">
+              <Link href="/pricing">
+                <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-900 hover:bg-gray-50">{t('nav.pricing')}</Button>
+              </Link>
+              <Link href="/blog">
+                <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-900 hover:bg-gray-50">Blog</Button>
+              </Link>
+              <div className="w-px h-4 bg-gray-200 mx-1" />
               <LanguageSwitcher />
               <SignedOut>
                 <SignInButton mode="modal">
@@ -52,6 +59,9 @@ export default function LandingPage() {
                 </SignInButton>
               </SignedOut>
               <SignedIn>
+                <Link href="/upload">
+                  <Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold">{t('nav.upload')}</Button>
+                </Link>
                 <Link href="/dashboard">
                   <Button variant="ghost" size="sm" className="text-gray-700 hover:text-gray-900 hover:bg-gray-50">{t('nav.dashboard')}</Button>
                 </Link>
@@ -73,6 +83,13 @@ export default function LandingPage() {
 
           {mobileMenuOpen && (
             <div className="md:hidden pt-3 pb-2 border-t border-gray-200 mt-3 space-y-1">
+              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start text-gray-700 hover:bg-gray-50">{t('nav.pricing')}</Button>
+              </Link>
+              <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start text-gray-700 hover:bg-gray-50">Blog</Button>
+              </Link>
+              <div className="border-t border-gray-100 my-1" />
               <SignedOut>
                 <SignInButton mode="modal">
                   <Button variant="ghost" className="w-full justify-start text-gray-700 hover:text-gray-900 hover:bg-gray-50" onClick={() => setMobileMenuOpen(false)}>
@@ -86,8 +103,11 @@ export default function LandingPage() {
                 </SignInButton>
               </SignedOut>
               <SignedIn>
+                <Link href="/upload" onClick={() => setMobileMenuOpen(false)}>
+                  <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold">{t('nav.upload')}</Button>
+                </Link>
                 <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}>
-                  <Button variant="ghost" className="w-full justify-start text-gray-700 hover:text-gray-900 hover:bg-gray-50">{t('nav.dashboard')}</Button>
+                  <Button variant="ghost" className="w-full justify-start text-gray-700 hover:bg-gray-50">{t('nav.dashboard')}</Button>
                 </Link>
                 <div className="px-2 py-1"><UserButton signOutUrl="/" /></div>
               </SignedIn>
@@ -258,7 +278,7 @@ export default function LandingPage() {
                 </div>
                 <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 border border-emerald-100">
                   <div className="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" />
-                  <span className="text-xs text-emerald-700">Generating plain-language explanation…</span>
+                  <span className="text-xs text-emerald-700">Generating plain language explanation…</span>
                 </div>
               </div>
               <div className="mt-4 text-center">
@@ -368,7 +388,7 @@ export default function LandingPage() {
                       Your lab results,<br /><em style={{fontStyle:'italic', color:'#10B981'}}>finally clear.</em>
                     </h3>
                     <p className="mt-4 text-sm font-light max-w-md" style={{color:'rgba(232,245,240,0.55)', lineHeight:1.6}}>
-                      Stop Googling medical terms at 2am. Upload your report and get a plain-language explanation in under 60 seconds.
+                      Stop Googling medical terms at 2am. Upload your report and get a plain language explanation in under 60 seconds.
                     </p>
                   </div>
                   <div className="relative mt-6 text-xs tracking-widest uppercase font-medium" style={{color:'#10B981', letterSpacing:'0.22em'}}>medyra.de · Free to start →</div>
@@ -505,6 +525,60 @@ export default function LandingPage() {
             </Button>
           </Link>
           <p className="text-white/60 text-sm mt-4">Plans from €0/month · No credit card required · Cancel anytime</p>
+        </div>
+      </section>
+
+      {/* From the blog */}
+      <section className="py-16 md:py-20 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-1">From the blog</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Learn about your lab results</h2>
+            </div>
+            <Link href="/blog" className="hidden sm:flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 font-medium">
+              All articles <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              {
+                href: '/blog/how-to-read-lab-results-germany-expat',
+                tag: 'Germany · Expat',
+                title: 'How to Read Your Lab Results in Germany as an Expat',
+                desc: 'Decode your Laborbefund — abbreviations, reference ranges, and what flagged values actually mean.',
+                time: '7 min',
+              },
+              {
+                href: '/blog/what-is-tsh-and-why-does-it-matter',
+                tag: 'Thyroid · TSH',
+                title: 'What Is TSH and Why Does It Matter?',
+                desc: 'TSH is on almost every blood panel. Here is what high or low results actually mean in plain language.',
+                time: '6 min',
+              },
+              {
+                href: '/blog/understanding-your-blood-test-results',
+                tag: 'Blood Test · CBC',
+                title: 'Understanding Your Blood Test Results',
+                desc: 'CBC, HbA1c, CRP, cholesterol — the most common values explained so you can walk in informed.',
+                time: '9 min',
+              },
+            ].map((post) => (
+              <Link key={post.href} href={post.href} className="block group">
+                <div className="bg-white rounded-2xl border border-gray-200 p-5 h-full hover:border-emerald-300 hover:shadow-sm transition-all duration-200">
+                  <p className="text-xs font-medium text-emerald-600 mb-2">{post.tag}</p>
+                  <h3 className="font-bold text-gray-900 text-sm leading-snug mb-2 group-hover:text-emerald-700 transition-colors">{post.title}</h3>
+                  <p className="text-xs text-gray-500 leading-relaxed mb-3">{post.desc}</p>
+                  <p className="text-xs text-gray-400">{post.time} read</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-6 sm:hidden">
+            <Link href="/blog" className="inline-flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 font-medium">
+              See all articles <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
