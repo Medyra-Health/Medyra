@@ -16,58 +16,25 @@ export default function ContactPage() {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-16 max-w-xl text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-3">Get in Touch</h1>
-        <p className="text-gray-500 mb-10">We usually respond within 24 hours on business days.</p>
-
-        <div className="space-y-4">
-          <a
-            href="mailto:contact@medyra.de"
-            className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-xl border-2 border-emerald-200 bg-emerald-50 hover:bg-emerald-100 transition-colors"
-          >
-            <span className="text-2xl">✉️</span>
-            <div className="text-left">
-              <p className="font-semibold text-gray-900">General enquiries</p>
-              <p className="text-emerald-600 text-sm">contact@medyra.de</p>
-            </div>
-          </a>
-
-          <a
-            href="mailto:privacy@medyra.de"
-            className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors"
-          >
-            <span className="text-2xl">🔒</span>
-            <div className="text-left">
-              <p className="font-semibold text-gray-900">Privacy & GDPR requests</p>
-              <p className="text-gray-500 text-sm">privacy@medyra.de</p>
-            </div>
-          </a>
-
-          <a
-            href="mailto:support@medyra.de"
-            className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors"
-          >
-            <span className="text-2xl">🛠️</span>
-            <div className="text-left">
-              <p className="font-semibold text-gray-900">Technical support</p>
-              <p className="text-gray-500 text-sm">support@medyra.de</p>
-            </div>
-          </a>
-
-          <a
-            href="mailto:sales@medyra.de"
-            className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors"
-          >
-            <span className="text-2xl">🏥</span>
-            <div className="text-left">
-              <p className="font-semibold text-gray-900">Clinic & enterprise enquiries</p>
-              <p className="text-gray-500 text-sm">sales@medyra.de</p>
-            </div>
-          </a>
+      <main className="container mx-auto px-4 py-20 max-w-lg text-center">
+        <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">
+          🚀
         </div>
+        <h1 className="text-3xl font-bold text-gray-900 mb-3">Contact page coming soon</h1>
+        <p className="text-gray-500 text-base leading-relaxed mb-8">
+          We are setting up a proper contact form. In the meantime, reach us directly by email.
+        </p>
+
+        <a
+          href="mailto:contact@medyra.de"
+          className="inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold transition-colors"
+        >
+          <span>✉️</span>
+          contact@medyra.de
+        </a>
 
         <p className="text-xs text-gray-400 mt-10">
-          Medyra · medyra.de · Made in Germany
+          We usually respond within one business day.
         </p>
       </main>
     </div>
