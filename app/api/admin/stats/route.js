@@ -75,6 +75,10 @@ export async function GET() {
       recentUsers,
       recentReports,
       chartData,
+      chatTotalArr,
+      chatTodayArr,
+      chatMonthArr,
+      topChatters,
     ] = await Promise.all([
       // User stats
       database.collection('users').countDocuments(),
@@ -146,6 +150,33 @@ export async function GET() {
           { $sort: { _id: 1 } },
         ]).toArray(),
       ]),
+
+      // Chat stats: total conversations across all reports
+      database.collection('reports').aggregate([
+        { $project: { chatCount: { $size: { $ifNull: ['$conversations', []] } }, userId: 1, createdAt: 1 } },
+        { $group: { _id: null, total: { $sum: '$chatCount' } } },
+      ]).toArray(),
+
+      // Chat messages sent today
+      database.collection('reports').aggregate([
+        { $unwind: { path: '$conversations', preserveNullAndEmpty: false } },
+        { $match: { 'conversations.timestamp': { $gte: startOfToday } } },
+        { $count: 'total' },
+      ]).toArray(),
+
+      // Chat messages sent this month
+      database.collection('reports').aggregate([
+        { $unwind: { path: '$conversations', preserveNullAndEmpty: false } },
+        { $match: { 'conversations.timestamp': { $gte: startOfMonth } } },
+        { $count: 'total' },
+      ]).toArray(),
+
+      // Top chatters: users with most chat messages
+      database.collection('users')
+        .find({}, { projection: { clerkId: 1, email: 1, totalChatMessages: 1 } })
+        .sort({ totalChatMessages: -1 })
+        .limit(5)
+        .toArray(),
     ])
 
     // Build chart data: merge user signups and reports by date
@@ -160,6 +191,14 @@ export async function GET() {
       dateMap[d._id].reports = d.count
     })
     const mergedChartData = Object.values(dateMap).sort((a, b) => a.date.localeCompare(b.date))
+
+    // Chat analytics
+    const totalChatMessages = chatTotalArr[0]?.total || 0
+    const chatToday = chatTodayArr[0]?.total || 0
+    const chatThisMonth = chatMonthArr[0]?.total || 0
+    // Estimated Anthropic cost: ~1200 input tokens + 350 output tokens per message
+    // claude-sonnet-4-6: $3/M input, $15/M output
+    const estimatedCostUSD = ((totalChatMessages * 1200 / 1000000) * 3 + (totalChatMessages * 350 / 1000000) * 15).toFixed(4)
 
     // Enrich recent users with report counts
     const userClerkIds = recentUsers.map(u => u.clerkId).filter(Boolean)
@@ -226,6 +265,13 @@ export async function GET() {
         userEmail: reportUserMap[r.userId] || '—',
       })),
       chartData: mergedChartData,
+      chatStats: {
+        total: totalChatMessages,
+        today: chatToday,
+        thisMonth: chatThisMonth,
+        estimatedCostUSD: Number(estimatedCostUSD),
+        topChatters: topChatters.map(u => ({ email: u.email || '—', count: u.totalChatMessages || 0 })),
+      },
     })
   } catch (error) {
     console.error('Admin stats error:', error)

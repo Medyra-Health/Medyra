@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useEffect, useState, useCallback } from 'react'
 import {
   Users, FileText, DollarSign, TrendingUp, RefreshCw,
-  Crown, Shield, AlertCircle
+  Crown, Shield, AlertCircle, MessageSquare, Zap, ExternalLink
 } from 'lucide-react'
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
@@ -135,7 +135,7 @@ export default function AdminPage() {
     )
   }
 
-  const { users, reports, revenue, subscriptionBreakdown, recentUsers, recentReports, chartData } = data
+  const { users, reports, revenue, subscriptionBreakdown, recentUsers, recentReports, chartData, chatStats } = data
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -200,6 +200,97 @@ export default function AdminPage() {
             color="orange"
           />
         </div>
+
+        {/* AI Usage panel */}
+        {chatStats && (
+          <div className="grid lg:grid-cols-3 gap-4">
+            {/* Stats */}
+            <div className="lg:col-span-2 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  <MessageSquare className="h-5 w-5 text-emerald-600" />
+                  <h2 className="text-sm font-semibold text-gray-700">Medyra AI — Chat Usage</h2>
+                </div>
+                <a
+                  href="https://console.anthropic.com/settings/usage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-xs text-blue-500 hover:text-blue-700"
+                >
+                  Anthropic Console <ExternalLink className="h-3 w-3" />
+                </a>
+              </div>
+              <div className="grid grid-cols-3 gap-4 mb-5">
+                <div className="text-center p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+                  <p className="text-2xl font-bold text-emerald-700">{chatStats.total.toLocaleString()}</p>
+                  <p className="text-xs text-emerald-600 mt-0.5">Total questions</p>
+                </div>
+                <div className="text-center p-3 bg-blue-50 rounded-xl border border-blue-100">
+                  <p className="text-2xl font-bold text-blue-700">{chatStats.thisMonth.toLocaleString()}</p>
+                  <p className="text-xs text-blue-600 mt-0.5">This month</p>
+                </div>
+                <div className="text-center p-3 bg-purple-50 rounded-xl border border-purple-100">
+                  <p className="text-2xl font-bold text-purple-700">{chatStats.today.toLocaleString()}</p>
+                  <p className="text-xs text-purple-600 mt-0.5">Today</p>
+                </div>
+              </div>
+              {/* Estimated cost */}
+              <div className="bg-orange-50 border border-orange-100 rounded-xl p-4">
+                <div className="flex items-start gap-3">
+                  <Zap className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-semibold text-orange-800">
+                      Estimated AI cost: <span className="text-orange-600">${chatStats.estimatedCostUSD} USD</span>
+                    </p>
+                    <p className="text-xs text-orange-600 mt-0.5">
+                      Based on ~1,200 input + 350 output tokens/message at claude-sonnet-4-6 pricing ($3/M input · $15/M output).
+                      Actual cost may vary. Check your{' '}
+                      <a href="https://console.anthropic.com/settings/billing" target="_blank" rel="noopener noreferrer" className="underline font-medium">
+                        Anthropic billing
+                      </a>{' '}
+                      for exact figures.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Top chatters */}
+            <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+              <h2 className="text-sm font-semibold text-gray-700 mb-4">Most Active AI Users</h2>
+              {chatStats.topChatters && chatStats.topChatters.length > 0 ? (
+                <div className="space-y-3">
+                  {chatStats.topChatters.map((u, i) => (
+                    <div key={u.email} className="flex items-center gap-3">
+                      <span className="w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs font-bold flex items-center justify-center flex-shrink-0">
+                        {i + 1}
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-xs text-gray-700 font-medium truncate">{u.email}</p>
+                        <div className="flex items-center gap-2 mt-0.5">
+                          <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                            <div
+                              className="h-full bg-emerald-400 rounded-full"
+                              style={{ width: `${Math.min(100, (u.count / (chatStats.topChatters[0]?.count || 1)) * 100)}%` }}
+                            />
+                          </div>
+                          <span className="text-xs text-gray-400 flex-shrink-0">{u.count}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-sm text-gray-400">No chat activity yet</p>
+              )}
+              <div className="mt-4 pt-4 border-t border-gray-100">
+                <p className="text-xs text-gray-400">
+                  Free: 5 q/report · One-Time: 15 · Personal/Family/Clinic: ∞
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Chart + Subscription breakdown */}
         <div className="grid lg:grid-cols-3 gap-4">
