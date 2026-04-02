@@ -2,12 +2,12 @@ import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
 
 export const metadata = {
-  title: 'Understanding Your Blood Test Results: A Plain-Language Guide | Medyra',
+  title: 'Understanding Your Blood Test Results: A Plain Language Guide | Medyra',
   description:
     'What do CBC, HbA1c, CRP, and cholesterol results actually mean? This guide explains the most common blood test values in plain language — so you can understand your results before your next appointment.',
   alternates: { canonical: 'https://medyra.de/blog/understanding-your-blood-test-results' },
   openGraph: {
-    title: 'Understanding Your Blood Test Results: A Complete Plain-Language Guide',
+    title: 'Understanding Your Blood Test Results: A Complete Plain Language Guide',
     description:
       'CBC, CRP, HbA1c, cholesterol, liver enzymes — explained in plain language. Know what your blood test results mean without needing a medical degree.',
     url: 'https://medyra.de/blog/understanding-your-blood-test-results',
@@ -65,7 +65,7 @@ const PANELS = [
     title: 'Liver (Leberwerte)',
     intro: 'Liver function tests check how well your liver is processing substances. They are commonly ordered as part of routine checks or before starting certain medications.',
     values: [
-      { name: 'ALT (GPT / Alanine aminotransferase)', normal: 'Men: < 45 U/L · Women: < 35 U/L', desc: 'The most liver-specific enzyme. Elevated ALT usually indicates liver cell damage or inflammation (hepatitis, fatty liver, medications).' },
+      { name: 'ALT (GPT / Alanine aminotransferase)', normal: 'Men: < 45 U/L · Women: < 35 U/L', desc: 'The most liver specific enzyme. Elevated ALT usually indicates liver cell damage or inflammation (hepatitis, fatty liver, medications).' },
       { name: 'AST (GOT / Aspartate aminotransferase)', normal: '< 40 U/L', desc: 'Found in liver and muscle. Less specific than ALT — elevated AST can also indicate muscle damage (e.g. after intense exercise or a heart attack).' },
       { name: 'GGT (Gamma-glutamyltransferase)', normal: 'Men: < 60 U/L · Women: < 40 U/L', desc: 'Sensitive to alcohol and certain medications. Often the first liver value to rise with regular alcohol consumption.' },
       { name: 'Bilirubin', normal: 'Total: < 17 µmol/L (< 1.0 mg/dL)', desc: 'A breakdown product of haemoglobin. Elevated bilirubin causes jaundice (yellowing of the skin or whites of the eyes). Can indicate liver disease, bile duct problems, or haemolysis.' },
@@ -100,7 +100,7 @@ export default function BlogPost() {
             ))}
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            Understanding Your Blood Test Results: A Complete Plain-Language Guide
+            Understanding Your Blood Test Results: A Complete Plain Language Guide
           </h1>
           <p className="text-gray-500 text-sm">2 April 2026 · 9 min read · By Medyra</p>
         </div>
@@ -109,7 +109,7 @@ export default function BlogPost() {
 
           <p className="text-lg text-gray-600 leading-relaxed">
             Your doctor has ordered a blood test and now you have a page of numbers. Some values are
-            highlighted or flagged with arrows. You have a follow-up appointment next week but you
+            highlighted or flagged with arrows. You have a follow up appointment next week but you
             want to understand what you are looking at now.
           </p>
           <p className="text-gray-600">
@@ -142,15 +142,15 @@ export default function BlogPost() {
             </div>
           ))}
 
-          <h2 className="text-xl font-bold text-gray-900 mt-8">What to do with an out-of-range result</h2>
+          <h2 className="text-xl font-bold text-gray-900 mt-8">What to do with an out of range result</h2>
 
           <p className="text-sm leading-relaxed">
             Seeing a flagged value can be alarming — but context is everything. A few guiding principles:
           </p>
           <ul className="list-disc pl-5 space-y-1.5 text-sm">
-            <li><strong>Mildly out-of-range:</strong> Often not clinically significant on its own, especially without symptoms. Many labs flag anything outside the 2.5–97.5th percentile, which means 1 in 20 healthy people will have at least one flag.</li>
-            <li><strong>Significantly out-of-range:</strong> Values far from the reference range, especially with symptoms, need follow-up.</li>
-            <li><strong>Trends over time:</strong> A value that has been gradually worsening over three tests is more concerning than a one-time blip.</li>
+            <li><strong>Mildly out of range:</strong> Often not clinically significant on its own, especially without symptoms. Many labs flag anything outside the 2.5–97.5th percentile, which means 1 in 20 healthy people will have at least one flag.</li>
+            <li><strong>Significantly out of range:</strong> Values far from the reference range, especially with symptoms, need follow up.</li>
+            <li><strong>Trends over time:</strong> A value that has been gradually worsening over three tests is more concerning than a one time blip.</li>
             <li><strong>Multiple related values:</strong> If LDL, triglycerides, and blood sugar are all elevated together, that is a more complete metabolic picture.</li>
           </ul>
 
