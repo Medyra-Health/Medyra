@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Check, Loader2, ArrowLeft, Shield, MessageSquare, Zap, Star, Building2, User, Users, ChevronDown, ChevronUp } from 'lucide-react'
+import { Check, Loader2, ArrowLeft, Shield, Zap, Star, Building2, User, Users, ChevronDown, ChevronUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { toast } from 'sonner'
@@ -20,14 +20,6 @@ const TIER_ICONS = {
   family: Users,
   clinic: Building2,
 }
-
-const CHAT_TABLE = [
-  { key: 'free',     label: 'Free',      questions: '5',   protection: 'Safe',          protectionClass: 'bg-emerald-50 text-emerald-700 border-emerald-200', dot: 'bg-emerald-500' },
-  { key: 'onetime',  label: 'One-Time',  questions: '15',  protection: 'Safe',          protectionClass: 'bg-emerald-50 text-emerald-700 border-emerald-200', dot: 'bg-emerald-500' },
-  { key: 'personal', label: 'Personal',  questions: '50',  protection: 'High cap',      protectionClass: 'bg-blue-50 text-blue-700 border-blue-200',           dot: 'bg-blue-500' },
-  { key: 'family',   label: 'Family',    questions: '100', protection: 'Very high cap', protectionClass: 'bg-purple-50 text-purple-700 border-purple-200',     dot: 'bg-purple-500' },
-  { key: 'clinic',   label: 'Clinic',    questions: '100', protection: 'Very high cap', protectionClass: 'bg-purple-50 text-purple-700 border-purple-200',     dot: 'bg-purple-500' },
-]
 
 const FAQ_ITEMS = [
   { q: 'Is my health data secure?', a: 'Yes. All data is encrypted in transit and at rest. We are GDPR compliant and automatically delete your reports after 30 days. We never sell or share your data.' },
@@ -188,7 +180,7 @@ export default function PricingPage() {
                   {tier.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-2">
                       <Check className={`h-3.5 w-3.5 flex-shrink-0 mt-0.5 ${tier.highlighted ? 'text-emerald-500' : 'text-gray-400'}`} />
-                      <span className={`text-xs leading-relaxed ${feature.includes('AI questions') ? 'font-semibold text-gray-800' : 'text-gray-600'}`}>{feature}</span>
+                      <span className="text-xs leading-relaxed text-gray-600">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -240,53 +232,6 @@ export default function PricingPage() {
               </div>
             )
           })}
-        </div>
-
-        {/* AI Chat Limits section */}
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold mb-3">
-              <MessageSquare className="h-3.5 w-3.5" /> AI Chat Limits
-            </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">How many questions can I ask?</h2>
-            <p className="text-gray-500 text-sm max-w-lg mx-auto">Each plan includes a set number of AI chat questions per report. Questions reset with each new report upload.</p>
-          </div>
-
-          <div className="max-w-2xl mx-auto bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
-            {/* Table header */}
-            <div className="grid grid-cols-3 bg-gray-50 border-b border-gray-200">
-              <div className="px-5 py-3 text-xs font-bold text-gray-500 uppercase tracking-wide">Plan</div>
-              <div className="px-5 py-3 text-xs font-bold text-gray-500 uppercase tracking-wide text-center">Questions / report</div>
-              <div className="px-5 py-3 text-xs font-bold text-gray-500 uppercase tracking-wide text-center">Cost Protection</div>
-            </div>
-            {/* Table rows */}
-            {CHAT_TABLE.map((row, i) => (
-              <div
-                key={row.key}
-                className={`grid grid-cols-3 items-center border-b border-gray-100 last:border-0 transition-colors hover:bg-gray-50 ${row.key === 'personal' ? 'bg-emerald-50/40' : ''}`}
-              >
-                <div className="px-5 py-3.5 flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${row.dot}`} />
-                  <span className="text-sm font-semibold text-gray-800">{row.label}</span>
-                  {row.key === 'personal' && (
-                    <Badge className="bg-emerald-500 text-white text-xs px-1.5 py-0">Popular</Badge>
-                  )}
-                </div>
-                <div className="px-5 py-3.5 text-center">
-                  <span className="text-lg font-black text-gray-900">{row.questions}</span>
-                </div>
-                <div className="px-5 py-3.5 flex justify-center">
-                  <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${row.protectionClass}`}>
-                    {row.protection}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-center text-xs text-gray-400 mt-4">
-            Cost Protection means you are always in control — high caps prevent unexpected AI usage costs while keeping Medyra affordable.
-          </p>
         </div>
 
         {/* Trust badges */}

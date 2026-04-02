@@ -72,6 +72,7 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [lastRefresh, setLastRefresh] = useState(null)
+  const [mounted, setMounted] = useState(false)
 
   const fetchStats = useCallback(async () => {
     try {
@@ -105,6 +106,8 @@ export default function AdminPage() {
     const interval = setInterval(fetchStats, REFRESH_INTERVAL)
     return () => clearInterval(interval)
   }, [fetchStats])
+
+  useEffect(() => { setMounted(true) }, [])
 
   if (!isLoaded || (loading && !data)) {
     return (
@@ -285,7 +288,7 @@ export default function AdminPage() {
               )}
               <div className="mt-4 pt-4 border-t border-gray-100">
                 <p className="text-xs text-gray-400">
-                  Free: 5 q/report · One-Time: 15 · Personal/Family/Clinic: ∞
+                  Free: 5 · One-Time: 15 · Personal: 50 · Family/Clinic: 100
                 </p>
               </div>
             </div>
@@ -297,7 +300,7 @@ export default function AdminPage() {
           {/* Line chart */}
           <div className="lg:col-span-2 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
             <h2 className="text-sm font-semibold text-gray-700 mb-4">Activity — Last 30 Days</h2>
-            {chartData && chartData.length > 0 ? (
+            {mounted && chartData && chartData.length > 0 ? (
               <ResponsiveContainer width="100%" height={220}>
                 <LineChart data={chartData} margin={{ top: 4, right: 8, bottom: 4, left: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
@@ -333,7 +336,7 @@ export default function AdminPage() {
               </ResponsiveContainer>
             ) : (
               <div className="h-[220px] flex items-center justify-center text-gray-400 text-sm">
-                No data for the last 30 days
+                {mounted ? 'No data for the last 30 days' : ''}
               </div>
             )}
           </div>
