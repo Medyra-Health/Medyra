@@ -135,14 +135,21 @@ export default function PricingPage() {
                   relative flex flex-col rounded-2xl border p-5 transition-all duration-200 cursor-default
                   ${tier.highlighted
                     ? 'border-emerald-500 shadow-lg shadow-emerald-100 bg-white ring-1 ring-emerald-500/20 scale-105 z-10'
-                    : isHovered
-                      ? 'border-gray-300 shadow-md bg-white -translate-y-0.5'
-                      : 'border-gray-200 bg-white'}
+                    : tier.isClinic
+                      ? 'border-gray-200 bg-gray-50 opacity-75'
+                      : isHovered
+                        ? 'border-gray-300 shadow-md bg-white -translate-y-0.5'
+                        : 'border-gray-200 bg-white'}
                 `}
               >
                 {tier.highlighted && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <Badge className="bg-emerald-500 text-white text-xs px-3 py-0.5 shadow">{t('pricing.mostPopular')}</Badge>
+                  </div>
+                )}
+                {tier.isClinic && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <Badge className="bg-gray-500 text-white text-xs px-3 py-0.5 shadow">Coming soon</Badge>
                   </div>
                 )}
 
@@ -200,9 +207,7 @@ export default function PricingPage() {
                     </SignedIn>
                   </>
                 ) : tier.isClinic ? (
-                  <Link href="/contact" className="w-full">
-                    <Button className="w-full text-xs h-9" size="sm" variant="outline">{tier.cta}</Button>
-                  </Link>
+                  <Button className="w-full text-xs h-9 cursor-not-allowed" size="sm" variant="outline" disabled>Coming soon</Button>
                 ) : (
                   <>
                     <SignedOut>
