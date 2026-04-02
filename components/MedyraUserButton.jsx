@@ -16,12 +16,5 @@ const BlogIcon = () => (
 )
 
 export default function MedyraUserButton({ signOutUrl = '/' }) {
-  return (
-    <UserButton signOutUrl={signOutUrl}>
-      <UserButton.MenuItems>
-        <UserButton.Link label="Pricing" href="/pricing" labelIcon={<PricingIcon />} />
-        <UserButton.Link label="Blog" href="/blog" labelIcon={<BlogIcon />} />
-      </UserButton.MenuItems>
-    </UserButton>
-  )
+  return <UserButton signOutUrl={signOutUrl} />
 }
