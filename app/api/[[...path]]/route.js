@@ -136,9 +136,9 @@ RULES:
 const CHAT_LIMITS = {
   free:     5,
   onetime:  15,
-  personal: Infinity,
-  family:   Infinity,
-  clinic:   Infinity,
+  personal: 50,
+  family:   100,
+  clinic:   100,
   admin:    Infinity,
 }
 
