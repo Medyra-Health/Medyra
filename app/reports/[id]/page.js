@@ -25,6 +25,9 @@ export default function ReportDetailPage({ params }) {
   const [question, setQuestion] = useState('')
   const [chatHistory, setChatHistory] = useState([])
   const [sending, setSending] = useState(false)
+  const [chatUsed, setChatUsed] = useState(0)
+  const [chatLimit, setChatLimit] = useState(null) // null = unlimited
+  const [chatLimitReached, setChatLimitReached] = useState(false)
   const chatEndRef = useRef(null)
 
   useEffect(() => {
@@ -41,13 +44,13 @@ export default function ReportDetailPage({ params }) {
       if (!response.ok) throw new Error('Failed to load report')
       const data = await response.json()
       const r = data.report
-      // Guard: if explanation was stored as a string (old parse failure), re-parse it
       if (r && typeof r.explanation === 'string') {
         try { r.explanation = JSON.parse(r.explanation) } catch { r.explanation = { summary: r.explanation, tests: [], questionsForDoctor: [] } }
       }
       setReport(r)
-      setChatHistory(r.conversations || [])
-      // Auto-open chat after a short delay so the user sees the prompt
+      const convs = r.conversations || []
+      setChatHistory(convs)
+      setChatUsed(convs.length)
       setTimeout(() => setChatOpen(true), 1800)
     } catch (error) {
       console.error('Error:', error)
@@ -57,9 +60,9 @@ export default function ReportDetailPage({ params }) {
     }
   }
 
-  async function sendQuestion() {
-    if (!question.trim()) return
-    const q = question.trim()
+  async function sendQuestion(overrideQ) {
+    const q = (overrideQ || question).trim()
+    if (!q || chatLimitReached) return
     setQuestion('')
     setSending(true)
     try {
@@ -68,12 +71,24 @@ export default function ReportDetailPage({ params }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: q })
       })
-      if (!response.ok) throw new Error('Failed')
       const data = await response.json()
+      if (!response.ok) {
+        if (data.limitReached) {
+          setChatLimitReached(true)
+          setChatUsed(data.chatUsed)
+          setChatLimit(data.chatLimit)
+        }
+        throw new Error(data.error || 'Failed')
+      }
       setChatHistory(prev => [...prev, { question: q, answer: data.answer, timestamp: new Date() }])
-    } catch {
-      toast.error(t('errors.analysisFailed'))
-      setQuestion(q)
+      setChatUsed(data.chatUsed)
+      setChatLimit(data.chatLimit)
+      if (data.limitReached) setChatLimitReached(true)
+    } catch (err) {
+      if (!chatLimitReached) {
+        toast.error(err.message || t('errors.analysisFailed'))
+        if (!overrideQ) setQuestion(q)
+      }
     } finally {
       setSending(false)
     }
@@ -374,15 +389,29 @@ export default function ReportDetailPage({ params }) {
             {/* Chat header */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-emerald-50 rounded-t-2xl">
               <div className="flex items-center gap-2 min-w-0">
-                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
+                <div className={`w-2 h-2 rounded-full flex-shrink-0 ${chatLimitReached ? 'bg-red-400' : 'bg-emerald-500 animate-pulse'}`} />
                 <div className="min-w-0">
                   <p className="font-semibold text-sm text-gray-800 leading-none">Medyra AI</p>
                   <p className="text-xs text-gray-400 leading-none mt-0.5">Powered by Claude · Educational only</p>
                 </div>
               </div>
-              <button onClick={() => setChatOpen(false)} className="text-gray-400 hover:text-gray-600 p-1 flex-shrink-0">
-                <X className="h-4 w-4" />
-              </button>
+              <div className="flex items-center gap-2 flex-shrink-0">
+                {/* Usage counter */}
+                {chatLimit !== null ? (
+                  <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
+                    chatLimitReached ? 'bg-red-100 text-red-600' :
+                    chatUsed >= chatLimit * 0.8 ? 'bg-orange-100 text-orange-600' :
+                    'bg-gray-100 text-gray-500'
+                  }`}>
+                    {chatUsed}/{chatLimit} questions
+                  </span>
+                ) : (
+                  <span className="text-xs bg-emerald-100 text-emerald-600 px-2 py-0.5 rounded-full font-semibold">∞ unlimited</span>
+                )}
+                <button onClick={() => setChatOpen(false)} className="text-gray-400 hover:text-gray-600 p-1">
+                  <X className="h-4 w-4" />
+                </button>
+              </div>
             </div>
 
             {/* Messages */}
@@ -400,24 +429,7 @@ export default function ReportDetailPage({ params }) {
                       <button
                         key={q}
                         disabled={sending}
-                        onClick={async () => {
-                          setQuestion('')
-                          setSending(true)
-                          try {
-                            const response = await fetch(`/api/reports/${reportId}/chat`, {
-                              method: 'POST',
-                              headers: { 'Content-Type': 'application/json' },
-                              body: JSON.stringify({ question: q })
-                            })
-                            if (!response.ok) throw new Error('Failed')
-                            const data = await response.json()
-                            setChatHistory(prev => [...prev, { question: q, answer: data.answer, timestamp: new Date() }])
-                          } catch {
-                            toast.error(t('errors.analysisFailed'))
-                          } finally {
-                            setSending(false)
-                          }
-                        }}
+                        onClick={() => sendQuestion(q)}
                         className="w-full text-left text-xs text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-lg px-3 py-2 transition-colors border border-emerald-100 disabled:opacity-50"
                       >
                         {q}
@@ -454,20 +466,32 @@ export default function ReportDetailPage({ params }) {
               <div ref={chatEndRef} />
             </div>
 
-            {/* Input */}
-            <div className="p-3 border-t border-gray-100 flex gap-2">
-              <Input
-                placeholder="Ask about your results…"
-                value={question}
-                onChange={e => setQuestion(e.target.value)}
-                onKeyDown={e => e.key === 'Enter' && !e.shiftKey && sendQuestion()}
-                disabled={sending}
-                className="text-xs h-8"
-              />
-              <Button onClick={sendQuestion} disabled={sending || !question.trim()} size="sm" className="h-8 w-8 p-0 bg-emerald-500 hover:bg-emerald-600 flex-shrink-0">
-                <Send className="h-3 w-3" />
-              </Button>
-            </div>
+            {/* Input / limit reached */}
+            {chatLimitReached ? (
+              <div className="p-3 border-t border-gray-100 text-center">
+                <p className="text-xs text-red-600 font-medium mb-1.5">Question limit reached for this report</p>
+                <p className="text-xs text-gray-400 mb-2">
+                  Free plan: 5 questions/report · One-Time: 15 · Personal/Family: unlimited
+                </p>
+                <a href="/pricing" className="inline-block text-xs bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-4 py-1.5 rounded-full transition-colors">
+                  Upgrade for unlimited chat →
+                </a>
+              </div>
+            ) : (
+              <div className="p-3 border-t border-gray-100 flex gap-2">
+                <Input
+                  placeholder="Ask about your results…"
+                  value={question}
+                  onChange={e => setQuestion(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && !e.shiftKey && sendQuestion()}
+                  disabled={sending}
+                  className="text-xs h-8"
+                />
+                <Button onClick={() => sendQuestion()} disabled={sending || !question.trim()} size="sm" className="h-8 w-8 p-0 bg-emerald-500 hover:bg-emerald-600 flex-shrink-0">
+                  <Send className="h-3 w-3" />
+                </Button>
+              </div>
+            )}
           </div>
         ) : (
           <button
