@@ -14,11 +14,11 @@ export const metadata = {
   metadataBase: new URL('https://medyra.de'),
 
   title: {
-    default: 'Medyra — Understand Your Medical Reports in Plain Language',
+    default: 'Medyra | Understand Your Medical Reports in Plain Language',
     template: '%s | Medyra',
   },
   description:
-    'Upload your lab results and get AI-powered explanations in plain language. Instantly understand your blood test, TSH, HbA1c, cholesterol, and more. GDPR compliant, 16 languages, results in 60 seconds. Made in Germany.',
+    'Upload your lab results and get AI powered explanations in plain language. Instantly understand your blood test, TSH, HbA1c, cholesterol, and more. GDPR compliant, 16 languages, results in 60 seconds. Made in Germany.',
 
   keywords: [
     'medical report explanation',
@@ -60,15 +60,15 @@ export const metadata = {
     type: 'website',
     url: 'https://medyra.de',
     siteName: 'Medyra',
-    title: 'Medyra — Understand Your Medical Reports in Plain Language',
+    title: 'Medyra | Understand Your Medical Reports in Plain Language',
     description:
-      'Upload your lab results and get AI-powered explanations in plain language. GDPR compliant, 16 languages, results in 60 seconds.',
+      'Upload your lab results and get AI powered explanations in plain language. GDPR compliant, 16 languages, results in 60 seconds.',
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Medyra — Medical Report Explainer',
+        alt: 'Medyra | Medical Report Explainer',
       },
     ],
     locale: 'en_US',
@@ -76,9 +76,9 @@ export const metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Medyra — Understand Your Medical Reports in Plain Language',
+    title: 'Medyra | Understand Your Medical Reports in Plain Language',
     description:
-      'Upload your lab results and get clear AI-powered explanations. GDPR compliant. Made in Germany.',
+      'Upload your lab results and get clear AI powered explanations. GDPR compliant. Made in Germany.',
     images: ['/opengraph-image'],
   },
 
