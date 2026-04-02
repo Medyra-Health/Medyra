@@ -1,6 +1,7 @@
 'use client'
 
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
+import MedyraUserButton from '@/components/MedyraUserButton'
 import Link from 'next/link'
 import { Brain, Shield, Clock, ChevronRight, Menu, X, ArrowRight, AlertTriangle, CheckCircle, AlertCircle } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
@@ -65,7 +66,7 @@ export default function LandingPage() {
                 <Link href="/dashboard">
                   <Button variant="ghost" size="sm" className="text-gray-700 hover:text-gray-900 hover:bg-gray-50">{t('nav.dashboard')}</Button>
                 </Link>
-                <UserButton signOutUrl="/" />
+                <MedyraUserButton />
               </SignedIn>
             </div>
 
@@ -109,7 +110,7 @@ export default function LandingPage() {
                 <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}>
                   <Button variant="ghost" className="w-full justify-start text-gray-700 hover:bg-gray-50">{t('nav.dashboard')}</Button>
                 </Link>
-                <div className="px-2 py-1"><UserButton signOutUrl="/" /></div>
+                <div className="px-2 py-1"><MedyraUserButton /></div>
               </SignedIn>
             </div>
           )}

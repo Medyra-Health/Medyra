@@ -4,12 +4,12 @@ import MedyraLogo from '@/components/MedyraLogo'
 export const metadata = {
   title: 'What Is TSH and Why Does It Matter? | Medyra',
   description:
-    'TSH (thyroid-stimulating hormone) is one of the most commonly tested blood values. This plain-language guide explains what TSH measures, what high or low results mean, and when to see your doctor.',
+    'TSH (thyroid-stimulating hormone) is one of the most commonly tested blood values. This plain language guide explains what TSH measures, what high or low results mean, and when to see your doctor.',
   alternates: { canonical: 'https://medyra.de/blog/what-is-tsh-and-why-does-it-matter' },
   openGraph: {
     title: 'What Is TSH and Why Does It Matter?',
     description:
-      'A plain-language guide to TSH — what your thyroid test result means, what counts as normal, and when a result outside the reference range needs attention.',
+      'A plain language guide to TSH — what your thyroid test result means, what counts as normal, and when a result outside the reference range needs attention.',
     url: 'https://medyra.de/blog/what-is-tsh-and-why-does-it-matter',
   },
   keywords: [
