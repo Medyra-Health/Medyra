@@ -315,9 +315,11 @@ export default function ReportDetailPage({ params }) {
                 size="sm"
                 onClick={handleExportPDF}
                 disabled={exporting}
-                className="hidden sm:flex text-gray-700 hover:text-gray-900 gap-1.5"
+                className="flex text-gray-700 hover:text-gray-900 gap-1.5"
               >
-                <Download className="h-3.5 w-3.5" /> {exporting ? 'Saving...' : 'Save as PDF'}
+                <Download className="h-3.5 w-3.5" />
+                <span className="hidden xs:inline sm:inline">{exporting ? 'Saving...' : 'Save as PDF'}</span>
+                <span className="sm:hidden">{exporting ? '...' : 'PDF'}</span>
               </Button>
               <Link href="/dashboard">
                 <Button variant="ghost" size="sm" className="hidden sm:flex text-gray-700 hover:text-gray-900 hover:bg-gray-50">
