@@ -25,7 +25,9 @@ export default function ReportDetailPage({ params }) {
   const [question, setQuestion] = useState('')
   const [chatHistory, setChatHistory] = useState([])
   const [sending, setSending] = useState(false)
+  const [exporting, setExporting] = useState(false)
   const [chatUsed, setChatUsed] = useState(0)
+  const pdfRef = useRef(null)
   const [chatLimit, setChatLimit] = useState(null) // null = unlimited
   const [chatLimitReached, setChatLimitReached] = useState(false)
   const chatEndRef = useRef(null)
@@ -181,23 +183,125 @@ export default function ReportDetailPage({ params }) {
     }
   }
 
-  function handleExportPDF() {
-    window.print()
+  async function handleExportPDF() {
+    setExporting(true)
+    try {
+      const html2pdf = (await import('html2pdf.js')).default
+      const element = pdfRef.current
+      await html2pdf().set({
+        margin: 0,
+        filename: `medyra-${(report.fileName || 'report').replace(/\.[^.]+$/, '')}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff', logging: false },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      }).from(element).save()
+    } catch (err) {
+      console.error('PDF export error:', err)
+      toast.error('Failed to export PDF. Please try again.')
+    } finally {
+      setExporting(false)
+    }
   }
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Print styles */}
-      <style>{`
-        @media print {
-          .no-print { display: none !important; }
-          .print-only { display: block !important; }
-          body { background: white !important; }
-          .print-container { padding: 0 !important; max-width: 100% !important; }
-          header { position: static !important; box-shadow: none !important; border-bottom: 1px solid #e5e7eb !important; }
-        }
-        .print-only { display: none; }
-      `}</style>
+
+      {/* Hidden PDF template — captured by html2pdf */}
+      <div ref={pdfRef} style={{ position: 'absolute', left: '-9999px', top: 0, width: '794px', background: '#ffffff', fontFamily: 'Arial, sans-serif' }}>
+        {/* Header */}
+        <div style={{ background: 'linear-gradient(135deg, #064e3b 0%, #065f46 100%)', padding: '32px 40px 24px', color: '#ffffff' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+            <div>
+              <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: '-0.5px', marginBottom: 4 }}>
+                <span style={{ color: '#10B981' }}>M</span>edyra
+              </div>
+              <div style={{ fontSize: 12, color: '#6ee7b7', fontWeight: 500 }}>Medical Report Analysis</div>
+            </div>
+            <div style={{ textAlign: 'right' }}>
+              <div style={{ fontSize: 11, color: '#a7f3d0' }}>{report.fileName}</div>
+              <div style={{ fontSize: 11, color: '#a7f3d0', marginTop: 2 }}>{new Date(report.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}</div>
+            </div>
+          </div>
+          <div style={{ marginTop: 20, padding: '10px 14px', background: 'rgba(0,0,0,0.2)', borderRadius: 8, fontSize: 10, color: '#d1fae5', borderLeft: '3px solid #10B981' }}>
+            Educational information only — not medical advice. Always consult a qualified healthcare professional.
+          </div>
+        </div>
+
+        {/* Stats row */}
+        <div style={{ display: 'flex', gap: 0, borderBottom: '1px solid #e5e7eb' }}>
+          {[
+            { label: 'Normal', count: counts.normal, bg: '#f0fdf4', border: '#bbf7d0', text: '#166534', dot: '#10B981' },
+            { label: 'Low', count: counts.low, bg: '#fefce8', border: '#fde68a', text: '#854d0e', dot: '#EAB308' },
+            { label: 'High', count: counts.high, bg: '#fff7ed', border: '#fed7aa', text: '#9a3412', dot: '#F97316' },
+            { label: 'Critical', count: counts.critical, bg: '#fef2f2', border: '#fecaca', text: '#991b1b', dot: '#EF4444' },
+          ].map((s, i) => (
+            <div key={i} style={{ flex: 1, padding: '16px 20px', background: s.bg, borderRight: i < 3 ? `1px solid ${s.border}` : 'none' }}>
+              <div style={{ width: 8, height: 8, borderRadius: '50%', background: s.dot, marginBottom: 8 }} />
+              <div style={{ fontSize: 28, fontWeight: 800, color: s.text, lineHeight: 1 }}>{s.count}</div>
+              <div style={{ fontSize: 11, color: s.text, fontWeight: 600, marginTop: 4, opacity: 0.8 }}>{s.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ padding: '28px 40px' }}>
+          {/* Summary */}
+          {explanation.summary && (
+            <div style={{ marginBottom: 24 }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: '#111827', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Summary</div>
+              <p style={{ fontSize: 12, color: '#374151', lineHeight: 1.7, margin: 0 }}>{explanation.summary}</p>
+            </div>
+          )}
+
+          {/* Tests */}
+          {tests.length > 0 && (
+            <div style={{ marginBottom: 24 }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: '#111827', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Test Results</div>
+              {tests.map((test, i) => {
+                const flagColors = {
+                  critical: { bg: '#fef2f2', border: '#ef4444', badge: '#ef4444', text: '#991b1b' },
+                  high: { bg: '#fff7ed', border: '#f97316', badge: '#f97316', text: '#9a3412' },
+                  low: { bg: '#fefce8', border: '#eab308', badge: '#eab308', text: '#854d0e' },
+                  normal: { bg: '#f0fdf4', border: '#10b981', badge: '#10b981', text: '#166534' },
+                }
+                const fc = flagColors[test.flag] || flagColors.normal
+                return (
+                  <div key={i} style={{ marginBottom: 10, borderLeft: `4px solid ${fc.border}`, background: fc.bg, borderRadius: '0 8px 8px 0', padding: '12px 16px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                      <div style={{ fontSize: 12, fontWeight: 700, color: '#111827' }}>{test.name}</div>
+                      <div style={{ fontSize: 10, fontWeight: 700, color: '#fff', background: fc.badge, padding: '2px 8px', borderRadius: 4 }}>{test.flag?.toUpperCase()}</div>
+                    </div>
+                    <div style={{ fontSize: 11, color: '#6b7280', marginBottom: 6 }}>
+                      Value: <span style={{ fontWeight: 600, color: '#111827' }}>{test.value}</span>
+                      {test.normalRange && <span> · Normal range: {test.normalRange}</span>}
+                    </div>
+                    {test.explanation && <p style={{ fontSize: 11, color: '#374151', margin: '0 0 4px', lineHeight: 1.5 }}>{test.explanation}</p>}
+                    {test.interpretation && <p style={{ fontSize: 11, color: fc.text, margin: 0, fontStyle: 'italic', lineHeight: 1.5 }}>{test.interpretation}</p>}
+                  </div>
+                )
+              })}
+            </div>
+          )}
+
+          {/* Questions for doctor */}
+          {explanation.questionsForDoctor && explanation.questionsForDoctor.length > 0 && (
+            <div style={{ marginBottom: 24 }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: '#111827', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Questions to Ask Your Doctor</div>
+              {explanation.questionsForDoctor.map((q, i) => (
+                <div key={i} style={{ display: 'flex', gap: 10, marginBottom: 8, alignItems: 'flex-start' }}>
+                  <div style={{ width: 20, height: 20, background: '#10B981', color: '#fff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 700, flexShrink: 0 }}>{i + 1}</div>
+                  <p style={{ fontSize: 11, color: '#374151', margin: 0, lineHeight: 1.6 }}>{q}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Footer */}
+        <div style={{ background: '#064e3b', padding: '16px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ fontSize: 10, color: '#6ee7b7' }}>Generated by <span style={{ fontWeight: 700 }}>Medyra</span> · medyra.de</div>
+          <div style={{ fontSize: 10, color: '#6ee7b7' }}>Not a substitute for professional medical advice</div>
+        </div>
+      </div>
 
       {/* Header */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-40 no-print">
@@ -210,9 +314,10 @@ export default function ReportDetailPage({ params }) {
                 variant="outline"
                 size="sm"
                 onClick={handleExportPDF}
+                disabled={exporting}
                 className="hidden sm:flex text-gray-700 hover:text-gray-900 gap-1.5"
               >
-                <Download className="h-3.5 w-3.5" /> Export PDF
+                <Download className="h-3.5 w-3.5" /> {exporting ? 'Saving...' : 'Save as PDF'}
               </Button>
               <Link href="/dashboard">
                 <Button variant="ghost" size="sm" className="hidden sm:flex text-gray-700 hover:text-gray-900 hover:bg-gray-50">
@@ -226,13 +331,6 @@ export default function ReportDetailPage({ params }) {
           </div>
         </div>
       </header>
-
-      {/* Print header — only visible when printing */}
-      <div className="print-only p-6 border-b border-gray-200">
-        <p className="text-xl font-bold text-gray-900">Medyra — Medical Report Analysis</p>
-        <p className="text-sm text-gray-500 mt-1">{report.fileName} · {new Date(report.createdAt).toLocaleDateString()}</p>
-        <p className="text-xs text-gray-400 mt-1">Educational information only — not medical advice. Always consult your doctor.</p>
-      </div>
 
       <div className="container mx-auto px-4 py-6 max-w-4xl pb-32">
 
