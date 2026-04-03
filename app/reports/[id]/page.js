@@ -3,7 +3,7 @@
 import { use, useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import { useUser } from '@clerk/nextjs'
-import { AlertTriangle, CheckCircle, MessageSquare, Send, ArrowLeft, X, Zap, TrendingUp, TrendingDown, Activity } from 'lucide-react'
+import { AlertTriangle, CheckCircle, MessageSquare, Send, ArrowLeft, X, Zap, TrendingUp, TrendingDown, Activity, Download } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
@@ -181,15 +181,39 @@ export default function ReportDetailPage({ params }) {
     }
   }
 
+  function handleExportPDF() {
+    window.print()
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Print styles */}
+      <style>{`
+        @media print {
+          .no-print { display: none !important; }
+          .print-only { display: block !important; }
+          body { background: white !important; }
+          .print-container { padding: 0 !important; max-width: 100% !important; }
+          header { position: static !important; box-shadow: none !important; border-bottom: 1px solid #e5e7eb !important; }
+        }
+        .print-only { display: none; }
+      `}</style>
+
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-40 no-print">
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
             <Link href="/dashboard"><MedyraLogo size="md" /></Link>
             <div className="flex items-center space-x-2">
               <LanguageSwitcher />
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleExportPDF}
+                className="hidden sm:flex text-gray-700 hover:text-gray-900 gap-1.5"
+              >
+                <Download className="h-3.5 w-3.5" /> Export PDF
+              </Button>
               <Link href="/dashboard">
                 <Button variant="ghost" size="sm" className="hidden sm:flex text-gray-700 hover:text-gray-900 hover:bg-gray-50">
                   {t('report.backToDashboard')}
@@ -202,6 +226,13 @@ export default function ReportDetailPage({ params }) {
           </div>
         </div>
       </header>
+
+      {/* Print header — only visible when printing */}
+      <div className="print-only p-6 border-b border-gray-200">
+        <p className="text-xl font-bold text-gray-900">Medyra — Medical Report Analysis</p>
+        <p className="text-sm text-gray-500 mt-1">{report.fileName} · {new Date(report.createdAt).toLocaleDateString()}</p>
+        <p className="text-xs text-gray-400 mt-1">Educational information only — not medical advice. Always consult your doctor.</p>
+      </div>
 
       <div className="container mx-auto px-4 py-6 max-w-4xl pb-32">
 
@@ -383,7 +414,7 @@ export default function ReportDetailPage({ params }) {
       </div>
 
       {/* ── FLOATING CHAT ── */}
-      <div className="fixed bottom-6 right-4 z-50">
+      <div className="fixed bottom-6 right-4 z-50 no-print">
         {chatOpen ? (
           <div className="w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col" style={{ height: '440px' }}>
             {/* Chat header */}
