@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Check, Loader2, ArrowLeft, Shield, Zap, Star, Building2, User, Users, ChevronDown, ChevronUp } from 'lucide-react'
+import { Check, Loader2, ArrowLeft, Shield, Zap, Star, Building2, User, Users, ChevronDown, ChevronUp, Copy, CheckCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { toast } from 'sonner'
@@ -54,6 +54,14 @@ export default function PricingPage() {
   const t = useTranslations()
   const [loading, setLoading] = useState(null)
   const [hoveredTier, setHoveredTier] = useState(null)
+  const [copied, setCopied] = useState(false)
+
+  function copyCoupon() {
+    navigator.clipboard.writeText('LAUNCH50').then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
 
   const pricingTiers = TIER_KEYS.map((key) => ({
     key,
@@ -114,11 +122,24 @@ export default function PricingPage() {
 
         {/* Hero */}
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-700 font-semibold text-xs mb-4">
-            🎉 {t('pricing.subtitle')}
-          </div>
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-3">{t('pricing.title')}</h1>
-          <p className="text-gray-500 text-base max-w-xl mx-auto">Start free, upgrade when you need more. All plans include AI-powered medical report analysis.</p>
+          <p className="text-gray-500 text-base max-w-xl mx-auto mb-6">Start free, upgrade when you need more. All plans include AI powered medical report analysis.</p>
+
+          {/* LAUNCH50 coupon banner */}
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200 rounded-2xl px-5 py-4 mb-2">
+            <div className="text-left">
+              <p className="text-xs text-orange-600 font-semibold uppercase tracking-wide mb-0.5">Limited Launch Offer · First 100 users only</p>
+              <p className="text-sm text-gray-700">Use code at checkout for <span className="font-bold text-orange-600">50% off</span> any paid plan</p>
+            </div>
+            <button
+              onClick={copyCoupon}
+              className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm px-4 py-2 rounded-xl transition-all active:scale-95 whitespace-nowrap"
+            >
+              <span className="text-base font-black tracking-widest">LAUNCH50</span>
+              {copied ? <CheckCheck className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+              <span className="text-xs font-medium">{copied ? 'Copied!' : 'Copy'}</span>
+            </button>
+          </div>
         </div>
 
         {/* Plan cards */}
