@@ -509,8 +509,8 @@ async function handleCheckout(request) {
 
   const prices = {
     onetime: { amount: 4.99, mode: 'payment', description: 'One-time report analysis' },
-    personal: { amount: 9.00, mode: 'subscription', description: 'Personal Monthly' },
-    family: { amount: 19.00, mode: 'subscription', description: 'Family Monthly' },
+    personal: { amount: 18.00, mode: 'subscription', description: 'Personal Plan — Unlimited reports/month' },
+    family: { amount: 38.00, mode: 'subscription', description: 'Family Plan — Unlimited reports/month' },
     clinic: { amount: 199.00, mode: 'subscription', description: 'Clinic Monthly' }
   }
 
@@ -520,6 +520,7 @@ async function handleCheckout(request) {
   const session = await stripe.checkout.sessions.create({
     mode: priceInfo.mode,
     payment_method_types: ['card'],
+    allow_promotion_codes: true,
     line_items: [{
       price_data: {
         currency: 'eur',
