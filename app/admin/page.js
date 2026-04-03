@@ -7,10 +7,12 @@ import {
   Users, FileText, DollarSign, TrendingUp, RefreshCw,
   Crown, Shield, AlertCircle, MessageSquare, Zap, ExternalLink
 } from 'lucide-react'
-import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
-  Legend, ResponsiveContainer
-} from 'recharts'
+import dynamic from 'next/dynamic'
+
+const AdminChart = dynamic(() => import('@/components/AdminChart'), {
+  ssr: false,
+  loading: () => <div className="h-[220px] flex items-center justify-center text-gray-400 text-sm">Loading chart…</div>,
+})
 
 const ADMIN_EMAIL = 'abralur28@gmail.com'
 const REFRESH_INTERVAL = 5 * 60 * 1000 // 5 minutes
@@ -59,11 +61,6 @@ function formatDate(d) {
   return new Date(d).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
 }
 
-function formatShortDate(str) {
-  if (!str) return ''
-  const [, m, d] = str.split('-')
-  return `${d}/${m}`
-}
 
 export default function AdminPage() {
   const { user, isLoaded } = useUser()
@@ -72,7 +69,6 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [lastRefresh, setLastRefresh] = useState(null)
-  const [mounted, setMounted] = useState(false)
 
   const fetchStats = useCallback(async () => {
     try {
@@ -107,7 +103,6 @@ export default function AdminPage() {
     return () => clearInterval(interval)
   }, [fetchStats])
 
-  useEffect(() => { setMounted(true) }, [])
 
   if (!isLoaded || (loading && !data)) {
     return (
@@ -300,45 +295,7 @@ export default function AdminPage() {
           {/* Line chart */}
           <div className="lg:col-span-2 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
             <h2 className="text-sm font-semibold text-gray-700 mb-4">Activity — Last 30 Days</h2>
-            {mounted && chartData && chartData.length > 0 ? (
-              <ResponsiveContainer width="100%" height={220}>
-                <LineChart data={chartData} margin={{ top: 4, right: 8, bottom: 4, left: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                  <XAxis
-                    dataKey="date"
-                    tickFormatter={formatShortDate}
-                    tick={{ fontSize: 11 }}
-                    interval="preserveStartEnd"
-                  />
-                  <YAxis tick={{ fontSize: 11 }} allowDecimals={false} width={28} />
-                  <Tooltip
-                    labelFormatter={l => `Date: ${l}`}
-                    contentStyle={{ fontSize: 12, borderRadius: 8 }}
-                  />
-                  <Legend wrapperStyle={{ fontSize: 12 }} />
-                  <Line
-                    type="monotone"
-                    dataKey="signups"
-                    stroke="#3b82f6"
-                    strokeWidth={2}
-                    dot={false}
-                    name="New Users"
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="reports"
-                    stroke="#8b5cf6"
-                    strokeWidth={2}
-                    dot={false}
-                    name="Reports"
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-            ) : (
-              <div className="h-[220px] flex items-center justify-center text-gray-400 text-sm">
-                {mounted ? 'No data for the last 30 days' : ''}
-              </div>
-            )}
+            <AdminChart data={chartData} />
           </div>
 
           {/* Subscription breakdown */}
