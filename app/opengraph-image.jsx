@@ -69,7 +69,7 @@ export default function OGImage() {
             lineHeight: 1.4,
           }}
         >
-          AI-powered explanations · GDPR Compliant · 16 Languages · Made in Germany
+          AI powered explanations · GDPR Compliant · 16 Languages · Made in Germany
         </p>
 
         {/* Feature pills */}

@@ -27,7 +27,8 @@ async function connectToMongo() {
     if (!process.env.MONGO_URL) throw new Error('MONGO_URL not set')
     mongoClient = new MongoClient(process.env.MONGO_URL, {
       maxPoolSize: 10,
-      serverSelectionTimeoutMS: 5000,
+      serverSelectionTimeoutMS: 10000,
+      connectTimeoutMS: 10000,
     })
     await mongoClient.connect()
     db = mongoClient.db(process.env.DB_NAME || 'medyra')
@@ -153,20 +154,22 @@ export async function GET() {
 
       // Chat stats: total conversations across all reports
       database.collection('reports').aggregate([
-        { $project: { chatCount: { $size: { $ifNull: ['$conversations', []] } }, userId: 1, createdAt: 1 } },
+        { $project: { chatCount: { $cond: { if: { $isArray: '$conversations' }, then: { $size: '$conversations' }, else: 0 } }, userId: 1, createdAt: 1 } },
         { $group: { _id: null, total: { $sum: '$chatCount' } } },
       ]).toArray(),
 
       // Chat messages sent today
       database.collection('reports').aggregate([
-        { $unwind: { path: '$conversations', preserveNullAndEmpty: false } },
+        { $match: { conversations: { $exists: true, $ne: [] } } },
+        { $unwind: { path: '$conversations', preserveNullAndEmptyArrays: false } },
         { $match: { 'conversations.timestamp': { $gte: startOfToday } } },
         { $count: 'total' },
       ]).toArray(),
 
       // Chat messages sent this month
       database.collection('reports').aggregate([
-        { $unwind: { path: '$conversations', preserveNullAndEmpty: false } },
+        { $match: { conversations: { $exists: true, $ne: [] } } },
+        { $unwind: { path: '$conversations', preserveNullAndEmptyArrays: false } },
         { $match: { 'conversations.timestamp': { $gte: startOfMonth } } },
         { $count: 'total' },
       ]).toArray(),
@@ -275,6 +278,6 @@ export async function GET() {
     })
   } catch (error) {
     console.error('Admin stats error:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    return NextResponse.json({ error: error.message || 'Internal server error' }, { status: 500 })
   }
 }

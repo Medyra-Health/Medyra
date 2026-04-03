@@ -14,7 +14,7 @@ export default function JsonLd() {
           height: 512,
         },
         description:
-          'AI-powered medical lab report explanation platform. GDPR compliant. Made in Germany.',
+          'AI powered medical lab report explanation platform. GDPR compliant. Made in Germany.',
         foundingLocation: {
           '@type': 'Place',
           name: 'Germany',
@@ -33,7 +33,7 @@ export default function JsonLd() {
         name: 'Medyra',
         url: 'https://medyra.de',
         description:
-          'Upload your medical lab results and get AI-powered plain-language explanations in under 60 seconds. Understand your TSH, HbA1c, cholesterol, and 100+ other lab values.',
+          'Upload your medical lab results and get AI powered plain language explanations in under 60 seconds. Understand your TSH, HbA1c, cholesterol, and 100+ other lab values.',
         applicationCategory: 'HealthApplication',
         applicationSubCategory: 'MedicalApplication',
         operatingSystem: 'Web Browser, iOS, Android',
