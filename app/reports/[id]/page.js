@@ -192,7 +192,18 @@ export default function ReportDetailPage({ params }) {
         margin: 0,
         filename: `medyra-${(report.fileName || 'report').replace(/\.[^.]+$/, '')}.pdf`,
         image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff', logging: false },
+        html2canvas: {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#ffffff',
+        logging: false,
+        onclone: (_doc, el) => {
+          el.style.opacity = '1'
+          el.style.position = 'relative'
+          el.style.zIndex = 'auto'
+          el.style.pointerEvents = 'auto'
+        }
+      },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
       }).from(element).save()
     } catch (err) {
