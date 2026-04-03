@@ -207,7 +207,7 @@ export default function ReportDetailPage({ params }) {
     <div className="min-h-screen bg-gray-50">
 
       {/* Hidden PDF template — captured by html2pdf */}
-      <div ref={pdfRef} style={{ position: 'absolute', left: '-9999px', top: 0, width: '794px', background: '#ffffff', fontFamily: 'Arial, sans-serif' }}>
+      <div ref={pdfRef} style={{ position: 'fixed', top: 0, left: 0, opacity: 0, pointerEvents: 'none', zIndex: -9999, width: '794px', background: '#ffffff', fontFamily: 'Arial, sans-serif' }}>
         {/* Header */}
         <div style={{ background: 'linear-gradient(135deg, #064e3b 0%, #065f46 100%)', padding: '32px 40px 24px', color: '#ffffff' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
