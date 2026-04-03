@@ -27,7 +27,6 @@ export default function ReportDetailPage({ params }) {
   const [sending, setSending] = useState(false)
   const [exporting, setExporting] = useState(false)
   const [chatUsed, setChatUsed] = useState(0)
-  const pdfRef = useRef(null)
   const [chatLimit, setChatLimit] = useState(null) // null = unlimited
   const [chatLimitReached, setChatLimitReached] = useState(false)
   const chatEndRef = useRef(null)
@@ -186,26 +185,180 @@ export default function ReportDetailPage({ params }) {
   async function handleExportPDF() {
     setExporting(true)
     try {
-      const html2pdf = (await import('html2pdf.js')).default
-      const element = pdfRef.current
-      await html2pdf().set({
-        margin: 0,
-        filename: `medyra-${(report.fileName || 'report').replace(/\.[^.]+$/, '')}.pdf`,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: {
-        scale: 2,
-        useCORS: true,
-        backgroundColor: '#ffffff',
-        logging: false,
-        onclone: (_doc, el) => {
-          el.style.opacity = '1'
-          el.style.position = 'relative'
-          el.style.zIndex = 'auto'
-          el.style.pointerEvents = 'auto'
+      const { jsPDF } = await import('jspdf')
+      const doc = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' })
+      const W = 210, H = 297, M = 14, CW = W - M * 2
+      let y = 0
+
+      const newPage = () => { doc.addPage(); y = M }
+      const check = (need) => { if (y + need > H - 18) newPage() }
+
+      // ── HEADER ──
+      doc.setFillColor(4, 78, 59)
+      doc.rect(0, 0, W, 40, 'F')
+      // Logo
+      doc.setFont('helvetica', 'bold')
+      doc.setFontSize(24)
+      doc.setTextColor(16, 185, 129)
+      doc.text('M', M, 17)
+      doc.setTextColor(255, 255, 255)
+      doc.text('edyra', M + 9, 17)
+      doc.setFont('helvetica', 'normal')
+      doc.setFontSize(8.5)
+      doc.setTextColor(110, 231, 183)
+      doc.text('Medical Report Analysis', M, 23)
+      // File + date (right)
+      const dateStr = new Date(report.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })
+      doc.setFontSize(8)
+      doc.setTextColor(167, 243, 208)
+      doc.text(report.fileName || 'Report', W - M, 15, { align: 'right' })
+      doc.text(dateStr, W - M, 21, { align: 'right' })
+      // Disclaimer bar
+      doc.setFillColor(0, 0, 0)
+      doc.setGState && doc.setGState(new doc.GState({ opacity: 0.2 }))
+      doc.rect(0, 30, W, 10, 'F')
+      doc.setGState && doc.setGState(new doc.GState({ opacity: 1 }))
+      doc.setFontSize(7)
+      doc.setTextColor(209, 250, 229)
+      doc.text('Educational information only — not medical advice. Always consult a qualified healthcare professional.', W / 2, 36.5, { align: 'center' })
+
+      y = 48
+
+      // ── STATS ROW ──
+      const statW = CW / 4
+      const statData = [
+        { label: 'Normal', count: counts.normal, bg: [240,253,244], bd: [187,247,208], tx: [22,101,52] },
+        { label: 'Low',    count: counts.low,    bg: [254,252,232], bd: [253,230,138], tx: [133,77,14] },
+        { label: 'High',   count: counts.high,   bg: [255,247,237], bd: [254,215,170], tx: [154,52,18] },
+        { label: 'Critical', count: counts.critical, bg: [254,242,242], bd: [254,202,202], tx: [153,27,27] },
+      ]
+      statData.forEach((s, i) => {
+        const sx = M + i * statW
+        doc.setFillColor(...s.bg); doc.setDrawColor(...s.bd)
+        doc.roundedRect(sx, y, statW - 1, 20, 1, 1, 'FD')
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(20); doc.setTextColor(...s.tx)
+        doc.text(String(s.count), sx + statW / 2 - 0.5, y + 13, { align: 'center' })
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5)
+        doc.text(s.label, sx + statW / 2 - 0.5, y + 18.5, { align: 'center' })
+      })
+      y += 26
+
+      // ── SUMMARY ──
+      if (explanation.summary) {
+        check(16)
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(17, 24, 39)
+        doc.text('SUMMARY', M, y)
+        doc.setDrawColor(209, 213, 219); doc.line(M + 25, y - 0.5, W - M, y - 0.5)
+        y += 5
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(55, 65, 81)
+        const sumLines = doc.splitTextToSize(explanation.summary, CW)
+        sumLines.forEach(line => { check(5); doc.text(line, M, y); y += 4.5 })
+        y += 5
+      }
+
+      // ── TEST RESULTS ──
+      if (tests.length > 0) {
+        check(14)
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(17, 24, 39)
+        doc.text('TEST RESULTS', M, y)
+        doc.setDrawColor(209, 213, 219); doc.line(M + 36, y - 0.5, W - M, y - 0.5)
+        y += 6
+
+        const flagPalette = {
+          critical: { bg: [254,242,242], bd: [239,68,68], bx: [239,68,68], tx: [153,27,27] },
+          high:     { bg: [255,247,237], bd: [249,115,22], bx: [249,115,22], tx: [154,52,18] },
+          low:      { bg: [254,252,232], bd: [234,179,8],  bx: [234,179,8],  tx: [133,77,14] },
+          normal:   { bg: [240,253,244], bd: [16,185,129], bx: [16,185,129], tx: [22,101,52] },
         }
-      },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      }).from(element).save()
+
+        tests.forEach(test => {
+          const fc = flagPalette[test.flag] || flagPalette.normal
+          // Pre-measure text lines
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(8)
+          const expLines = test.explanation ? doc.splitTextToSize(test.explanation, CW - 9) : []
+          const intLines = test.interpretation ? doc.splitTextToSize(test.interpretation, CW - 9) : []
+          const cardH = 14 + expLines.length * 3.8 + intLines.length * 3.8
+          check(cardH + 3)
+
+          // Card bg + border
+          doc.setFillColor(...fc.bg); doc.setDrawColor(...fc.bd)
+          doc.roundedRect(M, y, CW, cardH, 1.5, 1.5, 'FD')
+          // Left accent
+          doc.setFillColor(...fc.bd)
+          doc.rect(M, y, 3, cardH, 'F')
+
+          const cx = M + 6
+          // Name
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(17, 24, 39)
+          doc.text(test.name || '', cx, y + 6.5)
+          // Flag badge
+          const fLabel = (test.flag || '').toUpperCase()
+          const bw = fLabel.length * 2.2 + 4
+          doc.setFillColor(...fc.bx)
+          doc.roundedRect(W - M - bw - 1, y + 2.5, bw + 1, 5, 1, 1, 'F')
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(6); doc.setTextColor(255, 255, 255)
+          doc.text(fLabel, W - M - bw / 2 - 0.5, y + 6, { align: 'center' })
+          // Value line
+          let valText = `Value: ${test.value || ''}`
+          if (test.normalRange) valText += `  ·  Normal: ${test.normalRange}`
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(...fc.tx)
+          doc.text(valText, cx, y + 11.5)
+
+          let iy = y + 15
+          // Explanation
+          if (expLines.length) {
+            doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(75, 85, 99)
+            expLines.forEach(l => { doc.text(l, cx, iy); iy += 3.8 })
+          }
+          // Interpretation italic
+          if (intLines.length) {
+            doc.setFont('helvetica', 'italic'); doc.setFontSize(8); doc.setTextColor(...fc.tx)
+            intLines.forEach(l => { doc.text(l, cx, iy); iy += 3.8 })
+          }
+          y += cardH + 3
+        })
+      }
+
+      // ── QUESTIONS FOR DOCTOR ──
+      if (explanation.questionsForDoctor?.length > 0) {
+        y += 2; check(16)
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(17, 24, 39)
+        doc.text('QUESTIONS TO ASK YOUR DOCTOR', M, y)
+        doc.setDrawColor(209, 213, 219); doc.line(M + 79, y - 0.5, W - M, y - 0.5)
+        y += 6
+
+        explanation.questionsForDoctor.forEach((q, i) => {
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5)
+          const qLines = doc.splitTextToSize(q, CW - 10)
+          check(qLines.length * 4 + 4)
+          // Circle
+          doc.setFillColor(16, 185, 129)
+          doc.circle(M + 3, y + 0.5, 3, 'F')
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); doc.setTextColor(255, 255, 255)
+          doc.text(String(i + 1), M + 3, y + 2.3, { align: 'center' })
+          // Text
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(55, 65, 81)
+          qLines.forEach((l, li) => { doc.text(l, M + 9, y + 2.5 + li * 4); })
+          y += qLines.length * 4 + 4
+        })
+      }
+
+      // ── FOOTER on every page ──
+      const totalPages = doc.internal.getNumberOfPages()
+      for (let p = 1; p <= totalPages; p++) {
+        doc.setPage(p)
+        doc.setFillColor(4, 78, 59)
+        doc.rect(0, H - 12, W, 12, 'F')
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(6.5); doc.setTextColor(110, 231, 183)
+        doc.text('Generated by Medyra · medyra.de', M, H - 5)
+        doc.text('Not a substitute for professional medical advice', W - M, H - 5, { align: 'right' })
+        if (totalPages > 1) {
+          doc.setTextColor(167, 243, 208)
+          doc.text(`${p} / ${totalPages}`, W / 2, H - 5, { align: 'center' })
+        }
+      }
+
+      doc.save(`medyra-${(report.fileName || 'report').replace(/\.[^.]+$/, '')}.pdf`)
     } catch (err) {
       console.error('PDF export error:', err)
       toast.error('Failed to export PDF. Please try again.')
@@ -216,103 +369,6 @@ export default function ReportDetailPage({ params }) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-
-      {/* Hidden PDF template — captured by html2pdf */}
-      <div ref={pdfRef} style={{ position: 'fixed', top: 0, left: 0, opacity: 0, pointerEvents: 'none', zIndex: -9999, width: '794px', background: '#ffffff', fontFamily: 'Arial, sans-serif' }}>
-        {/* Header */}
-        <div style={{ background: 'linear-gradient(135deg, #064e3b 0%, #065f46 100%)', padding: '32px 40px 24px', color: '#ffffff' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-            <div>
-              <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: '-0.5px', marginBottom: 4 }}>
-                <span style={{ color: '#10B981' }}>M</span>edyra
-              </div>
-              <div style={{ fontSize: 12, color: '#6ee7b7', fontWeight: 500 }}>Medical Report Analysis</div>
-            </div>
-            <div style={{ textAlign: 'right' }}>
-              <div style={{ fontSize: 11, color: '#a7f3d0' }}>{report.fileName}</div>
-              <div style={{ fontSize: 11, color: '#a7f3d0', marginTop: 2 }}>{new Date(report.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}</div>
-            </div>
-          </div>
-          <div style={{ marginTop: 20, padding: '10px 14px', background: 'rgba(0,0,0,0.2)', borderRadius: 8, fontSize: 10, color: '#d1fae5', borderLeft: '3px solid #10B981' }}>
-            Educational information only — not medical advice. Always consult a qualified healthcare professional.
-          </div>
-        </div>
-
-        {/* Stats row */}
-        <div style={{ display: 'flex', gap: 0, borderBottom: '1px solid #e5e7eb' }}>
-          {[
-            { label: 'Normal', count: counts.normal, bg: '#f0fdf4', border: '#bbf7d0', text: '#166534', dot: '#10B981' },
-            { label: 'Low', count: counts.low, bg: '#fefce8', border: '#fde68a', text: '#854d0e', dot: '#EAB308' },
-            { label: 'High', count: counts.high, bg: '#fff7ed', border: '#fed7aa', text: '#9a3412', dot: '#F97316' },
-            { label: 'Critical', count: counts.critical, bg: '#fef2f2', border: '#fecaca', text: '#991b1b', dot: '#EF4444' },
-          ].map((s, i) => (
-            <div key={i} style={{ flex: 1, padding: '16px 20px', background: s.bg, borderRight: i < 3 ? `1px solid ${s.border}` : 'none' }}>
-              <div style={{ width: 8, height: 8, borderRadius: '50%', background: s.dot, marginBottom: 8 }} />
-              <div style={{ fontSize: 28, fontWeight: 800, color: s.text, lineHeight: 1 }}>{s.count}</div>
-              <div style={{ fontSize: 11, color: s.text, fontWeight: 600, marginTop: 4, opacity: 0.8 }}>{s.label}</div>
-            </div>
-          ))}
-        </div>
-
-        <div style={{ padding: '28px 40px' }}>
-          {/* Summary */}
-          {explanation.summary && (
-            <div style={{ marginBottom: 24 }}>
-              <div style={{ fontSize: 13, fontWeight: 700, color: '#111827', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Summary</div>
-              <p style={{ fontSize: 12, color: '#374151', lineHeight: 1.7, margin: 0 }}>{explanation.summary}</p>
-            </div>
-          )}
-
-          {/* Tests */}
-          {tests.length > 0 && (
-            <div style={{ marginBottom: 24 }}>
-              <div style={{ fontSize: 13, fontWeight: 700, color: '#111827', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Test Results</div>
-              {tests.map((test, i) => {
-                const flagColors = {
-                  critical: { bg: '#fef2f2', border: '#ef4444', badge: '#ef4444', text: '#991b1b' },
-                  high: { bg: '#fff7ed', border: '#f97316', badge: '#f97316', text: '#9a3412' },
-                  low: { bg: '#fefce8', border: '#eab308', badge: '#eab308', text: '#854d0e' },
-                  normal: { bg: '#f0fdf4', border: '#10b981', badge: '#10b981', text: '#166534' },
-                }
-                const fc = flagColors[test.flag] || flagColors.normal
-                return (
-                  <div key={i} style={{ marginBottom: 10, borderLeft: `4px solid ${fc.border}`, background: fc.bg, borderRadius: '0 8px 8px 0', padding: '12px 16px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-                      <div style={{ fontSize: 12, fontWeight: 700, color: '#111827' }}>{test.name}</div>
-                      <div style={{ fontSize: 10, fontWeight: 700, color: '#fff', background: fc.badge, padding: '2px 8px', borderRadius: 4 }}>{test.flag?.toUpperCase()}</div>
-                    </div>
-                    <div style={{ fontSize: 11, color: '#6b7280', marginBottom: 6 }}>
-                      Value: <span style={{ fontWeight: 600, color: '#111827' }}>{test.value}</span>
-                      {test.normalRange && <span> · Normal range: {test.normalRange}</span>}
-                    </div>
-                    {test.explanation && <p style={{ fontSize: 11, color: '#374151', margin: '0 0 4px', lineHeight: 1.5 }}>{test.explanation}</p>}
-                    {test.interpretation && <p style={{ fontSize: 11, color: fc.text, margin: 0, fontStyle: 'italic', lineHeight: 1.5 }}>{test.interpretation}</p>}
-                  </div>
-                )
-              })}
-            </div>
-          )}
-
-          {/* Questions for doctor */}
-          {explanation.questionsForDoctor && explanation.questionsForDoctor.length > 0 && (
-            <div style={{ marginBottom: 24 }}>
-              <div style={{ fontSize: 13, fontWeight: 700, color: '#111827', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Questions to Ask Your Doctor</div>
-              {explanation.questionsForDoctor.map((q, i) => (
-                <div key={i} style={{ display: 'flex', gap: 10, marginBottom: 8, alignItems: 'flex-start' }}>
-                  <div style={{ width: 20, height: 20, background: '#10B981', color: '#fff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 700, flexShrink: 0 }}>{i + 1}</div>
-                  <p style={{ fontSize: 11, color: '#374151', margin: 0, lineHeight: 1.6 }}>{q}</p>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Footer */}
-        <div style={{ background: '#064e3b', padding: '16px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <div style={{ fontSize: 10, color: '#6ee7b7' }}>Generated by <span style={{ fontWeight: 700 }}>Medyra</span> · medyra.de</div>
-          <div style={{ fontSize: 10, color: '#6ee7b7' }}>Not a substitute for professional medical advice</div>
-        </div>
-      </div>
 
       {/* Header */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-40 no-print">
