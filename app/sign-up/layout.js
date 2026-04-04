@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Create Account — Start Free',
+  title: 'Create Account | Start Free',
   description: 'Create your free Medyra account and analyze your first medical report for free. No credit card required.',
   alternates: {
     canonical: 'https://medyra.de/sign-up',
