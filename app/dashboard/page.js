@@ -14,7 +14,7 @@ import { Progress } from '@/components/ui/progress'
 import MedyraLogo, { MedyraIcon } from '@/components/MedyraLogo'
 
 const PLAN_META = {
-  free:     { label: 'Free',     color: 'bg-gray-100 text-gray-700',       border: 'border-gray-200',    icon: null,    limit: 1,      features: ['1 report/month', 'Plain language explanation', 'Flagged abnormal values'] },
+  free:     { label: 'Free',     color: 'bg-gray-100 text-gray-700',       border: 'border-gray-200',    icon: null,    limit: 3,      features: ['3 free reports', 'Plain language explanation', 'Flagged abnormal values'] },
   onetime:  { label: 'One-Time', color: 'bg-blue-100 text-blue-700',       border: 'border-blue-200',    icon: Zap,     limit: 2,      features: ['Full AI explanation', 'Follow up chat', 'PDF export'] },
   personal: { label: 'Personal', color: 'bg-emerald-100 text-emerald-700', border: 'border-emerald-200', icon: Star,    limit: 999999, features: ['Unlimited reports', 'Full history', 'Follow up chat', 'PDF export'] },
   family:   { label: 'Family',   color: 'bg-purple-100 text-purple-700',   border: 'border-purple-200',  icon: Star,    limit: 999999, features: ['Unlimited reports', 'Full history', 'Follow up chat', 'Priority support'] },
