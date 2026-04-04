@@ -69,6 +69,8 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [lastRefresh, setLastRefresh] = useState(null)
+  const [encVerify, setEncVerify] = useState(null)
+  const [encLoading, setEncLoading] = useState(false)
 
   const fetchStats = useCallback(async () => {
     try {
@@ -400,6 +402,80 @@ export default function AdminPage() {
               </tbody>
             </table>
           </div>
+        </div>
+
+        {/* ── ENCRYPTION VERIFICATION ── */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mb-6">
+          <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Shield className="h-4 w-4 text-emerald-600" />
+              <h2 className="font-semibold text-gray-800">Encryption Verification</h2>
+              <span className="text-xs text-gray-400">— proves what MongoDB actually stores</span>
+            </div>
+            <button
+              onClick={async () => {
+                setEncLoading(true)
+                try {
+                  const res = await fetch('/api/admin/verify-encryption')
+                  const json = await res.json()
+                  setEncVerify(json)
+                } catch { setEncVerify({ error: 'Failed to fetch' }) }
+                finally { setEncLoading(false) }
+              }}
+              disabled={encLoading}
+              className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 transition-colors disabled:opacity-50"
+            >
+              {encLoading ? 'Checking…' : 'Run Verification'}
+            </button>
+          </div>
+
+          {!encVerify && !encLoading && (
+            <div className="px-6 py-8 text-center text-sm text-gray-400">
+              Click "Run Verification" to inspect raw MongoDB documents and confirm all fields are ciphertext.
+            </div>
+          )}
+
+          {encVerify && !encVerify.error && (
+            <div className="p-6 space-y-4">
+              {/* Summary */}
+              <div className={`flex items-center gap-3 p-4 rounded-xl border ${encVerify.status === 'ENCRYPTED' ? 'bg-emerald-50 border-emerald-200' : 'bg-red-50 border-red-200'}`}>
+                <div className={`text-2xl`}>{encVerify.status === 'ENCRYPTED' ? '✅' : '⚠️'}</div>
+                <div>
+                  <p className={`font-bold text-sm ${encVerify.status === 'ENCRYPTED' ? 'text-emerald-700' : 'text-red-700'}`}>{encVerify.status}</p>
+                  <p className="text-xs text-gray-500 mt-0.5">
+                    Encryption key configured: <strong>{encVerify.encryptionKeyConfigured ? 'Yes' : 'NO — add ENCRYPTION_KEY to Vercel env vars!'}</strong>
+                    {' · '}{encVerify.totalChecked} reports checked
+                  </p>
+                </div>
+              </div>
+
+              {/* Per-report breakdown */}
+              <div className="space-y-3">
+                {encVerify.reports?.map((r, i) => (
+                  <div key={r.id} className="rounded-xl border border-gray-100 bg-gray-50 p-4">
+                    <p className="text-xs font-semibold text-gray-500 mb-3">Report {i + 1} · {new Date(r.createdAt).toLocaleDateString()}</p>
+                    <div className="space-y-2">
+                      {Object.entries(r.fields).map(([field, info]) => (
+                        <div key={field} className="flex items-start gap-3">
+                          <span className={`text-xs font-bold mt-0.5 ${info.encrypted ? 'text-emerald-600' : 'text-red-600'}`}>
+                            {info.encrypted ? '🔒' : '⚠️'}
+                          </span>
+                          <div className="flex-1 min-w-0">
+                            <span className="text-xs font-semibold text-gray-600">{field}: </span>
+                            <span className="text-xs text-gray-400 font-mono break-all">{info.raw}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {encVerify?.error && (
+            <div className="px-6 py-4 text-sm text-red-600">{encVerify.error}</div>
+          )}
         </div>
 
         <p className="text-xs text-gray-300 text-center pb-4">
