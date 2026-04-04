@@ -15,6 +15,15 @@ export const metadata = {
 
 const POSTS = [
   {
+    slug: 'how-medyra-protects-your-medical-data',
+    title: 'How Medyra Protects Your Medical Data',
+    description:
+      'A technical deep-dive into the AES-256-GCM field-level encryption that protects every report on Medyra. We explain what is encrypted, why a database breach reveals nothing readable, and how GDPR Art. 32 and BDSG §64 requirements are met.',
+    date: '4 April 2026',
+    readTime: '8 min read',
+    tags: ['Security', 'GDPR', 'Encryption'],
+  },
+  {
     slug: 'how-to-read-lab-results-germany-expat',
     title: 'How to Read Your Lab Results in Germany as an Expat',
     description:
