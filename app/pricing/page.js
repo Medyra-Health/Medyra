@@ -122,23 +122,30 @@ export default function PricingPage() {
 
         {/* Hero */}
         <div className="text-center mb-14">
+          {/* Launch offer banner */}
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-5 shadow-lg shadow-orange-200 animate-pulse">
+            🔥 Launch offer — 50% off all paid plans
+          </div>
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-3">{t('pricing.title')}</h1>
-          <p className="text-gray-500 text-base max-w-xl mx-auto mb-6">Start free, upgrade when you need more. All plans include AI powered medical report analysis.</p>
+          <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">Start with <span className="font-semibold text-gray-700">3 free reports</span>. No credit card needed. Upgrade when you're ready.</p>
 
-          {/* LAUNCH50 coupon banner */}
-          <div className="inline-flex flex-col sm:flex-row items-center gap-3 bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200 rounded-2xl px-5 py-4 mb-2">
-            <div className="text-left">
-              <p className="text-xs text-orange-600 font-semibold uppercase tracking-wide mb-0.5">Limited Launch Offer · First 100 users only</p>
-              <p className="text-sm text-gray-700">Use code at checkout for <span className="font-bold text-orange-600">50% off</span> any paid plan</p>
+          {/* Coupon claim box */}
+          <div className="inline-block max-w-md w-full">
+            <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-300 rounded-2xl p-5 shadow-md">
+              <p className="text-xs font-bold text-orange-600 uppercase tracking-widest mb-1">Limited Launch Offer</p>
+              <p className="text-2xl font-black text-gray-900 mb-1">50% off — while it lasts</p>
+              <p className="text-sm text-gray-500 mb-4">Apply code at checkout. Works on all paid plans.</p>
+              <button
+                onClick={copyCoupon}
+                className="w-full flex items-center justify-between bg-white border-2 border-orange-300 hover:border-orange-500 rounded-xl px-4 py-3 transition-all group"
+              >
+                <span className="text-xl font-black tracking-widest text-orange-600">LAUNCH50</span>
+                <span className={`flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-lg transition-all ${copied ? 'bg-emerald-500 text-white' : 'bg-orange-500 hover:bg-orange-600 text-white'}`}>
+                  {copied ? <><CheckCheck className="h-3.5 w-3.5" /> Copied!</> : <><Copy className="h-3.5 w-3.5" /> Copy code</>}
+                </span>
+              </button>
+              <p className="text-xs text-gray-400 mt-2">Paste this code at the Stripe checkout page</p>
             </div>
-            <button
-              onClick={copyCoupon}
-              className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm px-4 py-2 rounded-xl transition-all active:scale-95 whitespace-nowrap"
-            >
-              <span className="text-base font-black tracking-widest">LAUNCH50</span>
-              {copied ? <CheckCheck className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-              <span className="text-xs font-medium">{copied ? 'Copied!' : 'Copy'}</span>
-            </button>
           </div>
         </div>
 

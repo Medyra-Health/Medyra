@@ -240,23 +240,27 @@ async function isAdminUser() {
   }
 }
 
+const FREE_REPORT_LIMIT = 3
+
 async function ensureUserExists(userId, database) {
   const user = await database.collection('users').findOne({ clerkId: userId })
   if (!user) {
     await database.collection('users').insertOne({
       clerkId: userId,
-      subscription: { tier: 'free', status: 'active', usageLimit: 1, currentUsage: 0 },
+      subscription: { tier: 'free', status: 'active', usageLimit: FREE_REPORT_LIMIT, currentUsage: 0 },
       createdAt: new Date(),
       updatedAt: new Date()
     })
-    return { tier: 'free', limit: 1, used: 0, allowed: true }
+    return { tier: 'free', limit: FREE_REPORT_LIMIT, used: 0, allowed: true }
   }
-  const sub = user.subscription || { tier: 'free', usageLimit: 1, currentUsage: 0 }
+  const sub = user.subscription || { tier: 'free', usageLimit: FREE_REPORT_LIMIT, currentUsage: 0 }
+  // Upgrade existing free users who still have the old limit of 1
+  const effectiveLimit = sub.tier === 'free' ? Math.max(FREE_REPORT_LIMIT, sub.usageLimit || 0) : sub.usageLimit
   return {
     tier: sub.tier,
-    limit: sub.usageLimit,
+    limit: effectiveLimit,
     used: sub.currentUsage,
-    allowed: sub.currentUsage < sub.usageLimit
+    allowed: sub.currentUsage < effectiveLimit
   }
 }
 
@@ -596,7 +600,7 @@ async function handleClerkWebhook(request) {
       email: data.email_addresses?.[0]?.email_address,
       firstName: data.first_name,
       lastName: data.last_name,
-      subscription: { tier: 'free', status: 'active', usageLimit: 1, currentUsage: 0 },
+      subscription: { tier: 'free', status: 'active', usageLimit: FREE_REPORT_LIMIT, currentUsage: 0 },
       createdAt: new Date(), updatedAt: new Date()
     })
   }
