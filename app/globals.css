@@ -5,6 +5,23 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Prevent horizontal overflow on mobile */
+  overflow-x: hidden;
+}
+
+/* Remove tap highlight flash on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Better touch responsiveness on all interactive elements */
+button, a, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* Minimum touch target size for accessibility */
+button:not(.no-min-touch), a:not(.no-min-touch) {
+  min-height: 36px;
 }
 
 @layer base {
