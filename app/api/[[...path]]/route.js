@@ -5,6 +5,96 @@ import { auth, currentUser } from '@clerk/nextjs/server'
 import Anthropic from '@anthropic-ai/sdk'
 import pdfParse from 'pdf-parse'
 import Stripe from 'stripe'
+import { createCipheriv, createDecipheriv, randomBytes } from 'crypto'
+
+// ============================================================================
+// ENCRYPTION — AES-256-GCM field-level encryption (GDPR Art. 32 / BDSG §64)
+// All medical report data is encrypted before storage in MongoDB.
+// The ENCRYPTION_KEY env var must be a 64-character hex string (32 bytes).
+// Without the key, no stored ciphertext can be decrypted — not even by us.
+// ============================================================================
+
+const ENC_ALGO = 'aes-256-gcm'
+
+function getEncKey() {
+  const hex = process.env.ENCRYPTION_KEY
+  if (!hex || hex.length !== 64) {
+    if (process.env.NODE_ENV !== 'test') {
+      console.warn('[Medyra] ENCRYPTION_KEY not set or invalid — data stored unencrypted')
+    }
+    return null
+  }
+  return Buffer.from(hex, 'hex')
+}
+
+function encrypt(plaintext) {
+  const key = getEncKey()
+  if (!key || plaintext == null) return plaintext
+  try {
+    const iv = randomBytes(16)
+    const cipher = createCipheriv(ENC_ALGO, key, iv)
+    let enc = cipher.update(String(plaintext), 'utf8', 'hex')
+    enc += cipher.final('hex')
+    const tag = cipher.getAuthTag()
+    // Format: {iv_hex}:{ciphertext_hex}:{auth_tag_hex}
+    return `${iv.toString('hex')}:${enc}:${tag.toString('hex')}`
+  } catch (e) {
+    console.error('[Medyra] Encryption failed:', e.message)
+    return plaintext
+  }
+}
+
+function decrypt(value) {
+  const key = getEncKey()
+  if (!key || !value || typeof value !== 'string') return value
+  // Detect our format: {32-hex}:{any-hex}:{32-hex}
+  const parts = value.split(':')
+  if (parts.length !== 3 || parts[0].length !== 32 || parts[2].length !== 32) return value
+  try {
+    const iv = Buffer.from(parts[0], 'hex')
+    const tag = Buffer.from(parts[2], 'hex')
+    const decipher = createDecipheriv(ENC_ALGO, key, iv)
+    decipher.setAuthTag(tag)
+    let dec = decipher.update(parts[1], 'hex', 'utf8')
+    dec += decipher.final('utf8')
+    return dec
+  } catch {
+    // Decryption failed — return raw value (backwards compat with old unencrypted data)
+    return value
+  }
+}
+
+function encryptReport(doc) {
+  return {
+    ...doc,
+    fileName: encrypt(doc.fileName),
+    extractedText: encrypt(doc.extractedText),
+    explanation: encrypt(
+      typeof doc.explanation === 'string' ? doc.explanation : JSON.stringify(doc.explanation)
+    ),
+  }
+}
+
+function decryptReport(report) {
+  if (!report) return report
+  const r = { ...report }
+  if (r.fileName) r.fileName = decrypt(r.fileName)
+  if (r.extractedText) r.extractedText = decrypt(r.extractedText)
+  if (r.explanation != null) {
+    const raw = typeof r.explanation === 'string'
+      ? decrypt(r.explanation)
+      : JSON.stringify(r.explanation)
+    try { r.explanation = JSON.parse(raw) } catch { r.explanation = raw }
+  }
+  if (Array.isArray(r.conversations)) {
+    r.conversations = r.conversations.map(c => ({
+      ...c,
+      question: decrypt(c.question),
+      answer: decrypt(c.answer),
+    }))
+  }
+  return r
+}
 
 // ============================================================================
 // INITIALIZATION
@@ -344,7 +434,7 @@ async function handleAnalyzeReport(request) {
   }
 
   const reportId = uuidv4()
-  await database.collection('reports').insertOne({
+  await database.collection('reports').insertOne(encryptReport({
     id: reportId,
     userId,
     fileName: file.name,
@@ -355,7 +445,7 @@ async function handleAnalyzeReport(request) {
     createdAt: new Date(),
     expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
     status: 'completed'
-  })
+  }))
 
   await incrementUsage(userId, database)
 
@@ -371,12 +461,13 @@ async function handleGetReports(request) {
   const { userId } = await auth()
   if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
   const database = await connectToMongo()
-  const reports = await database.collection('reports')
+  const raw = await database.collection('reports')
     .find({ userId })
     .project({ extractedText: 0 })
     .sort({ createdAt: -1 })
     .limit(100)
     .toArray()
+  const reports = raw.map(r => decryptReport(r))
   return handleCORS(NextResponse.json({ success: true, reports, count: reports.length }))
 }
 
@@ -384,8 +475,9 @@ async function handleGetReport(reportId) {
   const { userId } = await auth()
   if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
   const database = await connectToMongo()
-  const report = await database.collection('reports').findOne({ id: reportId, userId })
-  if (!report) return handleCORS(NextResponse.json({ error: 'Report not found' }, { status: 404 }))
+  const raw = await database.collection('reports').findOne({ id: reportId, userId })
+  if (!raw) return handleCORS(NextResponse.json({ error: 'Report not found' }, { status: 404 }))
+  const report = decryptReport(raw)
   return handleCORS(NextResponse.json({ success: true, report }))
 }
 
@@ -395,7 +487,7 @@ async function handleChat(request, reportId) {
   const database = await connectToMongo()
 
   // Fetch current report + all user reports (for history context)
-  const [report, allReports, usageInfo, admin] = await Promise.all([
+  const [rawReport, rawAllReports, usageInfo, admin] = await Promise.all([
     database.collection('reports').findOne({ id: reportId, userId }),
     database.collection('reports')
       .find({ userId }, { projection: { extractedText: 0 } })
@@ -405,7 +497,9 @@ async function handleChat(request, reportId) {
     ensureUserExists(userId, database),
     isAdminUser(),
   ])
-  if (!report) return handleCORS(NextResponse.json({ error: 'Report not found' }, { status: 404 }))
+  if (!rawReport) return handleCORS(NextResponse.json({ error: 'Report not found' }, { status: 404 }))
+  const report = decryptReport(rawReport)
+  const allReports = rawAllReports.map(r => decryptReport(r))
 
   const body = await request.json()
   const { question } = body
@@ -463,7 +557,7 @@ async function handleChat(request, reportId) {
 
   await database.collection('reports').updateOne(
     { id: reportId },
-    { $push: { conversations: { question, answer, timestamp: new Date() } } }
+    { $push: { conversations: { question: encrypt(question), answer: encrypt(answer), timestamp: new Date() } } }
   )
 
   // Track global chat usage on user document for admin analytics
