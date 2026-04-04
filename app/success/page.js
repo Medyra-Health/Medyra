@@ -33,7 +33,7 @@ function SuccessContent() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-emerald-50 to-white px-4">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
             <Loader2 className="h-16 w-16 text-blue-600 animate-spin mx-auto mb-4" />
@@ -46,10 +46,10 @@ function SuccessContent() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-emerald-50 to-white px-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <CheckCircle className="h-16 w-16 text-green-600 mx-auto mb-4" />
+          <CheckCircle className="h-16 w-16 text-emerald-500 mx-auto mb-4" />
           <CardTitle className="text-2xl">Payment Successful!</CardTitle>
           <CardDescription>Your subscription is now active</CardDescription>
         </CardHeader>
@@ -59,13 +59,13 @@ function SuccessContent() {
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/upload" className="w-full">
-              <Button className="w-full">
+              <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold h-11">
                 <FileText className="mr-2 h-4 w-4" />
                 Upload Your First Report
               </Button>
             </Link>
             <Link href="/dashboard" className="w-full">
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="w-full h-11">
                 Go to Dashboard
               </Button>
             </Link>
@@ -79,7 +79,7 @@ function SuccessContent() {
 export default function SuccessPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-emerald-50 to-white px-4">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
             <Loader2 className="h-16 w-16 text-blue-600 animate-spin mx-auto mb-4" />

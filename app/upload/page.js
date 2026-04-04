@@ -281,7 +281,7 @@ export default function UploadPage() {
         >
           <input {...getInputProps()} />
 
-          <div className="p-10 flex flex-col items-center text-center">
+          <div className="p-6 sm:p-10 flex flex-col items-center text-center">
             {uploading ? (
               <div className="w-full">
                 {/* Animated progress */}
@@ -348,16 +348,16 @@ export default function UploadPage() {
         </div>
 
         {/* Trust row */}
-        <div className="mt-6 grid grid-cols-3 gap-3">
+        <div className="mt-6 grid grid-cols-3 gap-2 sm:gap-3">
           {[
             { icon: Lock, label: 'Encrypted', sub: 'TLS + AES at rest' },
             { icon: Clock, label: '60 seconds', sub: 'Typical analysis time' },
             { icon: Shield, label: 'GDPR', sub: 'Deleted after 30 days' },
           ].map(({ icon: Icon, label, sub }) => (
-            <div key={label} className="flex flex-col items-center text-center p-3 rounded-xl bg-white border border-gray-100 shadow-sm">
-              <Icon className="h-4 w-4 text-emerald-500 mb-1.5" />
-              <p className="text-xs font-semibold text-gray-800">{label}</p>
-              <p className="text-xs text-gray-400">{sub}</p>
+            <div key={label} className="flex flex-col items-center text-center p-2 sm:p-3 rounded-xl bg-white border border-gray-100 shadow-sm">
+              <Icon className="h-4 w-4 text-emerald-500 mb-1" />
+              <p className="text-xs font-semibold text-gray-800 leading-tight">{label}</p>
+              <p className="text-[10px] sm:text-xs text-gray-400 leading-tight mt-0.5">{sub}</p>
             </div>
           ))}
         </div>

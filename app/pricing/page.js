@@ -137,7 +137,7 @@ export default function PricingPage() {
               <p className="text-sm text-gray-500 mb-4">Apply code at checkout. Works on all paid plans.</p>
               <button
                 onClick={copyCoupon}
-                className="w-full flex items-center justify-between bg-white border-2 border-orange-300 hover:border-orange-500 rounded-xl px-4 py-3 transition-all group"
+                className="w-full flex items-center justify-between bg-white border-2 border-orange-300 hover:border-orange-500 rounded-xl px-4 py-4 transition-all group"
               >
                 <span className="text-xl font-black tracking-widest text-orange-600">LAUNCH50</span>
                 <span className={`flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-lg transition-all ${copied ? 'bg-emerald-500 text-white' : 'bg-orange-500 hover:bg-orange-600 text-white'}`}>

@@ -154,31 +154,31 @@ export default function DashboardPage() {
         </Card>
 
         {/* ── STATS ROW ── */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 mb-5">
           <Card>
-            <CardContent className="pt-4">
-              <p className="text-2xl font-bold text-gray-900">{reports.length}</p>
+            <CardContent className="pt-3 sm:pt-4 px-3 sm:px-6">
+              <p className="text-xl sm:text-2xl font-bold text-gray-900">{reports.length}</p>
               <p className="text-xs text-gray-500 mt-0.5">{t('dashboard.totalReports')}</p>
             </CardContent>
           </Card>
           <Card>
-            <CardContent className="pt-4">
-              <p className="text-2xl font-bold text-gray-900">{used}</p>
+            <CardContent className="pt-3 sm:pt-4 px-3 sm:px-6">
+              <p className="text-xl sm:text-2xl font-bold text-gray-900">{used}</p>
               <p className="text-xs text-gray-500 mt-0.5">{t('dashboard.thisMonth')}</p>
             </CardContent>
           </Card>
           <Card>
-            <CardContent className="pt-4">
+            <CardContent className="pt-3 sm:pt-4 px-3 sm:px-6">
               {isUnlimited
-                ? <p className="text-2xl font-bold text-emerald-600">∞</p>
-                : <p className={`text-2xl font-bold ${remaining === 0 ? 'text-red-600' : 'text-emerald-600'}`}>{remaining}</p>
+                ? <p className="text-xl sm:text-2xl font-bold text-emerald-600">∞</p>
+                : <p className={`text-xl sm:text-2xl font-bold ${remaining === 0 ? 'text-red-600' : 'text-emerald-600'}`}>{remaining}</p>
               }
-              <p className="text-xs text-gray-500 mt-0.5">Reports remaining</p>
+              <p className="text-xs text-gray-500 mt-0.5">Remaining</p>
             </CardContent>
           </Card>
           <Card>
-            <CardContent className="pt-4">
-              <p className="text-2xl font-bold text-gray-900">{reports.filter(r => {
+            <CardContent className="pt-3 sm:pt-4 px-3 sm:px-6">
+              <p className="text-xl sm:text-2xl font-bold text-gray-900">{reports.filter(r => {
                 const d = new Date(r.createdAt)
                 const now = new Date()
                 return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear()
@@ -189,7 +189,7 @@ export default function DashboardPage() {
         </div>
 
         {/* ── ACTIONS + RECENT ── */}
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-3 sm:gap-4">
           {/* Quick actions */}
           <Card>
             <CardHeader className="pb-2">
@@ -198,8 +198,7 @@ export default function DashboardPage() {
             <CardContent className="space-y-2">
               <Link href="/upload">
                 <Button
-                  className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold"
-                  size="sm"
+                  className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold h-11"
                   disabled={!isUnlimited && remaining === 0}
                 >
                   <Upload className="mr-2 h-4 w-4" />
@@ -207,14 +206,14 @@ export default function DashboardPage() {
                 </Button>
               </Link>
               <Link href="/reports">
-                <Button className="w-full" variant="outline" size="sm">
+                <Button className="w-full h-11" variant="outline">
                   <FileText className="mr-2 h-4 w-4" />
                   {t('dashboard.viewAllReports')}
                 </Button>
               </Link>
               {(tier === 'free' || tier === 'onetime') && (
                 <Link href="/pricing">
-                  <Button className="w-full" variant="ghost" size="sm">
+                  <Button className="w-full h-10" variant="ghost">
                     <TrendingUp className="mr-2 h-3.5 w-3.5" /> {t('dashboard.upgradePlan')}
                   </Button>
                 </Link>
