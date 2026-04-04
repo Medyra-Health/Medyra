@@ -1,14 +1,7 @@
-import { auth } from '@clerk/nextjs/server'
+import { currentUser } from '@clerk/nextjs/server'
 import { MongoClient } from 'mongodb'
 
-// Returns raw ciphertext from DB alongside decrypted values — proof that encryption is working.
-// Admin only.
-
-const ADMIN_IDS = (process.env.ADMIN_USER_IDS || '').split(',').map(s => s.trim()).filter(Boolean)
-
-function isAdmin(userId) {
-  return ADMIN_IDS.includes(userId)
-}
+const ADMIN_EMAIL = 'abralur28@gmail.com'
 
 function looksEncrypted(value) {
   if (typeof value !== 'string') return false
@@ -22,8 +15,9 @@ function redact(value) {
 }
 
 export async function GET() {
-  const { userId } = await auth()
-  if (!userId || !isAdmin(userId)) {
+  const user = await currentUser()
+  const email = user?.emailAddresses?.[0]?.emailAddress
+  if (!email || email !== ADMIN_EMAIL) {
     return Response.json({ error: 'Forbidden' }, { status: 403 })
   }
 
@@ -32,9 +26,8 @@ export async function GET() {
     await client.connect()
     const db = client.db(process.env.DB_NAME || 'medyra')
 
-    // Get the 5 most recent reports, raw from DB
     const raw = await db.collection('reports')
-      .find({}, { projection: { fileName: 1, extractedText: 1, explanation: 1, userId: 1, createdAt: 1 } })
+      .find({}, { projection: { fileName: 1, extractedText: 1, explanation: 1, createdAt: 1 } })
       .sort({ createdAt: -1 })
       .limit(5)
       .toArray()
