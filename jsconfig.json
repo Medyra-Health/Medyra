@@ -1,12 +1,14 @@
 {
-    "compilerOptions": {
-      "baseUrl": ".",
-      "paths": {
-        "@/*": ["./*"],
-        "@/components/*": ["./components/*"],
-        "@/lib/*": ["./lib/*"],
-        "@/app/*": ["./app/*"]
-      }
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "jsx": "preserve",
+    "paths": {
+      "@/*": ["./*"]
     },
-    "exclude": ["node_modules", ".next"]
-  }
+    "allowJs": true,
+    "noEmit": true
+  },
+  "exclude": ["node_modules", ".next"]
+}
