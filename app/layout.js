@@ -120,7 +120,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <ClerkProvider>
-      <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${inter.className} ${playfair.variable}`}>
+      <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${inter.className} ${playfair.variable} scroll-smooth`}>
         <head>
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#10B981" />
