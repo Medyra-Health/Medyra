@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Terms of Service',
-  description: 'Terms and conditions for using Medyra — the AI medical report explanation service.',
+  description: 'Terms and conditions for using Medyra | the AI medical report explanation service.',
 }
 
 export default function TermsPage() {

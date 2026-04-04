@@ -22,6 +22,12 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/how-medyra-protects-your-medical-data`,
+      lastModified: new Date('2026-04-04'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/how-to-read-lab-results-germany-expat`,
       lastModified: new Date('2026-04-02'),
       changeFrequency: 'monthly',

@@ -529,6 +529,88 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Encryption / Security Trust Section */}
+      <section className="py-16 md:py-24 bg-gray-950 overflow-hidden">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
+              <Shield className="h-3.5 w-3.5" /> Bank-grade encryption
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Your data is encrypted — even from us</h2>
+            <p className="text-gray-400 text-base max-w-2xl mx-auto leading-relaxed">
+              Every report, every value, every AI explanation is encrypted with AES-256-GCM before it touches our database.
+              We store ciphertext. Only you hold the key — through your account.
+            </p>
+          </div>
+
+          {/* Visual: encrypt flow */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-0 mb-14">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center">
+              <div className="w-40 rounded-2xl border border-gray-700 bg-gray-900 p-4 text-center">
+                <div className="text-2xl mb-2">📄</div>
+                <p className="text-xs font-semibold text-white mb-1">Your report</p>
+                <p className="text-xs text-gray-500">HbA1c: 6.1%<br />eGFR: 58 mL/min</p>
+              </div>
+            </div>
+            {/* Arrow */}
+            <div className="flex flex-col items-center px-3">
+              <div className="hidden md:flex items-center gap-1">
+                <div className="w-8 h-px bg-emerald-500/40" />
+                <svg width="8" height="12" viewBox="0 0 8 12"><path d="M0 0 L8 6 L0 12" fill="none" stroke="#10b981" strokeWidth="1.5" strokeOpacity="0.6" /></svg>
+              </div>
+              <div className="md:hidden w-px h-6 bg-emerald-500/40" />
+            </div>
+            {/* Step 2 - AES Engine */}
+            <div className="flex flex-col items-center">
+              <div className="w-44 rounded-2xl border border-emerald-500/40 bg-emerald-950/60 p-4 text-center shadow-lg shadow-emerald-900/30">
+                <div className="text-2xl mb-2">🔐</div>
+                <p className="text-xs font-bold text-emerald-400 mb-1">AES-256-GCM</p>
+                <p className="text-xs text-emerald-600/80">256-bit key · random IV<br />tamper-proof auth tag</p>
+              </div>
+            </div>
+            {/* Arrow */}
+            <div className="flex flex-col items-center px-3">
+              <div className="hidden md:flex items-center gap-1">
+                <div className="w-8 h-px bg-emerald-500/40" />
+                <svg width="8" height="12" viewBox="0 0 8 12"><path d="M0 0 L8 6 L0 12" fill="none" stroke="#10b981" strokeWidth="1.5" strokeOpacity="0.6" /></svg>
+              </div>
+              <div className="md:hidden w-px h-6 bg-emerald-500/40" />
+            </div>
+            {/* Step 3 - DB */}
+            <div className="flex flex-col items-center">
+              <div className="w-40 rounded-2xl border border-gray-700 bg-gray-900 p-4 text-center">
+                <div className="text-2xl mb-2">🗄️</div>
+                <p className="text-xs font-semibold text-white mb-1">Our database</p>
+                <p className="text-xs text-gray-500 font-mono break-all leading-relaxed">a3f92b…:8d41c0…:<br />ff19e4…</p>
+              </div>
+            </div>
+          </div>
+
+          {/* 4 trust pillars */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { icon: '🔑', title: 'AES-256-GCM', desc: 'Recommended by BSI TR-02102-1 for sensitive data' },
+              { icon: '🇪🇺', title: 'GDPR Art. 32', desc: 'Encryption required for personal health data (§9 BDSG)' },
+              { icon: '🎲', title: 'Unique IV per field', desc: 'No two ciphertexts are alike — even for identical values' },
+              { icon: '🚫', title: 'Zero plaintext stored', desc: 'Breach of our DB reveals nothing readable' },
+            ].map(({ icon, title, desc }) => (
+              <div key={title} className="rounded-xl border border-gray-800 bg-gray-900 p-4">
+                <div className="text-xl mb-2">{icon}</div>
+                <p className="text-xs font-bold text-white mb-1">{title}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <Link href="/blog/how-medyra-protects-your-medical-data" className="inline-flex items-center gap-1.5 text-sm text-emerald-400 hover:text-emerald-300 font-medium transition-colors">
+              How does it work technically? Read the deep dive <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* From the blog */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -544,18 +626,18 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-3 gap-4">
             {[
               {
+                href: '/blog/how-medyra-protects-your-medical-data',
+                tag: 'Security · GDPR',
+                title: 'How Medyra Protects Your Medical Data',
+                desc: 'AES-256-GCM encryption, GDPR Art. 32, and why a breach of our database reveals nothing readable.',
+                time: '8 min',
+              },
+              {
                 href: '/blog/how-to-read-lab-results-germany-expat',
                 tag: 'Germany · Expat',
                 title: 'How to Read Your Lab Results in Germany as an Expat',
                 desc: 'Decode your Laborbefund — abbreviations, reference ranges, and what flagged values actually mean.',
                 time: '7 min',
-              },
-              {
-                href: '/blog/what-is-tsh-and-why-does-it-matter',
-                tag: 'Thyroid · TSH',
-                title: 'What Is TSH and Why Does It Matter?',
-                desc: 'TSH is on almost every blood panel. Here is what high or low results actually mean in plain language.',
-                time: '6 min',
               },
               {
                 href: '/blog/understanding-your-blood-test-results',
