@@ -401,7 +401,7 @@ export default function ReportDetailPage({ params }) {
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-6 max-w-4xl pb-32">
+      <div className="container mx-auto px-3 sm:px-4 py-5 sm:py-6 max-w-4xl pb-28 sm:pb-32">
 
         {/* Disclaimer */}
         <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-5 flex gap-2">
@@ -412,7 +412,7 @@ export default function ReportDetailPage({ params }) {
         {/* File name + date */}
         <div className="flex items-center justify-between mb-5">
           <div>
-            <p className="font-semibold text-gray-900 text-sm truncate max-w-xs">{report.fileName}</p>
+            <p className="font-semibold text-gray-900 text-sm truncate max-w-[160px] sm:max-w-xs">{report.fileName}</p>
             <p className="text-xs text-gray-400">{t('report.uploadedOn')} {new Date(report.createdAt).toLocaleString()}</p>
           </div>
           <Link href="/reports">
@@ -432,7 +432,7 @@ export default function ReportDetailPage({ params }) {
           ].map(s => (
             <div key={s.label} className={`rounded-xl border p-3 ${s.bg} ${s.border}`}>
               <div className={`w-2 h-2 rounded-full ${s.dot} mb-2`} />
-              <p className={`text-2xl font-bold ${s.text}`}>{s.count}</p>
+              <p className={`text-xl sm:text-2xl font-bold ${s.text}`}>{s.count}</p>
               <p className={`text-xs font-medium ${s.text} opacity-80`}>{s.label}</p>
             </div>
           ))}
@@ -581,11 +581,23 @@ export default function ReportDetailPage({ params }) {
       </div>
 
       {/* ── FLOATING CHAT ── */}
-      <div className="fixed bottom-6 right-4 z-50 no-print">
+      {/* Mobile overlay backdrop */}
+      {chatOpen && (
+        <div className="fixed inset-0 bg-black/30 z-40 sm:hidden" onClick={() => setChatOpen(false)} />
+      )}
+      <div className={`fixed z-50 no-print transition-all duration-300 ${
+        chatOpen
+          ? 'inset-x-0 bottom-0 sm:inset-x-auto sm:bottom-6 sm:right-4'
+          : 'bottom-6 right-4'
+      }`}>
         {chatOpen ? (
-          <div className="w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col" style={{ height: '440px' }}>
+          <div className="bg-white shadow-2xl border border-gray-200 flex flex-col rounded-t-3xl sm:rounded-2xl w-full sm:w-96" style={{ height: 'min(70vh, 520px)' }}>
+            {/* Mobile drag handle */}
+            <div className="flex justify-center pt-2 pb-1 sm:hidden">
+              <div className="w-10 h-1 bg-gray-300 rounded-full" />
+            </div>
             {/* Chat header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-emerald-50 rounded-t-2xl">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-emerald-50 rounded-t-3xl sm:rounded-t-2xl">
               <div className="flex items-center gap-2 min-w-0">
                 <div className={`w-2 h-2 rounded-full flex-shrink-0 ${chatLimitReached ? 'bg-red-400' : 'bg-emerald-500 animate-pulse'}`} />
                 <div className="min-w-0">
