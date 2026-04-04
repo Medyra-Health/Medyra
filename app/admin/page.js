@@ -71,6 +71,8 @@ export default function AdminPage() {
   const [lastRefresh, setLastRefresh] = useState(null)
   const [encVerify, setEncVerify] = useState(null)
   const [encLoading, setEncLoading] = useState(false)
+  const [migrating, setMigrating] = useState(false)
+  const [migrateResult, setMigrateResult] = useState(null)
 
   const fetchStats = useCallback(async () => {
     try {
@@ -438,14 +440,48 @@ export default function AdminPage() {
           {encVerify && !encVerify.error && (
             <div className="p-6 space-y-4">
               {/* Summary */}
-              <div className={`flex items-center gap-3 p-4 rounded-xl border ${encVerify.status === 'ENCRYPTED' ? 'bg-emerald-50 border-emerald-200' : 'bg-red-50 border-red-200'}`}>
-                <div className={`text-2xl`}>{encVerify.status === 'ENCRYPTED' ? '✅' : '⚠️'}</div>
-                <div>
+              <div className={`flex items-start gap-3 p-4 rounded-xl border ${encVerify.status === 'ENCRYPTED' ? 'bg-emerald-50 border-emerald-200' : 'bg-red-50 border-red-200'}`}>
+                <div className="text-2xl flex-shrink-0">{encVerify.status === 'ENCRYPTED' ? '✅' : '⚠️'}</div>
+                <div className="flex-1 min-w-0">
                   <p className={`font-bold text-sm ${encVerify.status === 'ENCRYPTED' ? 'text-emerald-700' : 'text-red-700'}`}>{encVerify.status}</p>
                   <p className="text-xs text-gray-500 mt-0.5">
                     Encryption key configured: <strong>{encVerify.encryptionKeyConfigured ? 'Yes' : 'NO — add ENCRYPTION_KEY to Vercel env vars!'}</strong>
                     {' · '}{encVerify.totalChecked} reports checked
                   </p>
+                  {encVerify.status !== 'ENCRYPTED' && (
+                    <div className="mt-3 space-y-2">
+                      <p className="text-xs text-red-700 font-medium">
+                        These reports were uploaded before encryption was deployed. Run the one-time migration to encrypt them now.
+                      </p>
+                      {migrateResult && (
+                        <div className={`text-xs px-3 py-2 rounded-lg font-medium ${migrateResult.success ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}>
+                          {migrateResult.message}
+                        </div>
+                      )}
+                      <button
+                        onClick={async () => {
+                          setMigrating(true)
+                          setMigrateResult(null)
+                          try {
+                            const res = await fetch('/api/admin/migrate-encryption', { method: 'POST' })
+                            const json = await res.json()
+                            setMigrateResult(json)
+                            // Re-run verification after migration
+                            if (json.success) {
+                              const vRes = await fetch('/api/admin/verify-encryption')
+                              const vJson = await vRes.json()
+                              setEncVerify(vJson)
+                            }
+                          } catch { setMigrateResult({ success: false, message: 'Request failed' }) }
+                          finally { setMigrating(false) }
+                        }}
+                        disabled={migrating}
+                        className="flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white transition-colors disabled:opacity-50"
+                      >
+                        {migrating ? '⏳ Encrypting…' : '🔐 Encrypt all existing records now'}
+                      </button>
+                    </div>
+                  )}
                 </div>
               </div>
 
