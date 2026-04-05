@@ -77,7 +77,8 @@
           "简单语言解释",
           "正常范围突出显示",
           "基本支持"
-        ]
+        ],
+        "originalPrice": ""
       },
       "onetime": {
         "name": "一次性",
@@ -90,7 +91,8 @@
           "后续问题",
           "PDF导出",
           "优先支持"
-        ]
+        ],
+        "originalPrice": "€4.99"
       },
       "personal": {
         "name": "个人",
@@ -104,7 +106,8 @@
           "后续聊天",
           "PDF导出",
           "电子邮件支持"
-        ]
+        ],
+        "originalPrice": "€18"
       },
       "family": {
         "name": "家庭",
@@ -118,7 +121,8 @@
           "父母/老人护理模式",
           "所有个人功能",
           "家庭仪表板"
-        ]
+        ],
+        "originalPrice": "€38"
       },
       "clinic": {
         "name": "诊所",
@@ -132,9 +136,22 @@
           "自定义品牌",
           "专属支持",
           "API访问"
-        ]
+        ],
+        "originalPrice": ""
       }
-    }
+    },
+    "launchBadge": "5折优惠",
+    "launchNote": "使用代码LAUNCH50享受发布价格",
+    "comingSoon": "即将推出",
+    "goToDashboard": "前往仪表板",
+    "faqTitle": "常见问题",
+    "launchOfferBanner": "🔥 发布优惠 — 所有付费计划享5折优惠",
+    "limitedOffer": "限时发布优惠",
+    "fiftyOff": "5折优惠 — 优惠持续中",
+    "applyCode": "在结账时输入代码。适用于所有付费计划。",
+    "copied": "已复制！",
+    "copyCode": "复制代码",
+    "pasteCode": "将此代码粘贴到Stripe结账页面"
   },
   "legal": {
     "title": "重要法律声明",
@@ -264,5 +281,13 @@
     "analysisFailed": "分析失败。请重试。",
     "unauthorized": "请登录以继续",
     "limitReached": "已达到使用限制。请升级您的计划。"
+  },
+  "success": {
+    "verifyingPayment": "正在验证付款...",
+    "pleaseWait": "请稍候，我们正在确认您的订阅",
+    "paymentSuccessful": "付款成功！",
+    "subscriptionActive": "您的订阅现已激活",
+    "thankYou": "感谢您订阅Medyra。您现在可以开始上传和分析您的医疗报告了。",
+    "uploadFirstReport": "上传您的第一份报告"
   }
 }
