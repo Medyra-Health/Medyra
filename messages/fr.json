@@ -82,9 +82,9 @@
       },
       "onetime": {
         "name": "Unique",
-        "price": "€4,99",
+        "price": "€2.50",
         "period": "/rapport",
-        "desc": "Payez à l'usage",
+        "desc": "Sans engagement, payez par utilisation",
         "cta": "Acheter maintenant",
         "features": [
           "Explication complète",

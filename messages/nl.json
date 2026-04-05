@@ -83,8 +83,8 @@
       },
       "onetime": {
         "name": "Eenmalig",
-        "price": "€2,50",
-        "originalPrice": "€4,99",
+        "price": "€2.50",
+        "originalPrice": "€4.99",
         "period": "/rapport",
         "desc": "Geen abonnement, betaal per gebruik",
         "cta": "Nu kopen",

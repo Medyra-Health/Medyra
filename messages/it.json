@@ -82,9 +82,9 @@
       },
       "onetime": {
         "name": "Una tantum",
-        "price": "€4,99",
+        "price": "€2.50",
         "period": "/referto",
-        "desc": "Paga quando usi",
+        "desc": "Nessun impegno, paga per utilizzo",
         "cta": "Acquista ora",
         "features": [
           "Spiegazione completa",

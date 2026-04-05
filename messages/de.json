@@ -82,9 +82,9 @@
       },
       "onetime": {
         "name": "Einmalig",
-        "price": "€4,99",
+        "price": "€2.50",
         "period": "/Bericht",
-        "desc": "Fuer einen einzelnen Bericht",
+        "desc": "Keine Bindung, zahlen Sie pro Nutzung",
         "cta": "Jetzt kaufen",
         "features": [
           "1 detaillierter Bericht",
@@ -96,7 +96,7 @@
       },
       "personal": {
         "name": "Persoenlich",
-        "price": "€9,99",
+        "price": "€9",
         "period": "/Monat",
         "desc": "Fuer Einzelpersonen",
         "cta": "Jetzt starten",

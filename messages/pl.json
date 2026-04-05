@@ -82,9 +82,9 @@
       },
       "onetime": {
         "name": "Jednorazowy",
-        "price": "€4,99",
+        "price": "€2.50",
         "period": "/raport",
-        "desc": "Płać za użycie",
+        "desc": "Bez zobowiązań, płać za użycie",
         "cta": "Kup teraz",
         "features": [
           "Pełne wyjaśnienie",
