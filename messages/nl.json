@@ -1,16 +1,268 @@
 {
-  "nav": {"home":"Home","dashboard":"Dashboard","upload":"Rapport uploaden","pricing":"Prijzen","signIn":"Inloggen","signOut":"Uitloggen","language":"Taal"},
-  "hero": {"trusted":"AVG-conform · Made in Germany","title":"Uw medisch rapport,","subtitle":"Eindelijk in begrijpelijke taal","description":"Stop met googelen op medische termen. Upload uw uitslagen en ontvang binnen 60 seconden een duidelijke, privéverklaring van onze AI.","cta":"Analyseer mijn eerste rapport gratis","disclaimer":"Alleen educatieve informatie — geen vervanging voor medisch advies.","secondaryCta":"Bekijk prijzen"},
-  "features": {"ai":{"title":"AI-gedreven uitleg","desc":"Geavanceerde AI breekt complexe medische terminologie af tot eenvoudige taal"},"secure":{"title":"GDPR-conform","desc":"Uw gegevens zijn versleuteld en worden automatisch verwijderd na 30 dagen"},"fast":{"title":"Directe resultaten","desc":"Krijg uw rapport uitgelegd in minder dan 60 seconden"}},
-  "howItWorks": {"title":"Hoe het werkt","step1":{"title":"Uploaden","desc":"Upload uw rapport als PDF, afbeelding of tekst"},"step2":{"title":"Extraheren","desc":"OCR extraheert tekst uit uw document"},"step3":{"title":"Uitleggen","desc":"AI analyseert en legt uit in gewone taal"},"step4":{"title":"Vragen","desc":"Stel vervolgvragen over uw resultaten"}},
-  "problem": {"heading":"Klinkt dit bekend?","subheading":"De meeste patiënten begrijpen hun labresultaten niet. Medyra legt elke waarde duidelijk uit.","before":"Uw laboratoriumrapport","after":"Wat het echt betekent"},
-  "pricingCta": {"title":"Eenvoudige, transparante prijzen","subtitle":"Start met een gratis rapport. Geen creditcard vereist. Op elk moment opzegbaar.","cta":"Alle abonnementen bekijken"},
-  "pricing": {"title":"Kies uw abonnement","subtitle":"Begin gratis, upgrade op elk moment","mostPopular":"Meest populair","tiers":{"free":{"name":"Gratis","price":"€0","period":"/mnd","desc":"Perfect om te proberen","cta":"Beginnen","features":["1 rapport per maand","Uitleg in gewone taal","Normaal bereik highlights","Basis ondersteuning"]},"onetime":{"name":"Eenmalig","price":"€4,99","period":"/rapport","desc":"Betaal wanneer u gebruikt","cta":"Nu kopen","features":["Volledige uitleg","Vervolgvragen","PDF export","Prioritaire ondersteuning"]},"personal":{"name":"Persoonlijk","price":"€9","period":"/mnd","desc":"De meest populaire keuze","cta":"Abonneren","features":["Onbeperkte rapporten","Rapportgeschiedenis","Vervolg chat","PDF export","E-mail ondersteuning"]},"family":{"name":"Familie","price":"€19","period":"/mnd","desc":"Voor het hele gezin","cta":"Abonneren","features":["Tot 5 leden","Gedeelde geschiedenis","Ouders/ouderen zorgmodus","Alle Persoonlijk functies","Familie dashboard"]},"clinic":{"name":"Kliniek","price":"€199","period":"/mnd","desc":"White-label voor klinieken","cta":"Verkoop contacteren","features":["Onbeperkte patiënten","EHR integratie","Aangepast merk","Dedicated ondersteuning","API toegang"]}}},
-  "legal": {"title":"Belangrijk juridisch bericht","text":"Dit is een educatief en informatief hulpmiddel, geen medische software. Medyra legt uit wat medische termen betekenen maar biedt geen medisch advies, diagnose of behandelingsaanbevelingen. Raadpleeg altijd uw erkende arts voordat u gezondheidsbeslissingen neemt. Uw gegevens worden behandeld in overeenstemming met de GDPR en automatisch verwijderd na 30 dagen."},
-  "footer": {"tagline": "Understand Your Medical Reports in Plain Language","privacy":"Privacybeleid","terms":"Servicevoorwaarden","contact":"Contact","copyright":"© 2026 Medyra. Gemaakt met liefde in Duitsland."},
-  "upload": {"title":"Medisch rapport uploaden","description":"Upload uw labresultaten in PDF, afbeelding (JPG/PNG) of tekstformaat","dragDrop":"Sleep uw bestand hier naartoe","or":"of klik om te bladeren","camera":"Foto maken","analyzing":"Uw rapport analyseren...","extracting":"Tekst extraheren...","processing":"Verwerken met AI...","formats":"Ondersteund: PDF, JPG, PNG, TXT","maxSize":"Max grootte: 10MB","notice":"Belangrijk bericht","noticeText":"Dit hulpmiddel biedt alleen educatieve informatie en is geen vervanging voor professioneel medisch advies. Raadpleeg altijd uw arts voordat u gezondheidsbeslissingen neemt.","secureProcessing":"Veilige verwerking","secureDesc":"Versleuteld en automatisch verwijderd na 30 dagen","aiPowered":"AI-gedreven","aiDesc":"Geavanceerde Claude AI analyse","gdprCompliant":"GDPR-conform","gdprDesc":"EU gegevensbeschermingsnormen","backToDashboard":"Terug naar dashboard"},
-  "dashboard": {"welcome":"Welkom","yourPlan":"Uw abonnement","usage":"Gebruik","recentReports":"Recente rapporten","noReports":"Nog geen rapporten","uploadFirst":"Upload uw eerste medische rapport om te beginnen","viewAll":"Alles bekijken","stats":"Statistieken","totalReports":"Totaal rapporten","thisMonth":"Deze maand","quickActions":"Snelle acties","uploadNew":"Nieuw rapport uploaden","viewAllReports":"Alle rapporten bekijken","approachingLimit":"Nadert limiet","upgradePlan":"Abonnement upgraden"},
-  "report": {"disclaimer":"Medische disclaimer","disclaimerText":"Dit is educatieve informatie, geen medisch advies. Raadpleeg altijd uw arts.","summary":"Samenvatting","testResults":"Testresultaten","normal":"Normaal","high":"Hoog","low":"Laag","critical":"Kritiek","yourResult":"Uw resultaat","normalRange":"Normaal bereik","whatThisMeans":"Wat uw resultaat betekent","whatThisTests":"Wat deze test meet","questionsForDoctor":"Vragen voor uw arts","discussWithPhysician":"Deze vragen kunnen u helpen dit rapport met uw arts te bespreken","askQuestion":"Vervolgvragen stellen","moreInfo":"Meer informatie over uw resultaten","askPlaceholder":"Stel een vraag over uw resultaten...","you":"U","ai":"AI","sending":"Verzenden...","backToDashboard":"Terug naar dashboard","uploadedOn":"Geüpload op","askQuestions":"Vragen stellen","copy":"Kopieer uitleg","exportPDF":"Exporteer PDF","print":"Afdrukken"},
-  "common": {"loading":"Laden...","error":"Fout","success":"Succes","cancel":"Annuleren","save":"Opslaan","delete":"Verwijderen","edit":"Bewerken","back":"Terug","next":"Volgende","submit":"Verzenden","close":"Sluiten"},
-  "errors": {"fileRequired":"Selecteer een bestand om te uploaden","fileTooLarge":"Bestandsgrootte moet kleiner zijn dan 10MB","unsupportedFormat":"Niet ondersteund bestandsformaat","uploadFailed":"Upload mislukt. Probeer opnieuw.","analysisFailed":"Analyse mislukt. Probeer opnieuw.","unauthorized":"Log in om door te gaan","limitReached":"Gebruikslimiet bereikt. Upgrade uw abonnement."}
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "upload": "Rapport uploaden",
+    "pricing": "Prijzen",
+    "signIn": "Inloggen",
+    "signOut": "Uitloggen",
+    "language": "Taal"
+  },
+  "hero": {
+    "trusted": "AVG-conform · Made in Germany",
+    "title": "Uw medisch rapport,",
+    "subtitle": "Eindelijk in begrijpelijke taal",
+    "description": "Stop met googelen op medische termen. Upload uw uitslagen en ontvang binnen 60 seconden een duidelijke, privéverklaring van onze AI.",
+    "cta": "Analyseer mijn eerste rapport gratis",
+    "disclaimer": "Alleen educatieve informatie — geen vervanging voor medisch advies.",
+    "secondaryCta": "Bekijk prijzen"
+  },
+  "features": {
+    "ai": {
+      "title": "AI-gedreven uitleg",
+      "desc": "Geavanceerde AI breekt complexe medische terminologie af tot eenvoudige taal"
+    },
+    "secure": {
+      "title": "GDPR-conform",
+      "desc": "Uw gegevens zijn versleuteld en worden automatisch verwijderd na 30 dagen"
+    },
+    "fast": {
+      "title": "Directe resultaten",
+      "desc": "Krijg uw rapport uitgelegd in minder dan 60 seconden"
+    }
+  },
+  "howItWorks": {
+    "title": "Hoe het werkt",
+    "step1": {
+      "title": "Uploaden",
+      "desc": "Upload uw rapport als PDF, afbeelding of tekst"
+    },
+    "step2": {
+      "title": "Extraheren",
+      "desc": "OCR extraheert tekst uit uw document"
+    },
+    "step3": {
+      "title": "Uitleggen",
+      "desc": "AI analyseert en legt uit in gewone taal"
+    },
+    "step4": {
+      "title": "Vragen",
+      "desc": "Stel vervolgvragen over uw resultaten"
+    }
+  },
+  "problem": {
+    "heading": "Klinkt dit bekend?",
+    "subheading": "De meeste patiënten begrijpen hun labresultaten niet. Medyra legt elke waarde duidelijk uit.",
+    "before": "Uw laboratoriumrapport",
+    "after": "Wat het echt betekent"
+  },
+  "pricingCta": {
+    "title": "Eenvoudige, transparante prijzen",
+    "subtitle": "Start met een gratis rapport. Geen creditcard vereist. Op elk moment opzegbaar.",
+    "cta": "Alle abonnementen bekijken"
+  },
+  "pricing": {
+    "title": "Kies uw abonnement",
+    "subtitle": "Begin gratis, upgrade op elk moment",
+    "mostPopular": "Meest populair",
+    "tiers": {
+      "free": {
+        "name": "Gratis",
+        "price": "€0",
+        "period": "/mnd",
+        "desc": "Perfect om te proberen",
+        "cta": "Beginnen",
+        "features": [
+          "1 rapport per maand",
+          "Uitleg in gewone taal",
+          "Normaal bereik highlights",
+          "Basis ondersteuning"
+        ]
+      },
+      "onetime": {
+        "name": "Eenmalig",
+        "price": "€4,99",
+        "period": "/rapport",
+        "desc": "Betaal wanneer u gebruikt",
+        "cta": "Nu kopen",
+        "features": [
+          "Volledige uitleg",
+          "Vervolgvragen",
+          "PDF export",
+          "Prioritaire ondersteuning"
+        ]
+      },
+      "personal": {
+        "name": "Persoonlijk",
+        "price": "€9",
+        "period": "/mnd",
+        "desc": "De meest populaire keuze",
+        "cta": "Abonneren",
+        "features": [
+          "Onbeperkte rapporten",
+          "Rapportgeschiedenis",
+          "Vervolg chat",
+          "PDF export",
+          "E-mail ondersteuning"
+        ]
+      },
+      "family": {
+        "name": "Familie",
+        "price": "€19",
+        "period": "/mnd",
+        "desc": "Voor het hele gezin",
+        "cta": "Abonneren",
+        "features": [
+          "Tot 5 leden",
+          "Gedeelde geschiedenis",
+          "Ouders/ouderen zorgmodus",
+          "Alle Persoonlijk functies",
+          "Familie dashboard"
+        ]
+      },
+      "clinic": {
+        "name": "Kliniek",
+        "price": "€199",
+        "period": "/mnd",
+        "desc": "White-label voor klinieken",
+        "cta": "Verkoop contacteren",
+        "features": [
+          "Onbeperkte patiënten",
+          "EHR integratie",
+          "Aangepast merk",
+          "Dedicated ondersteuning",
+          "API toegang"
+        ]
+      }
+    }
+  },
+  "legal": {
+    "title": "Belangrijk juridisch bericht",
+    "text": "Dit is een educatief en informatief hulpmiddel, geen medische software. Medyra legt uit wat medische termen betekenen maar biedt geen medisch advies, diagnose of behandelingsaanbevelingen. Raadpleeg altijd uw erkende arts voordat u gezondheidsbeslissingen neemt. Uw gegevens worden behandeld in overeenstemming met de GDPR en automatisch verwijderd na 30 dagen."
+  },
+  "footer": {
+    "tagline": "Understand Your Medical Reports in Plain Language",
+    "privacy": "Privacybeleid",
+    "terms": "Servicevoorwaarden",
+    "contact": "Contact",
+    "copyright": "© 2026 Medyra. Gemaakt met liefde in Duitsland."
+  },
+  "upload": {
+    "title": "Medisch rapport uploaden",
+    "description": "Upload uw labresultaten in PDF, afbeelding (JPG/PNG) of tekstformaat",
+    "dragDrop": "Sleep uw bestand hier naartoe",
+    "or": "of klik om te bladeren",
+    "camera": "Foto maken",
+    "analyzing": "Uw rapport analyseren...",
+    "extracting": "Tekst extraheren...",
+    "processing": "Verwerken met AI...",
+    "formats": "Ondersteund: PDF, JPG, PNG, TXT",
+    "maxSize": "Max grootte: 10MB",
+    "notice": "Belangrijk bericht",
+    "noticeText": "Dit hulpmiddel biedt alleen educatieve informatie en is geen vervanging voor professioneel medisch advies. Raadpleeg altijd uw arts voordat u gezondheidsbeslissingen neemt.",
+    "secureProcessing": "Veilige verwerking",
+    "secureDesc": "Versleuteld en automatisch verwijderd na 30 dagen",
+    "aiPowered": "AI-gedreven",
+    "aiDesc": "Geavanceerde Claude AI analyse",
+    "gdprCompliant": "GDPR-conform",
+    "gdprDesc": "EU gegevensbeschermingsnormen",
+    "backToDashboard": "Terug naar dashboard",
+    "dropHere": "Zet uw rapport hier neer",
+    "dropActive": "Laat hier los",
+    "orBrowse": "of klik om door bestanden te bladeren",
+    "autoCompressed": "Max 4 MB · Afbeeldingen worden automatisch gecomprimeerd",
+    "encryptedNote": "Versleuteld · na 30 dagen verwijderd",
+    "progressCompress": "Afbeelding optimaliseren…",
+    "progressUpload": "Veilig uploaden…",
+    "progressExtract": "Rapport lezen…",
+    "progressAi": "AI analyseert…",
+    "progressDone": "Bijna klaar…",
+    "progressDuration": "Dit duurt gewoonlijk 20 tot 40 seconden"
+  },
+  "dashboard": {
+    "welcome": "Welkom",
+    "yourPlan": "Uw abonnement",
+    "usage": "Gebruik",
+    "recentReports": "Recente rapporten",
+    "noReports": "Nog geen rapporten",
+    "uploadFirst": "Upload uw eerste medische rapport om te beginnen",
+    "viewAll": "Alles bekijken",
+    "stats": "Statistieken",
+    "totalReports": "Totaal rapporten",
+    "thisMonth": "Deze maand",
+    "quickActions": "Snelle acties",
+    "uploadNew": "Nieuw rapport uploaden",
+    "viewAllReports": "Alle rapporten bekijken",
+    "approachingLimit": "Nadert limiet",
+    "upgradePlan": "Abonnement upgraden",
+    "remaining": "Resterend"
+  },
+  "report": {
+    "disclaimer": "Medische disclaimer",
+    "disclaimerText": "Dit is educatieve informatie, geen medisch advies. Raadpleeg altijd uw arts.",
+    "summary": "Samenvatting",
+    "testResults": "Testresultaten",
+    "normal": "Normaal",
+    "high": "Hoog",
+    "low": "Laag",
+    "critical": "Kritiek",
+    "yourResult": "Uw resultaat",
+    "normalRange": "Normaal bereik",
+    "whatThisMeans": "Wat uw resultaat betekent",
+    "whatThisTests": "Wat deze test meet",
+    "questionsForDoctor": "Vragen voor uw arts",
+    "discussWithPhysician": "Deze vragen kunnen u helpen dit rapport met uw arts te bespreken",
+    "askQuestion": "Vervolgvragen stellen",
+    "moreInfo": "Meer informatie over uw resultaten",
+    "askPlaceholder": "Stel een vraag over uw resultaten...",
+    "you": "U",
+    "ai": "AI",
+    "sending": "Verzenden...",
+    "backToDashboard": "Terug naar dashboard",
+    "uploadedOn": "Geüpload op",
+    "askQuestions": "Vragen stellen",
+    "copy": "Kopieer uitleg",
+    "exportPDF": "Exporteer PDF",
+    "print": "Afdrukken",
+    "resultsDistribution": "Resultaatverdeling",
+    "needAttention": "vereisen aandacht",
+    "allValuesNormal": "Alle waarden normaal",
+    "keyTakeaways": "Kernpunten",
+    "valuesNeedingAttention": "Waarden die uw aandacht vereisen",
+    "greatResults": "Geweldige resultaten — bespreek met uw arts",
+    "allReports": "Alle rapporten",
+    "saveAsPdf": "Opslaan als PDF",
+    "chatGreeting": "Hallo! Ik heb uw rapport gelezen. Vraag me van alles:",
+    "chatQ1": "Vat de belangrijkste bevindingen samen",
+    "chatQ2": "Welke resultaten vereisen dringende aandacht?",
+    "chatQ3": "Wat moet ik mijn arts vragen?",
+    "chatQ4": "Hoe verhouden mijn resultaten zich tot de vorige keer?",
+    "chatPoweredBy": "Aangedreven door Claude · Alleen educatief",
+    "chatLimitReached": "Vraaglimiet bereikt voor dit rapport",
+    "chatLimitInfo": "Gratis: 5 vragen/rapport · Eenmalig: 15 · Personal/Family: onbeperkt",
+    "chatUpgrade": "Upgraden voor onbeperkte chat",
+    "chatPlaceholder": "Stel een vraag over uw resultaten…"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fout",
+    "success": "Succes",
+    "cancel": "Annuleren",
+    "save": "Opslaan",
+    "delete": "Verwijderen",
+    "edit": "Bewerken",
+    "back": "Terug",
+    "next": "Volgende",
+    "submit": "Verzenden",
+    "close": "Sluiten"
+  },
+  "errors": {
+    "fileRequired": "Selecteer een bestand om te uploaden",
+    "fileTooLarge": "Bestandsgrootte moet kleiner zijn dan 10MB",
+    "unsupportedFormat": "Niet ondersteund bestandsformaat",
+    "uploadFailed": "Upload mislukt. Probeer opnieuw.",
+    "analysisFailed": "Analyse mislukt. Probeer opnieuw.",
+    "unauthorized": "Log in om door te gaan",
+    "limitReached": "Gebruikslimiet bereikt. Upgrade uw abonnement."
+  }
 }

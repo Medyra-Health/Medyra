@@ -1,16 +1,277 @@
 {
-  "nav": { "home": "Home", "dashboard": "Dashboard", "upload": "Upload Report", "pricing": "Pricing", "signIn": "Sign In", "signOut": "Sign Out", "language": "Language" },
-  "hero": { "trusted": "GDPR Compliant · Made in Germany", "title": "Understand Your Medical Report", "subtitle": "in Plain Language", "description": "Stop Googling medical terms at 2am. Upload your lab results and get a clear, private AI powered explanation in under 60 seconds.", "cta": "Analyze My First Report Free", "secondaryCta": "View Pricing", "disclaimer": "Educational information only — not a substitute for medical advice." },
-  "problem": { "heading": "Does this look familiar?", "subheading": "Most patients receive lab results they can't understand. Medyra translates every value into plain language — instantly.", "before": "Your lab report", "after": "What Medyra tells you" },
-  "features": { "ai": { "title": "Plain Language, Not Jargon", "desc": "Advanced AI turns complex medical terminology into clear, simple explanations anyone can understand" }, "secure": { "title": "Private & GDPR Compliant", "desc": "Your data is encrypted, never shared, and automatically deleted after 30 days" }, "fast": { "title": "Results in 60 Seconds", "desc": "Upload your report and receive a full explanation before you finish your coffee" } },
-  "howItWorks": { "title": "How It Works", "step1": { "title": "Upload", "desc": "Upload your PDF, image, or text report" }, "step2": { "title": "Extract", "desc": "OCR extracts text from your document" }, "step3": { "title": "Explain", "desc": "AI analyzes and explains in plain language" }, "step4": { "title": "Ask", "desc": "Follow up with questions about your results" } },
-  "pricingCta": { "title": "Simple, transparent pricing", "subtitle": "Start with a free report. No credit card required. Cancel anytime.", "cta": "See All Plans" },
-  "pricing": { "title": "Choose Your Plan", "subtitle": "Launch offer active — 50% off all paid plans", "mostPopular": "Most Popular", "launchBadge": "50% OFF", "launchNote": "Launch price with code LAUNCH50", "tiers": { "free": { "name": "Free", "price": "€0", "originalPrice": "", "period": "forever", "desc": "Start exploring with no commitment", "cta": "Get Started Free", "features": ["First 3 reports free", "5 AI questions per report", "Plain language explanation", "Flagged abnormal values", "No credit card needed"] }, "onetime": { "name": "One-Time", "price": "€2.50", "originalPrice": "€4.99", "period": "/report", "desc": "No commitment, pay per use", "cta": "Buy Now", "features": ["Full AI explanation", "15 AI questions per report", "PDF export", "Priority support"] }, "personal": { "name": "Personal", "price": "€9", "originalPrice": "€18", "period": "/mo", "desc": "For individuals who track their health", "cta": "Claim Offer", "features": ["Unlimited reports", "50 AI questions per report", "Full report history", "PDF export", "Email support"] }, "family": { "name": "Family", "price": "€19", "originalPrice": "€38", "period": "/mo", "desc": "For families managing health together", "cta": "Claim Offer", "features": ["Unlimited reports", "100 AI questions per report", "Full report history", "PDF export", "Priority support"] }, "clinic": { "name": "Clinic", "price": "€199", "originalPrice": "", "period": "/mo", "desc": "White-label solution for clinics", "cta": "Contact Sales", "features": ["Unlimited patients", "100 AI questions per report", "Custom branding", "Dedicated support", "EHR integration (coming soon)", "API access (coming soon)"] } } },
-  "legal": { "title": "Important Legal Notice", "text": "Medyra is an educational tool that explains medical terminology — it does not provide medical advice, diagnoses, or treatment recommendations. Always consult your licensed physician before making any health decisions. Your data is handled in compliance with GDPR and automatically deleted after 30 days." },
-  "footer": { "tagline": "Understand Your Medical Reports in Plain Language", "privacy": "Privacy Policy", "terms": "Terms of Service", "contact": "Contact", "copyright": "© 2026 Medyra. Made with care in Germany." },
-  "upload": { "title": "Upload Medical Report", "description": "Upload your lab results in PDF, image (JPG/PNG), or text format", "dragDrop": "Drag and drop your file here", "or": "or click to browse", "camera": "Take Photo", "analyzing": "Analyzing your report...", "extracting": "Extracting text...", "processing": "Processing with AI...", "formats": "Supported: PDF, JPG, PNG, TXT", "maxSize": "Max size: 10MB", "notice": "Important Notice", "noticeText": "This tool provides educational information only and is not a substitute for professional medical advice. Always consult your doctor before making any health decisions.", "secureProcessing": "Secure Processing", "secureDesc": "Encrypted and deleted after 30 days", "aiPowered": "AI Powered", "aiDesc": "Advanced Claude AI analysis", "gdprCompliant": "GDPR Compliant", "gdprDesc": "EU data protection standards", "backToDashboard": "Back to Dashboard" },
-  "dashboard": { "welcome": "Welcome", "yourPlan": "Your Plan", "usage": "Usage", "recentReports": "Recent Reports", "noReports": "No reports yet", "uploadFirst": "Upload your first medical report to get started", "viewAll": "View All", "stats": "Statistics", "totalReports": "Total Reports", "thisMonth": "This Month", "quickActions": "Quick Actions", "uploadNew": "Upload New Report", "viewAllReports": "View All Reports", "approachingLimit": "Approaching usage limit", "upgradePlan": "Upgrade Plan" },
-  "report": { "disclaimer": "Medical Disclaimer", "disclaimerText": "This is educational information, not medical advice. Always consult your doctor.", "summary": "Summary", "testResults": "Test Results", "normal": "Normal", "high": "High", "low": "Low", "critical": "Critical", "yourResult": "Your result", "normalRange": "Normal range", "whatThisMeans": "What your result means", "whatThisTests": "What this test measures", "questionsForDoctor": "Questions to Ask Your Doctor", "discussWithPhysician": "These questions can help you discuss this report with your physician", "askQuestion": "Ask Follow Up Questions", "moreInfo": "Get more information about your results", "askPlaceholder": "Ask a question about your results...", "you": "You", "ai": "AI", "sending": "Sending...", "backToDashboard": "Back to Dashboard", "uploadedOn": "Uploaded on", "askQuestions": "Ask Questions", "copy": "Copy explanation", "exportPDF": "Export PDF", "print": "Print" },
-  "common": { "loading": "Loading...", "error": "Error", "success": "Success", "cancel": "Cancel", "save": "Save", "delete": "Delete", "edit": "Edit", "back": "Back", "next": "Next", "submit": "Submit", "close": "Close" },
-  "errors": { "fileRequired": "Please select a file to upload", "fileTooLarge": "File size must be less than 10MB", "unsupportedFormat": "Unsupported file format", "uploadFailed": "Upload failed. Please try again.", "analysisFailed": "Analysis failed. Please try again.", "unauthorized": "Please sign in to continue", "limitReached": "Usage limit reached. Please upgrade your plan." }
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "upload": "Upload Report",
+    "pricing": "Pricing",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "language": "Language"
+  },
+  "hero": {
+    "trusted": "GDPR Compliant · Made in Germany",
+    "title": "Understand Your Medical Report",
+    "subtitle": "in Plain Language",
+    "description": "Stop Googling medical terms at 2am. Upload your lab results and get a clear, private AI powered explanation in under 60 seconds.",
+    "cta": "Analyze My First Report Free",
+    "secondaryCta": "View Pricing",
+    "disclaimer": "Educational information only — not a substitute for medical advice."
+  },
+  "problem": {
+    "heading": "Does this look familiar?",
+    "subheading": "Most patients receive lab results they can't understand. Medyra translates every value into plain language — instantly.",
+    "before": "Your lab report",
+    "after": "What Medyra tells you"
+  },
+  "features": {
+    "ai": {
+      "title": "Plain Language, Not Jargon",
+      "desc": "Advanced AI turns complex medical terminology into clear, simple explanations anyone can understand"
+    },
+    "secure": {
+      "title": "Private & GDPR Compliant",
+      "desc": "Your data is encrypted, never shared, and automatically deleted after 30 days"
+    },
+    "fast": {
+      "title": "Results in 60 Seconds",
+      "desc": "Upload your report and receive a full explanation before you finish your coffee"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "step1": {
+      "title": "Upload",
+      "desc": "Upload your PDF, image, or text report"
+    },
+    "step2": {
+      "title": "Extract",
+      "desc": "OCR extracts text from your document"
+    },
+    "step3": {
+      "title": "Explain",
+      "desc": "AI analyzes and explains in plain language"
+    },
+    "step4": {
+      "title": "Ask",
+      "desc": "Follow up with questions about your results"
+    }
+  },
+  "pricingCta": {
+    "title": "Simple, transparent pricing",
+    "subtitle": "Start with a free report. No credit card required. Cancel anytime.",
+    "cta": "See All Plans"
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "subtitle": "Launch offer active — 50% off all paid plans",
+    "mostPopular": "Most Popular",
+    "launchBadge": "50% OFF",
+    "launchNote": "Launch price with code LAUNCH50",
+    "tiers": {
+      "free": {
+        "name": "Free",
+        "price": "€0",
+        "originalPrice": "",
+        "period": "forever",
+        "desc": "Start exploring with no commitment",
+        "cta": "Get Started Free",
+        "features": [
+          "First 3 reports free",
+          "5 AI questions per report",
+          "Plain language explanation",
+          "Flagged abnormal values",
+          "No credit card needed"
+        ]
+      },
+      "onetime": {
+        "name": "One-Time",
+        "price": "€2.50",
+        "originalPrice": "€4.99",
+        "period": "/report",
+        "desc": "No commitment, pay per use",
+        "cta": "Buy Now",
+        "features": [
+          "Full AI explanation",
+          "15 AI questions per report",
+          "PDF export",
+          "Priority support"
+        ]
+      },
+      "personal": {
+        "name": "Personal",
+        "price": "€9",
+        "originalPrice": "€18",
+        "period": "/mo",
+        "desc": "For individuals who track their health",
+        "cta": "Claim Offer",
+        "features": [
+          "Unlimited reports",
+          "50 AI questions per report",
+          "Full report history",
+          "PDF export",
+          "Email support"
+        ]
+      },
+      "family": {
+        "name": "Family",
+        "price": "€19",
+        "originalPrice": "€38",
+        "period": "/mo",
+        "desc": "For families managing health together",
+        "cta": "Claim Offer",
+        "features": [
+          "Unlimited reports",
+          "100 AI questions per report",
+          "Full report history",
+          "PDF export",
+          "Priority support"
+        ]
+      },
+      "clinic": {
+        "name": "Clinic",
+        "price": "€199",
+        "originalPrice": "",
+        "period": "/mo",
+        "desc": "White-label solution for clinics",
+        "cta": "Contact Sales",
+        "features": [
+          "Unlimited patients",
+          "100 AI questions per report",
+          "Custom branding",
+          "Dedicated support",
+          "EHR integration (coming soon)",
+          "API access (coming soon)"
+        ]
+      }
+    }
+  },
+  "legal": {
+    "title": "Important Legal Notice",
+    "text": "Medyra is an educational tool that explains medical terminology — it does not provide medical advice, diagnoses, or treatment recommendations. Always consult your licensed physician before making any health decisions. Your data is handled in compliance with GDPR and automatically deleted after 30 days."
+  },
+  "footer": {
+    "tagline": "Understand Your Medical Reports in Plain Language",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "copyright": "© 2026 Medyra. Made with care in Germany."
+  },
+  "upload": {
+    "title": "Upload Medical Report",
+    "description": "Upload your lab results in PDF, image (JPG/PNG), or text format",
+    "dragDrop": "Drag and drop your file here",
+    "or": "or click to browse",
+    "camera": "Take Photo",
+    "analyzing": "Analyzing your report...",
+    "extracting": "Extracting text...",
+    "processing": "Processing with AI...",
+    "formats": "Supported: PDF, JPG, PNG, TXT",
+    "maxSize": "Max size: 10MB",
+    "notice": "Important Notice",
+    "noticeText": "This tool provides educational information only and is not a substitute for professional medical advice. Always consult your doctor before making any health decisions.",
+    "secureProcessing": "Secure Processing",
+    "secureDesc": "Encrypted and deleted after 30 days",
+    "aiPowered": "AI Powered",
+    "aiDesc": "Advanced Claude AI analysis",
+    "gdprCompliant": "GDPR Compliant",
+    "gdprDesc": "EU data protection standards",
+    "backToDashboard": "Back to Dashboard",
+    "dropHere": "Drop your report here",
+    "dropActive": "Drop it here",
+    "orBrowse": "or click to browse files",
+    "autoCompressed": "Max 4 MB · Images are compressed automatically",
+    "encryptedNote": "Encrypted · deleted after 30 days",
+    "progressCompress": "Optimising image…",
+    "progressUpload": "Uploading securely…",
+    "progressExtract": "Reading your report…",
+    "progressAi": "AI is analysing…",
+    "progressDone": "Almost ready…",
+    "progressDuration": "This usually takes 20 to 40 seconds"
+  },
+  "dashboard": {
+    "welcome": "Welcome",
+    "yourPlan": "Your Plan",
+    "usage": "Usage",
+    "recentReports": "Recent Reports",
+    "noReports": "No reports yet",
+    "uploadFirst": "Upload your first medical report to get started",
+    "viewAll": "View All",
+    "stats": "Statistics",
+    "totalReports": "Total Reports",
+    "thisMonth": "This Month",
+    "quickActions": "Quick Actions",
+    "uploadNew": "Upload New Report",
+    "viewAllReports": "View All Reports",
+    "approachingLimit": "Approaching usage limit",
+    "upgradePlan": "Upgrade Plan",
+    "remaining": "Remaining"
+  },
+  "report": {
+    "disclaimer": "Medical Disclaimer",
+    "disclaimerText": "This is educational information, not medical advice. Always consult your doctor.",
+    "summary": "Summary",
+    "testResults": "Test Results",
+    "normal": "Normal",
+    "high": "High",
+    "low": "Low",
+    "critical": "Critical",
+    "yourResult": "Your result",
+    "normalRange": "Normal range",
+    "whatThisMeans": "What your result means",
+    "whatThisTests": "What this test measures",
+    "questionsForDoctor": "Questions to Ask Your Doctor",
+    "discussWithPhysician": "These questions can help you discuss this report with your physician",
+    "askQuestion": "Ask Follow Up Questions",
+    "moreInfo": "Get more information about your results",
+    "askPlaceholder": "Ask a question about your results...",
+    "you": "You",
+    "ai": "AI",
+    "sending": "Sending...",
+    "backToDashboard": "Back to Dashboard",
+    "uploadedOn": "Uploaded on",
+    "askQuestions": "Ask Questions",
+    "copy": "Copy explanation",
+    "exportPDF": "Export PDF",
+    "print": "Print",
+    "resultsDistribution": "Results Distribution",
+    "needAttention": "need attention",
+    "allValuesNormal": "All values normal",
+    "keyTakeaways": "Key Takeaways",
+    "valuesNeedingAttention": "Values that need your attention",
+    "greatResults": "Great results — discuss with your doctor",
+    "allReports": "All Reports",
+    "saveAsPdf": "Save as PDF",
+    "chatGreeting": "Hi! I've read your report. Ask me anything:",
+    "chatQ1": "Summarise the most important findings for me",
+    "chatQ2": "Which results need urgent attention?",
+    "chatQ3": "What should I ask my doctor?",
+    "chatQ4": "How do my results compare to last time?",
+    "chatPoweredBy": "Powered by Claude · Educational only",
+    "chatLimitReached": "Question limit reached for this report",
+    "chatLimitInfo": "Free: 5 questions/report · One-Time: 15 · Personal/Family: unlimited",
+    "chatUpgrade": "Upgrade for unlimited chat",
+    "chatPlaceholder": "Ask about your results…"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "close": "Close"
+  },
+  "errors": {
+    "fileRequired": "Please select a file to upload",
+    "fileTooLarge": "File size must be less than 10MB",
+    "unsupportedFormat": "Unsupported file format",
+    "uploadFailed": "Upload failed. Please try again.",
+    "analysisFailed": "Analysis failed. Please try again.",
+    "unauthorized": "Please sign in to continue",
+    "limitReached": "Usage limit reached. Please upgrade your plan."
+  }
 }
