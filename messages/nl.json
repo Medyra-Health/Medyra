@@ -77,7 +77,8 @@
           "Uitleg in gewone taal",
           "Normaal bereik highlights",
           "Basis ondersteuning"
-        ]
+        ],
+        "originalPrice": ""
       },
       "onetime": {
         "name": "Eenmalig",
@@ -90,7 +91,8 @@
           "Vervolgvragen",
           "PDF export",
           "Prioritaire ondersteuning"
-        ]
+        ],
+        "originalPrice": "€4.99"
       },
       "personal": {
         "name": "Persoonlijk",
@@ -104,7 +106,8 @@
           "Vervolg chat",
           "PDF export",
           "E-mail ondersteuning"
-        ]
+        ],
+        "originalPrice": "€18"
       },
       "family": {
         "name": "Familie",
@@ -118,7 +121,8 @@
           "Ouders/ouderen zorgmodus",
           "Alle Persoonlijk functies",
           "Familie dashboard"
-        ]
+        ],
+        "originalPrice": "€38"
       },
       "clinic": {
         "name": "Kliniek",
@@ -132,9 +136,22 @@
           "Aangepast merk",
           "Dedicated ondersteuning",
           "API toegang"
-        ]
+        ],
+        "originalPrice": ""
       }
-    }
+    },
+    "launchBadge": "50% KORTING",
+    "launchNote": "Introductieprijs met code LAUNCH50",
+    "comingSoon": "Binnenkort",
+    "goToDashboard": "Naar dashboard",
+    "faqTitle": "Veelgestelde vragen",
+    "launchOfferBanner": "🔥 Lanceringaanbieding — 50% korting op alle betaalde plannen",
+    "limitedOffer": "Beperkte lanceringaanbieding",
+    "fiftyOff": "50% korting — zolang het duurt",
+    "applyCode": "Voer de code in bij het afrekenen. Geldig voor alle betaalde plannen.",
+    "copied": "Gekopieerd!",
+    "copyCode": "Code kopiëren",
+    "pasteCode": "Plak deze code op de Stripe-betaalpagina"
   },
   "legal": {
     "title": "Belangrijk juridisch bericht",
@@ -264,5 +281,13 @@
     "analysisFailed": "Analyse mislukt. Probeer opnieuw.",
     "unauthorized": "Log in om door te gaan",
     "limitReached": "Gebruikslimiet bereikt. Upgrade uw abonnement."
+  },
+  "success": {
+    "verifyingPayment": "Betaling verifiëren...",
+    "pleaseWait": "Even geduld terwijl we uw abonnement bevestigen",
+    "paymentSuccessful": "Betaling geslaagd!",
+    "subscriptionActive": "Uw abonnement is nu actief",
+    "thankYou": "Bedankt voor uw abonnement op Medyra. U kunt nu beginnen met het uploaden en analyseren van uw medische rapporten.",
+    "uploadFirstReport": "Upload uw eerste rapport"
   }
 }

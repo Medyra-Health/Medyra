@@ -77,7 +77,8 @@
           "쉬운 언어 설명",
           "정상 범위 강조",
           "기본 지원"
-        ]
+        ],
+        "originalPrice": ""
       },
       "onetime": {
         "name": "일회성",
@@ -90,7 +91,8 @@
           "후속 질문",
           "PDF 내보내기",
           "우선 지원"
-        ]
+        ],
+        "originalPrice": "€4.99"
       },
       "personal": {
         "name": "개인",
@@ -104,7 +106,8 @@
           "후속 채팅",
           "PDF 내보내기",
           "이메일 지원"
-        ]
+        ],
+        "originalPrice": "€18"
       },
       "family": {
         "name": "가족",
@@ -118,7 +121,8 @@
           "부모/노인 돌봄 모드",
           "모든 개인 기능",
           "가족 대시보드"
-        ]
+        ],
+        "originalPrice": "€38"
       },
       "clinic": {
         "name": "클리닉",
@@ -132,9 +136,22 @@
           "맞춤 브랜드",
           "전담 지원",
           "API 접근"
-        ]
+        ],
+        "originalPrice": ""
       }
-    }
+    },
+    "launchBadge": "50% 할인",
+    "launchNote": "코드 LAUNCH50으로 출시 가격",
+    "comingSoon": "곧 출시",
+    "goToDashboard": "대시보드로 이동",
+    "faqTitle": "자주 묻는 질문",
+    "launchOfferBanner": "🔥 출시 특가 — 모든 유료 플랜 50% 할인",
+    "limitedOffer": "한정 출시 특가",
+    "fiftyOff": "50% 할인 — 기간 한정",
+    "applyCode": "결제 시 코드를 입력하세요. 모든 유료 플랜에 적용됩니다.",
+    "copied": "복사되었습니다!",
+    "copyCode": "코드 복사",
+    "pasteCode": "Stripe 결제 페이지에 이 코드를 붙여넣으세요"
   },
   "legal": {
     "title": "중요한 법적 고지",
@@ -264,5 +281,13 @@
     "analysisFailed": "분석 실패. 다시 시도하세요.",
     "unauthorized": "계속하려면 로그인하세요",
     "limitReached": "사용 한도 도달. 플랜을 업그레이드하세요."
+  },
+  "success": {
+    "verifyingPayment": "결제 확인 중...",
+    "pleaseWait": "구독을 확인하는 동안 잠시 기다려 주세요",
+    "paymentSuccessful": "결제 성공!",
+    "subscriptionActive": "구독이 활성화되었습니다",
+    "thankYou": "Medyra에 구독해 주셔서 감사합니다. 이제 의료 보고서를 업로드하고 분석할 수 있습니다.",
+    "uploadFirstReport": "첫 번째 보고서 업로드"
   }
 }
