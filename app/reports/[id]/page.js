@@ -385,7 +385,7 @@ export default function ReportDetailPage({ params }) {
                 className="flex text-gray-700 hover:text-gray-900 gap-1.5"
               >
                 <Download className="h-3.5 w-3.5" />
-                <span className="hidden xs:inline sm:inline">{exporting ? 'Saving...' : 'Save as PDF'}</span>
+                <span className="hidden xs:inline sm:inline">{exporting ? t('common.loading') : t('report.saveAsPdf')}</span>
                 <span className="sm:hidden">{exporting ? '...' : 'PDF'}</span>
               </Button>
               <Link href="/dashboard">
@@ -417,7 +417,7 @@ export default function ReportDetailPage({ params }) {
           </div>
           <Link href="/reports">
             <Button variant="outline" size="sm" className="text-xs hidden sm:flex gap-1">
-              <Activity className="h-3 w-3" /> All Reports
+              <Activity className="h-3 w-3" /> {t('report.allReports')}
             </Button>
           </Link>
         </div>
@@ -425,15 +425,15 @@ export default function ReportDetailPage({ params }) {
         {/* ── HEALTH OVERVIEW ── */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
           {[
-            { label: 'Normal', count: counts.normal, bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-700', dot: 'bg-emerald-500' },
-            { label: 'Low', count: counts.low, bg: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-700', dot: 'bg-yellow-500' },
-            { label: 'High', count: counts.high, bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700', dot: 'bg-orange-500' },
-            { label: 'Critical', count: counts.critical, bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-700', dot: 'bg-red-500' },
+            { flag: 'normal', count: counts.normal, bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-700', dot: 'bg-emerald-500' },
+            { flag: 'low', count: counts.low, bg: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-700', dot: 'bg-yellow-500' },
+            { flag: 'high', count: counts.high, bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700', dot: 'bg-orange-500' },
+            { flag: 'critical', count: counts.critical, bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-700', dot: 'bg-red-500' },
           ].map(s => (
-            <div key={s.label} className={`rounded-xl border p-3 ${s.bg} ${s.border}`}>
+            <div key={s.flag} className={`rounded-xl border p-3 ${s.bg} ${s.border}`}>
               <div className={`w-2 h-2 rounded-full ${s.dot} mb-2`} />
               <p className={`text-xl sm:text-2xl font-bold ${s.text}`}>{s.count}</p>
-              <p className={`text-xs font-medium ${s.text} opacity-80`}>{s.label}</p>
+              <p className={`text-xs font-medium ${s.text} opacity-80`}>{getFlagLabel(s.flag)}</p>
             </div>
           ))}
         </div>
@@ -444,8 +444,8 @@ export default function ReportDetailPage({ params }) {
             {/* Pie chart */}
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm">Results Distribution</CardTitle>
-                <CardDescription className="text-xs">{total} tests · {abnormal > 0 ? `${abnormal} need attention` : 'All values normal'}</CardDescription>
+                <CardTitle className="text-sm">{t('report.resultsDistribution')}</CardTitle>
+                <CardDescription className="text-xs">{total} tests · {abnormal > 0 ? `${abnormal} ${t('report.needAttention')}` : t('report.allValuesNormal')}</CardDescription>
               </CardHeader>
               <CardContent className="pb-3">
                 <div className="h-40">
@@ -474,15 +474,15 @@ export default function ReportDetailPage({ params }) {
             {/* Key action items */}
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm flex items-center gap-1.5"><Zap className="h-4 w-4 text-orange-500" /> Key Takeaways</CardTitle>
-                <CardDescription className="text-xs">Values that need your attention</CardDescription>
+                <CardTitle className="text-sm flex items-center gap-1.5"><Zap className="h-4 w-4 text-orange-500" /> {t('report.keyTakeaways')}</CardTitle>
+                <CardDescription className="text-xs">{t('report.valuesNeedingAttention')}</CardDescription>
               </CardHeader>
               <CardContent className="pb-3">
                 {actionItems.length === 0 ? (
                   <div className="flex flex-col items-center justify-center h-28 text-center">
                     <CheckCircle className="h-8 w-8 text-emerald-500 mb-2" />
-                    <p className="text-sm font-semibold text-emerald-700">All values normal</p>
-                    <p className="text-xs text-gray-400">Great results — discuss with your doctor</p>
+                    <p className="text-sm font-semibold text-emerald-700">{t('report.allValuesNormal')}</p>
+                    <p className="text-xs text-gray-400">{t('report.greatResults')}</p>
                   </div>
                 ) : (
                   <div className="space-y-2">
@@ -602,7 +602,7 @@ export default function ReportDetailPage({ params }) {
                 <div className={`w-2 h-2 rounded-full flex-shrink-0 ${chatLimitReached ? 'bg-red-400' : 'bg-emerald-500 animate-pulse'}`} />
                 <div className="min-w-0">
                   <p className="font-semibold text-sm text-gray-800 leading-none">Medyra AI</p>
-                  <p className="text-xs text-gray-400 leading-none mt-0.5">Powered by Claude · Educational only</p>
+                  <p className="text-xs text-gray-400 leading-none mt-0.5">{t('report.chatPoweredBy')}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 flex-shrink-0">
@@ -628,13 +628,13 @@ export default function ReportDetailPage({ params }) {
             <div className="flex-1 overflow-y-auto p-3 space-y-3">
               {chatHistory.length === 0 && (
                 <div className="py-4">
-                  <p className="text-xs text-gray-400 text-center mb-3">Hi! I've read your report. Ask me anything:</p>
+                  <p className="text-xs text-gray-400 text-center mb-3">{t('report.chatGreeting')}</p>
                   <div className="space-y-1.5">
                     {[
-                      'Summarise the most important findings for me',
-                      'Which results need urgent attention?',
-                      'What should I ask my doctor?',
-                      'How do my results compare to last time?',
+                      t('report.chatQ1'),
+                      t('report.chatQ2'),
+                      t('report.chatQ3'),
+                      t('report.chatQ4'),
                     ].map(q => (
                       <button
                         key={q}
@@ -679,18 +679,18 @@ export default function ReportDetailPage({ params }) {
             {/* Input / limit reached */}
             {chatLimitReached ? (
               <div className="p-3 border-t border-gray-100 text-center">
-                <p className="text-xs text-red-600 font-medium mb-1.5">Question limit reached for this report</p>
+                <p className="text-xs text-red-600 font-medium mb-1.5">{t('report.chatLimitReached')}</p>
                 <p className="text-xs text-gray-400 mb-2">
-                  Free plan: 5 questions/report · One-Time: 15 · Personal/Family: unlimited
+                  {t('report.chatLimitInfo')}
                 </p>
                 <a href="/pricing" className="inline-block text-xs bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-4 py-1.5 rounded-full transition-colors">
-                  Upgrade for unlimited chat →
+                  {t('report.chatUpgrade')} →
                 </a>
               </div>
             ) : (
               <div className="p-3 border-t border-gray-100 flex gap-2">
                 <Input
-                  placeholder="Ask about your results…"
+                  placeholder={t('report.chatPlaceholder')}
                   value={question}
                   onChange={e => setQuestion(e.target.value)}
                   onKeyDown={e => e.key === 'Enter' && !e.shiftKey && sendQuestion()}
