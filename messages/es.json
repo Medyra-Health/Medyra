@@ -82,9 +82,9 @@
       },
       "onetime": {
         "name": "Pago único",
-        "price": "€4,99",
+        "price": "€2.50",
         "period": "/informe",
-        "desc": "Paga según uses",
+        "desc": "Sin compromiso, paga por uso",
         "cta": "Comprar ahora",
         "features": [
           "Explicación completa",
