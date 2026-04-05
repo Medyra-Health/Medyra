@@ -26,7 +26,7 @@ const LANGUAGES = [
   { code: 'PK', name: 'اردو' },
   { code: 'BD', name: 'বাংলা' },
   { code: 'IT', name: 'Italiano' },
-  { code: 'NL', name: 'Nederlands' },
+  { code: 'NL', name: 'Dutch' },
   { code: 'PL', name: 'Polski' },
   { code: 'KR', name: '한국어' },
   { code: 'SE', name: 'Svenska' },
