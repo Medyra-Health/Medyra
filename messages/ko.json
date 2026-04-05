@@ -151,7 +151,11 @@
     "applyCode": "결제 시 코드를 입력하세요. 모든 유료 플랜에 적용됩니다.",
     "copied": "복사되었습니다!",
     "copyCode": "코드 복사",
-    "pasteCode": "Stripe 결제 페이지에 이 코드를 붙여넣으세요"
+    "pasteCode": "Stripe 결제 페이지에 이 코드를 붙여넣으세요",
+    "gdprCompliant": "GDPR 준수",
+    "cancelAnytime": "언제든지 취소 가능",
+    "noHiddenFees": "숨겨진 비용 없음",
+    "dataDeleted": "30일 후 데이터 삭제"
   },
   "legal": {
     "title": "중요한 법적 고지",
