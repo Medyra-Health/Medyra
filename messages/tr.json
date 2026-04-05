@@ -82,9 +82,9 @@
       },
       "onetime": {
         "name": "Tek seferlik",
-        "price": "€4,99",
+        "price": "€2.50",
         "period": "/rapor",
-        "desc": "Kullandıkça öde",
+        "desc": "Taahhüt yok, kullandıkça öde",
         "cta": "Şimdi satın al",
         "features": [
           "Tam açıklama",
