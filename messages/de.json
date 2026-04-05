@@ -151,7 +151,11 @@
     "applyCode": "Code an der Kasse eingeben. Gilt für alle bezahlten Pläne.",
     "copied": "Kopiert!",
     "copyCode": "Code kopieren",
-    "pasteCode": "Diesen Code an der Stripe-Kassenseite einfügen"
+    "pasteCode": "Diesen Code an der Stripe-Kassenseite einfügen",
+    "gdprCompliant": "DSGVO-konform",
+    "cancelAnytime": "Jederzeit kündbar",
+    "noHiddenFees": "Keine versteckten Gebühren",
+    "dataDeleted": "Daten nach 30 Tagen gelöscht"
   },
   "legal": {
     "title": "Rechtlicher Hinweis",

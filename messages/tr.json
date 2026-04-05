@@ -151,7 +151,11 @@
     "applyCode": "Ödeme sırasında kodu girin. Tüm ücretli planlar için geçerli.",
     "copied": "Kopyalandı!",
     "copyCode": "Kodu kopyala",
-    "pasteCode": "Bu kodu Stripe ödeme sayfasına yapıştırın"
+    "pasteCode": "Bu kodu Stripe ödeme sayfasına yapıştırın",
+    "gdprCompliant": "GDPR Uyumlu",
+    "cancelAnytime": "İstediğiniz zaman iptal",
+    "noHiddenFees": "Gizli ücret yok",
+    "dataDeleted": "30 gün sonra veriler siliniyor"
   },
   "legal": {
     "title": "Önemli hukuki bildirim",

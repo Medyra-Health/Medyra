@@ -151,7 +151,11 @@
     "applyCode": "Applica il codice al checkout. Valido su tutti i piani a pagamento.",
     "copied": "Copiato!",
     "copyCode": "Copia codice",
-    "pasteCode": "Incolla questo codice nella pagina di pagamento Stripe"
+    "pasteCode": "Incolla questo codice nella pagina di pagamento Stripe",
+    "gdprCompliant": "Conforme al GDPR",
+    "cancelAnytime": "Cancella quando vuoi",
+    "noHiddenFees": "Nessun costo nascosto",
+    "dataDeleted": "Dati eliminati dopo 30 giorni"
   },
   "legal": {
     "title": "Avviso legale importante",

@@ -153,7 +153,11 @@
     "applyCode": "چیک آؤٹ پر کوڈ لگائیں۔ تمام ادائیگی پلانز پر لاگو۔",
     "copied": "کاپی ہو گیا!",
     "copyCode": "کوڈ کاپی کریں",
-    "pasteCode": "یہ کوڈ Stripe چیک آؤٹ پیج پر پیسٹ کریں"
+    "pasteCode": "یہ کوڈ Stripe چیک آؤٹ پیج پر پیسٹ کریں",
+    "gdprCompliant": "GDPR مطابق",
+    "cancelAnytime": "کسی بھی وقت منسوخ",
+    "noHiddenFees": "کوئی چھپی فیس نہیں",
+    "dataDeleted": "30 دن بعد ڈیٹا حذف"
   },
   "legal": {
     "title": "اہم قانونی نوٹس",
