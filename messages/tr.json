@@ -77,7 +77,8 @@
           "Sade dilde açıklama",
           "Normal aralık vurguları",
           "Temel destek"
-        ]
+        ],
+        "originalPrice": ""
       },
       "onetime": {
         "name": "Tek seferlik",
@@ -90,7 +91,8 @@
           "Takip soruları",
           "PDF dışa aktarma",
           "Öncelikli destek"
-        ]
+        ],
+        "originalPrice": "€4.99"
       },
       "personal": {
         "name": "Kişisel",
@@ -104,7 +106,8 @@
           "Takip sohbeti",
           "PDF dışa aktarma",
           "E-posta desteği"
-        ]
+        ],
+        "originalPrice": "€18"
       },
       "family": {
         "name": "Aile",
@@ -118,7 +121,8 @@
           "Ebeveyn/yaşlı bakım modu",
           "Tüm Kişisel özellikler",
           "Aile paneli"
-        ]
+        ],
+        "originalPrice": "€38"
       },
       "clinic": {
         "name": "Klinik",
@@ -132,9 +136,22 @@
           "Özel marka",
           "Özel destek",
           "API erişimi"
-        ]
+        ],
+        "originalPrice": ""
       }
-    }
+    },
+    "launchBadge": "%50 İNDİRİM",
+    "launchNote": "LAUNCH50 koduyla başlangıç fiyatı",
+    "comingSoon": "Yakında",
+    "goToDashboard": "Panele git",
+    "faqTitle": "Sık sorulan sorular",
+    "launchOfferBanner": "🔥 Lansman teklifi — tüm ücretli planlarda %50 indirim",
+    "limitedOffer": "Sınırlı lansman teklifi",
+    "fiftyOff": "%50 indirim — süreç boyunca",
+    "applyCode": "Ödeme sırasında kodu girin. Tüm ücretli planlar için geçerli.",
+    "copied": "Kopyalandı!",
+    "copyCode": "Kodu kopyala",
+    "pasteCode": "Bu kodu Stripe ödeme sayfasına yapıştırın"
   },
   "legal": {
     "title": "Önemli hukuki bildirim",
@@ -264,5 +281,13 @@
     "analysisFailed": "Analiz başarısız. Tekrar deneyin.",
     "unauthorized": "Devam etmek için giriş yapın",
     "limitReached": "Kullanım limiti doldu. Planınızı yükseltin."
+  },
+  "success": {
+    "verifyingPayment": "Ödeme doğrulanıyor...",
+    "pleaseWait": "Aboneliğinizi onaylarken lütfen bekleyin",
+    "paymentSuccessful": "Ödeme Başarılı!",
+    "subscriptionActive": "Aboneliğiniz şimdi aktif",
+    "thankYou": "Medyra'ya abone olduğunuz için teşekkürler. Artık tıbbi raporlarınızı yükleyip analiz edebilirsiniz.",
+    "uploadFirstReport": "İlk Raporunuzu Yükleyin"
   }
 }

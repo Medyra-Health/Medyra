@@ -143,7 +143,17 @@
           "API access (coming soon)"
         ]
       }
-    }
+    },
+    "comingSoon": "Coming soon",
+    "goToDashboard": "Go to Dashboard",
+    "faqTitle": "Frequently Asked Questions",
+    "launchOfferBanner": "🔥 Launch offer — 50% off all paid plans",
+    "limitedOffer": "Limited Launch Offer",
+    "fiftyOff": "50% off — while it lasts",
+    "applyCode": "Apply code at checkout. Works on all paid plans.",
+    "copied": "Copied!",
+    "copyCode": "Copy code",
+    "pasteCode": "Paste this code at the Stripe checkout page"
   },
   "legal": {
     "title": "Important Legal Notice",
@@ -273,5 +283,13 @@
     "analysisFailed": "Analysis failed. Please try again.",
     "unauthorized": "Please sign in to continue",
     "limitReached": "Usage limit reached. Please upgrade your plan."
+  },
+  "success": {
+    "verifyingPayment": "Verifying Payment...",
+    "pleaseWait": "Please wait while we confirm your subscription",
+    "paymentSuccessful": "Payment Successful!",
+    "subscriptionActive": "Your subscription is now active",
+    "thankYou": "Thank you for subscribing to Medyra. You can now start uploading and analyzing your medical reports.",
+    "uploadFirstReport": "Upload Your First Report"
   }
 }

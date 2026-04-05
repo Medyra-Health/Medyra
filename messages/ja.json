@@ -77,7 +77,8 @@
           "わかりやすい説明",
           "正常範囲のハイライト",
           "基本サポート"
-        ]
+        ],
+        "originalPrice": ""
       },
       "onetime": {
         "name": "一回払い",
@@ -90,7 +91,8 @@
           "フォローアップ質問",
           "PDFエクスポート",
           "優先サポート"
-        ]
+        ],
+        "originalPrice": "€4.99"
       },
       "personal": {
         "name": "個人",
@@ -104,7 +106,8 @@
           "フォローアップチャット",
           "PDFエクスポート",
           "メールサポート"
-        ]
+        ],
+        "originalPrice": "€18"
       },
       "family": {
         "name": "ファミリー",
@@ -118,7 +121,8 @@
           "親・高齢者ケアモード",
           "すべての個人機能",
           "ファミリーダッシュボード"
-        ]
+        ],
+        "originalPrice": "€38"
       },
       "clinic": {
         "name": "クリニック",
@@ -132,9 +136,22 @@
           "カスタムブランド",
           "専用サポート",
           "APIアクセス"
-        ]
+        ],
+        "originalPrice": ""
       }
-    }
+    },
+    "launchBadge": "50%オフ",
+    "launchNote": "コードLAUNCH50で発売価格",
+    "comingSoon": "もうすぐ",
+    "goToDashboard": "ダッシュボードへ",
+    "faqTitle": "よくある質問",
+    "launchOfferBanner": "🔥 発売記念オファー — 全有料プラン50%オフ",
+    "limitedOffer": "限定発売オファー",
+    "fiftyOff": "50%オフ — 期間限定",
+    "applyCode": "チェックアウト時にコードを入力。全有料プランで有効。",
+    "copied": "コピーしました！",
+    "copyCode": "コードをコピー",
+    "pasteCode": "このコードをStripeの支払いページに貼り付けてください"
   },
   "legal": {
     "title": "重要な法的通知",
@@ -264,5 +281,13 @@
     "analysisFailed": "分析に失敗しました。もう一度お試しください。",
     "unauthorized": "続行するにはサインインしてください",
     "limitReached": "使用制限に達しました。プランをアップグレードしてください。"
+  },
+  "success": {
+    "verifyingPayment": "支払いを確認中...",
+    "pleaseWait": "サブスクリプションを確認中です",
+    "paymentSuccessful": "お支払い完了！",
+    "subscriptionActive": "サブスクリプションが有効になりました",
+    "thankYou": "Medyraにご登録いただきありがとうございます。医療レポートのアップロードと分析を開始できます。",
+    "uploadFirstReport": "最初のレポートをアップロード"
   }
 }

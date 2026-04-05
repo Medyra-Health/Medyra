@@ -77,7 +77,8 @@
           "Explication en langage simple",
           "Mise en évidence de la plage normale",
           "Support de base"
-        ]
+        ],
+        "originalPrice": ""
       },
       "onetime": {
         "name": "Unique",
@@ -90,7 +91,8 @@
           "Questions de suivi",
           "Export PDF",
           "Support prioritaire"
-        ]
+        ],
+        "originalPrice": "€4.99"
       },
       "personal": {
         "name": "Personnel",
@@ -104,7 +106,8 @@
           "Chat de suivi",
           "Export PDF",
           "Support par email"
-        ]
+        ],
+        "originalPrice": "€18"
       },
       "family": {
         "name": "Famille",
@@ -118,7 +121,8 @@
           "Mode soins parents/aînés",
           "Toutes les fonctionnalités Personnel",
           "Tableau de bord familial"
-        ]
+        ],
+        "originalPrice": "€38"
       },
       "clinic": {
         "name": "Clinique",
@@ -132,9 +136,22 @@
           "Marque personnalisée",
           "Support dédié",
           "Accès API"
-        ]
+        ],
+        "originalPrice": ""
       }
-    }
+    },
+    "launchBadge": "50% DE RÉDUCTION",
+    "launchNote": "Prix de lancement avec le code LAUNCH50",
+    "comingSoon": "Bientôt disponible",
+    "goToDashboard": "Aller au tableau de bord",
+    "faqTitle": "Questions fréquentes",
+    "launchOfferBanner": "🔥 Offre de lancement — 50% de réduction sur tous les plans payants",
+    "limitedOffer": "Offre de lancement limitée",
+    "fiftyOff": "50% de réduction — tant que ça dure",
+    "applyCode": "Appliquez le code à la caisse. Valable sur tous les plans payants.",
+    "copied": "Copié!",
+    "copyCode": "Copier le code",
+    "pasteCode": "Collez ce code sur la page de paiement Stripe"
   },
   "legal": {
     "title": "Avis juridique important",
@@ -264,5 +281,13 @@
     "analysisFailed": "Échec de l'analyse. Veuillez réessayer.",
     "unauthorized": "Veuillez vous connecter pour continuer",
     "limitReached": "Limite d'utilisation atteinte. Veuillez passer à un forfait supérieur."
+  },
+  "success": {
+    "verifyingPayment": "Vérification du paiement...",
+    "pleaseWait": "Veuillez patienter pendant que nous confirmons votre abonnement",
+    "paymentSuccessful": "Paiement réussi!",
+    "subscriptionActive": "Votre abonnement est maintenant actif",
+    "thankYou": "Merci de vous être abonné à Medyra. Vous pouvez maintenant commencer à télécharger et analyser vos rapports médicaux.",
+    "uploadFirstReport": "Télécharger votre premier rapport"
   }
 }

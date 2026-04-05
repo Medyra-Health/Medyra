@@ -124,27 +124,27 @@ export default function PricingPage() {
         <div className="text-center mb-14">
           {/* Launch offer banner */}
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-5 shadow-lg shadow-orange-200 animate-pulse">
-            🔥 Launch offer — 50% off all paid plans
+            {t('pricing.launchOfferBanner')}
           </div>
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-3">{t('pricing.title')}</h1>
-          <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">Start with <span className="font-semibold text-gray-700">3 free reports</span>. No credit card needed. Upgrade when you're ready.</p>
+          <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">{t('pricing.subtitle')}</p>
 
           {/* Coupon claim box */}
           <div className="inline-block max-w-md w-full">
             <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-300 rounded-2xl p-5 shadow-md">
-              <p className="text-xs font-bold text-orange-600 uppercase tracking-widest mb-1">Limited Launch Offer</p>
-              <p className="text-2xl font-black text-gray-900 mb-1">50% off — while it lasts</p>
-              <p className="text-sm text-gray-500 mb-4">Apply code at checkout. Works on all paid plans.</p>
+              <p className="text-xs font-bold text-orange-600 uppercase tracking-widest mb-1">{t('pricing.limitedOffer')}</p>
+              <p className="text-2xl font-black text-gray-900 mb-1">{t('pricing.fiftyOff')}</p>
+              <p className="text-sm text-gray-500 mb-4">{t('pricing.applyCode')}</p>
               <button
                 onClick={copyCoupon}
                 className="w-full flex items-center justify-between bg-white border-2 border-orange-300 hover:border-orange-500 rounded-xl px-4 py-4 transition-all group"
               >
                 <span className="text-xl font-black tracking-widest text-orange-600">LAUNCH50</span>
                 <span className={`flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-lg transition-all ${copied ? 'bg-emerald-500 text-white' : 'bg-orange-500 hover:bg-orange-600 text-white'}`}>
-                  {copied ? <><CheckCheck className="h-3.5 w-3.5" /> Copied!</> : <><Copy className="h-3.5 w-3.5" /> Copy code</>}
+                  {copied ? <><CheckCheck className="h-3.5 w-3.5" /> {t('pricing.copied')}</> : <><Copy className="h-3.5 w-3.5" /> {t('pricing.copyCode')}</>}
                 </span>
               </button>
-              <p className="text-xs text-gray-400 mt-2">Paste this code at the Stripe checkout page</p>
+              <p className="text-xs text-gray-400 mt-2">{t('pricing.pasteCode')}</p>
             </div>
           </div>
         </div>
@@ -177,7 +177,7 @@ export default function PricingPage() {
                 )}
                 {tier.isClinic && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-gray-500 text-white text-xs px-3 py-0.5 shadow">Coming soon</Badge>
+                    <Badge className="bg-gray-500 text-white text-xs px-3 py-0.5 shadow">{t('pricing.comingSoon')}</Badge>
                   </div>
                 )}
 
@@ -230,12 +230,12 @@ export default function PricingPage() {
                     </SignedOut>
                     <SignedIn>
                       <Link href="/dashboard" className="w-full">
-                        <Button className="w-full text-xs h-9" size="sm" variant="outline">Go to Dashboard</Button>
+                        <Button className="w-full text-xs h-9" size="sm" variant="outline">{t('pricing.goToDashboard')}</Button>
                       </Link>
                     </SignedIn>
                   </>
                 ) : tier.isClinic ? (
-                  <Button className="w-full text-xs h-9 cursor-not-allowed" size="sm" variant="outline" disabled>Coming soon</Button>
+                  <Button className="w-full text-xs h-9 cursor-not-allowed" size="sm" variant="outline" disabled>{t('pricing.comingSoon')}</Button>
                 ) : (
                   <>
                     <SignedOut>
@@ -257,7 +257,7 @@ export default function PricingPage() {
                         onClick={() => handleSubscribe(tier.key)}
                         disabled={loading === tier.key}
                       >
-                        {loading === tier.key ? <><Loader2 className="mr-1.5 h-3 w-3 animate-spin" />Loading...</> : tier.cta}
+                        {loading === tier.key ? <><Loader2 className="mr-1.5 h-3 w-3 animate-spin" />{t('common.loading')}</> : tier.cta}
                       </Button>
                     </SignedIn>
                   </>
@@ -277,7 +277,7 @@ export default function PricingPage() {
 
         {/* FAQ */}
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl font-bold text-center text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-bold text-center text-gray-900 mb-6">{t('pricing.faqTitle')}</h2>
           <div className="space-y-2">
             {FAQ_ITEMS.map((item, i) => (
               <FAQItem key={i} q={item.q} a={item.a} />
