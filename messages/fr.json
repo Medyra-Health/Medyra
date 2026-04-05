@@ -151,7 +151,11 @@
     "applyCode": "Appliquez le code à la caisse. Valable sur tous les plans payants.",
     "copied": "Copié!",
     "copyCode": "Copier le code",
-    "pasteCode": "Collez ce code sur la page de paiement Stripe"
+    "pasteCode": "Collez ce code sur la page de paiement Stripe",
+    "gdprCompliant": "Conforme RGPD",
+    "cancelAnytime": "Annulez à tout moment",
+    "noHiddenFees": "Aucun frais caché",
+    "dataDeleted": "Données supprimées après 30 jours"
   },
   "legal": {
     "title": "Avis juridique important",

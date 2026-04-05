@@ -151,7 +151,11 @@
     "applyCode": "أدخل الكود عند الدفع. صالح لجميع الخطط المدفوعة.",
     "copied": "تم النسخ!",
     "copyCode": "نسخ الكود",
-    "pasteCode": "الصق هذا الكود في صفحة الدفع في Stripe"
+    "pasteCode": "الصق هذا الكود في صفحة الدفع في Stripe",
+    "gdprCompliant": "متوافق مع GDPR",
+    "cancelAnytime": "إلغاء في أي وقت",
+    "noHiddenFees": "بدون رسوم خفية",
+    "dataDeleted": "يُحذف البيانات بعد 30 يوماً"
   },
   "legal": {
     "title": "إشعار قانوني مهم",
