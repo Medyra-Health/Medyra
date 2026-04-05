@@ -1,16 +1,268 @@
 {
-  "nav": {"home":"홈","dashboard":"대시보드","upload":"보고서 업로드","pricing":"가격","signIn":"로그인","signOut":"로그아웃","language":"언어"},
-  "hero": {"trusted":"GDPR 준수 · 독일산","title":"당신의 의료 보고서를","subtitle":"드디어 쉬운 말로 설명합니다","description":"구글에서 의학 용어를 검색하지 마세요. 검사 결과를 업로드하면 60초 안에 명확하고 비공개적인 AI 설명을 받으세요.","cta":"첫 번째 보고서 무료 분석하기","disclaimer":"교육 정보 전용 — 의료 조언을 대신하지 않습니다.","secondaryCta":"요금제 보기"},
-  "features": {"ai":{"title":"AI 기반 설명","desc":"고급 AI가 복잡한 의학 용어를 간단한 언어로 분해합니다"},"secure":{"title":"GDPR 준수","desc":"데이터는 암호화되며 30일 후 자동으로 삭제됩니다"},"fast":{"title":"즉각적인 결과","desc":"60초 이내에 보고서 설명 받기"}},
-  "howItWorks": {"title":"이용 방법","step1":{"title":"업로드","desc":"PDF, 이미지 또는 텍스트 보고서를 업로드하세요"},"step2":{"title":"추출","desc":"OCR이 문서에서 텍스트를 추출합니다"},"step3":{"title":"설명","desc":"AI가 쉬운 언어로 분석하고 설명합니다"},"step4":{"title":"질문","desc":"결과에 대한 후속 질문을 하세요"}},
-  "problem": {"heading":"익숙하게 보이나요?","subheading":"대부분의 환자들은 검사 결과를 이해하지 못합니다. Medyra가 모든 수치를 명확하게 설명해 드립니다.","before":"당신의 검사 보고서","after":"실제로 무엇을 의미하는지"},
-  "pricingCta": {"title":"간단하고 투명한 가격","subtitle":"무료 보고서로 시작하세요. 신용카드 불필요. 언제든 취소 가능.","cta":"모든 요금제 보기"},
-  "pricing": {"title":"플랜 선택","subtitle":"무료로 시작, 언제든지 업그레이드","mostPopular":"가장 인기 있는","tiers":{"free":{"name":"무료","price":"€0","period":"/월","desc":"체험하기에 완벽","cta":"시작하기","features":["월 1개 보고서","쉬운 언어 설명","정상 범위 강조","기본 지원"]},"onetime":{"name":"일회성","price":"€4.99","period":"/보고서","desc":"사용한 만큼 지불","cta":"지금 구매","features":["전체 설명","후속 질문","PDF 내보내기","우선 지원"]},"personal":{"name":"개인","price":"€9","period":"/월","desc":"가장 인기 있는 선택","cta":"구독","features":["무제한 보고서","보고서 기록","후속 채팅","PDF 내보내기","이메일 지원"]},"family":{"name":"가족","price":"€19","period":"/월","desc":"온 가족을 위해","cta":"구독","features":["최대 5명","공유 기록","부모/노인 돌봄 모드","모든 개인 기능","가족 대시보드"]},"clinic":{"name":"클리닉","price":"€199","period":"/월","desc":"클리닉을 위한 화이트라벨","cta":"영업팀에 연락","features":["무제한 환자","EHR 통합","맞춤 브랜드","전담 지원","API 접근"]}}},
-  "legal": {"title":"중요한 법적 고지","text":"이것은 교육 및 정보 도구이며 의료 소프트웨어가 아닙니다. Medyra는 의학 용어의 의미를 설명하지만 의료 조언, 진단 또는 치료 권고를 제공하지 않습니다. 건강 관련 결정을 내리기 전에 항상 면허를 가진 의사와 상담하세요. 귀하의 데이터는 GDPR에 따라 처리되며 30일 후 자동으로 삭제됩니다."},
-  "footer": {"tagline": "Understand Your Medical Reports in Plain Language","privacy":"개인정보 보호정책","terms":"서비스 약관","contact":"연락처","copyright":"© 2026 Medyra. 독일에서 사랑으로 만들었습니다."},
-  "upload": {"title":"의료 보고서 업로드","description":"PDF, 이미지(JPG/PNG) 또는 텍스트 형식으로 검사 결과 업로드","dragDrop":"파일을 여기에 드래그 앤 드롭","or":"또는 클릭하여 찾아보기","camera":"사진 찍기","analyzing":"보고서 분석 중...","extracting":"텍스트 추출 중...","processing":"AI로 처리 중...","formats":"지원: PDF, JPG, PNG, TXT","maxSize":"최대 크기: 10MB","notice":"중요 안내","noticeText":"이 도구는 교육 정보만 제공하며 전문적인 의료 조언을 대체하지 않습니다. 건강 관련 결정을 내리기 전에 항상 의사와 상담하세요.","secureProcessing":"안전한 처리","secureDesc":"암호화되어 30일 후 자동으로 삭제됩니다","aiPowered":"AI 기반","aiDesc":"고급 Claude AI 분석","gdprCompliant":"GDPR 준수","gdprDesc":"EU 데이터 보호 기준","backToDashboard":"대시보드로 돌아가기"},
-  "dashboard": {"welcome":"환영합니다","yourPlan":"귀하의 플랜","usage":"사용량","recentReports":"최근 보고서","noReports":"아직 보고서가 없습니다","uploadFirst":"첫 의료 보고서를 업로드하여 시작하세요","viewAll":"모두 보기","stats":"통계","totalReports":"전체 보고서","thisMonth":"이번 달","quickActions":"빠른 작업","uploadNew":"새 보고서 업로드","viewAllReports":"모든 보고서 보기","approachingLimit":"한도에 접근 중","upgradePlan":"플랜 업그레이드"},
-  "report": {"disclaimer":"의료 면책 조항","disclaimerText":"이것은 교육 정보이며 의료 조언이 아닙니다. 항상 의사와 상담하세요.","summary":"요약","testResults":"검사 결과","normal":"정상","high":"높음","low":"낮음","critical":"위험","yourResult":"귀하의 결과","normalRange":"정상 범위","whatThisMeans":"귀하의 결과가 의미하는 바","whatThisTests":"이 검사가 측정하는 것","questionsForDoctor":"의사에게 할 질문","discussWithPhysician":"이 질문들은 의사와 이 보고서에 대해 논의하는 데 도움이 됩니다","askQuestion":"후속 질문하기","moreInfo":"결과에 대한 더 많은 정보 얻기","askPlaceholder":"결과에 대한 질문을 하세요...","you":"귀하","ai":"AI","sending":"전송 중...","backToDashboard":"대시보드로 돌아가기","uploadedOn":"업로드일","askQuestions":"질문하기","copy":"설명 복사","exportPDF":"PDF 내보내기","print":"인쇄"},
-  "common": {"loading":"로딩 중...","error":"오류","success":"성공","cancel":"취소","save":"저장","delete":"삭제","edit":"편집","back":"뒤로","next":"다음","submit":"제출","close":"닫기"},
-  "errors": {"fileRequired":"업로드할 파일을 선택하세요","fileTooLarge":"파일 크기는 10MB 미만이어야 합니다","unsupportedFormat":"지원되지 않는 파일 형식","uploadFailed":"업로드 실패. 다시 시도하세요.","analysisFailed":"분석 실패. 다시 시도하세요.","unauthorized":"계속하려면 로그인하세요","limitReached":"사용 한도 도달. 플랜을 업그레이드하세요."}
+  "nav": {
+    "home": "홈",
+    "dashboard": "대시보드",
+    "upload": "보고서 업로드",
+    "pricing": "가격",
+    "signIn": "로그인",
+    "signOut": "로그아웃",
+    "language": "언어"
+  },
+  "hero": {
+    "trusted": "GDPR 준수 · 독일산",
+    "title": "당신의 의료 보고서를",
+    "subtitle": "드디어 쉬운 말로 설명합니다",
+    "description": "구글에서 의학 용어를 검색하지 마세요. 검사 결과를 업로드하면 60초 안에 명확하고 비공개적인 AI 설명을 받으세요.",
+    "cta": "첫 번째 보고서 무료 분석하기",
+    "disclaimer": "교육 정보 전용 — 의료 조언을 대신하지 않습니다.",
+    "secondaryCta": "요금제 보기"
+  },
+  "features": {
+    "ai": {
+      "title": "AI 기반 설명",
+      "desc": "고급 AI가 복잡한 의학 용어를 간단한 언어로 분해합니다"
+    },
+    "secure": {
+      "title": "GDPR 준수",
+      "desc": "데이터는 암호화되며 30일 후 자동으로 삭제됩니다"
+    },
+    "fast": {
+      "title": "즉각적인 결과",
+      "desc": "60초 이내에 보고서 설명 받기"
+    }
+  },
+  "howItWorks": {
+    "title": "이용 방법",
+    "step1": {
+      "title": "업로드",
+      "desc": "PDF, 이미지 또는 텍스트 보고서를 업로드하세요"
+    },
+    "step2": {
+      "title": "추출",
+      "desc": "OCR이 문서에서 텍스트를 추출합니다"
+    },
+    "step3": {
+      "title": "설명",
+      "desc": "AI가 쉬운 언어로 분석하고 설명합니다"
+    },
+    "step4": {
+      "title": "질문",
+      "desc": "결과에 대한 후속 질문을 하세요"
+    }
+  },
+  "problem": {
+    "heading": "익숙하게 보이나요?",
+    "subheading": "대부분의 환자들은 검사 결과를 이해하지 못합니다. Medyra가 모든 수치를 명확하게 설명해 드립니다.",
+    "before": "당신의 검사 보고서",
+    "after": "실제로 무엇을 의미하는지"
+  },
+  "pricingCta": {
+    "title": "간단하고 투명한 가격",
+    "subtitle": "무료 보고서로 시작하세요. 신용카드 불필요. 언제든 취소 가능.",
+    "cta": "모든 요금제 보기"
+  },
+  "pricing": {
+    "title": "플랜 선택",
+    "subtitle": "무료로 시작, 언제든지 업그레이드",
+    "mostPopular": "가장 인기 있는",
+    "tiers": {
+      "free": {
+        "name": "무료",
+        "price": "€0",
+        "period": "/월",
+        "desc": "체험하기에 완벽",
+        "cta": "시작하기",
+        "features": [
+          "월 1개 보고서",
+          "쉬운 언어 설명",
+          "정상 범위 강조",
+          "기본 지원"
+        ]
+      },
+      "onetime": {
+        "name": "일회성",
+        "price": "€4.99",
+        "period": "/보고서",
+        "desc": "사용한 만큼 지불",
+        "cta": "지금 구매",
+        "features": [
+          "전체 설명",
+          "후속 질문",
+          "PDF 내보내기",
+          "우선 지원"
+        ]
+      },
+      "personal": {
+        "name": "개인",
+        "price": "€9",
+        "period": "/월",
+        "desc": "가장 인기 있는 선택",
+        "cta": "구독",
+        "features": [
+          "무제한 보고서",
+          "보고서 기록",
+          "후속 채팅",
+          "PDF 내보내기",
+          "이메일 지원"
+        ]
+      },
+      "family": {
+        "name": "가족",
+        "price": "€19",
+        "period": "/월",
+        "desc": "온 가족을 위해",
+        "cta": "구독",
+        "features": [
+          "최대 5명",
+          "공유 기록",
+          "부모/노인 돌봄 모드",
+          "모든 개인 기능",
+          "가족 대시보드"
+        ]
+      },
+      "clinic": {
+        "name": "클리닉",
+        "price": "€199",
+        "period": "/월",
+        "desc": "클리닉을 위한 화이트라벨",
+        "cta": "영업팀에 연락",
+        "features": [
+          "무제한 환자",
+          "EHR 통합",
+          "맞춤 브랜드",
+          "전담 지원",
+          "API 접근"
+        ]
+      }
+    }
+  },
+  "legal": {
+    "title": "중요한 법적 고지",
+    "text": "이것은 교육 및 정보 도구이며 의료 소프트웨어가 아닙니다. Medyra는 의학 용어의 의미를 설명하지만 의료 조언, 진단 또는 치료 권고를 제공하지 않습니다. 건강 관련 결정을 내리기 전에 항상 면허를 가진 의사와 상담하세요. 귀하의 데이터는 GDPR에 따라 처리되며 30일 후 자동으로 삭제됩니다."
+  },
+  "footer": {
+    "tagline": "Understand Your Medical Reports in Plain Language",
+    "privacy": "개인정보 보호정책",
+    "terms": "서비스 약관",
+    "contact": "연락처",
+    "copyright": "© 2026 Medyra. 독일에서 사랑으로 만들었습니다."
+  },
+  "upload": {
+    "title": "의료 보고서 업로드",
+    "description": "PDF, 이미지(JPG/PNG) 또는 텍스트 형식으로 검사 결과 업로드",
+    "dragDrop": "파일을 여기에 드래그 앤 드롭",
+    "or": "또는 클릭하여 찾아보기",
+    "camera": "사진 찍기",
+    "analyzing": "보고서 분석 중...",
+    "extracting": "텍스트 추출 중...",
+    "processing": "AI로 처리 중...",
+    "formats": "지원: PDF, JPG, PNG, TXT",
+    "maxSize": "최대 크기: 10MB",
+    "notice": "중요 안내",
+    "noticeText": "이 도구는 교육 정보만 제공하며 전문적인 의료 조언을 대체하지 않습니다. 건강 관련 결정을 내리기 전에 항상 의사와 상담하세요.",
+    "secureProcessing": "안전한 처리",
+    "secureDesc": "암호화되어 30일 후 자동으로 삭제됩니다",
+    "aiPowered": "AI 기반",
+    "aiDesc": "고급 Claude AI 분석",
+    "gdprCompliant": "GDPR 준수",
+    "gdprDesc": "EU 데이터 보호 기준",
+    "backToDashboard": "대시보드로 돌아가기",
+    "dropHere": "여기에 보고서를 놓으세요",
+    "dropActive": "여기에 놓으세요",
+    "orBrowse": "또는 클릭하여 파일 찾기",
+    "autoCompressed": "최대 4 MB · 이미지는 자동 압축됩니다",
+    "encryptedNote": "암호화됨 · 30일 후 삭제",
+    "progressCompress": "이미지 최적화 중…",
+    "progressUpload": "안전하게 업로드 중…",
+    "progressExtract": "보고서 읽는 중…",
+    "progressAi": "AI 분석 중…",
+    "progressDone": "거의 완료…",
+    "progressDuration": "보통 20~40초가 소요됩니다"
+  },
+  "dashboard": {
+    "welcome": "환영합니다",
+    "yourPlan": "귀하의 플랜",
+    "usage": "사용량",
+    "recentReports": "최근 보고서",
+    "noReports": "아직 보고서가 없습니다",
+    "uploadFirst": "첫 의료 보고서를 업로드하여 시작하세요",
+    "viewAll": "모두 보기",
+    "stats": "통계",
+    "totalReports": "전체 보고서",
+    "thisMonth": "이번 달",
+    "quickActions": "빠른 작업",
+    "uploadNew": "새 보고서 업로드",
+    "viewAllReports": "모든 보고서 보기",
+    "approachingLimit": "한도에 접근 중",
+    "upgradePlan": "플랜 업그레이드",
+    "remaining": "남은"
+  },
+  "report": {
+    "disclaimer": "의료 면책 조항",
+    "disclaimerText": "이것은 교육 정보이며 의료 조언이 아닙니다. 항상 의사와 상담하세요.",
+    "summary": "요약",
+    "testResults": "검사 결과",
+    "normal": "정상",
+    "high": "높음",
+    "low": "낮음",
+    "critical": "위험",
+    "yourResult": "귀하의 결과",
+    "normalRange": "정상 범위",
+    "whatThisMeans": "귀하의 결과가 의미하는 바",
+    "whatThisTests": "이 검사가 측정하는 것",
+    "questionsForDoctor": "의사에게 할 질문",
+    "discussWithPhysician": "이 질문들은 의사와 이 보고서에 대해 논의하는 데 도움이 됩니다",
+    "askQuestion": "후속 질문하기",
+    "moreInfo": "결과에 대한 더 많은 정보 얻기",
+    "askPlaceholder": "결과에 대한 질문을 하세요...",
+    "you": "귀하",
+    "ai": "AI",
+    "sending": "전송 중...",
+    "backToDashboard": "대시보드로 돌아가기",
+    "uploadedOn": "업로드일",
+    "askQuestions": "질문하기",
+    "copy": "설명 복사",
+    "exportPDF": "PDF 내보내기",
+    "print": "인쇄",
+    "resultsDistribution": "결과 분포",
+    "needAttention": "주의 필요",
+    "allValuesNormal": "모든 수치 정상",
+    "keyTakeaways": "핵심 사항",
+    "valuesNeedingAttention": "주의가 필요한 수치",
+    "greatResults": "훌륭한 결과 — 의사와 상담하세요",
+    "allReports": "모든 보고서",
+    "saveAsPdf": "PDF로 저장",
+    "chatGreeting": "안녕하세요! 보고서를 읽었습니다. 무엇이든 물어보세요:",
+    "chatQ1": "가장 중요한 결과를 요약해 주세요",
+    "chatQ2": "어떤 결과가 긴급한 주의가 필요한가요?",
+    "chatQ3": "의사에게 무엇을 물어야 하나요?",
+    "chatQ4": "지난번과 비교해 결과가 어떤가요?",
+    "chatPoweredBy": "Claude 기반 · 교육 목적만",
+    "chatLimitReached": "이 보고서의 질문 한도에 도달했습니다",
+    "chatLimitInfo": "무료: 보고서당 5문항 · 1회용: 15문항 · Personal/Family: 무제한",
+    "chatUpgrade": "무제한 채팅으로 업그레이드",
+    "chatPlaceholder": "결과에 대해 질문하세요…"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류",
+    "success": "성공",
+    "cancel": "취소",
+    "save": "저장",
+    "delete": "삭제",
+    "edit": "편집",
+    "back": "뒤로",
+    "next": "다음",
+    "submit": "제출",
+    "close": "닫기"
+  },
+  "errors": {
+    "fileRequired": "업로드할 파일을 선택하세요",
+    "fileTooLarge": "파일 크기는 10MB 미만이어야 합니다",
+    "unsupportedFormat": "지원되지 않는 파일 형식",
+    "uploadFailed": "업로드 실패. 다시 시도하세요.",
+    "analysisFailed": "분석 실패. 다시 시도하세요.",
+    "unauthorized": "계속하려면 로그인하세요",
+    "limitReached": "사용 한도 도달. 플랜을 업그레이드하세요."
+  }
 }

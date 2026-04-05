@@ -63,11 +63,11 @@ const FORMATS = [
 ]
 
 const PROGRESS_STEPS = [
-  { key: 'compress', label: 'Optimising image…' },
-  { key: 'upload', label: 'Uploading securely…' },
-  { key: 'extract', label: 'Reading your report…' },
-  { key: 'ai', label: 'AI is analysing…' },
-  { key: 'done', label: 'Almost ready…' },
+  { key: 'compress', tKey: 'upload.progressCompress' },
+  { key: 'upload', tKey: 'upload.progressUpload' },
+  { key: 'extract', tKey: 'upload.progressExtract' },
+  { key: 'ai', tKey: 'upload.progressAi' },
+  { key: 'done', tKey: 'upload.progressDone' },
 ]
 
 export default function UploadPage() {
@@ -305,11 +305,11 @@ export default function UploadPage() {
                       ) : (
                         <div className="h-4 w-4 flex-shrink-0 rounded-full border-2 border-gray-200" />
                       )}
-                      {step.label}
+                      {t(step.tKey)}
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-gray-400 mt-5">This usually takes 20 to 40 seconds</p>
+                <p className="text-xs text-gray-400 mt-5">{t('upload.progressDuration')}</p>
               </div>
             ) : (
               <>
@@ -320,11 +320,11 @@ export default function UploadPage() {
                 </div>
 
                 {isDragActive ? (
-                  <p className="text-base font-semibold text-emerald-700 mb-1">Drop it here</p>
+                  <p className="text-base font-semibold text-emerald-700 mb-1">{t('upload.dropActive')}</p>
                 ) : (
                   <>
-                    <p className="text-base font-semibold text-gray-900 mb-1">Drop your report here</p>
-                    <p className="text-sm text-gray-400 mb-5">or click to browse files</p>
+                    <p className="text-base font-semibold text-gray-900 mb-1">{t('upload.dropHere')}</p>
+                    <p className="text-sm text-gray-400 mb-5">{t('upload.orBrowse')}</p>
                   </>
                 )}
 
@@ -340,7 +340,7 @@ export default function UploadPage() {
                 )}
 
                 {!isDragActive && (
-                  <p className="text-xs text-gray-400 mt-4">Max 4 MB · Images are compressed automatically</p>
+                  <p className="text-xs text-gray-400 mt-4">{t('upload.autoCompressed')}</p>
                 )}
               </>
             )}
@@ -350,9 +350,9 @@ export default function UploadPage() {
         {/* Trust row */}
         <div className="mt-6 grid grid-cols-3 gap-2 sm:gap-3">
           {[
-            { icon: Lock, label: 'Encrypted', sub: 'TLS + AES at rest' },
-            { icon: Clock, label: '60 seconds', sub: 'Typical analysis time' },
-            { icon: Shield, label: 'GDPR', sub: 'Deleted after 30 days' },
+            { icon: Lock, label: t('upload.secureProcessing'), sub: t('upload.secureDesc') },
+            { icon: Clock, label: t('upload.aiPowered'), sub: t('upload.aiDesc') },
+            { icon: Shield, label: t('upload.gdprCompliant'), sub: t('upload.gdprDesc') },
           ].map(({ icon: Icon, label, sub }) => (
             <div key={label} className="flex flex-col items-center text-center p-2 sm:p-3 rounded-xl bg-white border border-gray-100 shadow-sm">
               <Icon className="h-4 w-4 text-emerald-500 mb-1" />
@@ -364,7 +364,7 @@ export default function UploadPage() {
 
         {/* Disclaimer */}
         <p className="text-center text-xs text-gray-400 mt-5 leading-relaxed px-4">
-          Educational information only — not a substitute for medical advice. Always consult your doctor.
+          {t('upload.noticeText')}
         </p>
       </div>
     </div>
