@@ -77,7 +77,8 @@
           "Grundlegende Analyse",
           "PDF-Export",
           "E-Mail-Support"
-        ]
+        ],
+        "originalPrice": ""
       },
       "onetime": {
         "name": "Einmalig",
@@ -90,7 +91,8 @@
           "KI-Chat-Assistent",
           "PDF-Export",
           "Lebenslanger Zugang"
-        ]
+        ],
+        "originalPrice": "€4.99"
       },
       "personal": {
         "name": "Persoenlich",
@@ -104,7 +106,8 @@
           "Trendanalyse",
           "PDF-Export",
           "Prioritaets-Support"
-        ]
+        ],
+        "originalPrice": "€18"
       },
       "family": {
         "name": "Familie",
@@ -118,7 +121,8 @@
           "KI-Chat-Assistent",
           "Trendanalyse",
           "Prioritaets-Support"
-        ]
+        ],
+        "originalPrice": "€38"
       },
       "clinic": {
         "name": "Klinik",
@@ -132,9 +136,22 @@
           "Erweiterte Analysen",
           "Dedizierter Support",
           "API-Zugang (demnächst)"
-        ]
+        ],
+        "originalPrice": ""
       }
-    }
+    },
+    "launchBadge": "50% RABATT",
+    "launchNote": "Einführungspreis mit Code LAUNCH50",
+    "comingSoon": "Demnächst",
+    "goToDashboard": "Zum Dashboard",
+    "faqTitle": "Häufig gestellte Fragen",
+    "launchOfferBanner": "🔥 Einführungsangebot — 50% Rabatt auf alle kostenpflichtigen Pläne",
+    "limitedOffer": "Begrenztes Einführungsangebot",
+    "fiftyOff": "50% Rabatt — solange der Vorrat reicht",
+    "applyCode": "Code an der Kasse eingeben. Gilt für alle bezahlten Pläne.",
+    "copied": "Kopiert!",
+    "copyCode": "Code kopieren",
+    "pasteCode": "Diesen Code an der Stripe-Kassenseite einfügen"
   },
   "legal": {
     "title": "Rechtlicher Hinweis",
@@ -264,5 +281,13 @@
     "analysisFailed": "Analyse fehlgeschlagen. Bitte erneut versuchen.",
     "unauthorized": "Bitte anmelden, um fortzufahren",
     "limitReached": "Limit erreicht. Bitte Plan upgraden."
+  },
+  "success": {
+    "verifyingPayment": "Zahlung wird überprüft...",
+    "pleaseWait": "Bitte warten Sie, während wir Ihr Abonnement bestätigen",
+    "paymentSuccessful": "Zahlung erfolgreich!",
+    "subscriptionActive": "Ihr Abonnement ist jetzt aktiv",
+    "thankYou": "Vielen Dank für Ihr Abonnement bei Medyra. Sie können jetzt Ihre medizinischen Berichte hochladen und analysieren.",
+    "uploadFirstReport": "Ersten Bericht hochladen"
   }
 }

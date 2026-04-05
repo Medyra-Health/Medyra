@@ -6,12 +6,14 @@ import Link from 'next/link'
 import { CheckCircle, Loader2, FileText } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { useTranslations } from 'next-intl'
 
 function SuccessContent() {
   const searchParams = useSearchParams()
   const sessionId = searchParams.get('session_id')
   const [verified, setVerified] = useState(false)
   const [loading, setLoading] = useState(true)
+  const t = useTranslations()
 
   useEffect(() => {
     if (sessionId) {
@@ -37,8 +39,8 @@ function SuccessContent() {
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
             <Loader2 className="h-16 w-16 text-blue-600 animate-spin mx-auto mb-4" />
-            <CardTitle>Verifying Payment...</CardTitle>
-            <CardDescription>Please wait while we confirm your subscription</CardDescription>
+            <CardTitle>{t('success.verifyingPayment')}</CardTitle>
+            <CardDescription>{t('success.pleaseWait')}</CardDescription>
           </CardHeader>
         </Card>
       </div>
@@ -50,23 +52,23 @@ function SuccessContent() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CheckCircle className="h-16 w-16 text-emerald-500 mx-auto mb-4" />
-          <CardTitle className="text-2xl">Payment Successful!</CardTitle>
-          <CardDescription>Your subscription is now active</CardDescription>
+          <CardTitle className="text-2xl">{t('success.paymentSuccessful')}</CardTitle>
+          <CardDescription>{t('success.subscriptionActive')}</CardDescription>
         </CardHeader>
         <CardContent className="text-center space-y-4">
           <p className="text-gray-600">
-            Thank you for subscribing to Medyra. You can now start uploading and analyzing your medical reports.
+            {t('success.thankYou')}
           </p>
           <div className="flex flex-col gap-2">
             <Link href="/upload" className="w-full">
               <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold h-11">
                 <FileText className="mr-2 h-4 w-4" />
-                Upload Your First Report
+                {t('success.uploadFirstReport')}
               </Button>
             </Link>
             <Link href="/dashboard" className="w-full">
               <Button variant="outline" className="w-full h-11">
-                Go to Dashboard
+                {t('pricing.goToDashboard')}
               </Button>
             </Link>
           </div>

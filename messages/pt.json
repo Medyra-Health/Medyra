@@ -77,7 +77,8 @@
           "Explicação em linguagem simples",
           "Destaques de faixa normal",
           "Suporte básico"
-        ]
+        ],
+        "originalPrice": ""
       },
       "onetime": {
         "name": "Pagamento único",
@@ -90,7 +91,8 @@
           "Perguntas de acompanhamento",
           "Exportar PDF",
           "Suporte prioritário"
-        ]
+        ],
+        "originalPrice": "€4.99"
       },
       "personal": {
         "name": "Pessoal",
@@ -104,7 +106,8 @@
           "Chat de acompanhamento",
           "Exportar PDF",
           "Suporte por email"
-        ]
+        ],
+        "originalPrice": "€18"
       },
       "family": {
         "name": "Família",
@@ -118,7 +121,8 @@
           "Modo cuidado de pais/idosos",
           "Todos os recursos Pessoal",
           "Painel familiar"
-        ]
+        ],
+        "originalPrice": "€38"
       },
       "clinic": {
         "name": "Clínica",
@@ -132,9 +136,22 @@
           "Marca personalizada",
           "Suporte dedicado",
           "Acesso API"
-        ]
+        ],
+        "originalPrice": ""
       }
-    }
+    },
+    "launchBadge": "50% DE DESCONTO",
+    "launchNote": "Preço de lançamento com código LAUNCH50",
+    "comingSoon": "Em breve",
+    "goToDashboard": "Ir ao painel",
+    "faqTitle": "Perguntas frequentes",
+    "launchOfferBanner": "🔥 Oferta de lançamento — 50% de desconto em todos os planos pagos",
+    "limitedOffer": "Oferta de lançamento limitada",
+    "fiftyOff": "50% de desconto — enquanto durar",
+    "applyCode": "Aplique o código no checkout. Válido em todos os planos pagos.",
+    "copied": "Copiado!",
+    "copyCode": "Copiar código",
+    "pasteCode": "Cole este código na página de pagamento do Stripe"
   },
   "legal": {
     "title": "Aviso legal importante",
@@ -264,5 +281,13 @@
     "analysisFailed": "Análise falhou. Tente novamente.",
     "unauthorized": "Faça login para continuar",
     "limitReached": "Limite de uso atingido. Atualize seu plano."
+  },
+  "success": {
+    "verifyingPayment": "Verificando pagamento...",
+    "pleaseWait": "Por favor aguarde enquanto confirmamos sua assinatura",
+    "paymentSuccessful": "Pagamento bem-sucedido!",
+    "subscriptionActive": "Sua assinatura está agora ativa",
+    "thankYou": "Obrigado por assinar o Medyra. Agora você pode começar a enviar e analisar seus relatórios médicos.",
+    "uploadFirstReport": "Enviar seu primeiro relatório"
   }
 }
