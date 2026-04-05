@@ -173,7 +173,7 @@ export default function DashboardPage() {
                 ? <p className="text-xl sm:text-2xl font-bold text-emerald-600">∞</p>
                 : <p className={`text-xl sm:text-2xl font-bold ${remaining === 0 ? 'text-red-600' : 'text-emerald-600'}`}>{remaining}</p>
               }
-              <p className="text-xs text-gray-500 mt-0.5">Remaining</p>
+              <p className="text-xs text-gray-500 mt-0.5">{t('dashboard.remaining')}</p>
             </CardContent>
           </Card>
           <Card>
@@ -183,7 +183,7 @@ export default function DashboardPage() {
                 const now = new Date()
                 return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear()
               }).length}</p>
-              <p className="text-xs text-gray-500 mt-0.5">This month</p>
+              <p className="text-xs text-gray-500 mt-0.5">{t('dashboard.thisMonth')}</p>
             </CardContent>
           </Card>
         </div>

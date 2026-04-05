@@ -1,16 +1,268 @@
 {
-  "nav": {"home":"Home","dashboard":"Dashboard","upload":"Carica referto","pricing":"Prezzi","signIn":"Accedi","signOut":"Esci","language":"Lingua"},
-  "hero": {"trusted":"Conforme al GDPR · Made in Germany","title":"Il tuo referto medico,","subtitle":"Finalmente in linguaggio chiaro","description":"Smetti di cercare termini medici su Google. Carica i tuoi risultati e ottieni una spiegazione chiara e privata in meno di 60 secondi.","cta":"Analizza il primo referto gratis","disclaimer":"Solo informazioni educative — non sostituisce il consiglio medico.","secondaryCta":"Vedi i prezzi"},
-  "features": {"ai":{"title":"Spiegazioni basate sull'IA","desc":"L'IA avanzata scompone la terminologia medica complessa in linguaggio semplice"},"secure":{"title":"Conforme al GDPR","desc":"I tuoi dati sono crittografati e cancellati automaticamente dopo 30 giorni"},"fast":{"title":"Risultati istantanei","desc":"Ottieni la spiegazione del tuo referto in meno di 60 secondi"}},
-  "howItWorks": {"title":"Come funziona","step1":{"title":"Carica","desc":"Carica il tuo referto in PDF, immagine o testo"},"step2":{"title":"Estrai","desc":"L'OCR estrae il testo dal tuo documento"},"step3":{"title":"Spiega","desc":"L'IA analizza e spiega in linguaggio semplice"},"step4":{"title":"Chiedi","desc":"Fai domande di approfondimento sui tuoi risultati"}},
-  "problem": {"heading":"Ti suona familiare?","subheading":"La maggior parte dei pazienti non capisce i propri risultati di laboratorio. Medyra spiega ogni valore chiaramente.","before":"Il tuo referto","after":"Cosa significa davvero"},
-  "pricingCta": {"title":"Prezzi semplici e trasparenti","subtitle":"Inizia con un referto gratuito. Nessuna carta di credito richiesta. Cancella in qualsiasi momento.","cta":"Vedi tutti i piani"},
-  "pricing": {"title":"Scegli il tuo piano","subtitle":"Inizia gratuitamente, aggiorna quando vuoi","mostPopular":"Più popolare","tiers":{"free":{"name":"Gratuito","price":"€0","period":"/mese","desc":"Perfetto per provare","cta":"Inizia","features":["1 referto al mese","Spiegazione in linguaggio semplice","Evidenziazione intervallo normale","Supporto base"]},"onetime":{"name":"Una tantum","price":"€4,99","period":"/referto","desc":"Paga quando usi","cta":"Acquista ora","features":["Spiegazione completa","Domande di approfondimento","Esportazione PDF","Supporto prioritario"]},"personal":{"name":"Personale","price":"€9","period":"/mese","desc":"La scelta più popolare","cta":"Abbonati","features":["Referti illimitati","Storico referti","Chat di approfondimento","Esportazione PDF","Supporto email"]},"family":{"name":"Famiglia","price":"€19","period":"/mese","desc":"Per tutta la famiglia","cta":"Abbonati","features":["Fino a 5 membri","Storico condiviso","Modalità cura genitori/anziani","Tutte le funzionalità Personale","Dashboard familiare"]},"clinic":{"name":"Clinica","price":"€199","period":"/mese","desc":"White-label per cliniche","cta":"Contatta le vendite","features":["Pazienti illimitati","Integrazione EHR","Marchio personalizzato","Supporto dedicato","Accesso API"]}}},
-  "legal": {"title":"Avviso legale importante","text":"Questo è uno strumento educativo e informativo, non un software medico. Medyra spiega il significato dei termini medici ma non fornisce consigli medici, diagnosi o raccomandazioni terapeutiche. Consulta sempre il tuo medico abilitato prima di prendere qualsiasi decisione sulla salute. I tuoi dati sono gestiti in conformità con il GDPR e cancellati automaticamente dopo 30 giorni."},
-  "footer": {"tagline": "Understand Your Medical Reports in Plain Language","privacy":"Informativa sulla privacy","terms":"Termini di servizio","contact":"Contatto","copyright":"© 2026 Medyra. Fatto con amore in Germania."},
-  "upload": {"title":"Carica referto medico","description":"Carica i tuoi risultati di laboratorio in formato PDF, immagine (JPG/PNG) o testo","dragDrop":"Trascina e rilascia il tuo file qui","or":"o clicca per sfogliare","camera":"Scatta una foto","analyzing":"Analisi del tuo referto...","extracting":"Estrazione del testo...","processing":"Elaborazione con IA...","formats":"Supportati: PDF, JPG, PNG, TXT","maxSize":"Dimensione max: 10MB","notice":"Avviso importante","noticeText":"Questo strumento fornisce solo informazioni educative e non sostituisce il consiglio medico professionale. Consulta sempre il tuo medico prima di prendere qualsiasi decisione sulla salute.","secureProcessing":"Elaborazione sicura","secureDesc":"Crittografato e cancellato automaticamente dopo 30 giorni","aiPowered":"Basato sull'IA","aiDesc":"Analisi avanzata Claude AI","gdprCompliant":"Conforme al GDPR","gdprDesc":"Standard di protezione dei dati UE","backToDashboard":"Torna alla dashboard"},
-  "dashboard": {"welcome":"Benvenuto","yourPlan":"Il tuo piano","usage":"Utilizzo","recentReports":"Referti recenti","noReports":"Nessun referto ancora","uploadFirst":"Carica il tuo primo referto medico per iniziare","viewAll":"Vedi tutti","stats":"Statistiche","totalReports":"Referti totali","thisMonth":"Questo mese","quickActions":"Azioni rapide","uploadNew":"Carica nuovo referto","viewAllReports":"Vedi tutti i referti","approachingLimit":"Avvicinamento al limite","upgradePlan":"Aggiorna piano"},
-  "report": {"disclaimer":"Avvertenza medica","disclaimerText":"Questa è un'informazione educativa, non un consiglio medico. Consulta sempre il tuo medico.","summary":"Riepilogo","testResults":"Risultati dei test","normal":"Normale","high":"Alto","low":"Basso","critical":"Critico","yourResult":"Il tuo risultato","normalRange":"Intervallo normale","whatThisMeans":"Cosa significa il tuo risultato","whatThisTests":"Cosa misura questo test","questionsForDoctor":"Domande da fare al tuo medico","discussWithPhysician":"Queste domande possono aiutarti a discutere questo referto con il tuo medico","askQuestion":"Fai domande di approfondimento","moreInfo":"Ottieni maggiori informazioni sui tuoi risultati","askPlaceholder":"Fai una domanda sui tuoi risultati...","you":"Tu","ai":"IA","sending":"Invio in corso...","backToDashboard":"Torna alla dashboard","uploadedOn":"Caricato il","askQuestions":"Fai domande","copy":"Copia spiegazione","exportPDF":"Esporta PDF","print":"Stampa"},
-  "common": {"loading":"Caricamento...","error":"Errore","success":"Successo","cancel":"Annulla","save":"Salva","delete":"Elimina","edit":"Modifica","back":"Indietro","next":"Avanti","submit":"Invia","close":"Chiudi"},
-  "errors": {"fileRequired":"Seleziona un file da caricare","fileTooLarge":"La dimensione del file deve essere inferiore a 10MB","unsupportedFormat":"Formato file non supportato","uploadFailed":"Caricamento fallito. Riprova.","analysisFailed":"Analisi fallita. Riprova.","unauthorized":"Accedi per continuare","limitReached":"Limite di utilizzo raggiunto. Aggiorna il tuo piano."}
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "upload": "Carica referto",
+    "pricing": "Prezzi",
+    "signIn": "Accedi",
+    "signOut": "Esci",
+    "language": "Lingua"
+  },
+  "hero": {
+    "trusted": "Conforme al GDPR · Made in Germany",
+    "title": "Il tuo referto medico,",
+    "subtitle": "Finalmente in linguaggio chiaro",
+    "description": "Smetti di cercare termini medici su Google. Carica i tuoi risultati e ottieni una spiegazione chiara e privata in meno di 60 secondi.",
+    "cta": "Analizza il primo referto gratis",
+    "disclaimer": "Solo informazioni educative — non sostituisce il consiglio medico.",
+    "secondaryCta": "Vedi i prezzi"
+  },
+  "features": {
+    "ai": {
+      "title": "Spiegazioni basate sull'IA",
+      "desc": "L'IA avanzata scompone la terminologia medica complessa in linguaggio semplice"
+    },
+    "secure": {
+      "title": "Conforme al GDPR",
+      "desc": "I tuoi dati sono crittografati e cancellati automaticamente dopo 30 giorni"
+    },
+    "fast": {
+      "title": "Risultati istantanei",
+      "desc": "Ottieni la spiegazione del tuo referto in meno di 60 secondi"
+    }
+  },
+  "howItWorks": {
+    "title": "Come funziona",
+    "step1": {
+      "title": "Carica",
+      "desc": "Carica il tuo referto in PDF, immagine o testo"
+    },
+    "step2": {
+      "title": "Estrai",
+      "desc": "L'OCR estrae il testo dal tuo documento"
+    },
+    "step3": {
+      "title": "Spiega",
+      "desc": "L'IA analizza e spiega in linguaggio semplice"
+    },
+    "step4": {
+      "title": "Chiedi",
+      "desc": "Fai domande di approfondimento sui tuoi risultati"
+    }
+  },
+  "problem": {
+    "heading": "Ti suona familiare?",
+    "subheading": "La maggior parte dei pazienti non capisce i propri risultati di laboratorio. Medyra spiega ogni valore chiaramente.",
+    "before": "Il tuo referto",
+    "after": "Cosa significa davvero"
+  },
+  "pricingCta": {
+    "title": "Prezzi semplici e trasparenti",
+    "subtitle": "Inizia con un referto gratuito. Nessuna carta di credito richiesta. Cancella in qualsiasi momento.",
+    "cta": "Vedi tutti i piani"
+  },
+  "pricing": {
+    "title": "Scegli il tuo piano",
+    "subtitle": "Inizia gratuitamente, aggiorna quando vuoi",
+    "mostPopular": "Più popolare",
+    "tiers": {
+      "free": {
+        "name": "Gratuito",
+        "price": "€0",
+        "period": "/mese",
+        "desc": "Perfetto per provare",
+        "cta": "Inizia",
+        "features": [
+          "1 referto al mese",
+          "Spiegazione in linguaggio semplice",
+          "Evidenziazione intervallo normale",
+          "Supporto base"
+        ]
+      },
+      "onetime": {
+        "name": "Una tantum",
+        "price": "€4,99",
+        "period": "/referto",
+        "desc": "Paga quando usi",
+        "cta": "Acquista ora",
+        "features": [
+          "Spiegazione completa",
+          "Domande di approfondimento",
+          "Esportazione PDF",
+          "Supporto prioritario"
+        ]
+      },
+      "personal": {
+        "name": "Personale",
+        "price": "€9",
+        "period": "/mese",
+        "desc": "La scelta più popolare",
+        "cta": "Abbonati",
+        "features": [
+          "Referti illimitati",
+          "Storico referti",
+          "Chat di approfondimento",
+          "Esportazione PDF",
+          "Supporto email"
+        ]
+      },
+      "family": {
+        "name": "Famiglia",
+        "price": "€19",
+        "period": "/mese",
+        "desc": "Per tutta la famiglia",
+        "cta": "Abbonati",
+        "features": [
+          "Fino a 5 membri",
+          "Storico condiviso",
+          "Modalità cura genitori/anziani",
+          "Tutte le funzionalità Personale",
+          "Dashboard familiare"
+        ]
+      },
+      "clinic": {
+        "name": "Clinica",
+        "price": "€199",
+        "period": "/mese",
+        "desc": "White-label per cliniche",
+        "cta": "Contatta le vendite",
+        "features": [
+          "Pazienti illimitati",
+          "Integrazione EHR",
+          "Marchio personalizzato",
+          "Supporto dedicato",
+          "Accesso API"
+        ]
+      }
+    }
+  },
+  "legal": {
+    "title": "Avviso legale importante",
+    "text": "Questo è uno strumento educativo e informativo, non un software medico. Medyra spiega il significato dei termini medici ma non fornisce consigli medici, diagnosi o raccomandazioni terapeutiche. Consulta sempre il tuo medico abilitato prima di prendere qualsiasi decisione sulla salute. I tuoi dati sono gestiti in conformità con il GDPR e cancellati automaticamente dopo 30 giorni."
+  },
+  "footer": {
+    "tagline": "Understand Your Medical Reports in Plain Language",
+    "privacy": "Informativa sulla privacy",
+    "terms": "Termini di servizio",
+    "contact": "Contatto",
+    "copyright": "© 2026 Medyra. Fatto con amore in Germania."
+  },
+  "upload": {
+    "title": "Carica referto medico",
+    "description": "Carica i tuoi risultati di laboratorio in formato PDF, immagine (JPG/PNG) o testo",
+    "dragDrop": "Trascina e rilascia il tuo file qui",
+    "or": "o clicca per sfogliare",
+    "camera": "Scatta una foto",
+    "analyzing": "Analisi del tuo referto...",
+    "extracting": "Estrazione del testo...",
+    "processing": "Elaborazione con IA...",
+    "formats": "Supportati: PDF, JPG, PNG, TXT",
+    "maxSize": "Dimensione max: 10MB",
+    "notice": "Avviso importante",
+    "noticeText": "Questo strumento fornisce solo informazioni educative e non sostituisce il consiglio medico professionale. Consulta sempre il tuo medico prima di prendere qualsiasi decisione sulla salute.",
+    "secureProcessing": "Elaborazione sicura",
+    "secureDesc": "Crittografato e cancellato automaticamente dopo 30 giorni",
+    "aiPowered": "Basato sull'IA",
+    "aiDesc": "Analisi avanzata Claude AI",
+    "gdprCompliant": "Conforme al GDPR",
+    "gdprDesc": "Standard di protezione dei dati UE",
+    "backToDashboard": "Torna alla dashboard",
+    "dropHere": "Rilascia il tuo rapporto qui",
+    "dropActive": "Rilascialo qui",
+    "orBrowse": "o clicca per sfogliare i file",
+    "autoCompressed": "Max 4 MB · Le immagini vengono compresse automaticamente",
+    "encryptedNote": "Crittografato · eliminato dopo 30 giorni",
+    "progressCompress": "Ottimizzazione dell'immagine…",
+    "progressUpload": "Caricamento sicuro…",
+    "progressExtract": "Lettura del rapporto…",
+    "progressAi": "L'IA analizza…",
+    "progressDone": "Quasi pronto…",
+    "progressDuration": "Di solito ci vogliono 20-40 secondi"
+  },
+  "dashboard": {
+    "welcome": "Benvenuto",
+    "yourPlan": "Il tuo piano",
+    "usage": "Utilizzo",
+    "recentReports": "Referti recenti",
+    "noReports": "Nessun referto ancora",
+    "uploadFirst": "Carica il tuo primo referto medico per iniziare",
+    "viewAll": "Vedi tutti",
+    "stats": "Statistiche",
+    "totalReports": "Referti totali",
+    "thisMonth": "Questo mese",
+    "quickActions": "Azioni rapide",
+    "uploadNew": "Carica nuovo referto",
+    "viewAllReports": "Vedi tutti i referti",
+    "approachingLimit": "Avvicinamento al limite",
+    "upgradePlan": "Aggiorna piano",
+    "remaining": "Rimanenti"
+  },
+  "report": {
+    "disclaimer": "Avvertenza medica",
+    "disclaimerText": "Questa è un'informazione educativa, non un consiglio medico. Consulta sempre il tuo medico.",
+    "summary": "Riepilogo",
+    "testResults": "Risultati dei test",
+    "normal": "Normale",
+    "high": "Alto",
+    "low": "Basso",
+    "critical": "Critico",
+    "yourResult": "Il tuo risultato",
+    "normalRange": "Intervallo normale",
+    "whatThisMeans": "Cosa significa il tuo risultato",
+    "whatThisTests": "Cosa misura questo test",
+    "questionsForDoctor": "Domande da fare al tuo medico",
+    "discussWithPhysician": "Queste domande possono aiutarti a discutere questo referto con il tuo medico",
+    "askQuestion": "Fai domande di approfondimento",
+    "moreInfo": "Ottieni maggiori informazioni sui tuoi risultati",
+    "askPlaceholder": "Fai una domanda sui tuoi risultati...",
+    "you": "Tu",
+    "ai": "IA",
+    "sending": "Invio in corso...",
+    "backToDashboard": "Torna alla dashboard",
+    "uploadedOn": "Caricato il",
+    "askQuestions": "Fai domande",
+    "copy": "Copia spiegazione",
+    "exportPDF": "Esporta PDF",
+    "print": "Stampa",
+    "resultsDistribution": "Distribuzione dei risultati",
+    "needAttention": "richiedono attenzione",
+    "allValuesNormal": "Tutti i valori sono normali",
+    "keyTakeaways": "Punti chiave",
+    "valuesNeedingAttention": "Valori che richiedono la sua attenzione",
+    "greatResults": "Ottimi risultati — discuta con il suo medico",
+    "allReports": "Tutti i rapporti",
+    "saveAsPdf": "Salva come PDF",
+    "chatGreeting": "Ciao! Ho letto il tuo rapporto. Chiedimi qualsiasi cosa:",
+    "chatQ1": "Riassumi i risultati più importanti",
+    "chatQ2": "Quali risultati richiedono attenzione urgente?",
+    "chatQ3": "Cosa devo chiedere al mio medico?",
+    "chatQ4": "Come si confrontano i miei risultati con l'ultima volta?",
+    "chatPoweredBy": "Alimentato da Claude · Solo educativo",
+    "chatLimitReached": "Limite di domande raggiunto per questo rapporto",
+    "chatLimitInfo": "Gratis: 5 domande/rapporto · Una volta: 15 · Personal/Family: illimitato",
+    "chatUpgrade": "Aggiorna per chat illimitata",
+    "chatPlaceholder": "Chiedi dei tuoi risultati…"
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "cancel": "Annulla",
+    "save": "Salva",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "back": "Indietro",
+    "next": "Avanti",
+    "submit": "Invia",
+    "close": "Chiudi"
+  },
+  "errors": {
+    "fileRequired": "Seleziona un file da caricare",
+    "fileTooLarge": "La dimensione del file deve essere inferiore a 10MB",
+    "unsupportedFormat": "Formato file non supportato",
+    "uploadFailed": "Caricamento fallito. Riprova.",
+    "analysisFailed": "Analisi fallita. Riprova.",
+    "unauthorized": "Accedi per continuare",
+    "limitReached": "Limite di utilizzo raggiunto. Aggiorna il tuo piano."
+  }
 }

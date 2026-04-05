@@ -1,16 +1,268 @@
 {
-  "nav": {"home":"Inicio","dashboard":"Panel","upload":"Subir informe","pricing":"Precios","signIn":"Iniciar sesión","signOut":"Cerrar sesión","language":"Idioma"},
-  "hero": {"trusted":"Cumple con RGPD · Made in Germany","title":"Tu informe médico,","subtitle":"Por fin en lenguaje claro","description":"Deja de buscar términos médicos en Google. Sube tus resultados y obtén una explicación clara y privada en menos de 60 segundos.","cta":"Analizar mi primer informe gratis","disclaimer":"Solo información educativa — no sustituye al consejo médico.","secondaryCta":"Ver precios"},
-  "features": {"ai":{"title":"Explicaciones impulsadas por IA","desc":"La IA avanzada desglosa la terminología médica compleja en lenguaje simple"},"secure":{"title":"Cumple con GDPR","desc":"Tus datos están encriptados y se eliminan automáticamente después de 30 días"},"fast":{"title":"Resultados instantáneos","desc":"Obtén tu informe explicado en menos de 60 segundos"}},
-  "howItWorks": {"title":"Cómo funciona","step1":{"title":"Subir","desc":"Sube tu informe en PDF, imagen o texto"},"step2":{"title":"Extraer","desc":"El OCR extrae el texto de tu documento"},"step3":{"title":"Explicar","desc":"La IA analiza y explica en lenguaje sencillo"},"step4":{"title":"Preguntar","desc":"Haz preguntas de seguimiento sobre tus resultados"}},
-  "problem": {"heading":"¿Te suena familiar?","subheading":"La mayoría de los pacientes no entienden sus resultados de laboratorio. Medyra explica cada valor con claridad.","before":"Tu informe de laboratorio","after":"Lo que realmente significa"},
-  "pricingCta": {"title":"Precios simples y transparentes","subtitle":"Empieza con un informe gratuito. Sin tarjeta de crédito. Cancela en cualquier momento.","cta":"Ver todos los planes"},
-  "pricing": {"title":"Elige tu plan","subtitle":"Comienza gratis, actualiza en cualquier momento","mostPopular":"Más popular","tiers":{"free":{"name":"Gratis","price":"€0","period":"/mes","desc":"Perfecto para probar","cta":"Comenzar","features":["1 informe por mes","Explicación en lenguaje simple","Destacados de rango normal","Soporte básico"]},"onetime":{"name":"Pago único","price":"€4,99","period":"/informe","desc":"Paga según uses","cta":"Comprar ahora","features":["Explicación completa","Preguntas de seguimiento","Exportar PDF","Soporte prioritario"]},"personal":{"name":"Personal","price":"€9","period":"/mes","desc":"La opción más popular","cta":"Suscribirse","features":["Informes ilimitados","Historial de informes","Chat de seguimiento","Exportar PDF","Soporte por email"]},"family":{"name":"Familia","price":"€19","period":"/mes","desc":"Para toda la familia","cta":"Suscribirse","features":["Hasta 5 miembros","Historial compartido","Modo cuidado de padres/mayores","Todas las funciones Personal","Panel familiar"]},"clinic":{"name":"Clínica","price":"€199","period":"/mes","desc":"Marca blanca para clínicas","cta":"Contactar ventas","features":["Pacientes ilimitados","Integración EHR","Marca personalizada","Soporte dedicado","Acceso API"]}}},
-  "legal": {"title":"Aviso legal importante","text":"Esta es una herramienta educativa e informativa, no un software médico. Medyra explica el significado de los términos médicos pero no proporciona consejos médicos, diagnósticos ni recomendaciones de tratamiento. Siempre consulta a tu médico licenciado antes de tomar cualquier decisión de salud. Tus datos se manejan de conformidad con el GDPR y se eliminan automáticamente después de 30 días."},
-  "footer": {"tagline": "Understand Your Medical Reports in Plain Language","privacy":"Política de privacidad","terms":"Términos de servicio","contact":"Contacto","copyright":"© 2026 Medyra. Hecho con amor en Alemania."},
-  "upload": {"title":"Subir informe médico","description":"Sube tus resultados de laboratorio en formato PDF, imagen (JPG/PNG) o texto","dragDrop":"Arrastra y suelta tu archivo aquí","or":"o haz clic para explorar","camera":"Tomar foto","analyzing":"Analizando tu informe...","extracting":"Extrayendo texto...","processing":"Procesando con IA...","formats":"Soportados: PDF, JPG, PNG, TXT","maxSize":"Tamaño máx: 10MB","notice":"Aviso importante","noticeText":"Esta herramienta proporciona solo información educativa y no es un sustituto del consejo médico profesional. Siempre consulta a tu médico antes de tomar cualquier decisión de salud.","secureProcessing":"Procesamiento seguro","secureDesc":"Encriptado y eliminado automáticamente después de 30 días","aiPowered":"Impulsado por IA","aiDesc":"Análisis avanzado de Claude AI","gdprCompliant":"Cumple con GDPR","gdprDesc":"Estándares de protección de datos de la UE","backToDashboard":"Volver al panel"},
-  "dashboard": {"welcome":"Bienvenido","yourPlan":"Tu plan","usage":"Uso","recentReports":"Informes recientes","noReports":"Aún no hay informes","uploadFirst":"Sube tu primer informe médico para comenzar","viewAll":"Ver todos","stats":"Estadísticas","totalReports":"Informes totales","thisMonth":"Este mes","quickActions":"Acciones rápidas","uploadNew":"Subir nuevo informe","viewAllReports":"Ver todos los informes","approachingLimit":"Acercándose al límite","upgradePlan":"Actualizar plan"},
-  "report": {"disclaimer":"Descargo médico","disclaimerText":"Esta es información educativa, no consejo médico. Siempre consulta a tu médico.","summary":"Resumen","testResults":"Resultados de pruebas","normal":"Normal","high":"Alto","low":"Bajo","critical":"Crítico","yourResult":"Tu resultado","normalRange":"Rango normal","whatThisMeans":"Qué significa tu resultado","whatThisTests":"Qué mide esta prueba","questionsForDoctor":"Preguntas para tu médico","discussWithPhysician":"Estas preguntas pueden ayudarte a discutir este informe con tu médico","askQuestion":"Hacer preguntas de seguimiento","moreInfo":"Obtener más información sobre tus resultados","askPlaceholder":"Haz una pregunta sobre tus resultados...","you":"Tú","ai":"IA","sending":"Enviando...","backToDashboard":"Volver al panel","uploadedOn":"Subido el","askQuestions":"Hacer preguntas","copy":"Copiar explicación","exportPDF":"Exportar PDF","print":"Imprimir"},
-  "common": {"loading":"Cargando...","error":"Error","success":"Éxito","cancel":"Cancelar","save":"Guardar","delete":"Eliminar","edit":"Editar","back":"Atrás","next":"Siguiente","submit":"Enviar","close":"Cerrar"},
-  "errors": {"fileRequired":"Por favor selecciona un archivo para subir","fileTooLarge":"El tamaño del archivo debe ser menor a 10MB","unsupportedFormat":"Formato de archivo no soportado","uploadFailed":"Subida fallida. Por favor intenta de nuevo.","analysisFailed":"Análisis fallido. Por favor intenta de nuevo.","unauthorized":"Por favor inicia sesión para continuar","limitReached":"Límite de uso alcanzado. Por favor actualiza tu plan."}
+  "nav": {
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "upload": "Subir informe",
+    "pricing": "Precios",
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "language": "Idioma"
+  },
+  "hero": {
+    "trusted": "Cumple con RGPD · Made in Germany",
+    "title": "Tu informe médico,",
+    "subtitle": "Por fin en lenguaje claro",
+    "description": "Deja de buscar términos médicos en Google. Sube tus resultados y obtén una explicación clara y privada en menos de 60 segundos.",
+    "cta": "Analizar mi primer informe gratis",
+    "disclaimer": "Solo información educativa — no sustituye al consejo médico.",
+    "secondaryCta": "Ver precios"
+  },
+  "features": {
+    "ai": {
+      "title": "Explicaciones impulsadas por IA",
+      "desc": "La IA avanzada desglosa la terminología médica compleja en lenguaje simple"
+    },
+    "secure": {
+      "title": "Cumple con GDPR",
+      "desc": "Tus datos están encriptados y se eliminan automáticamente después de 30 días"
+    },
+    "fast": {
+      "title": "Resultados instantáneos",
+      "desc": "Obtén tu informe explicado en menos de 60 segundos"
+    }
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "step1": {
+      "title": "Subir",
+      "desc": "Sube tu informe en PDF, imagen o texto"
+    },
+    "step2": {
+      "title": "Extraer",
+      "desc": "El OCR extrae el texto de tu documento"
+    },
+    "step3": {
+      "title": "Explicar",
+      "desc": "La IA analiza y explica en lenguaje sencillo"
+    },
+    "step4": {
+      "title": "Preguntar",
+      "desc": "Haz preguntas de seguimiento sobre tus resultados"
+    }
+  },
+  "problem": {
+    "heading": "¿Te suena familiar?",
+    "subheading": "La mayoría de los pacientes no entienden sus resultados de laboratorio. Medyra explica cada valor con claridad.",
+    "before": "Tu informe de laboratorio",
+    "after": "Lo que realmente significa"
+  },
+  "pricingCta": {
+    "title": "Precios simples y transparentes",
+    "subtitle": "Empieza con un informe gratuito. Sin tarjeta de crédito. Cancela en cualquier momento.",
+    "cta": "Ver todos los planes"
+  },
+  "pricing": {
+    "title": "Elige tu plan",
+    "subtitle": "Comienza gratis, actualiza en cualquier momento",
+    "mostPopular": "Más popular",
+    "tiers": {
+      "free": {
+        "name": "Gratis",
+        "price": "€0",
+        "period": "/mes",
+        "desc": "Perfecto para probar",
+        "cta": "Comenzar",
+        "features": [
+          "1 informe por mes",
+          "Explicación en lenguaje simple",
+          "Destacados de rango normal",
+          "Soporte básico"
+        ]
+      },
+      "onetime": {
+        "name": "Pago único",
+        "price": "€4,99",
+        "period": "/informe",
+        "desc": "Paga según uses",
+        "cta": "Comprar ahora",
+        "features": [
+          "Explicación completa",
+          "Preguntas de seguimiento",
+          "Exportar PDF",
+          "Soporte prioritario"
+        ]
+      },
+      "personal": {
+        "name": "Personal",
+        "price": "€9",
+        "period": "/mes",
+        "desc": "La opción más popular",
+        "cta": "Suscribirse",
+        "features": [
+          "Informes ilimitados",
+          "Historial de informes",
+          "Chat de seguimiento",
+          "Exportar PDF",
+          "Soporte por email"
+        ]
+      },
+      "family": {
+        "name": "Familia",
+        "price": "€19",
+        "period": "/mes",
+        "desc": "Para toda la familia",
+        "cta": "Suscribirse",
+        "features": [
+          "Hasta 5 miembros",
+          "Historial compartido",
+          "Modo cuidado de padres/mayores",
+          "Todas las funciones Personal",
+          "Panel familiar"
+        ]
+      },
+      "clinic": {
+        "name": "Clínica",
+        "price": "€199",
+        "period": "/mes",
+        "desc": "Marca blanca para clínicas",
+        "cta": "Contactar ventas",
+        "features": [
+          "Pacientes ilimitados",
+          "Integración EHR",
+          "Marca personalizada",
+          "Soporte dedicado",
+          "Acceso API"
+        ]
+      }
+    }
+  },
+  "legal": {
+    "title": "Aviso legal importante",
+    "text": "Esta es una herramienta educativa e informativa, no un software médico. Medyra explica el significado de los términos médicos pero no proporciona consejos médicos, diagnósticos ni recomendaciones de tratamiento. Siempre consulta a tu médico licenciado antes de tomar cualquier decisión de salud. Tus datos se manejan de conformidad con el GDPR y se eliminan automáticamente después de 30 días."
+  },
+  "footer": {
+    "tagline": "Understand Your Medical Reports in Plain Language",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio",
+    "contact": "Contacto",
+    "copyright": "© 2026 Medyra. Hecho con amor en Alemania."
+  },
+  "upload": {
+    "title": "Subir informe médico",
+    "description": "Sube tus resultados de laboratorio en formato PDF, imagen (JPG/PNG) o texto",
+    "dragDrop": "Arrastra y suelta tu archivo aquí",
+    "or": "o haz clic para explorar",
+    "camera": "Tomar foto",
+    "analyzing": "Analizando tu informe...",
+    "extracting": "Extrayendo texto...",
+    "processing": "Procesando con IA...",
+    "formats": "Soportados: PDF, JPG, PNG, TXT",
+    "maxSize": "Tamaño máx: 10MB",
+    "notice": "Aviso importante",
+    "noticeText": "Esta herramienta proporciona solo información educativa y no es un sustituto del consejo médico profesional. Siempre consulta a tu médico antes de tomar cualquier decisión de salud.",
+    "secureProcessing": "Procesamiento seguro",
+    "secureDesc": "Encriptado y eliminado automáticamente después de 30 días",
+    "aiPowered": "Impulsado por IA",
+    "aiDesc": "Análisis avanzado de Claude AI",
+    "gdprCompliant": "Cumple con GDPR",
+    "gdprDesc": "Estándares de protección de datos de la UE",
+    "backToDashboard": "Volver al panel",
+    "dropHere": "Suelte su informe aquí",
+    "dropActive": "Suéltelo aquí",
+    "orBrowse": "o haga clic para explorar archivos",
+    "autoCompressed": "Máx. 4 MB · Las imágenes se comprimen automáticamente",
+    "encryptedNote": "Cifrado · eliminado después de 30 días",
+    "progressCompress": "Optimizando imagen…",
+    "progressUpload": "Subiendo de forma segura…",
+    "progressExtract": "Leyendo su informe…",
+    "progressAi": "La IA analiza…",
+    "progressDone": "Casi listo…",
+    "progressDuration": "Esto suele tardar entre 20 y 40 segundos"
+  },
+  "dashboard": {
+    "welcome": "Bienvenido",
+    "yourPlan": "Tu plan",
+    "usage": "Uso",
+    "recentReports": "Informes recientes",
+    "noReports": "Aún no hay informes",
+    "uploadFirst": "Sube tu primer informe médico para comenzar",
+    "viewAll": "Ver todos",
+    "stats": "Estadísticas",
+    "totalReports": "Informes totales",
+    "thisMonth": "Este mes",
+    "quickActions": "Acciones rápidas",
+    "uploadNew": "Subir nuevo informe",
+    "viewAllReports": "Ver todos los informes",
+    "approachingLimit": "Acercándose al límite",
+    "upgradePlan": "Actualizar plan",
+    "remaining": "Restantes"
+  },
+  "report": {
+    "disclaimer": "Descargo médico",
+    "disclaimerText": "Esta es información educativa, no consejo médico. Siempre consulta a tu médico.",
+    "summary": "Resumen",
+    "testResults": "Resultados de pruebas",
+    "normal": "Normal",
+    "high": "Alto",
+    "low": "Bajo",
+    "critical": "Crítico",
+    "yourResult": "Tu resultado",
+    "normalRange": "Rango normal",
+    "whatThisMeans": "Qué significa tu resultado",
+    "whatThisTests": "Qué mide esta prueba",
+    "questionsForDoctor": "Preguntas para tu médico",
+    "discussWithPhysician": "Estas preguntas pueden ayudarte a discutir este informe con tu médico",
+    "askQuestion": "Hacer preguntas de seguimiento",
+    "moreInfo": "Obtener más información sobre tus resultados",
+    "askPlaceholder": "Haz una pregunta sobre tus resultados...",
+    "you": "Tú",
+    "ai": "IA",
+    "sending": "Enviando...",
+    "backToDashboard": "Volver al panel",
+    "uploadedOn": "Subido el",
+    "askQuestions": "Hacer preguntas",
+    "copy": "Copiar explicación",
+    "exportPDF": "Exportar PDF",
+    "print": "Imprimir",
+    "resultsDistribution": "Distribución de resultados",
+    "needAttention": "requieren atención",
+    "allValuesNormal": "Todos los valores son normales",
+    "keyTakeaways": "Puntos clave",
+    "valuesNeedingAttention": "Valores que requieren su atención",
+    "greatResults": "Excelentes resultados — consulte con su médico",
+    "allReports": "Todos los informes",
+    "saveAsPdf": "Guardar como PDF",
+    "chatGreeting": "¡Hola! He leído su informe. Pregúnteme lo que quiera:",
+    "chatQ1": "Resume los hallazgos más importantes",
+    "chatQ2": "¿Qué resultados necesitan atención urgente?",
+    "chatQ3": "¿Qué debo preguntarle a mi médico?",
+    "chatQ4": "¿Cómo se comparan mis resultados con la última vez?",
+    "chatPoweredBy": "Desarrollado por Claude · Solo educativo",
+    "chatLimitReached": "Límite de preguntas alcanzado para este informe",
+    "chatLimitInfo": "Gratuito: 5 preguntas/informe · Único: 15 · Personal/Family: ilimitado",
+    "chatUpgrade": "Actualizar para chat ilimitado",
+    "chatPlaceholder": "Pregunte sobre sus resultados…"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "submit": "Enviar",
+    "close": "Cerrar"
+  },
+  "errors": {
+    "fileRequired": "Por favor selecciona un archivo para subir",
+    "fileTooLarge": "El tamaño del archivo debe ser menor a 10MB",
+    "unsupportedFormat": "Formato de archivo no soportado",
+    "uploadFailed": "Subida fallida. Por favor intenta de nuevo.",
+    "analysisFailed": "Análisis fallido. Por favor intenta de nuevo.",
+    "unauthorized": "Por favor inicia sesión para continuar",
+    "limitReached": "Límite de uso alcanzado. Por favor actualiza tu plan."
+  }
 }
