@@ -123,7 +123,7 @@ export default function PricingPage() {
         {/* Hero */}
         <div className="text-center mb-14">
           {/* Launch offer banner */}
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-5 shadow-lg shadow-orange-200 animate-pulse">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-5 shadow-lg shadow-emerald-200 animate-pulse">
             {t('pricing.launchOfferBanner')}
           </div>
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-3">{t('pricing.title')}</h1>
@@ -131,16 +131,16 @@ export default function PricingPage() {
 
           {/* Coupon claim box */}
           <div className="inline-block max-w-md w-full">
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-300 rounded-2xl p-5 shadow-md">
-              <p className="text-xs font-bold text-orange-600 uppercase tracking-widest mb-1">{t('pricing.limitedOffer')}</p>
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-2xl p-5 shadow-md">
+              <p className="text-xs font-bold text-emerald-700 uppercase tracking-widest mb-1">{t('pricing.limitedOffer')}</p>
               <p className="text-2xl font-black text-gray-900 mb-1">{t('pricing.fiftyOff')}</p>
               <p className="text-sm text-gray-500 mb-4">{t('pricing.applyCode')}</p>
               <button
                 onClick={copyCoupon}
-                className="w-full flex items-center justify-between bg-white border-2 border-orange-300 hover:border-orange-500 rounded-xl px-4 py-4 transition-all group"
+                className="w-full flex items-center justify-between bg-white border-2 border-emerald-200 hover:border-emerald-400 rounded-xl px-4 py-4 transition-all group"
               >
-                <span className="text-xl font-black tracking-widest text-orange-600">LAUNCH50</span>
-                <span className={`flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-lg transition-all ${copied ? 'bg-emerald-500 text-white' : 'bg-orange-500 hover:bg-orange-600 text-white'}`}>
+                <span className="text-xl font-black tracking-widest text-emerald-700">LAUNCH50</span>
+                <span className={`flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-lg transition-all ${copied ? 'bg-emerald-500 text-white' : 'bg-emerald-600 hover:bg-emerald-700 text-white'}`}>
                   {copied ? <><CheckCheck className="h-3.5 w-3.5" /> {t('pricing.copied')}</> : <><Copy className="h-3.5 w-3.5" /> {t('pricing.copyCode')}</>}
                 </span>
               </button>
@@ -171,13 +171,13 @@ export default function PricingPage() {
                 `}
               >
                 {tier.highlighted && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-emerald-500 text-white text-xs px-3 py-0.5 shadow">{t('pricing.mostPopular')}</Badge>
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                    <Badge className="bg-emerald-500 text-white text-[11px] px-3 py-1 shadow whitespace-nowrap">{t('pricing.mostPopular')}</Badge>
                   </div>
                 )}
                 {tier.isClinic && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-gray-500 text-white text-xs px-3 py-0.5 shadow">{t('pricing.comingSoon')}</Badge>
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                    <Badge className="bg-gray-500 text-white text-[11px] px-3 py-1 shadow whitespace-nowrap">{t('pricing.comingSoon')}</Badge>
                   </div>
                 )}
 
@@ -189,7 +189,7 @@ export default function PricingPage() {
                   <div>
                     <p className="font-bold text-gray-900 text-sm leading-tight">{tier.name}</p>
                     {tier.originalPrice && (
-                      <Badge className="bg-orange-500 text-white text-xs px-1.5 py-0 mt-0.5">{t('pricing.launchBadge')}</Badge>
+                      <Badge className="bg-gradient-to-r from-teal-500 to-emerald-600 text-white text-[10px] px-2 py-0 mt-0.5 whitespace-nowrap">{t('pricing.launchBadge')}</Badge>
                     )}
                   </div>
                 </div>
@@ -204,7 +204,7 @@ export default function PricingPage() {
                     <span className="text-gray-400 text-xs">{tier.period}</span>
                   </div>
                   {tier.originalPrice && (
-                    <p className="text-xs text-orange-600 font-medium">{t('pricing.launchNote')}</p>
+                    <p className="text-xs text-emerald-700 font-medium">{t('pricing.launchNote')}</p>
                   )}
                 </div>
 
@@ -269,10 +269,10 @@ export default function PricingPage() {
 
         {/* Trust badges */}
         <div className="flex flex-wrap justify-center gap-6 mb-16 text-sm text-gray-500">
-          <div className="flex items-center gap-2"><Shield className="h-4 w-4 text-emerald-500" /> GDPR Compliant</div>
-          <div className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> Cancel anytime</div>
-          <div className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> No hidden fees</div>
-          <div className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> Data deleted after 30 days</div>
+          <div className="flex items-center gap-2"><Shield className="h-4 w-4 text-emerald-500" /> {t('pricing.gdprCompliant')}</div>
+          <div className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> {t('pricing.cancelAnytime')}</div>
+          <div className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> {t('pricing.noHiddenFees')}</div>
+          <div className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500" /> {t('pricing.dataDeleted')}</div>
         </div>
 
         {/* FAQ */}

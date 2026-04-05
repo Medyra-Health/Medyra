@@ -151,7 +151,11 @@
     "applyCode": "チェックアウト時にコードを入力。全有料プランで有効。",
     "copied": "コピーしました！",
     "copyCode": "コードをコピー",
-    "pasteCode": "このコードをStripeの支払いページに貼り付けてください"
+    "pasteCode": "このコードをStripeの支払いページに貼り付けてください",
+    "gdprCompliant": "GDPR準拠",
+    "cancelAnytime": "いつでもキャンセル可能",
+    "noHiddenFees": "隠れた費用なし",
+    "dataDeleted": "30日後にデータ削除"
   },
   "legal": {
     "title": "重要な法的通知",

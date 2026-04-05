@@ -151,7 +151,11 @@
     "applyCode": "Aplica el código al pagar. Válido en todos los planes de pago.",
     "copied": "¡Copiado!",
     "copyCode": "Copiar código",
-    "pasteCode": "Pega este código en la página de pago de Stripe"
+    "pasteCode": "Pega este código en la página de pago de Stripe",
+    "gdprCompliant": "Cumple con GDPR",
+    "cancelAnytime": "Cancela cuando quieras",
+    "noHiddenFees": "Sin cargos ocultos",
+    "dataDeleted": "Datos eliminados en 30 días"
   },
   "legal": {
     "title": "Aviso legal importante",

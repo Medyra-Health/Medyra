@@ -63,81 +63,83 @@
   },
   "pricing": {
     "title": "Kies uw abonnement",
-    "subtitle": "Begin gratis, upgrade op elk moment",
+    "subtitle": "Lanceringaanbieding actief — 50% korting op alle betaalde plannen",
     "mostPopular": "Meest populair",
     "tiers": {
       "free": {
         "name": "Gratis",
         "price": "€0",
-        "period": "/mnd",
-        "desc": "Perfect om te proberen",
-        "cta": "Beginnen",
+        "originalPrice": "",
+        "period": "altijd",
+        "desc": "Start zonder verplichtingen",
+        "cta": "Gratis beginnen",
         "features": [
-          "1 rapport per maand",
+          "Eerste 3 rapporten gratis",
+          "5 AI-vragen per rapport",
           "Uitleg in gewone taal",
-          "Normaal bereik highlights",
-          "Basis ondersteuning"
-        ],
-        "originalPrice": ""
+          "Afwijkende waarden gemarkeerd",
+          "Geen creditcard vereist"
+        ]
       },
       "onetime": {
         "name": "Eenmalig",
-        "price": "€4,99",
+        "price": "€2,50",
+        "originalPrice": "€4,99",
         "period": "/rapport",
-        "desc": "Betaal wanneer u gebruikt",
+        "desc": "Geen abonnement, betaal per gebruik",
         "cta": "Nu kopen",
         "features": [
-          "Volledige uitleg",
-          "Vervolgvragen",
+          "Volledige AI-uitleg",
+          "15 AI-vragen per rapport",
           "PDF export",
           "Prioritaire ondersteuning"
-        ],
-        "originalPrice": "€4.99"
+        ]
       },
       "personal": {
         "name": "Persoonlijk",
         "price": "€9",
+        "originalPrice": "€18",
         "period": "/mnd",
-        "desc": "De meest populaire keuze",
-        "cta": "Abonneren",
+        "desc": "Voor mensen die hun gezondheid bijhouden",
+        "cta": "Aanbieding claimen",
         "features": [
           "Onbeperkte rapporten",
-          "Rapportgeschiedenis",
-          "Vervolg chat",
+          "50 AI-vragen per rapport",
+          "Volledige rapportgeschiedenis",
           "PDF export",
-          "E-mail ondersteuning"
-        ],
-        "originalPrice": "€18"
+          "E-mailondersteuning"
+        ]
       },
       "family": {
         "name": "Familie",
         "price": "€19",
+        "originalPrice": "€38",
         "period": "/mnd",
-        "desc": "Voor het hele gezin",
-        "cta": "Abonneren",
+        "desc": "Voor gezinnen die gezondheid samen beheren",
+        "cta": "Aanbieding claimen",
         "features": [
-          "Tot 5 leden",
-          "Gedeelde geschiedenis",
-          "Ouders/ouderen zorgmodus",
-          "Alle Persoonlijk functies",
-          "Familie dashboard"
-        ],
-        "originalPrice": "€38"
+          "Onbeperkte rapporten",
+          "100 AI-vragen per rapport",
+          "Volledige rapportgeschiedenis",
+          "PDF export",
+          "Prioritaire ondersteuning"
+        ]
       },
       "clinic": {
         "name": "Kliniek",
         "price": "€199",
+        "originalPrice": "",
         "period": "/mnd",
-        "desc": "White-label voor klinieken",
+        "desc": "White-label oplossing voor klinieken",
         "cta": "Verkoop contacteren",
         "features": [
           "Onbeperkte patiënten",
-          "EHR integratie",
-          "Aangepast merk",
+          "100 AI-vragen per rapport",
+          "Aangepaste branding",
           "Dedicated ondersteuning",
-          "API toegang"
-        ],
-        "originalPrice": ""
+          "EHR-integratie (binnenkort)",
+          "API-toegang (binnenkort)"
+        ]
       }
     },
     "launchBadge": "50% KORTING",
@@ -151,7 +153,11 @@
     "applyCode": "Voer de code in bij het afrekenen. Geldig voor alle betaalde plannen.",
     "copied": "Gekopieerd!",
     "copyCode": "Code kopiëren",
-    "pasteCode": "Plak deze code op de Stripe-betaalpagina"
+    "pasteCode": "Plak deze code op de Stripe-betaalpagina",
+    "gdprCompliant": "AVG-conform",
+    "cancelAnytime": "Op elk moment opzegbaar",
+    "noHiddenFees": "Geen verborgen kosten",
+    "dataDeleted": "Gegevens verwijderd na 30 dagen"
   },
   "legal": {
     "title": "Belangrijk juridisch bericht",

@@ -151,7 +151,11 @@
     "applyCode": "Wprowadź kod przy kasie. Obowiązuje dla wszystkich płatnych planów.",
     "copied": "Skopiowano!",
     "copyCode": "Kopiuj kod",
-    "pasteCode": "Wklej ten kod na stronie płatności Stripe"
+    "pasteCode": "Wklej ten kod na stronie płatności Stripe",
+    "gdprCompliant": "Zgodny z RODO",
+    "cancelAnytime": "Anuluj kiedy chcesz",
+    "noHiddenFees": "Brak ukrytych opłat",
+    "dataDeleted": "Dane usunięte po 30 dniach"
   },
   "legal": {
     "title": "Ważna informacja prawna",

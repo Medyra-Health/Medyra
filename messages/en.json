@@ -153,7 +153,11 @@
     "applyCode": "Apply code at checkout. Works on all paid plans.",
     "copied": "Copied!",
     "copyCode": "Copy code",
-    "pasteCode": "Paste this code at the Stripe checkout page"
+    "pasteCode": "Paste this code at the Stripe checkout page",
+    "gdprCompliant": "GDPR Compliant",
+    "cancelAnytime": "Cancel anytime",
+    "noHiddenFees": "No hidden fees",
+    "dataDeleted": "Data deleted after 30 days"
   },
   "legal": {
     "title": "Important Legal Notice",

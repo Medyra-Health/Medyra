@@ -151,7 +151,11 @@
     "applyCode": "在结账时输入代码。适用于所有付费计划。",
     "copied": "已复制！",
     "copyCode": "复制代码",
-    "pasteCode": "将此代码粘贴到Stripe结账页面"
+    "pasteCode": "将此代码粘贴到Stripe结账页面",
+    "gdprCompliant": "GDPR合规",
+    "cancelAnytime": "随时取消",
+    "noHiddenFees": "无隐藏费用",
+    "dataDeleted": "30天后数据删除"
   },
   "legal": {
     "title": "重要法律声明",
