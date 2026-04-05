@@ -12,22 +12,24 @@ import JsonLd from '@/components/JsonLd'
 import MedyraLogo from '@/components/MedyraLogo'
 
 const LANGUAGES = [
-  { flag: '🇩🇪', name: 'Deutsch' },
-  { flag: '🇬🇧', name: 'English' },
-  { flag: '🇫🇷', name: 'Français' },
-  { flag: '🇪🇸', name: 'Español' },
-  { flag: '🇦🇪', name: 'العربية' },
-  { flag: '🇨🇳', name: '中文' },
-  { flag: '🇯🇵', name: '日本語' },
-  { flag: '🇵🇹', name: 'Português' },
-  { flag: '🇷🇺', name: 'Русский' },
-  { flag: '🇹🇷', name: 'Türkçe' },
-  { flag: '🇮🇳', name: 'हिन्दी' },
-  { flag: '🇮🇹', name: 'Italiano' },
-  { flag: '🇳🇱', name: 'Nederlands' },
-  { flag: '🇵🇱', name: 'Polski' },
-  { flag: '🇰🇷', name: '한국어' },
-  { flag: '🇸🇪', name: 'Svenska' },
+  { code: 'DE', name: 'Deutsch' },
+  { code: 'GB', name: 'English' },
+  { code: 'FR', name: 'Français' },
+  { code: 'ES', name: 'Español' },
+  { code: 'AE', name: 'العربية' },
+  { code: 'CN', name: '中文' },
+  { code: 'JP', name: '日本語' },
+  { code: 'PT', name: 'Português' },
+  { code: 'RU', name: 'Русский' },
+  { code: 'TR', name: 'Türkçe' },
+  { code: 'IN', name: 'हिन्दी' },
+  { code: 'PK', name: 'اردو' },
+  { code: 'BD', name: 'বাংলা' },
+  { code: 'IT', name: 'Italiano' },
+  { code: 'NL', name: 'Nederlands' },
+  { code: 'PL', name: 'Polski' },
+  { code: 'KR', name: '한국어' },
+  { code: 'SE', name: 'Svenska' },
 ]
 
 export default function LandingPage() {
@@ -248,7 +250,7 @@ export default function LandingPage() {
             {[
               { value: '3', label: 'Free reports to start' },
               { value: '~30s', label: 'Average analysis time' },
-              { value: '16', label: 'Languages supported' },
+              { value: '18', label: 'Languages supported' },
               { value: '256-bit', label: 'AES encryption' },
             ].map(({ value, label }) => (
               <div key={label}>
@@ -493,12 +495,13 @@ export default function LandingPage() {
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">Global reach</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Available in 16 languages</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Available in 18 languages</h2>
           <p className="text-gray-400 text-base mb-10">From Germany to the world — understand your health in your own language.</p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {LANGUAGES.map(({ flag, name }) => (
-              <span key={name} className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800 border border-gray-700 text-sm text-gray-300 hover:border-emerald-500/40 hover:text-white transition-colors">
-                <span>{flag}</span> {name}
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+            {LANGUAGES.map(({ code, name }) => (
+              <span key={code} className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800 border border-gray-700 text-sm text-gray-300 hover:border-emerald-500/40 hover:text-white transition-colors">
+                <span className="text-[10px] font-bold text-gray-500 tracking-widest">{code}</span>
+                <span>{name}</span>
               </span>
             ))}
           </div>
