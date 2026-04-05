@@ -20,6 +20,7 @@ const languages = [
   { code: 'ja', name: '日本語', flag: '🇯🇵' },
   { code: 'ko', name: '한국어', flag: '🇰🇷' },
   { code: 'hi', name: 'हिन्दी', flag: '🇮🇳' },
+  { code: 'ur', name: 'اردو', flag: '🇵🇰' },
   { code: 'ru', name: 'Русский', flag: '🇷🇺' }
 ];
 
@@ -32,7 +33,7 @@ export default function LanguageSwitcher() {
   useEffect(() => {
     const saved = localStorage.getItem('preferredLanguage') || 'en';
     setLocale(saved);
-    if (saved === 'ar') {
+    if (saved === 'ar' || saved === 'ur') {
       document.documentElement.setAttribute('dir', 'rtl');
     } else {
       document.documentElement.setAttribute('dir', 'ltr');
@@ -45,7 +46,7 @@ export default function LanguageSwitcher() {
     // Set cookie so server components (layout) can read the locale
     document.cookie = `locale=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
     setLocale(newLocale);
-    document.documentElement.setAttribute('dir', newLocale === 'ar' ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('dir', (newLocale === 'ar' || newLocale === 'ur') ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', newLocale);
     setIsOpen(false);
     router.refresh();
