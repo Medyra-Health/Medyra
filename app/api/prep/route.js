@@ -1,19 +1,20 @@
 import { NextResponse } from 'next/server'
-import { auth, currentUser } from '@clerk/nextjs/server'
+import { auth, clerkClient } from '@clerk/nextjs/server'
 import Anthropic from '@anthropic-ai/sdk'
 import { MongoClient } from 'mongodb'
 
 const ADMIN_EMAIL = 'abralur28@gmail.com'
 
-async function isAdminUser(mongoUser) {
-  // 1. Most reliable: tier set directly in MongoDB
+async function isAdminUser(userId, mongoUser) {
+  // 1. MongoDB tier (fastest — set once via activate endpoint)
   if (mongoUser?.subscription?.tier === 'admin') return true
-  // 2. Email stored in MongoDB user document
+  // 2. MongoDB email field
   if (mongoUser?.email === ADMIN_EMAIL) return true
-  // 3. Fallback: Clerk session (network call)
+  // 3. Clerk backend SDK — uses secret key, doesn't need session cookie
   try {
-    const clerkUser = await currentUser()
-    if (clerkUser?.emailAddresses?.some(e => e.emailAddress === ADMIN_EMAIL)) return true
+    const clerk = await clerkClient()
+    const user = await clerk.users.getUser(userId)
+    if (user.emailAddresses?.some(e => e.emailAddress === ADMIN_EMAIL)) return true
   } catch {}
   return false
 }
@@ -103,7 +104,7 @@ export async function POST(request) {
   // ── Tier + usage check ───────────────────────────────────────────────────
   const db = await getDb()
   const user = await db.collection('users').findOne({ clerkId: userId })
-  const admin = await isAdminUser(user)
+  const admin = await isAdminUser(userId, user)
 
   const tier = user?.subscription?.tier || 'free'
   const effectiveTier = admin ? 'admin' : tier
@@ -148,7 +149,7 @@ export async function POST(request) {
     return NextResponse.json({ error: 'AI service unavailable. Please try again.' }, { status: 502 })
   }
 
-  // ── Record usage + store output for history ──────────────────────────────
+  // ── Record usage + store input/output for history ────────────────────────
   await db.collection('users').updateOne(
     { clerkId: userId },
     {
@@ -156,6 +157,7 @@ export async function POST(request) {
         prepDocs: {
           id: Date.now().toString(),
           createdAt: new Date(),
+          input: cappedInput,          // original prompt (for history display)
           inputLength: cappedInput.length,
           output,
         }
@@ -175,7 +177,7 @@ export async function GET() {
 
   const db = await getDb()
   const user = await db.collection('users').findOne({ clerkId: userId })
-  const admin = await isAdminUser(user)
+  const admin = await isAdminUser(userId, user)
 
   const tier = user?.subscription?.tier || 'free'
   const effectiveTier = admin ? 'admin' : tier
@@ -191,10 +193,10 @@ export async function GET() {
 
   // Return last 10 docs for history (most recent first)
   const history = (user?.prepDocs || [])
-    .filter(d => d.output) // only docs that have stored output
-    .slice(-10)
+    .filter(d => d.output)
+    .slice(-20)
     .reverse()
-    .map(d => ({ id: d.id || d.createdAt, createdAt: d.createdAt, output: d.output }))
+    .map(d => ({ id: d.id || String(d.createdAt), createdAt: d.createdAt, input: d.input || '', output: d.output }))
 
   return NextResponse.json({
     tier: effectiveTier,
