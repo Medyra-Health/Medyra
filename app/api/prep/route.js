@@ -6,13 +6,15 @@ import { MongoClient } from 'mongodb'
 const ADMIN_EMAIL = 'abralur28@gmail.com'
 
 async function isAdminUser(mongoUser) {
-  // Check Clerk session first (authoritative)
+  // 1. Most reliable: tier set directly in MongoDB
+  if (mongoUser?.subscription?.tier === 'admin') return true
+  // 2. Email stored in MongoDB user document
+  if (mongoUser?.email === ADMIN_EMAIL) return true
+  // 3. Fallback: Clerk session (network call)
   try {
     const clerkUser = await currentUser()
     if (clerkUser?.emailAddresses?.some(e => e.emailAddress === ADMIN_EMAIL)) return true
   } catch {}
-  // Fallback: check email stored in MongoDB user document
-  if (mongoUser?.email === ADMIN_EMAIL) return true
   return false
 }
 
@@ -146,11 +148,18 @@ export async function POST(request) {
     return NextResponse.json({ error: 'AI service unavailable. Please try again.' }, { status: 502 })
   }
 
-  // ── Record usage ─────────────────────────────────────────────────────────
+  // ── Record usage + store output for history ──────────────────────────────
   await db.collection('users').updateOne(
     { clerkId: userId },
     {
-      $push: { prepDocs: { createdAt: new Date(), inputLength: cappedInput.length } },
+      $push: {
+        prepDocs: {
+          id: Date.now().toString(),
+          createdAt: new Date(),
+          inputLength: cappedInput.length,
+          output,
+        }
+      },
       $set: { updatedAt: new Date() },
     },
     { upsert: true }
@@ -180,11 +189,19 @@ export async function GET() {
     d => new Date(d.createdAt) >= startOfMonth
   ).length
 
+  // Return last 10 docs for history (most recent first)
+  const history = (user?.prepDocs || [])
+    .filter(d => d.output) // only docs that have stored output
+    .slice(-10)
+    .reverse()
+    .map(d => ({ id: d.id || d.createdAt, createdAt: d.createdAt, output: d.output }))
+
   return NextResponse.json({
     tier: effectiveTier,
     limit: monthLimit,
     used: usedThisMonth,
     unlimited: monthLimit === null,
     canUse: monthLimit === null || usedThisMonth < monthLimit,
+    history,
   })
 }

@@ -4,8 +4,8 @@ import { useUser } from '@clerk/nextjs'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState, useCallback } from 'react'
 import {
-  Users, FileText, DollarSign, TrendingUp, RefreshCw,
-  Crown, Shield, AlertCircle, MessageSquare, Zap, ExternalLink
+  Users, FileText, TrendingUp, RefreshCw,
+  Crown, Shield, AlertCircle, MessageSquare, Zap, ExternalLink, Euro, Stethoscope
 } from 'lucide-react'
 import dynamic from 'next/dynamic'
 
@@ -137,7 +137,7 @@ export default function AdminPage() {
     )
   }
 
-  const { users, reports, revenue, subscriptionBreakdown, recentUsers, recentReports, chartData, chatStats } = data
+  const { users, reports, revenue, subscriptionBreakdown, recentUsers, recentReports, chartData, chatStats, prepStats } = data
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -174,7 +174,7 @@ export default function AdminPage() {
         {/* Stat cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <StatCard
-            title="Total Users"
+            title="Total Members"
             value={users.total.toLocaleString()}
             sub={`+${users.today} today · +${users.thisWeek} this week`}
             icon={Users}
@@ -183,7 +183,7 @@ export default function AdminPage() {
           <StatCard
             title="Reports Analyzed"
             value={reports.total.toLocaleString()}
-            sub={`+${reports.today} today · avg ${reports.avgPerUser}/user`}
+            sub={`+${reports.today} today · avg ${reports.avgPerUser}/member`}
             icon={FileText}
             color="purple"
           />
@@ -191,11 +191,11 @@ export default function AdminPage() {
             title="Total Revenue"
             value={`€${revenue.total}`}
             sub={`€${revenue.thisMonth} this month`}
-            icon={DollarSign}
+            icon={Euro}
             color="green"
           />
           <StatCard
-            title="Paid Users"
+            title="Paid Members"
             value={revenue.paidUsers.toLocaleString()}
             sub={`${revenue.freeUsers} on free plan`}
             icon={Crown}
@@ -242,11 +242,12 @@ export default function AdminPage() {
                   <Zap className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm font-semibold text-orange-800">
-                      Estimated AI cost: <span className="text-orange-600">${chatStats.estimatedCostUSD} USD</span>
+                      Estimated AI cost (chat): <span className="text-orange-600">≈€{(chatStats.estimatedCostUSD * 0.92).toFixed(4)}</span>
+                      <span className="text-orange-400 font-normal ml-1">(${chatStats.estimatedCostUSD} USD)</span>
                     </p>
                     <p className="text-xs text-orange-600 mt-0.5">
                       Based on ~1,200 input + 350 output tokens/message at claude-sonnet-4-6 pricing ($3/M input · $15/M output).
-                      Actual cost may vary. Check your{' '}
+                      Check your{' '}
                       <a href="https://console.anthropic.com/settings/billing" target="_blank" rel="noopener noreferrer" className="underline font-medium">
                         Anthropic billing
                       </a>{' '}
@@ -290,6 +291,57 @@ export default function AdminPage() {
                   Free: 5 · One-Time: 15 · Personal: 50 · Family/Clinic: 100
                 </p>
               </div>
+            </div>
+          </div>
+        )}
+
+        {/* Doctor Visit Prep stats */}
+        {prepStats && (
+          <div className="grid lg:grid-cols-3 gap-4">
+            <div className="lg:col-span-2 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+              <div className="flex items-center gap-2 mb-4">
+                <Stethoscope className="h-5 w-5 text-violet-600" />
+                <h2 className="text-sm font-semibold text-gray-700">Doctor Visit Prep — AI Summaries</h2>
+              </div>
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="text-center p-3 bg-violet-50 rounded-xl border border-violet-100">
+                  <p className="text-2xl font-bold text-violet-700">{prepStats.total.toLocaleString()}</p>
+                  <p className="text-xs text-violet-600 mt-0.5">Total summaries generated</p>
+                </div>
+                <div className="text-center p-3 bg-blue-50 rounded-xl border border-blue-100">
+                  <p className="text-2xl font-bold text-blue-700">{prepStats.thisMonth.toLocaleString()}</p>
+                  <p className="text-xs text-blue-600 mt-0.5">This month</p>
+                </div>
+              </div>
+              <div className="bg-violet-50 border border-violet-100 rounded-xl p-3">
+                <p className="text-xs text-violet-700 font-medium">
+                  Estimated AI cost (prep): ≈€{(prepStats.total * 0.003 * 0.92).toFixed(3)} total
+                  <span className="text-violet-500 font-normal ml-1">(~€0.003/summary)</span>
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+              <h2 className="text-sm font-semibold text-gray-700 mb-4">Most Active — Prep Users</h2>
+              {prepStats.topUsers && prepStats.topUsers.length > 0 ? (
+                <div className="space-y-3">
+                  {prepStats.topUsers.map((u, i) => (
+                    <div key={u.email} className="flex items-center gap-3">
+                      <span className="w-5 h-5 rounded-full bg-violet-100 text-violet-600 text-xs font-bold flex items-center justify-center flex-shrink-0">{i + 1}</span>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-xs text-gray-700 font-medium truncate">{u.email}</p>
+                        <div className="flex items-center gap-2 mt-0.5">
+                          <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                            <div className="h-full bg-violet-400 rounded-full" style={{ width: `${Math.min(100, (u.total / (prepStats.topUsers[0]?.total || 1)) * 100)}%` }} />
+                          </div>
+                          <span className="text-xs text-gray-400 flex-shrink-0">{u.total}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-sm text-gray-400">No prep activity yet</p>
+              )}
             </div>
           </div>
         )}
@@ -339,9 +391,10 @@ export default function AdminPage() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-gray-50 text-xs text-gray-500 uppercase tracking-wide">
-                  <th className="px-5 py-3 text-left">Email</th>
+                  <th className="px-5 py-3 text-left">Member</th>
                   <th className="px-5 py-3 text-left">Plan</th>
                   <th className="px-5 py-3 text-left">Reports</th>
+                  <th className="px-5 py-3 text-left">Prep Docs</th>
                   <th className="px-5 py-3 text-left">Joined</th>
                 </tr>
               </thead>
@@ -351,11 +404,17 @@ export default function AdminPage() {
                     <td className="px-5 py-3 text-gray-800 font-medium max-w-[200px] truncate">{u.email}</td>
                     <td className="px-5 py-3"><TierBadge tier={u.tier} /></td>
                     <td className="px-5 py-3 text-gray-600">{u.reportCount}</td>
+                    <td className="px-5 py-3">
+                      {u.prepCount > 0
+                        ? <span className="text-violet-600 font-semibold">{u.prepCount}</span>
+                        : <span className="text-gray-300">—</span>
+                      }
+                    </td>
                     <td className="px-5 py-3 text-gray-400 whitespace-nowrap">{formatDate(u.createdAt)}</td>
                   </tr>
                 )) : (
                   <tr>
-                    <td colSpan={4} className="px-5 py-8 text-center text-gray-400">No users yet</td>
+                    <td colSpan={5} className="px-5 py-8 text-center text-gray-400">No members yet</td>
                   </tr>
                 )}
               </tbody>
