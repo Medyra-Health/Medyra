@@ -293,5 +293,29 @@
     "subscriptionActive": "您的订阅现已激活",
     "thankYou": "感谢您订阅Medyra。您现在可以开始上传和分析您的医疗报告了。",
     "uploadFirstReport": "上传您的第一份报告"
+  },
+  "prep": {
+    "title": "就诊准备",
+    "subtitle": "用任何语言描述您的感受",
+    "description": "自由描述您的症状。我们将为您创建一份结构化的德语摘要，供您展示给医生。",
+    "placeholder": "例如：我头痛已经3天了，早上更严重。站起来时感到头晕。我每天服用二甲双胍。",
+    "hint": "请注明：症状、开始时间、药物、过敏史、既往病史。",
+    "charLimit": "文本将限制在{limit}个字符以内。",
+    "submit": "创建医生摘要",
+    "creating": "正在创建摘要…",
+    "outputLabel": "就诊摘要",
+    "print": "打印/保存",
+    "printFull": "打印/保存为PDF",
+    "usageUnlimited": "无限使用",
+    "usageLimitReached": "已达本月上限",
+    "usageCount": "本月已使用{used}/{limit}次",
+    "upgrade": "升级",
+    "upgradeCta": "Personal & Family套餐：无限医生摘要",
+    "notSignedIn": "请登录",
+    "notSignedInDesc": "您需要登录才能使用就诊准备功能。",
+    "signIn": "立即登录",
+    "disclaimer": "本文件旨在帮助您与医生沟通，不是医学诊断。",
+    "sectionLabel": "就诊准备",
+    "badge": "新功能"
   }
 }

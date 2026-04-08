@@ -293,5 +293,29 @@
     "subscriptionActive": "Il tuo abbonamento è ora attivo",
     "thankYou": "Grazie per esserti iscritto a Medyra. Ora puoi iniziare a caricare e analizzare i tuoi referti medici.",
     "uploadFirstReport": "Carica il tuo primo referto"
+  },
+  "prep": {
+    "title": "Preparazione alla visita medica",
+    "subtitle": "Descrivi come ti senti, in qualsiasi lingua",
+    "description": "Scrivi liberamente dei tuoi sintomi. Creiamo un riassunto strutturato in tedesco da mostrare al tuo medico.",
+    "placeholder": "Esempio: Ho mal di testa da 3 giorni, peggiora la mattina. Mi gira la testa quando mi alzo. Prendo metformina ogni giorno.",
+    "hint": "Menziona: sintomi, quando sono iniziati, farmaci, allergie, precedenti.",
+    "charLimit": "Il testo sarà limitato a {limit} caratteri.",
+    "submit": "Crea riepilogo medico",
+    "creating": "Creazione del riepilogo…",
+    "outputLabel": "Riepilogo per la visita",
+    "print": "Stampa / Salva",
+    "printFull": "Stampa / Salva come PDF",
+    "usageUnlimited": "Utilizzo illimitato",
+    "usageLimitReached": "Limite mensile raggiunto",
+    "usageCount": "{used}/{limit} usato/i questo mese",
+    "upgrade": "Aggiorna",
+    "upgradeCta": "Piani Personal & Family: riepiloghi illimitati",
+    "notSignedIn": "Accedi",
+    "notSignedInDesc": "Devi essere connesso per usare la preparazione alla visita.",
+    "signIn": "Accedi ora",
+    "disclaimer": "Questo documento è stato creato per facilitare la comunicazione con il tuo medico. Non è una diagnosi medica.",
+    "sectionLabel": "Preparazione alla visita",
+    "badge": "Nuova funzione"
   }
 }
