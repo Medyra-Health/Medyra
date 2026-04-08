@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useUser } from '@clerk/nextjs'
-import { ArrowLeft, Printer, Loader2, FileText, AlertTriangle, Sparkles, ChevronRight, Lock } from 'lucide-react'
+import { ArrowLeft, Printer, Loader2, FileText, AlertTriangle, Sparkles, ChevronRight, Lock, Clock, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -222,13 +222,40 @@ export default function PrepPage() {
   const [loading, setLoading] = useState(false)
   const [output, setOutput] = useState('')
   const [usage, setUsage] = useState(null)
+  const [history, setHistory] = useState([])
+  const [historyOpen, setHistoryOpen] = useState(null) // id of expanded history item
+  const [activating, setActivating] = useState(false)
   const outputRef = useRef(null)
+
+  const ADMIN_EMAIL = 'abralur28@gmail.com'
+  const isAdmin = user?.emailAddresses?.some(e => e.emailAddress === ADMIN_EMAIL)
 
   useEffect(() => {
     if (isLoaded && user) {
-      fetch('/api/prep').then(r => r.json()).then(setUsage).catch(() => {})
+      fetch('/api/prep').then(r => r.json()).then(data => {
+        setUsage(data)
+        if (data.history) setHistory(data.history)
+      }).catch(() => {})
     }
   }, [isLoaded, user])
+
+  async function activateAdmin() {
+    setActivating(true)
+    try {
+      const res = await fetch('/api/admin/activate', { method: 'POST' })
+      const data = await res.json()
+      if (res.ok) {
+        toast.success('Admin access activated! Refreshing...')
+        setTimeout(() => window.location.reload(), 1000)
+      } else {
+        toast.error(data.error || 'Failed')
+      }
+    } catch {
+      toast.error('Error activating admin')
+    } finally {
+      setActivating(false)
+    }
+  }
 
   useEffect(() => {
     if (output && outputRef.current) {
@@ -262,6 +289,9 @@ export default function PrepPage() {
         used: (prev.used || 0) + 1,
         canUse: prev.unlimited || (prev.used + 1) < prev.limit,
       } : prev)
+      // Add to history
+      const newEntry = { id: Date.now().toString(), createdAt: new Date().toISOString(), output: data.output }
+      setHistory(prev => [newEntry, ...prev].slice(0, 10))
     } catch {
       toast.error(t('errors.uploadFailed'))
     } finally {
@@ -443,13 +473,84 @@ export default function PrepPage() {
             </p>
           </div>
 
+          {/* Admin activate banner */}
+          {isAdmin && usage && !usage.unlimited && (
+            <div className="mt-4 bg-orange-50 border border-orange-200 rounded-xl px-4 py-3 flex items-center justify-between print:hidden">
+              <div>
+                <p className="text-xs font-semibold text-orange-800">Admin account detected — activate unlimited access</p>
+                <p className="text-[11px] text-orange-600 mt-0.5">This sets your account tier to admin in the database.</p>
+              </div>
+              <button
+                onClick={activateAdmin}
+                disabled={activating}
+                className="ml-4 flex-shrink-0 text-xs font-semibold bg-orange-500 hover:bg-orange-600 text-white px-3 py-1.5 rounded-lg transition-colors disabled:opacity-50"
+              >
+                {activating ? 'Activating…' : 'Activate Admin'}
+              </button>
+            </div>
+          )}
+
           {/* Upgrade CTA */}
-          {usage && !isUnlimited && (
+          {usage && !isUnlimited && !isAdmin && (
             <div className="mt-5 flex items-center justify-center gap-2 text-xs text-gray-400">
               <span>{t('prep.upgradeCta')}</span>
               <Link href="/pricing" className="text-emerald-600 font-semibold hover:underline flex items-center gap-0.5">
                 {t('prep.upgrade')} <ChevronRight className="h-3 w-3" />
               </Link>
+            </div>
+          )}
+
+          {/* ── Section 4: History ── */}
+          {history.length > 0 && (
+            <div className="mt-8 print:hidden">
+              <div className="flex items-center gap-2 mb-3">
+                <Clock className="h-4 w-4 text-gray-400" />
+                <h2 className="text-sm font-semibold text-gray-700">Previous Summaries</h2>
+                <span className="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">{history.length}</span>
+              </div>
+              <div className="space-y-2">
+                {history.map((doc) => {
+                  const isOpen = historyOpen === doc.id
+                  const date = new Date(doc.createdAt).toLocaleDateString(undefined, {
+                    day: '2-digit', month: 'short', year: 'numeric',
+                    hour: '2-digit', minute: '2-digit'
+                  })
+                  return (
+                    <div key={doc.id} className="bg-white border border-gray-100 rounded-xl overflow-hidden">
+                      <button
+                        onClick={() => setHistoryOpen(isOpen ? null : doc.id)}
+                        className="w-full flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors text-left"
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className="w-7 h-7 rounded-lg bg-violet-50 flex items-center justify-center flex-shrink-0">
+                            <FileText className="h-3.5 w-3.5 text-violet-500" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-gray-800">Doctor Summary</p>
+                            <p className="text-xs text-gray-400 flex items-center gap-1 mt-0.5">
+                              <Clock className="h-3 w-3" /> {date}
+                            </p>
+                          </div>
+                        </div>
+                        <ChevronDown className={`h-4 w-4 text-gray-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {isOpen && (
+                        <div className="border-t border-gray-100 px-4 py-4">
+                          <OutputCard text={doc.output} onPrint={() => {
+                            // Temporarily set this as the active output for printing
+                            const el = document.getElementById('print-area')
+                            if (el) {
+                              el.style.display = 'block'
+                              window.print()
+                              setTimeout(() => { el.style.display = 'none' }, 500)
+                            }
+                          }} t={t} />
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
             </div>
           )}
         </div>

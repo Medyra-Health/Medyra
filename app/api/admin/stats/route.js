@@ -80,6 +80,7 @@ export async function GET() {
       chatTodayArr,
       chatMonthArr,
       topChatters,
+      prepStatsArr,
     ] = await Promise.all([
       // User stats
       database.collection('users').countDocuments(),
@@ -180,6 +181,33 @@ export async function GET() {
         .sort({ totalChatMessages: -1 })
         .limit(5)
         .toArray(),
+
+      // Doctor Visit Prep stats
+      database.collection('users').aggregate([
+        { $project: {
+          email: 1,
+          clerkId: 1,
+          totalPrep: { $cond: { if: { $isArray: '$prepDocs' }, then: { $size: '$prepDocs' }, else: 0 } },
+          prepThisMonth: {
+            $cond: {
+              if: { $isArray: '$prepDocs' },
+              then: {
+                $size: {
+                  $filter: {
+                    input: '$prepDocs',
+                    as: 'doc',
+                    cond: { $gte: ['$$doc.createdAt', startOfMonth] }
+                  }
+                }
+              },
+              else: 0
+            }
+          }
+        }},
+        { $match: { totalPrep: { $gt: 0 } } },
+        { $sort: { totalPrep: -1 } },
+        { $limit: 10 },
+      ]).toArray(),
     ])
 
     // Build chart data: merge user signups and reports by date
@@ -202,6 +230,12 @@ export async function GET() {
     // Estimated Anthropic cost: ~1200 input tokens + 350 output tokens per message
     // claude-sonnet-4-6: $3/M input, $15/M output
     const estimatedCostUSD = ((totalChatMessages * 1200 / 1000000) * 3 + (totalChatMessages * 350 / 1000000) * 15).toFixed(4)
+
+    // Prep stats summary
+    const totalPrepDocs = prepStatsArr.reduce((sum, u) => sum + u.totalPrep, 0)
+    const prepThisMonth = prepStatsArr.reduce((sum, u) => sum + u.prepThisMonth, 0)
+    const prepUserMap = {}
+    prepStatsArr.forEach(u => { prepUserMap[u.clerkId] = u.totalPrep })
 
     // Enrich recent users with report counts
     const userClerkIds = recentUsers.map(u => u.clerkId).filter(Boolean)
@@ -259,6 +293,7 @@ export async function GET() {
         tier: u.tier || 'free',
         createdAt: u.createdAt,
         reportCount: reportCountMap[u.clerkId] || 0,
+        prepCount: prepUserMap[u.clerkId] || 0,
       })),
       recentReports: recentReports.map(r => ({
         id: r._id?.toString(),
@@ -274,6 +309,11 @@ export async function GET() {
         thisMonth: chatThisMonth,
         estimatedCostUSD: Number(estimatedCostUSD),
         topChatters: topChatters.map(u => ({ email: u.email || '—', count: u.totalChatMessages || 0 })),
+      },
+      prepStats: {
+        total: totalPrepDocs,
+        thisMonth: prepThisMonth,
+        topUsers: prepStatsArr.slice(0, 5).map(u => ({ email: u.email || '—', total: u.totalPrep, thisMonth: u.prepThisMonth })),
       },
     })
   } catch (error) {
