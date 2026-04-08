@@ -3,7 +3,7 @@
 import { useUser } from '@clerk/nextjs'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Upload, Clock, AlertCircle, ChevronRight, Infinity, FileText, TrendingUp, Crown, Zap, Star } from 'lucide-react'
+import { Upload, Clock, AlertCircle, ChevronRight, Infinity, FileText, TrendingUp, Crown, Zap, Star, Stethoscope } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import MedyraUserButton from '@/components/MedyraUserButton'
 import { useTranslations } from 'next-intl'
@@ -27,6 +27,7 @@ export default function DashboardPage() {
   const t = useTranslations()
   const [subscription, setSubscription] = useState(null)
   const [reports, setReports] = useState([])
+  const [prepHistory, setPrepHistory] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -35,14 +36,17 @@ export default function DashboardPage() {
 
   async function fetchData() {
     try {
-      const [subRes, reportsRes] = await Promise.all([
+      const [subRes, reportsRes, prepRes] = await Promise.all([
         fetch('/api/subscription'),
-        fetch('/api/reports')
+        fetch('/api/reports'),
+        fetch('/api/prep'),
       ])
       const subData = await subRes.json()
       const reportsData = await reportsRes.json()
+      const prepData = await prepRes.json()
       setSubscription(subData)
       setReports(reportsData.reports || [])
+      setPrepHistory(prepData.history || [])
     } catch (error) {
       console.error('Error fetching data:', error)
     } finally {
@@ -213,7 +217,7 @@ export default function DashboardPage() {
               </Link>
               <Link href="/prep">
                 <Button className="w-full h-11 bg-violet-500 hover:bg-violet-600 text-white font-semibold shadow-sm shadow-violet-200 border-0">
-                  <FileText className="mr-2 h-4 w-4" />
+                  <Stethoscope className="mr-2 h-4 w-4" />
                   {t('dashboard.prepButton')}
                 </Button>
               </Link>
@@ -277,6 +281,72 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
         </div>
+
+        {/* ── DOCTOR VISIT PREP HISTORY ── */}
+        <Card className="border-violet-100">
+          <CardHeader className="pb-3">
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-2">
+                <div className="w-7 h-7 rounded-lg bg-violet-100 flex items-center justify-center">
+                  <Stethoscope className="h-3.5 w-3.5 text-violet-600" />
+                </div>
+                <CardTitle className="text-sm">Doctor Visit Summaries</CardTitle>
+              </div>
+              <Link href="/prep">
+                <Button variant="ghost" size="sm" className="text-xs text-violet-600 hover:text-violet-700">
+                  New summary <ChevronRight className="ml-1 h-3 w-3" />
+                </Button>
+              </Link>
+            </div>
+          </CardHeader>
+          <CardContent>
+            {prepHistory.length === 0 ? (
+              <div className="text-center py-6">
+                <Stethoscope className="h-9 w-9 mx-auto text-gray-200 mb-3" />
+                <p className="text-sm font-medium text-gray-500">No doctor summaries yet</p>
+                <p className="text-xs text-gray-400 mt-1 mb-4">Describe your symptoms and get a structured German summary for your doctor</p>
+                <Link href="/prep">
+                  <Button size="sm" className="bg-violet-500 hover:bg-violet-600 text-white font-semibold">
+                    <Stethoscope className="mr-2 h-3.5 w-3.5" /> Prepare for Doctor Visit
+                  </Button>
+                </Link>
+              </div>
+            ) : (
+              <div className="space-y-2">
+                {prepHistory.slice(0, 4).map((doc) => {
+                  const inputPreview = doc.input ? doc.input.slice(0, 100) + (doc.input.length > 100 ? '…' : '') : '—'
+                  return (
+                    <Link key={doc.id} href="/prep">
+                      <div className="flex items-start gap-3 p-3 border border-gray-100 rounded-xl hover:bg-violet-50 hover:border-violet-200 transition-all">
+                        <div className="w-8 h-8 rounded-lg bg-violet-50 flex items-center justify-center flex-shrink-0">
+                          <Stethoscope className="h-3.5 w-3.5 text-violet-500" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <p className="text-xs font-semibold text-gray-800">Doctor Summary</p>
+                            <span className="text-[10px] text-gray-400">
+                              {new Date(doc.createdAt).toLocaleDateString()}
+                            </span>
+                          </div>
+                          <p className="text-xs text-gray-500 truncate">{inputPreview}</p>
+                        </div>
+                        <ChevronRight className="h-3.5 w-3.5 text-gray-300 flex-shrink-0 mt-1" />
+                      </div>
+                    </Link>
+                  )
+                })}
+                {prepHistory.length > 4 && (
+                  <Link href="/prep">
+                    <p className="text-xs text-violet-600 text-center pt-1 hover:underline">
+                      View all {prepHistory.length} summaries →
+                    </p>
+                  </Link>
+                )}
+              </div>
+            )}
+          </CardContent>
+        </Card>
+
       </div>
     </div>
   )
