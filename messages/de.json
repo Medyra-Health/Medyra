@@ -216,7 +216,8 @@
     "viewAllReports": "Alle Berichte anzeigen",
     "approachingLimit": "Sie naehern sich Ihrem Limit",
     "upgradePlan": "Plan upgraden",
-    "remaining": "Verbleibend"
+    "remaining": "Verbleibend",
+    "prepButton": "Arztbesuch vorbereiten"
   },
   "report": {
     "disclaimer": "Haftungsausschluss",

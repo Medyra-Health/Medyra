@@ -216,7 +216,8 @@
     "viewAllReports": "Tüm raporları gör",
     "approachingLimit": "Limite yaklaşıyor",
     "upgradePlan": "Planı yükselt",
-    "remaining": "Kalan"
+    "remaining": "Kalan",
+    "prepButton": "Doktor ziyaretini hazırla"
   },
   "report": {
     "disclaimer": "Tıbbi sorumluluk reddi",

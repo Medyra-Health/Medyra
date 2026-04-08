@@ -216,7 +216,8 @@
     "viewAllReports": "عرض جميع التقارير",
     "approachingLimit": "يقترب من الحد",
     "upgradePlan": "ترقية الخطة",
-    "remaining": "المتبقي"
+    "remaining": "المتبقي",
+    "prepButton": "تحضير زيارة الطبيب"
   },
   "report": {
     "disclaimer": "إخلاء المسؤولية الطبية",

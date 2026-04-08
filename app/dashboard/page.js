@@ -198,7 +198,7 @@ export default function DashboardPage() {
             <CardContent className="space-y-2">
               <Link href="/upload">
                 <Button
-                  className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold h-11"
+                  className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold h-11 shadow-sm shadow-emerald-200"
                   disabled={!isUnlimited && remaining === 0}
                 >
                   <Upload className="mr-2 h-4 w-4" />
@@ -206,15 +206,15 @@ export default function DashboardPage() {
                 </Button>
               </Link>
               <Link href="/reports">
-                <Button className="w-full h-11" variant="outline">
+                <Button className="w-full h-11 bg-blue-500 hover:bg-blue-600 text-white font-semibold shadow-sm shadow-blue-200 border-0">
                   <FileText className="mr-2 h-4 w-4" />
                   {t('dashboard.viewAllReports')}
                 </Button>
               </Link>
               <Link href="/prep">
-                <Button className="w-full h-11 border-emerald-200 text-emerald-700 hover:bg-emerald-50" variant="outline">
-                  <FileText className="mr-2 h-4 w-4 text-emerald-600" />
-                  Arztbesuch vorbereiten
+                <Button className="w-full h-11 bg-violet-500 hover:bg-violet-600 text-white font-semibold shadow-sm shadow-violet-200 border-0">
+                  <FileText className="mr-2 h-4 w-4" />
+                  {t('dashboard.prepButton')}
                 </Button>
               </Link>
               {(tier === 'free' || tier === 'onetime') && (

@@ -216,7 +216,8 @@
     "viewAllReports": "Ver todos los informes",
     "approachingLimit": "Acercándose al límite",
     "upgradePlan": "Actualizar plan",
-    "remaining": "Restantes"
+    "remaining": "Restantes",
+    "prepButton": "Preparar visita médica"
   },
   "report": {
     "disclaimer": "Descargo médico",
