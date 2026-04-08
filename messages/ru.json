@@ -216,7 +216,8 @@
     "viewAllReports": "Посмотреть все отчеты",
     "approachingLimit": "Приближается к лимиту",
     "upgradePlan": "Обновить план",
-    "remaining": "Осталось"
+    "remaining": "Осталось",
+    "prepButton": "Подготовка к врачу"
   },
   "report": {
     "disclaimer": "Медицинский отказ от ответственности",

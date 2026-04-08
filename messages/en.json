@@ -218,7 +218,8 @@
     "viewAllReports": "View All Reports",
     "approachingLimit": "Approaching usage limit",
     "upgradePlan": "Upgrade Plan",
-    "remaining": "Remaining"
+    "remaining": "Remaining",
+    "prepButton": "Doctor Visit Prep"
   },
   "report": {
     "disclaimer": "Medical Disclaimer",

@@ -216,7 +216,8 @@
     "viewAllReports": "모든 보고서 보기",
     "approachingLimit": "한도에 접근 중",
     "upgradePlan": "플랜 업그레이드",
-    "remaining": "남은"
+    "remaining": "남은",
+    "prepButton": "의사 방문 준비"
   },
   "report": {
     "disclaimer": "의료 면책 조항",

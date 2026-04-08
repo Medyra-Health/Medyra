@@ -216,7 +216,8 @@
     "viewAllReports": "सभी रिपोर्ट देखें",
     "approachingLimit": "सीमा के करीब",
     "upgradePlan": "योजना अपग्रेड करें",
-    "remaining": "शेष"
+    "remaining": "शेष",
+    "prepButton": "डॉक्टर की तैयारी करें"
   },
   "report": {
     "disclaimer": "चिकित्सा अस्वीकरण",
