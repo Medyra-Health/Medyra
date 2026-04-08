@@ -293,5 +293,29 @@
     "subscriptionActive": "Tu suscripción ya está activa",
     "thankYou": "Gracias por suscribirte a Medyra. Ahora puedes empezar a subir y analizar tus informes médicos.",
     "uploadFirstReport": "Subir tu primer informe"
+  },
+  "prep": {
+    "title": "Preparación para el médico",
+    "subtitle": "Describe cómo te sientes, en cualquier idioma",
+    "description": "Escribe libremente sobre tus síntomas. Creamos un resumen estructurado en alemán para mostrar a tu médico.",
+    "placeholder": "Ejemplo: Llevo 3 días con dolor de cabeza, peor por las mañanas. Me mareo al levantarme. Tomo metformina a diario.",
+    "hint": "Menciona: síntomas, cuándo empezaron, medicamentos, alergias, antecedentes.",
+    "charLimit": "El texto se limitará a {limit} caracteres.",
+    "submit": "Crear resumen médico",
+    "creating": "Creando resumen…",
+    "outputLabel": "Resumen para el médico",
+    "print": "Imprimir / Guardar",
+    "printFull": "Imprimir / Guardar como PDF",
+    "usageUnlimited": "Uso ilimitado",
+    "usageLimitReached": "Límite mensual alcanzado",
+    "usageCount": "{used}/{limit} usado(s) este mes",
+    "upgrade": "Actualizar",
+    "upgradeCta": "Planes Personal & Family: resúmenes ilimitados",
+    "notSignedIn": "Por favor inicia sesión",
+    "notSignedInDesc": "Debes iniciar sesión para usar la preparación para el médico.",
+    "signIn": "Iniciar sesión",
+    "disclaimer": "Este documento fue creado para ayudarte a comunicarte con tu médico. No es un diagnóstico médico.",
+    "sectionLabel": "Preparación para el médico",
+    "badge": "Nueva función"
   }
 }
