@@ -211,6 +211,12 @@ export default function DashboardPage() {
                   {t('dashboard.viewAllReports')}
                 </Button>
               </Link>
+              <Link href="/prep">
+                <Button className="w-full h-11 border-emerald-200 text-emerald-700 hover:bg-emerald-50" variant="outline">
+                  <FileText className="mr-2 h-4 w-4 text-emerald-600" />
+                  Arztbesuch vorbereiten
+                </Button>
+              </Link>
               {(tier === 'free' || tier === 'onetime') && (
                 <Link href="/pricing">
                   <Button className="w-full h-10" variant="ghost">
