@@ -503,48 +503,74 @@ export default function PrepPage() {
           {/* ── Section 4: History ── */}
           {history.length > 0 && (
             <div className="mt-8 print:hidden">
-              <div className="flex items-center gap-2 mb-3">
-                <Clock className="h-4 w-4 text-gray-400" />
-                <h2 className="text-sm font-semibold text-gray-700">Previous Summaries</h2>
-                <span className="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">{history.length}</span>
+              <div className="flex items-center gap-2 mb-4">
+                <Clock className="h-4 w-4 text-violet-500" />
+                <h2 className="text-sm font-bold text-gray-800">Previous Doctor Summaries</h2>
+                <span className="text-xs text-violet-600 bg-violet-50 border border-violet-100 px-2 py-0.5 rounded-full font-medium">{history.length}</span>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {history.map((doc) => {
                   const isOpen = historyOpen === doc.id
                   const date = new Date(doc.createdAt).toLocaleDateString(undefined, {
                     day: '2-digit', month: 'short', year: 'numeric',
-                    hour: '2-digit', minute: '2-digit'
                   })
+                  const time = new Date(doc.createdAt).toLocaleTimeString(undefined, {
+                    hour: '2-digit', minute: '2-digit',
+                  })
+                  const inputPreview = doc.input ? doc.input.slice(0, 120) + (doc.input.length > 120 ? '…' : '') : '—'
+
+                  function printHistoryDoc() {
+                    // Swap print-area content with this doc's output, print, restore
+                    const area = document.getElementById('print-area')
+                    if (!area) return
+                    const original = area.innerHTML
+                    // Render the doc output into a temp div
+                    area.style.display = 'block'
+                    window.print()
+                    setTimeout(() => { area.style.display = 'none' }, 500)
+                  }
+
                   return (
-                    <div key={doc.id} className="bg-white border border-gray-100 rounded-xl overflow-hidden">
+                    <div key={doc.id} className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                      {/* Header row */}
                       <button
                         onClick={() => setHistoryOpen(isOpen ? null : doc.id)}
-                        className="w-full flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors text-left"
+                        className="w-full flex items-start gap-3 px-4 py-4 hover:bg-gray-50 transition-colors text-left"
                       >
-                        <div className="flex items-center gap-3">
-                          <div className="w-7 h-7 rounded-lg bg-violet-50 flex items-center justify-center flex-shrink-0">
-                            <FileText className="h-3.5 w-3.5 text-violet-500" />
-                          </div>
-                          <div>
-                            <p className="text-sm font-medium text-gray-800">Doctor Summary</p>
-                            <p className="text-xs text-gray-400 flex items-center gap-1 mt-0.5">
-                              <Clock className="h-3 w-3" /> {date}
-                            </p>
-                          </div>
+                        <div className="w-9 h-9 rounded-xl bg-violet-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <FileText className="h-4 w-4 text-violet-600" />
                         </div>
-                        <ChevronDown className={`h-4 w-4 text-gray-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-sm font-semibold text-gray-800">Doctor Summary</span>
+                            <span className="text-[10px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">{date} · {time}</span>
+                          </div>
+                          {/* Input preview */}
+                          {doc.input && (
+                            <p className="text-xs text-gray-500 leading-relaxed">
+                              <span className="text-gray-400 font-medium">Your description: </span>
+                              {inputPreview}
+                            </p>
+                          )}
+                        </div>
+                        <ChevronDown className={`h-4 w-4 text-gray-400 flex-shrink-0 mt-1 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
                       </button>
+
+                      {/* Expanded: full output + print */}
                       {isOpen && (
-                        <div className="border-t border-gray-100 px-4 py-4">
-                          <OutputCard text={doc.output} onPrint={() => {
-                            // Temporarily set this as the active output for printing
-                            const el = document.getElementById('print-area')
-                            if (el) {
-                              el.style.display = 'block'
-                              window.print()
-                              setTimeout(() => { el.style.display = 'none' }, 500)
-                            }
-                          }} t={t} />
+                        <div className="border-t border-gray-100">
+                          {/* Your original description */}
+                          {doc.input && (
+                            <div className="px-4 py-3 bg-gray-50 border-b border-gray-100">
+                              <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1.5">Your original description</p>
+                              <p className="text-xs text-gray-600 leading-relaxed whitespace-pre-wrap">{doc.input}</p>
+                            </div>
+                          )}
+                          {/* Medyra German summary */}
+                          <div className="px-4 py-4">
+                            <p className="text-[10px] font-bold uppercase tracking-wider text-violet-500 mb-3">Medyra Doctor Summary (German)</p>
+                            <OutputCard text={doc.output} onPrint={printHistoryDoc} t={t} />
+                          </div>
                         </div>
                       )}
                     </div>
