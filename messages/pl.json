@@ -293,5 +293,29 @@
     "subscriptionActive": "Twój abonament jest teraz aktywny",
     "thankYou": "Dziękujemy za subskrypcję Medyra. Możesz teraz zacząć przesyłać i analizować swoje raporty medyczne.",
     "uploadFirstReport": "Prześlij pierwszy raport"
+  },
+  "prep": {
+    "title": "Przygotowanie do wizyty lekarskiej",
+    "subtitle": "Opisz jak się czujesz, w dowolnym języku",
+    "description": "Pisz swobodnie o swoich objawach. Tworzymy ustrukturyzowane podsumowanie po niemiecku dla Twojego lekarza.",
+    "placeholder": "Przykład: Mam ból głowy od 3 dni, gorszy rano. Kręci mi się w głowie przy wstawaniu. Codziennie biorę metforminę.",
+    "hint": "Wspomnij: objawy, kiedy się zaczęły, leki, alergie, przebyte choroby.",
+    "charLimit": "Tekst zostanie ograniczony do {limit} znaków.",
+    "submit": "Utwórz podsumowanie dla lekarza",
+    "creating": "Tworzenie podsumowania…",
+    "outputLabel": "Podsumowanie wizyty lekarskiej",
+    "print": "Drukuj / Zapisz",
+    "printFull": "Drukuj / Zapisz jako PDF",
+    "usageUnlimited": "Nieograniczone użycie",
+    "usageLimitReached": "Miesięczny limit osiągnięty",
+    "usageCount": "{used}/{limit} użyte w tym miesiącu",
+    "upgrade": "Uaktualnij",
+    "upgradeCta": "Plany Personal & Family: nieograniczone podsumowania",
+    "notSignedIn": "Zaloguj się",
+    "notSignedInDesc": "Musisz być zalogowany, aby korzystać z przygotowania wizyty.",
+    "signIn": "Zaloguj się teraz",
+    "disclaimer": "Ten dokument został stworzony, aby ułatwić komunikację z lekarzem. Nie jest diagnozą medyczną.",
+    "sectionLabel": "Przygotowanie wizyty",
+    "badge": "Nowa funkcja"
   }
 }

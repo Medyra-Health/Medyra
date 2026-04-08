@@ -47,9 +47,6 @@ export default function LandingPage() {
             <MedyraLogo size="md" />
 
             <div className="hidden md:flex items-center gap-1">
-              <a href="#how-it-works">
-                <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-900 hover:bg-gray-50">How it works</Button>
-              </a>
               <Link href="/pricing">
                 <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-900 hover:bg-gray-50">{t('nav.pricing')}</Button>
               </Link>
@@ -378,6 +375,116 @@ export default function LandingPage() {
                 </Button>
               </Link>
             </SignedIn>
+          </div>
+        </div>
+      </section>
+
+      {/* ── DOCTOR VISIT PREP ── */}
+      <section className="py-20 md:py-28 bg-[#040C08] relative overflow-hidden">
+        {/* Background glow */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-emerald-500/10 rounded-full blur-3xl" />
+        </div>
+        <div className="container mx-auto px-4 max-w-5xl relative">
+          {/* Badge + heading */}
+          <div className="text-center mb-14">
+            <span className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
+              <FileText className="h-3.5 w-3.5" /> New feature
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+              Going to the doctor?<br />
+              <span className="text-emerald-400">Arrive prepared.</span>
+            </h2>
+            <p className="text-gray-400 text-base max-w-xl mx-auto leading-relaxed">
+              Describe how you feel — in any language. Medyra turns it into a structured,
+              professional German summary your doctor can read in seconds.
+            </p>
+          </div>
+
+          {/* Three-column how it works */}
+          <div className="grid md:grid-cols-3 gap-6 mb-14">
+            {[
+              {
+                step: '01',
+                emoji: '🗣️',
+                title: 'Describe in any language',
+                desc: 'Write freely in English, Arabic, Hindi, Turkish — whatever feels natural. No medical knowledge needed.',
+              },
+              {
+                step: '02',
+                emoji: '⚡',
+                title: 'AI structures it instantly',
+                desc: 'Claude converts your description into a formal German clinical summary: chief complaints, timeline, history, and suggested questions.',
+              },
+              {
+                step: '03',
+                emoji: '🏥',
+                title: 'Print & bring to the appointment',
+                desc: 'One click prints a clean A4 sheet with the Medyra header — hand it to your doctor at the start of your visit.',
+              },
+            ].map(({ step, emoji, title, desc }) => (
+              <div key={step} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-emerald-500/40 transition-colors">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl">{emoji}</span>
+                  <span className="text-xs font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">{step}</span>
+                </div>
+                <h3 className="font-bold text-white text-base mb-2">{title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Sample output preview */}
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 mb-12 max-w-2xl mx-auto">
+            <div className="flex items-center justify-between mb-5">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-emerald-500" />
+                <span className="text-xs font-semibold text-gray-300">Beispiel-Ausgabe</span>
+              </div>
+              <span className="text-xs text-gray-500 bg-white/5 border border-white/10 px-2 py-0.5 rounded-full">Deutsch</span>
+            </div>
+            <div className="space-y-4 text-sm">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1.5">Hauptbeschwerden</p>
+                <div className="space-y-1">
+                  {['Der Patient berichtet über Kopfschmerzen seit 3 Tagen mit morgendlicher Verstärkung.', 'Schwindel beim Aufstehen aus liegender Position.'].map(t => (
+                    <div key={t} className="flex gap-2 text-gray-300"><span className="text-emerald-400 font-bold">·</span>{t}</div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1.5">Relevante Vorgeschichte</p>
+                <p className="text-gray-300">Tägliche Einnahme von Metformin (Dosierung nicht angegeben).</p>
+              </div>
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1.5">Fragen an den Arzt</p>
+                <div className="space-y-1">
+                  {['1. Könnte der Schwindel mit der Metformin-Einnahme in Zusammenhang stehen?', '2. Welche Untersuchungen sind bei diesen Beschwerden empfehlenswert?'].map(q => (
+                    <p key={q} className="text-gray-300">{q}</p>
+                  ))}
+                </div>
+              </div>
+              <p className="text-[10px] text-gray-600 italic border-t border-white/10 pt-3">Dieses Dokument wurde zur Kommunikation erstellt und stellt keine medizinische Diagnose dar.</p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <SignedIn>
+              <Link href="/prep">
+                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12">
+                  Prepare for my appointment <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </SignedIn>
+            <SignedOut>
+              <SignInButton mode="modal">
+                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12">
+                  Try it free <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </SignInButton>
+            </SignedOut>
+            <p className="text-gray-500 text-xs mt-3">Free plan includes 1 prep document per month</p>
           </div>
         </div>
       </section>

@@ -293,5 +293,29 @@
     "subscriptionActive": "Aboneliğiniz şimdi aktif",
     "thankYou": "Medyra'ya abone olduğunuz için teşekkürler. Artık tıbbi raporlarınızı yükleyip analiz edebilirsiniz.",
     "uploadFirstReport": "İlk Raporunuzu Yükleyin"
+  },
+  "prep": {
+    "title": "Doktor Ziyareti Hazırlığı",
+    "subtitle": "Herhangi bir dilde nasıl hissettiğinizi açıklayın",
+    "description": "Semptomlarınız hakkında özgürce yazın. Doktorunuza gösterebileceğiniz yapılandırılmış bir Almanca özet oluşturuyoruz.",
+    "placeholder": "Örnek: 3 gündür baş ağrım var, sabahları daha kötü. Ayağa kalktığımda başım dönüyor. Günlük metformin alıyorum.",
+    "hint": "Belirtin: semptomlar, ne zaman başladı, ilaçlar, alerjiler, geçmiş hastalıklar.",
+    "charLimit": "Metin {limit} karakterle sınırlandırılacak.",
+    "submit": "Doktor özeti oluştur",
+    "creating": "Özet oluşturuluyor…",
+    "outputLabel": "Doktor Ziyareti Özeti",
+    "print": "Yazdır / Kaydet",
+    "printFull": "Yazdır / PDF olarak kaydet",
+    "usageUnlimited": "Sınırsız kullanım",
+    "usageLimitReached": "Aylık limit doldu",
+    "usageCount": "Bu ay {used}/{limit} kullanıldı",
+    "upgrade": "Yükselt",
+    "upgradeCta": "Personal & Family planı: sınırsız doktor özetleri",
+    "notSignedIn": "Lütfen giriş yapın",
+    "notSignedInDesc": "Doktor ziyareti hazırlığını kullanmak için giriş yapmalısınız.",
+    "signIn": "Şimdi giriş yap",
+    "disclaimer": "Bu belge doktorunuzla iletişimi kolaylaştırmak için oluşturulmuştur. Tıbbi bir tanı değildir.",
+    "sectionLabel": "Doktor Ziyareti Hazırlığı",
+    "badge": "Yeni özellik"
   }
 }

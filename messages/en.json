@@ -295,5 +295,29 @@
     "subscriptionActive": "Your subscription is now active",
     "thankYou": "Thank you for subscribing to Medyra. You can now start uploading and analyzing your medical reports.",
     "uploadFirstReport": "Upload Your First Report"
+  },
+  "prep": {
+    "title": "Doctor Visit Prep",
+    "subtitle": "Describe how you're feeling, in any language",
+    "description": "Write freely about your symptoms. We create a structured, professional German summary you can hand to your doctor.",
+    "placeholder": "Example: I've had a headache for 3 days, it gets worse in the morning. I feel dizzy when I stand up. I take metformin daily.",
+    "hint": "Mention: symptoms, when they started, medications, allergies, past conditions.",
+    "charLimit": "Text will be capped at {limit} characters.",
+    "submit": "Create Doctor Summary",
+    "creating": "Creating summary…",
+    "outputLabel": "Doctor Visit Summary",
+    "print": "Print / Save",
+    "printFull": "Print / Save as PDF",
+    "usageUnlimited": "Unlimited use",
+    "usageLimitReached": "Monthly limit reached",
+    "usageCount": "{used}/{limit} used this month",
+    "upgrade": "Upgrade",
+    "upgradeCta": "Personal & Family plan: unlimited doctor summaries",
+    "notSignedIn": "Please sign in",
+    "notSignedInDesc": "You must be logged in to use the doctor visit prep.",
+    "signIn": "Sign in now",
+    "disclaimer": "This document was created to help you communicate with your doctor. It is not a medical diagnosis.",
+    "sectionLabel": "Doctor Visit Prep",
+    "badge": "New feature"
   }
 }

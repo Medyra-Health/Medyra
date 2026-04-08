@@ -293,5 +293,29 @@
     "subscriptionActive": "サブスクリプションが有効になりました",
     "thankYou": "Medyraにご登録いただきありがとうございます。医療レポートのアップロードと分析を開始できます。",
     "uploadFirstReport": "最初のレポートをアップロード"
+  },
+  "prep": {
+    "title": "受診準備",
+    "subtitle": "どんな言語でも体調を記述してください",
+    "description": "症状について自由に書いてください。医師に見せるための構造化されたドイツ語のサマリーを作成します。",
+    "placeholder": "例：3日間頭痛が続いており、朝に悪化します。立ち上がるとめまいがします。毎日メトホルミンを服用しています。",
+    "hint": "記載内容：症状、開始時期、薬、アレルギー、既往歴。",
+    "charLimit": "テキストは{limit}文字に制限されます。",
+    "submit": "医師向けサマリーを作成",
+    "creating": "サマリーを作成中…",
+    "outputLabel": "受診サマリー",
+    "print": "印刷/保存",
+    "printFull": "印刷/PDFとして保存",
+    "usageUnlimited": "無制限利用",
+    "usageLimitReached": "今月の利用上限に達しました",
+    "usageCount": "今月{used}/{limit}回利用",
+    "upgrade": "アップグレード",
+    "upgradeCta": "Personal & Familyプラン：無制限のサマリー",
+    "notSignedIn": "ログインしてください",
+    "notSignedInDesc": "受診準備を使用するにはログインが必要です。",
+    "signIn": "今すぐログイン",
+    "disclaimer": "この文書は医師とのコミュニケーションを助けるために作成されました。医療診断ではありません。",
+    "sectionLabel": "受診準備",
+    "badge": "新機能"
   }
 }

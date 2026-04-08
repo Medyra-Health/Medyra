@@ -293,5 +293,29 @@
     "subscriptionActive": "Ihr Abonnement ist jetzt aktiv",
     "thankYou": "Vielen Dank für Ihr Abonnement bei Medyra. Sie können jetzt Ihre medizinischen Berichte hochladen und analysieren.",
     "uploadFirstReport": "Ersten Bericht hochladen"
+  },
+  "prep": {
+    "title": "Arztbesuch-Vorbereitung",
+    "subtitle": "Beschreibe deine Beschwerden, in beliebiger Sprache",
+    "description": "Schreibe frei über deine Symptome. Wir erstellen eine strukturierte, professionelle Zusammenfassung auf Deutsch für deinen Arzt.",
+    "placeholder": "Beispiel: Ich habe seit 3 Tagen Kopfschmerzen, die morgens schlimmer werden. Mir wird schwindelig wenn ich aufstehe. Ich nehme täglich Metformin.",
+    "hint": "Nenne: Symptome, wann sie begannen, Medikamente, Allergien, Vorerkrankungen.",
+    "charLimit": "Text wird auf {limit} Zeichen begrenzt.",
+    "submit": "Arztbrief erstellen",
+    "creating": "Zusammenfassung wird erstellt…",
+    "outputLabel": "Arztbesuch-Zusammenfassung",
+    "print": "Drucken / Speichern",
+    "printFull": "Drucken / Als PDF speichern",
+    "usageUnlimited": "Unbegrenzte Nutzung",
+    "usageLimitReached": "Monatliches Limit erreicht",
+    "usageCount": "{used}/{limit} diesen Monat genutzt",
+    "upgrade": "Upgrade",
+    "upgradeCta": "Personal & Family Plan: unbegrenzte Arztbriefe",
+    "notSignedIn": "Bitte anmelden",
+    "notSignedInDesc": "Du musst eingeloggt sein, um die Arztbesuch-Vorbereitung zu nutzen.",
+    "signIn": "Jetzt anmelden",
+    "disclaimer": "Dieses Dokument wurde erstellt, um die Kommunikation mit deinem Arzt zu erleichtern. Es ist keine medizinische Diagnose.",
+    "sectionLabel": "Arztbesuch-Vorbereitung",
+    "badge": "Neue Funktion"
   }
 }
