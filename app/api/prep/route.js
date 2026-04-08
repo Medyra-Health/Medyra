@@ -5,13 +5,15 @@ import { MongoClient } from 'mongodb'
 
 const ADMIN_EMAIL = 'abralur28@gmail.com'
 
-async function isAdminUser() {
+async function isAdminUser(mongoUser) {
+  // Check Clerk session first (authoritative)
   try {
-    const user = await currentUser()
-    return user?.emailAddresses?.some(e => e.emailAddress === ADMIN_EMAIL) || false
-  } catch {
-    return false
-  }
+    const clerkUser = await currentUser()
+    if (clerkUser?.emailAddresses?.some(e => e.emailAddress === ADMIN_EMAIL)) return true
+  } catch {}
+  // Fallback: check email stored in MongoDB user document
+  if (mongoUser?.email === ADMIN_EMAIL) return true
+  return false
 }
 
 // ── Anthropic ──────────────────────────────────────────────────────────────
@@ -98,10 +100,8 @@ export async function POST(request) {
 
   // ── Tier + usage check ───────────────────────────────────────────────────
   const db = await getDb()
-  const [user, admin] = await Promise.all([
-    db.collection('users').findOne({ clerkId: userId }),
-    isAdminUser(),
-  ])
+  const user = await db.collection('users').findOne({ clerkId: userId })
+  const admin = await isAdminUser(user)
 
   const tier = user?.subscription?.tier || 'free'
   const effectiveTier = admin ? 'admin' : tier
@@ -165,10 +165,8 @@ export async function GET() {
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const db = await getDb()
-  const [user, admin] = await Promise.all([
-    db.collection('users').findOne({ clerkId: userId }),
-    isAdminUser(),
-  ])
+  const user = await db.collection('users').findOne({ clerkId: userId })
+  const admin = await isAdminUser(user)
 
   const tier = user?.subscription?.tier || 'free'
   const effectiveTier = admin ? 'admin' : tier
