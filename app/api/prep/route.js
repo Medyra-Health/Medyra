@@ -1,7 +1,18 @@
 import { NextResponse } from 'next/server'
-import { auth } from '@clerk/nextjs/server'
+import { auth, currentUser } from '@clerk/nextjs/server'
 import Anthropic from '@anthropic-ai/sdk'
 import { MongoClient } from 'mongodb'
+
+const ADMIN_EMAIL = 'abralur28@gmail.com'
+
+async function isAdminUser() {
+  try {
+    const user = await currentUser()
+    return user?.emailAddresses?.some(e => e.emailAddress === ADMIN_EMAIL) || false
+  } catch {
+    return false
+  }
+}
 
 // ── Anthropic ──────────────────────────────────────────────────────────────
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
@@ -87,11 +98,13 @@ export async function POST(request) {
 
   // ── Tier + usage check ───────────────────────────────────────────────────
   const db = await getDb()
-  const user = await db.collection('users').findOne({ clerkId: userId })
+  const [user, admin] = await Promise.all([
+    db.collection('users').findOne({ clerkId: userId }),
+    isAdminUser(),
+  ])
 
   const tier = user?.subscription?.tier || 'free'
-  const isAdmin = user?.email === 'abralur28@gmail.com'
-  const effectiveTier = isAdmin ? 'admin' : tier
+  const effectiveTier = admin ? 'admin' : tier
   const monthLimit = PREP_LIMITS[effectiveTier] ?? 1
 
   if (monthLimit !== null) {
@@ -152,11 +165,13 @@ export async function GET() {
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const db = await getDb()
-  const user = await db.collection('users').findOne({ clerkId: userId })
+  const [user, admin] = await Promise.all([
+    db.collection('users').findOne({ clerkId: userId }),
+    isAdminUser(),
+  ])
 
   const tier = user?.subscription?.tier || 'free'
-  const isAdmin = user?.email === 'abralur28@gmail.com'
-  const effectiveTier = isAdmin ? 'admin' : tier
+  const effectiveTier = admin ? 'admin' : tier
   const monthLimit = PREP_LIMITS[effectiveTier] ?? 1
 
   const startOfMonth = new Date()
