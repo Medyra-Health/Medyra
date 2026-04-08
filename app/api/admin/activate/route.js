@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { currentUser } from '@clerk/nextjs/server'
+import { auth, clerkClient } from '@clerk/nextjs/server'
 import { MongoClient } from 'mongodb'
 
 const ADMIN_EMAIL = 'abralur28@gmail.com'
@@ -14,17 +14,23 @@ async function getDb() {
   return _db
 }
 
-// POST /api/admin/activate — sets subscription.tier to 'admin' for the admin account
 export async function POST() {
-  const user = await currentUser()
-  if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const { userId } = await auth()
+  if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
-  const email = user.emailAddresses?.find(e => e.emailAddress === ADMIN_EMAIL)?.emailAddress
-  if (!email) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+  // Use Clerk backend SDK (secret key) — reliable regardless of middleware config
+  try {
+    const clerk = await clerkClient()
+    const clerkUser = await clerk.users.getUser(userId)
+    const email = clerkUser.emailAddresses?.find(e => e.emailAddress === ADMIN_EMAIL)?.emailAddress
+    if (!email) return NextResponse.json({ error: 'Forbidden — not admin email' }, { status: 403 })
+  } catch (err) {
+    return NextResponse.json({ error: 'Could not verify identity: ' + err.message }, { status: 500 })
+  }
 
   const db = await getDb()
   const result = await db.collection('users').updateOne(
-    { clerkId: user.id },
+    { clerkId: userId },
     {
       $set: {
         email: ADMIN_EMAIL,
