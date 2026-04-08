@@ -216,7 +216,8 @@
     "viewAllReports": "Voir tous les rapports",
     "approachingLimit": "Approche de la limite",
     "upgradePlan": "Mettre à niveau le forfait",
-    "remaining": "Restants"
+    "remaining": "Restants",
+    "prepButton": "Préparer ma consultation"
   },
   "report": {
     "disclaimer": "Avertissement médical",

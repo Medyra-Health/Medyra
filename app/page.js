@@ -50,6 +50,9 @@ export default function LandingPage() {
               <Link href="/pricing">
                 <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-900 hover:bg-gray-50">{t('nav.pricing')}</Button>
               </Link>
+              <Link href="/prep">
+                <Button variant="ghost" size="sm" className="text-violet-600 hover:text-violet-700 hover:bg-violet-50 font-medium">Doctor Visit</Button>
+              </Link>
               <Link href="/blog">
                 <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-900 hover:bg-gray-50">Blog</Button>
               </Link>
@@ -86,6 +89,9 @@ export default function LandingPage() {
             <div className="md:hidden pt-3 pb-2 border-t border-gray-200 mt-3 space-y-1">
               <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="ghost" className="w-full justify-start text-gray-700 hover:bg-gray-50">{t('nav.pricing')}</Button>
+              </Link>
+              <Link href="/prep" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start text-violet-600 hover:bg-violet-50 font-medium">Doctor Visit</Button>
               </Link>
               <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="ghost" className="w-full justify-start text-gray-700 hover:bg-gray-50">Blog</Button>
@@ -260,49 +266,49 @@ export default function LandingPage() {
       </section>
 
       {/* ── BEFORE / AFTER ── */}
-      <section className="py-20 md:py-28 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-14">
-            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">The problem we solve</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t('problem.heading')}</h2>
-            <p className="text-gray-500 text-lg max-w-xl mx-auto">{t('problem.subheading')}</p>
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-8">
+            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">The problem we solve</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{t('problem.heading')}</h2>
+            <p className="text-gray-500 text-sm max-w-lg mx-auto">{t('problem.subheading')}</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-stretch">
+          <div className="grid md:grid-cols-2 gap-4 items-stretch">
             {/* Before */}
-            <div className="rounded-2xl border-2 border-red-100 bg-white p-6 shadow-sm">
-              <div className="flex items-center gap-2 mb-5">
-                <div className="h-2.5 w-2.5 rounded-full bg-red-500" />
-                <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">{t('problem.before')}</span>
+            <div className="rounded-xl border-2 border-red-100 bg-white p-4 shadow-sm">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="h-2 w-2 rounded-full bg-red-500" />
+                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{t('problem.before')}</span>
               </div>
-              <div className="font-mono text-sm bg-gray-50 border border-gray-200 rounded-xl p-5 space-y-2 text-gray-700">
+              <div className="font-mono text-xs bg-gray-50 border border-gray-200 rounded-lg p-4 space-y-1.5 text-gray-700">
                 {[['TSH','4.2 mIU/L','text-gray-700'],['HbA1c','6.1% ↑','text-orange-600'],['eGFR','58 mL/min ↓','text-orange-600'],['CRP','12.4 mg/L ↑↑','text-red-600'],['Ferritin','11 µg/L ↓','text-orange-600'],['Vitamin D','28 nmol/L','text-gray-700']].map(([k,v,c]) => (
                   <div key={k} className="flex justify-between">
-                    <span className="text-gray-500">{k}</span>
+                    <span className="text-gray-400">{k}</span>
                     <span className={`font-bold ${c}`}>{v}</span>
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-red-400 mt-4 text-center italic font-medium">What does any of this mean?</p>
+              <p className="text-xs text-red-400 mt-3 text-center italic font-medium">What does any of this mean?</p>
             </div>
 
             {/* After */}
-            <div className="rounded-2xl border-2 border-emerald-200 bg-white p-6 shadow-sm">
-              <div className="flex items-center gap-2 mb-5">
-                <div className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
-                <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">{t('problem.after')}</span>
+            <div className="rounded-xl border-2 border-emerald-200 bg-white p-4 shadow-sm">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="h-2 w-2 rounded-full bg-emerald-500" />
+                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{t('problem.after')}</span>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-1.5">
                 {[
-                  { icon: CheckCircle, color: 'text-emerald-500', text: 'Your thyroid hormone (TSH) is within the normal range — no action needed.' },
-                  { icon: AlertCircle, color: 'text-orange-500', text: 'Blood sugar (HbA1c) is slightly elevated — could indicate pre-diabetes. Discuss with your doctor.' },
-                  { icon: AlertCircle, color: 'text-orange-500', text: 'Kidney filtration (eGFR) is mildly reduced — worth monitoring over time.' },
-                  { icon: AlertTriangle, color: 'text-red-500', text: 'Inflammation (CRP) is elevated — your doctor should investigate the cause soon.' },
-                  { icon: AlertCircle, color: 'text-orange-500', text: 'Iron stores (Ferritin) are low — may cause fatigue. Iron supplement may help.' },
+                  { icon: CheckCircle, color: 'text-emerald-500', text: 'Your thyroid (TSH) is within the normal range — no action needed.' },
+                  { icon: AlertCircle, color: 'text-orange-500', text: 'Blood sugar (HbA1c) slightly elevated — discuss pre-diabetes risk with your doctor.' },
+                  { icon: AlertCircle, color: 'text-orange-500', text: 'Kidney filtration (eGFR) mildly reduced — worth monitoring over time.' },
+                  { icon: AlertTriangle, color: 'text-red-500', text: 'Inflammation (CRP) elevated — your doctor should investigate soon.' },
+                  { icon: AlertCircle, color: 'text-orange-500', text: 'Iron stores (Ferritin) low — may cause fatigue.' },
                 ].map(({ icon: Icon, color, text }, i) => (
-                  <div key={i} className="flex gap-3 items-start p-3 rounded-xl hover:bg-gray-50 transition-colors">
-                    <Icon className={`h-4 w-4 flex-shrink-0 mt-0.5 ${color}`} />
-                    <span className="text-sm text-gray-700 leading-relaxed">{text}</span>
+                  <div key={i} className="flex gap-2.5 items-start px-2 py-2 rounded-lg hover:bg-gray-50 transition-colors">
+                    <Icon className={`h-3.5 w-3.5 flex-shrink-0 mt-0.5 ${color}`} />
+                    <span className="text-xs text-gray-700 leading-relaxed">{text}</span>
                   </div>
                 ))}
               </div>

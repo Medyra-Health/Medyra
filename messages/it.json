@@ -216,7 +216,8 @@
     "viewAllReports": "Vedi tutti i referti",
     "approachingLimit": "Avvicinamento al limite",
     "upgradePlan": "Aggiorna piano",
-    "remaining": "Rimanenti"
+    "remaining": "Rimanenti",
+    "prepButton": "Prepara la visita medica"
   },
   "report": {
     "disclaimer": "Avvertenza medica",

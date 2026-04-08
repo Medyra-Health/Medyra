@@ -218,7 +218,8 @@
     "viewAllReports": "تمام رپورٹیں دیکھیں",
     "approachingLimit": "استعمال کی حد قریب",
     "upgradePlan": "پلان اپگریڈ کریں",
-    "remaining": "باقی"
+    "remaining": "باقی",
+    "prepButton": "ڈاکٹر کی تیاری کریں"
   },
   "report": {
     "disclaimer": "طبی اعلان دستبرداری",

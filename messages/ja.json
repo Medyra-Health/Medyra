@@ -216,7 +216,8 @@
     "viewAllReports": "すべてのレポートを表示",
     "approachingLimit": "制限に近づいています",
     "upgradePlan": "プランをアップグレード",
-    "remaining": "残り"
+    "remaining": "残り",
+    "prepButton": "診察の準備"
   },
   "report": {
     "disclaimer": "医療免責事項",

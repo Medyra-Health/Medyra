@@ -218,7 +218,8 @@
     "viewAllReports": "Alle rapporten bekijken",
     "approachingLimit": "Nadert limiet",
     "upgradePlan": "Abonnement upgraden",
-    "remaining": "Resterend"
+    "remaining": "Resterend",
+    "prepButton": "Doktersbezoek voorbereiden"
   },
   "report": {
     "disclaimer": "Medische disclaimer",

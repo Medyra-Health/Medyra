@@ -216,7 +216,8 @@
     "viewAllReports": "সব রিপোর্ট দেখুন",
     "approachingLimit": "সীমার কাছে আসছেন",
     "upgradePlan": "প্ল্যান আপগ্রেড করুন",
-    "remaining": "অবশিষ্ট"
+    "remaining": "অবশিষ্ট",
+    "prepButton": "ডাক্তারের সাথে প্রস্তুতি"
   },
   "report": {
     "disclaimer": "মেডিকেল দাবিত্যাগ",

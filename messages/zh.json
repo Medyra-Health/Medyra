@@ -216,7 +216,8 @@
     "viewAllReports": "查看所有报告",
     "approachingLimit": "接近限制",
     "upgradePlan": "升级计划",
-    "remaining": "剩余"
+    "remaining": "剩余",
+    "prepButton": "准备就医"
   },
   "report": {
     "disclaimer": "医疗免责声明",
