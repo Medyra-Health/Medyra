@@ -293,5 +293,29 @@
     "subscriptionActive": "Votre abonnement est maintenant actif",
     "thankYou": "Merci de vous être abonné à Medyra. Vous pouvez maintenant commencer à télécharger et analyser vos rapports médicaux.",
     "uploadFirstReport": "Télécharger votre premier rapport"
+  },
+  "prep": {
+    "title": "Préparation à la consultation",
+    "subtitle": "Décrivez comment vous vous sentez, dans n'importe quelle langue",
+    "description": "Écrivez librement sur vos symptômes. Nous créons un résumé structuré en allemand à remettre à votre médecin.",
+    "placeholder": "Exemple : J'ai mal à la tête depuis 3 jours, ça empire le matin. J'ai des vertiges en me levant. Je prends de la metformine quotidiennement.",
+    "hint": "Mentionnez : symptômes, début, médicaments, allergies, antécédents.",
+    "charLimit": "Le texte sera limité à {limit} caractères.",
+    "submit": "Créer le résumé médical",
+    "creating": "Création du résumé…",
+    "outputLabel": "Résumé de consultation",
+    "print": "Imprimer / Sauvegarder",
+    "printFull": "Imprimer / Sauvegarder en PDF",
+    "usageUnlimited": "Utilisation illimitée",
+    "usageLimitReached": "Limite mensuelle atteinte",
+    "usageCount": "{used}/{limit} utilisé(s) ce mois-ci",
+    "upgrade": "Mettre à niveau",
+    "upgradeCta": "Plans Personal & Family : résumés illimités",
+    "notSignedIn": "Veuillez vous connecter",
+    "notSignedInDesc": "Vous devez être connecté pour utiliser la préparation de consultation.",
+    "signIn": "Se connecter",
+    "disclaimer": "Ce document a été créé pour faciliter la communication avec votre médecin. Ce n'est pas un diagnostic médical.",
+    "sectionLabel": "Préparation à la consultation",
+    "badge": "Nouvelle fonctionnalité"
   }
 }

@@ -295,5 +295,29 @@
     "subscriptionActive": "Uw abonnement is nu actief",
     "thankYou": "Bedankt voor uw abonnement op Medyra. U kunt nu beginnen met het uploaden en analyseren van uw medische rapporten.",
     "uploadFirstReport": "Upload uw eerste rapport"
+  },
+  "prep": {
+    "title": "Artsbezoek voorbereiding",
+    "subtitle": "Beschrijf hoe u zich voelt, in elke taal",
+    "description": "Schrijf vrij over uw klachten. Wij maken een gestructureerde professionele samenvatting in het Duits voor uw arts.",
+    "placeholder": "Voorbeeld: Ik heb al 3 dagen hoofdpijn, erger 's ochtends. Ik word duizelig als ik opsta. Ik gebruik dagelijks metformine.",
+    "hint": "Vermeld: klachten, wanneer begonnen, medicijnen, allergieën, voorgeschiedenis.",
+    "charLimit": "Tekst wordt beperkt tot {limit} tekens.",
+    "submit": "Artsbrief maken",
+    "creating": "Samenvatting wordt gemaakt…",
+    "outputLabel": "Artsbezoek samenvatting",
+    "print": "Afdrukken / Opslaan",
+    "printFull": "Afdrukken / Opslaan als PDF",
+    "usageUnlimited": "Onbeperkt gebruik",
+    "usageLimitReached": "Maandelijkse limiet bereikt",
+    "usageCount": "{used}/{limit} deze maand gebruikt",
+    "upgrade": "Upgraden",
+    "upgradeCta": "Personal & Family plan: onbeperkte artsbrieven",
+    "notSignedIn": "Meld u aan",
+    "notSignedInDesc": "U moet ingelogd zijn om de artsbezoek voorbereiding te gebruiken.",
+    "signIn": "Nu inloggen",
+    "disclaimer": "Dit document is gemaakt om de communicatie met uw arts te vergemakkelijken. Het is geen medische diagnose.",
+    "sectionLabel": "Artsbezoek voorbereiding",
+    "badge": "Nieuwe functie"
   }
 }
