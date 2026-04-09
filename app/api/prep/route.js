@@ -109,7 +109,8 @@ export async function POST(request) {
   const user = await db.collection('users').findOne({ clerkId: userId })
   const mongoTier = user?.subscription?.tier || 'free'
   const effectiveTier = await getEffectiveTier(userId, mongoTier)
-  const monthLimit = PREP_LIMITS[effectiveTier] ?? 1
+  // Use 'in' check so null (unlimited) is preserved — null ?? 1 would wrongly return 1
+  const monthLimit = effectiveTier in PREP_LIMITS ? PREP_LIMITS[effectiveTier] : 1
 
   // Check monthly usage limit
   if (monthLimit !== null) {
@@ -175,7 +176,7 @@ export async function GET() {
   const user = await db.collection('users').findOne({ clerkId: userId })
   const mongoTier = user?.subscription?.tier || 'free'
   const effectiveTier = await getEffectiveTier(userId, mongoTier)
-  const monthLimit = PREP_LIMITS[effectiveTier] ?? 1
+  const monthLimit = effectiveTier in PREP_LIMITS ? PREP_LIMITS[effectiveTier] : 1
 
   const used = (user?.prepDocs || []).filter(
     d => new Date(d.createdAt) >= startOfMonth()
