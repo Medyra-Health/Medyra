@@ -73,6 +73,26 @@ export default function AdminPage() {
   const [encLoading, setEncLoading] = useState(false)
   const [migrating, setMigrating] = useState(false)
   const [migrateResult, setMigrateResult] = useState(null)
+  const [activating, setActivating] = useState(false)
+  const [activateMsg, setActivateMsg] = useState(null)
+
+  async function activateAdmin() {
+    setActivating(true)
+    setActivateMsg(null)
+    try {
+      const res = await fetch('/api/admin/activate', { method: 'POST' })
+      const body = await res.json()
+      if (res.ok) {
+        setActivateMsg({ ok: true, text: '✓ Admin tier activated in database. Doctor Visit Prep is now unlimited.' })
+      } else {
+        setActivateMsg({ ok: false, text: body.error || 'Failed' })
+      }
+    } catch (e) {
+      setActivateMsg({ ok: false, text: e.message })
+    } finally {
+      setActivating(false)
+    }
+  }
 
   const fetchStats = useCallback(async () => {
     try {
@@ -170,6 +190,28 @@ export default function AdminPage() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-6">
+
+        {/* Admin account setup */}
+        <div className="bg-white rounded-xl border border-amber-200 p-4 flex flex-col sm:flex-row sm:items-center gap-3">
+          <div className="flex-1">
+            <p className="text-sm font-semibold text-gray-800">Admin Database Activation</p>
+            <p className="text-xs text-gray-500 mt-0.5">
+              Sets <code className="bg-gray-100 px-1 rounded">subscription.tier = admin</code> in MongoDB for your account, giving unlimited access to all features including Doctor Visit Prep.
+            </p>
+            {activateMsg && (
+              <p className={`text-xs mt-2 font-medium ${activateMsg.ok ? 'text-emerald-700' : 'text-red-600'}`}>
+                {activateMsg.text}
+              </p>
+            )}
+          </div>
+          <button
+            onClick={activateAdmin}
+            disabled={activating}
+            className="flex-shrink-0 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors disabled:opacity-50"
+          >
+            {activating ? 'Activating…' : 'Activate Admin Tier'}
+          </button>
+        </div>
 
         {/* Stat cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
