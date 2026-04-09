@@ -1,20 +1,24 @@
 import { NextResponse } from 'next/server'
-import { auth, clerkClient } from '@clerk/nextjs/server'
+import { auth } from '@clerk/nextjs/server'
 import Anthropic from '@anthropic-ai/sdk'
 import { MongoClient } from 'mongodb'
 
 const ADMIN_EMAIL = 'abralur28@gmail.com'
 
 async function isAdminUser(userId, mongoUser) {
-  // 1. MongoDB tier (fastest — set once via activate endpoint)
+  // 1. MongoDB tier — fastest, set once via /api/admin/activate
   if (mongoUser?.subscription?.tier === 'admin') return true
   // 2. MongoDB email field
   if (mongoUser?.email === ADMIN_EMAIL) return true
-  // 3. Clerk backend SDK — uses secret key, doesn't need session cookie
+  // 3. Direct Clerk REST API — no SDK, uses secret key, always reliable
   try {
-    const clerk = await clerkClient()
-    const user = await clerk.users.getUser(userId)
-    if (user.emailAddresses?.some(e => e.emailAddress === ADMIN_EMAIL)) return true
+    const res = await fetch(`https://api.clerk.com/v1/users/${userId}`, {
+      headers: { Authorization: `Bearer ${process.env.CLERK_SECRET_KEY}` },
+    })
+    if (res.ok) {
+      const u = await res.json()
+      if (u.email_addresses?.some(e => e.email_address === ADMIN_EMAIL)) return true
+    }
   } catch {}
   return false
 }
