@@ -223,12 +223,8 @@ export default function PrepPage() {
   const [output, setOutput] = useState('')
   const [usage, setUsage] = useState(null)
   const [history, setHistory] = useState([])
-  const [historyOpen, setHistoryOpen] = useState(null) // id of expanded history item
-  const [activating, setActivating] = useState(false)
+  const [historyOpen, setHistoryOpen] = useState(null)
   const outputRef = useRef(null)
-
-  const ADMIN_EMAIL = 'abralur28@gmail.com'
-  const isAdmin = user?.emailAddresses?.some(e => e.emailAddress === ADMIN_EMAIL)
 
   useEffect(() => {
     if (isLoaded && user) {
@@ -238,24 +234,6 @@ export default function PrepPage() {
       }).catch(() => {})
     }
   }, [isLoaded, user])
-
-  async function activateAdmin() {
-    setActivating(true)
-    try {
-      const res = await fetch('/api/admin/activate', { method: 'POST' })
-      const data = await res.json()
-      if (res.ok) {
-        toast.success('Admin access activated! Refreshing...')
-        setTimeout(() => window.location.reload(), 1000)
-      } else {
-        toast.error(data.error || 'Failed')
-      }
-    } catch {
-      toast.error('Error activating admin')
-    } finally {
-      setActivating(false)
-    }
-  }
 
   useEffect(() => {
     if (output && outputRef.current) {
@@ -289,9 +267,8 @@ export default function PrepPage() {
         used: (prev.used || 0) + 1,
         canUse: prev.unlimited || (prev.used + 1) < prev.limit,
       } : prev)
-      // Add to history
-      const newEntry = { id: Date.now().toString(), createdAt: new Date().toISOString(), output: data.output }
-      setHistory(prev => [newEntry, ...prev].slice(0, 10))
+      const newEntry = { id: Date.now().toString(), createdAt: new Date().toISOString(), input, output: data.output }
+      setHistory(prev => [newEntry, ...prev].slice(0, 20))
     } catch {
       toast.error(t('errors.uploadFailed'))
     } finally {
@@ -473,25 +450,8 @@ export default function PrepPage() {
             </p>
           </div>
 
-          {/* Admin activate banner */}
-          {isAdmin && usage && !usage.unlimited && (
-            <div className="mt-4 bg-orange-50 border border-orange-200 rounded-xl px-4 py-3 flex items-center justify-between print:hidden">
-              <div>
-                <p className="text-xs font-semibold text-orange-800">Admin account detected — activate unlimited access</p>
-                <p className="text-[11px] text-orange-600 mt-0.5">This sets your account tier to admin in the database.</p>
-              </div>
-              <button
-                onClick={activateAdmin}
-                disabled={activating}
-                className="ml-4 flex-shrink-0 text-xs font-semibold bg-orange-500 hover:bg-orange-600 text-white px-3 py-1.5 rounded-lg transition-colors disabled:opacity-50"
-              >
-                {activating ? 'Activating…' : 'Activate Admin'}
-              </button>
-            </div>
-          )}
-
           {/* Upgrade CTA */}
-          {usage && !isUnlimited && !isAdmin && (
+          {usage && !isUnlimited && (
             <div className="mt-5 flex items-center justify-center gap-2 text-xs text-gray-400">
               <span>{t('prep.upgradeCta')}</span>
               <Link href="/pricing" className="text-emerald-600 font-semibold hover:underline flex items-center gap-0.5">
