@@ -619,6 +619,7 @@ async function handleCheckout(request) {
     mode: priceInfo.mode,
     payment_method_types: ['card'],
     allow_promotion_codes: true,
+    client_reference_id: userId, // backup: readable even if metadata is stripped
     line_items: [{
       price_data: {
         currency: 'eur',
@@ -633,7 +634,7 @@ async function handleCheckout(request) {
     }],
     success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${origin}/pricing`,
-    metadata: { userId, tier }
+    metadata: { userId, tier }, // primary: used by webhook
   })
 
   await database.collection('payments').insertOne({
