@@ -104,7 +104,7 @@ export const metadata = {
   },
 }
 
-const SUPPORTED_LOCALES = ['en','de','bn','fr','es','it','pt','nl','pl','tr','ar','zh','ja','ko','hi','ru']
+const SUPPORTED_LOCALES = ['en','de','bn','fr','es','it','pt','nl','pl','tr','ar','zh','ja','ko','hi','ur','ru']
 
 export default async function RootLayout({ children }) {
   const cookieStore = await cookies()
