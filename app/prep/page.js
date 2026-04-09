@@ -10,7 +10,7 @@ import { Badge } from '@/components/ui/badge'
 import { toast } from 'sonner'
 import MedyraLogo from '@/components/MedyraLogo'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 
 // ── Parse the Claude markdown-like output into structured sections ──────────
 function parseOutput(text) {
@@ -218,6 +218,7 @@ function PrintArea({ text }) {
 export default function PrepPage() {
   const { user, isLoaded } = useUser()
   const t = useTranslations()
+  const locale = useLocale()
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const [output, setOutput] = useState('')
@@ -251,7 +252,7 @@ export default function PrepPage() {
       const res = await fetch('/api/prep', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ input }),
+        body: JSON.stringify({ input, locale }),
       })
       const data = await res.json()
       if (!res.ok) {

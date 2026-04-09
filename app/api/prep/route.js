@@ -36,7 +36,8 @@ async function getEffectiveTier(userId, mongoTier) {
 // ── Anthropic ──────────────────────────────────────────────────────────────
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
-const PREP_SYSTEM_PROMPT = `You are a medical communication assistant helping patients prepare for a doctor's appointment in Germany.
+const SYSTEM_PROMPTS = {
+  de: `You are a medical communication assistant helping patients prepare for a doctor's appointment in Germany.
 
 Your job is to take the patient's free-form description of their symptoms and situation — written in any language — and convert it into a structured, professional German summary they can show to their doctor.
 
@@ -71,7 +72,51 @@ Datum: [today's date in German format DD.MM.YYYY]
 **Fragen an den Arzt**
 [Generate 3 sensible questions the patient might want to ask, based on what they described. Frame as questions, not conclusions.]
 
-Dieses Dokument wurde zur Kommunikation erstellt und stellt keine medizinische Diagnose dar.`
+Dieses Dokument wurde zur Kommunikation erstellt und stellt keine medizinische Diagnose dar.`,
+
+  en: `You are a medical communication assistant helping patients prepare for a doctor's appointment.
+
+Your job is to take the patient's free-form description of their symptoms and situation — written in any language — and convert it into a structured, professional English summary they can show to their doctor.
+
+STRICT RULES:
+- Never diagnose anything
+- Never suggest medications or treatments
+- Never say what the patient "might have" or "could be"
+- Never use alarmist language
+- Always frame output as "the patient reports..." not "the patient has..."
+- Output must be in English
+- Keep a neutral, clinical-communication tone
+- End every output with this disclaimer: "This document was created for communication purposes and does not constitute a medical diagnosis."
+
+OUTPUT STRUCTURE (always follow this exactly):
+
+**Patient Summary for Doctor's Visit**
+
+Date: [today's date in format DD/MM/YYYY]
+
+**Main Complaints**
+[2-4 bullet points of the main symptoms the patient described, in English]
+
+**Timeline**
+[When symptoms started, how they've changed]
+
+**Accompanying Symptoms**
+[Any secondary symptoms mentioned]
+
+**Relevant Medical History**
+[Any medications, allergies, past conditions the patient mentioned. If none mentioned, write: "None provided"]
+
+**Questions for the Doctor**
+[Generate 3 sensible questions the patient might want to ask, based on what they described. Frame as questions, not conclusions.]
+
+This document was created for communication purposes and does not constitute a medical diagnosis.`,
+}
+
+function getSystemPrompt(locale) {
+  if (locale === 'de') return SYSTEM_PROMPTS.de
+  // Default: English for all other locales (patient can always manually switch to DE)
+  return SYSTEM_PROMPTS.en
+}
 
 // ── MongoDB ────────────────────────────────────────────────────────────────
 let _client = null
@@ -100,6 +145,7 @@ export async function POST(request) {
 
   const body = await request.json()
   const input = (body.input || '').trim()
+  const locale = body.locale || 'en'
   if (!input || input.length < 10) {
     return NextResponse.json({ error: 'Please describe your symptoms in more detail.' }, { status: 400 })
   }
@@ -133,10 +179,10 @@ export async function POST(request) {
     const response = await anthropic.messages.create({
       model: 'claude-sonnet-4-6',
       max_tokens: 1500,
-      system: PREP_SYSTEM_PROMPT,
+      system: getSystemPrompt(locale),
       messages: [{
         role: 'user',
-        content: `The patient has described their situation as follows:\n\n${cappedInput}\n\nPlease generate the structured German doctor summary.`,
+        content: `The patient has described their situation as follows:\n\n${cappedInput}\n\nPlease generate the structured doctor summary in the correct language.`,
       }],
       temperature: 0.2,
     })
@@ -157,6 +203,7 @@ export async function POST(request) {
           input: cappedInput,
           inputLength: cappedInput.length,
           output,
+          locale,
         },
       },
       $set: { updatedAt: new Date() },
