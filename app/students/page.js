@@ -11,7 +11,7 @@ const MUTED   = 'rgba(232,245,240,0.45)'
 const CARD_BG = 'rgba(16,185,129,0.06)'
 const BORDER  = 'rgba(16,185,129,0.18)'
 
-// ── Document mock data ─────────────────────────────────────────────────────
+// ── Document mock data ────────────────────────────────────────────────────
 const DOCS = {
   insurance: {
     label: 'Health Insurance Letter',
@@ -27,10 +27,10 @@ const DOCS = {
     ],
     title: 'What this means',
     points: [
-      '✅ You\'re covered starting April 1st',
+      "✅ You're covered starting April 1st",
       '💳 Your monthly premium is confirmed',
       '📋 This is your proof of insurance for university enrollment',
-      '💡 Keep this letter — you\'ll need it for your Anmeldung',
+      "💡 Keep this letter — you'll need it for your Anmeldung",
     ],
   },
   lab: {
@@ -71,14 +71,14 @@ const DOCS = {
     title: 'What to do',
     points: [
       '💊 Ibuprofen 400mg: take 3× daily with food (morning, noon, night)',
-      '🛡️ Omeprazol protects your stomach while taking Ibuprofen',
-      '🏥 Take to any German pharmacy — it\'s covered by your Kasse',
+      "🛡️ Omeprazol protects your stomach while taking Ibuprofen",
+      "🏥 Take to any German pharmacy — it's covered by your Kasse",
       '📅 N3 = largest pack size, N2 = medium — no need to worry',
     ],
   },
-} as const
+}
 
-type DocKey = keyof typeof DOCS
+const DOC_KEYS = Object.keys(DOCS)
 
 const LANGUAGES = [
   'English','Deutsch','Français','Español','Türkçe','Русский',
@@ -86,10 +86,10 @@ const LANGUAGES = [
   'Українська','हिन्दी','Bahasa','Tagalog',
 ]
 
-// ── Inline SVG logo ────────────────────────────────────────────────────────
+// ── Logo ──────────────────────────────────────────────────────────────────
 function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-2.5 group">
+    <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}>
       <svg width="28" height="33" viewBox="0 0 88 104" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="5" y="2" width="52" height="68" rx="7" stroke="rgba(16,185,129,0.58)" strokeWidth="1.5" fill="#040C08"/>
         <line x1="15" y1="18" x2="47" y2="18" stroke="rgba(16,185,129,0.3)" strokeWidth="1.2" strokeLinecap="round"/>
@@ -105,13 +105,13 @@ function Logo() {
   )
 }
 
-// ── Main page ──────────────────────────────────────────────────────────────
+// ── Main page ─────────────────────────────────────────────────────────────
 export default function StudentsPage() {
-  const [active, setActive] = useState<DocKey>('insurance')
+  const [active, setActive] = useState('insurance')
   const [fading, setFading] = useState(false)
   const doc = DOCS[active]
 
-  function switchDoc(key: DocKey) {
+  function switchDoc(key) {
     if (key === active) return
     setFading(true)
     setTimeout(() => { setActive(key); setFading(false) }, 180)
@@ -138,28 +138,26 @@ export default function StudentsPage() {
           from { transform: translateX(0); }
           to   { transform: translateX(-50%); }
         }
-        .anim-1 { animation: fadeSlideUp  0.7s cubic-bezier(.22,.68,0,1.2) both; }
-        .anim-2 { animation: fadeSlideUp2 0.9s cubic-bezier(.22,.68,0,1.2) both; }
-        .anim-3 { animation: fadeSlideUp3 1.1s cubic-bezier(.22,.68,0,1.2) both; }
-        .marquee-track {
+        .s-anim-1 { animation: fadeSlideUp  0.7s cubic-bezier(.22,.68,0,1.2) both; }
+        .s-anim-2 { animation: fadeSlideUp2 0.9s cubic-bezier(.22,.68,0,1.2) both; }
+        .s-anim-3 { animation: fadeSlideUp3 1.1s cubic-bezier(.22,.68,0,1.2) both; }
+        .s-marquee-track {
           display: flex;
           gap: 2.5rem;
           white-space: nowrap;
           animation: marquee 28s linear infinite;
           will-change: transform;
         }
-        .marquee-track:hover { animation-play-state: paused; }
-        .marquee-wrap { overflow: hidden; }
-        .doc-card {
-          transition: opacity 0.18s ease, transform 0.18s ease;
-        }
-        .doc-card.fading {
-          opacity: 0;
-          transform: translateY(6px);
-        }
-        .mock-glow:hover {
-          box-shadow: 0 0 28px rgba(16,185,129,0.18);
-        }
+        .s-marquee-track:hover { animation-play-state: paused; }
+        .s-marquee-wrap { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent); }
+        .s-doc-card { transition: opacity 0.18s ease, transform 0.18s ease; }
+        .s-doc-card.fading { opacity: 0; transform: translateY(6px); }
+        .s-mock-glow { transition: box-shadow 0.3s; }
+        .s-mock-glow:hover { box-shadow: 0 0 32px rgba(16,185,129,0.2); }
+        .s-pill-btn { transition: all 0.2s; }
+        .s-pill-btn:hover { opacity: 0.85; }
+        .s-cta-btn { transition: transform 0.15s, box-shadow 0.15s; }
+        .s-cta-btn:hover { transform: translateY(-2px) !important; box-shadow: 0 8px 32px rgba(16,185,129,0.4) !important; }
       `}</style>
 
       <div style={{ minHeight: '100dvh', background: BG, color: TEXT, fontFamily: '"DM Sans", sans-serif', overflowX: 'hidden' }}>
@@ -172,10 +170,8 @@ export default function StudentsPage() {
             style={{
               background: ACCENT, color: '#040C08', fontWeight: 700, fontSize: '0.85rem',
               padding: '0.55rem 1.25rem', borderRadius: '12px', textDecoration: 'none',
-              letterSpacing: '0.01em', transition: 'opacity 0.15s',
+              letterSpacing: '0.01em',
             }}
-            onMouseOver={e => (e.currentTarget.style.opacity = '0.88')}
-            onMouseOut={e => (e.currentTarget.style.opacity = '1')}
           >
             Start free
           </Link>
@@ -185,7 +181,7 @@ export default function StudentsPage() {
         <main style={{ maxWidth: '720px', margin: '0 auto', padding: '2rem 1.5rem 0' }}>
 
           {/* Trust pill */}
-          <div className="anim-1" style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.75rem' }}>
+          <div className="s-anim-1" style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.75rem' }}>
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
               background: 'rgba(16,185,129,0.1)', border: `1px solid ${BORDER}`,
@@ -198,17 +194,18 @@ export default function StudentsPage() {
           </div>
 
           {/* Headline */}
-          <h1 className="anim-1" style={{
+          <h1 className="s-anim-1" style={{
             fontFamily: '"Playfair Display", serif', fontWeight: 800,
-            fontSize: 'clamp(2rem, 5.5vw, 3.1rem)', lineHeight: 1.15,
+            fontSize: 'clamp(1.9rem, 5.5vw, 3.1rem)', lineHeight: 1.15,
             textAlign: 'center', marginBottom: '1.25rem', color: TEXT,
+            margin: '0 0 1.25rem',
           }}>
             Your first semester shouldn't come with a{' '}
             <span style={{ color: ACCENT, fontStyle: 'italic' }}>medical dictionary.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="anim-2" style={{
+          <p className="s-anim-2" style={{
             textAlign: 'center', color: MUTED, fontWeight: 300,
             fontSize: 'clamp(1rem, 2.5vw, 1.15rem)', lineHeight: 1.65,
             maxWidth: '540px', margin: '0 auto 2rem',
@@ -218,41 +215,41 @@ export default function StudentsPage() {
           </p>
 
           {/* CTA */}
-          <div className="anim-2" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', marginBottom: '3.5rem' }}>
+          <div className="s-anim-2" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', marginBottom: '3.5rem' }}>
             <Link
               href="/sign-up"
+              className="s-cta-btn"
               style={{
                 background: ACCENT, color: '#040C08', fontWeight: 700,
                 fontSize: '1rem', padding: '0.85rem 2.2rem', borderRadius: '14px',
                 textDecoration: 'none', letterSpacing: '0.01em',
                 boxShadow: '0 4px 24px rgba(16,185,129,0.3)',
-                transition: 'transform 0.15s, box-shadow 0.15s',
+                display: 'inline-block',
               }}
-              onMouseOver={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(16,185,129,0.4)' }}
-              onMouseOut={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 24px rgba(16,185,129,0.3)' }}
             >
               Start free — no credit card
             </Link>
-            <p style={{ fontSize: '0.75rem', color: MUTED, textAlign: 'center', fontWeight: 300 }}>
+            <p style={{ fontSize: '0.75rem', color: MUTED, textAlign: 'center', fontWeight: 300, margin: 0 }}>
               Used by students at HPI, TU Berlin, Charité and more.
             </p>
           </div>
 
           {/* ── Document demo ── */}
-          <div className="anim-3">
+          <div className="s-anim-3">
             {/* Pill selector */}
             <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
-              {(Object.keys(DOCS) as DocKey[]).map(key => (
+              {DOC_KEYS.map(key => (
                 <button
                   key={key}
                   onClick={() => switchDoc(key)}
+                  className="s-pill-btn"
                   style={{
-                    padding: '0.45rem 1rem', borderRadius: '999px', border: `1px solid`,
-                    borderColor: active === key ? ACCENT : BORDER,
+                    padding: '0.45rem 1rem', borderRadius: '999px',
+                    border: `1px solid ${active === key ? ACCENT : BORDER}`,
                     background: active === key ? 'rgba(16,185,129,0.15)' : 'transparent',
                     color: active === key ? ACCENT : MUTED,
                     fontSize: '0.8rem', fontWeight: active === key ? 600 : 400,
-                    cursor: 'pointer', transition: 'all 0.2s', whiteSpace: 'nowrap',
+                    cursor: 'pointer', whiteSpace: 'nowrap',
                     fontFamily: '"DM Sans", sans-serif',
                   }}
                 >
@@ -263,12 +260,13 @@ export default function StudentsPage() {
 
             {/* Mock card */}
             <div
-              className={`doc-card mock-glow${fading ? ' fading' : ''}`}
+              className={`s-doc-card s-mock-glow${fading ? ' fading' : ''}`}
               style={{
-                display: 'grid', gridTemplateColumns: '1fr 1fr',
-                gap: '0', border: `1px solid ${BORDER}`,
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                border: `1px solid ${BORDER}`,
                 borderRadius: '20px', overflow: 'hidden',
-                background: CARD_BG, transition: 'box-shadow 0.3s',
+                background: CARD_BG,
               }}
             >
               {/* Left — redacted document */}
@@ -277,7 +275,7 @@ export default function StudentsPage() {
                 borderRight: `1px solid ${BORDER}`,
                 background: 'rgba(16,185,129,0.03)',
               }}>
-                <p style={{ fontSize: '0.65rem', fontWeight: 600, color: ACCENT, letterSpacing: '0.08em', marginBottom: '0.85rem', textTransform: 'uppercase' }}>
+                <p style={{ fontSize: '0.65rem', fontWeight: 600, color: ACCENT, letterSpacing: '0.08em', marginBottom: '0.85rem', textTransform: 'uppercase', margin: '0 0 0.85rem' }}>
                   Original document
                 </p>
                 <div style={{ fontFamily: 'monospace', fontSize: '0.7rem', lineHeight: 1.9, color: MUTED }}>
@@ -298,7 +296,7 @@ export default function StudentsPage() {
 
               {/* Right — plain language */}
               <div style={{ padding: '1.5rem 1.25rem' }}>
-                <p style={{ fontSize: '0.65rem', fontWeight: 600, color: ACCENT, letterSpacing: '0.08em', marginBottom: '0.85rem', textTransform: 'uppercase' }}>
+                <p style={{ fontSize: '0.65rem', fontWeight: 600, color: ACCENT, letterSpacing: '0.08em', marginBottom: '0.85rem', textTransform: 'uppercase', margin: '0 0 0.85rem' }}>
                   {doc.title}
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
@@ -317,9 +315,8 @@ export default function StudentsPage() {
             <p style={{ textAlign: 'center', fontSize: '0.7rem', fontWeight: 600, color: ACCENT, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>
               Available in 16 languages
             </p>
-            <div className="marquee-wrap" style={{ maskImage: 'linear-gradient(to right, transparent, black 12%, black 88%, transparent)' }}>
-              <div className="marquee-track" style={{ fontSize: '0.9rem', fontWeight: 300, color: MUTED }}>
-                {/* Duplicated for seamless loop */}
+            <div className="s-marquee-wrap">
+              <div className="s-marquee-track" style={{ fontSize: '0.9rem', fontWeight: 300, color: MUTED }}>
                 {[...LANGUAGES, ...LANGUAGES].map((lang, i) => (
                   <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', flexShrink: 0 }}>
                     {lang}
@@ -346,6 +343,7 @@ export default function StudentsPage() {
               </div>
             ))}
           </div>
+
         </main>
       </div>
     </>
