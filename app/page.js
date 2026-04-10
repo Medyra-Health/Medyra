@@ -246,6 +246,9 @@ export default function LandingPage() {
               <Link href="/blog">
                 <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-900 hover:bg-gray-50">Blog</Button>
               </Link>
+              <Link href="/verstehen">
+                <Button variant="ghost" size="sm" className="text-gray-500 hover:text-gray-800 hover:bg-gray-50 text-xs">Für Senioren</Button>
+              </Link>
               <div className="w-px h-4 bg-gray-200 mx-1" />
               <LanguageSwitcher />
               <SignedOut>
