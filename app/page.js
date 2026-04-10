@@ -32,6 +32,159 @@ const LANGUAGES = [
   { code: 'SE', name: 'Svenska' },
 ]
 
+// ── New to Germany section ─────────────────────────────────────────────────
+const DOCUMENT_TYPES = [
+  {
+    id: 'insurance',
+    pill: 'Health Insurance Letter',
+    heading: 'What does this letter even mean?',
+    body: 'Krankenkasse letters are dense German bureaucracy. Medyra reads it and tells you exactly what you owe, what you\'re covered for, and what to do next — in plain English.',
+    preview: [
+      { label: 'Coverage start', value: '01.04.2024', ok: true },
+      { label: 'Monthly premium', value: '€ 109,19', ok: true },
+      { label: 'Coverage type', value: 'Gesetzlich (GKV)', ok: true },
+      { label: 'Action needed', value: 'Submit to university', ok: null },
+    ],
+    badge: 'You\'re covered ✅',
+  },
+  {
+    id: 'lab',
+    pill: 'Lab Results',
+    heading: 'Your Blutbild decoded.',
+    body: 'German lab reports list 20+ values with no explanation. Medyra flags what\'s outside normal range, explains what each marker means, and tells you what to ask your doctor.',
+    preview: [
+      { label: 'Hämoglobin', value: '11.8 g/dL ↓', ok: false },
+      { label: 'Ferritin', value: '8 µg/L ↓', ok: false },
+      { label: 'TSH', value: '2.1 mIU/L', ok: true },
+      { label: 'Cholesterin', value: '195 mg/dL', ok: true },
+    ],
+    badge: 'Iron levels low — ask about supplements 💡',
+  },
+  {
+    id: 'prescription',
+    pill: 'Prescription',
+    heading: 'Kassenrezept — what do I do with this?',
+    body: 'A German Kassenrezept has codes, LANR numbers, and abbreviations. Medyra translates it: what the medication is, how to take it, and how to pick it up from the pharmacy.',
+    preview: [
+      { label: 'Medication', value: 'Ibuprofen 400mg', ok: true },
+      { label: 'Dosage', value: '3× daily with food', ok: true },
+      { label: 'Stomach protection', value: 'Omeprazol 20mg', ok: true },
+      { label: 'Pharmacy', value: 'Any Apotheke (free)', ok: true },
+    ],
+    badge: 'Take to any Apotheke 🏥',
+  },
+]
+
+function NewToGermanySection() {
+  const [active, setActive] = useState('insurance')
+  const [animKey, setAnimKey] = useState(0)
+  const doc = DOCUMENT_TYPES.find(d => d.id === active)
+
+  function switchDoc(id) {
+    if (id === active) return
+    setActive(id)
+    setAnimKey(k => k + 1)
+  }
+
+  return (
+    <section className="py-20 md:py-28 bg-white">
+      <div className="container mx-auto px-4 max-w-5xl">
+
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
+            New to Germany
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            New to Germany?{' '}
+            <span className="text-emerald-600">We&apos;ve got you.</span>
+          </h2>
+          <p className="text-gray-500 text-base max-w-xl mx-auto leading-relaxed">
+            Health documents in Germany are written for Germans. Whether you just arrived or have been here for years — Medyra turns bureaucratic paperwork into plain language, in your language.
+          </p>
+        </div>
+
+        {/* Pill selector */}
+        <div className="flex justify-center gap-2 flex-wrap mb-10">
+          {DOCUMENT_TYPES.map(d => (
+            <button
+              key={d.id}
+              onClick={() => switchDoc(d.id)}
+              className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 ${
+                active === d.id
+                  ? 'bg-emerald-500 border-emerald-500 text-white shadow-sm shadow-emerald-200'
+                  : 'bg-white border-gray-200 text-gray-600 hover:border-emerald-300 hover:text-emerald-700'
+              }`}
+            >
+              {d.pill}
+            </button>
+          ))}
+        </div>
+
+        {/* Content card */}
+        <div
+          key={animKey}
+          style={{ animation: 'ngFadeIn 0.3s ease both' }}
+          className="grid md:grid-cols-2 gap-0 rounded-2xl border border-gray-200 overflow-hidden shadow-sm"
+        >
+          {/* Left — explanation */}
+          <div className="bg-gray-950 p-8 md:p-10 flex flex-col justify-center">
+            <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-4">{doc.pill}</p>
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 leading-snug">
+              {doc.heading}
+            </h3>
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              {doc.body}
+            </p>
+            <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold px-3 py-1.5 rounded-full w-fit">
+              {doc.badge}
+            </div>
+          </div>
+
+          {/* Right — mock output */}
+          <div className="bg-white p-8 md:p-10 flex flex-col justify-center border-l border-gray-200">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-5">Medyra explains</p>
+            <div className="space-y-3">
+              {doc.preview.map((row, i) => (
+                <div key={i} className="flex items-center justify-between py-2.5 border-b border-gray-100 last:border-0">
+                  <span className="text-sm text-gray-500">{row.label}</span>
+                  <span className={`text-sm font-semibold flex items-center gap-1.5 ${
+                    row.ok === false ? 'text-amber-600' : row.ok === true ? 'text-gray-900' : 'text-emerald-600'
+                  }`}>
+                    {row.ok === false && <span className="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0" />}
+                    {row.ok === true && <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0" />}
+                    {row.value}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 pt-5 border-t border-gray-100">
+              <a
+                href="/sign-up"
+                className="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm py-2.5 rounded-xl transition-colors"
+              >
+                Try it free →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom trust line */}
+        <p className="text-center text-sm text-gray-400 mt-8">
+          No login needed to try · Results in under 60 seconds · <span className="text-emerald-600 font-medium">3 free reports</span>
+        </p>
+
+      </div>
+      <style>{`
+        @keyframes ngFadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+    </section>
+  )
+}
+
 export default function LandingPage() {
   const t = useTranslations()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -620,6 +773,9 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* ── NEW TO GERMANY ── */}
+      <NewToGermanySection />
 
       {/* ── ENCRYPTION / SECURITY ── */}
       <section className="py-20 md:py-28 bg-gray-950 overflow-hidden">
