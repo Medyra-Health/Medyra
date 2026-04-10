@@ -344,13 +344,22 @@ async function ensureUserExists(userId, database) {
     return { tier: 'free', limit: FREE_REPORT_LIMIT, used: 0, allowed: true }
   }
   const sub = user.subscription || { tier: 'free', usageLimit: FREE_REPORT_LIMIT, currentUsage: 0 }
-  // Upgrade existing free users who still have the old limit of 1
-  const effectiveLimit = sub.tier === 'free' ? Math.max(FREE_REPORT_LIMIT, sub.usageLimit || 0) : sub.usageLimit
+  const isFree = !sub.tier || sub.tier === 'free'
+  const effectiveLimit = isFree ? FREE_REPORT_LIMIT : (sub.usageLimit ?? FREE_REPORT_LIMIT)
+
+  // Persist corrected limit to DB if it was stale (old limit of 1, or missing)
+  if (isFree && (sub.usageLimit == null || sub.usageLimit < FREE_REPORT_LIMIT)) {
+    await database.collection('users').updateOne(
+      { clerkId: userId },
+      { $set: { 'subscription.usageLimit': FREE_REPORT_LIMIT, 'subscription.tier': 'free' } }
+    )
+  }
+
   return {
-    tier: sub.tier,
+    tier: sub.tier || 'free',
     limit: effectiveLimit,
-    used: sub.currentUsage,
-    allowed: sub.currentUsage < effectiveLimit
+    used: sub.currentUsage || 0,
+    allowed: (sub.currentUsage || 0) < effectiveLimit
   }
 }
 
