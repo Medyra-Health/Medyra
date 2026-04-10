@@ -7,7 +7,7 @@ import { Brain, Shield, Clock, ChevronRight, Menu, X, ArrowRight, AlertTriangle,
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import JsonLd from '@/components/JsonLd'
 import MedyraLogo from '@/components/MedyraLogo'
 
@@ -159,19 +159,25 @@ function NewToGermanySection() {
               ))}
             </div>
             <div className="mt-6 pt-5 border-t border-gray-100">
-              <a
-                href="/sign-up"
-                className="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm py-2.5 rounded-xl transition-colors"
-              >
-                Try it free →
-              </a>
+              <SignedOut>
+                <SignInButton mode="modal">
+                  <button className="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm py-2.5 rounded-xl transition-colors cursor-pointer">
+                    Try it free →
+                  </button>
+                </SignInButton>
+              </SignedOut>
+              <SignedIn>
+                <Link href="/upload" className="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm py-2.5 rounded-xl transition-colors">
+                  Upload a report →
+                </Link>
+              </SignedIn>
             </div>
           </div>
         </div>
 
         {/* Bottom trust line */}
         <p className="text-center text-sm text-gray-400 mt-8">
-          No login needed to try · Results in under 60 seconds · <span className="text-emerald-600 font-medium">3 free reports</span>
+          3 free reports · No credit card needed · <span className="text-emerald-600 font-medium">Results in under 60 seconds</span>
         </p>
 
       </div>
@@ -189,8 +195,39 @@ export default function LandingPage() {
   const t = useTranslations()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    )
+    document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div className="min-h-screen bg-white">
+      <style>{`
+        .scroll-fade {
+          opacity: 0;
+          transform: translateY(36px);
+          transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+        }
+        .scroll-fade.in-view {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .scroll-fade.delay-1 { transition-delay: 100ms; }
+        .scroll-fade.delay-2 { transition-delay: 200ms; }
+        .scroll-fade.delay-3 { transition-delay: 300ms; }
+        .scroll-fade.delay-4 { transition-delay: 400ms; }
+      `}</style>
       <JsonLd />
 
       {/* ── NAVIGATION ── */}
@@ -402,7 +439,7 @@ export default function LandingPage() {
       {/* ── TRUST STRIP ── */}
       <section className="bg-white border-b border-gray-100 py-5">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-center">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-center scroll-fade">
             {[
               { value: '3', label: 'Free reports to start' },
               { value: '~30s', label: 'Average analysis time' },
@@ -421,7 +458,7 @@ export default function LandingPage() {
       {/* ── BEFORE / AFTER ── */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-8">
+          <div className="text-center mb-8 scroll-fade">
             <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">The problem we solve</p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{t('problem.heading')}</h2>
             <p className="text-gray-500 text-sm max-w-lg mx-auto">{t('problem.subheading')}</p>
@@ -429,7 +466,7 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-2 gap-4 items-stretch">
             {/* Before */}
-            <div className="rounded-xl border-2 border-red-100 bg-white p-4 shadow-sm">
+            <div className="rounded-xl border-2 border-red-100 bg-white p-4 shadow-sm scroll-fade delay-1">
               <div className="flex items-center gap-2 mb-3">
                 <div className="h-2 w-2 rounded-full bg-red-500" />
                 <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{t('problem.before')}</span>
@@ -446,7 +483,7 @@ export default function LandingPage() {
             </div>
 
             {/* After */}
-            <div className="rounded-xl border-2 border-emerald-200 bg-white p-4 shadow-sm">
+            <div className="rounded-xl border-2 border-emerald-200 bg-white p-4 shadow-sm scroll-fade delay-2">
               <div className="flex items-center gap-2 mb-3">
                 <div className="h-2 w-2 rounded-full bg-emerald-500" />
                 <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{t('problem.after')}</span>
@@ -473,12 +510,12 @@ export default function LandingPage() {
       {/* ── HOW IT WORKS ── */}
       <section id="how-it-works" className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-fade">
             <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">Simple process</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t('howItWorks.title')}</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 relative">
+          <div className="grid md:grid-cols-3 gap-8 relative scroll-fade delay-1">
             {/* Connecting line desktop */}
             <div className="hidden md:block absolute top-9 left-[calc(16.67%+2rem)] right-[calc(16.67%+2rem)] h-px bg-gradient-to-r from-emerald-200 via-emerald-400 to-emerald-200" />
 
@@ -546,7 +583,7 @@ export default function LandingPage() {
         </div>
         <div className="container mx-auto px-4 max-w-5xl relative">
           {/* Badge + heading */}
-          <div className="text-center mb-14">
+          <div className="text-center mb-14 scroll-fade">
             <span className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
               <FileText className="h-3.5 w-3.5" /> New feature
             </span>
@@ -561,7 +598,7 @@ export default function LandingPage() {
           </div>
 
           {/* Three-column how it works */}
-          <div className="grid md:grid-cols-3 gap-6 mb-14">
+          <div className="grid md:grid-cols-3 gap-6 mb-14 scroll-fade delay-1">
             {[
               {
                 step: '01',
@@ -594,7 +631,7 @@ export default function LandingPage() {
           </div>
 
           {/* Sample output preview */}
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 mb-12 max-w-2xl mx-auto">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 mb-12 max-w-2xl mx-auto scroll-fade delay-2">
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-emerald-500" />
@@ -648,122 +685,13 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── LIVE DEMO SHOWCASE ── */}
-      <section className="py-20 md:py-28 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-14">
-            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">See it in action</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What you actually get</h2>
-            <p className="text-gray-500 text-base max-w-xl mx-auto">Here is exactly what the Medyra experience looks like — from upload to explained report.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-4">
-            {/* Upload card */}
-            <div className="rounded-2xl border-2 border-gray-200 bg-white p-6 hover:border-emerald-300 hover:shadow-md transition-all duration-200">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-9 h-9 rounded-xl bg-emerald-500 text-white text-sm font-bold flex items-center justify-center">1</div>
-                <span className="font-bold text-gray-900">Upload your report</span>
-              </div>
-              <div className="border-2 border-dashed border-gray-200 rounded-xl p-6 text-center bg-gray-50 hover:border-emerald-300 hover:bg-emerald-50/40 transition-colors cursor-pointer">
-                <div className="w-10 h-10 mx-auto mb-3 text-gray-300">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
-                  </svg>
-                </div>
-                <p className="text-xs text-gray-500 font-medium mb-3">Drop PDF, JPG, PNG or TXT</p>
-                <div className="flex flex-wrap justify-center gap-1.5">
-                  {['PDF', 'JPG', 'PNG', 'TXT'].map(f => (
-                    <span key={f} className="px-2 py-0.5 bg-emerald-50 text-emerald-600 border border-emerald-100 rounded text-xs font-semibold">{f}</span>
-                  ))}
-                </div>
-              </div>
-              <div className="flex items-center gap-1.5 mt-4 justify-center">
-                <Lock className="h-3 w-3 text-emerald-500" />
-                <p className="text-xs text-gray-400">Encrypted · auto-deleted after 30 days</p>
-              </div>
-            </div>
-
-            {/* Processing card */}
-            <div className="rounded-2xl border-2 border-gray-200 bg-white p-6 hover:border-emerald-300 hover:shadow-md transition-all duration-200">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-9 h-9 rounded-xl bg-emerald-500 text-white text-sm font-bold flex items-center justify-center">2</div>
-                <span className="font-bold text-gray-900">AI reads & explains</span>
-              </div>
-              <div className="space-y-2.5">
-                {[
-                  { text: 'Extracting text from document…', done: true },
-                  { text: 'Identifying all test values…', done: true },
-                  { text: 'Generating explanation…', done: false },
-                ].map(({ text, done }) => (
-                  <div key={text} className="flex items-center gap-3 px-4 py-3 rounded-xl bg-emerald-50 border border-emerald-100">
-                    <div className={`w-2 h-2 rounded-full flex-shrink-0 bg-emerald-500 ${done ? '' : 'animate-pulse'}`} />
-                    <span className="text-xs text-emerald-700 font-medium">{text}</span>
-                    {done && <CheckCircle className="h-3.5 w-3.5 text-emerald-500 ml-auto" />}
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 text-center">
-                <span className="text-3xl font-black text-emerald-600">~30s</span>
-                <p className="text-xs text-gray-400 mt-1 font-medium">Average processing time</p>
-              </div>
-            </div>
-
-            {/* Result card */}
-            <div className="rounded-2xl border-2 border-emerald-300 bg-white p-6 shadow-sm hover:shadow-md transition-all duration-200">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-9 h-9 rounded-xl bg-emerald-500 text-white text-sm font-bold flex items-center justify-center">3</div>
-                <span className="font-bold text-gray-900">Your report, explained</span>
-              </div>
-              <div className="space-y-2.5">
-                {[
-                  { name: 'TSH', status: 'Normal', statusColor: 'bg-emerald-100 text-emerald-700', bar: 'bg-emerald-500', desc: 'Thyroid function is within healthy range.' },
-                  { name: 'HbA1c', status: 'High', statusColor: 'bg-orange-100 text-orange-700', bar: 'bg-orange-500', desc: 'Discuss pre-diabetes risk with your doctor.' },
-                  { name: 'CRP', status: 'Critical', statusColor: 'bg-red-100 text-red-700', bar: 'bg-red-500', desc: 'Inflammation elevated — see your doctor soon.' },
-                ].map((r) => (
-                  <div key={r.name} className={`border-l-[3px] ${r.bar.replace('bg-', 'border-')} pl-3 py-1.5`}>
-                    <div className="flex justify-between items-center mb-0.5">
-                      <span className="text-sm font-bold text-gray-800">{r.name}</span>
-                      <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${r.statusColor}`}>{r.status}</span>
-                    </div>
-                    <p className="text-xs text-gray-500">{r.desc}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 pt-4 border-t border-gray-100">
-                <p className="text-xs text-gray-400 flex items-center gap-1.5">
-                  <CheckCircle className="h-3.5 w-3.5 text-emerald-500" />
-                  Questions to ask your doctor · included
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center mt-10">
-            <SignedOut>
-              <SignInButton mode="modal">
-                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12">
-                  Try It Free — No Credit Card <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </SignInButton>
-            </SignedOut>
-            <SignedIn>
-              <Link href="/upload">
-                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12">
-                  Upload My Report <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </SignedIn>
-          </div>
-        </div>
-      </section>
-
       {/* ── LANGUAGES ── */}
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">Global reach</p>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Available in 18 languages</h2>
           <p className="text-gray-400 text-base mb-10">From Germany to the world — understand your health in your own language.</p>
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 scroll-fade delay-1">
             {LANGUAGES.map(({ code, name }) => (
               <span key={code} className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800 border border-gray-700 text-sm text-gray-300 hover:border-emerald-500/40 hover:text-white transition-colors">
                 <span className="text-[10px] font-bold text-gray-500 tracking-widest">{code}</span>
@@ -780,7 +708,7 @@ export default function LandingPage() {
       {/* ── ENCRYPTION / SECURITY ── */}
       <section className="py-20 md:py-28 bg-gray-950 overflow-hidden">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-14">
+          <div className="text-center mb-14 scroll-fade">
             <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
               <Shield className="h-3.5 w-3.5" /> Bank-grade encryption
             </div>
@@ -792,7 +720,7 @@ export default function LandingPage() {
           </div>
 
           {/* Encrypt flow */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 mb-14">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 mb-14 scroll-fade delay-1">
             {[
               { icon: '📄', title: 'Your report', sub: 'HbA1c: 6.1%\neGFR: 58 mL/min', highlight: false },
               null,
@@ -819,7 +747,7 @@ export default function LandingPage() {
             })}
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 scroll-fade delay-2">
             {[
               { icon: '🔑', title: 'AES-256-GCM', desc: 'Recommended by BSI TR-02102-1 for sensitive data' },
               { icon: '🇪🇺', title: 'GDPR Art. 32', desc: 'Encryption required for personal health data (§9 BDSG)' },
@@ -845,11 +773,8 @@ export default function LandingPage() {
       {/* ── PRICING CTA ── */}
       <section className="bg-emerald-500 py-20">
         <div className="container mx-auto px-4 text-center max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold mb-5 border border-white/30">
-            🎉 Launch Special — 50% off all paid plans
-          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('pricingCta.title')}</h2>
-          <p className="text-white/70 mb-8 text-lg">{t('pricingCta.subtitle')}</p>
+          <p className="text-white/80 mb-8 text-lg">{t('pricingCta.subtitle')}</p>
           <Link href="/pricing">
             <Button size="lg" className="bg-white hover:bg-gray-100 text-emerald-600 font-bold px-10 rounded-xl h-12">
               {t('pricingCta.cta')} <ArrowRight className="ml-2 h-4 w-4" />
@@ -871,7 +796,7 @@ export default function LandingPage() {
               All articles <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-4 scroll-fade delay-1">
             {[
               {
                 href: '/blog/how-medyra-protects-your-medical-data',
