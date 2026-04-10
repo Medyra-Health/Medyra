@@ -802,11 +802,18 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-3 gap-4 scroll-fade delay-1">
             {[
               {
-                href: '/blog/how-medyra-protects-your-medical-data',
-                tag: 'Security · GDPR',
-                title: 'How Medyra Protects Your Medical Data',
-                desc: 'AES-256-GCM encryption, GDPR Art. 32, and why a breach of our database reveals nothing readable.',
-                time: '8 min',
+                href: '/blog/doctor-visit-prep-germany',
+                tag: 'Doctor Visit · New',
+                title: 'How to Prepare for a Doctor\'s Appointment in Germany',
+                desc: 'Describe symptoms in any language — Medyra generates a structured German summary for your doctor.',
+                time: '6 min',
+              },
+              {
+                href: '/blog/arztbrief-verstehen-fur-senioren',
+                tag: 'Für Senioren · Neu',
+                title: 'Ihren Arztbrief einfach verstehen — Medyra für Senioren',
+                desc: 'Befund erhalten und nicht verstanden? Medyra erklärt alles auf Deutsch — zum Lesen oder Vorlesen lassen.',
+                time: '5 Min.',
               },
               {
                 href: '/blog/how-to-read-lab-results-germany-expat',
@@ -814,13 +821,6 @@ export default function LandingPage() {
                 title: 'How to Read Your Lab Results in Germany as an Expat',
                 desc: 'Decode your Laborbefund — abbreviations, reference ranges, and what flagged values actually mean.',
                 time: '7 min',
-              },
-              {
-                href: '/blog/understanding-your-blood-test-results',
-                tag: 'Blood Test · CBC',
-                title: 'Understanding Your Blood Test Results',
-                desc: 'CBC, HbA1c, CRP, cholesterol — the most common values explained so you can walk in informed.',
-                time: '9 min',
               },
             ].map((post) => (
               <Link key={post.href} href={post.href} className="block group">
