@@ -37,15 +37,18 @@ export default function MedyraLogo({ size = 'md', showTagline = false, variant =
     <div className={`flex items-center gap-3 ${className}`}>
       <MedyraIcon size={s.icon} />
       <div className="flex flex-col">
-        <span style={{
-          fontFamily: 'var(--font-playfair, "Playfair Display", Georgia, serif)',
-          fontWeight: 700,
-          fontSize: s.fontSize,
-          letterSpacing: '0.04em',
-          color: textColor,
-          lineHeight: 1,
-        }}>
-          <span style={{ fontWeight: 800 }}>M</span>edyra
+        <span
+          translate="no"
+          style={{
+            fontFamily: 'var(--font-playfair, "Playfair Display", Georgia, serif)',
+            fontWeight: 700,
+            fontSize: s.fontSize,
+            letterSpacing: '0.04em',
+            color: textColor,
+            lineHeight: 1,
+          }}
+        >
+          <span style={{ fontWeight: 800, color: '#10B981' }}>M</span>edyra
         </span>
         {showTagline && (
           <span style={{

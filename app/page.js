@@ -8,6 +8,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import JsonLd from '@/components/JsonLd'
 import MedyraLogo from '@/components/MedyraLogo'
 
@@ -191,6 +192,27 @@ function NewToGermanySection() {
   )
 }
 
+function NavLink({ href, children, color = '#10B981', className = '' }) {
+  const pathname = usePathname()
+  const active = pathname === href
+  return (
+    <Link
+      href={href}
+      className={`relative px-3 py-2 text-sm font-medium transition-colors group ${
+        active ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
+      } ${className}`}
+    >
+      {children}
+      <span
+        className={`absolute bottom-0 left-3 right-3 h-0.5 rounded-full transition-transform duration-200 origin-left ${
+          active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+        }`}
+        style={{ backgroundColor: color }}
+      />
+    </Link>
+  )
+}
+
 export default function LandingPage() {
   const t = useTranslations()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -231,40 +253,40 @@ export default function LandingPage() {
       <JsonLd />
 
       {/* ── NAVIGATION ── */}
-      <nav className="border-b border-gray-200 bg-white/95 backdrop-blur-sm sticky top-0 z-50">
+      <nav className="border-b border-gray-100 bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
-            <MedyraLogo size="md" />
+            <Link href="/"><MedyraLogo size="md" /></Link>
 
-            <div className="hidden md:flex items-center gap-1">
-              <Link href="/pricing">
-                <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-900 hover:bg-gray-50">{t('nav.pricing')}</Button>
-              </Link>
-              <Link href="/prep">
-                <Button variant="ghost" size="sm" className="text-violet-600 hover:text-violet-700 hover:bg-violet-50 font-medium">Doctor Visit</Button>
-              </Link>
-              <Link href="/blog">
-                <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-900 hover:bg-gray-50">Blog</Button>
-              </Link>
-              <Link href="/verstehen">
-                <Button variant="ghost" size="sm" className="text-gray-500 hover:text-gray-800 hover:bg-gray-50 text-xs">Für Senioren</Button>
-              </Link>
-              <div className="w-px h-4 bg-gray-200 mx-1" />
+            <div className="hidden md:flex items-center gap-0.5">
+              <NavLink href="/pricing">{t('nav.pricing')}</NavLink>
+              <NavLink href="/prep" color="#7c3aed" className="text-violet-600 hover:text-violet-700">Doctor Visit</NavLink>
+              <NavLink href="/blog">Blog</NavLink>
+              <NavLink href="/verstehen" color="#0d9488" className="text-xs">Für Senioren</NavLink>
+              <div className="w-px h-4 bg-gray-200 mx-2" />
               <LanguageSwitcher />
               <SignedOut>
                 <SignInButton mode="modal">
-                  <Button variant="ghost" size="sm" className="text-gray-700 hover:text-gray-900">{t('nav.signIn')}</Button>
+                  <button className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                    {t('nav.signIn')}
+                  </button>
                 </SignInButton>
                 <SignInButton mode="modal">
-                  <Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold">Try for free</Button>
+                  <button className="ml-1 px-4 py-2 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-lg transition-all shadow-sm shadow-emerald-200">
+                    Try for free
+                  </button>
                 </SignInButton>
               </SignedOut>
               <SignedIn>
                 <Link href="/upload">
-                  <Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold">{t('nav.upload')}</Button>
+                  <button className="ml-1 px-4 py-2 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-lg transition-all shadow-sm shadow-emerald-200">
+                    {t('nav.upload')}
+                  </button>
                 </Link>
                 <Link href="/dashboard">
-                  <Button variant="ghost" size="sm" className="text-gray-700 hover:text-gray-900">{t('nav.dashboard')}</Button>
+                  <button className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                    {t('nav.dashboard')}
+                  </button>
                 </Link>
                 <MedyraUserButton />
               </SignedIn>
@@ -279,31 +301,44 @@ export default function LandingPage() {
           </div>
 
           {mobileMenuOpen && (
-            <div className="md:hidden pt-3 pb-2 border-t border-gray-200 mt-3 space-y-1">
-              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="ghost" className="w-full justify-start text-gray-700 hover:bg-gray-50">{t('nav.pricing')}</Button>
+            <div className="md:hidden pt-3 pb-2 border-t border-gray-100 mt-3 space-y-0.5">
+              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                {t('nav.pricing')}
               </Link>
-              <Link href="/prep" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="ghost" className="w-full justify-start text-violet-600 hover:bg-violet-50 font-medium">Doctor Visit</Button>
+              <Link href="/prep" onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center px-3 py-2.5 text-sm font-medium text-violet-600 hover:bg-violet-50 rounded-lg transition-colors">
+                Doctor Visit
               </Link>
-              <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="ghost" className="w-full justify-start text-gray-700 hover:bg-gray-50">Blog</Button>
+              <Link href="/blog" onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                Blog
               </Link>
-              <div className="border-t border-gray-100 my-1" />
+              <Link href="/verstehen" onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center px-3 py-2.5 text-sm font-medium text-teal-600 hover:bg-teal-50 rounded-lg transition-colors">
+                Für Senioren
+              </Link>
+              <div className="border-t border-gray-100 my-2" />
               <SignedOut>
                 <SignInButton mode="modal">
-                  <Button variant="ghost" className="w-full justify-start text-gray-700" onClick={() => setMobileMenuOpen(false)}>{t('nav.signIn')}</Button>
+                  <button className="w-full text-left px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                    {t('nav.signIn')}
+                  </button>
                 </SignInButton>
                 <SignInButton mode="modal">
-                  <Button className="w-full mt-1 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold" onClick={() => setMobileMenuOpen(false)}>Try for free</Button>
+                  <button className="w-full mt-1 px-4 py-3 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                    Try for free
+                  </button>
                 </SignInButton>
               </SignedOut>
               <SignedIn>
-                <Link href="/upload" onClick={() => setMobileMenuOpen(false)}>
-                  <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold">{t('nav.upload')}</Button>
+                <Link href="/upload" onClick={() => setMobileMenuOpen(false)}
+                  className="block w-full text-center py-3 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl transition-colors">
+                  {t('nav.upload')}
                 </Link>
-                <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}>
-                  <Button variant="ghost" className="w-full justify-start text-gray-700">{t('nav.dashboard')}</Button>
+                <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                  {t('nav.dashboard')}
                 </Link>
                 <div className="px-2 py-1"><MedyraUserButton /></div>
               </SignedIn>
