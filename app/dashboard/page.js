@@ -73,7 +73,7 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b border-gray-200">
+      <header className="bg-white border-b-2 border-emerald-100">
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
             <Link href="/"><MedyraLogo size="md" /></Link>

@@ -222,7 +222,7 @@ export default function VerstehensPage() {
       )}
 
       {/* ── Header ── */}
-      <header className="no-print bg-white border-b border-gray-100 py-4 px-6 flex items-center justify-between sticky top-0 z-40">
+      <header className="no-print bg-white border-b-2 border-teal-100 py-4 px-6 flex items-center justify-between sticky top-0 z-40">
         <Link href="/"><MedyraLogo size="md" /></Link>
         <Link href="/" className="text-base text-gray-400 hover:text-gray-600 transition-colors">
           Zurück zur Startseite
