@@ -15,6 +15,26 @@ export const metadata = {
 
 const POSTS = [
   {
+    slug: 'doctor-visit-prep-germany',
+    title: 'How to Prepare for a Doctor\'s Appointment in Germany — Medyra Doctor Visit',
+    description:
+      'Describe your symptoms in any language — English, Arabic, Hindi, Turkish — and Medyra generates a structured German clinical summary your doctor can read in seconds. Here\'s exactly how it works.',
+    date: '11 April 2026',
+    readTime: '6 min read',
+    tags: ['Doctor Visit', 'Germany', 'Expat'],
+    highlight: true,
+  },
+  {
+    slug: 'arztbrief-verstehen-fur-senioren',
+    title: 'Ihren Arztbrief einfach verstehen — Medyra erklärt alles auf Deutsch',
+    description:
+      'Befund, Arztbrief oder Entlassungsbericht erhalten und nicht verstanden? Medyra liest Ihr Dokument und erklärt alles in einfachem Deutsch — zum Lesen oder Vorlesen lassen. Speziell für Senioren und ihre Angehörigen.',
+    date: '11 April 2026',
+    readTime: '5 Min. Lesezeit',
+    tags: ['Für Senioren', 'Arztbrief', 'Deutsch'],
+    highlight: true,
+  },
+  {
     slug: 'how-medyra-protects-your-medical-data',
     title: 'How Medyra Protects Your Medical Data',
     description:
@@ -71,13 +91,20 @@ export default function BlogPage() {
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {POSTS.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
-              <article className="border border-gray-200 rounded-2xl p-6 hover:border-emerald-300 hover:shadow-sm transition-all duration-200">
+              <article className={`rounded-2xl p-6 transition-all duration-200 ${
+                post.highlight
+                  ? 'border-2 border-emerald-200 bg-emerald-50/40 hover:border-emerald-400 hover:shadow-sm'
+                  : 'border border-gray-200 hover:border-emerald-300 hover:shadow-sm'
+              }`}>
                 <div className="flex flex-wrap gap-2 mb-3">
+                  {post.highlight && (
+                    <span className="text-xs bg-emerald-500 text-white px-2 py-0.5 rounded-full font-semibold">New</span>
+                  )}
                   {post.tags.map((tag) => (
-                    <span key={tag} className="text-xs bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full font-medium">{tag}</span>
+                    <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full font-medium">{tag}</span>
                   ))}
                 </div>
                 <h2 className="text-lg font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-2 leading-snug">{post.title}</h2>
