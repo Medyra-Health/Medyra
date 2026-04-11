@@ -6,7 +6,11 @@
     "pricing": "Fiyatlandırma",
     "signIn": "Giriş Yap",
     "signOut": "Çıkış Yap",
-    "language": "Dil"
+    "language": "Dil",
+    "tryFree": "Ücretsiz dene",
+    "doctorVisit": "Doktor Ziyareti",
+    "blog": "Blog",
+    "verstehen": "Yaşlılar için"
   },
   "hero": {
     "trusted": "GDPR Uyumlu · Made in Germany",
@@ -54,7 +58,9 @@
     "heading": "Tanıdık geldi mi?",
     "subheading": "Hastaların çoğu laboratuvar sonuçlarını anlayamaz. Medyra her değeri açıkça anlatır.",
     "before": "Laboratuvar raporunuz",
-    "after": "Gerçekte ne anlama geldiği"
+    "after": "Gerçekte ne anlama geldiği",
+    "badge": "Çözdüğümüz sorun",
+    "beforeNote": "Bunların hepsi ne anlama geliyor?"
   },
   "pricingCta": {
     "title": "Basit, şeffaf fiyatlandırma",
@@ -318,5 +324,96 @@
     "disclaimer": "Bu belge doktorunuzla iletişimi kolaylaştırmak için oluşturulmuştur. Tıbbi bir tanı değildir.",
     "sectionLabel": "Doktor Ziyareti Hazırlığı",
     "badge": "Yeni özellik"
+  },
+  "landing": {
+    "hero": {
+      "badge": "Ücretsiz başla · Kredi kartı gerekmez",
+      "title1": "Laboratuvar sonuçlarınız,",
+      "title2": "sonunda anlaşılır.",
+      "description": "Herhangi bir tıbbi rapor yükleyin ve 60 saniyeden kısa sürede yapay zekadan sade dil açıklaması alın.",
+      "ctaAnalyse": "Raporumu ücretsiz analiz et",
+      "ctaHowItWorks": "Nasıl çalıştığını gör",
+      "ctaUpload": "Raporum yükle",
+      "tag1": "3 ücretsiz rapor",
+      "tag2": "GDPR şifreli",
+      "tag3": "~30s'de sonuç",
+      "tag4": "PDF, JPG, PNG, TXT"
+    },
+    "trust": {
+      "stat1Label": "Ücretsiz başlangıç raporları",
+      "stat2Label": "Ortalama analiz süresi",
+      "stat3Label": "Desteklenen diller",
+      "stat4Label": "AES şifreleme"
+    },
+    "howItWorks": {
+      "badge": "Basit süreç",
+      "step1Title": "Raporunuzu yükleyin",
+      "step1Desc": "Herhangi bir PDF, JPG, PNG veya TXT bırakın. Yapay zekamız metni okur — taranan fotoğraflardan bile.",
+      "step1Detail": "Anında şifrelenir",
+      "step2Title": "Yapay zeka ~30s'de analiz eder",
+      "step2Desc": "Claude AI her test değerini tanımlar, anormal sonuçları işaretler ve sade dilde açıklama yazar.",
+      "step2Detail": "Tıbbi jargon yok",
+      "step3Title": "Yanıtlarınızı alın",
+      "step3Desc": "Sonuçlarınızı okuyun, yapay zekayla sohbet edin ve sonraki randevunuz için PDF dışa aktarın.",
+      "step3Detail": "Doktorunuzla paylaşın",
+      "cta": "Ücretsiz başla — kart gerekmez"
+    },
+    "doctorVisit": {
+      "badge": "Yeni özellik",
+      "title1": "Doktora mı gidiyorsunuz?",
+      "title2": "Hazırlıklı gelin.",
+      "description": "Nasıl hissettiğinizi herhangi bir dilde anlatın. Medyra bunu doktorunuzun saniyeler içinde okuyabileceği yapılandırılmış Almanca özete dönüştürür.",
+      "step1Title": "Herhangi bir dilde anlatın",
+      "step1Desc": "Türkçe, Arapça, Hintçe, İngilizce — doğal gelen dilde özgürce yazın.",
+      "step2Title": "Yapay zeka anında düzenler",
+      "step2Desc": "Claude resmi Almanca klinik özet oluşturur: şikayetler, zaman çizelgesi, geçmiş ve sorular.",
+      "step3Title": "Yazdır ve randevuya götür",
+      "step3Desc": "Tek tıkla temiz A4 sayfası yazdırın — randevu başında doktorunuza verin.",
+      "cta": "Randevuma hazırlan",
+      "freePlan": "Ücretsiz plan ayda 1 özet içerir"
+    },
+    "languages": {
+      "badge": "Küresel erişim",
+      "title": "18 dilde mevcut",
+      "subtitle": "Almanya'dan dünyaya — sağlığınızı kendi dilinizde anlayın."
+    },
+    "newToGermany": {
+      "badge": "Almanya'da yeni",
+      "title": "Almanya'da yeni misiniz?",
+      "titleHighlight": "Yanınızdayız.",
+      "subtitle": "Almanya'daki sağlık belgeleri Almanlar için yazılmıştır. Medyra bürokratik evrakları kendi dilinizde sade bir dile çevirir.",
+      "pill1": "Sağlık sigortası mektubu",
+      "pill2": "Laboratuvar sonuçları",
+      "pill3": "Reçete",
+      "medyraExplains": "Medyra açıklıyor",
+      "ctaSigned": "Rapor yükle →",
+      "ctaUnsigned": "Ücretsiz dene →",
+      "trustLine": "3 ücretsiz rapor · Kart gerekmez · 60 saniyede sonuç"
+    },
+    "security": {
+      "badge": "Banka düzeyinde şifreleme",
+      "title": "Verileriniz şifrelendi — bizden bile",
+      "subtitle": "Her rapor, her değer, her yapay zeka açıklaması veritabanımıza dokunmadan önce AES-256-GCM ile şifrelenir.",
+      "yourReport": "Raporunuz",
+      "ourDatabase": "Veritabanımız",
+      "feat1Title": "AES-256-GCM",
+      "feat1Desc": "BSI TR-02102-1 tarafından hassas veriler için önerilen",
+      "feat2Title": "GDPR Madde 32",
+      "feat2Desc": "Kişisel sağlık verileri için şifreleme zorunludur",
+      "feat3Title": "Her alan için benzersiz IV",
+      "feat3Desc": "Aynı değerler için bile hiçbir şifreli metin aynı değil",
+      "feat4Title": "Düz metin saklanmaz",
+      "feat4Desc": "Veritabanı ihlali okunabilir hiçbir şey ortaya koymaz",
+      "deepDive": "Teknik olarak nasıl çalışır? Derin incelemeyi okuyun"
+    },
+    "blog": {
+      "badge": "Blogdan",
+      "title": "Laboratuvar sonuçlarınız hakkında bilgi edinin",
+      "allArticles": "Tüm makaleler",
+      "minRead": "dk okuma"
+    },
+    "pricingCta": {
+      "note": "€0'dan başlayan planlar · Kredi kartı gerekmez · İstediğiniz zaman iptal edin"
+    }
   }
 }

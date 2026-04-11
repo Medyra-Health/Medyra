@@ -6,7 +6,11 @@
     "pricing": "Prijzen",
     "signIn": "Inloggen",
     "signOut": "Uitloggen",
-    "language": "Taal"
+    "language": "Taal",
+    "tryFree": "Gratis proberen",
+    "doctorVisit": "Doktersbezoek",
+    "blog": "Blog",
+    "verstehen": "Voor senioren"
   },
   "hero": {
     "trusted": "AVG-conform · Made in Germany",
@@ -54,7 +58,9 @@
     "heading": "Klinkt dit bekend?",
     "subheading": "De meeste patiënten begrijpen hun labresultaten niet. Medyra legt elke waarde duidelijk uit.",
     "before": "Uw laboratoriumrapport",
-    "after": "Wat het echt betekent"
+    "after": "Wat het echt betekent",
+    "badge": "Het probleem dat we oplossen",
+    "beforeNote": "Wat betekent dit allemaal?"
   },
   "pricingCta": {
     "title": "Eenvoudige, transparante prijzen",
@@ -320,5 +326,96 @@
     "disclaimer": "Dit document is gemaakt om de communicatie met uw arts te vergemakkelijken. Het is geen medische diagnose.",
     "sectionLabel": "Artsbezoek voorbereiding",
     "badge": "Nieuwe functie"
+  },
+  "landing": {
+    "hero": {
+      "badge": "Gratis starten · Geen creditcard nodig",
+      "title1": "Uw laboratoriumresultaten,",
+      "title2": "eindelijk duidelijk.",
+      "description": "Upload een medisch rapport en ontvang in minder dan 60 seconden een begrijpelijke AI-uitleg.",
+      "ctaAnalyse": "Mijn rapport gratis analyseren",
+      "ctaHowItWorks": "Zie hoe het werkt",
+      "ctaUpload": "Rapport uploaden",
+      "tag1": "3 gratis rapporten",
+      "tag2": "AVG-versleuteld",
+      "tag3": "Resultaten in ~30s",
+      "tag4": "PDF, JPG, PNG, TXT"
+    },
+    "trust": {
+      "stat1Label": "Gratis rapporten om mee te starten",
+      "stat2Label": "Gemiddelde analysetijd",
+      "stat3Label": "Ondersteunde talen",
+      "stat4Label": "AES-versleuteling"
+    },
+    "howItWorks": {
+      "badge": "Eenvoudig proces",
+      "step1Title": "Upload uw rapport",
+      "step1Desc": "Sleep een PDF, JPG, PNG of TXT. Onze AI leest de tekst — ook van gescande foto's.",
+      "step1Detail": "Direct versleuteld",
+      "step2Title": "AI analyseert in ~30s",
+      "step2Desc": "Claude AI identificeert elke waarde, markeert abnormale resultaten en schrijft een begrijpelijke uitleg.",
+      "step2Detail": "Geen medisch jargon",
+      "step3Title": "Ontvang uw antwoorden",
+      "step3Desc": "Lees uw resultaten, stel vragen aan de AI en exporteer een PDF voor uw volgende afspraak.",
+      "step3Detail": "Deel met uw arts",
+      "cta": "Gratis starten — geen creditcard"
+    },
+    "doctorVisit": {
+      "badge": "Nieuwe functie",
+      "title1": "Naar de dokter?",
+      "title2": "Kom voorbereid.",
+      "description": "Beschrijf hoe u zich voelt — in elke taal. Medyra maakt er een gestructureerde Duitse samenvatting van die uw arts in seconden kan lezen.",
+      "step1Title": "Beschrijf in elke taal",
+      "step1Desc": "Schrijf vrij in Nederlands, Arabisch, Hindi, Turks — wat voor u het meest natuurlijk aanvoelt.",
+      "step2Title": "AI structureert direct",
+      "step2Desc": "Claude maakt een formele klinische samenvatting: hoofdklachten, tijdlijn, voorgeschiedenis en vragen.",
+      "step3Title": "Afdrukken en meenemen",
+      "step3Desc": "Eén klik drukt een overzichtelijk A4-vel af — overhandig dit aan uw arts bij het begin van het bezoek.",
+      "cta": "Afspraak voorbereiden",
+      "freePlan": "Gratis plan: 1 samenvatting per maand"
+    },
+    "languages": {
+      "badge": "Wereldwijd bereik",
+      "title": "Beschikbaar in 18 talen",
+      "subtitle": "Van Duitsland naar de wereld — begrijp uw gezondheid in uw eigen taal."
+    },
+    "newToGermany": {
+      "badge": "Nieuw in Duitsland",
+      "title": "Nieuw in Duitsland?",
+      "titleHighlight": "Wij helpen u.",
+      "subtitle": "Gezondheidsdocumenten in Duitsland zijn geschreven voor Duitsers. Medyra vertaalt bureaucratisch papierwerk naar begrijpelijke taal, in uw taal.",
+      "pill1": "Brief zorgverzekering",
+      "pill2": "Laboratoriumresultaten",
+      "pill3": "Recept",
+      "medyraExplains": "Medyra legt uit",
+      "ctaSigned": "Rapport uploaden →",
+      "ctaUnsigned": "Gratis proberen →",
+      "trustLine": "3 gratis rapporten · Geen creditcard · Resultaten in minder dan 60 seconden"
+    },
+    "security": {
+      "badge": "Bankwaardige versleuteling",
+      "title": "Uw gegevens zijn versleuteld — ook voor ons",
+      "subtitle": "Elk rapport, elke waarde, elke AI-uitleg wordt versleuteld met AES-256-GCM voordat het onze database raakt.",
+      "yourReport": "Uw rapport",
+      "ourDatabase": "Onze database",
+      "feat1Title": "AES-256-GCM",
+      "feat1Desc": "Aanbevolen door BSI TR-02102-1 voor gevoelige gegevens",
+      "feat2Title": "AVG Art. 32",
+      "feat2Desc": "Versleuteling vereist voor persoonlijke gezondheidsgegevens",
+      "feat3Title": "Unieke IV per veld",
+      "feat3Desc": "Geen twee versleutelde teksten zijn hetzelfde — zelfs niet voor identieke waarden",
+      "feat4Title": "Geen leesbare tekst opgeslagen",
+      "feat4Desc": "Een inbreuk op onze DB onthult niets leesbaars",
+      "deepDive": "Hoe werkt het technisch? Lees de diepgaande analyse"
+    },
+    "blog": {
+      "badge": "Van de blog",
+      "title": "Meer weten over uw laboratoriumresultaten",
+      "allArticles": "Alle artikelen",
+      "minRead": "min lezen"
+    },
+    "pricingCta": {
+      "note": "Plannen vanaf €0 · Geen creditcard vereist · Op elk moment opzegbaar"
+    }
   }
 }

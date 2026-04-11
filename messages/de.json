@@ -6,7 +6,11 @@
     "pricing": "Preise",
     "signIn": "Anmelden",
     "signOut": "Abmelden",
-    "language": "Sprache"
+    "language": "Sprache",
+    "tryFree": "Kostenlos testen",
+    "doctorVisit": "Arzttermin",
+    "blog": "Blog",
+    "verstehen": "Für Senioren"
   },
   "hero": {
     "trusted": "DSGVO-konform · Made in Germany",
@@ -54,7 +58,9 @@
     "heading": "Kommt Ihnen das bekannt vor?",
     "subheading": "Die meisten Patienten verstehen ihre Laborbefunde nicht. Medyra erklärt jeden Wert verständlich.",
     "before": "Ihr Laborbericht",
-    "after": "Was es wirklich bedeutet"
+    "after": "Was es wirklich bedeutet",
+    "badge": "Das Problem, das wir lösen",
+    "beforeNote": "Was bedeutet das alles?"
   },
   "pricingCta": {
     "title": "Einfache, transparente Preise",
@@ -318,5 +324,96 @@
     "disclaimer": "Dieses Dokument wurde erstellt, um die Kommunikation mit deinem Arzt zu erleichtern. Es ist keine medizinische Diagnose.",
     "sectionLabel": "Arztbesuch-Vorbereitung",
     "badge": "Neue Funktion"
+  },
+  "landing": {
+    "hero": {
+      "badge": "Kostenlos starten · Keine Kreditkarte nötig",
+      "title1": "Ihre Laborbefunde,",
+      "title2": "endlich verständlich.",
+      "description": "Laden Sie Ihren Arztbrief hoch und erhalten Sie in unter 60 Sekunden eine klare KI-Erklärung. Kein Medizinstudium erforderlich.",
+      "ctaAnalyse": "Meinen Befund kostenlos analysieren",
+      "ctaHowItWorks": "So funktioniert es",
+      "ctaUpload": "Befund hochladen",
+      "tag1": "3 kostenlose Berichte",
+      "tag2": "DSGVO-verschlüsselt",
+      "tag3": "Ergebnis in ~30s",
+      "tag4": "PDF, JPG, PNG, TXT"
+    },
+    "trust": {
+      "stat1Label": "Kostenlose Berichte",
+      "stat2Label": "Durchschnittliche Analysezeit",
+      "stat3Label": "Unterstützte Sprachen",
+      "stat4Label": "AES-Verschlüsselung"
+    },
+    "howItWorks": {
+      "badge": "Einfacher Ablauf",
+      "step1Title": "Befund hochladen",
+      "step1Desc": "PDF, JPG, PNG oder TXT hochladen. Unsere KI liest den Text — auch aus gescannten Fotos.",
+      "step1Detail": "Sofort verschlüsselt",
+      "step2Title": "KI analysiert in ~30s",
+      "step2Desc": "Claude AI erkennt alle Testwerte, markiert abnormale Ergebnisse und schreibt eine verständliche Erklärung.",
+      "step2Detail": "Kein Fachjargon",
+      "step3Title": "Ihre Antworten",
+      "step3Desc": "Lesen Sie Ihre Ergebnisse, stellen Sie Nachfragen und exportieren Sie ein PDF für Ihren nächsten Termin.",
+      "step3Detail": "Mit Ihrem Arzt teilen",
+      "cta": "Kostenlos starten — keine Kreditkarte"
+    },
+    "doctorVisit": {
+      "badge": "Neue Funktion",
+      "title1": "Zum Arzt?",
+      "title2": "Gut vorbereitet.",
+      "description": "Beschreiben Sie Ihre Beschwerden — in jeder Sprache. Medyra erstellt eine strukturierte, professionelle deutsche Zusammenfassung für Ihren Arzt.",
+      "step1Title": "In jeder Sprache beschreiben",
+      "step1Desc": "Schreiben Sie frei auf Englisch, Arabisch, Hindi oder Türkisch — ganz natürlich. Kein Fachwissen nötig.",
+      "step2Title": "KI strukturiert sofort",
+      "step2Desc": "Claude erstellt eine formelle klinische Zusammenfassung: Hauptbeschwerden, Zeitverlauf, Vorgeschichte und Fragen.",
+      "step3Title": "Ausdrucken & mitbringen",
+      "step3Desc": "Ein Klick druckt ein sauberes A4-Blatt — übergeben Sie es Ihrem Arzt zu Beginn des Termins.",
+      "cta": "Auf den Termin vorbereiten",
+      "freePlan": "Kostenloser Plan: 1 Zusammenfassung pro Monat"
+    },
+    "languages": {
+      "badge": "Weltweite Reichweite",
+      "title": "Verfügbar in 18 Sprachen",
+      "subtitle": "Von Deutschland in die Welt — verstehen Sie Ihre Gesundheit in Ihrer Sprache."
+    },
+    "newToGermany": {
+      "badge": "Neu in Deutschland",
+      "title": "Neu in Deutschland?",
+      "titleHighlight": "Wir helfen Ihnen.",
+      "subtitle": "Gesundheitsdokumente in Deutschland sind für Deutsche geschrieben. Medyra übersetzt bürokratische Dokumente in einfache Sprache — in Ihrer Sprache.",
+      "pill1": "Krankenkassenbrief",
+      "pill2": "Laborbefund",
+      "pill3": "Kassenrezept",
+      "medyraExplains": "Medyra erklärt",
+      "ctaSigned": "Dokument hochladen →",
+      "ctaUnsigned": "Kostenlos testen →",
+      "trustLine": "3 kostenlose Berichte · Keine Kreditkarte · Ergebnis in unter 60 Sekunden"
+    },
+    "security": {
+      "badge": "Bankgrad-Verschlüsselung",
+      "title": "Ihre Daten sind verschlüsselt — selbst vor uns",
+      "subtitle": "Jeder Bericht, jeder Wert, jede KI-Erklärung wird mit AES-256-GCM verschlüsselt, bevor sie unsere Datenbank berührt. Wir speichern nur Chiffretext. Nur Sie halten den Schlüssel.",
+      "yourReport": "Ihr Befund",
+      "ourDatabase": "Unsere Datenbank",
+      "feat1Title": "AES-256-GCM",
+      "feat1Desc": "Empfohlen von BSI TR-02102-1 für sensible Daten",
+      "feat2Title": "DSGVO Art. 32",
+      "feat2Desc": "Verschlüsselung für Gesundheitsdaten vorgeschrieben (§9 BDSG)",
+      "feat3Title": "Einzigartiger IV pro Feld",
+      "feat3Desc": "Keine zwei Chiffretexte sind gleich — auch bei identischen Werten",
+      "feat4Title": "Kein Klartext gespeichert",
+      "feat4Desc": "Ein Datenbankeinbruch enthüllt nichts Lesbares",
+      "deepDive": "Wie funktioniert es technisch? Zum Deep Dive"
+    },
+    "blog": {
+      "badge": "Aus dem Blog",
+      "title": "Mehr über Laborbefunde erfahren",
+      "allArticles": "Alle Artikel",
+      "minRead": "Min. Lesezeit"
+    },
+    "pricingCta": {
+      "note": "Pläne ab €0 · Keine Kreditkarte erforderlich · Jederzeit kündbar"
+    }
   }
 }

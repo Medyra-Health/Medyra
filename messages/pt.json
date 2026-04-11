@@ -6,7 +6,11 @@
     "pricing": "Preços",
     "signIn": "Entrar",
     "signOut": "Sair",
-    "language": "Idioma"
+    "language": "Idioma",
+    "tryFree": "Experimentar grátis",
+    "doctorVisit": "Consulta médica",
+    "blog": "Blog",
+    "verstehen": "Para idosos"
   },
   "hero": {
     "trusted": "Conforme ao RGPD · Made in Germany",
@@ -54,7 +58,9 @@
     "heading": "Parece familiar?",
     "subheading": "A maioria dos pacientes não compreende os seus resultados de laboratório. O Medyra explica cada valor claramente.",
     "before": "O seu relatório de laboratório",
-    "after": "O que significa realmente"
+    "after": "O que significa realmente",
+    "badge": "O problema que resolvemos",
+    "beforeNote": "O que significa tudo isso?"
   },
   "pricingCta": {
     "title": "Preços simples e transparentes",
@@ -318,5 +324,96 @@
     "disclaimer": "Este documento foi criado para ajudar na comunicação com seu médico. Não é um diagnóstico médico.",
     "sectionLabel": "Preparação para consulta",
     "badge": "Novo recurso"
+  },
+  "landing": {
+    "hero": {
+      "badge": "Comece grátis · Sem cartão de crédito",
+      "title1": "Seus resultados de laboratório,",
+      "title2": "finalmente claros.",
+      "description": "Envie qualquer relatório médico e receba uma explicação em linguagem simples da IA em menos de 60 segundos.",
+      "ctaAnalyse": "Analisar meu relatório grátis",
+      "ctaHowItWorks": "Ver como funciona",
+      "ctaUpload": "Enviar meu relatório",
+      "tag1": "3 relatórios gratuitos",
+      "tag2": "Criptografado RGPD",
+      "tag3": "Resultados em ~30s",
+      "tag4": "PDF, JPG, PNG, TXT"
+    },
+    "trust": {
+      "stat1Label": "Relatórios gratuitos para começar",
+      "stat2Label": "Tempo médio de análise",
+      "stat3Label": "Idiomas suportados",
+      "stat4Label": "Criptografia AES"
+    },
+    "howItWorks": {
+      "badge": "Processo simples",
+      "step1Title": "Envie seu relatório",
+      "step1Desc": "Solte qualquer PDF, JPG, PNG ou TXT. Nossa IA lê o texto — mesmo de fotos digitalizadas.",
+      "step1Detail": "Criptografado imediatamente",
+      "step2Title": "A IA analisa em ~30s",
+      "step2Desc": "A IA Claude identifica cada valor, sinaliza resultados anormais e escreve uma explicação clara.",
+      "step2Detail": "Sem jargão médico",
+      "step3Title": "Obtenha suas respostas",
+      "step3Desc": "Leia seus resultados, converse com a IA e exporte um PDF para sua próxima consulta.",
+      "step3Detail": "Compartilhe com seu médico",
+      "cta": "Comece grátis — sem cartão"
+    },
+    "doctorVisit": {
+      "badge": "Nova funcionalidade",
+      "title1": "Indo ao médico?",
+      "title2": "Chegue preparado.",
+      "description": "Descreva como você se sente — em qualquer idioma. Medyra transforma isso em um resumo clínico alemão estruturado que seu médico pode ler em segundos.",
+      "step1Title": "Descreva em qualquer idioma",
+      "step1Desc": "Escreva livremente em português, árabe, hindi, turco — o que for natural para você.",
+      "step2Title": "A IA estrutura instantaneamente",
+      "step2Desc": "Claude cria um resumo clínico alemão formal: queixas principais, cronologia, histórico e perguntas.",
+      "step3Title": "Imprima e leve à consulta",
+      "step3Desc": "Um clique imprime uma folha A4 limpa — entregue ao seu médico no início da consulta.",
+      "cta": "Preparar minha consulta",
+      "freePlan": "Plano gratuito inclui 1 resumo por mês"
+    },
+    "languages": {
+      "badge": "Alcance global",
+      "title": "Disponível em 18 idiomas",
+      "subtitle": "Da Alemanha para o mundo — entenda sua saúde no seu próprio idioma."
+    },
+    "newToGermany": {
+      "badge": "Novo na Alemanha",
+      "title": "Novo na Alemanha?",
+      "titleHighlight": "Estamos aqui para ajudar.",
+      "subtitle": "Documentos de saúde na Alemanha são escritos para alemães. Medyra transforma a burocracia em linguagem simples, no seu idioma.",
+      "pill1": "Carta do seguro de saúde",
+      "pill2": "Resultados de laboratório",
+      "pill3": "Receita médica",
+      "medyraExplains": "Medyra explica",
+      "ctaSigned": "Enviar um relatório →",
+      "ctaUnsigned": "Experimentar grátis →",
+      "trustLine": "3 relatórios gratuitos · Sem cartão · Resultados em menos de 60 segundos"
+    },
+    "security": {
+      "badge": "Criptografia bancária",
+      "title": "Seus dados são criptografados — até para nós",
+      "subtitle": "Cada relatório, cada valor, cada explicação da IA é criptografado com AES-256-GCM antes de tocar nosso banco de dados.",
+      "yourReport": "Seu relatório",
+      "ourDatabase": "Nosso banco de dados",
+      "feat1Title": "AES-256-GCM",
+      "feat1Desc": "Recomendado pela BSI TR-02102-1 para dados sensíveis",
+      "feat2Title": "RGPD Art. 32",
+      "feat2Desc": "Criptografia exigida para dados de saúde pessoais",
+      "feat3Title": "IV único por campo",
+      "feat3Desc": "Nenhum texto cifrado é igual — mesmo para valores idênticos",
+      "feat4Title": "Nenhum texto simples armazenado",
+      "feat4Desc": "Uma violação do nosso BD não revela nada legível",
+      "deepDive": "Como funciona tecnicamente? Leia a análise aprofundada"
+    },
+    "blog": {
+      "badge": "Do blog",
+      "title": "Saiba mais sobre seus exames de laboratório",
+      "allArticles": "Todos os artigos",
+      "minRead": "min de leitura"
+    },
+    "pricingCta": {
+      "note": "Planos a partir de €0 · Sem cartão de crédito · Cancele a qualquer momento"
+    }
   }
 }
