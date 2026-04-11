@@ -6,7 +6,11 @@
     "pricing": "Pricing",
     "signIn": "Sign In",
     "signOut": "Sign Out",
-    "language": "Language"
+    "language": "Language",
+    "tryFree": "Try it free",
+    "doctorVisit": "Doctor Visit",
+    "blog": "Blog",
+    "verstehen": "Für Senioren"
   },
   "hero": {
     "trusted": "GDPR Compliant · Made in Germany",
@@ -21,7 +25,9 @@
     "heading": "Does this look familiar?",
     "subheading": "Most patients receive lab results they can't understand. Medyra translates every value into plain language — instantly.",
     "before": "Your lab report",
-    "after": "What Medyra tells you"
+    "after": "What Medyra tells you",
+    "badge": "The problem we solve",
+    "beforeNote": "What does any of this mean?"
   },
   "features": {
     "ai": {
@@ -320,5 +326,96 @@
     "disclaimer": "This document was created to help you communicate with your doctor. It is not a medical diagnosis.",
     "sectionLabel": "Doctor Visit Prep",
     "badge": "New feature"
+  },
+  "landing": {
+    "hero": {
+      "badge": "Free to start · No credit card needed",
+      "title1": "Your lab results,",
+      "title2": "finally clear.",
+      "description": "Upload any medical report and get a plain-language explanation from AI in under 60 seconds. No medical degree required.",
+      "ctaAnalyse": "Analyse My Report Free",
+      "ctaHowItWorks": "See how it works",
+      "ctaUpload": "Upload My Report",
+      "tag1": "3 free reports",
+      "tag2": "GDPR encrypted",
+      "tag3": "Results in ~30s",
+      "tag4": "PDF, JPG, PNG, TXT"
+    },
+    "trust": {
+      "stat1Label": "Free reports to start",
+      "stat2Label": "Average analysis time",
+      "stat3Label": "Languages supported",
+      "stat4Label": "AES encryption"
+    },
+    "howItWorks": {
+      "badge": "Simple process",
+      "step1Title": "Upload your report",
+      "step1Desc": "Drop any PDF, JPG, PNG or TXT. Our AI reads the text — even from scanned photos.",
+      "step1Detail": "Encrypted immediately",
+      "step2Title": "AI analyses in ~30s",
+      "step2Desc": "Claude AI identifies every test value, flags abnormal results, and writes a plain-language explanation.",
+      "step2Detail": "No medical jargon",
+      "step3Title": "Get your answers",
+      "step3Desc": "Read your results, chat with the AI for follow-up questions, and export a PDF for your next appointment.",
+      "step3Detail": "Share with your doctor",
+      "cta": "Start free — no credit card"
+    },
+    "doctorVisit": {
+      "badge": "New feature",
+      "title1": "Going to the doctor?",
+      "title2": "Arrive prepared.",
+      "description": "Describe how you feel — in any language. Medyra turns it into a structured, professional German summary your doctor can read in seconds.",
+      "step1Title": "Describe in any language",
+      "step1Desc": "Write freely in English, Arabic, Hindi, Turkish — whatever feels natural. No medical knowledge needed.",
+      "step2Title": "AI structures it instantly",
+      "step2Desc": "Claude converts your description into a formal German clinical summary: chief complaints, timeline, history, and suggested questions.",
+      "step3Title": "Print & bring to the appointment",
+      "step3Desc": "One click prints a clean A4 sheet with the Medyra header — hand it to your doctor at the start of your visit.",
+      "cta": "Prepare for my appointment",
+      "freePlan": "Free plan includes 1 prep document per month"
+    },
+    "languages": {
+      "badge": "Global reach",
+      "title": "Available in 18 languages",
+      "subtitle": "From Germany to the world — understand your health in your own language."
+    },
+    "newToGermany": {
+      "badge": "New to Germany",
+      "title": "New to Germany?",
+      "titleHighlight": "We've got you.",
+      "subtitle": "Health documents in Germany are written for Germans. Whether you just arrived or have been here for years — Medyra turns bureaucratic paperwork into plain language, in your language.",
+      "pill1": "Health Insurance Letter",
+      "pill2": "Lab Results",
+      "pill3": "Prescription",
+      "medyraExplains": "Medyra explains",
+      "ctaSigned": "Upload a report →",
+      "ctaUnsigned": "Try it free →",
+      "trustLine": "3 free reports · No credit card needed · Results in under 60 seconds"
+    },
+    "security": {
+      "badge": "Bank-grade encryption",
+      "title": "Your data is encrypted — even from us",
+      "subtitle": "Every report, every value, every AI explanation is encrypted with AES-256-GCM before it touches our database. We store ciphertext. Only you hold the key — through your account.",
+      "yourReport": "Your report",
+      "ourDatabase": "Our database",
+      "feat1Title": "AES-256-GCM",
+      "feat1Desc": "Recommended by BSI TR-02102-1 for sensitive data",
+      "feat2Title": "GDPR Art. 32",
+      "feat2Desc": "Encryption required for personal health data (§9 BDSG)",
+      "feat3Title": "Unique IV per field",
+      "feat3Desc": "No two ciphertexts are alike — even for identical values",
+      "feat4Title": "Zero plaintext stored",
+      "feat4Desc": "Breach of our DB reveals nothing readable",
+      "deepDive": "How does it work technically? Read the deep dive"
+    },
+    "blog": {
+      "badge": "From the blog",
+      "title": "Learn about your lab results",
+      "allArticles": "All articles",
+      "minRead": "min read"
+    },
+    "pricingCta": {
+      "note": "Plans from €0 · No credit card required · Cancel anytime"
+    }
   }
 }

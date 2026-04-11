@@ -6,7 +6,11 @@
     "pricing": "価格",
     "signIn": "サインイン",
     "signOut": "サインアウト",
-    "language": "言語"
+    "language": "言語",
+    "tryFree": "無料で試す",
+    "doctorVisit": "医師訪問",
+    "blog": "ブログ",
+    "verstehen": "シニア向け"
   },
   "hero": {
     "trusted": "GDPR準拠 · ドイツ製",
@@ -54,7 +58,9 @@
     "heading": "見覚えがありますか？",
     "subheading": "ほとんどの患者は検査結果を理解できません。Medyraがすべての値をわかりやすく説明します。",
     "before": "あなたの検査報告書",
-    "after": "本当の意味"
+    "after": "本当の意味",
+    "badge": "私たちが解決する問題",
+    "beforeNote": "これは全部どういう意味ですか？"
   },
   "pricingCta": {
     "title": "シンプルで透明な料金",
@@ -318,5 +324,96 @@
     "disclaimer": "この文書は医師とのコミュニケーションを助けるために作成されました。医療診断ではありません。",
     "sectionLabel": "受診準備",
     "badge": "新機能"
+  },
+  "landing": {
+    "hero": {
+      "badge": "無料でスタート · クレジットカード不要",
+      "title1": "あなたの検査結果が、",
+      "title2": "ついに分かりやすく。",
+      "description": "医療レポートをアップロードして、60秒以内にAIによる分かりやすい説明を受け取りましょう。",
+      "ctaAnalyse": "レポートを無料で分析する",
+      "ctaHowItWorks": "使い方を見る",
+      "ctaUpload": "レポートをアップロード",
+      "tag1": "3件無料レポート",
+      "tag2": "GDPR暗号化済み",
+      "tag3": "約30秒で結果",
+      "tag4": "PDF, JPG, PNG, TXT"
+    },
+    "trust": {
+      "stat1Label": "無料レポート数",
+      "stat2Label": "平均分析時間",
+      "stat3Label": "対応言語数",
+      "stat4Label": "AES暗号化"
+    },
+    "howItWorks": {
+      "badge": "シンプルな手順",
+      "step1Title": "レポートをアップロード",
+      "step1Desc": "PDF、JPG、PNG、TXTをドロップ。AIはスキャン画像からもテキストを読み取ります。",
+      "step1Detail": "即時暗号化",
+      "step2Title": "AIが約30秒で分析",
+      "step2Desc": "Claude AIがすべての検査値を特定し、異常値をフラグし、分かりやすい説明を書きます。",
+      "step2Detail": "専門用語なし",
+      "step3Title": "回答を受け取る",
+      "step3Desc": "結果を確認し、AIに質問し、次の受診のためにPDFを書き出しましょう。",
+      "step3Detail": "医師と共有",
+      "cta": "無料で始める — カード不要"
+    },
+    "doctorVisit": {
+      "badge": "新機能",
+      "title1": "医師の診察がありますか？",
+      "title2": "準備して向かいましょう。",
+      "description": "どんな言語でも体の状態を説明してください。Medyraが医師が数秒で読めるドイツ語の臨床サマリーに変換します。",
+      "step1Title": "どんな言語でも説明可",
+      "step1Desc": "日本語、アラビア語、ヒンディー語、トルコ語など、自然に感じる言語で自由に書いてください。",
+      "step2Title": "AIが即座に構造化",
+      "step2Desc": "Claudeが正式なドイツ語の臨床サマリーを作成：主訴、経過、既往歴、質問事項。",
+      "step3Title": "印刷して受診時に持参",
+      "step3Desc": "ワンクリックでA4の清書を印刷 — 受診の冒頭に医師に渡してください。",
+      "cta": "受診の準備をする",
+      "freePlan": "無料プランは月1件のサマリーを含む"
+    },
+    "languages": {
+      "badge": "グローバル対応",
+      "title": "18言語に対応",
+      "subtitle": "ドイツから世界へ — あなたの言語で健康を理解しましょう。"
+    },
+    "newToGermany": {
+      "badge": "ドイツ在住の方へ",
+      "title": "ドイツに来たばかりですか？",
+      "titleHighlight": "お任せください。",
+      "subtitle": "ドイツの健康書類はドイツ人向けに書かれています。Medyraが官僚的な書類をあなたの言語でわかりやすく説明します。",
+      "pill1": "健康保険の通知書",
+      "pill2": "検査結果",
+      "pill3": "処方箋",
+      "medyraExplains": "Medyraが説明します",
+      "ctaSigned": "レポートをアップロード →",
+      "ctaUnsigned": "無料で試す →",
+      "trustLine": "3件無料 · カード不要 · 60秒以内に結果"
+    },
+    "security": {
+      "badge": "銀行レベルの暗号化",
+      "title": "データは暗号化済み — 私たちにも読めません",
+      "subtitle": "すべてのレポート、値、AI説明はデータベースに触れる前にAES-256-GCMで暗号化されます。",
+      "yourReport": "あなたのレポート",
+      "ourDatabase": "当社のデータベース",
+      "feat1Title": "AES-256-GCM",
+      "feat1Desc": "機密データ向けにBSI TR-02102-1が推奨",
+      "feat2Title": "GDPR 第32条",
+      "feat2Desc": "個人健康データの暗号化が義務付け",
+      "feat3Title": "フィールドごとに固有のIV",
+      "feat3Desc": "同じ値でも暗号文は一致しない",
+      "feat4Title": "平文を保存しない",
+      "feat4Desc": "DB侵害があっても読み取れるものは何もない",
+      "deepDive": "技術的な仕組みは？詳細解説を読む"
+    },
+    "blog": {
+      "badge": "ブログより",
+      "title": "検査結果について学ぶ",
+      "allArticles": "すべての記事",
+      "minRead": "分で読める"
+    },
+    "pricingCta": {
+      "note": "€0からのプラン · クレジットカード不要 · いつでもキャンセル可能"
+    }
   }
 }

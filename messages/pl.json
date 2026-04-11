@@ -6,7 +6,11 @@
     "pricing": "Cennik",
     "signIn": "Zaloguj się",
     "signOut": "Wyloguj się",
-    "language": "Język"
+    "language": "Język",
+    "tryFree": "Wypróbuj za darmo",
+    "doctorVisit": "Wizyta lekarska",
+    "blog": "Blog",
+    "verstehen": "Dla seniorów"
   },
   "hero": {
     "trusted": "Zgodny z RODO · Made in Germany",
@@ -54,7 +58,9 @@
     "heading": "Brzmi znajomo?",
     "subheading": "Większość pacjentów nie rozumie wyników badań. Medyra wyjaśnia każdą wartość w prosty sposób.",
     "before": "Twój wynik badań",
-    "after": "Co to naprawdę oznacza"
+    "after": "Co to naprawdę oznacza",
+    "badge": "Problem, który rozwiązujemy",
+    "beforeNote": "Co to wszystko oznacza?"
   },
   "pricingCta": {
     "title": "Prosty, przejrzysty cennik",
@@ -318,5 +324,96 @@
     "disclaimer": "Ten dokument został stworzony, aby ułatwić komunikację z lekarzem. Nie jest diagnozą medyczną.",
     "sectionLabel": "Przygotowanie wizyty",
     "badge": "Nowa funkcja"
+  },
+  "landing": {
+    "hero": {
+      "badge": "Zacznij za darmo · Bez karty kredytowej",
+      "title1": "Twoje wyniki badań,",
+      "title2": "w końcu zrozumiałe.",
+      "description": "Prześlij dowolny raport medyczny i uzyskaj wyjaśnienie w prostym języku od AI w mniej niż 60 sekund.",
+      "ctaAnalyse": "Analizuj mój raport za darmo",
+      "ctaHowItWorks": "Jak to działa",
+      "ctaUpload": "Prześlij raport",
+      "tag1": "3 bezpłatne raporty",
+      "tag2": "Szyfrowanie RODO",
+      "tag3": "Wyniki w ~30s",
+      "tag4": "PDF, JPG, PNG, TXT"
+    },
+    "trust": {
+      "stat1Label": "Bezpłatne raporty na start",
+      "stat2Label": "Średni czas analizy",
+      "stat3Label": "Obsługiwane języki",
+      "stat4Label": "Szyfrowanie AES"
+    },
+    "howItWorks": {
+      "badge": "Prosty proces",
+      "step1Title": "Prześlij raport",
+      "step1Desc": "Przeciągnij PDF, JPG, PNG lub TXT. Nasza AI odczytuje tekst — nawet ze skanowanych zdjęć.",
+      "step1Detail": "Natychmiastowe szyfrowanie",
+      "step2Title": "AI analizuje w ~30s",
+      "step2Desc": "Claude AI identyfikuje każdą wartość, oznacza nieprawidłowe wyniki i pisze jasne wyjaśnienie.",
+      "step2Detail": "Bez żargonu medycznego",
+      "step3Title": "Uzyskaj odpowiedzi",
+      "step3Desc": "Przeczytaj wyniki, porozmawiaj z AI i wyeksportuj PDF na następną wizytę.",
+      "step3Detail": "Udostępnij lekarzowi",
+      "cta": "Zacznij za darmo — bez karty"
+    },
+    "doctorVisit": {
+      "badge": "Nowa funkcja",
+      "title1": "Idziesz do lekarza?",
+      "title2": "Przyjedź przygotowany.",
+      "description": "Opisz, jak się czujesz — w dowolnym języku. Medyra tworzy ustrukturyzowane, profesjonalne podsumowanie po niemiecku, które lekarz może przeczytać w kilka sekund.",
+      "step1Title": "Opisz w dowolnym języku",
+      "step1Desc": "Pisz swobodnie po polsku, arabsku, hindi, turecku — jak chcesz. Wiedza medyczna nie jest wymagana.",
+      "step2Title": "AI natychmiast strukturyzuje",
+      "step2Desc": "Claude tworzy formalne podsumowanie kliniczne po niemiecku: główne dolegliwości, oś czasu, wywiad i pytania.",
+      "step3Title": "Wydrukuj i zabierz na wizytę",
+      "step3Desc": "Jedno kliknięcie drukuje czysty arkusz A4 — wręcz go lekarzowi na początku wizyty.",
+      "cta": "Przygotuj się na wizytę",
+      "freePlan": "Bezpłatny plan: 1 podsumowanie miesięcznie"
+    },
+    "languages": {
+      "badge": "Globalny zasięg",
+      "title": "Dostępny w 18 językach",
+      "subtitle": "Z Niemiec do świata — rozumiej swoje zdrowie we własnym języku."
+    },
+    "newToGermany": {
+      "badge": "Nowy w Niemczech",
+      "title": "Nowy w Niemczech?",
+      "titleHighlight": "Pomagamy Ci.",
+      "subtitle": "Dokumenty zdrowotne w Niemczech są pisane dla Niemców. Medyra tłumaczy biurokratyczne papiery na prosty język, w Twoim języku.",
+      "pill1": "List ubezpieczenia zdrowotnego",
+      "pill2": "Wyniki laboratoryjne",
+      "pill3": "Recepta",
+      "medyraExplains": "Medyra wyjaśnia",
+      "ctaSigned": "Prześlij raport →",
+      "ctaUnsigned": "Wypróbuj za darmo →",
+      "trustLine": "3 bezpłatne raporty · Bez karty · Wyniki w mniej niż 60 sekund"
+    },
+    "security": {
+      "badge": "Szyfrowanie bankowe",
+      "title": "Twoje dane są zaszyfrowane — nawet dla nas",
+      "subtitle": "Każdy raport, każda wartość, każde wyjaśnienie AI jest szyfrowane za pomocą AES-256-GCM przed zapisem do bazy danych.",
+      "yourReport": "Twój raport",
+      "ourDatabase": "Nasza baza danych",
+      "feat1Title": "AES-256-GCM",
+      "feat1Desc": "Zalecany przez BSI TR-02102-1 dla danych wrażliwych",
+      "feat2Title": "RODO Art. 32",
+      "feat2Desc": "Szyfrowanie wymagane dla osobowych danych zdrowotnych",
+      "feat3Title": "Unikalny IV na pole",
+      "feat3Desc": "Żadne dwa szyfrogramy nie są identyczne — nawet dla tych samych wartości",
+      "feat4Title": "Brak tekstu jawnego",
+      "feat4Desc": "Naruszenie naszej bazy nie ujawnia niczego czytelnego",
+      "deepDive": "Jak to działa technicznie? Przeczytaj szczegółową analizę"
+    },
+    "blog": {
+      "badge": "Z bloga",
+      "title": "Dowiedz się więcej o wynikach badań",
+      "allArticles": "Wszystkie artykuły",
+      "minRead": "min czytania"
+    },
+    "pricingCta": {
+      "note": "Plany od €0 · Bez karty kredytowej · Anuluj w dowolnym momencie"
+    }
   }
 }

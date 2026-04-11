@@ -34,51 +34,53 @@ const LANGUAGES = [
 ]
 
 // ── New to Germany section ─────────────────────────────────────────────────
-const DOCUMENT_TYPES = [
-  {
-    id: 'insurance',
-    pill: 'Health Insurance Letter',
-    heading: 'What does this letter even mean?',
-    body: 'Krankenkasse letters are dense German bureaucracy. Medyra reads it and tells you exactly what you owe, what you\'re covered for, and what to do next — in plain English.',
-    preview: [
-      { label: 'Coverage start', value: '01.04.2024', ok: true },
-      { label: 'Monthly premium', value: '€ 109,19', ok: true },
-      { label: 'Coverage type', value: 'Gesetzlich (GKV)', ok: true },
-      { label: 'Action needed', value: 'Submit to university', ok: null },
-    ],
-    badge: 'You\'re covered ✅',
-  },
-  {
-    id: 'lab',
-    pill: 'Lab Results',
-    heading: 'Your Blutbild decoded.',
-    body: 'German lab reports list 20+ values with no explanation. Medyra flags what\'s outside normal range, explains what each marker means, and tells you what to ask your doctor.',
-    preview: [
-      { label: 'Hämoglobin', value: '11.8 g/dL ↓', ok: false },
-      { label: 'Ferritin', value: '8 µg/L ↓', ok: false },
-      { label: 'TSH', value: '2.1 mIU/L', ok: true },
-      { label: 'Cholesterin', value: '195 mg/dL', ok: true },
-    ],
-    badge: 'Iron levels low — ask about supplements 💡',
-  },
-  {
-    id: 'prescription',
-    pill: 'Prescription',
-    heading: 'Kassenrezept — what do I do with this?',
-    body: 'A German Kassenrezept has codes, LANR numbers, and abbreviations. Medyra translates it: what the medication is, how to take it, and how to pick it up from the pharmacy.',
-    preview: [
-      { label: 'Medication', value: 'Ibuprofen 400mg', ok: true },
-      { label: 'Dosage', value: '3× daily with food', ok: true },
-      { label: 'Stomach protection', value: 'Omeprazol 20mg', ok: true },
-      { label: 'Pharmacy', value: 'Any Apotheke (free)', ok: true },
-    ],
-    badge: 'Take to any Apotheke 🏥',
-  },
-]
-
 function NewToGermanySection() {
+  const t = useTranslations()
   const [active, setActive] = useState('insurance')
   const [animKey, setAnimKey] = useState(0)
+
+  const DOCUMENT_TYPES = [
+    {
+      id: 'insurance',
+      pill: t('landing.newToGermany.pill1'),
+      heading: 'What does this letter even mean?',
+      body: 'Krankenkasse letters are dense German bureaucracy. Medyra reads it and tells you exactly what you owe, what you\'re covered for, and what to do next — in plain English.',
+      preview: [
+        { label: 'Coverage start', value: '01.04.2024', ok: true },
+        { label: 'Monthly premium', value: '€ 109,19', ok: true },
+        { label: 'Coverage type', value: 'Gesetzlich (GKV)', ok: true },
+        { label: 'Action needed', value: 'Submit to university', ok: null },
+      ],
+      badge: 'You\'re covered ✅',
+    },
+    {
+      id: 'lab',
+      pill: t('landing.newToGermany.pill2'),
+      heading: 'Your Blutbild decoded.',
+      body: 'German lab reports list 20+ values with no explanation. Medyra flags what\'s outside normal range, explains what each marker means, and tells you what to ask your doctor.',
+      preview: [
+        { label: 'Hämoglobin', value: '11.8 g/dL ↓', ok: false },
+        { label: 'Ferritin', value: '8 µg/L ↓', ok: false },
+        { label: 'TSH', value: '2.1 mIU/L', ok: true },
+        { label: 'Cholesterin', value: '195 mg/dL', ok: true },
+      ],
+      badge: 'Iron levels low — ask about supplements 💡',
+    },
+    {
+      id: 'prescription',
+      pill: t('landing.newToGermany.pill3'),
+      heading: 'Kassenrezept — what do I do with this?',
+      body: 'A German Kassenrezept has codes, LANR numbers, and abbreviations. Medyra translates it: what the medication is, how to take it, and how to pick it up from the pharmacy.',
+      preview: [
+        { label: 'Medication', value: 'Ibuprofen 400mg', ok: true },
+        { label: 'Dosage', value: '3× daily with food', ok: true },
+        { label: 'Stomach protection', value: 'Omeprazol 20mg', ok: true },
+        { label: 'Pharmacy', value: 'Any Apotheke (free)', ok: true },
+      ],
+      badge: 'Take to any Apotheke 🏥',
+    },
+  ]
+
   const doc = DOCUMENT_TYPES.find(d => d.id === active)
 
   function switchDoc(id) {
@@ -94,14 +96,14 @@ function NewToGermanySection() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
-            New to Germany
+            {t('landing.newToGermany.badge')}
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            New to Germany?{' '}
-            <span className="text-emerald-600">We&apos;ve got you.</span>
+            {t('landing.newToGermany.title')}{' '}
+            <span className="text-emerald-600">{t('landing.newToGermany.titleHighlight')}</span>
           </h2>
           <p className="text-gray-500 text-base max-w-xl mx-auto leading-relaxed">
-            Health documents in Germany are written for Germans. Whether you just arrived or have been here for years — Medyra turns bureaucratic paperwork into plain language, in your language.
+            {t('landing.newToGermany.subtitle')}
           </p>
         </div>
 
@@ -144,7 +146,7 @@ function NewToGermanySection() {
 
           {/* Right — mock output */}
           <div className="bg-white p-8 md:p-10 flex flex-col justify-center border-l border-gray-200">
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-5">Medyra explains</p>
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-5">{t('landing.newToGermany.medyraExplains')}</p>
             <div className="space-y-3">
               {doc.preview.map((row, i) => (
                 <div key={i} className="flex items-center justify-between py-2.5 border-b border-gray-100 last:border-0">
@@ -163,13 +165,13 @@ function NewToGermanySection() {
               <SignedOut>
                 <SignInButton mode="modal">
                   <button className="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm py-2.5 rounded-xl transition-colors cursor-pointer">
-                    Try it free →
+                    {t('landing.newToGermany.ctaUnsigned')}
                   </button>
                 </SignInButton>
               </SignedOut>
               <SignedIn>
                 <Link href="/upload" className="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm py-2.5 rounded-xl transition-colors">
-                  Upload a report →
+                  {t('landing.newToGermany.ctaSigned')}
                 </Link>
               </SignedIn>
             </div>
@@ -178,7 +180,7 @@ function NewToGermanySection() {
 
         {/* Bottom trust line */}
         <p className="text-center text-sm text-gray-400 mt-8">
-          3 free reports · No credit card needed · <span className="text-emerald-600 font-medium">Results in under 60 seconds</span>
+          {t('landing.newToGermany.trustLine')}
         </p>
 
       </div>
@@ -260,9 +262,9 @@ export default function LandingPage() {
 
             <div className="hidden md:flex items-center gap-0.5">
               <NavLink href="/pricing">{t('nav.pricing')}</NavLink>
-              <NavLink href="/prep" color="#7c3aed" className="text-violet-600 hover:text-violet-700">Doctor Visit</NavLink>
-              <NavLink href="/blog">Blog</NavLink>
-              <NavLink href="/verstehen" color="#0d9488" className="text-xs">Für Senioren</NavLink>
+              <NavLink href="/prep" color="#7c3aed" className="text-violet-600 hover:text-violet-700">{t('nav.doctorVisit')}</NavLink>
+              <NavLink href="/blog">{t('nav.blog')}</NavLink>
+              <NavLink href="/verstehen" color="#0d9488" className="text-xs">{t('nav.verstehen')}</NavLink>
               <div className="w-px h-4 bg-gray-200 mx-2" />
               <LanguageSwitcher />
               <SignedOut>
@@ -273,7 +275,7 @@ export default function LandingPage() {
                 </SignInButton>
                 <SignInButton mode="modal">
                   <button className="ml-1 px-4 py-2 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-lg transition-all shadow-sm shadow-emerald-200">
-                    Try for free
+                    {t('nav.tryFree')}
                   </button>
                 </SignInButton>
               </SignedOut>
@@ -308,15 +310,15 @@ export default function LandingPage() {
               </Link>
               <Link href="/prep" onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center px-3 py-2.5 text-sm font-medium text-violet-600 hover:bg-violet-50 rounded-lg transition-colors">
-                Doctor Visit
+                {t('nav.doctorVisit')}
               </Link>
               <Link href="/blog" onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
-                Blog
+                {t('nav.blog')}
               </Link>
               <Link href="/verstehen" onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center px-3 py-2.5 text-sm font-medium text-teal-600 hover:bg-teal-50 rounded-lg transition-colors">
-                Für Senioren
+                {t('nav.verstehen')}
               </Link>
               <div className="border-t border-gray-100 my-2" />
               <SignedOut>
@@ -327,7 +329,7 @@ export default function LandingPage() {
                 </SignInButton>
                 <SignInButton mode="modal">
                   <button className="w-full mt-1 px-4 py-3 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl transition-colors" onClick={() => setMobileMenuOpen(false)}>
-                    Try for free
+                    {t('nav.tryFree')}
                   </button>
                 </SignInButton>
               </SignedOut>
@@ -363,45 +365,45 @@ export default function LandingPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-wide mb-7">
                 <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                Free to start · No credit card needed
+                {t('landing.hero.badge')}
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
-                Your lab results,<br />
-                <span className="text-emerald-400">finally clear.</span>
+                {t('landing.hero.title1')}<br />
+                <span className="text-emerald-400">{t('landing.hero.title2')}</span>
               </h1>
 
               <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-lg">
-                Upload any medical report and get a plain-language explanation from AI in under 60 seconds. No medical degree required.
+                {t('landing.hero.description')}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-10">
                 <SignedOut>
                   <SignInButton mode="modal">
                     <Button size="lg" className="text-base px-8 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl h-12 w-full sm:w-auto">
-                      Analyse My Report Free <ArrowRight className="ml-2 h-4 w-4" />
+                      {t('landing.hero.ctaAnalyse')} <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </SignInButton>
                   <a href="#how-it-works">
                     <Button size="lg" variant="outline" className="text-base h-12 border-gray-700 text-gray-300 hover:bg-gray-800 hover:border-gray-600 hover:text-white rounded-xl w-full sm:w-auto">
-                      See how it works
+                      {t('landing.hero.ctaHowItWorks')}
                     </Button>
                   </a>
                 </SignedOut>
                 <SignedIn>
                   <Link href="/upload" className="w-full sm:w-auto">
                     <Button size="lg" className="text-base px-8 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl h-12">
-                      Upload My Report <ArrowRight className="ml-2 h-4 w-4" />
+                      {t('landing.hero.ctaUpload')} <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
                 </SignedIn>
               </div>
 
               <div className="flex flex-wrap gap-5 text-sm text-gray-500">
-                <span className="flex items-center gap-1.5"><CheckCircle className="h-4 w-4 text-emerald-500" /> 3 free reports</span>
-                <span className="flex items-center gap-1.5"><Shield className="h-4 w-4 text-emerald-500" /> GDPR encrypted</span>
-                <span className="flex items-center gap-1.5"><Zap className="h-4 w-4 text-emerald-500" /> Results in ~30s</span>
-                <span className="flex items-center gap-1.5"><FileText className="h-4 w-4 text-emerald-500" /> PDF, JPG, PNG, TXT</span>
+                <span className="flex items-center gap-1.5"><CheckCircle className="h-4 w-4 text-emerald-500" /> {t('landing.hero.tag1')}</span>
+                <span className="flex items-center gap-1.5"><Shield className="h-4 w-4 text-emerald-500" /> {t('landing.hero.tag2')}</span>
+                <span className="flex items-center gap-1.5"><Zap className="h-4 w-4 text-emerald-500" /> {t('landing.hero.tag3')}</span>
+                <span className="flex items-center gap-1.5"><FileText className="h-4 w-4 text-emerald-500" /> {t('landing.hero.tag4')}</span>
               </div>
             </div>
 
@@ -479,14 +481,14 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-center scroll-fade">
             {[
-              { value: '3', label: 'Free reports to start' },
-              { value: '~30s', label: 'Average analysis time' },
-              { value: '18', label: 'Languages supported' },
-              { value: '256-bit', label: 'AES encryption' },
-            ].map(({ value, label }) => (
-              <div key={label}>
+              { value: '3', labelKey: 'landing.trust.stat1Label' },
+              { value: '~30s', labelKey: 'landing.trust.stat2Label' },
+              { value: '18', labelKey: 'landing.trust.stat3Label' },
+              { value: '256-bit', labelKey: 'landing.trust.stat4Label' },
+            ].map(({ value, labelKey }) => (
+              <div key={labelKey}>
                 <p className="text-2xl font-black text-gray-900">{value}</p>
-                <p className="text-xs text-gray-400 mt-0.5">{label}</p>
+                <p className="text-xs text-gray-400 mt-0.5">{t(labelKey)}</p>
               </div>
             ))}
           </div>
@@ -497,7 +499,7 @@ export default function LandingPage() {
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-8 scroll-fade">
-            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">The problem we solve</p>
+            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">{t('problem.badge')}</p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{t('problem.heading')}</h2>
             <p className="text-gray-500 text-sm max-w-lg mx-auto">{t('problem.subheading')}</p>
           </div>
@@ -517,7 +519,7 @@ export default function LandingPage() {
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-red-400 mt-3 text-center italic font-medium">What does any of this mean?</p>
+              <p className="text-xs text-red-400 mt-3 text-center italic font-medium">{t('problem.beforeNote')}</p>
             </div>
 
             {/* After */}
@@ -549,7 +551,7 @@ export default function LandingPage() {
       <section id="how-it-works" className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-16 scroll-fade">
-            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">Simple process</p>
+            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">{t('landing.howItWorks.badge')}</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t('howItWorks.title')}</h2>
           </div>
 
@@ -561,23 +563,23 @@ export default function LandingPage() {
               {
                 step: '01',
                 icon: FileText,
-                title: 'Upload your report',
-                desc: 'Drop any PDF, JPG, PNG or TXT. Our AI reads the text — even from scanned photos.',
-                detail: 'Encrypted immediately',
+                title: t('landing.howItWorks.step1Title'),
+                desc: t('landing.howItWorks.step1Desc'),
+                detail: t('landing.howItWorks.step1Detail'),
               },
               {
                 step: '02',
                 icon: Brain,
-                title: 'AI analyses in ~30s',
-                desc: 'Claude AI identifies every test value, flags abnormal results, and writes a plain-language explanation.',
-                detail: 'No medical jargon',
+                title: t('landing.howItWorks.step2Title'),
+                desc: t('landing.howItWorks.step2Desc'),
+                detail: t('landing.howItWorks.step2Detail'),
               },
               {
                 step: '03',
                 icon: CheckCircle,
-                title: 'Get your answers',
-                desc: 'Read your results, chat with the AI for follow-up questions, and export a PDF for your next appointment.',
-                detail: 'Share with your doctor',
+                title: t('landing.howItWorks.step3Title'),
+                desc: t('landing.howItWorks.step3Desc'),
+                detail: t('landing.howItWorks.step3Detail'),
               },
             ].map(({ step, icon: Icon, title, desc, detail }) => (
               <div key={step} className="flex flex-col items-center text-center group">
@@ -598,14 +600,14 @@ export default function LandingPage() {
             <SignedOut>
               <SignInButton mode="modal">
                 <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12">
-                  Start free — no credit card <ArrowRight className="ml-2 h-4 w-4" />
+                  {t('landing.howItWorks.cta')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </SignInButton>
             </SignedOut>
             <SignedIn>
               <Link href="/upload">
                 <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12">
-                  Upload My Report <ArrowRight className="ml-2 h-4 w-4" />
+                  {t('landing.hero.ctaUpload')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
             </SignedIn>
@@ -623,15 +625,14 @@ export default function LandingPage() {
           {/* Badge + heading */}
           <div className="text-center mb-14 scroll-fade">
             <span className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
-              <FileText className="h-3.5 w-3.5" /> New feature
+              <FileText className="h-3.5 w-3.5" /> {t('landing.doctorVisit.badge')}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-              Going to the doctor?<br />
-              <span className="text-emerald-400">Arrive prepared.</span>
+              {t('landing.doctorVisit.title1')}<br />
+              <span className="text-emerald-400">{t('landing.doctorVisit.title2')}</span>
             </h2>
             <p className="text-gray-400 text-base max-w-xl mx-auto leading-relaxed">
-              Describe how you feel — in any language. Medyra turns it into a structured,
-              professional German summary your doctor can read in seconds.
+              {t('landing.doctorVisit.description')}
             </p>
           </div>
 
@@ -641,20 +642,20 @@ export default function LandingPage() {
               {
                 step: '01',
                 emoji: '🗣️',
-                title: 'Describe in any language',
-                desc: 'Write freely in English, Arabic, Hindi, Turkish — whatever feels natural. No medical knowledge needed.',
+                title: t('landing.doctorVisit.step1Title'),
+                desc: t('landing.doctorVisit.step1Desc'),
               },
               {
                 step: '02',
                 emoji: '⚡',
-                title: 'AI structures it instantly',
-                desc: 'Claude converts your description into a formal German clinical summary: chief complaints, timeline, history, and suggested questions.',
+                title: t('landing.doctorVisit.step2Title'),
+                desc: t('landing.doctorVisit.step2Desc'),
               },
               {
                 step: '03',
                 emoji: '🏥',
-                title: 'Print & bring to the appointment',
-                desc: 'One click prints a clean A4 sheet with the Medyra header — hand it to your doctor at the start of your visit.',
+                title: t('landing.doctorVisit.step3Title'),
+                desc: t('landing.doctorVisit.step3Desc'),
               },
             ].map(({ step, emoji, title, desc }) => (
               <div key={step} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-emerald-500/40 transition-colors">
@@ -707,18 +708,18 @@ export default function LandingPage() {
             <SignedIn>
               <Link href="/prep">
                 <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12">
-                  Prepare for my appointment <ArrowRight className="ml-2 h-4 w-4" />
+                  {t('landing.doctorVisit.cta')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
             </SignedIn>
             <SignedOut>
               <SignInButton mode="modal">
                 <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12">
-                  Try it free <ArrowRight className="ml-2 h-4 w-4" />
+                  {t('nav.tryFree')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </SignInButton>
             </SignedOut>
-            <p className="text-gray-500 text-xs mt-3">Free plan includes 1 prep document per month</p>
+            <p className="text-gray-500 text-xs mt-3">{t('landing.doctorVisit.freePlan')}</p>
           </div>
         </div>
       </section>
@@ -726,9 +727,9 @@ export default function LandingPage() {
       {/* ── LANGUAGES ── */}
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">Global reach</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Available in 18 languages</h2>
-          <p className="text-gray-400 text-base mb-10">From Germany to the world — understand your health in your own language.</p>
+          <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">{t('landing.languages.badge')}</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">{t('landing.languages.title')}</h2>
+          <p className="text-gray-400 text-base mb-10">{t('landing.languages.subtitle')}</p>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3 scroll-fade delay-1">
             {LANGUAGES.map(({ code, name }) => (
               <span key={code} className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800 border border-gray-700 text-sm text-gray-300 hover:border-emerald-500/40 hover:text-white transition-colors">
@@ -748,23 +749,22 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-14 scroll-fade">
             <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
-              <Shield className="h-3.5 w-3.5" /> Bank-grade encryption
+              <Shield className="h-3.5 w-3.5" /> {t('landing.security.badge')}
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Your data is encrypted — even from us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('landing.security.title')}</h2>
             <p className="text-gray-400 text-base max-w-2xl mx-auto leading-relaxed">
-              Every report, every value, every AI explanation is encrypted with AES-256-GCM before it touches our database.
-              We store ciphertext. Only you hold the key — through your account.
+              {t('landing.security.subtitle')}
             </p>
           </div>
 
           {/* Encrypt flow */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 mb-14 scroll-fade delay-1">
             {[
-              { icon: '📄', title: 'Your report', sub: 'HbA1c: 6.1%\neGFR: 58 mL/min', highlight: false },
+              { icon: '📄', title: t('landing.security.yourReport'), sub: 'HbA1c: 6.1%\neGFR: 58 mL/min', highlight: false },
               null,
               { icon: '🔐', title: 'AES-256-GCM', sub: '256-bit key · random IV\ntamper-proof auth tag', highlight: true },
               null,
-              { icon: '🗄️', title: 'Our database', sub: 'a3f92b…:8d41c0…:\nff19e4…', highlight: false },
+              { icon: '🗄️', title: t('landing.security.ourDatabase'), sub: 'a3f92b…:8d41c0…:\nff19e4…', highlight: false },
             ].map((item, i) => {
               if (item === null) return (
                 <div key={i} className="flex flex-col items-center px-4">
@@ -787,10 +787,10 @@ export default function LandingPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 scroll-fade delay-2">
             {[
-              { icon: '🔑', title: 'AES-256-GCM', desc: 'Recommended by BSI TR-02102-1 for sensitive data' },
-              { icon: '🇪🇺', title: 'GDPR Art. 32', desc: 'Encryption required for personal health data (§9 BDSG)' },
-              { icon: '🎲', title: 'Unique IV per field', desc: 'No two ciphertexts are alike — even for identical values' },
-              { icon: '🚫', title: 'Zero plaintext stored', desc: 'Breach of our DB reveals nothing readable' },
+              { icon: '🔑', title: t('landing.security.feat1Title'), desc: t('landing.security.feat1Desc') },
+              { icon: '🇪🇺', title: t('landing.security.feat2Title'), desc: t('landing.security.feat2Desc') },
+              { icon: '🎲', title: t('landing.security.feat3Title'), desc: t('landing.security.feat3Desc') },
+              { icon: '🚫', title: t('landing.security.feat4Title'), desc: t('landing.security.feat4Desc') },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="rounded-xl border border-gray-800 bg-gray-900 p-4 hover:border-gray-700 transition-colors">
                 <div className="text-xl mb-2">{icon}</div>
@@ -802,7 +802,7 @@ export default function LandingPage() {
 
           <div className="text-center">
             <Link href="/blog/how-medyra-protects-your-medical-data" className="inline-flex items-center gap-1.5 text-sm text-emerald-400 hover:text-emerald-300 font-medium transition-colors">
-              How does it work technically? Read the deep dive <ArrowRight className="h-3.5 w-3.5" />
+              {t('landing.security.deepDive')} <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
         </div>
@@ -818,7 +818,7 @@ export default function LandingPage() {
               {t('pricingCta.cta')} <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
-          <p className="text-white/60 text-sm mt-5">Plans from €0 · No credit card required · Cancel anytime</p>
+          <p className="text-white/60 text-sm mt-5">{t('landing.pricingCta.note')}</p>
         </div>
       </section>
 
@@ -827,11 +827,11 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="flex items-center justify-between mb-10">
             <div>
-              <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-1">From the blog</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Learn about your lab results</h2>
+              <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-1">{t('landing.blog.badge')}</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t('landing.blog.title')}</h2>
             </div>
             <Link href="/blog" className="hidden sm:flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 font-semibold">
-              All articles <ArrowRight className="h-4 w-4" />
+              {t('landing.blog.allArticles')} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="grid md:grid-cols-3 gap-4 scroll-fade delay-1">
@@ -864,7 +864,7 @@ export default function LandingPage() {
                   <h3 className="font-bold text-gray-900 text-sm leading-snug mb-2 group-hover:text-emerald-700 transition-colors">{post.title}</h3>
                   <p className="text-xs text-gray-500 leading-relaxed mb-3">{post.desc}</p>
                   <p className="text-xs text-gray-400 flex items-center gap-1">
-                    <Clock className="h-3 w-3" /> {post.time} read
+                    <Clock className="h-3 w-3" /> {post.time} {t('landing.blog.minRead')}
                   </p>
                 </div>
               </Link>
@@ -872,7 +872,7 @@ export default function LandingPage() {
           </div>
           <div className="text-center mt-6 sm:hidden">
             <Link href="/blog" className="inline-flex items-center gap-1 text-sm text-emerald-600 font-semibold">
-              See all articles <ArrowRight className="h-4 w-4" />
+              {t('landing.blog.allArticles')} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
