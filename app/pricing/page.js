@@ -266,17 +266,19 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-white">
       <style>{`
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(16px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .card-anim {
+          animation: fadeUp 0.5s ease both;
+        }
         .scroll-reveal {
           opacity: 0;
-          transform: translateY(18px);
+          transform: translateY(16px);
           transition: opacity 0.6s ease, transform 0.6s ease;
         }
         .scroll-reveal.in-view { opacity: 1; transform: translateY(0); }
-        .scroll-reveal.d1 { transition-delay: 60ms; }
-        .scroll-reveal.d2 { transition-delay: 120ms; }
-        .scroll-reveal.d3 { transition-delay: 180ms; }
-        .scroll-reveal.d4 { transition-delay: 240ms; }
-        .scroll-reveal.d5 { transition-delay: 300ms; }
       `}</style>
 
       {/* ── Header (same as before) ── */}
@@ -310,7 +312,7 @@ export default function PricingPage() {
         </div>
 
         {/* ── Pricing cards ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-16 items-end pb-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-16 items-stretch">
           {TIERS.map((tier, idx) => {
             const isHighlighted = !!tier.highlighted
             const isClinic = !!tier.isClinic
@@ -323,17 +325,18 @@ export default function PricingPage() {
                 onMouseEnter={() => setHoveredTier(tier.id)}
                 onMouseLeave={() => setHoveredTier(null)}
                 className={`
-                  relative flex flex-col rounded-2xl border p-5 transition-all duration-200
-                  scroll-reveal d${idx + 1}
+                  relative flex flex-col rounded-2xl border p-5
+                  card-anim
                   ${isHighlighted
-                    ? 'border-emerald-400 shadow-xl shadow-emerald-100 ring-1 ring-emerald-400/20 -translate-y-2 z-10 bg-white'
+                    ? 'border-emerald-400 shadow-xl shadow-emerald-100 ring-1 ring-emerald-400/20 z-10 bg-white'
                     : isClinic
-                      ? 'border-gray-200 bg-gray-50 opacity-80'
+                      ? 'border-gray-200 bg-gray-50'
                       : isHovered
-                        ? 'border-gray-300 shadow-md bg-white -translate-y-1'
+                        ? 'border-emerald-300 shadow-md bg-white'
                         : 'border-gray-200 bg-white'
                   }
                 `}
+                style={{ animationDelay: `${idx * 70}ms` }}
               >
                 {/* Badge */}
                 {tier.badge && (
