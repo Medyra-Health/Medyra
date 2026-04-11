@@ -18,11 +18,11 @@ async function getDb() {
   return _db
 }
 
-// ── Tier → usage limits ───────────────────────────────────────────────────
+// ── Tier → usage limits (reports per month) ───────────────────────────────
 const TIER_LIMITS = {
-  onetime:  2,
-  personal: 999999,
-  family:   999999,
+  onetime:  1,
+  personal: 5,
+  family:   15,
   clinic:   999999,
 }
 

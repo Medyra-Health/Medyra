@@ -225,9 +225,9 @@ RULES:
 // Chat quotas per subscription tier (questions per report)
 const CHAT_LIMITS = {
   free:     5,
-  onetime:  15,
-  personal: 50,
-  family:   100,
+  onetime:  5,
+  personal: 20,
+  family:   20,
   clinic:   100,
   admin:    Infinity,
 }
@@ -330,7 +330,7 @@ async function isAdminUser() {
   }
 }
 
-const FREE_REPORT_LIMIT = 3
+const FREE_REPORT_LIMIT = 2
 
 async function ensureUserExists(userId, database) {
   const user = await database.collection('users').findOne({ clerkId: userId })

@@ -1,6 +1,6 @@
 import { ClerkProvider } from '@clerk/nextjs'
 import { NextIntlClientProvider } from 'next-intl'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter, Playfair_Display, DM_Sans } from 'next/font/google'
 import { cookies } from 'next/headers'
 import './globals.css'
 import { Toaster } from 'sonner'
@@ -9,6 +9,7 @@ import CookieBanner from '@/components/CookieBanner'
 
 const inter = Inter({ subsets: ['latin'] })
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-playfair' })
+const dmSans = DM_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-dm-sans' })
 
 export const metadata = {
   metadataBase: new URL('https://medyra.de'),
@@ -120,7 +121,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <ClerkProvider>
-      <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${inter.className} ${playfair.variable} scroll-smooth`}>
+      <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${inter.className} ${playfair.variable} ${dmSans.variable} scroll-smooth`}>
         <head>
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#10B981" />
