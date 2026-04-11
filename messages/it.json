@@ -6,7 +6,11 @@
     "pricing": "Prezzi",
     "signIn": "Accedi",
     "signOut": "Esci",
-    "language": "Lingua"
+    "language": "Lingua",
+    "tryFree": "Prova gratis",
+    "doctorVisit": "Visita medica",
+    "blog": "Blog",
+    "verstehen": "Per anziani"
   },
   "hero": {
     "trusted": "Conforme al GDPR · Made in Germany",
@@ -54,7 +58,9 @@
     "heading": "Ti suona familiare?",
     "subheading": "La maggior parte dei pazienti non capisce i propri risultati di laboratorio. Medyra spiega ogni valore chiaramente.",
     "before": "Il tuo referto",
-    "after": "Cosa significa davvero"
+    "after": "Cosa significa davvero",
+    "badge": "Il problema che risolviamo",
+    "beforeNote": "Cosa significa tutto questo?"
   },
   "pricingCta": {
     "title": "Prezzi semplici e trasparenti",
@@ -318,5 +324,96 @@
     "disclaimer": "Questo documento è stato creato per facilitare la comunicazione con il tuo medico. Non è una diagnosi medica.",
     "sectionLabel": "Preparazione alla visita",
     "badge": "Nuova funzione"
+  },
+  "landing": {
+    "hero": {
+      "badge": "Inizia gratis · Nessuna carta richiesta",
+      "title1": "I tuoi risultati di laboratorio,",
+      "title2": "finalmente chiari.",
+      "description": "Carica qualsiasi referto medico e ottieni una spiegazione in linguaggio semplice dall'IA in meno di 60 secondi.",
+      "ctaAnalyse": "Analizza il mio referto gratis",
+      "ctaHowItWorks": "Scopri come funziona",
+      "ctaUpload": "Carica il mio referto",
+      "tag1": "3 referti gratuiti",
+      "tag2": "Crittografato GDPR",
+      "tag3": "Risultati in ~30s",
+      "tag4": "PDF, JPG, PNG, TXT"
+    },
+    "trust": {
+      "stat1Label": "Referti gratuiti per iniziare",
+      "stat2Label": "Tempo medio di analisi",
+      "stat3Label": "Lingue supportate",
+      "stat4Label": "Crittografia AES"
+    },
+    "howItWorks": {
+      "badge": "Processo semplice",
+      "step1Title": "Carica il tuo referto",
+      "step1Desc": "Carica qualsiasi PDF, JPG, PNG o TXT. La nostra IA legge il testo — anche da foto scansionate.",
+      "step1Detail": "Crittografato immediatamente",
+      "step2Title": "L'IA analizza in ~30s",
+      "step2Desc": "L'IA Claude identifica ogni valore, segnala i risultati anomali e scrive una spiegazione chiara.",
+      "step2Detail": "Senza gergo medico",
+      "step3Title": "Ottieni le tue risposte",
+      "step3Desc": "Leggi i risultati, chatta con l'IA ed esporta un PDF per il tuo prossimo appuntamento.",
+      "step3Detail": "Condividi con il tuo medico",
+      "cta": "Inizia gratis — senza carta"
+    },
+    "doctorVisit": {
+      "badge": "Nuova funzione",
+      "title1": "Vai dal medico?",
+      "title2": "Arriva preparato.",
+      "description": "Descrivi come ti senti — in qualsiasi lingua. Medyra lo trasforma in un riassunto clinico tedesco strutturato che il tuo medico può leggere in secondi.",
+      "step1Title": "Descrivi in qualsiasi lingua",
+      "step1Desc": "Scrivi liberamente in italiano, arabo, hindi, turco — come ti viene naturale.",
+      "step2Title": "L'IA struttura istantaneamente",
+      "step2Desc": "Claude crea un riassunto clinico tedesco formale: disturbi principali, cronologia, anamnesi e domande.",
+      "step3Title": "Stampa e porta all'appuntamento",
+      "step3Desc": "Un clic stampa un foglio A4 pulito — consegnalo al tuo medico all'inizio della visita.",
+      "cta": "Prepara il mio appuntamento",
+      "freePlan": "Piano gratuito include 1 documento al mese"
+    },
+    "languages": {
+      "badge": "Portata globale",
+      "title": "Disponibile in 18 lingue",
+      "subtitle": "Dalla Germania al mondo — capisci la tua salute nella tua lingua."
+    },
+    "newToGermany": {
+      "badge": "Nuovo in Germania",
+      "title": "Nuovo in Germania?",
+      "titleHighlight": "Ci pensiamo noi.",
+      "subtitle": "I documenti sanitari in Germania sono scritti per i tedeschi. Medyra trasforma la burocrazia in linguaggio semplice, nella tua lingua.",
+      "pill1": "Lettera dell'assicurazione sanitaria",
+      "pill2": "Risultati di laboratorio",
+      "pill3": "Ricetta medica",
+      "medyraExplains": "Medyra spiega",
+      "ctaSigned": "Carica un referto →",
+      "ctaUnsigned": "Prova gratis →",
+      "trustLine": "3 referti gratuiti · Nessuna carta · Risultati in meno di 60 secondi"
+    },
+    "security": {
+      "badge": "Crittografia bancaria",
+      "title": "I tuoi dati sono crittografati — anche per noi",
+      "subtitle": "Ogni referto, ogni valore, ogni spiegazione IA è crittografato con AES-256-GCM prima di toccare il nostro database.",
+      "yourReport": "Il tuo referto",
+      "ourDatabase": "Il nostro database",
+      "feat1Title": "AES-256-GCM",
+      "feat1Desc": "Raccomandato da BSI TR-02102-1 per i dati sensibili",
+      "feat2Title": "GDPR Art. 32",
+      "feat2Desc": "Crittografia richiesta per i dati sanitari personali",
+      "feat3Title": "IV univoco per campo",
+      "feat3Desc": "Nessun testo cifrato è uguale — anche per valori identici",
+      "feat4Title": "Nessun testo in chiaro memorizzato",
+      "feat4Desc": "Una violazione del nostro DB non rivela nulla di leggibile",
+      "deepDive": "Come funziona tecnicamente? Leggi l'analisi approfondita"
+    },
+    "blog": {
+      "badge": "Dal blog",
+      "title": "Scopri di più sui tuoi esami di laboratorio",
+      "allArticles": "Tutti gli articoli",
+      "minRead": "min di lettura"
+    },
+    "pricingCta": {
+      "note": "Piani da €0 · Nessuna carta di credito richiesta · Cancella in qualsiasi momento"
+    }
   }
 }
