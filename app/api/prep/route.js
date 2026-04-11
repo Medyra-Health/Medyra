@@ -4,12 +4,12 @@ import Anthropic from '@anthropic-ai/sdk'
 import { MongoClient } from 'mongodb'
 
 // ── Access rules ───────────────────────────────────────────────────────────
-// null = unlimited, number = uses per calendar month
+// null = unlimited, 0 = not included, number = uses per calendar month
 const PREP_LIMITS = {
-  free:     1,
-  onetime:  1,
-  personal: null,
-  family:   null,
+  free:     0,   // not included
+  onetime:  1,   // 1 session included
+  personal: 5,   // 5 sessions per month
+  family:   15,  // 15 sessions per month shared
   clinic:   null,
   admin:    null,
 }

@@ -17,11 +17,16 @@ async function getDb() {
   return _db
 }
 
-// Plan config — use price_data (dynamic) so no Stripe Price IDs needed
+// Plan config — use price_data (dynamic) so no Stripe Price IDs needed.
+// LAUNCH50 coupon must exist in Stripe dashboard:
+//   - Coupon ID: LAUNCH50
+//   - Discount: 50% off
+//   - Duration: forever
+//   - Applies to: Personal and Family subscriptions
 const PLANS = {
-  onetime:  { amount: 499,   mode: 'payment',      label: 'Medyra One-Time Report' },
-  personal: { amount: 1800,  mode: 'subscription', label: 'Medyra Personal — Unlimited/month' },
-  family:   { amount: 3800,  mode: 'subscription', label: 'Medyra Family — Unlimited/month' },
+  onetime:  { amount: 299,  mode: 'payment',      label: 'Medyra One-Time Report', coupon: null },
+  personal: { amount: 900,  mode: 'subscription', label: 'Medyra Personal',         coupon: 'LAUNCH50' },
+  family:   { amount: 1800, mode: 'subscription', label: 'Medyra Family',            coupon: 'LAUNCH50' },
 }
 
 export async function POST(request) {
@@ -50,11 +55,10 @@ export async function POST(request) {
 
   let session
   try {
-    session = await stripe.checkout.sessions.create({
+    const sessionConfig = {
       mode: plan.mode,
       payment_method_types: ['card'],
-      allow_promotion_codes: true,
-      client_reference_id: userId, // belt-and-suspenders backup
+      client_reference_id: userId,
       line_items: [{
         price_data: {
           currency: 'eur',
@@ -67,10 +71,19 @@ export async function POST(request) {
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/pricing`,
       metadata: {
-        userId, // primary: webhook reads this to activate the tier
+        userId,
         tier,
       },
-    })
+    }
+
+    // Apply LAUNCH50 coupon for Personal and Family — mutually exclusive with allow_promotion_codes
+    if (plan.coupon) {
+      sessionConfig.discounts = [{ coupon: plan.coupon }]
+    } else {
+      sessionConfig.allow_promotion_codes = true
+    }
+
+    session = await stripe.checkout.sessions.create(sessionConfig)
   } catch (err) {
     console.error('[Checkout] Stripe error:', err)
     return NextResponse.json({ error: 'Failed to create checkout session' }, { status: 500 })
