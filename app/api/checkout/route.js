@@ -18,15 +18,11 @@ async function getDb() {
 }
 
 // Plan config — use price_data (dynamic) so no Stripe Price IDs needed.
-// LAUNCH50 coupon must exist in Stripe dashboard:
-//   - Coupon ID: LAUNCH50
-//   - Discount: 50% off
-//   - Duration: forever
-//   - Applies to: Personal and Family subscriptions
+// All tiers use allow_promotion_codes so users can enter LAUNCH50 at checkout.
 const PLANS = {
-  onetime:  { amount: 299,  mode: 'payment',      label: 'Medyra One-Time Report', coupon: null },
-  personal: { amount: 900,  mode: 'subscription', label: 'Medyra Personal',         coupon: 'LAUNCH50' },
-  family:   { amount: 1800, mode: 'subscription', label: 'Medyra Family',            coupon: 'LAUNCH50' },
+  onetime:  { amount: 299,  mode: 'payment',      label: 'Medyra One-Time Report' },
+  personal: { amount: 900,  mode: 'subscription', label: 'Medyra Personal' },
+  family:   { amount: 1800, mode: 'subscription', label: 'Medyra Family' },
 }
 
 export async function POST(request) {
@@ -55,9 +51,10 @@ export async function POST(request) {
 
   let session
   try {
-    const sessionConfig = {
+    session = await stripe.checkout.sessions.create({
       mode: plan.mode,
       payment_method_types: ['card'],
+      allow_promotion_codes: true,
       client_reference_id: userId,
       line_items: [{
         price_data: {
@@ -70,20 +67,8 @@ export async function POST(request) {
       }],
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/pricing`,
-      metadata: {
-        userId,
-        tier,
-      },
-    }
-
-    // Apply LAUNCH50 coupon for Personal and Family — mutually exclusive with allow_promotion_codes
-    if (plan.coupon) {
-      sessionConfig.discounts = [{ coupon: plan.coupon }]
-    } else {
-      sessionConfig.allow_promotion_codes = true
-    }
-
-    session = await stripe.checkout.sessions.create(sessionConfig)
+      metadata: { userId, tier },
+    })
   } catch (err) {
     console.error('[Checkout] Stripe error:', err)
     return NextResponse.json({ error: 'Failed to create checkout session' }, { status: 500 })
