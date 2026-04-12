@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useEffect, useState, useCallback } from 'react'
 import {
   Users, FileText, TrendingUp, RefreshCw,
-  Crown, Shield, AlertCircle, MessageSquare, Zap, ExternalLink, Euro, Stethoscope
+  Crown, Shield, AlertCircle, MessageSquare, Zap, ExternalLink, Euro, Stethoscope, CreditCard, CheckCircle, Clock, XCircle
 } from 'lucide-react'
 import dynamic from 'next/dynamic'
 
@@ -157,7 +157,7 @@ export default function AdminPage() {
     )
   }
 
-  const { users, reports, revenue, subscriptionBreakdown, recentUsers, recentReports, chartData, chatStats, prepStats } = data
+  const { users, reports, revenue, subscriptionBreakdown, recentUsers, recentReports, recentPayments, chartData, chatStats, prepStats } = data
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -500,6 +500,61 @@ export default function AdminPage() {
                 )) : (
                   <tr>
                     <td colSpan={4} className="px-5 py-8 text-center text-gray-400">No reports yet</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Recent Payments table */}
+        <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+          <div className="px-5 py-4 border-b border-gray-100 flex items-center gap-2">
+            <CreditCard className="h-4 w-4 text-emerald-600" />
+            <h2 className="text-sm font-semibold text-gray-700">Recent Payments</h2>
+            <span className="text-xs text-gray-400 ml-1">— full checkout flow</span>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-50 text-xs text-gray-500 uppercase tracking-wide">
+                  <th className="px-5 py-3 text-left">User ID</th>
+                  <th className="px-5 py-3 text-left">Plan</th>
+                  <th className="px-5 py-3 text-left">Amount</th>
+                  <th className="px-5 py-3 text-left">Status</th>
+                  <th className="px-5 py-3 text-left">Created</th>
+                  <th className="px-5 py-3 text-left">Completed</th>
+                  <th className="px-5 py-3 text-left">Session</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {(recentPayments || []).length > 0 ? (recentPayments || []).map(p => (
+                  <tr key={p.id} className="hover:bg-gray-50 transition-colors">
+                    <td className="px-5 py-3 text-gray-500 font-mono text-xs max-w-[120px] truncate">{p.userId}</td>
+                    <td className="px-5 py-3"><TierBadge tier={p.tier} /></td>
+                    <td className="px-5 py-3 text-gray-800 font-semibold">€{p.amount?.toFixed(2)}</td>
+                    <td className="px-5 py-3">
+                      {p.status === 'completed' ? (
+                        <span className="flex items-center gap-1 text-xs font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full w-fit">
+                          <CheckCircle className="h-3 w-3" /> completed
+                        </span>
+                      ) : p.status === 'pending' ? (
+                        <span className="flex items-center gap-1 text-xs font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full w-fit">
+                          <Clock className="h-3 w-3" /> pending
+                        </span>
+                      ) : (
+                        <span className="flex items-center gap-1 text-xs font-medium text-red-700 bg-red-50 px-2 py-0.5 rounded-full w-fit">
+                          <XCircle className="h-3 w-3" /> {p.status}
+                        </span>
+                      )}
+                    </td>
+                    <td className="px-5 py-3 text-gray-400 whitespace-nowrap">{formatDate(p.createdAt)}</td>
+                    <td className="px-5 py-3 text-gray-400 whitespace-nowrap">{formatDate(p.completedAt)}</td>
+                    <td className="px-5 py-3 text-gray-300 font-mono text-xs max-w-[120px] truncate">{p.sessionId}</td>
+                  </tr>
+                )) : (
+                  <tr>
+                    <td colSpan={7} className="px-5 py-8 text-center text-gray-400">No payments yet</td>
                   </tr>
                 )}
               </tbody>

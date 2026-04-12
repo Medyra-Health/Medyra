@@ -80,6 +80,7 @@ export async function GET() {
       chatTodayArr,
       chatMonthArr,
       topChatters,
+      recentPayments,
       prepStatsArr,
     ] = await Promise.all([
       // User stats
@@ -93,27 +94,27 @@ export async function GET() {
       database.collection('reports').countDocuments({ createdAt: { $gte: startOfToday } }),
       database.collection('reports').countDocuments({ createdAt: { $gte: startOfWeek } }),
 
-      // Revenue: total all-time
+      // Revenue: total all-time (webhook sets status='completed')
       database.collection('payments').aggregate([
-        { $match: { status: 'succeeded' } },
+        { $match: { status: 'completed' } },
         { $group: { _id: null, total: { $sum: '$amount' } } },
       ]).toArray(),
 
       // Revenue: this month
       database.collection('payments').aggregate([
-        { $match: { status: 'succeeded', createdAt: { $gte: startOfMonth } } },
+        { $match: { status: 'completed', createdAt: { $gte: startOfMonth } } },
         { $group: { _id: null, total: { $sum: '$amount' } } },
       ]).toArray(),
 
-      // Subscription breakdown by tier
+      // Subscription breakdown by tier (stored as subscription.tier)
       database.collection('users').aggregate([
-        { $group: { _id: '$tier', count: { $sum: 1 } } },
+        { $group: { _id: '$subscription.tier', count: { $sum: 1 } } },
         { $sort: { count: -1 } },
       ]).toArray(),
 
       // Recent 10 users
       database.collection('users')
-        .find({}, { projection: { clerkId: 1, email: 1, tier: 1, createdAt: 1 } })
+        .find({}, { projection: { clerkId: 1, email: 1, subscription: 1, createdAt: 1 } })
         .sort({ createdAt: -1 })
         .limit(10)
         .toArray(),
@@ -180,6 +181,13 @@ export async function GET() {
         .find({}, { projection: { clerkId: 1, email: 1, totalChatMessages: 1 } })
         .sort({ totalChatMessages: -1 })
         .limit(5)
+        .toArray(),
+
+      // Recent 15 payments
+      database.collection('payments')
+        .find({})
+        .sort({ createdAt: -1 })
+        .limit(15)
         .toArray(),
 
       // Doctor Visit Prep stats
@@ -290,7 +298,8 @@ export async function GET() {
       recentUsers: recentUsers.map(u => ({
         id: u._id?.toString(),
         email: u.email || '—',
-        tier: u.tier || 'free',
+        tier: u.subscription?.tier || 'free',
+        subscriptionStatus: u.subscription?.status || '—',
         createdAt: u.createdAt,
         reportCount: reportCountMap[u.clerkId] || 0,
         prepCount: prepUserMap[u.clerkId] || 0,
@@ -301,6 +310,17 @@ export async function GET() {
         createdAt: r.createdAt,
         status: r.status || 'completed',
         userEmail: reportUserMap[r.userId] || '—',
+      })),
+      recentPayments: recentPayments.map(p => ({
+        id: p.id || p._id?.toString(),
+        sessionId: p.sessionId,
+        userId: p.userId,
+        tier: p.tier,
+        amount: p.amount,
+        currency: p.currency || 'eur',
+        status: p.status,
+        createdAt: p.createdAt,
+        completedAt: p.completedAt || null,
       })),
       chartData: mergedChartData,
       chatStats: {
