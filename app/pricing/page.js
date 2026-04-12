@@ -290,9 +290,9 @@ export default function PricingPage() {
           {/* Coupon box — enter at Stripe checkout */}
           <div className="inline-block max-w-sm w-full">
             <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-2xl p-5 shadow-sm">
-              <p className="text-xs font-bold text-emerald-700 uppercase tracking-widest mb-1">Launch offer</p>
-              <p className="text-xl font-black text-gray-900 mb-0.5">50% off — forever</p>
-              <p className="text-sm text-gray-500 mb-4">Apply this code at checkout on Personal or Family plans</p>
+              <p className="text-xs font-bold text-emerald-700 uppercase tracking-widest mb-1">Early access offer · First 100 users only</p>
+              <p className="text-xl font-black text-gray-900 mb-0.5">50% off for life</p>
+              <p className="text-sm text-gray-500 mb-4">Lock in this rate forever — apply the code at checkout on Personal or Family plans</p>
               <button
                 onClick={copyCoupon}
                 className="w-full flex items-center justify-between bg-white border-2 border-emerald-200 hover:border-emerald-400 rounded-xl px-4 py-3 transition-all group"
