@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import {
   Check, X, Loader2, Shield, Brain, Globe,
-  ChevronDown, ChevronUp, ArrowRight, Lock, ArrowLeft,
+  ChevronDown, ChevronUp, ArrowRight, ArrowLeft, Copy, CheckCheck,
 } from 'lucide-react'
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 import MedyraLogo from '@/components/MedyraLogo'
@@ -77,8 +77,7 @@ const TIERS = [
     name: 'Personal',
     price: '€9',
     priceSub: '/month',
-    originalPrice: null,
-    discountedPrice: '€4.50',
+    discountedPrice: null,
     badge: 'Most Popular',
     badgeColor: 'emerald',
     cta: 'Start Personal Plan',
@@ -102,8 +101,7 @@ const TIERS = [
     name: 'Family',
     price: '€18',
     priceSub: '/month',
-    originalPrice: null,
-    discountedPrice: '€9',
+    discountedPrice: null,
     badge: 'Best Value',
     badgeColor: 'emerald',
     cta: 'Start Family Plan',
@@ -212,6 +210,14 @@ function FAQItem({ q, a }) {
 export default function PricingPage() {
   const [loading, setLoading] = useState(null)
   const [hoveredTier, setHoveredTier] = useState(null)
+  const [copied, setCopied] = useState(false)
+
+  function copyCoupon() {
+    navigator.clipboard.writeText('LAUNCH50').then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
 
   // Scroll animations for below-fold sections only
   useEffect(() => {
@@ -278,11 +284,27 @@ export default function PricingPage() {
 
         {/* ── Page title ── */}
         <div className="text-center mb-10">
-          <span className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-4 shadow-sm">
-            Limited launch offer — 50% off forever with LAUNCH50
-          </span>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Simple, transparent pricing</h1>
-          <p className="text-gray-400 text-sm max-w-md mx-auto">Start free. Upgrade when you need more. No hidden fees.</p>
+          <p className="text-gray-400 text-sm max-w-md mx-auto mb-7">Start free. Upgrade when you need more. No hidden fees.</p>
+
+          {/* Coupon box — enter at Stripe checkout */}
+          <div className="inline-block max-w-sm w-full">
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-2xl p-5 shadow-sm">
+              <p className="text-xs font-bold text-emerald-700 uppercase tracking-widest mb-1">Launch offer</p>
+              <p className="text-xl font-black text-gray-900 mb-0.5">50% off — forever</p>
+              <p className="text-sm text-gray-500 mb-4">Apply this code at checkout on Personal or Family plans</p>
+              <button
+                onClick={copyCoupon}
+                className="w-full flex items-center justify-between bg-white border-2 border-emerald-200 hover:border-emerald-400 rounded-xl px-4 py-3 transition-all group"
+              >
+                <span className="text-xl font-black tracking-widest text-emerald-700">LAUNCH50</span>
+                <span className={`flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-all ${copied ? 'bg-emerald-500 text-white' : 'bg-emerald-600 hover:bg-emerald-700 text-white'}`}>
+                  {copied ? <><CheckCheck className="h-3.5 w-3.5" /> Copied!</> : <><Copy className="h-3.5 w-3.5" /> Copy code</>}
+                </span>
+              </button>
+              <p className="text-xs text-gray-400 mt-2">Paste it in the &ldquo;Promo code&rdquo; field at Stripe checkout</p>
+            </div>
+          </div>
         </div>
 
         {/* ── Pricing grid ─────────────────────────────────────────────────── */}
