@@ -3,7 +3,7 @@
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 import MedyraUserButton from '@/components/MedyraUserButton'
 import Link from 'next/link'
-import { Brain, Shield, Clock, ChevronRight, Menu, X, ArrowRight, AlertTriangle, CheckCircle, AlertCircle, Lock, Zap, FileText, MessageSquare, Download } from 'lucide-react'
+import { Brain, Shield, Clock, ChevronRight, Menu, X, ArrowRight, AlertTriangle, CheckCircle, AlertCircle, Lock, Zap, FileText, MessageSquare, Download, ChevronLeft } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
@@ -188,6 +188,195 @@ function NewToGermanySection() {
         @keyframes ngFadeIn {
           from { opacity: 0; transform: translateY(10px); }
           to   { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+    </section>
+  )
+}
+
+// ── Campaign carousel ──────────────────────────────────────────────────────
+const CAMPAIGNS = [
+  {
+    tag: 'Language & Healthcare',
+    title: 'German lab results, translated instantly.',
+    body: 'Eliminating the double barrier of language and medical terminology for international residents navigating the German healthcare system.',
+    visual: '🧪',
+    gradient: 'from-slate-900 via-slate-800 to-gray-900',
+    accent: 'emerald',
+    mockLines: [
+      { label: 'Hämoglobin', raw: '11.8 g/dL ↓', plain: 'Slightly low — may cause fatigue', flag: 'warn' },
+      { label: 'Leukozyten', raw: '8.4 G/L', plain: 'Normal range — no concern', flag: 'ok' },
+      { label: 'Ferritin', raw: '8 µg/L ↓', plain: 'Low iron stores — discuss supplements', flag: 'warn' },
+    ],
+  },
+  {
+    tag: 'Mental Health Awareness',
+    title: 'Clear results, calm mind.',
+    body: 'Addressing the "jargon anxiety" that occurs when patients receive complex medical results they cannot interpret — because clarity is a vital part of mental well-being.',
+    visual: '🧠',
+    gradient: 'from-violet-950 via-slate-900 to-gray-900',
+    accent: 'violet',
+    mockLines: [
+      { label: 'Diagnosis letter', raw: '3 pages of German medical text', plain: 'You have mild hypertension. Your doctor recommends...', flag: 'ok' },
+      { label: 'Jargon removed', raw: '24 medical terms', plain: 'All explained in plain language', flag: 'ok' },
+      { label: 'Clarity score', raw: '—', plain: 'Fully understood ✓', flag: 'ok' },
+    ],
+  },
+  {
+    tag: 'European Patients\' Rights Day',
+    title: 'Your health data, finally clear.',
+    body: 'Empowering patients to advocate for themselves by reclaiming their right to understand their own medical data — because knowledge is the foundation of care.',
+    visual: '🇪🇺',
+    gradient: 'from-blue-950 via-slate-900 to-gray-900',
+    accent: 'blue',
+    mockLines: [
+      { label: 'Your right (EU)', raw: 'Art. 15 GDPR', plain: 'Access and understand your health data', flag: 'ok' },
+      { label: 'Blood panel', raw: '18 values', plain: 'Every result explained — in your language', flag: 'ok' },
+      { label: 'Report language', raw: 'German', plain: 'Translated to English, Arabic, Hindi...', flag: 'ok' },
+    ],
+  },
+]
+
+function CampaignSection() {
+  const [active, setActive] = useState(0)
+  const [animKey, setAnimKey] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActive(prev => (prev + 1) % CAMPAIGNS.length)
+      setAnimKey(k => k + 1)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  function go(idx) {
+    setActive(idx)
+    setAnimKey(k => k + 1)
+  }
+
+  const c = CAMPAIGNS[active]
+  const accentMap = {
+    emerald: { dot: 'bg-emerald-400', text: 'text-emerald-400', ring: 'ring-emerald-400', bar: 'bg-emerald-400', tag: 'bg-emerald-400/10 border-emerald-400/30 text-emerald-400', btn: 'bg-emerald-500 hover:bg-emerald-600' },
+    violet:  { dot: 'bg-violet-400',  text: 'text-violet-400',  ring: 'ring-violet-400',  bar: 'bg-violet-400',  tag: 'bg-violet-400/10 border-violet-400/30 text-violet-400',  btn: 'bg-violet-500 hover:bg-violet-600'  },
+    blue:    { dot: 'bg-blue-400',    text: 'text-blue-400',    ring: 'ring-blue-400',    bar: 'bg-blue-400',    tag: 'bg-blue-400/10 border-blue-400/30 text-blue-400',    btn: 'bg-blue-500 hover:bg-blue-600'    },
+  }
+  const a = accentMap[c.accent]
+
+  return (
+    <section className="py-20 bg-gray-950 overflow-hidden">
+      <div className="container mx-auto px-4 max-w-6xl">
+
+        {/* Section header */}
+        <div className="flex items-center justify-between mb-10">
+          <div>
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Why it matters</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Health clarity for everyone</h2>
+          </div>
+          {/* Dot nav */}
+          <div className="flex items-center gap-2">
+            {CAMPAIGNS.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => go(i)}
+                className={`transition-all duration-300 rounded-full ${
+                  i === active ? `w-6 h-2 ${a.dot}` : 'w-2 h-2 bg-gray-700 hover:bg-gray-500'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Campaign card */}
+        <div
+          key={animKey}
+          style={{ animation: 'campFade 0.5s ease both' }}
+          className={`grid lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-white/10`}
+        >
+          {/* Left — text */}
+          <div className={`bg-gradient-to-br ${c.gradient} p-8 md:p-12 flex flex-col justify-between min-h-[320px]`}>
+            <div>
+              <span className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border mb-6 ${a.tag}`}>
+                <span className={`w-1.5 h-1.5 rounded-full ${a.dot}`} />
+                {c.tag}
+              </span>
+              <h3 className="text-2xl md:text-3xl font-black text-white mb-4 leading-tight">
+                {c.title}
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm">
+                {c.body}
+              </p>
+            </div>
+            {/* Progress bar */}
+            <div className="space-y-2">
+              <div className="flex gap-1.5">
+                {CAMPAIGNS.map((_, i) => (
+                  <div key={i} className="h-0.5 flex-1 rounded-full bg-white/10 overflow-hidden">
+                    <div
+                      className={`h-full ${a.bar} ${i === active ? 'animate-[progressBar_5s_linear_both]' : i < active ? 'w-full' : 'w-0'}`}
+                      style={i === active ? { animation: 'progressBar 5s linear both' } : undefined}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center justify-between">
+                <span className={`text-xs font-semibold ${a.text}`}>{active + 1} / {CAMPAIGNS.length}</span>
+                <div className="flex gap-2">
+                  <button onClick={() => go((active - 1 + CAMPAIGNS.length) % CAMPAIGNS.length)} className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                    <ChevronLeft className="h-3.5 w-3.5 text-white" />
+                  </button>
+                  <button onClick={() => go((active + 1) % CAMPAIGNS.length)} className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                    <ChevronRight className="h-3.5 w-3.5 text-white" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right — mock output */}
+          <div className="bg-gray-900 p-8 md:p-12 flex flex-col justify-center border-l border-white/5">
+            <div className="flex items-center gap-2 mb-6">
+              <div className={`w-2 h-2 rounded-full ${a.dot} animate-pulse`} />
+              <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Medyra AI Output</span>
+            </div>
+            <div className="space-y-4">
+              {c.mockLines.map((line, i) => (
+                <div key={i} className="rounded-xl bg-white/5 border border-white/8 p-4">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-xs font-bold text-gray-500">{line.label}</span>
+                    <span className={`text-xs font-mono ${line.flag === 'warn' ? 'text-amber-400' : 'text-gray-500'}`}>{line.raw}</span>
+                  </div>
+                  <p className={`text-sm font-medium ${line.flag === 'warn' ? 'text-amber-300' : a.text}`}>
+                    {line.plain}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 pt-5 border-t border-white/10">
+              <SignedOut>
+                <SignInButton mode="modal">
+                  <button className={`w-full py-2.5 rounded-xl text-sm font-bold text-white transition-colors ${a.btn}`}>
+                    Try it free — 2 reports/month →
+                  </button>
+                </SignInButton>
+              </SignedOut>
+              <SignedIn>
+                <Link href="/upload" className={`block w-full py-2.5 rounded-xl text-sm font-bold text-white text-center transition-colors ${a.btn}`}>
+                  Upload a report →
+                </Link>
+              </SignedIn>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes campFade {
+          from { opacity: 0; transform: translateY(12px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes progressBar {
+          from { width: 0%; }
+          to   { width: 100%; }
         }
       `}</style>
     </section>
@@ -481,7 +670,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-center scroll-fade">
             {[
-              { value: '3', labelKey: 'landing.trust.stat1Label' },
+              { value: '2/mo', labelKey: 'landing.trust.stat1Label' },
               { value: '~30s', labelKey: 'landing.trust.stat2Label' },
               { value: '18', labelKey: 'landing.trust.stat3Label' },
               { value: '256-bit', labelKey: 'landing.trust.stat4Label' },
@@ -807,6 +996,9 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* ── CAMPAIGNS ── */}
+      <CampaignSection />
 
       {/* ── PRICING CTA ── */}
       <section className="bg-emerald-500 py-20">
