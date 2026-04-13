@@ -328,19 +328,19 @@
   "landing": {
     "hero": {
       "badge": "무료로 시작 · 신용카드 불필요",
-      "title1": "당신의 검사 결과,",
+      "title1": "내 건강 데이터를,",
       "title2": "드디어 명확하게.",
       "description": "의료 보고서를 업로드하고 60초 이내에 AI의 쉬운 언어 설명을 받으세요.",
       "ctaAnalyse": "보고서 무료 분석하기",
       "ctaHowItWorks": "사용 방법 보기",
       "ctaUpload": "보고서 업로드",
-      "tag1": "무료 보고서 3건",
+      "tag1": "월 2개 무료 리포트",
       "tag2": "GDPR 암호화",
       "tag3": "~30초 내 결과",
       "tag4": "PDF, JPG, PNG, TXT"
     },
     "trust": {
-      "stat1Label": "무료 보고서 시작 수",
+      "stat1Label": "월 무료 리포트",
       "stat2Label": "평균 분석 시간",
       "stat3Label": "지원 언어 수",
       "stat4Label": "AES 암호화"
@@ -413,7 +413,7 @@
       "minRead": "분 읽기"
     },
     "pricingCta": {
-      "note": "€0부터 시작하는 플랜 · 신용카드 불필요 · 언제든지 취소 가능"
+      "note": "매월 2개 무료 · 카드 불필요 · 언제든 취소"
     }
   }
 }

@@ -328,19 +328,19 @@
   "landing": {
     "hero": {
       "badge": "Gratuit pour commencer · Aucune carte requise",
-      "title1": "Vos résultats d'analyse,",
-      "title2": "enfin clairs.",
+      "title1": "Vos données de santé,",
+      "title2": "enfin claires.",
       "description": "Téléchargez n'importe quel rapport médical et obtenez une explication en langage simple par IA en moins de 60 secondes.",
       "ctaAnalyse": "Analyser mon rapport gratuitement",
       "ctaHowItWorks": "Voir comment ça marche",
       "ctaUpload": "Télécharger mon rapport",
-      "tag1": "3 rapports gratuits",
+      "tag1": "2 rapports gratuits/mois",
       "tag2": "Chiffrement RGPD",
       "tag3": "Résultats en ~30s",
       "tag4": "PDF, JPG, PNG, TXT"
     },
     "trust": {
-      "stat1Label": "Rapports gratuits pour commencer",
+      "stat1Label": "Rapports gratuits par mois",
       "stat2Label": "Temps d'analyse moyen",
       "stat3Label": "Langues prises en charge",
       "stat4Label": "Chiffrement AES"
@@ -413,7 +413,7 @@
       "minRead": "min de lecture"
     },
     "pricingCta": {
-      "note": "Plans à partir de €0 · Sans carte bancaire · Annulation à tout moment"
+      "note": "2 rapports gratuits par mois · Sans carte bancaire · Résiliable à tout moment"
     }
   }
 }

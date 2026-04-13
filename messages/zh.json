@@ -328,19 +328,19 @@
   "landing": {
     "hero": {
       "badge": "免费开始 · 无需信用卡",
-      "title1": "您的检验结果，",
-      "title2": "终于看懂了。",
+      "title1": "您的健康数据，",
+      "title2": "终于清晰明了。",
       "description": "上传任何医疗报告，60秒内获得人工智能的通俗语言解释。无需医学学位。",
       "ctaAnalyse": "免费分析我的报告",
       "ctaHowItWorks": "查看如何使用",
       "ctaUpload": "上传报告",
-      "tag1": "3份免费报告",
+      "tag1": "每月2份免费报告",
       "tag2": "GDPR加密",
       "tag3": "约30秒出结果",
       "tag4": "PDF, JPG, PNG, TXT"
     },
     "trust": {
-      "stat1Label": "免费报告数量",
+      "stat1Label": "每月免费报告",
       "stat2Label": "平均分析时间",
       "stat3Label": "支持语言数量",
       "stat4Label": "AES加密"
@@ -413,7 +413,7 @@
       "minRead": "分钟阅读"
     },
     "pricingCta": {
-      "note": "套餐从€0起 · 无需信用卡 · 随时取消"
+      "note": "每月2份免费报告 · 无需信用卡 · 随时取消"
     }
   }
 }

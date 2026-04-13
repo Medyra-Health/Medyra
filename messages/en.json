@@ -330,19 +330,19 @@
   "landing": {
     "hero": {
       "badge": "Free to start · No credit card needed",
-      "title1": "Your lab results,",
+      "title1": "Your health data,",
       "title2": "finally clear.",
-      "description": "Upload any medical report and get a plain-language explanation from AI in under 60 seconds. No medical degree required.",
+      "description": "Upload any medical report or health document and get a plain-language explanation from AI in under 60 seconds. No medical degree required.",
       "ctaAnalyse": "Analyse My Report Free",
       "ctaHowItWorks": "See how it works",
       "ctaUpload": "Upload My Report",
-      "tag1": "3 free reports",
+      "tag1": "2 free reports/month",
       "tag2": "GDPR encrypted",
       "tag3": "Results in ~30s",
       "tag4": "PDF, JPG, PNG, TXT"
     },
     "trust": {
-      "stat1Label": "Free reports to start",
+      "stat1Label": "Free reports per month",
       "stat2Label": "Average analysis time",
       "stat3Label": "Languages supported",
       "stat4Label": "AES encryption"
@@ -415,7 +415,7 @@
       "minRead": "min read"
     },
     "pricingCta": {
-      "note": "Plans from €0 · No credit card required · Cancel anytime"
+      "note": "2 free reports every month · No credit card required · Cancel anytime"
     }
   }
 }
