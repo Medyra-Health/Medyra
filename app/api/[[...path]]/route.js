@@ -330,7 +330,14 @@ async function isAdminUser() {
   }
 }
 
-const FREE_REPORT_LIMIT = 2
+const FREE_REPORT_LIMIT = 2 // per calendar month
+
+function startOfCurrentMonth() {
+  const d = new Date()
+  d.setDate(1)
+  d.setHours(0, 0, 0, 0)
+  return d
+}
 
 async function ensureUserExists(userId, database) {
   const user = await database.collection('users').findOne({ clerkId: userId })
@@ -345,16 +352,22 @@ async function ensureUserExists(userId, database) {
   }
   const sub = user.subscription || { tier: 'free', usageLimit: FREE_REPORT_LIMIT, currentUsage: 0 }
   const isFree = !sub.tier || sub.tier === 'free'
-  const effectiveLimit = isFree ? FREE_REPORT_LIMIT : (sub.usageLimit ?? FREE_REPORT_LIMIT)
 
-  // Persist corrected limit to DB if it was stale (old limit of 1, or missing)
-  if (isFree && (sub.usageLimit == null || sub.usageLimit < FREE_REPORT_LIMIT)) {
-    await database.collection('users').updateOne(
-      { clerkId: userId },
-      { $set: { 'subscription.usageLimit': FREE_REPORT_LIMIT, 'subscription.tier': 'free' } }
-    )
+  if (isFree) {
+    // Free tier: count reports uploaded this calendar month (resets every month)
+    const monthlyUsed = await database.collection('reports').countDocuments({
+      userId,
+      createdAt: { $gte: startOfCurrentMonth() },
+    })
+    return {
+      tier: 'free',
+      limit: FREE_REPORT_LIMIT,
+      used: monthlyUsed,
+      allowed: monthlyUsed < FREE_REPORT_LIMIT,
+    }
   }
 
+  const effectiveLimit = sub.usageLimit ?? FREE_REPORT_LIMIT
   return {
     tier: sub.tier || 'free',
     limit: effectiveLimit,

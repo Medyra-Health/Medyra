@@ -328,19 +328,19 @@
   "landing": {
     "hero": {
       "badge": "Zacznij za darmo · Bez karty kredytowej",
-      "title1": "Twoje wyniki badań,",
-      "title2": "w końcu zrozumiałe.",
+      "title1": "Twoje dane zdrowotne,",
+      "title2": "nareszcie jasne.",
       "description": "Prześlij dowolny raport medyczny i uzyskaj wyjaśnienie w prostym języku od AI w mniej niż 60 sekund.",
       "ctaAnalyse": "Analizuj mój raport za darmo",
       "ctaHowItWorks": "Jak to działa",
       "ctaUpload": "Prześlij raport",
-      "tag1": "3 bezpłatne raporty",
+      "tag1": "2 bezpłatne raporty/miesiąc",
       "tag2": "Szyfrowanie RODO",
       "tag3": "Wyniki w ~30s",
       "tag4": "PDF, JPG, PNG, TXT"
     },
     "trust": {
-      "stat1Label": "Bezpłatne raporty na start",
+      "stat1Label": "Bezpłatne raporty miesięcznie",
       "stat2Label": "Średni czas analizy",
       "stat3Label": "Obsługiwane języki",
       "stat4Label": "Szyfrowanie AES"
@@ -413,7 +413,7 @@
       "minRead": "min czytania"
     },
     "pricingCta": {
-      "note": "Plany od €0 · Bez karty kredytowej · Anuluj w dowolnym momencie"
+      "note": "2 bezpłatne raporty co miesiąc · Bez karty · Anuluj w dowolnym momencie"
     }
   }
 }

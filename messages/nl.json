@@ -330,19 +330,19 @@
   "landing": {
     "hero": {
       "badge": "Gratis starten · Geen creditcard nodig",
-      "title1": "Uw laboratoriumresultaten,",
+      "title1": "Jouw gezondheidsdata,",
       "title2": "eindelijk duidelijk.",
       "description": "Upload een medisch rapport en ontvang in minder dan 60 seconden een begrijpelijke AI-uitleg.",
       "ctaAnalyse": "Mijn rapport gratis analyseren",
       "ctaHowItWorks": "Zie hoe het werkt",
       "ctaUpload": "Rapport uploaden",
-      "tag1": "3 gratis rapporten",
+      "tag1": "2 gratis rapporten/maand",
       "tag2": "AVG-versleuteld",
       "tag3": "Resultaten in ~30s",
       "tag4": "PDF, JPG, PNG, TXT"
     },
     "trust": {
-      "stat1Label": "Gratis rapporten om mee te starten",
+      "stat1Label": "Gratis rapporten per maand",
       "stat2Label": "Gemiddelde analysetijd",
       "stat3Label": "Ondersteunde talen",
       "stat4Label": "AES-versleuteling"
@@ -415,7 +415,7 @@
       "minRead": "min lezen"
     },
     "pricingCta": {
-      "note": "Plannen vanaf €0 · Geen creditcard vereist · Op elk moment opzegbaar"
+      "note": "2 gratis rapporten per maand · Geen creditcard · Opzegbaar"
     }
   }
 }

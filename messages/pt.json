@@ -328,19 +328,19 @@
   "landing": {
     "hero": {
       "badge": "Comece grátis · Sem cartão de crédito",
-      "title1": "Seus resultados de laboratório,",
+      "title1": "Os seus dados de saúde,",
       "title2": "finalmente claros.",
       "description": "Envie qualquer relatório médico e receba uma explicação em linguagem simples da IA em menos de 60 segundos.",
       "ctaAnalyse": "Analisar meu relatório grátis",
       "ctaHowItWorks": "Ver como funciona",
       "ctaUpload": "Enviar meu relatório",
-      "tag1": "3 relatórios gratuitos",
+      "tag1": "2 relatórios gratuitos/mês",
       "tag2": "Criptografado RGPD",
       "tag3": "Resultados em ~30s",
       "tag4": "PDF, JPG, PNG, TXT"
     },
     "trust": {
-      "stat1Label": "Relatórios gratuitos para começar",
+      "stat1Label": "Relatórios gratuitos por mês",
       "stat2Label": "Tempo médio de análise",
       "stat3Label": "Idiomas suportados",
       "stat4Label": "Criptografia AES"
@@ -413,7 +413,7 @@
       "minRead": "min de leitura"
     },
     "pricingCta": {
-      "note": "Planos a partir de €0 · Sem cartão de crédito · Cancele a qualquer momento"
+      "note": "2 relatórios gratuitos por mês · Sem cartão · Cancele a qualquer momento"
     }
   }
 }

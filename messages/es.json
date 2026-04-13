@@ -328,19 +328,19 @@
   "landing": {
     "hero": {
       "badge": "Comienza gratis · Sin tarjeta de crédito",
-      "title1": "Tus resultados de laboratorio,",
+      "title1": "Tus datos de salud,",
       "title2": "por fin claros.",
       "description": "Sube cualquier informe médico y obtén una explicación en lenguaje simple de IA en menos de 60 segundos.",
       "ctaAnalyse": "Analizar mi informe gratis",
       "ctaHowItWorks": "Ver cómo funciona",
       "ctaUpload": "Subir mi informe",
-      "tag1": "3 informes gratuitos",
+      "tag1": "2 informes gratuitos/mes",
       "tag2": "Cifrado RGPD",
       "tag3": "Resultados en ~30s",
       "tag4": "PDF, JPG, PNG, TXT"
     },
     "trust": {
-      "stat1Label": "Informes gratuitos para empezar",
+      "stat1Label": "Informes gratuitos por mes",
       "stat2Label": "Tiempo de análisis promedio",
       "stat3Label": "Idiomas admitidos",
       "stat4Label": "Cifrado AES"
@@ -413,7 +413,7 @@
       "minRead": "min de lectura"
     },
     "pricingCta": {
-      "note": "Planes desde €0 · Sin tarjeta de crédito · Cancela cuando quieras"
+      "note": "2 informes gratuitos cada mes · Sin tarjeta · Cancela en cualquier momento"
     }
   }
 }
