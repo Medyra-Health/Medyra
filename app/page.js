@@ -240,14 +240,16 @@ const CAMPAIGNS = [
 function CampaignSection() {
   const [active, setActive] = useState(0)
   const [animKey, setAnimKey] = useState(0)
+  const [paused, setPaused] = useState(false)
 
   useEffect(() => {
+    if (paused) return
     const timer = setInterval(() => {
       setActive(prev => (prev + 1) % CAMPAIGNS.length)
       setAnimKey(k => k + 1)
     }, 5000)
     return () => clearInterval(timer)
-  }, [])
+  }, [paused])
 
   function go(idx) {
     setActive(idx)
@@ -272,8 +274,8 @@ function CampaignSection() {
             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Why it matters</p>
             <h2 className="text-2xl md:text-3xl font-bold text-white">Health clarity for everyone</h2>
           </div>
-          {/* Dot nav */}
-          <div className="flex items-center gap-2">
+          {/* Dot nav + pause */}
+          <div className="flex items-center gap-3">
             {CAMPAIGNS.map((_, i) => (
               <button
                 key={i}
@@ -283,6 +285,16 @@ function CampaignSection() {
                 }`}
               />
             ))}
+            <button
+              onClick={() => setPaused(p => !p)}
+              className="ml-1 w-7 h-7 rounded-full bg-gray-800 border border-gray-700 hover:border-gray-500 flex items-center justify-center transition-colors"
+              title={paused ? 'Resume' : 'Pause'}
+            >
+              {paused
+                ? <span className="w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[8px] border-l-gray-300 ml-0.5" />
+                : <span className="flex gap-0.5"><span className="w-[3px] h-3 bg-gray-400 rounded-sm" /><span className="w-[3px] h-3 bg-gray-400 rounded-sm" /></span>
+              }
+            </button>
           </div>
         </div>
 
@@ -420,26 +432,59 @@ export default function LandingPage() {
       },
       { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     )
-    document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el))
+    document.querySelectorAll('.scroll-fade, .sr, .sr-left, .sr-right, .sr-pop').forEach(el => observer.observe(el))
     return () => observer.disconnect()
   }, [])
 
   return (
     <div className="min-h-screen bg-white">
       <style>{`
-        .scroll-fade {
+        /* ── Scroll reveal ── */
+        .sr {
           opacity: 0;
-          transform: translateY(36px);
-          transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+          transform: translateY(44px) scale(0.98);
+          transition: opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1);
+          will-change: opacity, transform;
         }
-        .scroll-fade.in-view {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        .sr.in-view { opacity: 1; transform: translateY(0) scale(1); }
+        .sr-left  { opacity: 0; transform: translateX(-36px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+        .sr-left.in-view { opacity: 1; transform: translateX(0); }
+        .sr-right { opacity: 0; transform: translateX(36px);  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+        .sr-right.in-view { opacity: 1; transform: translateX(0); }
+        .sr-pop { opacity: 0; transform: scale(0.88); transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.34,1.56,0.64,1); }
+        .sr-pop.in-view { opacity: 1; transform: scale(1); }
+
+        /* stagger delays */
+        .d1 { transition-delay: 80ms; }
+        .d2 { transition-delay: 160ms; }
+        .d3 { transition-delay: 240ms; }
+        .d4 { transition-delay: 320ms; }
+        .d5 { transition-delay: 400ms; }
+
+        /* Legacy aliases */
+        .scroll-fade { opacity: 0; transform: translateY(36px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+        .scroll-fade.in-view { opacity: 1; transform: translateY(0); }
         .scroll-fade.delay-1 { transition-delay: 100ms; }
         .scroll-fade.delay-2 { transition-delay: 200ms; }
         .scroll-fade.delay-3 { transition-delay: 300ms; }
         .scroll-fade.delay-4 { transition-delay: 400ms; }
+
+        /* ── Hover glow card ── */
+        .glow-card { transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+        .glow-card:hover { transform: translateY(-4px) scale(1.015); }
+
+        /* ── Ticker ── */
+        @keyframes tickerL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        @keyframes tickerR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+        .ticker-l { animation: tickerL 28s linear infinite; }
+        .ticker-r { animation: tickerR 32s linear infinite; }
+        .ticker-wrap { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+        .ticker-wrap:hover .ticker-l,
+        .ticker-wrap:hover .ticker-r { animation-play-state: paused; }
+
+        /* ── Floating orbs ── */
+        @keyframes orbFloat { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-18px) scale(1.04); } }
+        @keyframes orbFloat2 { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(12px) rotate(8deg); } }
       `}</style>
       <JsonLd />
 
@@ -666,18 +711,18 @@ export default function LandingPage() {
       </section>
 
       {/* ── TRUST STRIP ── */}
-      <section className="bg-white border-b border-gray-100 py-5">
+      <section className="bg-gray-950 border-b border-white/5 py-8">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-center scroll-fade">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sr">
             {[
-              { value: '2/mo', labelKey: 'landing.trust.stat1Label' },
-              { value: '~30s', labelKey: 'landing.trust.stat2Label' },
-              { value: '18', labelKey: 'landing.trust.stat3Label' },
-              { value: '256-bit', labelKey: 'landing.trust.stat4Label' },
-            ].map(({ value, labelKey }) => (
-              <div key={labelKey}>
-                <p className="text-2xl font-black text-gray-900">{value}</p>
-                <p className="text-xs text-gray-400 mt-0.5">{t(labelKey)}</p>
+              { value: '2/mo', labelKey: 'landing.trust.stat1Label', color: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20' },
+              { value: '~30s', labelKey: 'landing.trust.stat2Label', color: 'text-blue-400',    bg: 'bg-blue-500/10',    border: 'border-blue-500/20'    },
+              { value: '18',   labelKey: 'landing.trust.stat3Label', color: 'text-violet-400',  bg: 'bg-violet-500/10',  border: 'border-violet-500/20'  },
+              { value: '256',  labelKey: 'landing.trust.stat4Label', color: 'text-amber-400',   bg: 'bg-amber-500/10',   border: 'border-amber-500/20'   },
+            ].map(({ value, labelKey, color, bg, border }, i) => (
+              <div key={labelKey} className={`sr d${i + 1} flex flex-col items-center text-center p-4 rounded-2xl border ${bg} ${border}`}>
+                <p className={`text-3xl font-black ${color} mb-1`}>{value}</p>
+                <p className="text-xs text-gray-500">{t(labelKey)}</p>
               </div>
             ))}
           </div>
@@ -685,49 +730,54 @@ export default function LandingPage() {
       </section>
 
       {/* ── BEFORE / AFTER ── */}
-      <section className="py-12 md:py-16 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-8 scroll-fade">
-            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">{t('problem.badge')}</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{t('problem.heading')}</h2>
+      <section className="py-16 md:py-24 bg-gray-950 relative overflow-hidden">
+        {/* subtle bg orbs */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-0 w-80 h-80 bg-red-600/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-emerald-600/6 rounded-full blur-3xl" />
+        </div>
+        <div className="container mx-auto px-4 max-w-4xl relative">
+          <div className="text-center mb-10 sr">
+            <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">{t('problem.badge')}</p>
+            <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">{t('problem.heading')}</h2>
             <p className="text-gray-500 text-sm max-w-lg mx-auto">{t('problem.subheading')}</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4 items-stretch">
+          <div className="grid md:grid-cols-2 gap-5 items-stretch">
             {/* Before */}
-            <div className="rounded-xl border-2 border-red-100 bg-white p-4 shadow-sm scroll-fade delay-1">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="h-2 w-2 rounded-full bg-red-500" />
-                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{t('problem.before')}</span>
+            <div className="rounded-2xl border border-red-500/20 bg-red-950/20 p-5 glow-card hover:border-red-500/40 hover:shadow-[0_0_30px_rgba(239,68,68,0.08)] sr-left">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="h-2 w-2 rounded-full bg-red-500 animate-pulse" />
+                <span className="text-xs font-bold text-red-400 uppercase tracking-widest">{t('problem.before')}</span>
               </div>
-              <div className="font-mono text-xs bg-gray-50 border border-gray-200 rounded-lg p-4 space-y-1.5 text-gray-700">
-                {[['TSH','4.2 mIU/L','text-gray-700'],['HbA1c','6.1% ↑','text-orange-600'],['eGFR','58 mL/min ↓','text-orange-600'],['CRP','12.4 mg/L ↑↑','text-red-600'],['Ferritin','11 µg/L ↓','text-orange-600'],['Vitamin D','28 nmol/L','text-gray-700']].map(([k,v,c]) => (
-                  <div key={k} className="flex justify-between">
-                    <span className="text-gray-400">{k}</span>
+              <div className="font-mono text-xs bg-black/30 border border-white/5 rounded-xl p-4 space-y-2.5">
+                {[['TSH','4.2 mIU/L','text-gray-400'],['HbA1c','6.1% ↑','text-orange-400'],['eGFR','58 mL/min ↓','text-orange-400'],['CRP','12.4 mg/L ↑↑','text-red-400'],['Ferritin','11 µg/L ↓','text-orange-400'],['Vitamin D','28 nmol/L','text-gray-400']].map(([k,v,c]) => (
+                  <div key={k} className="flex justify-between border-b border-white/5 pb-2 last:border-0 last:pb-0">
+                    <span className="text-gray-600">{k}</span>
                     <span className={`font-bold ${c}`}>{v}</span>
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-red-400 mt-3 text-center italic font-medium">{t('problem.beforeNote')}</p>
+              <p className="text-xs text-red-500/70 mt-4 text-center italic">{t('problem.beforeNote')}</p>
             </div>
 
             {/* After */}
-            <div className="rounded-xl border-2 border-emerald-200 bg-white p-4 shadow-sm scroll-fade delay-2">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="h-2 w-2 rounded-full bg-emerald-500" />
-                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{t('problem.after')}</span>
+            <div className="rounded-2xl border border-emerald-500/20 bg-emerald-950/20 p-5 glow-card hover:border-emerald-500/40 hover:shadow-[0_0_30px_rgba(16,185,129,0.08)] sr-right">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest">{t('problem.after')}</span>
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 {[
-                  { icon: CheckCircle, color: 'text-emerald-500', text: 'Your thyroid (TSH) is within the normal range — no action needed.' },
-                  { icon: AlertCircle, color: 'text-orange-500', text: 'Blood sugar (HbA1c) slightly elevated — discuss pre-diabetes risk with your doctor.' },
-                  { icon: AlertCircle, color: 'text-orange-500', text: 'Kidney filtration (eGFR) mildly reduced — worth monitoring over time.' },
-                  { icon: AlertTriangle, color: 'text-red-500', text: 'Inflammation (CRP) elevated — your doctor should investigate soon.' },
-                  { icon: AlertCircle, color: 'text-orange-500', text: 'Iron stores (Ferritin) low — may cause fatigue.' },
-                ].map(({ icon: Icon, color, text }, i) => (
-                  <div key={i} className="flex gap-2.5 items-start px-2 py-2 rounded-lg hover:bg-gray-50 transition-colors">
+                  { icon: CheckCircle, color: 'text-emerald-400', bg: 'bg-emerald-500/5 border-emerald-500/10', text: 'Your thyroid (TSH) is within the normal range — no action needed.' },
+                  { icon: AlertCircle, color: 'text-orange-400', bg: 'bg-orange-500/5 border-orange-500/10',   text: 'Blood sugar (HbA1c) slightly elevated — discuss pre-diabetes risk with your doctor.' },
+                  { icon: AlertCircle, color: 'text-orange-400', bg: 'bg-orange-500/5 border-orange-500/10',   text: 'Kidney filtration (eGFR) mildly reduced — worth monitoring over time.' },
+                  { icon: AlertTriangle, color: 'text-red-400', bg: 'bg-red-500/5 border-red-500/10',          text: 'Inflammation (CRP) elevated — your doctor should investigate soon.' },
+                  { icon: AlertCircle, color: 'text-orange-400', bg: 'bg-orange-500/5 border-orange-500/10',   text: 'Iron stores (Ferritin) low — may cause fatigue.' },
+                ].map(({ icon: Icon, color, bg, text }, i) => (
+                  <div key={i} className={`flex gap-2.5 items-start px-3 py-2.5 rounded-xl border ${bg} transition-colors`}>
                     <Icon className={`h-3.5 w-3.5 flex-shrink-0 mt-0.5 ${color}`} />
-                    <span className="text-xs text-gray-700 leading-relaxed">{text}</span>
+                    <span className="text-xs text-gray-300 leading-relaxed">{text}</span>
                   </div>
                 ))}
               </div>
@@ -736,66 +786,54 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ── CAMPAIGNS ── */}
+      <CampaignSection />
+
       {/* ── HOW IT WORKS ── */}
-      <section id="how-it-works" className="py-20 md:py-28 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-16 scroll-fade">
-            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">{t('landing.howItWorks.badge')}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t('howItWorks.title')}</h2>
+      <section id="how-it-works" className="py-20 md:py-28 relative overflow-hidden" style={{background:'linear-gradient(160deg,#0a0f1a 0%,#0d1a12 50%,#0a0f1a 100%)'}}>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-emerald-500/6 rounded-full blur-3xl" />
+        </div>
+        <div className="container mx-auto px-4 max-w-5xl relative">
+          <div className="text-center mb-16 sr">
+            <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">{t('landing.howItWorks.badge')}</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">{t('howItWorks.title')}</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 relative scroll-fade delay-1">
+          <div className="grid md:grid-cols-3 gap-6 relative">
             {/* Connecting line desktop */}
-            <div className="hidden md:block absolute top-9 left-[calc(16.67%+2rem)] right-[calc(16.67%+2rem)] h-px bg-gradient-to-r from-emerald-200 via-emerald-400 to-emerald-200" />
+            <div className="hidden md:block absolute top-10 left-[calc(16.67%+2rem)] right-[calc(16.67%+2rem)] h-px bg-gradient-to-r from-emerald-500/20 via-emerald-400/60 to-emerald-500/20" />
 
             {[
-              {
-                step: '01',
-                icon: FileText,
-                title: t('landing.howItWorks.step1Title'),
-                desc: t('landing.howItWorks.step1Desc'),
-                detail: t('landing.howItWorks.step1Detail'),
-              },
-              {
-                step: '02',
-                icon: Brain,
-                title: t('landing.howItWorks.step2Title'),
-                desc: t('landing.howItWorks.step2Desc'),
-                detail: t('landing.howItWorks.step2Detail'),
-              },
-              {
-                step: '03',
-                icon: CheckCircle,
-                title: t('landing.howItWorks.step3Title'),
-                desc: t('landing.howItWorks.step3Desc'),
-                detail: t('landing.howItWorks.step3Detail'),
-              },
-            ].map(({ step, icon: Icon, title, desc, detail }) => (
-              <div key={step} className="flex flex-col items-center text-center group">
+              { step: '01', icon: FileText,    title: t('landing.howItWorks.step1Title'), desc: t('landing.howItWorks.step1Desc'), detail: t('landing.howItWorks.step1Detail'), color: 'from-emerald-600 to-teal-600',    glow: 'shadow-emerald-500/30', delay: 'd1' },
+              { step: '02', icon: Brain,        title: t('landing.howItWorks.step2Title'), desc: t('landing.howItWorks.step2Desc'), detail: t('landing.howItWorks.step2Detail'), color: 'from-violet-600 to-indigo-600',   glow: 'shadow-violet-500/30',  delay: 'd2' },
+              { step: '03', icon: CheckCircle,  title: t('landing.howItWorks.step3Title'), desc: t('landing.howItWorks.step3Desc'), detail: t('landing.howItWorks.step3Detail'), color: 'from-blue-600 to-cyan-600',       glow: 'shadow-blue-500/30',    delay: 'd3' },
+            ].map(({ step, icon: Icon, title, desc, detail, color, glow, delay }) => (
+              <div key={step} className={`sr ${delay} glow-card group flex flex-col items-center text-center p-8 rounded-2xl border border-white/5 bg-white/3 hover:border-white/10 hover:bg-white/5`}>
                 <div className="relative mb-6">
-                  <div className="w-18 h-18 w-[72px] h-[72px] bg-emerald-500 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/25 group-hover:shadow-emerald-500/40 group-hover:scale-105 transition-all duration-200">
+                  <div className={`w-[72px] h-[72px] bg-gradient-to-br ${color} text-white rounded-2xl flex items-center justify-center shadow-xl ${glow} group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className="h-7 w-7" />
                   </div>
-                  <span className="absolute -top-2 -right-2 w-6 h-6 bg-gray-900 text-white text-xs font-bold rounded-full flex items-center justify-center">{step}</span>
+                  <span className="absolute -top-2 -right-2 w-6 h-6 bg-gray-950 border border-white/10 text-white text-xs font-bold rounded-full flex items-center justify-center">{step}</span>
                 </div>
-                <h3 className="font-bold text-lg text-gray-900 mb-2">{title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed mb-3">{desc}</p>
-                <span className="text-xs text-emerald-600 font-semibold bg-emerald-50 px-3 py-1 rounded-full">{detail}</span>
+                <h3 className="font-bold text-lg text-white mb-2">{title}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed mb-4">{desc}</p>
+                <span className="text-xs text-emerald-400 font-semibold bg-emerald-400/10 border border-emerald-400/20 px-3 py-1 rounded-full">{detail}</span>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-14">
+          <div className="text-center mt-14 sr d4">
             <SignedOut>
               <SignInButton mode="modal">
-                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12">
+                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12 shadow-lg shadow-emerald-500/25">
                   {t('landing.howItWorks.cta')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </SignInButton>
             </SignedOut>
             <SignedIn>
               <Link href="/upload">
-                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12">
+                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12 shadow-lg shadow-emerald-500/25">
                   {t('landing.hero.ctaUpload')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -826,28 +864,13 @@ export default function LandingPage() {
           </div>
 
           {/* Three-column how it works */}
-          <div className="grid md:grid-cols-3 gap-6 mb-14 scroll-fade delay-1">
+          <div className="grid md:grid-cols-3 gap-6 mb-14">
             {[
-              {
-                step: '01',
-                emoji: '🗣️',
-                title: t('landing.doctorVisit.step1Title'),
-                desc: t('landing.doctorVisit.step1Desc'),
-              },
-              {
-                step: '02',
-                emoji: '⚡',
-                title: t('landing.doctorVisit.step2Title'),
-                desc: t('landing.doctorVisit.step2Desc'),
-              },
-              {
-                step: '03',
-                emoji: '🏥',
-                title: t('landing.doctorVisit.step3Title'),
-                desc: t('landing.doctorVisit.step3Desc'),
-              },
-            ].map(({ step, emoji, title, desc }) => (
-              <div key={step} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-emerald-500/40 transition-colors">
+              { step: '01', emoji: '🗣️', title: t('landing.doctorVisit.step1Title'), desc: t('landing.doctorVisit.step1Desc'), delay: 'd1' },
+              { step: '02', emoji: '⚡', title: t('landing.doctorVisit.step2Title'), desc: t('landing.doctorVisit.step2Desc'), delay: 'd2' },
+              { step: '03', emoji: '🏥', title: t('landing.doctorVisit.step3Title'), desc: t('landing.doctorVisit.step3Desc'), delay: 'd3' },
+            ].map(({ step, emoji, title, desc, delay }) => (
+              <div key={step} className={`sr ${delay} glow-card bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-emerald-500/40 hover:bg-emerald-500/5 hover:shadow-[0_8px_32px_rgba(16,185,129,0.08)]`}>
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">{emoji}</span>
                   <span className="text-xs font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">{step}</span>
@@ -914,15 +937,29 @@ export default function LandingPage() {
       </section>
 
       {/* ── LANGUAGES ── */}
-      <section className="py-16 bg-gray-900">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
+      <section className="py-16 bg-gray-900 overflow-hidden">
+        <div className="text-center mb-10 px-4">
           <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">{t('landing.languages.badge')}</p>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">{t('landing.languages.title')}</h2>
-          <p className="text-gray-400 text-base mb-10">{t('landing.languages.subtitle')}</p>
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 scroll-fade delay-1">
-            {LANGUAGES.map(({ code, name }) => (
-              <span key={code} className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800 border border-gray-700 text-sm text-gray-300 hover:border-emerald-500/40 hover:text-white transition-colors">
-                <span className="text-[10px] font-bold text-gray-500 tracking-widest">{code}</span>
+          <p className="text-gray-400 text-base">{t('landing.languages.subtitle')}</p>
+        </div>
+        {/* Row 1 — scroll left */}
+        <div className="ticker-wrap mb-3">
+          <div className="ticker-l flex gap-3 w-max">
+            {[...LANGUAGES, ...LANGUAGES].map(({ code, name }, i) => (
+              <span key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800 border border-gray-700 text-sm text-gray-300 whitespace-nowrap flex-shrink-0">
+                <span className="text-[10px] font-bold text-emerald-500 tracking-widest">{code}</span>
+                <span>{name}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+        {/* Row 2 — scroll right (reversed) */}
+        <div className="ticker-wrap">
+          <div className="ticker-r flex gap-3 w-max">
+            {[...LANGUAGES, ...LANGUAGES].reverse().map(({ code, name }, i) => (
+              <span key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800/60 border border-gray-700/60 text-sm text-gray-400 whitespace-nowrap flex-shrink-0">
+                <span className="text-[10px] font-bold text-gray-600 tracking-widest">{code}</span>
                 <span>{name}</span>
               </span>
             ))}
@@ -997,16 +1034,22 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── CAMPAIGNS ── */}
-      <CampaignSection />
-
       {/* ── PRICING CTA ── */}
-      <section className="bg-emerald-500 py-20">
-        <div className="container mx-auto px-4 text-center max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('pricingCta.title')}</h2>
+      <section className="relative py-24 overflow-hidden" style={{background:'linear-gradient(135deg,#059669 0%,#10b981 40%,#0d9488 100%)'}}>
+        {/* Animated orbs */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-6 left-[10%] w-48 h-48 bg-white/10 rounded-full blur-2xl" style={{animation:'orbFloat 6s ease-in-out infinite'}} />
+          <div className="absolute bottom-4 right-[12%] w-64 h-64 bg-white/8 rounded-full blur-3xl" style={{animation:'orbFloat2 8s ease-in-out infinite'}} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-32 bg-white/5 rounded-full blur-3xl" />
+        </div>
+        <div className="container mx-auto px-4 text-center max-w-2xl relative sr">
+          <div className="inline-flex items-center gap-2 bg-white/15 border border-white/25 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+            <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" /> Free to start
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">{t('pricingCta.title')}</h2>
           <p className="text-white/80 mb-8 text-lg">{t('pricingCta.subtitle')}</p>
           <Link href="/pricing">
-            <Button size="lg" className="bg-white hover:bg-gray-100 text-emerald-600 font-bold px-10 rounded-xl h-12">
+            <Button size="lg" className="bg-white hover:bg-gray-50 text-emerald-700 font-bold px-12 rounded-xl h-14 text-base shadow-xl shadow-emerald-900/30 hover:shadow-2xl transition-shadow">
               {t('pricingCta.cta')} <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
@@ -1015,47 +1058,32 @@ export default function LandingPage() {
       </section>
 
       {/* ── BLOG ── */}
-      <section className="py-20 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="flex items-center justify-between mb-10">
+      <section className="py-20 md:py-24 bg-gray-950 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-violet-600/4 rounded-full blur-3xl" />
+        </div>
+        <div className="container mx-auto px-4 max-w-5xl relative">
+          <div className="flex items-center justify-between mb-10 sr">
             <div>
-              <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-1">{t('landing.blog.badge')}</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t('landing.blog.title')}</h2>
+              <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-1">{t('landing.blog.badge')}</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">{t('landing.blog.title')}</h2>
             </div>
-            <Link href="/blog" className="hidden sm:flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 font-semibold">
+            <Link href="/blog" className="hidden sm:flex items-center gap-1 text-sm text-emerald-400 hover:text-emerald-300 font-semibold transition-colors">
               {t('landing.blog.allArticles')} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="grid md:grid-cols-3 gap-4 scroll-fade delay-1">
+          <div className="grid md:grid-cols-3 gap-5">
             {[
-              {
-                href: '/blog/doctor-visit-prep-germany',
-                tag: 'Doctor Visit · New',
-                title: 'How to Prepare for a Doctor\'s Appointment in Germany',
-                desc: 'Describe symptoms in any language — Medyra generates a structured German summary for your doctor.',
-                time: '6 min',
-              },
-              {
-                href: '/blog/arztbrief-verstehen-fur-senioren',
-                tag: 'Für Senioren · Neu',
-                title: 'Ihren Arztbrief einfach verstehen — Medyra für Senioren',
-                desc: 'Befund erhalten und nicht verstanden? Medyra erklärt alles auf Deutsch — zum Lesen oder Vorlesen lassen.',
-                time: '5 Min.',
-              },
-              {
-                href: '/blog/how-to-read-lab-results-germany-expat',
-                tag: 'Germany · Expat',
-                title: 'How to Read Your Lab Results in Germany as an Expat',
-                desc: 'Decode your Laborbefund — abbreviations, reference ranges, and what flagged values actually mean.',
-                time: '7 min',
-              },
-            ].map((post) => (
-              <Link key={post.href} href={post.href} className="block group">
-                <div className="bg-white rounded-2xl border border-gray-200 p-5 h-full hover:border-emerald-300 hover:shadow-sm transition-all duration-200">
-                  <p className="text-xs font-semibold text-emerald-600 mb-2">{post.tag}</p>
-                  <h3 className="font-bold text-gray-900 text-sm leading-snug mb-2 group-hover:text-emerald-700 transition-colors">{post.title}</h3>
-                  <p className="text-xs text-gray-500 leading-relaxed mb-3">{post.desc}</p>
-                  <p className="text-xs text-gray-400 flex items-center gap-1">
+              { href: '/blog/doctor-visit-prep-germany',           tag: 'Doctor Visit · New', accent: 'border-l-violet-500',  tagColor: 'text-violet-400',  title: "How to Prepare for a Doctor's Appointment in Germany",         desc: 'Describe symptoms in any language — Medyra generates a structured German summary for your doctor.', time: '6 min' },
+              { href: '/blog/arztbrief-verstehen-fur-senioren',    tag: 'Für Senioren · Neu', accent: 'border-l-blue-500',    tagColor: 'text-blue-400',    title: 'Ihren Arztbrief einfach verstehen — Medyra für Senioren',       desc: 'Befund erhalten und nicht verstanden? Medyra erklärt alles auf Deutsch — zum Lesen oder Vorlesen lassen.', time: '5 Min.' },
+              { href: '/blog/how-to-read-lab-results-germany-expat', tag: 'Germany · Expat',  accent: 'border-l-emerald-500', tagColor: 'text-emerald-400', title: 'How to Read Your Lab Results in Germany as an Expat',           desc: 'Decode your Laborbefund — abbreviations, reference ranges, and what flagged values actually mean.', time: '7 min' },
+            ].map((post, i) => (
+              <Link key={post.href} href={post.href} className={`block group sr d${i+1}`}>
+                <div className={`bg-gray-900 rounded-2xl border border-white/5 border-l-2 ${post.accent} p-5 h-full glow-card hover:border-l-2 hover:bg-gray-800/60 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]`}>
+                  <p className={`text-xs font-bold uppercase tracking-wide mb-3 ${post.tagColor}`}>{post.tag}</p>
+                  <h3 className="font-bold text-white text-sm leading-snug mb-2 group-hover:text-emerald-300 transition-colors">{post.title}</h3>
+                  <p className="text-xs text-gray-500 leading-relaxed mb-4">{post.desc}</p>
+                  <p className="text-xs text-gray-600 flex items-center gap-1">
                     <Clock className="h-3 w-3" /> {post.time} {t('landing.blog.minRead')}
                   </p>
                 </div>
@@ -1063,7 +1091,7 @@ export default function LandingPage() {
             ))}
           </div>
           <div className="text-center mt-6 sm:hidden">
-            <Link href="/blog" className="inline-flex items-center gap-1 text-sm text-emerald-600 font-semibold">
+            <Link href="/blog" className="inline-flex items-center gap-1 text-sm text-emerald-400 font-semibold">
               {t('landing.blog.allArticles')} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
