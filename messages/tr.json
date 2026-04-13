@@ -328,19 +328,19 @@
   "landing": {
     "hero": {
       "badge": "Ücretsiz başla · Kredi kartı gerekmez",
-      "title1": "Laboratuvar sonuçlarınız,",
+      "title1": "Sağlık verileriniz,",
       "title2": "sonunda anlaşılır.",
       "description": "Herhangi bir tıbbi rapor yükleyin ve 60 saniyeden kısa sürede yapay zekadan sade dil açıklaması alın.",
       "ctaAnalyse": "Raporumu ücretsiz analiz et",
       "ctaHowItWorks": "Nasıl çalıştığını gör",
       "ctaUpload": "Raporum yükle",
-      "tag1": "3 ücretsiz rapor",
+      "tag1": "Ayda 2 ücretsiz rapor",
       "tag2": "GDPR şifreli",
       "tag3": "~30s'de sonuç",
       "tag4": "PDF, JPG, PNG, TXT"
     },
     "trust": {
-      "stat1Label": "Ücretsiz başlangıç raporları",
+      "stat1Label": "Aylık ücretsiz rapor",
       "stat2Label": "Ortalama analiz süresi",
       "stat3Label": "Desteklenen diller",
       "stat4Label": "AES şifreleme"
@@ -413,7 +413,7 @@
       "minRead": "dk okuma"
     },
     "pricingCta": {
-      "note": "€0'dan başlayan planlar · Kredi kartı gerekmez · İstediğiniz zaman iptal edin"
+      "note": "Her ay 2 ücretsiz rapor · Kart gerekmez · İstediğinizde iptal"
     }
   }
 }

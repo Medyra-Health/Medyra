@@ -328,19 +328,19 @@
   "landing": {
     "hero": {
       "badge": "Inizia gratis · Nessuna carta richiesta",
-      "title1": "I tuoi risultati di laboratorio,",
+      "title1": "I tuoi dati sanitari,",
       "title2": "finalmente chiari.",
       "description": "Carica qualsiasi referto medico e ottieni una spiegazione in linguaggio semplice dall'IA in meno di 60 secondi.",
       "ctaAnalyse": "Analizza il mio referto gratis",
       "ctaHowItWorks": "Scopri come funziona",
       "ctaUpload": "Carica il mio referto",
-      "tag1": "3 referti gratuiti",
+      "tag1": "2 referti gratuiti/mese",
       "tag2": "Crittografato GDPR",
       "tag3": "Risultati in ~30s",
       "tag4": "PDF, JPG, PNG, TXT"
     },
     "trust": {
-      "stat1Label": "Referti gratuiti per iniziare",
+      "stat1Label": "Referti gratuiti al mese",
       "stat2Label": "Tempo medio di analisi",
       "stat3Label": "Lingue supportate",
       "stat4Label": "Crittografia AES"
@@ -413,7 +413,7 @@
       "minRead": "min di lettura"
     },
     "pricingCta": {
-      "note": "Piani da €0 · Nessuna carta di credito richiesta · Cancella in qualsiasi momento"
+      "note": "2 referti gratuiti ogni mese · Senza carta · Disdici in qualsiasi momento"
     }
   }
 }

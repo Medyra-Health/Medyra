@@ -328,19 +328,19 @@
   "landing": {
     "hero": {
       "badge": "Kostenlos starten · Keine Kreditkarte nötig",
-      "title1": "Ihre Laborbefunde,",
+      "title1": "Ihre Gesundheitsdaten,",
       "title2": "endlich verständlich.",
       "description": "Laden Sie Ihren Arztbrief hoch und erhalten Sie in unter 60 Sekunden eine klare KI-Erklärung. Kein Medizinstudium erforderlich.",
       "ctaAnalyse": "Meinen Befund kostenlos analysieren",
       "ctaHowItWorks": "So funktioniert es",
       "ctaUpload": "Befund hochladen",
-      "tag1": "3 kostenlose Berichte",
+      "tag1": "2 kostenlose Berichte/Monat",
       "tag2": "DSGVO-verschlüsselt",
       "tag3": "Ergebnis in ~30s",
       "tag4": "PDF, JPG, PNG, TXT"
     },
     "trust": {
-      "stat1Label": "Kostenlose Berichte",
+      "stat1Label": "Kostenlose Berichte pro Monat",
       "stat2Label": "Durchschnittliche Analysezeit",
       "stat3Label": "Unterstützte Sprachen",
       "stat4Label": "AES-Verschlüsselung"
@@ -413,7 +413,7 @@
       "minRead": "Min. Lesezeit"
     },
     "pricingCta": {
-      "note": "Pläne ab €0 · Keine Kreditkarte erforderlich · Jederzeit kündbar"
+      "note": "2 kostenlose Berichte jeden Monat · Keine Kreditkarte · Jederzeit kündbar"
     }
   }
 }

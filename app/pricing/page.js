@@ -39,7 +39,7 @@ const TIERS = [
     ctaAction: 'signup',
     ctaStyle: 'outline',
     features: {
-      uploads:   '2',
+      uploads:   '2/month',
       explain:   'Basic only',
       chat:      false,
       prep:      false,
