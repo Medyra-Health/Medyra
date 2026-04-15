@@ -967,6 +967,150 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ── HEALTH VAULT ── */}
+      <section className="py-20 md:py-28 relative overflow-hidden" style={{background:'linear-gradient(160deg,#0a0f1a 0%,#071610 50%,#0a0f1a 100%)'}}>
+        {/* Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-emerald-500/8 blur-3xl rounded-full pointer-events-none" />
+        <div className="container mx-auto px-4 max-w-6xl relative">
+
+          {/* Header */}
+          <div className="text-center mb-14 scroll-fade">
+            <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
+              <span>🏛</span> New Feature
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
+              Your Health Vault.<br />
+              <span className="text-emerald-400">Every trend. Every person.</span>
+            </h2>
+            <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+              Create profiles for yourself, your partner, children, and parents. Medyra tracks biomarkers over time and automatically includes your history in every doctor summary.
+            </p>
+          </div>
+
+          {/* Two-col: chart preview + feature list */}
+          <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
+
+            {/* Left: Mock timeline chart */}
+            <div className="sr-left bg-gray-900/80 border border-gray-700/60 rounded-2xl p-6 space-y-5 shadow-2xl">
+              {/* Profile picker mockup */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="flex gap-1.5">
+                    {[{c:'bg-emerald-500',n:'Akash'},{c:'bg-blue-500',n:'Sara'},{c:'bg-violet-500',n:'Dad'}].map(p=>(
+                      <div key={p.n} className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-semibold ${p.n==='Akash' ? 'border-emerald-500/50 bg-emerald-900/40 text-emerald-300' : 'border-gray-700 bg-gray-800 text-gray-500'}`}>
+                        <span className={`w-1.5 h-1.5 rounded-full ${p.c}`} /> {p.n}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-widest">Health Vault</span>
+              </div>
+
+              {/* Biomarker tabs */}
+              <div className="flex gap-2 flex-wrap">
+                {['Hemoglobin','Ferritin','TSH','HbA1c'].map((b,i)=>(
+                  <span key={b} className={`px-2.5 py-1 rounded-full text-xs font-semibold border ${i===0 ? 'bg-red-900/40 border-red-500/40 text-red-300' : 'bg-gray-800 border-gray-700 text-gray-500'}`}>{b}</span>
+                ))}
+              </div>
+
+              {/* Fake chart bars */}
+              <div>
+                <div className="flex items-end gap-2 h-24">
+                  {[65,72,68,78,74,82,88,76,91,85,94,88].map((h,i)=>(
+                    <div key={i} className="flex-1 rounded-t-sm transition-all" style={{height:`${h}%`,background:`linear-gradient(to top, #10b981, #10b98150)`}} />
+                  ))}
+                </div>
+                <div className="flex justify-between text-[10px] text-gray-600 mt-1 px-0.5">
+                  <span>Jan</span><span>Apr</span><span>Jul</span><span>Oct</span><span>Apr</span>
+                </div>
+              </div>
+
+              {/* Stats row */}
+              <div className="grid grid-cols-3 gap-3">
+                {[
+                  {label:'Latest',value:'13.8',unit:'g/dL',ok:true},
+                  {label:'Normal range',value:'12–17.5',unit:'g/dL',ok:true},
+                  {label:'Change',value:'+7.2%',unit:'since Jan',ok:true},
+                ].map(s=>(
+                  <div key={s.label} className="bg-gray-800/60 rounded-xl p-2.5 text-center">
+                    <p className="text-[10px] text-gray-500 mb-1">{s.label}</p>
+                    <p className={`text-sm font-black ${s.ok ? 'text-emerald-400' : 'text-red-400'}`}>{s.value}</p>
+                    <p className="text-[10px] text-gray-600">{s.unit}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: features */}
+            <div className="space-y-5 sr-right">
+              {[
+                {
+                  icon: '👨‍👩‍👧‍👦',
+                  title: 'One account, whole family',
+                  desc: 'Create separate profiles for each family member — partner, children, elderly parents. Each has their own private health timeline.',
+                  color: 'text-emerald-400',
+                },
+                {
+                  icon: '📈',
+                  title: 'Automatic biomarker tracking',
+                  desc: 'Hemoglobin, ferritin, TSH, HbA1c, cholesterol, vitamin D, CRP, eGFR — Medyra reads them from every uploaded report and plots them automatically.',
+                  color: 'text-blue-400',
+                },
+                {
+                  icon: '⚠️',
+                  title: 'Trend alerts that matter',
+                  desc: 'If a value changes by more than 10% since your first reading, Medyra flags it. A single value means nothing — the trend tells the story.',
+                  color: 'text-amber-400',
+                },
+                {
+                  icon: '🩺',
+                  title: 'Doctor prep with full history',
+                  desc: 'When you generate a doctor summary, select a profile. Your lab history is automatically pulled in — no typing, no forgetting, no gaps.',
+                  color: 'text-violet-400',
+                },
+              ].map((f, i) => (
+                <div key={i} className={`flex gap-4 p-4 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-gray-700 transition-all glow-card d${i+1}`}>
+                  <span className="text-2xl flex-shrink-0 mt-0.5">{f.icon}</span>
+                  <div>
+                    <p className={`font-bold text-sm mb-1 ${f.color}`}>{f.title}</p>
+                    <p className="text-xs text-gray-400 leading-relaxed">{f.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Profile limit cards */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 scroll-fade">
+            {[
+              { plan: 'Free', profiles: '0', desc: 'Stateless analysis', color: 'border-gray-700 bg-gray-900', badge: '' },
+              { plan: 'Personal', profiles: '2', desc: 'You + partner', color: 'border-emerald-500/30 bg-emerald-950/40', badge: 'Most Popular' },
+              { plan: 'Family', profiles: '5', desc: 'Whole household', color: 'border-violet-500/30 bg-violet-950/40', badge: '' },
+              { plan: 'Clinic', profiles: '∞', desc: 'Unlimited profiles', color: 'border-blue-500/30 bg-blue-950/40', badge: '' },
+            ].map(p => (
+              <div key={p.plan} className={`relative rounded-2xl border p-5 text-center ${p.color}`}>
+                {p.badge && (
+                  <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 text-[10px] font-bold bg-emerald-500 text-white px-2.5 py-0.5 rounded-full whitespace-nowrap">{p.badge}</span>
+                )}
+                <p className="text-3xl font-black text-white mb-1">{p.profiles}</p>
+                <p className="text-xs font-bold text-gray-300 mb-0.5">{p.plan}</p>
+                <p className="text-[11px] text-gray-500">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center scroll-fade">
+            <Link href="/profiles" className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl transition-colors text-sm shadow-lg shadow-emerald-900/40 mr-3">
+              Open Health Vault <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link href="/blog/health-vault-profiles-guide" className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-semibold px-6 py-4 rounded-xl transition-colors text-sm">
+              Learn more
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── NEW TO GERMANY ── */}
       <NewToGermanySection />
 

@@ -49,7 +49,8 @@ export async function GET() {
   const db = await getDb()
   const user = await db.collection('users').findOne({ clerkId: userId })
   const tier = await getEffectiveTier(userId)
-  const limit = PROFILE_LIMITS[tier] ?? 0
+  // Use 'in' check — null means unlimited; ?? 0 would wrongly convert null→0
+  const limit = tier in PROFILE_LIMITS ? PROFILE_LIMITS[tier] : 0
 
   return NextResponse.json({
     profiles: user?.profiles || [],
@@ -72,7 +73,7 @@ export async function POST(request) {
   const db = await getDb()
   const user = await db.collection('users').findOne({ clerkId: userId })
   const tier = await getEffectiveTier(userId)
-  const limit = PROFILE_LIMITS[tier] ?? 0
+  const limit = tier in PROFILE_LIMITS ? PROFILE_LIMITS[tier] : 0
 
   if (limit !== null && (user?.profiles || []).length >= limit) {
     return NextResponse.json({
