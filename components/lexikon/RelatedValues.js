@@ -5,21 +5,19 @@ export default function RelatedValues({ entries }) {
 
   return (
     <div className="my-8">
-      <h2 className="text-base font-semibold mb-3" style={{color:'rgba(232,245,240,0.7)'}}>Verwandte Laborwerte</h2>
+      <h2 className="text-base font-bold text-gray-700 mb-3 flex items-center gap-2">
+        <span className="text-lg">🔗</span> Verwandte Laborwerte
+      </h2>
       <div className="flex flex-wrap gap-2">
         {entries.map((entry) => (
           <Link
             key={entry.slug}
             href={`/lexikon/${entry.slug}`}
-            className="inline-flex items-center gap-1.5 text-sm font-medium px-4 py-1.5 rounded-full transition-colors"
-            style={{
-              background: 'rgba(16,185,129,0.08)',
-              border: '1px solid rgba(16,185,129,0.2)',
-              color: '#10B981',
-            }}
+            className="group inline-flex items-center gap-2 bg-white border border-gray-200 hover:border-emerald-400 hover:bg-emerald-50 text-sm font-medium px-4 py-2 rounded-xl transition-all shadow-sm"
           >
-            <span style={{fontWeight:700}}>{entry.acronym}</span>
-            <span style={{color:'rgba(232,245,240,0.5)', fontSize:'0.75rem'}}>— {entry.fullName}</span>
+            <span className="font-black text-emerald-600">{entry.acronym}</span>
+            <span className="text-gray-500 text-xs">— {entry.fullName}</span>
+            <span className="text-gray-300 group-hover:text-emerald-400 transition-colors text-xs">→</span>
           </Link>
         ))}
       </div>

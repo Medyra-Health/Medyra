@@ -1,7 +1,14 @@
-export default function FeaturedSnippet({ text }) {
+export default function FeaturedSnippet({ text, accent = '#10b981' }) {
   return (
-    <div style={{borderLeft:'3px solid #10B981', background:'rgba(16,185,129,0.05)'}} className="pl-5 py-4 pr-4 rounded-r-xl mb-8">
-      <p className="text-base leading-relaxed" style={{color:'rgba(232,245,240,0.9)'}}>{text}</p>
+    <div className="bg-white rounded-2xl border border-gray-200 p-5 mb-8 shadow-sm relative overflow-hidden">
+      {/* Coloured left bar using accent */}
+      <div className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl" style={{ background: accent }} />
+      <div className="pl-4">
+        <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: accent }}>
+          Kurzerklärung
+        </p>
+        <p className="text-base text-gray-700 leading-relaxed">{text}</p>
+      </div>
     </div>
   )
 }

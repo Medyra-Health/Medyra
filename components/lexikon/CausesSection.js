@@ -6,28 +6,38 @@ export default function CausesSection({ causesElevated, causesLow }) {
 
   return (
     <div className="my-8">
-      <h2 className="text-lg font-bold mb-4" style={{color:'#E8F5F0'}}>Mögliche Ursachen</h2>
+      <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+        <span className="text-xl">🔍</span> Mögliche Ursachen
+      </h2>
+
       <div className={`grid gap-4 ${hasElevated && hasLow ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
         {hasElevated && (
-          <div className="rounded-xl p-5" style={{background:'rgba(239,68,68,0.06)', border:'1px solid rgba(239,68,68,0.15)'}}>
-            <h3 className="text-sm font-semibold mb-3" style={{color:'#EF4444'}}>Mögliche Ursachen (erhöht)</h3>
-            <ul className="space-y-2">
+          <div className="bg-red-50 border border-red-200 rounded-2xl p-5">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-7 h-7 rounded-full bg-red-100 flex items-center justify-center text-sm font-black text-red-600">↑</span>
+              <h3 className="text-sm font-bold text-red-700">Wert zu hoch — mögliche Ursachen</h3>
+            </div>
+            <ul className="space-y-2.5">
               {causesElevated.map((cause, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm" style={{color:'rgba(232,245,240,0.8)'}}>
-                  <span style={{color:'#EF4444', marginTop:'2px', flexShrink:0}}>↑</span>
+                <li key={i} className="flex items-start gap-2.5 bg-white rounded-lg px-3 py-2 border border-red-100 text-sm text-gray-700">
+                  <span className="text-red-400 font-bold flex-shrink-0 mt-0.5">·</span>
                   <span>{cause}</span>
                 </li>
               ))}
             </ul>
           </div>
         )}
+
         {hasLow && (
-          <div className="rounded-xl p-5" style={{background:'rgba(59,130,246,0.06)', border:'1px solid rgba(59,130,246,0.15)'}}>
-            <h3 className="text-sm font-semibold mb-3" style={{color:'#3B82F6'}}>Mögliche Ursachen (erniedrigt)</h3>
-            <ul className="space-y-2">
+          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-5">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center text-sm font-black text-blue-600">↓</span>
+              <h3 className="text-sm font-bold text-blue-700">Wert zu niedrig — mögliche Ursachen</h3>
+            </div>
+            <ul className="space-y-2.5">
               {causesLow.map((cause, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm" style={{color:'rgba(232,245,240,0.8)'}}>
-                  <span style={{color:'#3B82F6', marginTop:'2px', flexShrink:0}}>↓</span>
+                <li key={i} className="flex items-start gap-2.5 bg-white rounded-lg px-3 py-2 border border-blue-100 text-sm text-gray-700">
+                  <span className="text-blue-400 font-bold flex-shrink-0 mt-0.5">·</span>
                   <span>{cause}</span>
                 </li>
               ))}
@@ -35,6 +45,10 @@ export default function CausesSection({ causesElevated, causesLow }) {
           </div>
         )}
       </div>
+
+      <p className="text-xs text-gray-400 mt-3 pl-1">
+        Diese Liste zeigt mögliche Ursachen — keine Diagnose. Nur Ihr Arzt kann Ihren Wert richtig einordnen.
+      </p>
     </div>
   )
 }
