@@ -25,6 +25,30 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/medizinisches-lexikon-guide`,
+      lastModified: new Date('2026-04-16'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/health-vault-profiles-guide`,
+      lastModified: new Date('2026-04-16'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/doctor-visit-prep-germany`,
+      lastModified: new Date('2026-04-11'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/arztbrief-verstehen-fur-senioren`,
+      lastModified: new Date('2026-04-11'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/how-medyra-protects-your-medical-data`,
       lastModified: new Date('2026-04-04'),
       changeFrequency: 'monthly',

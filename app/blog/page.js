@@ -15,6 +15,16 @@ export const metadata = {
 
 const POSTS = [
   {
+    slug: 'medizinisches-lexikon-guide',
+    title: 'Medyra Lexikon: How to Look Up Any Lab Value — Complete Guide',
+    description:
+      'CRP too high? HbA1c elevated? A step-by-step guide to using the Medyra Medical Lexikon — 46 plain-German lab value pages with reference ranges, causes, and ready-made doctor questions. Learn when to use it, how to search, and how to combine it with Doctor Visit.',
+    date: '16 April 2026',
+    readTime: '7 min read',
+    tags: ['Lexikon', 'Laborwerte', 'Guide'],
+    highlight: true,
+  },
+  {
     slug: 'health-vault-profiles-guide',
     title: 'Health Vault & Profiles: Track Your Family\'s Health Over Time',
     description:
