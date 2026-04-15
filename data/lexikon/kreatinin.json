@@ -1,0 +1,24 @@
+{
+  "slug": "kreatinin",
+  "acronym": "Krea",
+  "fullName": "Kreatinin",
+  "category": "Nierenwerte",
+  "shortAnswer": "Kreatinin ist ein Stoffwechselprodukt der Muskeln, das über die Nieren ausgeschieden wird. Erhöhte Werte können auf eine eingeschränkte Nierenfunktion hindeuten. Der Wert hängt auch von Muskelmasse und Flüssigkeitsaufnahme ab. Sprechen Sie auffällige Werte mit Ihrem Arzt an.",
+  "unit": "mg/dl",
+  "ranges": {
+    "normal": { "min": 0.7, "max": 1.2, "label": "Normal" },
+    "elevated": { "min": 1.2, "max": 2.5, "label": "Leicht erhöht" },
+    "high": { "min": 2.5, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Nierenerkrankungen", "Dehydration", "Hohe Muskelmasse", "Bestimmte Medikamente", "Übermäßiger Fleischkonsum"],
+  "causesLow": ["Geringer Muskelanteil", "Mangelernährung", "Schwangerschaft"],
+  "relatedValues": ["gfr", "harnstoff", "harnsaeure"],
+  "doctorQuestions": [
+    "Ist meine Nierenfunktion eingeschränkt?",
+    "Sollte mein GFR-Wert berechnet werden?",
+    "Muss ich auf meine Flüssigkeitsaufnahme oder Ernährung achten?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Kreatinin erhöht? Normwerte, Ursachen und Bedeutung für die Nierenfunktion einfach erklärt auf Deutsch."
+}

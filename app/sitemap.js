@@ -1,6 +1,9 @@
+import { getAllSlugs } from '@/lib/lexikon'
+
 export default function sitemap() {
   const baseUrl = 'https://medyra.de'
   const now = new Date()
+  const lexikonSlugs = getAllSlugs()
 
   return [
     {
@@ -75,5 +78,17 @@ export default function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/lexikon`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    ...lexikonSlugs.map(slug => ({
+      url: `${baseUrl}/lexikon/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    })),
   ]
 }

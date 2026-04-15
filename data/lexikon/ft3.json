@@ -1,0 +1,24 @@
+{
+  "slug": "ft3",
+  "acronym": "fT3",
+  "fullName": "Freies Trijodthyronin",
+  "category": "Schilddrüse",
+  "shortAnswer": "fT3 ist das aktive Schilddrüsenhormon, das den Stoffwechsel, die Herzfrequenz und viele Körperfunktionen beeinflusst. Erhöhte Werte können auf eine Schilddrüsenüberfunktion hindeuten, niedrige Werte auf eine Unterfunktion. Besprechen Sie Abweichungen mit Ihrem Arzt.",
+  "unit": "pg/ml",
+  "ranges": {
+    "normal": { "min": 2.0, "max": 4.4, "label": "Normal" },
+    "elevated": { "min": 4.4, "max": 7.0, "label": "Erhöht" },
+    "high": { "min": 7.0, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Schilddrüsenüberfunktion", "Morbus Basedow", "Schilddrüsenentzündung"],
+  "causesLow": ["Hypothyreose", "Hashimoto-Thyreoiditis", "Jodmangel", "Schwere Allgemeinerkrankungen"],
+  "relatedValues": ["tsh", "ft4"],
+  "doctorQuestions": [
+    "Wie ist mein fT3 im Verhältnis zu fT4 und TSH zu bewerten?",
+    "Besteht eine Schilddrüsenerkrankung?",
+    "Brauche ich eine Schilddrüsenszintigraphie?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "fT3 erhöht oder zu niedrig? Normwerte, Bedeutung und Ursachen des freien Schilddrüsenhormons einfach erklärt."
+}

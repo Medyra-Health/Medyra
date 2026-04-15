@@ -1,0 +1,24 @@
+{
+  "slug": "chlorid",
+  "acronym": "Cl",
+  "fullName": "Chlorid",
+  "category": "Elektrolyte",
+  "shortAnswer": "Chlorid ist ein Elektrolyt, das den Säure-Basen-Haushalt und den Flüssigkeitshaushalt mitreguliert. Abweichungen vom Normalbereich können auf Nieren- oder Stoffwechselprobleme hindeuten. Chlorid wird meist zusammen mit Natrium und Kalium bewertet. Sprechen Sie auffällige Werte an.",
+  "unit": "mmol/l",
+  "ranges": {
+    "normal": { "min": 98, "max": 107, "label": "Normal" },
+    "elevated": { "min": 107, "max": 115, "label": "Erhöht (Hyperchlorämie)" },
+    "high": { "min": 115, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Dehydration", "Nierenerkrankungen", "Durchfall", "Bestimmte Medikamente"],
+  "causesLow": ["Erbrechen", "Diuretika", "Herzinsuffizienz", "Stoffwechselazidose"],
+  "relatedValues": ["natrium", "kalium", "kreatinin"],
+  "doctorQuestions": [
+    "Deutet mein Chloridwert auf ein Säure-Basen-Problem hin?",
+    "Sollte ich meine anderen Elektrolyte gleichzeitig kontrollieren lassen?",
+    "Beeinflusst ein Medikament meinen Chloridspiegel?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Chlorid erhöht oder zu niedrig? Normwerte, Ursachen und Bedeutung des Elektrolyts einfach erklärt auf Deutsch."
+}

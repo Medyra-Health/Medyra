@@ -1,0 +1,24 @@
+{
+  "slug": "inr",
+  "acronym": "INR",
+  "fullName": "International Normalized Ratio (Gerinnungstest)",
+  "category": "Gerinnung",
+  "shortAnswer": "Die INR misst die Blutgerinnungszeit und wird besonders zur Überwachung von Blutverdünnern (z. B. Marcumar) eingesetzt. Werte über 1,2 können auf eine verlängerte Gerinnungszeit hindeuten, was das Blutungsrisiko erhöht. Sprechen Sie Veränderungen mit Ihrem Arzt an.",
+  "unit": "(kein Einheit)",
+  "ranges": {
+    "normal": { "min": 0.9, "max": 1.2, "label": "Normal" },
+    "elevated": { "min": 1.2, "max": 2.0, "label": "Leicht erhöht" },
+    "high": { "min": 2.0, "max": null, "label": "Erhöht / Therapeutisch (bei Marcumar)" }
+  },
+  "causesElevated": ["Marcumar-/Warfarin-Therapie", "Lebererkrankungen", "Vitamin-K-Mangel", "Gerinnungsstörungen"],
+  "causesLow": [],
+  "relatedValues": ["ptt", "quick", "thrombozyten"],
+  "doctorQuestions": [
+    "Liegt mein INR im therapeutischen Bereich für meine Blutverdünner-Therapie?",
+    "Muss ich meine Marcumar-Dosis anpassen?",
+    "Kann eine bestimmte Nahrung meinen INR beeinflussen?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "INR erhöht? Normwerte, Bedeutung bei Marcumar-Therapie und Gerinnungsstörungen einfach erklärt auf Deutsch."
+}

@@ -996,8 +996,8 @@ export default function LandingPage() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="flex gap-1.5">
-                    {[{c:'bg-emerald-500',n:'Akash'},{c:'bg-blue-500',n:'Sara'},{c:'bg-violet-500',n:'Dad'}].map(p=>(
-                      <div key={p.n} className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-semibold ${p.n==='Akash' ? 'border-emerald-500/50 bg-emerald-900/40 text-emerald-300' : 'border-gray-700 bg-gray-800 text-gray-500'}`}>
+                    {[{c:'bg-emerald-500',n:'Emma'},{c:'bg-blue-500',n:'Luis'},{c:'bg-violet-500',n:'Oma'},{active:'Emma'}].filter(p=>p.n).map(p=>(
+                      <div key={p.n} className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-semibold ${p.n==='Emma' ? 'border-emerald-500/50 bg-emerald-900/40 text-emerald-300' : 'border-gray-700 bg-gray-800 text-gray-500'}`}>
                         <span className={`w-1.5 h-1.5 rounded-full ${p.c}`} /> {p.n}
                       </div>
                     ))}
