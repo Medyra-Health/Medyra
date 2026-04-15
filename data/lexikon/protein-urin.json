@@ -1,0 +1,20 @@
+{
+  "slug": "protein-urin",
+  "acronym": "Prot. (Urin)",
+  "fullName": "Protein im Urin (Proteinurie)",
+  "category": "Urinwerte",
+  "shortAnswer": "Eiweiß im Urin (Proteinurie) kann auf eine Nierenschädigung hinweisen, da gesunde Nieren Protein normalerweise zurückhalten. Geringe Mengen können nach Sport oder bei Fieber auftreten. Anhaltende Werte sollten mit Ihrem Arzt besprochen werden, da sie auf Nierenerkrankungen hindeuten können.",
+  "unit": null,
+  "ranges": null,
+  "causesElevated": ["Chronische Nierenerkrankung", "Diabetes (diabetische Nephropathie)", "Bluthochdruck", "Starke körperliche Belastung", "Nierenentzündung"],
+  "causesLow": [],
+  "relatedValues": ["kreatinin", "gfr", "leukozyten-urin"],
+  "doctorQuestions": [
+    "Deutet die Proteinurie auf eine Nierenschädigung hin?",
+    "Sollte eine 24-Stunden-Urinsammlung durchgeführt werden?",
+    "Welche Maßnahmen schützen meine Nierenfunktion?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Eiweiß im Urin (Proteinurie)? Ursachen, Nierenerkrankung-Risiko und was der Befund bedeutet — einfach erklärt."
+}

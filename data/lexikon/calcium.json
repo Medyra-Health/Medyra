@@ -1,0 +1,24 @@
+{
+  "slug": "calcium",
+  "acronym": "Ca",
+  "fullName": "Calcium (Kalzium)",
+  "category": "Elektrolyte",
+  "shortAnswer": "Calcium ist ein Mineral, das für Knochen, Muskeln und Nerven wichtig ist. Zu hohe Werte im Blut können auf Nebenschilddrüsenerkrankungen oder Knochenprobleme hindeuten, zu niedrige Werte auf Vitamin-D-Mangel oder Mangelernährung. Besprechen Sie Abweichungen mit Ihrem Arzt.",
+  "unit": "mmol/l",
+  "ranges": {
+    "normal": { "min": 2.2, "max": 2.6, "label": "Normal" },
+    "elevated": { "min": 2.6, "max": 3.0, "label": "Erhöht (Hyperkalzämie)" },
+    "high": { "min": 3.0, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Primärer Hyperparathyreoidismus", "Krebserkrankungen", "Überdosierung von Vitamin D", "Sarkoidose"],
+  "causesLow": ["Vitamin-D-Mangel", "Hypoparathyreoidismus", "Magnesiummangel", "Nierenerkrankungen"],
+  "relatedValues": ["vitamin-d", "magnesium", "alkalische-phosphatase"],
+  "doctorQuestions": [
+    "Was verursacht meinen erhöhten oder erniedrigten Calciumwert?",
+    "Sollte ich meinen Vitamin-D-Spiegel messen lassen?",
+    "Brauche ich eine Nebenschilddrüsen-Untersuchung?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Calcium erhöht oder zu niedrig? Normwerte, Ursachen und Bedeutung für Knochen und Gesundheit einfach erklärt."
+}

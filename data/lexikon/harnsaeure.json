@@ -1,0 +1,24 @@
+{
+  "slug": "harnsaeure",
+  "acronym": "HS",
+  "fullName": "Harnsäure",
+  "category": "Nierenwerte",
+  "shortAnswer": "Harnsäure entsteht beim Abbau von Purinen aus der Nahrung. Zu hohe Werte können auf Gicht hindeuten oder Nierensteine begünstigen. Ernährung und Alkohol spielen eine große Rolle. Besprechen Sie erhöhte Werte mit Ihrem Arzt, besonders wenn Sie Gelenkschmerzen haben.",
+  "unit": "mg/dl",
+  "ranges": {
+    "normal": { "min": 3.4, "max": 7.0, "label": "Normal" },
+    "elevated": { "min": 7.0, "max": 9.0, "label": "Erhöht (Hyperurikämie)" },
+    "high": { "min": 9.0, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Purinreiche Ernährung (Fleisch, Innereien)", "Alkoholkonsum", "Nierenerkrankungen", "Bestimmte Medikamente", "Übergewicht"],
+  "causesLow": ["Bestimmte Medikamente", "Lebererkrankungen"],
+  "relatedValues": ["kreatinin", "gfr"],
+  "doctorQuestions": [
+    "Deutet mein Wert auf Gicht hin?",
+    "Welche Ernährungsänderungen kann ich vornehmen?",
+    "Brauche ich Medikamente zur Harnsäuresenkung?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Harnsäure erhöht? Normwerte, Ursachen für Gicht-Risiko und Behandlung einfach erklärt auf Deutsch."
+}

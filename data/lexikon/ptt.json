@@ -1,0 +1,24 @@
+{
+  "slug": "ptt",
+  "acronym": "PTT",
+  "fullName": "Partielle Thromboplastinzeit",
+  "category": "Gerinnung",
+  "shortAnswer": "Die PTT misst, wie schnell das Blut über das innere Gerinnungssystem gerinnt. Verlängerte Werte können auf eine Gerinnungsstörung oder die Wirkung von Heparin hinweisen. Der Test wird vor Operationen und bei Blutungsneigung eingesetzt. Besprechen Sie auffällige Werte mit Ihrem Arzt.",
+  "unit": "Sekunden",
+  "ranges": {
+    "normal": { "min": 25, "max": 38, "label": "Normal" },
+    "elevated": { "min": 38, "max": 60, "label": "Verlängert" },
+    "high": { "min": 60, "max": null, "label": "Stark verlängert" }
+  },
+  "causesElevated": ["Heparin-Therapie", "Hämophilie (Bluterkrankheit)", "Gerinnungsfaktor-Mangel", "Von-Willebrand-Syndrom"],
+  "causesLow": [],
+  "relatedValues": ["inr", "quick", "thrombozyten"],
+  "doctorQuestions": [
+    "Gibt es eine Gerinnungsstörung, die meinen PTT-Wert erklärt?",
+    "Ist meine Heparin-Dosierung korrekt?",
+    "Brauche ich weitere Gerinnungstests vor einer Operation?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "PTT erhöht? Normwerte, Bedeutung der Gerinnungszeit und Ursachen bei Heparin-Therapie einfach erklärt auf Deutsch."
+}

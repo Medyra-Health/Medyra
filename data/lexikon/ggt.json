@@ -1,0 +1,24 @@
+{
+  "slug": "ggt",
+  "acronym": "GGT",
+  "fullName": "Gamma-Glutamyltransferase",
+  "category": "Leberwerte",
+  "shortAnswer": "GGT ist ein Leberenzym, das besonders empfindlich auf Alkohol und Gallenwegsprobleme reagiert. Erhöhte Werte können auf Fettleber, Alkoholkonsum oder Gallenerkrankungen hindeuten. Dauerhaft erhöhte Werte sollten Sie mit Ihrem Arzt besprechen.",
+  "unit": "U/l",
+  "ranges": {
+    "normal": { "min": 0, "max": 55, "label": "Normal" },
+    "elevated": { "min": 55, "max": 200, "label": "Erhöht" },
+    "high": { "min": 200, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Alkoholkonsum", "Fettlebererkrankung", "Gallenerkrankungen", "Bestimmte Medikamente", "Übergewicht"],
+  "causesLow": [],
+  "relatedValues": ["gpt-alt", "got-ast", "bilirubin", "alkalische-phosphatase"],
+  "doctorQuestions": [
+    "Kann mein GGT-Wert durch Alkohol oder Medikamente erhöht sein?",
+    "Brauche ich eine Leberuntersuchung?",
+    "Welche Lebensstiländerungen könnten den Wert senken?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "GGT Wert erhöht? Normwerte, Ursachen und was ein erhöhter Gamma-GT-Wert bedeutet — einfach erklärt auf Deutsch."
+}

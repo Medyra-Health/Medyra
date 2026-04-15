@@ -1,0 +1,24 @@
+{
+  "slug": "haemoglobin",
+  "acronym": "Hb",
+  "fullName": "Hämoglobin",
+  "category": "Blutbild",
+  "shortAnswer": "Hämoglobin ist der rote Blutfarbstoff, der Sauerstoff von der Lunge zu den Organen transportiert. Ein zu niedriger Wert kann auf Blutarmut hindeuten und Müdigkeit verursachen. Erhöhte Werte sind seltener. Auffällige Befunde sollten Sie mit Ihrem Arzt besprechen.",
+  "unit": "g/dl",
+  "ranges": {
+    "normal": { "min": 12.0, "max": 17.5, "label": "Normal" },
+    "elevated": { "min": 17.5, "max": 20.0, "label": "Erhöht" },
+    "high": { "min": 20.0, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Flüssigkeitsmangel", "Rauchen", "Höhenkrankheit", "Polycythemia vera"],
+  "causesLow": ["Eisenmangel", "Vitamin-B12-Mangel", "Chronische Erkrankungen", "Blutungen", "Folsäuremangel"],
+  "relatedValues": ["erythrozyten", "haematokrit", "ferritin", "vitamin-b12"],
+  "doctorQuestions": [
+    "Welche Form der Blutarmut liegt möglicherweise vor?",
+    "Brauche ich Eisenpräparate oder andere Nahrungsergänzung?",
+    "Wann sollte der Wert kontrolliert werden?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Hämoglobin (Hb) zu niedrig? Normwerte für Männer und Frauen, Ursachen für Anämie und wann zum Arzt — einfach erklärt."
+}

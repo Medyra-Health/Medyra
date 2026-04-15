@@ -1,0 +1,24 @@
+{
+  "slug": "crp",
+  "acronym": "CRP",
+  "fullName": "C-reaktives Protein",
+  "category": "Entzündungswerte",
+  "shortAnswer": "CRP ist ein Entzündungsmarker, der bei Infektionen oder Entzündungen im Körper ansteigt. Normale Werte liegen unter 5 mg/l. Erhöhte Werte können auf eine Infektion oder Entzündung hindeuten. Bei stark erhöhten Werten sollten Sie zeitnah Ihren Arzt aufsuchen.",
+  "unit": "mg/l",
+  "ranges": {
+    "normal": { "min": 0, "max": 5, "label": "Normal" },
+    "elevated": { "min": 5, "max": 50, "label": "Leicht erhöht" },
+    "high": { "min": 50, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Akute bakterielle Infektion", "Chronische Entzündung", "Gewebeentzündung", "Autoimmunerkrankungen", "Nach Operationen"],
+  "causesLow": [],
+  "relatedValues": ["bsg", "leukozyten", "procalcitonin"],
+  "doctorQuestions": [
+    "Sollte der Wert in 2 Wochen kontrolliert werden?",
+    "Brauche ich weitere Untersuchungen?",
+    "Könnte eine chronische Entzündung vorliegen?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "CRP erhöht? Normwerte, Ursachen für erhöhtes C-reaktives Protein und wann zum Arzt — einfach erklärt auf Deutsch."
+}
