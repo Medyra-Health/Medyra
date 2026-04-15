@@ -15,6 +15,16 @@ export const metadata = {
 
 const POSTS = [
   {
+    slug: 'health-vault-profiles-guide',
+    title: 'Health Vault & Profiles: Track Your Family\'s Health Over Time',
+    description:
+      'Create health profiles for yourself, your partner, children, and parents. Medyra tracks biomarkers like hemoglobin, cholesterol, and vitamin D across months and years — and automatically includes your history in every doctor summary.',
+    date: '16 April 2026',
+    readTime: '8 min read',
+    tags: ['Health Vault', 'Profiles', 'Family Health'],
+    highlight: true,
+  },
+  {
     slug: 'doctor-visit-prep-germany',
     title: 'How to Prepare for a Doctor\'s Appointment in Germany — Medyra Doctor Visit',
     description:
