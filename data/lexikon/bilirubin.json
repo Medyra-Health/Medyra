@@ -1,0 +1,24 @@
+{
+  "slug": "bilirubin",
+  "acronym": "Bili",
+  "fullName": "Bilirubin (Gesamt)",
+  "category": "Leberwerte",
+  "shortAnswer": "Bilirubin ist ein Abbauprodukt des roten Blutfarbstoffs. Erhöhte Werte können auf Leberprobleme oder einen Gallenstau hindeuten und sichtbare Gelbfärbung der Haut verursachen. Leicht erhöhte Werte kommen auch bei dem harmlosen Morbus Meulengracht vor.",
+  "unit": "mg/dl",
+  "ranges": {
+    "normal": { "min": 0.2, "max": 1.2, "label": "Normal" },
+    "elevated": { "min": 1.2, "max": 3.0, "label": "Leicht erhöht" },
+    "high": { "min": 3.0, "max": null, "label": "Stark erhöht (Gelbsucht möglich)" }
+  },
+  "causesElevated": ["Lebererkrankungen", "Gallensteine", "Hämolyse (Blutabbau)", "Morbus Meulengracht", "Bestimmte Medikamente"],
+  "causesLow": [],
+  "relatedValues": ["gpt-alt", "got-ast", "ggt", "alkalische-phosphatase"],
+  "doctorQuestions": [
+    "Könnte eine Gallenerkrankung hinter meinem Bilirubinwert stecken?",
+    "Brauche ich eine Ultraschalluntersuchung?",
+    "Ist ein leicht erhöhter Wert bei mir harmlos?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Bilirubin erhöht? Normwerte, Ursachen für erhöhten Bilirubinwert und wann zum Arzt — einfach erklärt auf Deutsch."
+}

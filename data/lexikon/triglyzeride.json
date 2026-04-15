@@ -1,0 +1,24 @@
+{
+  "slug": "triglyzeride",
+  "acronym": "TG",
+  "fullName": "Triglyzeride (Neutralfette)",
+  "category": "Stoffwechsel",
+  "shortAnswer": "Triglyzeride sind Blutfette, die als Energiereserve dienen. Erhöhte Werte können das Risiko für Herz-Kreislauf-Erkrankungen und Bauchspeicheldrüsenentzündung erhöhen. Alkohol, Zucker und Übergewicht spielen eine große Rolle. Besprechen Sie erhöhte Werte mit Ihrem Arzt.",
+  "unit": "mg/dl",
+  "ranges": {
+    "normal": { "min": 0, "max": 150, "label": "Normal" },
+    "elevated": { "min": 150, "max": 500, "label": "Erhöht" },
+    "high": { "min": 500, "max": null, "label": "Stark erhöht (Pankreatitis-Risiko)" }
+  },
+  "causesElevated": ["Zuckerreiche Ernährung", "Alkoholkonsum", "Übergewicht", "Diabetes", "Schilddrüsenunterfunktion"],
+  "causesLow": ["Unterernährung", "Malabsorption", "Bestimmte Medikamente"],
+  "relatedValues": ["cholesterin", "ldl", "hdl", "hba1c"],
+  "doctorQuestions": [
+    "Welche Ernährungs- oder Lebensstiländerungen senken meine Triglyzeride?",
+    "Brauche ich Medikamente?",
+    "Besteht ein Risiko für Bauchspeicheldrüsenentzündung?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Triglyzeride erhöht? Normwerte, Ursachen und was Sie gegen hohe Blutfette tun können — einfach erklärt auf Deutsch."
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "ferritin",
+  "acronym": "Ferr.",
+  "fullName": "Ferritin (Eisenspeicher)",
+  "category": "Eisenwerte",
+  "shortAnswer": "Ferritin zeigt, wie viel Eisen der Körper gespeichert hat. Ein niedriger Wert weist auf leere Eisenspeicher hin, oft lange bevor Blutarmut entsteht. Erhöhte Werte können auf Entzündungen oder Eisenüberladung hindeuten. Besprechen Sie auffällige Werte mit Ihrem Arzt.",
+  "unit": "µg/l",
+  "ranges": {
+    "normal": { "min": 30, "max": 300, "label": "Normal" },
+    "elevated": { "min": 300, "max": 1000, "label": "Erhöht" },
+    "high": { "min": 1000, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Entzündungserkrankungen (Akutphase)", "Hämochromatose", "Lebererkrankungen", "Häufige Bluttransfusionen"],
+  "causesLow": ["Eisenmangel", "Vegane Ernährung", "Starke Menstruation", "Malabsorption"],
+  "relatedValues": ["eisen", "transferrin", "haemoglobin"],
+  "doctorQuestions": [
+    "Habe ich Eisenmangel, auch wenn mein Hämoglobin normal ist?",
+    "Sollte ich Eisenpräparate einnehmen?",
+    "Was verursacht meinen erhöhten Ferritinwert?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Ferritin zu niedrig oder erhöht? Normwerte, Eisenmangel-Diagnose und Ursachen einfach erklärt auf Deutsch."
+}

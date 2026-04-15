@@ -1,0 +1,24 @@
+{
+  "slug": "got-ast",
+  "acronym": "GOT/AST",
+  "fullName": "Glutamat-Oxalacetat-Transaminase (Aspartat-Aminotransferase)",
+  "category": "Leberwerte",
+  "shortAnswer": "GOT (auch AST) ist ein Enzym, das in Leber, Herz und Muskeln vorkommt. Erhöhte Werte können auf eine Leberschädigung oder Herzprobleme hindeuten. In Kombination mit GPT lässt sich die Ursache besser eingrenzen. Besprechen Sie auffällige Werte mit Ihrem Arzt.",
+  "unit": "U/l",
+  "ranges": {
+    "normal": { "min": 0, "max": 40, "label": "Normal" },
+    "elevated": { "min": 40, "max": 120, "label": "Erhöht" },
+    "high": { "min": 120, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Lebererkrankungen", "Herzinfarkt", "Muskelerkrankungen", "Alkoholkonsum", "Bestimmte Medikamente"],
+  "causesLow": [],
+  "relatedValues": ["gpt-alt", "ggt", "bilirubin"],
+  "doctorQuestions": [
+    "Deutet das Verhältnis GOT/GPT auf eine bestimmte Ursache hin?",
+    "Sollte ich das Herz untersuchen lassen?",
+    "Wann sollte der Wert kontrolliert werden?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "GOT / AST Wert erhöht? Normwerte, Ursachen und Bedeutung dieses Leberwerts einfach erklärt auf Deutsch."
+}

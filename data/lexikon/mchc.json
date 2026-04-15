@@ -1,0 +1,24 @@
+{
+  "slug": "mchc",
+  "acronym": "MCHC",
+  "fullName": "Mittlere korpuskuläre Hämoglobinkonzentration",
+  "category": "Blutbild",
+  "shortAnswer": "Der MCHC-Wert beschreibt die Hämoglobin-Konzentration in den roten Blutkörperchen. Niedrige Werte können auf Eisenmangel oder bestimmte Anämieformen hindeuten. Stark erhöhte Werte sind selten. Besprechen Sie auffällige Ergebnisse mit Ihrem Arzt.",
+  "unit": "g/dl",
+  "ranges": {
+    "normal": { "min": 31.5, "max": 36.0, "label": "Normal" },
+    "elevated": { "min": 36.0, "max": 38.0, "label": "Leicht erhöht" },
+    "high": { "min": 38.0, "max": null, "label": "Erhöht" }
+  },
+  "causesElevated": ["Hereditäre Sphärozytose", "Schwere Dehydration"],
+  "causesLow": ["Eisenmangelanämie", "Thalassämie", "Blutungsanämie"],
+  "relatedValues": ["haemoglobin", "mcv", "mch", "ferritin"],
+  "doctorQuestions": [
+    "Welche Art von Anämie könnte hinter meinem MCHC-Wert stecken?",
+    "Sind weitere Untersuchungen nötig?",
+    "Sollte der Wert kontrolliert werden?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "MCHC Wert zu niedrig oder erhöht? Normwerte, Ursachen und Bedeutung der Hämoglobinkonzentration einfach erklärt."
+}

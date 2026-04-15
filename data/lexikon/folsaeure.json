@@ -1,0 +1,24 @@
+{
+  "slug": "folsaeure",
+  "acronym": "Folat",
+  "fullName": "Folsäure (Folat)",
+  "category": "Vitamine",
+  "shortAnswer": "Folsäure ist ein B-Vitamin, das für Zellteilung und Blutbildung wichtig ist. Ein Mangel kann zu Blutarmut führen und ist besonders in der Schwangerschaft gefährlich. Viele Menschen nehmen zu wenig Folsäure über die Ernährung auf. Besprechen Sie einen Mangel mit Ihrem Arzt.",
+  "unit": "ng/ml",
+  "ranges": {
+    "normal": { "min": 5.4, "max": 20, "label": "Ausreichend" },
+    "elevated": { "min": 0, "max": 5.4, "label": "Mangel" },
+    "high": { "min": 20, "max": null, "label": "Erhöht" }
+  },
+  "causesElevated": ["Überdosierung von Folsäure-Präparaten"],
+  "causesLow": ["Unausgewogene Ernährung", "Alkoholkonsum", "Malabsorption", "Bestimmte Medikamente (z. B. Methotrexat)"],
+  "relatedValues": ["vitamin-b12", "mcv", "haemoglobin"],
+  "doctorQuestions": [
+    "Sollte ich in der Schwangerschaft oder Schwangerschaftsplanung Folsäure einnehmen?",
+    "Ist mein Folsäurespiegel für eine normale Blutbildung ausreichend?",
+    "Welche Lebensmittel sind reich an Folsäure?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Folsäure zu niedrig? Normwerte, Mangel-Risiken in der Schwangerschaft und Ursachen einfach erklärt auf Deutsch."
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "hba1c",
+  "acronym": "HbA1c",
+  "fullName": "Glykiertes Hämoglobin (Langzeitblutzucker)",
+  "category": "Stoffwechsel",
+  "shortAnswer": "Der HbA1c zeigt den durchschnittlichen Blutzucker der letzten 2–3 Monate. Werte über 6,5 % können auf Diabetes hindeuten. Werte zwischen 5,7 und 6,4 % gelten als Vorstufe (Prädiabetes). Besprechen Sie erhöhte Werte unbedingt mit Ihrem Arzt.",
+  "unit": "%",
+  "ranges": {
+    "normal": { "min": 0, "max": 5.7, "label": "Normal" },
+    "elevated": { "min": 5.7, "max": 6.5, "label": "Prädiabetes" },
+    "high": { "min": 6.5, "max": null, "label": "Diabetes-Bereich" }
+  },
+  "causesElevated": ["Typ-2-Diabetes", "Typ-1-Diabetes", "Unzureichende Diabeteseinstellung", "Insulinresistenz"],
+  "causesLow": ["Hämolyse", "Blutungsanämie", "Bestimmte Hämoglobinvarianten"],
+  "relatedValues": ["blutzucker", "cholesterin", "triglyzeride"],
+  "doctorQuestions": [
+    "Deutet mein HbA1c-Wert auf Diabetes oder Prädiabetes hin?",
+    "Welche Ernährungs- oder Lebensstiländerungen empfehlen Sie?",
+    "Brauche ich Medikamente?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "HbA1c erhöht? Normwerte, Bedeutung des Langzeitblutzuckers und Diabetes-Risiko einfach erklärt auf Deutsch."
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "transferrin",
+  "acronym": "Transf.",
+  "fullName": "Transferrin (Eisentransportprotein)",
+  "category": "Eisenwerte",
+  "shortAnswer": "Transferrin ist das Transportprotein für Eisen im Blut. Bei Eisenmangel steigt Transferrin an, weil der Körper mehr Transportkapazität bereitstellt. Bei Entzündungen oder Überladung ist der Wert meist erniedrigt. Besprechen Sie den Wert zusammen mit Ferritin und Eisen mit Ihrem Arzt.",
+  "unit": "g/l",
+  "ranges": {
+    "normal": { "min": 2.0, "max": 3.6, "label": "Normal" },
+    "elevated": { "min": 3.6, "max": 4.5, "label": "Erhöht" },
+    "high": { "min": 4.5, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Eisenmangel", "Schwangerschaft", "Östrogenpräparate"],
+  "causesLow": ["Entzündungserkrankungen", "Lebererkrankungen", "Eisenüberladung (Hämochromatose)", "Mangelernährung"],
+  "relatedValues": ["ferritin", "eisen", "haemoglobin"],
+  "doctorQuestions": [
+    "Wie ist mein Transferrin im Zusammenhang mit Ferritin zu bewerten?",
+    "Brauche ich Eisenpräparate?",
+    "Könnte eine Hämochromatose vorliegen?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Transferrin erhöht oder zu niedrig? Normwerte, Bedeutung beim Eisenmangel und Ursachen einfach erklärt auf Deutsch."
+}
