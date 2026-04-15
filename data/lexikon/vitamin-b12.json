@@ -1,0 +1,24 @@
+{
+  "slug": "vitamin-b12",
+  "acronym": "Vit. B12",
+  "fullName": "Vitamin B12 (Cobalamin)",
+  "category": "Vitamine",
+  "shortAnswer": "Vitamin B12 ist für die Blutbildung, das Nervensystem und den Zellstoffwechsel essenziell. Ein Mangel entwickelt sich langsam und kann Müdigkeit, Kribbeln und Vergesslichkeit verursachen. Veganer und ältere Menschen haben ein erhöhtes Risiko. Sprechen Sie einen Verdacht mit Ihrem Arzt an.",
+  "unit": "pg/ml",
+  "ranges": {
+    "normal": { "min": 200, "max": 900, "label": "Ausreichend" },
+    "elevated": { "min": 0, "max": 200, "label": "Mangel" },
+    "high": { "min": 900, "max": null, "label": "Erhöht" }
+  },
+  "causesElevated": ["Lebererkrankungen", "Bestimmte Bluterkrankungen", "Überdosierung von Präparaten"],
+  "causesLow": ["Vegane/vegetarische Ernährung", "Magenschleimhautentzündung (Atrophische Gastritis)", "Mangelnde Aufnahme im Darm", "Langzeiteinnahme von Metformin oder Protonenpumpenhemmern"],
+  "relatedValues": ["folsaeure", "mcv", "haemoglobin"],
+  "doctorQuestions": [
+    "Reicht mein B12-Wert aus, oder liegt ein funktioneller Mangel vor?",
+    "Brauche ich Spritzen oder Tabletten?",
+    "Ist die Ursache ein Aufnahmeproblem im Magen?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Vitamin B12 zu niedrig? Normwerte, Mangel-Symptome und Behandlung bei Veganern und Älteren einfach erklärt."
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "erythrozyten-urin",
+  "acronym": "Ery (Urin)",
+  "fullName": "Erythrozyten im Urin (Hämaturie)",
+  "category": "Urinwerte",
+  "shortAnswer": "Erythrozyten im Urin bedeuten, dass rote Blutkörperchen im Urin vorhanden sind (Hämaturie). Dies kann auf Harnwegsinfektionen, Nierensteine oder andere Erkrankungen hindeuten. Auch ohne Symptome sollte ein positiver Befund mit Ihrem Arzt besprochen werden.",
+  "unit": null,
+  "ranges": null,
+  "causesElevated": ["Harnwegsinfektion", "Nierensteine", "Blasenentzündung", "Nierenerkrankungen", "Verletzungen", "Bestimmte Medikamente"],
+  "causesLow": [],
+  "relatedValues": ["leukozyten-urin", "protein-urin", "kreatinin"],
+  "doctorQuestions": [
+    "Was ist die Ursache für die Erythrozyten in meinem Urin?",
+    "Brauche ich eine Blasen- oder Nierenspiegelung?",
+    "Sollte ich eine Ultraschalluntersuchung machen?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Blut im Urin (Hämaturie)? Erythrozyten im Urin: Ursachen, Normwerte und wann zum Arzt — einfach erklärt auf Deutsch."
+}

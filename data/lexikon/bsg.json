@@ -1,0 +1,24 @@
+{
+  "slug": "bsg",
+  "acronym": "BSG",
+  "fullName": "Blutsenkungsgeschwindigkeit",
+  "category": "Entzündungswerte",
+  "shortAnswer": "Die BSG misst, wie schnell sich rote Blutkörperchen in einer Blutprobe absetzen. Ein erhöhter Wert kann auf Entzündungen, Infektionen oder andere Erkrankungen hindeuten. Die BSG ist ein unspezifischer Wert und wird meist zusammen mit anderen Markern bewertet.",
+  "unit": "mm/h",
+  "ranges": {
+    "normal": { "min": 0, "max": 20, "label": "Normal" },
+    "elevated": { "min": 20, "max": 50, "label": "Erhöht" },
+    "high": { "min": 50, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Infektionen", "Entzündungserkrankungen", "Autoimmunerkrankungen", "Anämie", "Krebserkrankungen"],
+  "causesLow": ["Polyglobulie", "Herzinsuffizienz"],
+  "relatedValues": ["crp", "leukozyten", "procalcitonin"],
+  "doctorQuestions": [
+    "Welche Erkrankung könnte hinter dem erhöhten BSG-Wert stecken?",
+    "Sollte ich CRP und andere Werte gleichzeitig kontrollieren?",
+    "Brauche ich weitere Untersuchungen?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "BSG erhöht? Normwerte, Ursachen und Bedeutung der Blutsenkungsgeschwindigkeit einfach erklärt auf Deutsch."
+}

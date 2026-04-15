@@ -1,0 +1,24 @@
+{
+  "slug": "mcv",
+  "acronym": "MCV",
+  "fullName": "Mittleres Korpuskulärvolumen",
+  "category": "Blutbild",
+  "shortAnswer": "Der MCV-Wert beschreibt die durchschnittliche Größe der roten Blutkörperchen. Zu kleine Zellen können auf Eisenmangel hindeuten, zu große Zellen möglicherweise auf Vitamin-B12- oder Folsäuremangel. Besprechen Sie auffällige Werte mit Ihrem Arzt.",
+  "unit": "fl",
+  "ranges": {
+    "normal": { "min": 80, "max": 100, "label": "Normal" },
+    "elevated": { "min": 100, "max": 115, "label": "Erhöht (Makrozytose)" },
+    "high": { "min": 115, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Vitamin-B12-Mangel", "Folsäuremangel", "Alkoholkonsum", "Schilddrüsenunterfunktion"],
+  "causesLow": ["Eisenmangel", "Thalassämie", "Chronische Entzündungserkrankungen"],
+  "relatedValues": ["haemoglobin", "ferritin", "vitamin-b12", "folsaeure"],
+  "doctorQuestions": [
+    "Deutet mein MCV-Wert auf einen Nährstoffmangel hin?",
+    "Sollte ich Vitamin B12 oder Folsäure einnehmen?",
+    "Brauche ich eine weiterführende Blutuntersuchung?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "MCV Wert erhöht oder zu niedrig? Normwerte, Ursachen für veränderte Erythrozytengröße einfach erklärt auf Deutsch."
+}

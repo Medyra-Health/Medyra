@@ -1,0 +1,24 @@
+{
+  "slug": "vitamin-d",
+  "acronym": "Vit. D",
+  "fullName": "25-OH-Vitamin D (Calcidiol)",
+  "category": "Vitamine",
+  "shortAnswer": "Vitamin D ist wichtig für Knochen, Immunsystem und Muskeln. Ein Mangel ist in Deutschland sehr verbreitet, besonders im Winter. Niedrige Werte können Müdigkeit und Knochenschmerzen verursachen. Besprechen Sie einen Mangel mit Ihrem Arzt, bevor Sie Präparate einnehmen.",
+  "unit": "ng/ml",
+  "ranges": {
+    "normal": { "min": 30, "max": 100, "label": "Ausreichend" },
+    "elevated": { "min": 0, "max": 20, "label": "Mangel" },
+    "high": { "min": 100, "max": null, "label": "Möglicherweise zu hoch" }
+  },
+  "causesElevated": ["Überdosierung von Nahrungsergänzungsmitteln"],
+  "causesLow": ["Wenig Sonnenlicht", "Dunkle Hautfarbe", "Höheres Alter", "Malabsorption", "Nierenerkrankungen"],
+  "relatedValues": ["calcium", "magnesium", "alkalische-phosphatase"],
+  "doctorQuestions": [
+    "Wie stark ist mein Vitamin-D-Mangel?",
+    "Welche Dosis Vitamin D sollte ich einnehmen?",
+    "Wie lange sollte ich supplementieren?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Vitamin D zu niedrig? Normwerte, Mangel-Symptome und wann Nahrungsergänzung sinnvoll ist — einfach erklärt."
+}

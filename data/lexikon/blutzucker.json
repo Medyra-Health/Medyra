@@ -1,0 +1,24 @@
+{
+  "slug": "blutzucker",
+  "acronym": "BZ",
+  "fullName": "Nüchternblutzucker (Glukose)",
+  "category": "Stoffwechsel",
+  "shortAnswer": "Der Nüchternblutzucker misst die Glukosekonzentration im Blut nach mindestens 8 Stunden ohne Essen. Werte über 126 mg/dl können auf Diabetes hindeuten, Werte zwischen 100 und 125 mg/dl auf Prädiabetes. Besprechen Sie erhöhte Werte mit Ihrem Arzt.",
+  "unit": "mg/dl",
+  "ranges": {
+    "normal": { "min": 70, "max": 100, "label": "Normal (nüchtern)" },
+    "elevated": { "min": 100, "max": 126, "label": "Prädiabetes-Bereich" },
+    "high": { "min": 126, "max": null, "label": "Diabetes-Bereich" }
+  },
+  "causesElevated": ["Diabetes mellitus", "Insulin­resistenz", "Stressreaktion", "Bestimmte Medikamente (z. B. Kortison)"],
+  "causesLow": ["Zu viel Insulin", "Bestimmte Medikamente", "Nüchternheit nach Sport", "Seltene Erkrankungen"],
+  "relatedValues": ["hba1c", "triglyzeride", "cholesterin"],
+  "doctorQuestions": [
+    "Sollte ich einen oralen Glukosetoleranztest machen?",
+    "Besteht Diabetes oder Prädiabetes?",
+    "Welche Ernährungsänderungen helfen mir?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Blutzucker erhöht? Normwerte Nüchternblutzucker, Diabetes-Risiko und was der Wert bedeutet — einfach erklärt."
+}

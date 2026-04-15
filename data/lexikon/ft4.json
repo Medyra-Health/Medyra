@@ -1,0 +1,24 @@
+{
+  "slug": "ft4",
+  "acronym": "fT4",
+  "fullName": "Freies Thyroxin",
+  "category": "Schilddrüse",
+  "shortAnswer": "fT4 ist das wichtigste Schilddrüsenhormon und wird in der Leber zu dem aktiven fT3 umgewandelt. Erhöhte Werte deuten möglicherweise auf eine Überfunktion hin, niedrige Werte auf eine Unterfunktion. Der Wert sollte immer zusammen mit TSH bewertet werden.",
+  "unit": "ng/dl",
+  "ranges": {
+    "normal": { "min": 0.8, "max": 1.8, "label": "Normal" },
+    "elevated": { "min": 1.8, "max": 3.0, "label": "Erhöht" },
+    "high": { "min": 3.0, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Schilddrüsenüberfunktion", "Morbus Basedow", "Überdosierung von Schilddrüsenhormonen"],
+  "causesLow": ["Hypothyreose", "Hashimoto-Thyreoiditis", "Hypophysenerkrankungen"],
+  "relatedValues": ["tsh", "ft3"],
+  "doctorQuestions": [
+    "Wie ist mein fT4-Wert im Zusammenhang mit meinem TSH zu interpretieren?",
+    "Brauche ich Schilddrüsenhormone?",
+    "Sollte ich zur Schilddrüsen-Ultraschalluntersuchung?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "fT4 erhöht oder zu niedrig? Normwerte, Bedeutung des freien Thyroxins und Schilddrüsenfunktion einfach erklärt."
+}

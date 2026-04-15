@@ -1,0 +1,24 @@
+{
+  "slug": "hdl",
+  "acronym": "HDL",
+  "fullName": "High-Density-Lipoprotein (Gutes Cholesterin)",
+  "category": "Stoffwechsel",
+  "shortAnswer": "HDL gilt als das gute Cholesterin, weil es überschüssiges Cholesterin zur Leber transportiert. Hohe HDL-Werte schützen das Herz. Zu niedrige Werte können das Herzrisiko erhöhen. Besprechen Sie niedrige HDL-Werte mit Ihrem Arzt.",
+  "unit": "mg/dl",
+  "ranges": {
+    "normal": { "min": 40, "max": null, "label": "Wünschenswert (≥ 40)" },
+    "elevated": { "min": 0, "max": 40, "label": "Zu niedrig (Risiko erhöht)" },
+    "high": { "min": 60, "max": null, "label": "Optimal (≥ 60)" }
+  },
+  "causesElevated": ["Regelmäßige körperliche Aktivität", "Moderater Alkoholkonsum"],
+  "causesLow": ["Bewegungsmangel", "Übergewicht", "Rauchen", "Diabetes", "Triglyzeriderhöhung"],
+  "relatedValues": ["ldl", "cholesterin", "triglyzeride"],
+  "doctorQuestions": [
+    "Wie kann ich meinen HDL-Wert erhöhen?",
+    "Besteht aufgrund meines HDL ein erhöhtes Herzrisiko?",
+    "Sind Medikamente sinnvoll?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "HDL zu niedrig? Normwerte, Ursachen und wie Sie das gute Cholesterin erhöhen können — einfach erklärt auf Deutsch."
+}

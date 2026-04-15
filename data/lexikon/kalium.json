@@ -1,0 +1,24 @@
+{
+  "slug": "kalium",
+  "acronym": "K",
+  "fullName": "Kalium",
+  "category": "Elektrolyte",
+  "shortAnswer": "Kalium ist ein Elektrolyt, das Herzrhythmus, Muskeln und Nerven reguliert. Zu niedrige Werte können Herzrhythmusstörungen und Muskelschwäche verursachen, zu hohe Werte sind ebenfalls gefährlich. Starke Abweichungen sollten Sie umgehend mit Ihrem Arzt besprechen.",
+  "unit": "mmol/l",
+  "ranges": {
+    "normal": { "min": 3.5, "max": 5.1, "label": "Normal" },
+    "elevated": { "min": 5.1, "max": 6.0, "label": "Erhöht (Hyperkaliämie)" },
+    "high": { "min": 6.0, "max": null, "label": "Stark erhöht (Gefährlich)" }
+  },
+  "causesElevated": ["Nierenerkrankungen", "ACE-Hemmer oder Kaliumsparende Diuretika", "Übermäßige Kaliumzufuhr", "Azidose"],
+  "causesLow": ["Erbrechen / Durchfall", "Diuretika", "Magnesiummangel", "Unzureichende Aufnahme"],
+  "relatedValues": ["natrium", "magnesium", "kreatinin"],
+  "doctorQuestions": [
+    "Besteht ein Risiko für Herzrhythmusstörungen?",
+    "Muss ich meine Kaliumzufuhr durch die Ernährung anpassen?",
+    "Sollte ein Medikament gewechselt werden?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Kalium erhöht oder zu niedrig? Normwerte, Herzrisiko und Ursachen von Kaliummangel einfach erklärt auf Deutsch."
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "erythrozyten",
+  "acronym": "RBC",
+  "fullName": "Erythrozyten (Rote Blutkörperchen)",
+  "category": "Blutbild",
+  "shortAnswer": "Erythrozyten sind rote Blutkörperchen, die Sauerstoff im Körper transportieren. Ein zu niedriger Wert kann auf Blutarmut (Anämie) hindeuten, ein erhöhter Wert möglicherweise auf Flüssigkeitsmangel. Besprechen Sie auffällige Werte mit Ihrem Arzt.",
+  "unit": "10⁶/µl",
+  "ranges": {
+    "normal": { "min": 4.5, "max": 5.9, "label": "Normal (Männer)" },
+    "elevated": { "min": 5.9, "max": 6.5, "label": "Erhöht" },
+    "high": { "min": 6.5, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Flüssigkeitsmangel (Dehydration)", "Höhenaufenthalt", "Rauchen", "Polycythemia vera"],
+  "causesLow": ["Eisenmangel", "Vitamin-B12-Mangel", "Folsäuremangel", "Chronische Erkrankungen", "Blutungsanämie"],
+  "relatedValues": ["haemoglobin", "haematokrit", "ferritin"],
+  "doctorQuestions": [
+    "Habe ich möglicherweise eine Blutarmut?",
+    "Welcher Nährstoffmangel könnte vorliegen?",
+    "Sind weitere Untersuchungen notwendig?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "RBC / Erythrozyten zu niedrig oder erhöht? Normwerte, Ursachen und Bedeutung für Ihre Gesundheit — einfach erklärt."
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "tsh",
+  "acronym": "TSH",
+  "fullName": "Thyreoidea-stimulierendes Hormon",
+  "category": "Schilddrüse",
+  "shortAnswer": "TSH ist ein Hormon der Hirnanhangsdrüse, das die Schilddrüse steuert. Erhöhte Werte können auf eine Schilddrüsenunterfunktion hindeuten, niedrige Werte auf eine Überfunktion. Beide können Symptome wie Müdigkeit oder Herzrasen verursachen. Sprechen Sie auffällige Werte mit Ihrem Arzt an.",
+  "unit": "mU/l",
+  "ranges": {
+    "normal": { "min": 0.4, "max": 4.0, "label": "Normal" },
+    "elevated": { "min": 4.0, "max": 10.0, "label": "Erhöht (Hypothyreose möglich)" },
+    "high": { "min": 10.0, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Schilddrüsenunterfunktion (Hypothyreose)", "Hashimoto-Thyreoiditis", "Jodmangel", "Bestimmte Medikamente"],
+  "causesLow": ["Schilddrüsenüberfunktion (Hyperthyreose)", "Morbus Basedow", "Zu hohe Schilddrüsenhormon-Dosis"],
+  "relatedValues": ["ft3", "ft4"],
+  "doctorQuestions": [
+    "Deutet mein TSH auf eine Unterfunktion oder Überfunktion hin?",
+    "Sollte ich FT3 und FT4 ebenfalls messen lassen?",
+    "Brauche ich Schilddrüsenhormone oder eine weitere Abklärung?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "TSH erhöht oder zu niedrig? Normwerte, Ursachen und Bedeutung des Schilddrüsenwertes einfach erklärt auf Deutsch."
+}

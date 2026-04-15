@@ -1,0 +1,24 @@
+{
+  "slug": "eisen",
+  "acronym": "Fe",
+  "fullName": "Serumeisen",
+  "category": "Eisenwerte",
+  "shortAnswer": "Serumeisen misst die Menge an Eisen im Blut zum Zeitpunkt der Blutabnahme. Niedrige Werte können auf Eisenmangel hindeuten, hohe Werte auf Eisenüberladung. Da der Wert stark schwankt, wird er immer zusammen mit Ferritin und Transferrin bewertet. Sprechen Sie mit Ihrem Arzt.",
+  "unit": "µg/dl",
+  "ranges": {
+    "normal": { "min": 60, "max": 170, "label": "Normal" },
+    "elevated": { "min": 170, "max": 300, "label": "Erhöht" },
+    "high": { "min": 300, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Hämochromatose", "Hämolyse", "Lebererkrankungen", "Überdosierung von Eisenpräparaten"],
+  "causesLow": ["Eisenmangel", "Chronische Entzündung", "Starke Menstruation", "Unzureichende Eisenzufuhr"],
+  "relatedValues": ["ferritin", "transferrin", "haemoglobin"],
+  "doctorQuestions": [
+    "Liegt ein echter Eisenmangel vor?",
+    "Brauche ich Eisenpräparate?",
+    "Sollte ich auf Hämochromatose getestet werden?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Serumeisen erhöht oder zu niedrig? Normwerte, Eisenmangel-Diagnose und Bedeutung einfach erklärt auf Deutsch."
+}

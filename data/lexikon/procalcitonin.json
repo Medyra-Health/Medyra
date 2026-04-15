@@ -1,0 +1,24 @@
+{
+  "slug": "procalcitonin",
+  "acronym": "PCT",
+  "fullName": "Procalcitonin",
+  "category": "Entzündungswerte",
+  "shortAnswer": "Procalcitonin ist ein spezifischer Marker für bakterielle Infektionen. Erhöhte Werte können auf eine schwere bakterielle Infektion oder Sepsis hindeuten. Der Test hilft Ärzten zu entscheiden, ob Antibiotika notwendig sind. Besprechen Sie erhöhte Werte umgehend mit Ihrem Arzt.",
+  "unit": "ng/ml",
+  "ranges": {
+    "normal": { "min": 0, "max": 0.5, "label": "Normal / gering" },
+    "elevated": { "min": 0.5, "max": 2.0, "label": "Leicht erhöht" },
+    "high": { "min": 2.0, "max": null, "label": "Stark erhöht (Sepsisverdacht)" }
+  },
+  "causesElevated": ["Schwere bakterielle Infektion", "Sepsis", "Multiorganversagen", "Schwere Verbrennungen"],
+  "causesLow": [],
+  "relatedValues": ["crp", "leukozyten", "bsg"],
+  "doctorQuestions": [
+    "Deutet mein PCT-Wert auf eine bakterielle Infektion hin?",
+    "Brauche ich Antibiotika?",
+    "Sollte ich stationär behandelt werden?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Procalcitonin (PCT) erhöht? Normwerte, Ursachen und Bedeutung als Sepsis-Marker einfach erklärt auf Deutsch."
+}

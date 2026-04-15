@@ -1,0 +1,20 @@
+{
+  "slug": "leukozyten-urin",
+  "acronym": "Leu (Urin)",
+  "fullName": "Leukozyten im Urin",
+  "category": "Urinwerte",
+  "shortAnswer": "Leukozyten im Urin sind weiße Blutkörperchen, die auf eine Entzündung der Harnwege hindeuten können. Geringe Mengen können normal sein, höhere Werte möglicherweise auf eine Harnwegsinfektion oder Nierenbeckenentzündung hinweisen. Besprechen Sie positive Befunde mit Ihrem Arzt.",
+  "unit": null,
+  "ranges": null,
+  "causesElevated": ["Harnwegsinfektion (Blasenentzündung)", "Nierenbeckenentzündung", "Urethritis", "Nierenerkrankungen"],
+  "causesLow": [],
+  "relatedValues": ["erythrozyten-urin", "protein-urin", "kreatinin"],
+  "doctorQuestions": [
+    "Liegt eine Harnwegsinfektion vor, und brauche ich Antibiotika?",
+    "Sollte ich eine Urinkultur machen lassen?",
+    "Könnten die Leukozyten im Urin auf eine Nierenerkrankung hindeuten?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Leukozyten im Urin erhöht? Normwerte, Ursachen und wann das auf eine Harnwegsinfektion hindeuten kann — einfach erklärt."
+}

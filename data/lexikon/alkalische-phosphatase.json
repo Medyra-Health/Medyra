@@ -1,0 +1,24 @@
+{
+  "slug": "alkalische-phosphatase",
+  "acronym": "AP",
+  "fullName": "Alkalische Phosphatase",
+  "category": "Leberwerte",
+  "shortAnswer": "Die alkalische Phosphatase (AP) ist ein Enzym, das in Leber, Knochen und Gallengang vorkommt. Erhöhte Werte können auf Gallenwegserkrankungen, Leberprobleme oder Knochenerkrankungen hindeuten. Besprechen Sie anhaltend erhöhte Werte mit Ihrem Arzt.",
+  "unit": "U/l",
+  "ranges": {
+    "normal": { "min": 40, "max": 130, "label": "Normal" },
+    "elevated": { "min": 130, "max": 300, "label": "Erhöht" },
+    "high": { "min": 300, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Gallenwegserkrankungen", "Lebererkrankungen", "Knochenerkrankungen (z. B. Morbus Paget)", "Schwangerschaft", "Wachstum bei Kindern"],
+  "causesLow": ["Schilddrüsenunterfunktion", "Vitamin-B12-Mangel", "Zinkmangel"],
+  "relatedValues": ["ggt", "bilirubin", "gpt-alt"],
+  "doctorQuestions": [
+    "Kommt die Erhöhung eher aus der Leber oder aus den Knochen?",
+    "Sollte ich eine Gallenwegsinfektion ausschließen?",
+    "Brauche ich weitere Untersuchungen?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Alkalische Phosphatase (AP) erhöht? Normwerte, Ursachen und Bedeutung dieses Leber- und Knochenwertes einfach erklärt."
+}

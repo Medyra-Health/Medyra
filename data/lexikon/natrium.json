@@ -1,0 +1,24 @@
+{
+  "slug": "natrium",
+  "acronym": "Na",
+  "fullName": "Natrium",
+  "category": "Elektrolyte",
+  "shortAnswer": "Natrium ist ein lebenswichtiges Elektrolyt, das den Wasserhaushalt und den Blutdruck reguliert. Zu niedrige Werte (Hyponatriämie) können Verwirrtheit und Krämpfe verursachen, zu hohe Werte (Hypernatriämie) auf Dehydration hindeuten. Besprechen Sie Abweichungen mit Ihrem Arzt.",
+  "unit": "mmol/l",
+  "ranges": {
+    "normal": { "min": 136, "max": 145, "label": "Normal" },
+    "elevated": { "min": 145, "max": 155, "label": "Erhöht (Hypernatriämie)" },
+    "high": { "min": 155, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Dehydration", "Zu viel Salz", "Bestimmte Medikamente", "Diabetes insipidus"],
+  "causesLow": ["Zu viel Flüssigkeitsaufnahme", "Nierenerkrankungen", "Herzinsuffizienz", "Bestimmte Medikamente (Diuretika)", "Erbrechen / Durchfall"],
+  "relatedValues": ["kalium", "chlorid", "kreatinin"],
+  "doctorQuestions": [
+    "Welche Ursache liegt meiner Natriumabweichung zugrunde?",
+    "Soll ich meine Flüssigkeitsaufnahme anpassen?",
+    "Beeinflusst ein Medikament meinen Natriumwert?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Natrium erhöht oder zu niedrig? Normwerte, Ursachen für Elektrolyt-Ungleichgewicht einfach erklärt auf Deutsch."
+}

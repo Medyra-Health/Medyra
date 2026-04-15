@@ -1,0 +1,24 @@
+{
+  "slug": "thrombozyten",
+  "acronym": "PLT",
+  "fullName": "Thrombozyten (Blutplättchen)",
+  "category": "Blutbild",
+  "shortAnswer": "Thrombozyten sind Blutplättchen, die für die Blutgerinnung zuständig sind. Zu niedrige Werte können zu verstärkter Blutungsneigung führen, zu hohe Werte möglicherweise auf eine Entzündung hindeuten. Auffällige Werte sollten Sie mit Ihrem Arzt besprechen.",
+  "unit": "10³/µl",
+  "ranges": {
+    "normal": { "min": 150, "max": 400, "label": "Normal" },
+    "elevated": { "min": 400, "max": 600, "label": "Leicht erhöht" },
+    "high": { "min": 600, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Entzündungsreaktionen", "Eisenmangel", "Nach Operationen", "Myeloproliferative Erkrankungen"],
+  "causesLow": ["Virusinfektionen", "Bestimmte Medikamente", "Autoimmunerkrankungen", "Lebererkrankungen"],
+  "relatedValues": ["inr", "ptt", "quick"],
+  "doctorQuestions": [
+    "Besteht ein erhöhtes Blutungsrisiko durch meinen Thrombozytenwert?",
+    "Beeinflusst einer meiner Medikamente die Blutplättchen?",
+    "Wann sollte ich den Wert kontrollieren lassen?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Thrombozyten (PLT) erhöht oder zu niedrig? Normwerte, Ursachen für Blutplättchen-Abweichungen einfach erklärt."
+}

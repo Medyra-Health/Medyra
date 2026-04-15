@@ -1,0 +1,24 @@
+{
+  "slug": "gfr",
+  "acronym": "eGFR",
+  "fullName": "Glomeruläre Filtrationsrate (geschätzt)",
+  "category": "Nierenwerte",
+  "shortAnswer": "Der eGFR-Wert schätzt, wie gut Ihre Nieren das Blut filtern. Werte über 90 gelten als normal. Niedrigere Werte können auf eine eingeschränkte Nierenfunktion hindeuten. Je nach Stadium gibt es unterschiedliche Handlungsempfehlungen. Bitte besprechen Sie den Wert mit Ihrem Arzt.",
+  "unit": "ml/min/1,73 m²",
+  "ranges": {
+    "normal": { "min": 90, "max": null, "label": "Normal (≥ 90)" },
+    "elevated": { "min": 60, "max": 89, "label": "Leicht eingeschränkt" },
+    "high": { "min": 0, "max": 59, "label": "Eingeschränkt (CKD)" }
+  },
+  "causesElevated": [],
+  "causesLow": ["Chronische Nierenerkrankung", "Diabetes", "Bluthochdruck", "Wiederholte Nierenentzündungen", "Bestimmte Medikamente"],
+  "relatedValues": ["kreatinin", "harnstoff", "protein-urin"],
+  "doctorQuestions": [
+    "In welchem Stadium der Nierenerkrankung befinde ich mich?",
+    "Welche Maßnahmen kann ich ergreifen, um meine Nieren zu schützen?",
+    "Sollte ich einen Nephrologen aufsuchen?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "eGFR Wert zu niedrig? Normwerte, Bedeutung der Nierenfiltration und wann zum Arzt — einfach erklärt auf Deutsch."
+}

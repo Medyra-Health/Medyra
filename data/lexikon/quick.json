@@ -1,0 +1,24 @@
+{
+  "slug": "quick",
+  "acronym": "Quick",
+  "fullName": "Quickwert (Thromboplastinzeit, Prothrombinzeit)",
+  "category": "Gerinnung",
+  "shortAnswer": "Der Quickwert misst die Gerinnungsfähigkeit des Blutes über das äußere Gerinnungssystem. Niedrige Werte bedeuten eine verlängerte Gerinnungszeit und erhöhtes Blutungsrisiko. Der Wert ist eng mit der Leberfunktion und Vitamin-K verbunden. Besprechen Sie auffällige Werte mit Ihrem Arzt.",
+  "unit": "%",
+  "ranges": {
+    "normal": { "min": 70, "max": 130, "label": "Normal" },
+    "elevated": { "min": 0, "max": 70, "label": "Erniedrigt (Blutungsrisiko)" },
+    "high": { "min": 130, "max": null, "label": "Erhöht (selten klinisch relevant)" }
+  },
+  "causesElevated": [],
+  "causesLow": ["Marcumar-/Warfarin-Therapie", "Lebererkrankungen", "Vitamin-K-Mangel", "Gerinnungsstörungen"],
+  "relatedValues": ["inr", "ptt", "thrombozyten", "bilirubin"],
+  "doctorQuestions": [
+    "Ist mein Quickwert auf Marcumar oder auf eine Lebererkrankung zurückzuführen?",
+    "Brauche ich vor einer Operation einen normalen Quickwert?",
+    "Sollte ich Vitamin K einnehmen?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Quickwert zu niedrig? Normwerte, Bedeutung für Gerinnung und Blutungsrisiko einfach erklärt auf Deutsch."
+}

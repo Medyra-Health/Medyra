@@ -1,0 +1,24 @@
+{
+  "slug": "cholesterin",
+  "acronym": "TC",
+  "fullName": "Gesamtcholesterin",
+  "category": "Stoffwechsel",
+  "shortAnswer": "Cholesterin ist ein lebensnotwendiges Blutfett, das aber in zu hohen Mengen das Herz-Kreislauf-Risiko erhöhen kann. Werte über 200 mg/dl gelten als grenzwertig. Entscheidend ist das Verhältnis von LDL zu HDL. Besprechen Sie erhöhte Werte mit Ihrem Arzt.",
+  "unit": "mg/dl",
+  "ranges": {
+    "normal": { "min": 0, "max": 200, "label": "Wünschenswert" },
+    "elevated": { "min": 200, "max": 240, "label": "Grenzwertig erhöht" },
+    "high": { "min": 240, "max": null, "label": "Erhöht" }
+  },
+  "causesElevated": ["Fetreiche Ernährung", "Genetische Veranlagung", "Übergewicht", "Schilddrüsenunterfunktion", "Diabetes"],
+  "causesLow": ["Unterernährung", "Lebererkrankungen", "Malabsorption"],
+  "relatedValues": ["ldl", "hdl", "triglyzeride"],
+  "doctorQuestions": [
+    "Wie ist mein LDL-zu-HDL-Verhältnis?",
+    "Brauche ich cholesterinsenkende Medikamente?",
+    "Welche Ernährungsumstellung ist sinnvoll?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Cholesterin erhöht? Normwerte, Ursachen und Risiken für Herz-Kreislauf einfach erklärt auf Deutsch."
+}

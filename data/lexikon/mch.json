@@ -1,0 +1,24 @@
+{
+  "slug": "mch",
+  "acronym": "MCH",
+  "fullName": "Mittlerer Hämoglobingehalt der Erythrozyten",
+  "category": "Blutbild",
+  "shortAnswer": "Der MCH-Wert zeigt, wie viel Hämoglobin durchschnittlich in einem roten Blutkörperchen enthalten ist. Niedrige Werte können auf Eisenmangel hindeuten, hohe Werte möglicherweise auf Vitamin-B12-Mangel. Auffällige Befunde sollten Sie mit Ihrem Arzt besprechen.",
+  "unit": "pg",
+  "ranges": {
+    "normal": { "min": 28, "max": 34, "label": "Normal" },
+    "elevated": { "min": 34, "max": 38, "label": "Erhöht" },
+    "high": { "min": 38, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Vitamin-B12-Mangel", "Folsäuremangel", "Alkoholkonsum"],
+  "causesLow": ["Eisenmangel", "Thalassämie", "Chronische Erkrankungen"],
+  "relatedValues": ["haemoglobin", "mcv", "ferritin", "vitamin-b12"],
+  "doctorQuestions": [
+    "Was bedeutet mein MCH-Wert für meine Blutbildung?",
+    "Sollte ich auf Eisenmangel oder Vitaminmangel untersucht werden?",
+    "Brauche ich weitere Tests?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "MCH Wert zu niedrig oder erhöht? Bedeutung, Normwerte und Ursachen des mittleren Hämoglobingehalts einfach erklärt."
+}

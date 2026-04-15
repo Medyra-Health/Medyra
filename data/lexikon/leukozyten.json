@@ -1,0 +1,24 @@
+{
+  "slug": "leukozyten",
+  "acronym": "WBC",
+  "fullName": "Leukozyten (Weiße Blutkörperchen)",
+  "category": "Blutbild",
+  "shortAnswer": "Leukozyten sind weiße Blutkörperchen, die Ihr Immunsystem bilden. Zu hohe Werte können auf eine Infektion oder Entzündung hindeuten, zu niedrige Werte auf eine geschwächte Abwehr. Auffällige Werte sollten Sie mit Ihrem Arzt besprechen.",
+  "unit": "10³/µl",
+  "ranges": {
+    "normal": { "min": 4.0, "max": 10.0, "label": "Normal" },
+    "elevated": { "min": 10.0, "max": 20.0, "label": "Leicht erhöht" },
+    "high": { "min": 20.0, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Bakterielle Infektion", "Virale Infektion", "Entzündungserkrankung", "Stress", "Kortison-Einnahme", "Rauchen"],
+  "causesLow": ["Virusinfektionen (z. B. Grippe)", "Knochenmarksstörungen", "Bestimmte Medikamente", "Autoimmunerkrankungen"],
+  "relatedValues": ["crp", "bsg", "procalcitonin"],
+  "doctorQuestions": [
+    "Weist der Wert auf eine Infektion hin, und brauche ich Antibiotika?",
+    "Sollte der Wert in einigen Wochen erneut kontrolliert werden?",
+    "Kann ein Medikament meinen Leukozytenwert beeinflussen?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "WBC / Leukozyten erhöht oder zu niedrig? Werte, Ursachen und wann zum Arzt — einfach erklärt auf Deutsch."
+}

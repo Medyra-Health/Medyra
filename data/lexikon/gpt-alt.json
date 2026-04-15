@@ -1,0 +1,24 @@
+{
+  "slug": "gpt-alt",
+  "acronym": "GPT/ALT",
+  "fullName": "Glutamat-Pyruvat-Transaminase (Alanin-Aminotransferase)",
+  "category": "Leberwerte",
+  "shortAnswer": "GPT (auch ALT genannt) ist ein Leberenzym. Erhöhte Werte können auf eine Leberentzündung oder -schädigung hindeuten, zum Beispiel durch Alkohol, Medikamente oder Fettleber. Leicht erhöhte Werte sollten Sie mit Ihrem Arzt besprechen.",
+  "unit": "U/l",
+  "ranges": {
+    "normal": { "min": 0, "max": 45, "label": "Normal" },
+    "elevated": { "min": 45, "max": 200, "label": "Erhöht" },
+    "high": { "min": 200, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Fettleber", "Alkoholkonsum", "Virushepatitis", "Medikamentennebenwirkung", "Herzerkrankungen"],
+  "causesLow": [],
+  "relatedValues": ["got-ast", "ggt", "bilirubin", "alkalische-phosphatase"],
+  "doctorQuestions": [
+    "Kann ein Medikament meinen GPT-Wert erhöht haben?",
+    "Sollte ich eine Ultraschalluntersuchung der Leber machen?",
+    "Was kann ich tun, um meinen Leberwert zu verbessern?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "GPT / ALT Wert erhöht? Normwerte, Ursachen und was ein erhöhter Leberwert bedeutet — einfach auf Deutsch erklärt."
+}

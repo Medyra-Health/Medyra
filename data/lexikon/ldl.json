@@ -1,0 +1,24 @@
+{
+  "slug": "ldl",
+  "acronym": "LDL",
+  "fullName": "Low-Density-Lipoprotein (Schlechtes Cholesterin)",
+  "category": "Stoffwechsel",
+  "shortAnswer": "LDL ist das schlechte Cholesterin, das sich in den Blutgefäßen ablagern kann. Erhöhte Werte erhöhen das Risiko für Herzinfarkt und Schlaganfall. Zielwerte hängen von Ihrem persönlichen Risiko ab. Besprechen Sie Ihren LDL-Wert mit Ihrem Arzt.",
+  "unit": "mg/dl",
+  "ranges": {
+    "normal": { "min": 0, "max": 130, "label": "Normal (geringes Risiko)" },
+    "elevated": { "min": 130, "max": 190, "label": "Erhöht" },
+    "high": { "min": 190, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Fettreiche Ernährung", "Genetische Veranlagung (familiäre Hypercholesterinämie)", "Übergewicht", "Schilddrüsenunterfunktion", "Diabetes"],
+  "causesLow": ["Unterernährung", "Lebererkrankungen", "Statine"],
+  "relatedValues": ["hdl", "cholesterin", "triglyzeride"],
+  "doctorQuestions": [
+    "Welcher LDL-Zielwert ist für mich angemessen?",
+    "Brauche ich Statine oder andere Medikamente?",
+    "Welche Ernährung senkt meinen LDL-Wert?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "LDL erhöht? Normwerte, Herzrisiko und Behandlungsmöglichkeiten bei schlechtem Cholesterin einfach erklärt."
+}

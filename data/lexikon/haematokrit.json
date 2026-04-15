@@ -1,0 +1,24 @@
+{
+  "slug": "haematokrit",
+  "acronym": "Hkt",
+  "fullName": "Hämatokrit",
+  "category": "Blutbild",
+  "shortAnswer": "Der Hämatokrit gibt an, wie viel Prozent Ihres Blutes aus roten Blutkörperchen besteht. Ein niedriger Wert kann auf Blutarmut hindeuten, ein zu hoher Wert auf Flüssigkeitsmangel oder bestimmte Erkrankungen. Besprechen Sie auffällige Werte mit Ihrem Arzt.",
+  "unit": "%",
+  "ranges": {
+    "normal": { "min": 37.0, "max": 52.0, "label": "Normal" },
+    "elevated": { "min": 52.0, "max": 60.0, "label": "Erhöht" },
+    "high": { "min": 60.0, "max": null, "label": "Stark erhöht" }
+  },
+  "causesElevated": ["Dehydration", "Rauchen", "Polycythemia vera", "Höhenaufenthalt"],
+  "causesLow": ["Blutarmut (Anämie)", "Blutungen", "Eisenmangel", "Schwangerschaft"],
+  "relatedValues": ["haemoglobin", "erythrozyten", "ferritin"],
+  "doctorQuestions": [
+    "Ist mein Hämatokrit-Wert mit einer Anämie vereinbar?",
+    "Sollte ich mehr Flüssigkeit trinken?",
+    "Brauche ich weitere Blutuntersuchungen?"
+  ],
+  "lastReviewed": "2026-04-16",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Hämatokrit (Hkt) erhöht oder zu niedrig? Normwerte, Ursachen und wann zum Arzt — verständlich erklärt auf Deutsch."
+}
