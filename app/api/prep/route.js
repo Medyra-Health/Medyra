@@ -36,6 +36,64 @@ async function getEffectiveTier(userId, mongoTier) {
 // ── Anthropic ──────────────────────────────────────────────────────────────
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
+// ── Biomarker metadata (mirrors HealthTimeline.js) ─────────────────────────
+const BIOMARKER_META = {
+  hemoglobin:  { label: 'Hemoglobin',  unit: 'g/dL',   normalMin: 12,  normalMax: 17.5 },
+  ferritin:    { label: 'Ferritin',    unit: 'µg/L',   normalMin: 15,  normalMax: 150  },
+  tsh:         { label: 'TSH',         unit: 'mIU/L',  normalMin: 0.4, normalMax: 4.0  },
+  hba1c:       { label: 'HbA1c',       unit: '%',      normalMin: 0,   normalMax: 5.6  },
+  cholesterol: { label: 'Cholesterol', unit: 'mg/dL',  normalMin: 0,   normalMax: 200  },
+  vitaminD:    { label: 'Vitamin D',   unit: 'nmol/L', normalMin: 50,  normalMax: 200  },
+  crp:         { label: 'CRP',         unit: 'mg/L',   normalMin: 0,   normalMax: 5    },
+  egfr:        { label: 'eGFR',        unit: 'mL/min', normalMin: 60,  normalMax: 120  },
+}
+
+function buildProfileContext(profile, locale) {
+  if (!profile) return ''
+  const isDE = locale === 'de'
+  const name = profile.name || 'Patient'
+  const gender = profile.gender && profile.gender !== 'prefer_not' ? profile.gender : null
+  const dob = profile.dob ? profile.dob : null
+  const lines = []
+
+  lines.push(isDE ? '\n--- PATIENTENPROFIL (aus Medyra Health Vault) ---' : '\n--- PATIENT PROFILE (from Medyra Health Vault) ---')
+  lines.push(`Name: ${name}${gender ? `, Gender: ${gender}` : ''}${dob ? `, DoB: ${dob}` : ''}`)
+
+  const biomarkerHistory = profile.biomarkers || []
+  if (biomarkerHistory.length === 0) {
+    lines.push(isDE ? 'Keine gespeicherten Laborwerte im Health Vault.' : 'No stored lab values in Health Vault.')
+  } else {
+    lines.push(isDE ? 'Gespeicherte Laborwerte aus dem Health Vault:' : 'Stored lab values from Health Vault:')
+    for (const [key, meta] of Object.entries(BIOMARKER_META)) {
+      const readings = []
+      for (const entry of biomarkerHistory) {
+        const match = (entry.values || []).find(v =>
+          v.key === key || v.name?.toLowerCase().includes(key.toLowerCase())
+        )
+        if (match) {
+          const val = parseFloat(match.value)
+          if (!isNaN(val)) readings.push({ val, date: entry.recordedAt || entry.date })
+        }
+      }
+      if (readings.length === 0) continue
+      const latest = readings[readings.length - 1]
+      const isAbnormal = latest.val < meta.normalMin || latest.val > meta.normalMax
+      let trend = ''
+      if (readings.length >= 2) {
+        const first = readings[0].val
+        const delta = ((latest.val - first) / first) * 100
+        if (Math.abs(delta) >= 5) {
+          trend = ` [${delta > 0 ? '+' : ''}${delta.toFixed(1)}% over ${readings.length} readings]`
+        }
+      }
+      const abnormalMark = isAbnormal ? ' ⚠ ABNORMAL' : ''
+      lines.push(`  • ${meta.label}: ${latest.val} ${meta.unit} (normal ${meta.normalMin}–${meta.normalMax})${abnormalMark}${trend}`)
+    }
+  }
+  lines.push(isDE ? '--- ENDE PATIENTENPROFIL ---\n' : '--- END PATIENT PROFILE ---\n')
+  return lines.join('\n')
+}
+
 const SYSTEM_PROMPTS = {
   de: `Du bist ein medizinischer Kommunikationsassistent, der Patienten bei der Vorbereitung auf Arztbesuche in Deutschland unterstützt.
 
@@ -152,6 +210,7 @@ export async function POST(request) {
   const body = await request.json()
   const input = (body.input || '').trim()
   const locale = body.locale || 'en'
+  const profileId = body.profileId || null
   if (!input || input.length < 10) {
     return NextResponse.json({ error: 'Please describe your symptoms in more detail.' }, { status: 400 })
   }
@@ -161,6 +220,10 @@ export async function POST(request) {
   const user = await db.collection('users').findOne({ clerkId: userId })
   const mongoTier = user?.subscription?.tier || 'free'
   const effectiveTier = await getEffectiveTier(userId, mongoTier)
+
+  // Resolve profile for biomarker context
+  const profile = profileId ? (user?.profiles || []).find(p => p.id === profileId) || null : null
+  const profileContext = buildProfileContext(profile, locale)
   // Use 'in' check so null (unlimited) is preserved — null ?? 1 would wrongly return 1
   const monthLimit = effectiveTier in PREP_LIMITS ? PREP_LIMITS[effectiveTier] : 1
 
@@ -182,14 +245,16 @@ export async function POST(request) {
   // Call Claude
   let output
   try {
+    const systemPrompt = getSystemPrompt(locale) + (profileContext ? `\n\nIMPORTANT CONTEXT: The following patient profile data is available from their Medyra Health Vault. Use this to pre-populate the Vorerkrankungen / Relevant Medical History section and to highlight any abnormal or trending values in the summary. Do NOT ignore this data.${profileContext}` : '')
+    const userContent = profile
+      ? `The patient "${profile.name}" has described their situation as follows:\n\n${cappedInput}\n\nPlease generate the structured doctor summary. Use the patient profile biomarker data provided in the system context to enrich the Vorerkrankungen / Medical History section with actual tracked values, noting any ⚠ ABNORMAL values and significant trends.`
+      : `The patient has described their situation as follows:\n\n${cappedInput}\n\nPlease generate the structured doctor summary in the correct language.`
+
     const response = await anthropic.messages.create({
       model: 'claude-sonnet-4-6',
-      max_tokens: 1500,
-      system: getSystemPrompt(locale),
-      messages: [{
-        role: 'user',
-        content: `The patient has described their situation as follows:\n\n${cappedInput}\n\nPlease generate the structured doctor summary in the correct language.`,
-      }],
+      max_tokens: 1800,
+      system: systemPrompt,
+      messages: [{ role: 'user', content: userContent }],
       temperature: 0.2,
     })
     output = response.content[0].text.trim()
@@ -210,6 +275,8 @@ export async function POST(request) {
           inputLength: cappedInput.length,
           output,
           locale,
+          profileId: profileId || null,
+          profileName: profile?.name || null,
         },
       },
       $set: { updatedAt: new Date() },
@@ -244,6 +311,7 @@ export async function GET() {
       createdAt: d.createdAt,
       input: d.input || '',
       output: d.output,
+      profileName: d.profileName || null,
     }))
 
   return NextResponse.json({

@@ -1,6 +1,50 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import Anthropic from '@anthropic-ai/sdk'
+import { MongoClient } from 'mongodb'
+
+let _client = null, _db = null
+async function getDb() {
+  if (_db) { try { await _db.admin().ping(); return _db } catch { _client = null; _db = null } }
+  _client = new MongoClient(process.env.MONGO_URL, { maxPoolSize: 10, serverSelectionTimeoutMS: 5000 })
+  await _client.connect()
+  _db = _client.db(process.env.DB_NAME || 'medyra')
+  return _db
+}
+
+const BIOMARKER_META = {
+  hemoglobin:  { label: 'Hemoglobin',  unit: 'g/dL',   normalMin: 12,  normalMax: 17.5 },
+  ferritin:    { label: 'Ferritin',    unit: 'µg/L',   normalMin: 15,  normalMax: 150  },
+  tsh:         { label: 'TSH',         unit: 'mIU/L',  normalMin: 0.4, normalMax: 4.0  },
+  hba1c:       { label: 'HbA1c',       unit: '%',      normalMin: 0,   normalMax: 5.6  },
+  cholesterol: { label: 'Cholesterol', unit: 'mg/dL',  normalMin: 0,   normalMax: 200  },
+  vitaminD:    { label: 'Vitamin D',   unit: 'nmol/L', normalMin: 50,  normalMax: 200  },
+  crp:         { label: 'CRP',         unit: 'mg/L',   normalMin: 0,   normalMax: 5    },
+  egfr:        { label: 'eGFR',        unit: 'mL/min', normalMin: 60,  normalMax: 120  },
+}
+
+function buildBriefProfileContext(profile) {
+  if (!profile) return ''
+  const lines = [`\nPatient profile: ${profile.name}`]
+  if (profile.dob) lines.push(`DoB: ${profile.dob}`)
+  const biomarkerHistory = profile.biomarkers || []
+  const abnormalValues = []
+  for (const [key, meta] of Object.entries(BIOMARKER_META)) {
+    for (const entry of biomarkerHistory) {
+      const match = (entry.values || []).find(v => v.key === key || v.name?.toLowerCase().includes(key.toLowerCase()))
+      if (match) {
+        const val = parseFloat(match.value)
+        if (!isNaN(val) && (val < meta.normalMin || val > meta.normalMax)) {
+          abnormalValues.push(`${meta.label}: ${val} ${meta.unit} (abnormal)`)
+        }
+      }
+    }
+  }
+  if (abnormalValues.length > 0) {
+    lines.push(`Known abnormal values: ${abnormalValues.slice(0, 4).join(', ')}`)
+  }
+  return lines.join('. ')
+}
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
@@ -81,7 +125,18 @@ export async function POST(request) {
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const body = await request.json()
-  const { messages, category, locale } = body
+  const { messages, category, locale, profileId } = body
+
+  // Resolve profile for brief context
+  let profileContext = ''
+  if (profileId) {
+    try {
+      const db = await getDb()
+      const user = await db.collection('users').findOne({ clerkId: userId })
+      const profile = (user?.profiles || []).find(p => p.id === profileId)
+      if (profile) profileContext = buildBriefProfileContext(profile)
+    } catch {}
+  }
 
   // First message (category opener) — return static opener instantly, no API call
   const userMessages = messages.filter(m => m.role === 'user')
@@ -112,10 +167,14 @@ export async function POST(request) {
   }
 
   try {
+    const systemWithContext = CHAT_SYSTEM
+      + `\n\nCurrent category: ${category}\nUser locale: ${locale || 'en'}`
+      + (profileContext ? `\n\n${profileContext}\nUse this profile data to ask targeted follow-up questions about any abnormal values or trends you see.` : '')
+
     const response = await anthropic.messages.create({
       model: 'claude-sonnet-4-6',
       max_tokens: 400,
-      system: CHAT_SYSTEM + `\n\nCurrent category: ${category}\nUser locale: ${locale || 'en'}`,
+      system: systemWithContext,
       messages: conversationMessages,
       temperature: 0.4,
     })

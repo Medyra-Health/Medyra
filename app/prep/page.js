@@ -304,6 +304,10 @@ export default function PrepPage() {
   const [historyOpen, setHistoryOpen] = useState(null)
   const [printDoc, setPrintDoc] = useState(null)
 
+  // Profile context
+  const [profiles, setProfiles] = useState([])
+  const [selectedProfileId, setSelectedProfileId] = useState(null)
+
   const chatEndRef = useRef(null)
   const inputRef = useRef(null)
 
@@ -312,6 +316,12 @@ export default function PrepPage() {
       fetch('/api/prep').then(r => r.json()).then(data => {
         setUsage(data)
         if (data.history) setHistory(data.history)
+      }).catch(() => {})
+      fetch('/api/profiles').then(r => r.json()).then(data => {
+        if (data.profiles?.length) {
+          setProfiles(data.profiles)
+          setSelectedProfileId(data.profiles[0].id)
+        }
       }).catch(() => {})
     }
   }, [isLoaded, user])
@@ -335,6 +345,7 @@ export default function PrepPage() {
           messages: [{ role: 'user', content: `Category: ${cat.id}` }],
           category: cat.id,
           locale,
+          profileId: selectedProfileId,
         }),
       })
       const data = await res.json()
@@ -365,7 +376,7 @@ export default function PrepPage() {
       const res = await fetch('/api/prep/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: apiMessages, category: category.id, locale }),
+        body: JSON.stringify({ messages: apiMessages, category: category.id, locale, profileId: selectedProfileId }),
       })
       const data = await res.json()
       setMessages(prev => [...prev, { role: 'assistant', text: data.message, id: Date.now() + 1 }])
@@ -389,7 +400,7 @@ export default function PrepPage() {
       const res = await fetch('/api/prep', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ input: fullContext, locale }),
+        body: JSON.stringify({ input: fullContext, locale, profileId: selectedProfileId }),
       })
       const data = await res.json()
       if (!res.ok) {
@@ -533,6 +544,62 @@ export default function PrepPage() {
             </div>
           )}
 
+          {/* ── Profile selector ── */}
+          {profiles.length > 0 && step === 'category' && (
+            <div className="mb-5">
+              <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+                {locale === 'de' ? 'Für wen ist dieser Arztbrief?' : 'Who is this prep for?'}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {profiles.map(p => {
+                  const COLORS = {
+                    emerald: 'bg-emerald-500', blue: 'bg-blue-500', violet: 'bg-violet-500',
+                    amber: 'bg-amber-500', rose: 'bg-rose-500', sky: 'bg-sky-500',
+                  }
+                  const dot = COLORS[p.color] || 'bg-emerald-500'
+                  const isSelected = selectedProfileId === p.id
+                  return (
+                    <button
+                      key={p.id}
+                      onClick={() => setSelectedProfileId(p.id)}
+                      className={`flex items-center gap-2 px-3 py-2 rounded-xl border text-sm font-medium transition-all ${
+                        isSelected
+                          ? 'border-emerald-400 bg-emerald-50 text-emerald-800 ring-2 ring-emerald-300/50'
+                          : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300 hover:text-gray-800'
+                      }`}
+                    >
+                      <span className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${dot}`} />
+                      {p.name}
+                      {isSelected && (
+                        <span className="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-1.5 py-0.5 rounded-full">
+                          {locale === 'de' ? 'Gewählt' : 'Selected'}
+                        </span>
+                      )}
+                    </button>
+                  )
+                })}
+                <button
+                  onClick={() => setSelectedProfileId(null)}
+                  className={`flex items-center gap-2 px-3 py-2 rounded-xl border text-sm font-medium transition-all ${
+                    !selectedProfileId
+                      ? 'border-gray-400 bg-gray-50 text-gray-800 ring-2 ring-gray-300/50'
+                      : 'border-gray-200 bg-white text-gray-400 hover:border-gray-300'
+                  }`}
+                >
+                  {locale === 'de' ? 'Kein Profil' : 'No profile'}
+                </button>
+              </div>
+              {selectedProfileId && (
+                <p className="text-xs text-emerald-600 mt-2 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  {locale === 'de'
+                    ? 'Laborwerte aus dem Health Vault werden automatisch einbezogen'
+                    : 'Lab values from Health Vault will be included automatically'}
+                </p>
+              )}
+            </div>
+          )}
+
           {/* ── STEP 1: Category selection ── */}
           {step === 'category' && (
             <div className="space-y-3">
@@ -587,9 +654,16 @@ export default function PrepPage() {
                     </>
                   )
                 })()}
-                <div className="ml-auto flex items-center gap-1.5">
-                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-xs text-gray-400">AI Guide</span>
+                <div className="ml-auto flex items-center gap-3">
+                  {selectedProfileId && profiles.find(p => p.id === selectedProfileId) && (
+                    <span className="text-xs text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full font-medium">
+                      {profiles.find(p => p.id === selectedProfileId).name}
+                    </span>
+                  )}
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-xs text-gray-400">AI Guide</span>
+                  </div>
                 </div>
               </div>
 
@@ -739,6 +813,9 @@ export default function PrepPage() {
                             <span className="text-sm font-semibold text-gray-800">
                               {locale === 'de' ? 'Arztbrief' : 'Doctor Summary'}
                             </span>
+                            {doc.profileName && (
+                              <span className="text-[10px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded-full">{doc.profileName}</span>
+                            )}
                             <span className="text-[10px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">{date} · {time}</span>
                           </div>
                           {inputPreview && (
