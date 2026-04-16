@@ -38,11 +38,8 @@ function getLangFromPath(pathname) {
   if (parts[0] === 'lexikon' && parts.length === 2 && !LEXIKON_URL_LANGS.has(parts[1])) {
     return 'de';
   }
-  // /lexikon index
-  if (parts[0] === 'lexikon' && parts.length === 1) {
-    return 'de';
-  }
-  return null; // not a lexikon page — use cookie/localStorage
+  // /lexikon index — don't force 'de', let it use the saved preference
+  return null; // use cookie/localStorage
 }
 
 export default function LanguageSwitcher() {
