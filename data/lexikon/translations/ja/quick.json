@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "プロトロンビン時間百分率（Quick値）は外因系凝固経路を評価し、INRと密接に関連します。低値ほど凝固機能が低下し、出血リスクが高まります。",
+  "metaDescription": "Quick値が低い？基準値、凝固機能の意味、原因——わかりやすく解説。",
+  "causesElevated": [],
+  "causesLow": ["ワルファリン療法", "ビタミンK欠乏", "肝疾患", "凝固因子欠乏"],
+  "doctorQuestions": [
+    "凝固機能は正常ですか？",
+    "ビタミンKの補充が必要ですか？",
+    "出血リスクはありますか？"
+  ],
+  "rangeLabels": { "low": "低値（出血リスク）", "normal": "基準値内", "elevated": "上昇" },
+  "categoryLabel": "凝固検査",
+  "pageTitle": "Quick値 — プロトロンビン時間わかりやすく解説 | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "叶酸（维生素B9）对细胞分裂和DNA合成至关重要，妊娠期尤为重要。缺乏可导致神经管缺陷和巨细胞性贫血。",
+  "metaDescription": "叶酸偏低？正常范围、缺乏原因及妊娠期补充建议——简单易懂的解释。",
+  "causesElevated": ["叶酸补充剂过量"],
+  "causesLow": ["饮食摄入不足（蔬菜水果少）", "酒精滥用", "某些药物（如甲氨蝶呤）", "吸收不良"],
+  "doctorQuestions": [
+    "我的叶酸水平是否影响了血细胞？",
+    "我需要补充叶酸吗？",
+    "妊娠期应补充多少叶酸？"
+  ],
+  "rangeLabels": { "low": "缺乏", "normal": "正常", "elevated": "升高" },
+  "categoryLabel": "维生素",
+  "pageTitle": "叶酸值 — 维生素B9详解 | Medyra"
+}

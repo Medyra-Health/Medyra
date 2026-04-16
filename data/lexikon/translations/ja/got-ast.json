@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "GOT/ASTは肝臓、心筋、筋肉に存在する酵素です。上昇は肝障害、心筋障害、筋疾患を示す可能性があります。他の検査と合わせて総合的に判断が必要です。",
+  "metaDescription": "GOT/ASTが高い？基準値、原因、いつ医師に相談すべきか——わかりやすく解説。",
+  "causesElevated": ["肝炎", "脂肪肝", "心筋梗塞", "筋肉損傷", "激しい運動"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "GOT上昇は肝臓の問題ですか、心臓の問題ですか？",
+    "追加検査が必要ですか？",
+    "生活習慣を変える必要がありますか？"
+  ],
+  "rangeLabels": { "low": "低値", "normal": "基準値内", "elevated": "軽度上昇", "high": "著明上昇" },
+  "categoryLabel": "肝機能検査",
+  "pageTitle": "GOT/AST値 — AST（肝酵素）わかりやすく解説 | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "部分凝血活酶时间（PTT）评估内源性凝血途径功能。延长提示凝血因子缺乏或抗凝药物影响，缩短提示高凝状态。",
+  "metaDescription": "PTT偏长或偏短？正常范围、凝血功能意义及原因——简单易懂的解释。",
+  "causesElevated": ["血友病A或B", "肝素治疗", "维生素K缺乏", "严重肝病"],
+  "causesLow": ["高凝状态", "急性期反应"],
+  "doctorQuestions": [
+    "PTT异常提示凝血功能有问题吗？",
+    "我有出血风险吗？",
+    "我的肝素剂量是否合适？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常", "elevated": "延长", "high": "显著延长" },
+  "categoryLabel": "凝血指标",
+  "pageTitle": "PTT值 — 部分凝血活酶时间详解 | Medyra"
+}
