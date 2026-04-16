@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Leykotsity v moche v norme edinichy (do 5/pole zreniya). Povyshennoe kolichestvo (leykotsituriya) chashche vsego ukazyvaet na infektsiyu mochevyvodyashchikh putey.",
+  "metaDescription": "Leykotsity v moche povysheny? Norma i prichiny — infektsiya mochevykh putey — obyasnenie.",
+  "causesElevated": [
+    "Infektsiya mochevyvodyashchikh putey",
+    "Uretrit",
+    "Interstitsialny nefrit",
+    "Kamni v pochkakh"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Nuzhen li posev mochi?",
+    "Trebuyutsya li antibiotiki?",
+    "Est li vospalenie pochek?"
+  ],
+  "rangeLabels": {
+    "low": "Norma",
+    "normal": "Norma",
+    "elevated": "Umerenno povyshen",
+    "high": "Znachitelno povyshen"
+  },
+  "categoryLabel": "Pokazateli mochi",
+  "pageTitle": "Leykotsity v moche: norma i infektsii | Medyra"
+}
