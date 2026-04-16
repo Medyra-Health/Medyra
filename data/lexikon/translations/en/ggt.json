@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "GGT (gamma-glutamyltransferase) is a liver enzyme that is particularly sensitive to alcohol and bile duct problems. Elevated levels can indicate fatty liver, alcohol use, or gallbladder disease. Persistently high levels should be discussed with your doctor.",
+  "metaDescription": "GGT elevated? Normal ranges, causes, and what a high gamma-GT level means — explained simply.",
+  "causesElevated": ["Alcohol use", "Fatty liver disease", "Gallbladder disease", "Certain medications", "Obesity"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Could alcohol or medications have raised my GGT?",
+    "Do I need a liver examination?",
+    "What lifestyle changes could lower the value?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
+  "categoryLabel": "Liver Values",
+  "pageTitle": "GGT value — Gamma-Glutamyltransferase explained | Medyra"
+}

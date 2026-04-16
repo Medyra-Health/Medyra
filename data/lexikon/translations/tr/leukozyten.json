@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "WBC (beyaz kan hücreleri), bağışıklık sisteminizi oluşturan hücrelerdir. Yüksek değerler enfeksiyon veya iltihabı, düşük değerler ise zayıf bir bağışıklık yanıtını gösterebilir. Anormal değerleri doktorunuzla görüşün.",
+  "metaDescription": "WBC / beyaz kan hücreleri yüksek veya düşük mü? Normal değerler, nedenler ve ne zaman doktora gidilmeli — basitçe açıklandı.",
+  "causesElevated": ["Bakteriyel enfeksiyon", "Viral enfeksiyon", "İnflamatuar hastalık", "Stres", "Kortikosteroid kullanımı", "Sigara içme"],
+  "causesLow": ["Viral enfeksiyonlar (örn. grip)", "Kemik iliği bozuklukları", "Bazı ilaçlar", "Otoimmün hastalıklar"],
+  "doctorQuestions": [
+    "Bu değer bir enfeksiyona mı işaret ediyor, antibiyotik gerekli mi?",
+    "Değer birkaç hafta sonra yeniden kontrol edilmeli mi?",
+    "Bir ilaç beyaz kan hücresi sayımı etkileyebilir mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Hafif yüksek", "high": "Çok yüksek" },
+  "categoryLabel": "Kan Sayımı",
+  "pageTitle": "WBC değeri — Beyaz Kan Hücreleri açıklaması | Medyra"
+}

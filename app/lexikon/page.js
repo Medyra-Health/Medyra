@@ -54,11 +54,6 @@ export default function LexikonPage() {
         <LexikonIndex entriesByCategory={entriesByCategory} />
       </main>
 
-      <footer className="border-t border-gray-100 py-6 text-center text-xs text-gray-400 mt-8">
-        © 2026 Medyra ·{' '}
-        <Link href="/privacy" className="hover:text-gray-600">Datenschutz</Link> ·{' '}
-        <Link href="/terms" className="hover:text-gray-600">AGB</Link>
-      </footer>
     </div>
   )
 }

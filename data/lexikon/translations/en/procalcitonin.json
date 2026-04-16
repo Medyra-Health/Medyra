@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "PCT (procalcitonin) is a specific marker for bacterial infections. Elevated levels can indicate a severe bacterial infection or sepsis. The test helps doctors decide whether antibiotics are necessary. Discuss elevated levels with your doctor immediately.",
+  "metaDescription": "Procalcitonin (PCT) elevated? Normal ranges, causes, and its role as a sepsis marker — explained simply.",
+  "causesElevated": ["Severe bacterial infection", "Sepsis", "Multi-organ failure", "Severe burns"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Does my PCT indicate a bacterial infection?",
+    "Do I need antibiotics?",
+    "Should I be hospitalized?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal / low", "elevated": "Mildly elevated", "high": "Highly elevated (sepsis suspected)" },
+  "categoryLabel": "Inflammatory Markers",
+  "pageTitle": "PCT value — Procalcitonin explained | Medyra"
+}

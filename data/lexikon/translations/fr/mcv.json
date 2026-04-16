@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le MCV mesure la taille moyenne des globules rouges. De petites cellules peuvent indiquer une carence en fer, de grandes cellules peuvent suggérer une carence en vitamine B12 ou en folates. Discutez de tout résultat anormal avec votre médecin.",
+  "metaDescription": "MCV élevé ou bas ? Valeurs normales, causes de la taille anormale des globules rouges — expliqués simplement.",
+  "causesElevated": ["Carence en vitamine B12", "Carence en folates", "Consommation d'alcool", "Hypothyroïdie"],
+  "causesLow": ["Carence en fer", "Thalassémie", "Maladies inflammatoires chroniques"],
+  "doctorQuestions": [
+    "Mon MCV suggère-t-il une carence nutritionnelle ?",
+    "Dois-je prendre de la vitamine B12 ou des folates ?",
+    "Ai-je besoin d'un bilan sanguin plus détaillé ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé (macrocytose)", "high": "Très élevé" },
+  "categoryLabel": "Numération formule sanguine",
+  "pageTitle": "Valeur MCV — Volume globulaire moyen expliqué | Medyra"
+}

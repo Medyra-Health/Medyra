@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Magnesium (Mg) is involved in over 300 enzyme reactions and is essential for muscles, nerves, and heart rhythm. Low levels can cause muscle cramps and fatigue. Elevated levels are rare. Discuss persistent symptoms with your doctor.",
+  "metaDescription": "Magnesium low? Normal ranges, causes of deficiency, and symptoms explained simply.",
+  "causesElevated": ["Kidney failure", "Overdose of magnesium supplements"],
+  "causesLow": ["Inadequate intake", "Alcohol use", "Diarrhea / vomiting", "Diuretics", "Diabetes"],
+  "doctorQuestions": [
+    "Are my muscle cramps related to magnesium deficiency?",
+    "Should I take magnesium supplements?",
+    "Which foods provide sufficient magnesium?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
+  "categoryLabel": "Electrolytes",
+  "pageTitle": "Mg value — Magnesium explained | Medyra"
+}

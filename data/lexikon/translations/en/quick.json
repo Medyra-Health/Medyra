@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "The Quick value (prothrombin time) measures blood clotting ability via the extrinsic clotting pathway. Low values indicate prolonged clotting time and increased bleeding risk. The value is closely linked to liver function and vitamin K. Discuss any abnormal values with your doctor.",
+  "metaDescription": "Quick value / prothrombin time low? Normal ranges, bleeding risk, and causes — explained simply.",
+  "causesElevated": [],
+  "causesLow": ["Warfarin / anticoagulant therapy", "Liver disease", "Vitamin K deficiency", "Clotting disorders"],
+  "doctorQuestions": [
+    "Is my Quick value due to warfarin or liver disease?",
+    "Do I need a normal Quick value before surgery?",
+    "Should I take vitamin K?"
+  ],
+  "rangeLabels": { "low": "Low (bleeding risk)", "normal": "Normal", "elevated": "Elevated (rarely clinically relevant)", "high": "Elevated" },
+  "categoryLabel": "Coagulation",
+  "pageTitle": "Quick value — Prothrombin Time explained | Medyra"
+}

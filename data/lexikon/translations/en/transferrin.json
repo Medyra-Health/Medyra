@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Transferrin is the transport protein for iron in the blood. In iron deficiency, transferrin rises because the body provides more transport capacity. In inflammation or iron overload, the value is usually reduced. Discuss this value alongside ferritin and serum iron with your doctor.",
+  "metaDescription": "Transferrin elevated or low? Normal ranges, meaning in iron deficiency, and causes — explained simply.",
+  "causesElevated": ["Iron deficiency", "Pregnancy", "Estrogen supplements"],
+  "causesLow": ["Inflammatory diseases", "Liver disease", "Iron overload (hemochromatosis)", "Malnutrition"],
+  "doctorQuestions": [
+    "How should my transferrin be assessed alongside ferritin?",
+    "Do I need iron supplements?",
+    "Could hemochromatosis be present?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
+  "categoryLabel": "Iron Values",
+  "pageTitle": "Transferrin value — Iron transport protein explained | Medyra"
+}

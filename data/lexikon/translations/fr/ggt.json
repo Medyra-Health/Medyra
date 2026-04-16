@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La GGT (gamma-glutamyl transférase) est une enzyme hépatique particulièrement sensible à l'alcool et aux problèmes biliaires. Des valeurs élevées peuvent indiquer une stéatose hépatique, une consommation d'alcool ou une maladie de la vésicule biliaire. Discutez des valeurs persistamment élevées avec votre médecin.",
+  "metaDescription": "GGT élevée ? Valeurs normales, causes et signification d'un taux gamma-GT élevé — expliqués simplement.",
+  "causesElevated": ["Consommation d'alcool", "Stéatose hépatique", "Maladie de la vésicule biliaire", "Certains médicaments", "Obésité"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "L'alcool ou des médicaments ont-ils pu augmenter ma GGT ?",
+    "Ai-je besoin d'un bilan hépatique ?",
+    "Quels changements de mode de vie peuvent réduire la valeur ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Bilan hépatique",
+  "pageTitle": "Valeur GGT — Gamma-glutamyl transférase expliquée | Medyra"
+}

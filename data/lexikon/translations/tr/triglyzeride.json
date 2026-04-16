@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Trigliseritler, enerji rezervi olarak görev yapan kan yağlarıdır. Yüksek değerler kardiyovasküler hastalık ve pankreatit riskini artırabilir. Alkol, şeker ve obezite büyük rol oynar. Yüksek değerleri doktorunuzla görüşün.",
+  "metaDescription": "Trigliseritler yüksek mi? Normal değerler, nedenler ve yüksek kan yağları için neler yapılabilir — basitçe açıklandı.",
+  "causesElevated": ["Şeker oranı yüksek diyet", "Alkol kullanımı", "Obezite", "Diyabet", "Hipotiroidizm"],
+  "causesLow": ["Yetersiz beslenme", "Malabsorpsiyon", "Bazı ilaçlar"],
+  "doctorQuestions": [
+    "Hangi diyet veya yaşam tarzı değişiklikleri trigliseritleri düşürür?",
+    "İlaç gerekli mi?",
+    "Pankreatit riski var mı?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek (pankreatit riski)" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "TG değeri — Trigliseritler açıklaması | Medyra"
+}

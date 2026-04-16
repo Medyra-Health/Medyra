@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Cholesterol is an essential blood fat, but high levels can increase cardiovascular risk. Values above 200 mg/dl are considered borderline. What matters most is the ratio of LDL to HDL. Discuss elevated values with your doctor.",
+  "metaDescription": "Cholesterol elevated? Normal ranges, cardiovascular risk, and causes of high total cholesterol — explained simply.",
+  "causesElevated": ["High-fat diet", "Genetic predisposition", "Obesity", "Hypothyroidism", "Diabetes"],
+  "causesLow": ["Malnutrition", "Liver disease", "Malabsorption"],
+  "doctorQuestions": [
+    "What is my LDL-to-HDL ratio?",
+    "Do I need cholesterol-lowering medication?",
+    "What dietary changes make sense?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Desirable", "elevated": "Borderline high", "high": "Elevated" },
+  "categoryLabel": "Metabolism",
+  "pageTitle": "TC value — Total Cholesterol explained | Medyra"
+}

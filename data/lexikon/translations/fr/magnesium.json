@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le magnésium (Mg) intervient dans plus de 300 réactions enzymatiques et est essentiel pour les muscles, les nerfs et le rythme cardiaque. Des valeurs basses peuvent causer des crampes musculaires et de la fatigue. Des valeurs élevées sont rares. Discutez des symptômes persistants avec votre médecin.",
+  "metaDescription": "Magnésium bas ? Valeurs normales, causes de la carence et symptômes — expliqués simplement.",
+  "causesElevated": ["Insuffisance rénale", "Surdosage de suppléments de magnésium"],
+  "causesLow": ["Apport insuffisant", "Consommation d'alcool", "Diarrhée / vomissements", "Diurétiques", "Diabète"],
+  "doctorQuestions": [
+    "Mes crampes musculaires sont-elles liées à une carence en magnésium ?",
+    "Dois-je prendre des suppléments de magnésium ?",
+    "Quels aliments fournissent suffisamment de magnésium ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Électrolytes",
+  "pageTitle": "Valeur Mg — Magnésium expliqué | Medyra"
+}

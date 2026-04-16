@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La transferrine est la protéine de transport du fer dans le sang. En cas de carence en fer, la transferrine augmente car l'organisme fournit plus de capacité de transport. En cas d'inflammation ou de surcharge en fer, la valeur est généralement réduite. Discutez de cette valeur avec la ferritine et le fer sérique avec votre médecin.",
+  "metaDescription": "Transferrine élevée ou basse ? Valeurs normales, signification dans la carence en fer et causes — expliqués simplement.",
+  "causesElevated": ["Carence en fer", "Grossesse", "Suppléments d'œstrogènes"],
+  "causesLow": ["Maladies inflammatoires", "Maladie hépatique", "Surcharge en fer (hémochromatose)", "Malnutrition"],
+  "doctorQuestions": [
+    "Comment ma transferrine doit-elle être évaluée avec la ferritine ?",
+    "Ai-je besoin de suppléments de fer ?",
+    "Une hémochromatose pourrait-elle être présente ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Bilan martial",
+  "pageTitle": "Valeur transferrine — Protéine de transport du fer expliquée | Medyra"
+}

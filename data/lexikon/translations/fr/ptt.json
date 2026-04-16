@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le TCA (temps de céphaline activée) mesure la vitesse de coagulation via la voie intrinsèque. Des valeurs prolongées peuvent indiquer un trouble de la coagulation ou l'effet de l'héparine. Le test est utilisé avant les chirurgies et en cas de tendance hémorragique. Discutez de toute valeur anormale avec votre médecin.",
+  "metaDescription": "TCA élevé ? Valeurs normales, signification du temps de coagulation et causes dans le traitement par héparine — expliqués simplement.",
+  "causesElevated": ["Traitement par héparine", "Hémophilie", "Déficit en facteurs de coagulation", "Maladie de von Willebrand"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Y a-t-il un trouble de la coagulation expliquant mon TCA ?",
+    "Ma dose d'héparine est-elle correcte ?",
+    "Ai-je besoin d'autres tests de coagulation avant une chirurgie ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Prolongé", "high": "Très prolongé" },
+  "categoryLabel": "Coagulation",
+  "pageTitle": "Valeur TCA — Temps de céphaline activée expliqué | Medyra"
+}
