@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Belok v moche (proteinuriya) v norme otsutstvuyet ili minimalen (do 150 mg/sut). Povyshennoe soderzhanie ukazyvaet na povrezhdenie pochechnogo filtra.",
+  "metaDescription": "Belok v moche povyshen? Norma proteinurii i zabolevaniya pochek — obyasnenie prostym yazykom.",
+  "causesElevated": [
+    "Diabeticheskaya nefropatiya",
+    "Gipertonicheskaya nefropatiya",
+    "Glomerulonefrit",
+    "Infektsiya"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Est li povrezhdenie pochechnogo filtra?",
+    "Nuzhen li nefrolog?",
+    "Kak zashchitit pochki?"
+  ],
+  "rangeLabels": {
+    "low": "Norma",
+    "normal": "Norma",
+    "elevated": "Mikroalbumin",
+    "high": "Proteinuriya"
+  },
+  "categoryLabel": "Pokazateli mochi",
+  "pageTitle": "Belok v moche: norma i bolezni pochek | Medyra"
+}

@@ -1,0 +1,29 @@
+{
+  "shortAnswer": "Kaliy vazhen dlya raboty serdtsa, myshts i nervov. Norma: 3.5-5.1 mmol/l. Kak snizhenie, tak i povyshenie mogut vyzyvat narusheniya serdechnogo ritma.",
+  "metaDescription": "Kaliy povyshen ili ponizhen? Norma i prichiny otkloneniy — obyasnenie prostym yazykom.",
+  "causesElevated": [
+    "Pochechnaya nedostatochnost",
+    "Atsidoz",
+    "Nekotorye lekarstva",
+    "Povrezhdenie kletok"
+  ],
+  "causesLow": [
+    "Diuretiki",
+    "Rvota",
+    "Diaреya",
+    "Pervichny giperaldosteronizm"
+  ],
+  "doctorQuestions": [
+    "Nuzhno li skorrektirovat kaliy?",
+    "Vliyaet li na ritm serdtsa?",
+    "Nuzhno li izmenit lekarstva?"
+  ],
+  "rangeLabels": {
+    "low": "Gipokaliemiya",
+    "normal": "Norma",
+    "elevated": "Umerenno povyshen",
+    "high": "Giperkaliemiya"
+  },
+  "categoryLabel": "Elektrolity",
+  "pageTitle": "Kaliy: norma i narusheniya ritma serdtsa | Medyra"
+}

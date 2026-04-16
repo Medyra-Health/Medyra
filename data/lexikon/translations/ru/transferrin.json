@@ -1,0 +1,27 @@
+{
+  "shortAnswer": "Transferrin — belok-perenoschik zheleza v krovi. Norma: 2.0-3.6 g/l. Povyshennye znacheniya ukazyvayut na defitsit zheleza, ponizhennnye — na khronicheskoe vospalenie.",
+  "metaDescription": "Transferrin povyshen ili ponizhen? Norma i rol v obmene zheleza — obyasnenie.",
+  "causesElevated": [
+    "Defitsit zheleza",
+    "Beremennost"
+  ],
+  "causesLow": [
+    "Khronicheskoe vospalenie",
+    "Peregruzka zhelezo",
+    "Narusheniya pitaniya",
+    "Zabolevaniya pecheni"
+  ],
+  "doctorQuestions": [
+    "Est li defitsit zheleza?",
+    "Kak interpretirovat vmeste s ferritinom?",
+    "Nuzhny li dobavki?"
+  ],
+  "rangeLabels": {
+    "low": "Nizkiy",
+    "normal": "Norma",
+    "elevated": "Umerenno povyshen",
+    "high": "Defitsit zheleza"
+  },
+  "categoryLabel": "Pokazateli zheleza",
+  "pageTitle": "Transferrin: norma i obmen zheleza | Medyra"
+}
