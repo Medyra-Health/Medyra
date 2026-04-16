@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
 import { getAllSlugs, getEntryTranslated, getRelatedEntries, SUPPORTED_LANGS } from '@/lib/lexikon'
-import { getLexikonUI } from '@/lib/lexikonUI'
+import { getLexikonUI, TERM_NAMES_EN, CATEGORY_NAMES_EN } from '@/lib/lexikonUI'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import FeaturedSnippet from '@/components/lexikon/FeaturedSnippet'
 import RangeTable from '@/components/lexikon/RangeTable'
@@ -130,35 +130,18 @@ export default async function LexikonTranslatedPage({ params }) {
         </div>
       </header>
 
-      {/* Language switcher */}
-      <div className="bg-white border-b border-gray-100">
-        <div className="container mx-auto px-4 py-2 flex items-center gap-2 overflow-x-auto">
-          <span className="text-xs text-gray-400 flex-shrink-0">Also in:</span>
-          <Link href={`/lexikon/${termSlug}`}
-            className="flex-shrink-0 text-xs px-2.5 py-1 rounded-full border bg-gray-900 text-white border-gray-900 font-semibold">
-            DE
-          </Link>
-          {SUPPORTED_LANGS.filter(l => l !== lang).map(l => (
-            <Link key={l} href={`/lexikon/${l}/${termSlug}`}
-              className="flex-shrink-0 text-xs px-2.5 py-1 rounded-full border border-gray-200 text-gray-600 hover:border-emerald-400 hover:text-emerald-600 transition-colors font-medium">
-              {l.toUpperCase()}
-            </Link>
-          ))}
-        </div>
-      </div>
-
       <main className="container mx-auto px-4 py-10 max-w-2xl">
         <div className="flex items-center justify-between mb-5 flex-wrap gap-2">
           <Link href="/lexikon"
             className={`text-xs font-semibold px-3 py-1.5 rounded-full border ${cat.bg} ${cat.text} ${cat.border} hover:opacity-80 transition-opacity`}>
-            {t?.categoryLabel || entry.category}
+            {t?.categoryLabel || CATEGORY_NAMES_EN[entry.category] || entry.category}
           </Link>
           <p className="text-xs text-gray-400">{getLexikonUI(lang).reviewed || 'Reviewed'}: {reviewDate}</p>
         </div>
 
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 leading-tight">
           {entry.acronym}{' '}
-          <span style={{ color: cat.accent }}>{entry.fullName}</span>
+          <span style={{ color: cat.accent }}>{TERM_NAMES_EN[termSlug] || entry.fullName}</span>
         </h1>
         {entry.unit && (
           <p className="text-sm text-gray-400 mb-6">

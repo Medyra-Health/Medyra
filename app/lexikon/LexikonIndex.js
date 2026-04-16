@@ -1,8 +1,9 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import DoctorCTA from '@/components/lexikon/DoctorCTA'
+import { getIndexUI, TERM_NAMES_EN, CATEGORY_NAMES_EN } from '@/lib/lexikonUI'
 
 const CATEGORY_COLORS = {
   'Blutbild':         { bg: 'bg-red-50',     border: 'border-red-200',    text: 'text-red-700',    dot: 'bg-red-400',    pill: 'bg-red-100 text-red-700',    badge: 'bg-red-500'    },
@@ -25,8 +26,35 @@ const CATEGORY_ORDER = [
   'Vitamine','Gerinnung','Urinwerte',
 ]
 
+const LEXIKON_URL_LANGS = new Set(['en','tr','bn','fr','ar','es','it','pt','nl','pl','zh','ja','ko','hi','ur','ru'])
+
 export default function LexikonIndex({ entriesByCategory }) {
   const [query, setQuery] = useState('')
+  const [lang, setLang] = useState('de')
+
+  useEffect(() => {
+    const cookieLang = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('locale='))?.split('=')[1]
+    const detected = cookieLang || localStorage.getItem('preferredLanguage') || 'de'
+    setLang(detected)
+  }, [])
+
+  const ui = getIndexUI(lang)
+  const isDE = lang === 'de'
+
+  const getTermName = (entry) => {
+    if (isDE) return entry.fullName
+    return TERM_NAMES_EN[entry.slug] || entry.fullName
+  }
+
+  const getCategoryName = (category) => {
+    if (isDE) return category
+    return CATEGORY_NAMES_EN[category] || category
+  }
+
+  const getEntryHref = (entry) => {
+    if (isDE) return `/lexikon/${entry.slug}`
+    return `/lexikon/${lang}/${entry.slug}`
+  }
 
   const filtered = useMemo(() => {
     if (!query.trim()) return entriesByCategory
@@ -36,7 +64,9 @@ export default function LexikonIndex({ entriesByCategory }) {
       const matched = entries.filter(e =>
         e.acronym.toLowerCase().includes(q) ||
         e.fullName.toLowerCase().includes(q) ||
-        e.category.toLowerCase().includes(q)
+        (TERM_NAMES_EN[e.slug] || '').toLowerCase().includes(q) ||
+        e.category.toLowerCase().includes(q) ||
+        (CATEGORY_NAMES_EN[e.category] || '').toLowerCase().includes(q)
       )
       if (matched.length > 0) result[cat] = matched
     }
@@ -60,15 +90,17 @@ export default function LexikonIndex({ entriesByCategory }) {
             type="search"
             value={query}
             onChange={e => setQuery(e.target.value)}
-            placeholder="Laborwert suchen, z. B. CRP, Hämoglobin, TSH …"
+            placeholder={ui.searchPlaceholder}
             className="w-full pl-12 pr-4 py-4 rounded-2xl text-sm bg-white border-2 border-gray-200 focus:border-emerald-400 focus:outline-none text-gray-800 placeholder-gray-400 transition-colors shadow-sm"
           />
         </div>
         {query && (
           <p className="text-sm mt-2.5 text-gray-500 pl-1">
             {totalEntries === 0
-              ? 'Kein Laborwert gefunden — versuchen Sie einen anderen Suchbegriff.'
-              : <><span className="font-semibold text-emerald-600">{totalEntries}</span> Ergebnis{totalEntries !== 1 ? 'se' : ''} für „{query}"</>}
+              ? ui.noResults
+              : ui.results
+                ? ui.results(totalEntries, query)
+                : <><span className="font-semibold text-emerald-600">{totalEntries}</span> results for &ldquo;{query}&rdquo;</>}
           </p>
         )}
       </div>
@@ -77,8 +109,8 @@ export default function LexikonIndex({ entriesByCategory }) {
       {sortedCategories.length === 0 ? (
         <div className="text-center py-20 bg-white rounded-2xl border-2 border-dashed border-gray-200">
           <div className="text-4xl mb-3">🔬</div>
-          <p className="text-lg font-semibold text-gray-600 mb-1">Kein Laborwert gefunden</p>
-          <p className="text-sm text-gray-400">Versuchen Sie einen anderen Suchbegriff, z. B. CRP, TSH oder Cholesterin.</p>
+          <p className="text-lg font-semibold text-gray-600 mb-1">{ui.emptyTitle}</p>
+          <p className="text-sm text-gray-400">{ui.emptySubtitle}</p>
         </div>
       ) : (
         <div className="space-y-8">
@@ -89,7 +121,7 @@ export default function LexikonIndex({ entriesByCategory }) {
                 {/* Category heading */}
                 <div className="flex items-center gap-2.5 mb-5">
                   <span className={`w-3 h-3 rounded-full flex-shrink-0 ${c.dot}`} />
-                  <h2 className={`text-sm font-bold uppercase tracking-widest ${c.text}`}>{category}</h2>
+                  <h2 className={`text-sm font-bold uppercase tracking-widest ${c.text}`}>{getCategoryName(category)}</h2>
                   <span className={`ml-auto text-xs font-bold text-white px-2 py-0.5 rounded-full ${c.badge}`}>
                     {filtered[category].length}
                   </span>
@@ -100,7 +132,7 @@ export default function LexikonIndex({ entriesByCategory }) {
                   {filtered[category].map(entry => (
                     <Link
                       key={entry.slug}
-                      href={`/lexikon/${entry.slug}`}
+                      href={getEntryHref(entry)}
                       className="group bg-white rounded-xl p-4 border border-white hover:border-current hover:shadow-md transition-all duration-200 flex flex-col"
                       style={{ borderColor: 'transparent' }}
                     >
@@ -108,9 +140,9 @@ export default function LexikonIndex({ entriesByCategory }) {
                         <span className={`text-lg font-black ${c.text}`}>{entry.acronym}</span>
                         <span className={`text-lg group-hover:translate-x-0.5 transition-transform ${c.text} opacity-40 group-hover:opacity-100`}>→</span>
                       </div>
-                      <p className="text-sm font-semibold text-gray-800 leading-snug mb-1.5">{entry.fullName}</p>
+                      <p className="text-sm font-semibold text-gray-800 leading-snug mb-1.5">{getTermName(entry)}</p>
                       {entry.unit && (
-                        <p className="text-xs text-gray-400 mt-auto">Einheit: {entry.unit}</p>
+                        <p className="text-xs text-gray-400 mt-auto">{ui.unit}: {entry.unit}</p>
                       )}
                     </Link>
                   ))}
@@ -122,7 +154,7 @@ export default function LexikonIndex({ entriesByCategory }) {
       )}
 
       <div className="mt-12">
-        <DoctorCTA slug="lexikon" />
+        <DoctorCTA slug="lexikon" lang={lang} />
       </div>
     </div>
   )
