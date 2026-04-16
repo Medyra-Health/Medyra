@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "GPT/ALTは主に肝細胞に存在する酵素です。上昇は肝細胞の障害を示し、脂肪肝、肝炎、薬剤性肝障害などが原因となります。",
+  "metaDescription": "GPT/ALTが高い？基準値、肝障害の原因、いつ医師に相談すべきか——わかりやすく解説。",
+  "causesElevated": ["脂肪肝", "アルコール性肝疾患", "ウイルス性肝炎", "薬剤性肝障害", "肝硬変"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "肝臓に障害はありますか？",
+    "トランスアミナーゼ上昇の原因は何ですか？",
+    "追加の肝機能検査が必要ですか？"
+  ],
+  "rangeLabels": { "low": "低値", "normal": "基準値内", "elevated": "軽度上昇", "high": "著明上昇" },
+  "categoryLabel": "肝機能検査",
+  "pageTitle": "GPT/ALT値 — ALT（肝酵素）わかりやすく解説 | Medyra"
+}

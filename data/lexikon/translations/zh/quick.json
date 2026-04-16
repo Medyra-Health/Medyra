@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "凝血酶原时间百分率（Quick值）评估外源性凝血途径功能，与INR密切相关。Quick值越低，凝血功能越差，出血风险越高。",
+  "metaDescription": "Quick值偏低？正常范围、凝血功能意义及原因——简单易懂的解释。",
+  "causesElevated": [],
+  "causesLow": ["华法林治疗", "维生素K缺乏", "肝脏疾病", "凝血因子缺乏"],
+  "doctorQuestions": [
+    "我的凝血功能正常吗？",
+    "我需要补充维生素K吗？",
+    "我有出血风险吗？"
+  ],
+  "rangeLabels": { "low": "偏低（出血风险）", "normal": "正常", "elevated": "升高" },
+  "categoryLabel": "凝血指标",
+  "pageTitle": "Quick值 — 凝血酶原时间详解 | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "γ-グルタミルトランスフェラーゼ（GGT）は肝胆道疾患やアルコール摂取の敏感なマーカーです。持続的な上昇は医師に相談してください。",
+  "metaDescription": "GGTが高い？基準値、アルコールと肝臓の原因、意味——わかりやすく解説。",
+  "causesElevated": ["アルコール摂取", "脂肪肝", "胆道疾患", "一部の薬剤", "肝炎"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "GGT上昇はアルコールによるものですか、肝疾患によるものですか？",
+    "禁酒が必要ですか？",
+    "肝臓の超音波検査が必要ですか？"
+  ],
+  "rangeLabels": { "low": "低値", "normal": "基準値内", "elevated": "軽度上昇", "high": "著明上昇" },
+  "categoryLabel": "肝機能検査",
+  "pageTitle": "GGT値 — γ-GTPわかりやすく解説 | Medyra"
+}

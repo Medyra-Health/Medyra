@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
-import { getAllSlugs, getEntryTranslated, SUPPORTED_LANGS } from '@/lib/lexikon'
+import { getAllSlugs, getEntryTranslated, getRelatedEntries, SUPPORTED_LANGS } from '@/lib/lexikon'
 import FeaturedSnippet from '@/components/lexikon/FeaturedSnippet'
 import RangeTable from '@/components/lexikon/RangeTable'
 import CausesSection from '@/components/lexikon/CausesSection'
@@ -9,7 +9,9 @@ import DoctorCTA from '@/components/lexikon/DoctorCTA'
 import RelatedValues from '@/components/lexikon/RelatedValues'
 import JsonLd from '@/components/lexikon/JsonLd'
 import MedicalDisclaimer from '@/components/lexikon/MedicalDisclaimer'
-import { getRelatedEntries } from '@/lib/lexikon'
+
+// NOTE: in this route, params.slug = language code (e.g. "en"), params.termSlug = medical term (e.g. "crp")
+// URL pattern: /lexikon/:lang/:slug → /lexikon/en/crp
 
 const CATEGORY_COLORS = {
   'Blutbild':         { bg: 'bg-red-50',     text: 'text-red-700',    border: 'border-red-200',    accent: '#ef4444' },
@@ -26,99 +28,90 @@ const CATEGORY_COLORS = {
 }
 const DEFAULT_COLOR = { bg: 'bg-gray-50', text: 'text-gray-700', border: 'border-gray-200', accent: '#10b981' }
 
-// Language display names and RTL flags
 const LANG_META = {
-  en: { name: 'English',    rtl: false },
-  tr: { name: 'Türkçe',    rtl: false },
-  bn: { name: 'বাংলা',     rtl: false },
-  fr: { name: 'Français',  rtl: false },
-  ar: { name: 'العربية',   rtl: true  },
-  es: { name: 'Español',   rtl: false },
-  it: { name: 'Italiano',  rtl: false },
-  pt: { name: 'Português', rtl: false },
-  nl: { name: 'Nederlands',rtl: false },
-  pl: { name: 'Polski',    rtl: false },
-  zh: { name: '中文',       rtl: false },
-  ja: { name: '日本語',     rtl: false },
-  ko: { name: '한국어',     rtl: false },
-  hi: { name: 'हिन्दी',   rtl: false },
-  ur: { name: 'اردو',      rtl: true  },
-  ru: { name: 'Русский',   rtl: false },
+  en: { name: 'English',     rtl: false },
+  tr: { name: 'Türkçe',     rtl: false },
+  bn: { name: 'বাংলা',      rtl: false },
+  fr: { name: 'Français',   rtl: false },
+  ar: { name: 'العربية',    rtl: true  },
+  es: { name: 'Español',    rtl: false },
+  it: { name: 'Italiano',   rtl: false },
+  pt: { name: 'Português',  rtl: false },
+  nl: { name: 'Nederlands', rtl: false },
+  pl: { name: 'Polski',     rtl: false },
+  zh: { name: '中文',        rtl: false },
+  ja: { name: '日本語',      rtl: false },
+  ko: { name: '한국어',      rtl: false },
+  hi: { name: 'हिन्दी',    rtl: false },
+  ur: { name: 'اردو',       rtl: true  },
+  ru: { name: 'Русский',    rtl: false },
 }
 
 export async function generateStaticParams() {
   const slugs = getAllSlugs()
-  return SUPPORTED_LANGS.flatMap(lang => slugs.map(slug => ({ lang, slug })))
+  // slug param = language code, termSlug param = medical term slug
+  return SUPPORTED_LANGS.flatMap(lang =>
+    slugs.map(termSlug => ({ slug: lang, termSlug }))
+  )
 }
 
 export async function generateMetadata({ params }) {
-  const { lang, slug } = await params
+  const { slug: lang, termSlug } = await params
   if (!SUPPORTED_LANGS.includes(lang)) return {}
-  const entry = getEntryTranslated(slug, lang)
+  const entry = getEntryTranslated(termSlug, lang)
   if (!entry) return {}
 
   const t = entry._translation
   const title = t?.pageTitle || `${entry.acronym} — ${entry.fullName} | Medyra`
   const description = entry.metaDescription
 
-  // Build hreflang alternates
   const languages = {
-    'de': `https://medyra.de/lexikon/${slug}`,
-    'x-default': `https://medyra.de/lexikon/${slug}`,
+    'de': `https://medyra.de/lexikon/${termSlug}`,
+    'x-default': `https://medyra.de/lexikon/${termSlug}`,
+    ...Object.fromEntries(SUPPORTED_LANGS.map(l => [l, `https://medyra.de/lexikon/${l}/${termSlug}`])),
   }
-  SUPPORTED_LANGS.forEach(l => {
-    languages[l] = `https://medyra.de/lexikon/${l}/${slug}`
-  })
 
   return {
     title,
     description,
     alternates: {
-      canonical: `https://medyra.de/lexikon/${lang}/${slug}`,
+      canonical: `https://medyra.de/lexikon/${lang}/${termSlug}`,
       languages,
     },
-    openGraph: {
-      title,
-      description,
-      url: `https://medyra.de/lexikon/${lang}/${slug}`,
-    },
+    openGraph: { title, description, url: `https://medyra.de/lexikon/${lang}/${termSlug}` },
   }
 }
 
-export default async function LexikonLangEntryPage({ params }) {
-  const { lang, slug } = await params
+export default async function LexikonTranslatedPage({ params }) {
+  const { slug: lang, termSlug } = await params
   if (!SUPPORTED_LANGS.includes(lang)) notFound()
 
-  const entry = getEntryTranslated(slug, lang)
+  const entry = getEntryTranslated(termSlug, lang)
   if (!entry) notFound()
 
   const related = getRelatedEntries(entry.relatedValues || [])
   const cat = CATEGORY_COLORS[entry.category] || DEFAULT_COLOR
   const langMeta = LANG_META[lang] || { name: lang.toUpperCase(), rtl: false }
   const t = entry._translation
-
-  // Build range labels with translations if available
   const rangeLabels = t?.rangeLabels || {}
 
-  const translatedRanges = entry.ranges ? Object.fromEntries(
-    Object.entries(entry.ranges).map(([key, val]) => [
-      key,
-      { ...val, label: rangeLabels[key] || val.label }
-    ])
-  ) : null
+  const translatedRanges = entry.ranges
+    ? Object.fromEntries(
+        Object.entries(entry.ranges).map(([key, val]) => [
+          key,
+          { ...val, label: rangeLabels[key] || val.label },
+        ])
+      )
+    : null
 
   const reviewDate = new Date(entry.lastReviewed).toLocaleDateString('de-DE', {
     day: '2-digit', month: 'long', year: 'numeric',
   })
 
-  // Category label translation
-  const categoryDisplay = t?.categoryLabel || entry.category
-
   return (
     <div className="min-h-screen bg-gray-50" dir={langMeta.rtl ? 'rtl' : 'ltr'}>
       <JsonLd entry={entry} />
 
-      {/* Header */}
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <Link href="/"><MedyraLogo size="md" /></Link>
@@ -129,7 +122,7 @@ export default async function LexikonLangEntryPage({ params }) {
             <span className="hidden sm:block text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full font-semibold">
               {langMeta.name}
             </span>
-            <Link href={`/upload?source=lexikon&term=${entry.slug}`}
+            <Link href={`/upload?source=lexikon&term=${termSlug}`}
               className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-1.5 rounded-lg text-xs transition-colors">
               Upload Report
             </Link>
@@ -137,16 +130,16 @@ export default async function LexikonLangEntryPage({ params }) {
         </div>
       </header>
 
-      {/* Language switcher bar */}
+      {/* Language switcher */}
       <div className="bg-white border-b border-gray-100">
-        <div className="container mx-auto px-4 py-2 flex items-center gap-2 overflow-x-auto scrollbar-none">
+        <div className="container mx-auto px-4 py-2 flex items-center gap-2 overflow-x-auto">
           <span className="text-xs text-gray-400 flex-shrink-0">Also in:</span>
-          <Link href={`/lexikon/${slug}`}
+          <Link href={`/lexikon/${termSlug}`}
             className="flex-shrink-0 text-xs px-2.5 py-1 rounded-full border bg-gray-900 text-white border-gray-900 font-semibold">
             DE
           </Link>
           {SUPPORTED_LANGS.filter(l => l !== lang).map(l => (
-            <Link key={l} href={`/lexikon/${l}/${slug}`}
+            <Link key={l} href={`/lexikon/${l}/${termSlug}`}
               className="flex-shrink-0 text-xs px-2.5 py-1 rounded-full border border-gray-200 text-gray-600 hover:border-emerald-400 hover:text-emerald-600 transition-colors font-medium">
               {l.toUpperCase()}
             </Link>
@@ -155,37 +148,30 @@ export default async function LexikonLangEntryPage({ params }) {
       </div>
 
       <main className="container mx-auto px-4 py-10 max-w-2xl">
-
-        {/* Category badge + meta */}
         <div className="flex items-center justify-between mb-5 flex-wrap gap-2">
           <Link href="/lexikon"
             className={`text-xs font-semibold px-3 py-1.5 rounded-full border ${cat.bg} ${cat.text} ${cat.border} hover:opacity-80 transition-opacity`}>
-            {categoryDisplay}
+            {t?.categoryLabel || entry.category}
           </Link>
-          <p className="text-xs text-gray-400">
-            Reviewed: {reviewDate}
-          </p>
+          <p className="text-xs text-gray-400">Reviewed: {reviewDate}</p>
         </div>
 
-        {/* H1 */}
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 leading-tight">
           {entry.acronym}{' '}
           <span style={{ color: cat.accent }}>{entry.fullName}</span>
         </h1>
         {entry.unit && (
-          <p className="text-sm text-gray-400 mb-6">Unit: <span className="font-semibold text-gray-600">{entry.unit}</span></p>
+          <p className="text-sm text-gray-400 mb-6">
+            Unit: <span className="font-semibold text-gray-600">{entry.unit}</span>
+          </p>
         )}
 
-        {/* Quick answer */}
         <FeaturedSnippet text={entry.shortAnswer} accent={cat.accent} />
 
-        {/* Range table */}
         {translatedRanges && <RangeTable ranges={translatedRanges} unit={entry.unit} />}
 
-        {/* Causes */}
         <CausesSection causesElevated={entry.causesElevated} causesLow={entry.causesLow} />
 
-        {/* Doctor questions */}
         {entry.doctorQuestions?.length > 0 && (
           <div className="my-8">
             <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
@@ -202,10 +188,8 @@ export default async function LexikonLangEntryPage({ params }) {
           </div>
         )}
 
-        <DoctorCTA slug={entry.slug} />
-
+        <DoctorCTA slug={termSlug} />
         {related.length > 0 && <RelatedValues entries={related} />}
-
         <MedicalDisclaimer />
       </main>
     </div>

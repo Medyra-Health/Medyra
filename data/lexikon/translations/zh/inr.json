@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "国际标准化比值（INR）反映血液凝固时间，服用华法林等抗凝药物的患者需定期监测。INR过高提示出血风险增加，过低提示血栓风险。",
+  "metaDescription": "INR偏高或偏低？正常范围、抗凝治疗意义及何时就医——简单易懂的解释。",
+  "causesElevated": ["华法林过量", "维生素K缺乏", "严重肝病", "弥散性血管内凝血"],
+  "causesLow": ["华法林剂量不足", "维生素K摄入过多"],
+  "doctorQuestions": [
+    "我的INR在治疗目标范围内吗？",
+    "我需要调整华法林剂量吗？",
+    "哪些食物或药物会影响我的INR？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常（治疗范围）", "elevated": "升高", "high": "显著升高" },
+  "categoryLabel": "凝血指标",
+  "pageTitle": "INR值 — 国际标准化比值详解 | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "维生素D对骨骼、免疫系统和肌肉功能至关重要。缺乏非常普遍，尤其在冬季。低水平可导致疲劳和骨痛。补充前应与医生讨论剂量。",
+  "metaDescription": "维生素D偏低？正常范围、缺乏症状及何时补充——简单易懂的解释。",
+  "causesElevated": ["补充剂过量"],
+  "causesLow": ["日晒不足", "肤色较深", "年龄增长", "吸收不良", "肾脏疾病"],
+  "doctorQuestions": [
+    "我的维生素D缺乏有多严重？",
+    "我应该补充多少剂量的维生素D？",
+    "需要补充多长时间？"
+  ],
+  "rangeLabels": { "low": "缺乏", "normal": "充足", "elevated": "临界（不足）", "high": "可能过高" },
+  "categoryLabel": "维生素",
+  "pageTitle": "维生素D值 — 25-OH维生素D详解 | Medyra"
+}
