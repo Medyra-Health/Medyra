@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "平均赤血球ヘモグロビン濃度（MCHC）は赤血球中のヘモグロビン濃度を示します。低値は低色素性貧血を、高値は遺伝性球状赤血球症などを示す場合があります。",
+  "metaDescription": "MCHCが低い・高い？基準値、原因、意味——わかりやすく解説。",
+  "causesElevated": ["遺伝性球状赤血球症", "重度脱水"],
+  "causesLow": ["鉄欠乏性貧血", "サラセミア"],
+  "doctorQuestions": [
+    "MCHCはどのタイプの貧血を示していますか？",
+    "追加の血液検査が必要ですか？",
+    "鉄のサプリメントが必要ですか？"
+  ],
+  "rangeLabels": { "low": "低値", "normal": "基準値内", "elevated": "上昇" },
+  "categoryLabel": "血球検査",
+  "pageTitle": "MCHC値 — 平均赤血球ヘモグロビン濃度わかりやすく解説 | Medyra"
+}
