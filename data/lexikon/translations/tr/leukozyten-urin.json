@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "İdrardaki beyaz kan hücreleri, idrar yolu iltihabına işaret edebilir. Az miktarlar normal olabilir, ancak yüksek değerler idrar yolu enfeksiyonu veya böbrek iltihabına işaret edebilir. Pozitif bulguları doktorunuzla görüşün.",
+  "metaDescription": "İdrarda beyaz kan hücreleri yüksek mi? Nedenler, anlamı ve idrar yolu enfeksiyonuna işaret ettiğinde — basitçe açıklandı.",
+  "causesElevated": ["İdrar yolu enfeksiyonu (sistit)", "Böbrek iltihabı (pyelonefrit)", "Üretrit", "Böbrek hastalığı"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "İdrar yolu enfeksiyonu var mı, antibiyotik gerekli mi?",
+    "İdrar kültürü yaptırmalı mıyım?",
+    "İdrardaki beyaz kan hücreleri böbrek hastalığına mı işaret ediyor?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
+  "categoryLabel": "İdrar Değerleri",
+  "pageTitle": "İdrarda WBC — İdrar yolu enfeksiyonu açıklaması | Medyra"
+}

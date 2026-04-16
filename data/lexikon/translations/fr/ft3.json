@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La fT3 (triiodothyronine libre) est l'hormone thyroïdienne active qui influence le métabolisme, la fréquence cardiaque et de nombreuses fonctions corporelles. Des valeurs élevées peuvent indiquer une hyperthyroïdie, des valeurs basses une hypothyroïdie. Discutez de toute déviation avec votre médecin.",
+  "metaDescription": "fT3 élevée ou basse ? Valeurs normales, signification et causes des anomalies de la triiodothyronine libre — expliqués simplement.",
+  "causesElevated": ["Hyperthyroïdie", "Maladie de Basedow", "Thyroïdite"],
+  "causesLow": ["Hypothyroïdie", "Thyroïdite de Hashimoto", "Carence en iode", "Maladie systémique grave"],
+  "doctorQuestions": [
+    "Comment mon fT3 doit-il être interprété par rapport à fT4 et TSH ?",
+    "Y a-t-il une maladie thyroïdienne ?",
+    "Ai-je besoin d'une scintigraphie thyroïdienne ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Thyroïde",
+  "pageTitle": "Valeur fT3 — Triiodothyronine libre expliquée | Medyra"
+}

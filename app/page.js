@@ -1201,6 +1201,52 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ── LEXIKON ── */}
+      <section className="py-20 md:py-24 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-50 rounded-full blur-3xl opacity-60" />
+        </div>
+        <div className="container mx-auto px-4 max-w-5xl relative">
+          <div className="sr text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+              <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" /> Kostenloses Lexikon
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3 leading-tight">
+              Laborwerte verstehen — ohne Medizinstudium
+            </h2>
+            <p className="text-gray-500 text-base max-w-xl mx-auto">
+              46 Blutwerte einfach erklärt: Normwerte, Ursachen, Fragen für Ihren Arzt — kostenlos, auf Deutsch, ohne Anmeldung.
+            </p>
+          </div>
+
+          {/* Term preview cards */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mb-10">
+            {[
+              { slug: 'crp',          acronym: 'CRP',    name: 'Entzündungs­wert',  color: 'bg-orange-50 border-orange-200 text-orange-700' },
+              { slug: 'hba1c',        acronym: 'HbA1c',  name: 'Langzeit­zucker',   color: 'bg-violet-50 border-violet-200 text-violet-700' },
+              { slug: 'tsh',          acronym: 'TSH',    name: 'Schilddrüse',        color: 'bg-teal-50 border-teal-200 text-teal-700' },
+              { slug: 'cholesterin',  acronym: 'TC',     name: 'Cholesterin',        color: 'bg-violet-50 border-violet-200 text-violet-700' },
+              { slug: 'haemoglobin',  acronym: 'Hb',     name: 'Hämoglobin',         color: 'bg-red-50 border-red-200 text-red-700' },
+              { slug: 'vitamin-d',    acronym: 'Vit.D',  name: 'Vitamin D',          color: 'bg-yellow-50 border-yellow-200 text-yellow-700' },
+            ].map((term, i) => (
+              <Link key={term.slug} href={`/lexikon/${term.slug}`}
+                className={`sr d${i + 1} group flex flex-col items-center text-center border rounded-2xl px-3 py-4 ${term.color} hover:shadow-md transition-all`}>
+                <span className="font-black text-lg leading-none mb-1">{term.acronym}</span>
+                <span className="text-xs opacity-70 leading-tight">{term.name}</span>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center sr">
+            <Link href="/lexikon"
+              className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-colors shadow-sm shadow-emerald-200">
+              Alle 46 Laborwerte im Lexikon <ArrowRight className="h-4 w-4" />
+            </Link>
+            <p className="text-gray-400 text-xs mt-3">Kostenlos · Keine Anmeldung erforderlich</p>
+          </div>
+        </div>
+      </section>
+
       {/* ── BLOG ── */}
       <section className="py-20 md:py-24 bg-gray-950 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -1251,21 +1297,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer className="bg-gray-900 border-t border-gray-800 text-white py-10">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center mb-4">
-            <MedyraLogo size="sm" variant="dark" />
-          </div>
-          <p className="text-gray-400 mb-5 text-sm">{t('footer.tagline')}</p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400">
-            <Link href="/privacy" className="hover:text-emerald-400 transition-colors">{t('footer.privacy')}</Link>
-            <Link href="/terms" className="hover:text-emerald-400 transition-colors">{t('footer.terms')}</Link>
-            <Link href="/contact" className="hover:text-emerald-400 transition-colors">{t('footer.contact')}</Link>
-          </div>
-          <p className="text-gray-600 text-xs mt-6">{t('footer.copyright')}</p>
-        </div>
-      </footer>
     </div>
   )
 }

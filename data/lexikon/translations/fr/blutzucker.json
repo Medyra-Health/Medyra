@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La glycémie à jeun mesure la concentration de glucose dans le sang après au moins 8 heures sans manger. Des valeurs supérieures à 126 mg/dl peuvent indiquer un diabète, des valeurs entre 100 et 125 mg/dl un prédiabète. Discutez des valeurs élevées avec votre médecin.",
+  "metaDescription": "Glycémie à jeun élevée ? Valeurs normales, risque de diabète et signification — expliqués simplement.",
+  "causesElevated": ["Diabète sucré", "Résistance à l'insuline", "Réaction au stress", "Certains médicaments (ex. corticostéroïdes)"],
+  "causesLow": ["Trop d'insuline", "Certains médicaments", "Jeûne après exercice", "Affections rares"],
+  "doctorQuestions": [
+    "Dois-je faire un test de tolérance au glucose oral ?",
+    "Ai-je un diabète ou un prédiabète ?",
+    "Quels changements alimentaires m'aideraient ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal (à jeun)", "elevated": "Zone prédiabète", "high": "Zone diabète" },
+  "categoryLabel": "Métabolisme",
+  "pageTitle": "Valeur glycémie — Glycémie à jeun expliquée | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le fer sérique mesure la quantité de fer dans le sang au moment du prélèvement. Des valeurs basses peuvent indiquer une carence en fer ; des valeurs élevées peuvent suggérer une surcharge en fer. Comme les niveaux fluctuent considérablement, le fer sérique est toujours évalué avec la ferritine et la transferrine.",
+  "metaDescription": "Fer sérique élevé ou bas ? Valeurs normales, diagnostic de carence en fer et signification — expliqués simplement.",
+  "causesElevated": ["Hémochromatose", "Hémolyse", "Maladie hépatique", "Surdosage de suppléments de fer"],
+  "causesLow": ["Carence en fer", "Inflammation chronique", "Règles abondantes", "Apport insuffisant en fer"],
+  "doctorQuestions": [
+    "Y a-t-il une vraie carence en fer ?",
+    "Ai-je besoin de suppléments de fer ?",
+    "Dois-je être testé pour l'hémochromatose ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Bilan martial",
+  "pageTitle": "Valeur Fe — Fer sérique expliqué | Medyra"
+}

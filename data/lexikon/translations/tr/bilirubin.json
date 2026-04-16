@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Bilirubin, kırmızı kan hücrelerinin yıkımından oluşan bir atık üründür. Yüksek değerler karaciğer sorunlarına veya safra tıkanıklığına işaret edebilir ve sarılığa yol açabilir. Hafif yüksek değerler zararsız Gilbert sendromunda da görülebilir.",
+  "metaDescription": "Bilirubin yüksek mi? Normal değerler, nedenler ve sarılık veya karaciğer hastalığına işaret ettiğinde — basitçe açıklandı.",
+  "causesElevated": ["Karaciğer hastalığı", "Safra taşları", "Hemoliz (kırmızı kan hücresi yıkımı)", "Gilbert sendromu", "Bazı ilaçlar"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bilirubin değerimin arkasında bir safra kesesi hastalığı olabilir mi?",
+    "Ultrason gerekli mi?",
+    "Bende hafif yüksek değer zararsız mı?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Hafif yüksek", "high": "Çok yüksek (sarılık olası)" },
+  "categoryLabel": "Karaciğer Değerleri",
+  "pageTitle": "Bili değeri — Bilirubin açıklaması | Medyra"
+}

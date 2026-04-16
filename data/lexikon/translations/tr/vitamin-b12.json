@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "B12 vitamini (kobalamin), kan oluşumu, sinir sistemi ve hücre metabolizması için zorunludur. Eksikliği yavaş gelişir ve yorgunluk, karıncalanma ve unutkanlığa yol açabilir. Veganlar ve yaşlılar daha yüksek risk altındadır. Şüphenizi doktorunuzla görüşün.",
+  "metaDescription": "B12 vitamini çok düşük mü? Normal değerler, eksiklik belirtileri ve veganlar ile yaşlılarda tedavi — basitçe açıklandı.",
+  "causesElevated": ["Karaciğer hastalığı", "Bazı kan hastalıkları", "Takviyelerin aşırı kullanımı"],
+  "causesLow": ["Vegan/vejetaryen diyet", "Atrofik gastrit", "Bağırsakta yetersiz emilim", "Uzun süreli metformin veya proton pompası inhibitörü kullanımı"],
+  "doctorQuestions": [
+    "B12 düzeyim yeterli mi, yoksa fonksiyonel eksiklik mi var?",
+    "Enjeksiyon mu yoksa tablet mi gerekli?",
+    "Neden mide emilim sorunu mu?"
+  ],
+  "rangeLabels": { "low": "Eksik", "normal": "Yeterli", "elevated": "Yüksek", "high": "Yüksek" },
+  "categoryLabel": "Vitaminler",
+  "pageTitle": "B12 vitamini değeri — Kobalamin açıklaması | Medyra"
+}

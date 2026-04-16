@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "fT4 (free thyroxine) is the main thyroid hormone and is converted in the liver to the active fT3. Elevated levels may indicate hyperthyroidism, low levels may point to hypothyroidism. This value should always be assessed alongside TSH.",
+  "metaDescription": "fT4 elevated or low? Normal ranges, meaning of free thyroxine, and thyroid function — explained simply.",
+  "causesElevated": ["Hyperthyroidism", "Graves' disease", "Excess thyroid hormone dosage"],
+  "causesLow": ["Hypothyroidism", "Hashimoto's thyroiditis", "Pituitary gland disease"],
+  "doctorQuestions": [
+    "How does my fT4 relate to my TSH level?",
+    "Do I need thyroid hormones?",
+    "Should I have a thyroid ultrasound?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
+  "categoryLabel": "Thyroid",
+  "pageTitle": "fT4 value — Free Thyroxine explained | Medyra"
+}

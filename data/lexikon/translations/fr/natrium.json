@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le sodium (Na) est un électrolyte vital qui régule l'équilibre hydrique et la pression artérielle. Des valeurs basses (hyponatrémie) peuvent causer confusion et convulsions ; des valeurs élevées (hypernatrémie) peuvent suggérer une déshydratation. Discutez de toute déviation avec votre médecin.",
+  "metaDescription": "Sodium élevé ou bas ? Valeurs normales, causes du déséquilibre électrolytique et quand consulter — expliqués simplement.",
+  "causesElevated": ["Déshydratation", "Apport en sel excessif", "Certains médicaments", "Diabète insipide"],
+  "causesLow": ["Apport liquidien excessif", "Maladie rénale", "Insuffisance cardiaque", "Certains médicaments (diurétiques)", "Vomissements / diarrhée"],
+  "doctorQuestions": [
+    "Quelle est la cause de mon déséquilibre sodique ?",
+    "Dois-je ajuster mon apport hydrique ?",
+    "Un médicament pourrait-il affecter mon taux de sodium ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé (hypernatrémie)", "high": "Très élevé" },
+  "categoryLabel": "Électrolytes",
+  "pageTitle": "Valeur Na — Sodium expliqué | Medyra"
+}

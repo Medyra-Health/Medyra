@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Hemoglobin (Hb) is the protein in red blood cells that carries oxygen from the lungs to organs and tissues. Normal values are 12–16 g/dl for women and 13.5–17.5 g/dl for men. A low level indicates anemia and can cause fatigue. Discuss abnormal results with your doctor.",
+  "metaDescription": "Hemoglobin (Hb) too low? Normal ranges for men and women, causes of anemia, and when to see a doctor — explained simply.",
+  "causesElevated": ["Dehydration", "Smoking", "High altitude", "Polycythemia vera"],
+  "causesLow": ["Iron deficiency", "Vitamin B12 deficiency", "Chronic disease", "Blood loss", "Folate deficiency"],
+  "doctorQuestions": [
+    "What type of anemia might I have?",
+    "Do I need iron supplements or other nutritional supplements?",
+    "When should this value be rechecked?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
+  "categoryLabel": "Blood Count",
+  "pageTitle": "Hb value — Hemoglobin explained | Medyra"
+}

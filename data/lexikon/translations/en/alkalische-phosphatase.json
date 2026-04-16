@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Alkaline phosphatase (ALP) is an enzyme found in the liver, bones, and bile ducts. Elevated levels can indicate bile duct disease, liver problems, or bone disorders. Discuss persistently elevated levels with your doctor.",
+  "metaDescription": "Alkaline phosphatase (ALP) elevated? Normal ranges, causes, and meaning for liver and bone health — explained simply.",
+  "causesElevated": ["Bile duct disease", "Liver disease", "Bone disease (e.g. Paget's disease)", "Pregnancy", "Normal growth in children"],
+  "causesLow": ["Hypothyroidism", "Vitamin B12 deficiency", "Zinc deficiency"],
+  "doctorQuestions": [
+    "Is the elevation coming from the liver or from the bones?",
+    "Should I rule out a bile duct infection?",
+    "Do I need further tests?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
+  "categoryLabel": "Liver Values",
+  "pageTitle": "AP value — Alkaline Phosphatase explained | Medyra"
+}

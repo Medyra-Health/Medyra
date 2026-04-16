@@ -10,7 +10,7 @@
     "elevated": { "min": 200, "max": 240, "label": "Grenzwertig erhöht" },
     "high": { "min": 240, "max": null, "label": "Erhöht" }
   },
-  "causesElevated": ["Fetreiche Ernährung", "Genetische Veranlagung", "Übergewicht", "Schilddrüsenunterfunktion", "Diabetes"],
+  "causesElevated": ["Fettreiche Ernährung", "Genetische Veranlagung", "Übergewicht", "Schilddrüsenunterfunktion", "Diabetes"],
   "causesLow": ["Unterernährung", "Lebererkrankungen", "Malabsorption"],
   "relatedValues": ["ldl", "hdl", "triglyzeride"],
   "doctorQuestions": [

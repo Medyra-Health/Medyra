@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "INR, kan pıhtılaşma süresini ölçer ve özellikle kan sulandırıcıları (örn. warfarin) izlemek için kullanılır. 1,2'nin üzerindeki değerler pıhtılaşma süresinin uzadığını ve kanama riskinin arttığını gösterebilir. Değişiklikleri doktorunuzla görüşün.",
+  "metaDescription": "INR yüksek mi? Normal değerler, warfarin tedavisindeki anlamı ve pıhtılaşma bozuklukları — basitçe açıklandı.",
+  "causesElevated": ["Warfarin / antikoagülan tedavi", "Karaciğer hastalığı", "K vitamini eksikliği", "Pıhtılaşma bozuklukları"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "INR değerim antikoagülan tedavim için terapötik aralıkta mı?",
+    "Warfarin dozumu ayarlamam gerekiyor mu?",
+    "Bazı besinler INR değerimi etkileyebilir mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Hafif yüksek", "high": "Yüksek / terapötik (antikoagülan)" },
+  "categoryLabel": "Pıhtılaşma",
+  "pageTitle": "INR değeri — Uluslararası Normalleştirilmiş Oran açıklaması | Medyra"
+}

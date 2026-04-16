@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "HbA1c, son 2–3 aydaki ortalama kan şekeri düzeyini gösterir. %6,5'in üzerindeki değerler diyabeti, %5,7 ile %6,4 arasındaki değerler ise prediyabeti gösterebilir. Yüksek değerleri mutlaka doktorunuzla görüşün.",
+  "metaDescription": "HbA1c yüksek mi? Normal değerler, diyabet riski ve uzun dönem kan şekerinin anlamı — basitçe açıklandı.",
+  "causesElevated": ["Tip 2 diyabet", "Tip 1 diyabet", "Kötü kontrollü diyabet", "İnsülin direnci"],
+  "causesLow": ["Hemoliz", "Kan kaybı anemisi", "Belirli hemoglobin varyantları"],
+  "doctorQuestions": [
+    "HbA1c değerim diyabet mi yoksa prediyabet mi gösteriyor?",
+    "Hangi diyet veya yaşam tarzı değişikliklerini önerirsiniz?",
+    "İlaç gerekli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Prediyabet", "high": "Diyabet aralığı" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "HbA1c değeri — Uzun dönem kan şekeri açıklaması | Medyra"
+}

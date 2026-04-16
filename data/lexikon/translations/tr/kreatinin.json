@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Kreatinin, böbrekler tarafından süzülen bir kas metabolizması atık ürünüdür. Yüksek değerler böbrek fonksiyonunun azaldığına işaret edebilir. Değer kas kütlesi ve sıvı alımına da bağlıdır. Anormal değerleri doktorunuzla görüşün.",
+  "metaDescription": "Kreatinin yüksek mi? Normal değerler, nedenler ve böbrek fonksiyonu için anlamı — basitçe açıklandı.",
+  "causesElevated": ["Böbrek hastalığı", "Dehidrasyon", "Yüksek kas kütlesi", "Bazı ilaçlar", "Aşırı et tüketimi"],
+  "causesLow": ["Düşük kas kütlesi", "Yetersiz beslenme", "Gebelik"],
+  "doctorQuestions": [
+    "Böbrek fonksiyonum bozulmuş mu?",
+    "eGFR hesaplanmalı mı?",
+    "Sıvı alımıma veya diyetime dikkat etmem gerekiyor mu?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Hafif yüksek", "high": "Çok yüksek" },
+  "categoryLabel": "Böbrek Değerleri",
+  "pageTitle": "Kreatinin değeri — Böbrek fonksiyonu açıklaması | Medyra"
+}

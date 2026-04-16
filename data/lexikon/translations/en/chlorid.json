@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Chloride (Cl) is an electrolyte that helps regulate acid-base balance and fluid balance. Deviations from normal can indicate kidney or metabolic problems. It is usually assessed alongside sodium and potassium. Discuss any abnormal values with your doctor.",
+  "metaDescription": "Chloride elevated or low? Normal ranges, causes, and meaning of this electrolyte — explained simply.",
+  "causesElevated": ["Dehydration", "Kidney disease", "Diarrhea", "Certain medications"],
+  "causesLow": ["Vomiting", "Diuretics", "Heart failure", "Metabolic acidosis"],
+  "doctorQuestions": [
+    "Does my chloride level indicate an acid-base problem?",
+    "Should I have my other electrolytes checked at the same time?",
+    "Could a medication be affecting my chloride level?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated (hyperchloremia)", "high": "Highly elevated" },
+  "categoryLabel": "Electrolytes",
+  "pageTitle": "Cl value — Chloride explained | Medyra"
+}

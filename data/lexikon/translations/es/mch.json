@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "El MCH mide la cantidad media de hemoglobina en un solo glóbulo rojo. Los valores bajos pueden indicar deficiencia de hierro, mientras que los valores altos pueden sugerir deficiencia de vitamina B12. Consulte con su médico ante hallazgos anormales.",
+  "metaDescription": "MCH bajo o alto? Valores normales, significado y causas de contenido anormal de hemoglobina por célula — explicado de forma sencilla.",
+  "causesElevated": ["Deficiencia de vitamina B12", "Deficiencia de folato", "Consumo de alcohol"],
+  "causesLow": ["Deficiencia de hierro", "Talasemia", "Enfermedad crónica"],
+  "doctorQuestions": [
+    "¿Qué significa mi MCH para mi producción de sangre?",
+    "¿Debería hacerme pruebas de deficiencia de hierro o vitaminas?",
+    "¿Necesito más pruebas?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Valor MCH — Hemoglobina Corpuscular Media explicada | Medyra"
+}

@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
-import { getAllSlugs, getEntry, getRelatedEntries } from '@/lib/lexikon'
+import { getAllSlugs, getEntry, getRelatedEntries, SUPPORTED_LANGS } from '@/lib/lexikon'
 import FeaturedSnippet from '@/components/lexikon/FeaturedSnippet'
 import RangeTable from '@/components/lexikon/RangeTable'
 import CausesSection from '@/components/lexikon/CausesSection'
@@ -39,7 +39,11 @@ export async function generateMetadata({ params }) {
     description: entry.metaDescription,
     alternates: {
       canonical: `https://medyra.de/lexikon/${entry.slug}`,
-      languages: { 'de-DE': `https://medyra.de/lexikon/${entry.slug}` },
+      languages: {
+        'de': `https://medyra.de/lexikon/${entry.slug}`,
+        'x-default': `https://medyra.de/lexikon/${entry.slug}`,
+        ...Object.fromEntries(SUPPORTED_LANGS.map(l => [l, `https://medyra.de/lexikon/${l}/${entry.slug}`])),
+      },
     },
     openGraph: {
       title: `${entry.acronym} Wert — ${entry.fullName} einfach erklärt`,
@@ -136,11 +140,6 @@ export default async function LexikonEntryPage({ params }) {
         <MedicalDisclaimer />
       </main>
 
-      <footer className="border-t border-gray-100 py-6 text-center text-xs text-gray-400 mt-8">
-        © 2026 Medyra ·{' '}
-        <Link href="/privacy" className="hover:text-gray-600">Datenschutz</Link> ·{' '}
-        <Link href="/terms" className="hover:text-gray-600">AGB</Link>
-      </footer>
     </div>
   )
 }

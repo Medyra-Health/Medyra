@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "İdrarda kırmızı kan hücreleri (hematüri), idrarda kan varlığı anlamına gelir. Bu durum idrar yolu enfeksiyonları, böbrek taşları veya diğer hastalıklara işaret edebilir. Belirti olmasa bile pozitif bir bulgu doktorunuzla görüşülmelidir.",
+  "metaDescription": "İdrarda kan (hematüri)? İdrarda kırmızı kan hücreleri: nedenler, anlamı ve ne zaman doktora gidilmeli — basitçe açıklandı.",
+  "causesElevated": ["İdrar yolu enfeksiyonu", "Böbrek taşları", "Sistit", "Böbrek hastalığı", "Travma", "Bazı ilaçlar"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "İdrardaki kırmızı kan hücrelerinin nedeni nedir?",
+    "Mesane veya böbrek incelemesi gerekli mi?",
+    "Ultrason yapılmalı mı?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
+  "categoryLabel": "İdrar Değerleri",
+  "pageTitle": "İdrarda RBC — Hematüri açıklaması | Medyra"
+}

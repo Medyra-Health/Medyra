@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "GOT/AST (aspartat aminotransferaz), karaciğer, kalp ve kaslarda bulunan bir enzimdir. Yüksek değerler karaciğer hasarı veya kalp sorunlarına işaret edebilir. GPT/ALT ile birlikte değerlendirildiğinde nedeni daraltmaya yardımcı olur. Anormal değerleri doktorunuzla görüşün.",
+  "metaDescription": "GOT / AST yüksek mi? Normal değerler, nedenler ve bu karaciğer enziminin anlamı — basitçe açıklandı.",
+  "causesElevated": ["Karaciğer hastalığı", "Kalp krizi", "Kas hastalığı", "Alkol kullanımı", "Bazı ilaçlar"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "GOT/GPT oranı belirli bir nedene mi işaret ediyor?",
+    "Kalp değerlendirmesi yapılmalı mı?",
+    "Değer ne zaman kontrol edilmeli?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
+  "categoryLabel": "Karaciğer Değerleri",
+  "pageTitle": "GOT/AST değeri — Aspartat Aminotransferaz açıklaması | Medyra"
+}

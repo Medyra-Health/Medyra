@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La TSH (hormone thyréostimulante) est produite par l'hypophyse et régule la thyroïde. Un TSH élevé peut indiquer une hypothyroïdie, un TSH bas peut indiquer une hyperthyroïdie. Les deux peuvent causer des symptômes comme la fatigue ou les palpitations. Discutez des valeurs anormales avec votre médecin.",
+  "metaDescription": "TSH élevée ou basse ? Valeurs normales, causes et signification des hormones thyroïdiennes — expliqués simplement.",
+  "causesElevated": ["Hypothyroïdie", "Thyroïdite de Hashimoto", "Carence en iode", "Certains médicaments"],
+  "causesLow": ["Hyperthyroïdie", "Maladie de Basedow", "Dose excessive d'hormones thyroïdiennes"],
+  "doctorQuestions": [
+    "Mon TSH indique-t-il une hypo- ou une hyperthyroïdie ?",
+    "Dois-je aussi faire mesurer fT3 et fT4 ?",
+    "Ai-je besoin d'hormones thyroïdiennes ou d'une évaluation plus approfondie ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé (hypothyroïdie possible)", "high": "Très élevé" },
+  "categoryLabel": "Thyroïde",
+  "pageTitle": "Valeur TSH — Hormone thyréostimulante expliquée | Medyra"
+}

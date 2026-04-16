@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "eGFR (estimated glomerular filtration rate) estimates how well your kidneys are filtering blood. Values above 90 are considered normal. Lower values may indicate reduced kidney function. Recommendations depend on the stage. Discuss the value with your doctor.",
+  "metaDescription": "eGFR low? Normal ranges, stages of kidney function, and when to see a doctor — explained simply.",
+  "causesElevated": [],
+  "causesLow": ["Chronic kidney disease", "Diabetes", "High blood pressure", "Repeated kidney infections", "Certain medications"],
+  "doctorQuestions": [
+    "What stage of kidney disease am I at?",
+    "What can I do to protect my kidneys?",
+    "Should I see a nephrologist?"
+  ],
+  "rangeLabels": { "low": "Impaired (CKD)", "normal": "Normal (≥ 90)", "elevated": "Mildly reduced", "high": "Impaired (CKD)" },
+  "categoryLabel": "Kidney Values",
+  "pageTitle": "eGFR value — Glomerular Filtration Rate explained | Medyra"
+}

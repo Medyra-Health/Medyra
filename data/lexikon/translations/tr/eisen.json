@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Serum demiri, kan alındığı andaki kandaki demir miktarını ölçer. Düşük değerler demir eksikliğine; yüksek değerler ise demir yüklenmesine işaret edebilir. Değer önemli ölçüde dalgalandığından her zaman ferritin ve transferrin ile birlikte değerlendirilir.",
+  "metaDescription": "Serum demiri yüksek veya düşük mü? Normal değerler, demir eksikliği tanısı ve anlamı — basitçe açıklandı.",
+  "causesElevated": ["Hemokromatoz", "Hemoliz", "Karaciğer hastalığı", "Demir takviyelerinin aşırı kullanımı"],
+  "causesLow": ["Demir eksikliği", "Kronik iltihap", "Ağır menstrüasyon", "Yetersiz demir alımı"],
+  "doctorQuestions": [
+    "Gerçek bir demir eksikliği var mı?",
+    "Demir takviyesi gerekli mi?",
+    "Hemokromatoz açısından test edilmeli miyim?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
+  "categoryLabel": "Demir Değerleri",
+  "pageTitle": "Fe değeri — Serum Demiri açıklaması | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Transferrin, kandaki demir için taşıma proteinidir. Demir eksikliğinde vücut daha fazla taşıma kapasitesi sağladığı için transferrin yükselir. İltihap veya demir yüklenmesinde ise genellikle düşük olur. Bu değeri ferritin ve serum demiriyle birlikte doktorunuzla görüşün.",
+  "metaDescription": "Transferrin yüksek veya düşük mü? Normal değerler, demir eksikliğindeki anlamı ve nedenleri — basitçe açıklandı.",
+  "causesElevated": ["Demir eksikliği", "Gebelik", "Östrojen takviyeleri"],
+  "causesLow": ["İnflamatuar hastalıklar", "Karaciğer hastalığı", "Demir yüklenmesi (hemokromatoz)", "Yetersiz beslenme"],
+  "doctorQuestions": [
+    "Transferrinim ferritin ile birlikte nasıl değerlendirilmeli?",
+    "Demir takviyesi gerekli mi?",
+    "Hemokromatoz söz konusu olabilir mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
+  "categoryLabel": "Demir Değerleri",
+  "pageTitle": "Transferrin değeri — Demir taşıma proteini açıklaması | Medyra"
+}

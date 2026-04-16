@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Uric acid is produced when purines from food are broken down. High levels can indicate gout or promote kidney stones. Diet and alcohol play a major role. Discuss elevated levels with your doctor, especially if you have joint pain.",
+  "metaDescription": "Uric acid elevated? Normal ranges, gout risk, and what you can do about high uric acid — explained simply.",
+  "causesElevated": ["Purine-rich diet (meat, organ meats)", "Alcohol use", "Kidney disease", "Certain medications", "Obesity"],
+  "causesLow": ["Certain medications", "Liver disease"],
+  "doctorQuestions": [
+    "Does my level suggest gout?",
+    "What dietary changes can I make?",
+    "Do I need medication to lower uric acid?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated (hyperuricemia)", "high": "Highly elevated" },
+  "categoryLabel": "Kidney Values",
+  "pageTitle": "Uric acid value — Gout risk explained | Medyra"
+}

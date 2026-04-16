@@ -6,6 +6,7 @@ import './globals.css'
 import { Toaster } from 'sonner'
 import MobileNav from '@/components/MobileNav'
 import CookieBanner from '@/components/CookieBanner'
+import SiteFooter from '@/components/SiteFooter'
 
 const inter = Inter({ subsets: ['latin'] })
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-playfair' })
@@ -141,6 +142,7 @@ export default async function RootLayout({ children }) {
         <body className="pb-16 md:pb-0">
           <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
+            <SiteFooter />
             <MobileNav />
             <CookieBanner />
           </NextIntlClientProvider>

@@ -3,7 +3,7 @@
   "acronym": "Hb",
   "fullName": "Hämoglobin",
   "category": "Blutbild",
-  "shortAnswer": "Hämoglobin ist der rote Blutfarbstoff, der Sauerstoff von der Lunge zu den Organen transportiert. Ein zu niedriger Wert kann auf Blutarmut hindeuten und Müdigkeit verursachen. Erhöhte Werte sind seltener. Auffällige Befunde sollten Sie mit Ihrem Arzt besprechen.",
+  "shortAnswer": "Hämoglobin ist der rote Blutfarbstoff, der Sauerstoff von der Lunge zu den Organen transportiert. Normwerte: Frauen 12–16 g/dl, Männer 13,5–17,5 g/dl. Ein zu niedriger Wert deutet auf Blutarmut hin und kann Müdigkeit verursachen. Auffällige Befunde sollten Sie mit Ihrem Arzt besprechen.",
   "unit": "g/dl",
   "ranges": {
     "normal": { "min": 12.0, "max": 17.5, "label": "Normal" },

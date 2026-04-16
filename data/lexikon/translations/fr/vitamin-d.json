@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La vitamine D est essentielle pour les os, le système immunitaire et les muscles. La carence est très fréquente, surtout en hiver. Des valeurs basses peuvent causer de la fatigue et des douleurs osseuses. Discutez de toute carence avec votre médecin avant de prendre des suppléments.",
+  "metaDescription": "Vitamine D trop basse ? Valeurs normales, symptômes de carence et quand la supplémentation est utile — expliqués simplement.",
+  "causesElevated": ["Surdosage de compléments alimentaires"],
+  "causesLow": ["Peu d'exposition au soleil", "Peau foncée", "Âge avancé", "Malabsorption", "Maladie rénale"],
+  "doctorQuestions": [
+    "Quelle est la gravité de ma carence en vitamine D ?",
+    "Quelle dose de vitamine D dois-je prendre ?",
+    "Combien de temps dois-je me supplémenter ?"
+  ],
+  "rangeLabels": { "low": "Carence", "normal": "Suffisant", "elevated": "Limite (insuffisance)", "high": "Peut-être trop élevé" },
+  "categoryLabel": "Vitamines",
+  "pageTitle": "Valeur vitamine D — 25-OH vitamine D expliquée | Medyra"
+}

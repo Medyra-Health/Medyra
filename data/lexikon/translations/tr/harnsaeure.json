@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Ürik asit, gıdalardan alınan purinlerin yıkımı sırasında oluşur. Yüksek değerler gut hastalığına işaret edebilir veya böbrek taşlarını tetikleyebilir. Diyet ve alkol büyük rol oynar. Özellikle eklem ağrınız varsa yüksek değerleri doktorunuzla görüşün.",
+  "metaDescription": "Ürik asit yüksek mi? Normal değerler, gut riski ve yüksek ürik asit için neler yapılabilir — basitçe açıklandı.",
+  "causesElevated": ["Purin açısından zengin diyet (et, sakatat)", "Alkol kullanımı", "Böbrek hastalığı", "Bazı ilaçlar", "Obezite"],
+  "causesLow": ["Bazı ilaçlar", "Karaciğer hastalığı"],
+  "doctorQuestions": [
+    "Değerim gut hastalığına mı işaret ediyor?",
+    "Hangi diyet değişikliklerini yapabilirim?",
+    "Ürik asidi düşürmek için ilaç gerekli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek (hiperürisemi)", "high": "Çok yüksek" },
+  "categoryLabel": "Böbrek Değerleri",
+  "pageTitle": "Ürik asit değeri — Gut riski açıklaması | Medyra"
+}

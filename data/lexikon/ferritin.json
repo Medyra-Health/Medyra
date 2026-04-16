@@ -6,7 +6,8 @@
   "shortAnswer": "Ferritin zeigt, wie viel Eisen der Körper gespeichert hat. Ein niedriger Wert weist auf leere Eisenspeicher hin, oft lange bevor Blutarmut entsteht. Erhöhte Werte können auf Entzündungen oder Eisenüberladung hindeuten. Besprechen Sie auffällige Werte mit Ihrem Arzt.",
   "unit": "µg/l",
   "ranges": {
-    "normal": { "min": 30, "max": 300, "label": "Normal" },
+    "low": { "min": 0, "max": 12, "label": "Mangel (Frauen < 12, Männer < 30)" },
+    "normal": { "min": 12, "max": 300, "label": "Normal (Frauen 12–150, Männer 30–300)" },
     "elevated": { "min": 300, "max": 1000, "label": "Erhöht" },
     "high": { "min": 1000, "max": null, "label": "Stark erhöht" }
   },

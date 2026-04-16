@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Kolesterol, yaşam için gerekli bir kan yağıdır; ancak yüksek miktarları kardiyovasküler riski artırabilir. 200 mg/dl'nin üzerindeki değerler sınırda kabul edilir. LDL/HDL oranı en belirleyici faktördür. Yüksek değerleri doktorunuzla görüşün.",
+  "metaDescription": "Kolesterol yüksek mi? Normal değerler, kardiyovasküler risk ve yüksek total kolesterolün nedenleri — basitçe açıklandı.",
+  "causesElevated": ["Yüksek yağlı diyet", "Genetik yatkınlık", "Obezite", "Hipotiroidizm", "Diyabet"],
+  "causesLow": ["Yetersiz beslenme", "Karaciğer hastalığı", "Malabsorpsiyon"],
+  "doctorQuestions": [
+    "LDL/HDL oranım nedir?",
+    "Kolesterol düşürücü ilaç gerekli mi?",
+    "Hangi diyet değişiklikleri mantıklı?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "İstenilen düzey", "elevated": "Sınırda yüksek", "high": "Yüksek" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "TC değeri — Total Kolesterol açıklaması | Medyra"
+}

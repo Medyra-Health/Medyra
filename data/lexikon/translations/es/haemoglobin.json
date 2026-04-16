@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La hemoglobina (Hb) es la proteína de los glóbulos rojos que transporta oxígeno desde los pulmones a los órganos y tejidos. Los valores normales son 12–16 g/dl en mujeres y 13,5–17,5 g/dl en hombres. Un nivel bajo indica anemia y puede causar fatiga. Consulte con su médico ante resultados anormales.",
+  "metaDescription": "Hemoglobina (Hb) demasiado baja? Valores normales para hombres y mujeres, causas de anemia y cuándo consultar al médico — explicado de forma sencilla.",
+  "causesElevated": ["Deshidratación", "Tabaquismo", "Altitud elevada", "Policitemia vera"],
+  "causesLow": ["Deficiencia de hierro", "Deficiencia de vitamina B12", "Enfermedad crónica", "Pérdida de sangre", "Deficiencia de folato"],
+  "doctorQuestions": [
+    "¿Qué tipo de anemia podría tener?",
+    "¿Necesito suplementos de hierro u otros suplementos nutricionales?",
+    "¿Cuándo debería revisarse este valor?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Valor Hb — Hemoglobina explicada | Medyra"
+}

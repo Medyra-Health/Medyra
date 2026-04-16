@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Bilirubin is a breakdown product of red blood cells. Elevated levels can indicate liver problems or bile duct obstruction and may cause yellowing of the skin (jaundice). Mildly elevated levels are also seen in the harmless Gilbert's syndrome.",
+  "metaDescription": "Bilirubin elevated? Normal ranges, causes, and when it indicates jaundice or liver disease — explained simply.",
+  "causesElevated": ["Liver disease", "Gallstones", "Hemolysis (red blood cell breakdown)", "Gilbert's syndrome", "Certain medications"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Could a gallbladder condition be behind my bilirubin level?",
+    "Do I need an ultrasound?",
+    "Is a mildly elevated level harmless in my case?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Mildly elevated", "high": "Highly elevated (jaundice possible)" },
+  "categoryLabel": "Liver Values",
+  "pageTitle": "Bili value — Bilirubin explained | Medyra"
+}

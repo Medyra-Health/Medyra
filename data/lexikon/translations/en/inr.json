@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "INR measures blood clotting time and is mainly used to monitor anticoagulants (e.g. warfarin). Values above 1.2 may indicate a prolonged clotting time, increasing bleeding risk. Discuss any changes with your doctor.",
+  "metaDescription": "INR elevated? Normal ranges, meaning in warfarin therapy, and coagulation disorders — explained simply.",
+  "causesElevated": ["Warfarin / anticoagulant therapy", "Liver disease", "Vitamin K deficiency", "Clotting disorders"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Is my INR within the therapeutic range for my anticoagulation therapy?",
+    "Do I need to adjust my warfarin dose?",
+    "Can certain foods affect my INR?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Mildly elevated", "high": "Elevated / therapeutic (anticoagulation)" },
+  "categoryLabel": "Coagulation",
+  "pageTitle": "INR value — International Normalized Ratio explained | Medyra"
+}

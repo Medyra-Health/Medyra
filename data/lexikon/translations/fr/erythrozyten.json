@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Les globules rouges (RBC) transportent l'oxygène des poumons vers les tissus. Une numération basse peut indiquer une anémie, une numération élevée peut suggérer une déshydratation. Discutez de tout résultat anormal avec votre médecin.",
+  "metaDescription": "Globules rouges (RBC) bas ou élevés ? Valeurs normales, causes et ce que cela signifie pour votre santé — expliqués simplement.",
+  "causesElevated": ["Déshydratation", "Altitude élevée", "Tabagisme", "Polyglobulie vraie"],
+  "causesLow": ["Carence en fer", "Carence en vitamine B12", "Carence en folates", "Maladies chroniques", "Anémie hémorragique"],
+  "doctorQuestions": [
+    "Ai-je une anémie ?",
+    "Quelle carence nutritionnelle pourrait en être la cause ?",
+    "Des examens complémentaires sont-ils nécessaires ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal (hommes)", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Numération formule sanguine",
+  "pageTitle": "Valeur RBC — Globules rouges expliqués | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le taux de prothrombine (TP) mesure la capacité de coagulation du sang via la voie extrinsèque. Des valeurs basses indiquent un temps de coagulation prolongé et un risque hémorragique accru. La valeur est étroitement liée à la fonction hépatique et à la vitamine K. Discutez de toute valeur anormale avec votre médecin.",
+  "metaDescription": "Taux de prothrombine bas ? Valeurs normales, risque hémorragique et causes — expliqués simplement.",
+  "causesElevated": [],
+  "causesLow": ["Traitement par warfarine / anticoagulants", "Maladie hépatique", "Carence en vitamine K", "Troubles de la coagulation"],
+  "doctorQuestions": [
+    "Mon TP est-il dû à la warfarine ou à une maladie hépatique ?",
+    "Ai-je besoin d'un TP normal avant une chirurgie ?",
+    "Dois-je prendre de la vitamine K ?"
+  ],
+  "rangeLabels": { "low": "Bas (risque hémorragique)", "normal": "Normal", "elevated": "Élevé (rarement cliniquement significatif)", "high": "Élevé" },
+  "categoryLabel": "Coagulation",
+  "pageTitle": "Valeur TP — Taux de prothrombine expliqué | Medyra"
+}

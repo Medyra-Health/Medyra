@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La protéinurie (protéines dans les urines) peut indiquer une lésion rénale car les reins sains retiennent normalement les protéines. De petites quantités peuvent apparaître après l'exercice ou lors d'une fièvre. Des valeurs persistantes doivent être discutées avec votre médecin car elles peuvent indiquer une maladie rénale.",
+  "metaDescription": "Protéines dans les urines (protéinurie) ? Causes, risque de maladie rénale et signification — expliqués simplement.",
+  "causesElevated": ["Maladie rénale chronique", "Diabète (néphropathie diabétique)", "Hypertension artérielle", "Effort physique intense", "Néphrite"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "La protéinurie indique-t-elle une lésion rénale ?",
+    "Dois-je faire une collecte d'urine de 24 heures ?",
+    "Quelles mesures protégeront ma fonction rénale ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Valeurs urinaires",
+  "pageTitle": "Protéines dans les urines — Protéinurie expliquée | Medyra"
+}
