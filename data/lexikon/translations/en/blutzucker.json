@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Fasting blood glucose measures blood sugar concentration after at least 8 hours without eating. Values above 126 mg/dl may indicate diabetes, values between 100 and 125 mg/dl suggest prediabetes. Discuss elevated values with your doctor.",
+  "metaDescription": "Fasting blood glucose elevated? Normal ranges, diabetes risk, and what the value means — explained simply.",
+  "causesElevated": ["Diabetes mellitus", "Insulin resistance", "Stress response", "Certain medications (e.g. corticosteroids)"],
+  "causesLow": ["Too much insulin", "Certain medications", "Fasting after exercise", "Rare conditions"],
+  "doctorQuestions": [
+    "Should I have an oral glucose tolerance test?",
+    "Do I have diabetes or prediabetes?",
+    "What dietary changes would help me?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal (fasting)", "elevated": "Prediabetes range", "high": "Diabetes range" },
+  "categoryLabel": "Metabolism",
+  "pageTitle": "Blood glucose value — Fasting blood sugar explained | Medyra"
+}

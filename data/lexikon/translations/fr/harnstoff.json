@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "L'urée (BUN) est produite lors du catabolisme des protéines et excrétée par les reins. Des valeurs élevées peuvent indiquer une insuffisance rénale ou un régime riche en protéines. Discutez de tout résultat anormal avec votre médecin.",
+  "metaDescription": "Urée / BUN élevé ? Valeurs normales, causes et signification pour la santé rénale — expliqués simplement.",
+  "causesElevated": ["Maladie rénale", "Déshydratation", "Régime riche en protéines", "Hémorragie gastro-intestinale"],
+  "causesLow": ["Malnutrition", "Maladie hépatique", "Surhydratation"],
+  "doctorQuestions": [
+    "Mon urée est-elle liée à ma fonction rénale ?",
+    "Dois-je réduire ma consommation de protéines ?",
+    "Des examens rénaux complémentaires sont-ils nécessaires ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Bilan rénal",
+  "pageTitle": "Valeur BUN — Urée sanguine expliquée | Medyra"
+}

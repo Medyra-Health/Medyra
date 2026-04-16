@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le MCHC mesure la concentration d'hémoglobine dans les globules rouges. Des valeurs basses peuvent indiquer une anémie ferriprive ou certains autres types d'anémie. Des valeurs très élevées sont rares. Discutez de tout résultat anormal avec votre médecin.",
+  "metaDescription": "MCHC bas ou élevé ? Valeurs normales, signification et causes de la concentration anormale en hémoglobine — expliqués simplement.",
+  "causesElevated": ["Sphérocytose héréditaire", "Déshydratation sévère"],
+  "causesLow": ["Anémie ferriprive", "Thalassémie", "Anémie hémorragique"],
+  "doctorQuestions": [
+    "Quel type d'anémie pourrait expliquer mon MCHC ?",
+    "Des examens supplémentaires sont-ils nécessaires ?",
+    "La valeur doit-elle être surveillée ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Légèrement élevé", "high": "Élevé" },
+  "categoryLabel": "Numération formule sanguine",
+  "pageTitle": "Valeur MCHC — Concentration corpusculaire moyenne en hémoglobine expliquée | Medyra"
+}

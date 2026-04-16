@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "TSH (tiroid uyarıcı hormon), hipofiz bezi tarafından üretilir ve tiroid bezini düzenler. Yüksek TSH hipotiroidizmi (düşük tiroid), düşük TSH ise hipertiroidizmi (aşırı aktif tiroid) işaret edebilir. Her ikisi de yorgunluk veya çarpıntı gibi belirtilere neden olabilir. Anormal değerleri doktorunuzla görüşün.",
+  "metaDescription": "TSH yüksek veya düşük mü? Normal değerler, nedenler ve tiroid hormonu değerlerinin anlamı — basitçe açıklandı.",
+  "causesElevated": ["Hipotiroidizm", "Hashimoto tiroiditi", "İyot eksikliği", "Bazı ilaçlar"],
+  "causesLow": ["Hipertiroidizm", "Graves hastalığı", "Aşırı tiroid hormonu dozu"],
+  "doctorQuestions": [
+    "TSH değerim hipotiroidizmi mi yoksa hipertiroidizmi mi gösteriyor?",
+    "fT3 ve fT4 de ölçtürülmeli mi?",
+    "Tiroid hormonu veya ileri değerlendirme gerekiyor mu?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek (hipotiroidizm olası)", "high": "Çok yüksek" },
+  "categoryLabel": "Tiroid",
+  "pageTitle": "TSH değeri — Tiroid Uyarıcı Hormon açıklaması | Medyra"
+}

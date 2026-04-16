@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Folate (folic acid) is a B vitamin essential for cell division and blood formation. A deficiency can lead to anemia and is particularly dangerous during pregnancy. Many people do not get enough folate through diet alone. Discuss any deficiency with your doctor.",
+  "metaDescription": "Folate too low? Normal ranges, pregnancy risks, causes of folic acid deficiency — explained simply.",
+  "causesElevated": ["Overdose of folic acid supplements"],
+  "causesLow": ["Unbalanced diet", "Alcohol use", "Malabsorption", "Certain medications (e.g. methotrexate)"],
+  "doctorQuestions": [
+    "Should I take folate during or before pregnancy?",
+    "Is my folate level sufficient for normal blood formation?",
+    "Which foods are rich in folate?"
+  ],
+  "rangeLabels": { "low": "Deficient", "normal": "Sufficient", "elevated": "Elevated", "high": "Elevated" },
+  "categoryLabel": "Vitamins",
+  "pageTitle": "Folate value — Folic Acid explained | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le DFGe (débit de filtration glomérulaire estimé) estime la capacité de filtration de vos reins. Des valeurs supérieures à 90 sont considérées comme normales. Des valeurs plus basses peuvent indiquer une réduction de la fonction rénale. Discutez de la valeur avec votre médecin.",
+  "metaDescription": "DFGe bas ? Valeurs normales, stades de la fonction rénale et quand consulter — expliqués simplement.",
+  "causesElevated": [],
+  "causesLow": ["Maladie rénale chronique", "Diabète", "Hypertension artérielle", "Infections rénales répétées", "Certains médicaments"],
+  "doctorQuestions": [
+    "À quel stade de la maladie rénale suis-je ?",
+    "Que puis-je faire pour protéger mes reins ?",
+    "Dois-je consulter un néphrologue ?"
+  ],
+  "rangeLabels": { "low": "Altéré (MRC)", "normal": "Normal (≥ 90)", "elevated": "Légèrement réduit", "high": "Altéré (MRC)" },
+  "categoryLabel": "Bilan rénal",
+  "pageTitle": "Valeur DFGe — Débit de filtration glomérulaire expliqué | Medyra"
+}

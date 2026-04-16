@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "LDL, damar duvarlarında birikerek kalp krizi ve inme riskini artırabilen \"kötü\" kolesteroldür. Hedef değerler kişisel risk profilinize göre değişir. LDL değerinizi doktorunuzla görüşün.",
+  "metaDescription": "LDL yüksek mi? Normal değerler, kalp riski ve yüksek kötü kolesterol için tedavi seçenekleri — basitçe açıklandı.",
+  "causesElevated": ["Yüksek yağlı diyet", "Genetik yatkınlık (ailesel hiperkolesterolemi)", "Obezite", "Hipotiroidizm", "Diyabet"],
+  "causesLow": ["Yetersiz beslenme", "Karaciğer hastalığı", "Statinler"],
+  "doctorQuestions": [
+    "Benim için hangi LDL hedef değeri uygun?",
+    "Statin veya başka ilaç gerekli mi?",
+    "Hangi diyet LDL değerimi düşürür?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal (düşük risk)", "elevated": "Yüksek", "high": "Çok yüksek" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "LDL değeri — Kötü Kolesterol açıklaması | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "GOT/AST (aspartate aminotransférase) est une enzyme présente dans le foie, le cœur et les muscles. Des valeurs élevées peuvent indiquer une lésion hépatique ou des problèmes cardiaques. Combinée au GPT/ALT, elle aide à en identifier la cause. Discutez des valeurs anormales avec votre médecin.",
+  "metaDescription": "GOT / AST élevé ? Valeurs normales, causes et signification de cette enzyme hépatique — expliqués simplement.",
+  "causesElevated": ["Maladie hépatique", "Infarctus du myocarde", "Maladie musculaire", "Consommation d'alcool", "Certains médicaments"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Le rapport GOT/GPT indique-t-il une cause spécifique ?",
+    "Mon cœur doit-il être évalué ?",
+    "Quand la valeur doit-elle être contrôlée ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Bilan hépatique",
+  "pageTitle": "Valeur GOT/AST — Aspartate aminotransférase expliquée | Medyra"
+}

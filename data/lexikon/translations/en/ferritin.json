@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Ferritin shows how much iron is stored in the body. A low value indicates depleted iron stores, often long before anemia develops. Elevated values may indicate inflammation or iron overload. Discuss any abnormal values with your doctor.",
+  "metaDescription": "Ferritin low or high? Normal ranges, iron deficiency diagnosis, and causes — explained simply.",
+  "causesElevated": ["Inflammatory disease (acute phase)", "Hemochromatosis", "Liver disease", "Frequent blood transfusions"],
+  "causesLow": ["Iron deficiency", "Vegan diet", "Heavy menstruation", "Malabsorption"],
+  "doctorQuestions": [
+    "Do I have iron deficiency even if my hemoglobin is normal?",
+    "Should I take iron supplements?",
+    "What is causing my elevated ferritin?"
+  ],
+  "rangeLabels": { "low": "Deficient (women < 12, men < 30)", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
+  "categoryLabel": "Iron Values",
+  "pageTitle": "Ferritin value — Iron stores explained | Medyra"
+}

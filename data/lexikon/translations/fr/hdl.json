@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le HDL est connu comme le \"bon\" cholestérol car il transporte l'excès de cholestérol vers le foie. Des valeurs élevées protègent le cœur. Des valeurs basses peuvent augmenter le risque cardiovasculaire. Discutez des valeurs basses de HDL avec votre médecin.",
+  "metaDescription": "HDL trop bas ? Valeurs normales, causes et comment augmenter le bon cholestérol — expliqués simplement.",
+  "causesElevated": ["Activité physique régulière", "Consommation modérée d'alcool"],
+  "causesLow": ["Sédentarité", "Obésité", "Tabagisme", "Diabète", "Triglycérides élevés"],
+  "doctorQuestions": [
+    "Comment puis-je augmenter mon HDL ?",
+    "Mon HDL représente-t-il un risque cardiaque accru ?",
+    "Un traitement médicamenteux est-il approprié ?"
+  ],
+  "rangeLabels": { "low": "Trop bas (risque accru)", "normal": "Souhaitable (≥ 40)", "elevated": "Optimal (≥ 60)", "high": "Optimal (≥ 60)" },
+  "categoryLabel": "Métabolisme",
+  "pageTitle": "Valeur HDL — Bon cholestérol expliqué | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le calcium (Ca) est un minéral essentiel pour les os, les muscles et les nerfs. Des valeurs sanguines élevées peuvent indiquer des troubles parathyroïdiens ou des maladies osseuses ; des valeurs basses peuvent indiquer une carence en vitamine D. Discutez de toute déviation avec votre médecin.",
+  "metaDescription": "Calcium élevé ou bas ? Valeurs normales, causes et signification pour la santé osseuse — expliqués simplement.",
+  "causesElevated": ["Hyperparathyroïdie primaire", "Cancer", "Surdosage en vitamine D", "Sarcoïdose"],
+  "causesLow": ["Carence en vitamine D", "Hypoparathyroïdie", "Carence en magnésium", "Maladie rénale"],
+  "doctorQuestions": [
+    "Quelle est la cause de mon calcium élevé ou bas ?",
+    "Dois-je faire mesurer mon taux de vitamine D ?",
+    "Ai-je besoin d'une évaluation des parathyroïdes ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé (hypercalcémie)", "high": "Très élevé" },
+  "categoryLabel": "Électrolytes",
+  "pageTitle": "Valeur Ca — Calcium expliqué | Medyra"
+}

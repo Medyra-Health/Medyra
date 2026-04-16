@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Les leucocytes urinaires peuvent indiquer une inflammation des voies urinaires. De petites quantités peuvent être normales, mais des valeurs plus élevées peuvent indiquer une infection urinaire ou une pyélonéphrite. Discutez de tout résultat positif avec votre médecin.",
+  "metaDescription": "Globules blancs dans les urines élevés ? Causes, signification et quand cela indique une infection urinaire — expliqués simplement.",
+  "causesElevated": ["Infection urinaire (cystite)", "Pyélonéphrite", "Urétrite", "Maladie rénale"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Y a-t-il une infection urinaire nécessitant des antibiotiques ?",
+    "Dois-je faire une culture urinaire ?",
+    "Les leucocytes urinaires pourraient-ils indiquer une maladie rénale ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Valeurs urinaires",
+  "pageTitle": "WBC dans les urines — Infection urinaire expliquée | Medyra"
+}

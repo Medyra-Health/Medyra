@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Quick değeri (protrombin zamanı), dış pıhtılaşma yolu üzerinden kanın pıhtılaşma yeteneğini ölçer. Düşük değerler uzamış pıhtılaşma süresi ve artan kanama riskini gösterir. Değer karaciğer fonksiyonu ve K vitamini ile yakından ilgilidir. Anormal değerleri doktorunuzla görüşün.",
+  "metaDescription": "Quick değeri / protrombin zamanı düşük mü? Normal değerler, kanama riski ve nedenleri — basitçe açıklandı.",
+  "causesElevated": [],
+  "causesLow": ["Warfarin / antikoagülan tedavi", "Karaciğer hastalığı", "K vitamini eksikliği", "Pıhtılaşma bozuklukları"],
+  "doctorQuestions": [
+    "Quick değerim warfarine mi yoksa karaciğer hastalığına mı bağlı?",
+    "Ameliyat öncesinde normal bir Quick değerine ihtiyacım var mı?",
+    "K vitamini almalı mıyım?"
+  ],
+  "rangeLabels": { "low": "Düşük (kanama riski)", "normal": "Normal", "elevated": "Yüksek (nadiren klinik öneme sahip)", "high": "Yüksek" },
+  "categoryLabel": "Pıhtılaşma",
+  "pageTitle": "Quick değeri — Protrombin Zamanı açıklaması | Medyra"
+}

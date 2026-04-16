@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "MCHC, kırmızı kan hücrelerindeki hemoglobin konsantrasyonunu ölçer. Düşük değerler demir eksikliği anemisine işaret edebilir. Çok yüksek değerler nadirdir. Anormal sonuçları doktorunuzla görüşün.",
+  "metaDescription": "MCHC düşük veya yüksek mi? Normal değerler, anlamı ve anormal hemoglobin konsantrasyonunun nedenleri — basitçe açıklandı.",
+  "causesElevated": ["Herediter sferositoz", "Ağır dehidrasyon"],
+  "causesLow": ["Demir eksikliği anemisi", "Talasemi", "Kan kaybı anemisi"],
+  "doctorQuestions": [
+    "MCHC değerimi hangi anemi türü açıklayabilir?",
+    "İleri tetkik gerekli mi?",
+    "Değer takip edilmeli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Hafif yüksek", "high": "Yüksek" },
+  "categoryLabel": "Kan Sayımı",
+  "pageTitle": "MCHC değeri — Ortalama Korpüsküler Hemoglobin Konsantrasyonu açıklaması | Medyra"
+}
