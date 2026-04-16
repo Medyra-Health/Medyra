@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Calcium (Ca) is a mineral essential for bones, muscles, and nerves. High blood levels may indicate parathyroid disorders or bone disease; low levels may indicate vitamin D deficiency or malnutrition. Discuss any deviations with your doctor.",
+  "metaDescription": "Calcium elevated or low? Normal ranges, causes, and what it means for bone health — explained simply.",
+  "causesElevated": ["Primary hyperparathyroidism", "Cancer", "Vitamin D overdose", "Sarcoidosis"],
+  "causesLow": ["Vitamin D deficiency", "Hypoparathyroidism", "Magnesium deficiency", "Kidney disease"],
+  "doctorQuestions": [
+    "What is causing my elevated or low calcium?",
+    "Should I have my vitamin D level tested?",
+    "Do I need a parathyroid evaluation?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated (hypercalcemia)", "high": "Highly elevated" },
+  "categoryLabel": "Electrolytes",
+  "pageTitle": "Ca value — Calcium explained | Medyra"
+}

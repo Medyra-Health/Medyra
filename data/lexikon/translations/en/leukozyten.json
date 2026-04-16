@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "WBC (white blood cells) are the cells of your immune system that fight infections. High levels may indicate an infection or inflammation, while low levels can signal a weakened immune response. Always discuss abnormal values with your doctor.",
+  "metaDescription": "WBC / white blood cells high or low? Normal ranges, causes, and when to see a doctor — explained simply.",
+  "causesElevated": ["Bacterial infection", "Viral infection", "Inflammatory disease", "Stress", "Corticosteroid use", "Smoking"],
+  "causesLow": ["Viral infections (e.g. flu)", "Bone marrow disorders", "Certain medications", "Autoimmune diseases"],
+  "doctorQuestions": [
+    "Does this value suggest an infection, and do I need antibiotics?",
+    "Should the value be rechecked in a few weeks?",
+    "Could a medication be affecting my white blood cell count?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Mildly elevated", "high": "Highly elevated" },
+  "categoryLabel": "Blood Count",
+  "pageTitle": "WBC value — White Blood Cells explained | Medyra"
+}

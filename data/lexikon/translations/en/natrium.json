@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Sodium (Na) is a vital electrolyte that regulates fluid balance and blood pressure. Low levels (hyponatremia) can cause confusion and seizures; high levels (hypernatremia) suggest dehydration. Discuss any deviations with your doctor.",
+  "metaDescription": "Sodium elevated or low? Normal ranges, causes of electrolyte imbalance, and when to see a doctor — explained simply.",
+  "causesElevated": ["Dehydration", "Too much salt intake", "Certain medications", "Diabetes insipidus"],
+  "causesLow": ["Excessive fluid intake", "Kidney disease", "Heart failure", "Certain medications (diuretics)", "Vomiting / diarrhea"],
+  "doctorQuestions": [
+    "What is causing my sodium imbalance?",
+    "Should I adjust my fluid intake?",
+    "Could a medication be affecting my sodium level?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated (hypernatremia)", "high": "Highly elevated" },
+  "categoryLabel": "Electrolytes",
+  "pageTitle": "Na value — Sodium explained | Medyra"
+}

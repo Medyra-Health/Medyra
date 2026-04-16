@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Potassium (K) is an electrolyte that regulates heart rhythm, muscles, and nerves. Low levels can cause heart arrhythmias and muscle weakness; high levels are also dangerous. Significant deviations should be discussed with your doctor promptly.",
+  "metaDescription": "Potassium elevated or low? Normal ranges, heart risk, and causes of potassium imbalance — explained simply.",
+  "causesElevated": ["Kidney disease", "ACE inhibitors or potassium-sparing diuretics", "Excessive potassium intake", "Acidosis"],
+  "causesLow": ["Vomiting / diarrhea", "Diuretics", "Magnesium deficiency", "Inadequate intake"],
+  "doctorQuestions": [
+    "Is there a risk of heart arrhythmia?",
+    "Do I need to adjust my potassium intake through diet?",
+    "Should a medication be changed?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated (hyperkalemia)", "high": "Highly elevated (dangerous)" },
+  "categoryLabel": "Electrolytes",
+  "pageTitle": "K value — Potassium explained | Medyra"
+}

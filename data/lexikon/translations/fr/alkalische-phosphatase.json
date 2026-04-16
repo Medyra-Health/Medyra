@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La phosphatase alcaline (PAL) est une enzyme présente dans le foie, les os et les voies biliaires. Des valeurs élevées peuvent indiquer une maladie des voies biliaires, des problèmes hépatiques ou des maladies osseuses. Discutez des valeurs persistamment élevées avec votre médecin.",
+  "metaDescription": "Phosphatase alcaline (PAL) élevée ? Valeurs normales, causes et signification pour le foie et les os — expliqués simplement.",
+  "causesElevated": ["Maladie des voies biliaires", "Maladie hépatique", "Maladie osseuse (ex. maladie de Paget)", "Grossesse", "Croissance normale chez l'enfant"],
+  "causesLow": ["Hypothyroïdie", "Carence en vitamine B12", "Carence en zinc"],
+  "doctorQuestions": [
+    "L'élévation provient-elle du foie ou des os ?",
+    "Dois-je exclure une infection des voies biliaires ?",
+    "Des examens complémentaires sont-ils nécessaires ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Bilan hépatique",
+  "pageTitle": "Valeur PAL — Phosphatase alcaline expliquée | Medyra"
+}

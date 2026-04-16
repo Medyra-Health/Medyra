@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "TSH (thyroid-stimulating hormone) is produced by the pituitary gland and regulates the thyroid. High TSH can indicate an underactive thyroid (hypothyroidism), while low TSH can indicate overactivity (hyperthyroidism). Both can cause symptoms like fatigue or palpitations. Discuss abnormal values with your doctor.",
+  "metaDescription": "TSH elevated or low? Normal ranges, causes, and what thyroid hormone levels mean — explained simply.",
+  "causesElevated": ["Hypothyroidism", "Hashimoto's thyroiditis", "Iodine deficiency", "Certain medications"],
+  "causesLow": ["Hyperthyroidism", "Graves' disease", "Excessive thyroid hormone dose"],
+  "doctorQuestions": [
+    "Does my TSH indicate hypo- or hyperthyroidism?",
+    "Should I also have fT3 and fT4 measured?",
+    "Do I need thyroid hormones or further evaluation?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated (hypothyroidism possible)", "high": "Highly elevated" },
+  "categoryLabel": "Thyroid",
+  "pageTitle": "TSH value — Thyroid-Stimulating Hormone explained | Medyra"
+}

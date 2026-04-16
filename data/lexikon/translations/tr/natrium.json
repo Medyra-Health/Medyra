@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Sodyum (Na), sıvı dengesini ve kan basıncını düzenleyen hayati bir elektrolitdir. Düşük değerler (hiponatremi) konfüzyon ve nöbetlere; yüksek değerler (hipernatremi) ise dehidrasyona işaret edebilir. Anormallikleri doktorunuzla görüşün.",
+  "metaDescription": "Sodyum yüksek veya düşük mü? Normal değerler, elektrolit dengesizliğinin nedenleri ve ne zaman doktora gidilmeli — basitçe açıklandı.",
+  "causesElevated": ["Dehidrasyon", "Aşırı tuz alımı", "Bazı ilaçlar", "Diyabetes insipidus"],
+  "causesLow": ["Aşırı sıvı alımı", "Böbrek hastalığı", "Kalp yetmezliği", "Bazı ilaçlar (diüretikler)", "Kusma / ishal"],
+  "doctorQuestions": [
+    "Sodyum dengesizliğimin nedeni nedir?",
+    "Sıvı alımımı ayarlamalı mıyım?",
+    "Bir ilaç sodyum düzeyimi etkileyebilir mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek (hipernatremi)", "high": "Çok yüksek" },
+  "categoryLabel": "Elektrolitler",
+  "pageTitle": "Na değeri — Sodyum açıklaması | Medyra"
+}

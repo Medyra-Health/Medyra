@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La ferritine indique la quantité de fer stockée dans l'organisme. Une valeur basse indique des réserves de fer épuisées, souvent bien avant que l'anémie se développe. Des valeurs élevées peuvent indiquer une inflammation ou une surcharge en fer. Discutez de toute valeur anormale avec votre médecin.",
+  "metaDescription": "Ferritine basse ou élevée ? Valeurs normales, diagnostic de carence en fer et causes — expliqués simplement.",
+  "causesElevated": ["Maladie inflammatoire (phase aiguë)", "Hémochromatose", "Maladie hépatique", "Transfusions sanguines fréquentes"],
+  "causesLow": ["Carence en fer", "Alimentation végétalienne", "Règles abondantes", "Malabsorption"],
+  "doctorQuestions": [
+    "Ai-je une carence en fer même si mon hémoglobine est normale ?",
+    "Dois-je prendre des suppléments de fer ?",
+    "Quelle est la cause de ma ferritine élevée ?"
+  ],
+  "rangeLabels": { "low": "Carence (femmes < 12, hommes < 30)", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Bilan martial",
+  "pageTitle": "Valeur ferritine — Réserves en fer expliquées | Medyra"
+}

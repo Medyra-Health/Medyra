@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le potassium (K) est un électrolyte qui régule le rythme cardiaque, les muscles et les nerfs. Des valeurs basses peuvent causer des arythmies cardiaques et une faiblesse musculaire ; des valeurs élevées sont également dangereuses. Consultez votre médecin rapidement en cas d'écarts importants.",
+  "metaDescription": "Potassium élevé ou bas ? Valeurs normales, risque cardiaque et causes du déséquilibre potassique — expliqués simplement.",
+  "causesElevated": ["Maladie rénale", "IEC ou diurétiques épargneurs de potassium", "Apport excessif en potassium", "Acidose"],
+  "causesLow": ["Vomissements / diarrhée", "Diurétiques", "Carence en magnésium", "Apport insuffisant"],
+  "doctorQuestions": [
+    "Y a-t-il un risque d'arythmie cardiaque ?",
+    "Dois-je ajuster mon apport en potassium par l'alimentation ?",
+    "Un médicament doit-il être changé ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé (hyperkaliémie)", "high": "Très élevé (dangereux)" },
+  "categoryLabel": "Électrolytes",
+  "pageTitle": "Valeur K — Potassium expliqué | Medyra"
+}

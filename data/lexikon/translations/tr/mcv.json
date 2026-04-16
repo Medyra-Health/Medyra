@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "MCV, kırmızı kan hücrelerinin ortalama boyutunu ölçer. Küçük hücreler demir eksikliğine, büyük hücreler ise B12 vitamini veya folat eksikliğine işaret edebilir. Anormal sonuçları doktorunuzla görüşün.",
+  "metaDescription": "MCV yüksek veya düşük mü? Normal değerler, anormal kırmızı kan hücresi boyutunun nedenleri — basitçe açıklandı.",
+  "causesElevated": ["B12 vitamini eksikliği", "Folat eksikliği", "Alkol kullanımı", "Hipotiroidizm"],
+  "causesLow": ["Demir eksikliği", "Talasemi", "Kronik inflamatuar hastalıklar"],
+  "doctorQuestions": [
+    "MCV değerim bir besin eksikliğini mi gösteriyor?",
+    "B12 vitamini veya folat almalı mıyım?",
+    "Daha ayrıntılı bir kan testi gerekli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek (makrositoz)", "high": "Çok yüksek" },
+  "categoryLabel": "Kan Sayımı",
+  "pageTitle": "MCV değeri — Ortalama Eritrosit Hacmi açıklaması | Medyra"
+}

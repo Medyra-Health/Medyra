@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "L'hématocrite (Hkt) indique le pourcentage de votre sang constitué de globules rouges. Une valeur basse peut indiquer une anémie, une valeur haute peut suggérer une déshydratation. Discutez des valeurs anormales avec votre médecin.",
+  "metaDescription": "Hématocrite (Hkt) élevé ou bas ? Valeurs normales, causes et quand consulter — expliqués clairement.",
+  "causesElevated": ["Déshydratation", "Tabagisme", "Polyglobulie vraie", "Altitude élevée"],
+  "causesLow": ["Anémie", "Perte de sang", "Carence en fer", "Grossesse"],
+  "doctorQuestions": [
+    "Mon hématocrite est-il compatible avec une anémie ?",
+    "Dois-je augmenter mon apport en liquides ?",
+    "Des analyses de sang supplémentaires sont-elles nécessaires ?"
+  ],
+  "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
+  "categoryLabel": "Numération formule sanguine",
+  "pageTitle": "Valeur Hkt — Hématocrite expliqué | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "fT4 (serbest tiroksin), en önemli tiroid hormonudur ve karaciğerde aktif fT3'e dönüştürülür. Yüksek değerler hipertiroidizmi, düşük değerler ise hipotiroidizmi gösterebilir. Bu değer her zaman TSH ile birlikte değerlendirilmelidir.",
+  "metaDescription": "fT4 yüksek veya düşük mü? Normal değerler, serbest tiroksin anlamı ve tiroid fonksiyonu — basitçe açıklandı.",
+  "causesElevated": ["Hipertiroidizm", "Graves hastalığı", "Aşırı tiroid hormonu dozu"],
+  "causesLow": ["Hipotiroidizm", "Hashimoto tiroiditi", "Hipofiz bezi hastalığı"],
+  "doctorQuestions": [
+    "fT4 değerim TSH ile nasıl yorumlanmalı?",
+    "Tiroid hormonu gerekli mi?",
+    "Tiroid ultrasonu yaptırmalı mıyım?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
+  "categoryLabel": "Tiroid",
+  "pageTitle": "fT4 değeri — Serbest Tiroksin açıklaması | Medyra"
+}

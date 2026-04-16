@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Klorür (Cl), asit-baz dengesini ve sıvı dengesini düzenlemeye yardımcı olan bir elektrolitdir. Normalden sapan değerler böbrek veya metabolizma sorunlarına işaret edebilir. Genellikle sodyum ve potasyumla birlikte değerlendirilir. Anormal değerleri doktorunuzla görüşün.",
+  "metaDescription": "Klorür yüksek veya düşük mü? Normal değerler, nedenler ve bu elektroltitin anlamı — basitçe açıklandı.",
+  "causesElevated": ["Dehidrasyon", "Böbrek hastalığı", "İshal", "Bazı ilaçlar"],
+  "causesLow": ["Kusma", "Diüretikler", "Kalp yetmezliği", "Metabolik asidoz"],
+  "doctorQuestions": [
+    "Klorür değerim asit-baz sorununa mı işaret ediyor?",
+    "Diğer elektrolitlerimi aynı anda kontrol ettirmeli miyim?",
+    "Bir ilaç klorür düzeyimi etkileyebilir mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek (hiperklöremi)", "high": "Çok yüksek" },
+  "categoryLabel": "Elektrolitler",
+  "pageTitle": "Cl değeri — Klorür açıklaması | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Creatinine is a waste product of muscle metabolism that is filtered out by the kidneys. Elevated levels may indicate reduced kidney function. The value also depends on muscle mass and fluid intake. Discuss any abnormal values with your doctor.",
+  "metaDescription": "Creatinine elevated? Normal ranges, causes, and what high creatinine means for kidney function — explained simply.",
+  "causesElevated": ["Kidney disease", "Dehydration", "High muscle mass", "Certain medications", "Excessive meat consumption"],
+  "causesLow": ["Low muscle mass", "Malnutrition", "Pregnancy"],
+  "doctorQuestions": [
+    "Is my kidney function impaired?",
+    "Should my eGFR be calculated?",
+    "Do I need to watch my fluid intake or diet?"
+  ],
+  "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Mildly elevated", "high": "Highly elevated" },
+  "categoryLabel": "Kidney Values",
+  "pageTitle": "Creatinine value — Kidney function explained | Medyra"
+}

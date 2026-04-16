@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "PCT (prokalsitonin), bakteriyel enfeksiyonlar için spesifik bir belirteçtir. Yüksek değerler ağır bakteriyel enfeksiyon veya sepsise işaret edebilir. Test, antibiyotik gerekip gerekmediğine karar vermede doktorlara yardımcı olur. Yüksek değerleri hemen doktorunuzla görüşün.",
+  "metaDescription": "Prokalsitonin (PCT) yüksek mi? Normal değerler, nedenler ve sepsis belirteci olarak rolü — basitçe açıklandı.",
+  "causesElevated": ["Ağır bakteriyel enfeksiyon", "Sepsis", "Çok organ yetmezliği", "Ağır yanıklar"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "PCT değerim bakteriyel bir enfeksiyona mı işaret ediyor?",
+    "Antibiyotik gerekli mi?",
+    "Hastaneye yatmam gerekiyor mu?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal / düşük", "elevated": "Hafif yüksek", "high": "Çok yüksek (sepsis şüphesi)" },
+  "categoryLabel": "İltihap Belirteçleri",
+  "pageTitle": "PCT değeri — Prokalsitonin açıklaması | Medyra"
+}

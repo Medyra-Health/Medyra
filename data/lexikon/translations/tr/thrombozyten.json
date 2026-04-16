@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Trombositler (PLT), kan pıhtılaşmasını sağlayan kan hücreleridir. Düşük değerler kanama riskini artırabilir, yüksek değerler ise iltihap veya başka durumların işareti olabilir. Anormal sonuçları doktorunuzla görüşün.",
+  "metaDescription": "Trombositler (PLT) yüksek veya düşük mü? Normal değerler, nedenler ve anormal trombosit sayısının anlamı — basitçe açıklandı.",
+  "causesElevated": ["İnflamatuar reaksiyonlar", "Demir eksikliği", "Ameliyat sonrası", "Miyeloproliferatif bozukluklar"],
+  "causesLow": ["Viral enfeksiyonlar", "Bazı ilaçlar", "Otoimmün hastalıklar", "Karaciğer hastalığı"],
+  "doctorQuestions": [
+    "Trombosit sayım bir kanama riski oluşturuyor mu?",
+    "İlaçlarımdan biri trombositleri etkiliyor mu?",
+    "Değeri ne zaman kontrol ettirmeliyim?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Hafif yüksek", "high": "Çok yüksek" },
+  "categoryLabel": "Kan Sayımı",
+  "pageTitle": "PLT değeri — Trombositler açıklaması | Medyra"
+}
