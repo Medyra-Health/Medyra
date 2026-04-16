@@ -415,5 +415,23 @@
     "pricingCta": {
       "note": "2 kostenlose Berichte jeden Monat · Keine Kreditkarte · Jederzeit kündbar"
     }
+  },
+  "siteFooter": {
+    "tagline": "Laborwerte verstehen — in Ihrer Sprache, in 60 Sekunden.",
+    "product": "Produkt",
+    "upload": "Befund hochladen",
+    "prep": "Arzttermin vorbereiten",
+    "healthVault": "Health Vault",
+    "pricing": "Preise",
+    "learn": "Wissen",
+    "lexikon": "Medizinisches Lexikon",
+    "blog": "Blog",
+    "verstehen": "Arztbrief verstehen",
+    "company": "Unternehmen",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "contact": "Kontakt",
+    "disclaimer": "Kein Ersatz für ärztliche Beratung · DSGVO-konform",
+    "copyright": "© 2026 Medyra. Alle Rechte vorbehalten. Made in Germany."
   }
 }

@@ -415,5 +415,23 @@
     "pricingCta": {
       "note": "2 informes gratuitos cada mes · Sin tarjeta · Cancela en cualquier momento"
     }
+  },
+  "siteFooter": {
+    "tagline": "Entiende tus análisis — en tu idioma, en 60 segundos.",
+    "product": "Producto",
+    "upload": "Subir informe",
+    "prep": "Preparar visita médica",
+    "healthVault": "Health Vault",
+    "pricing": "Precios",
+    "learn": "Aprender",
+    "lexikon": "Léxico médico",
+    "blog": "Blog",
+    "verstehen": "Entender cartas médicas",
+    "company": "Empresa",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "contact": "Contacto",
+    "disclaimer": "No sustituye el consejo médico · Conforme al RGPD",
+    "copyright": "© 2026 Medyra. Todos los derechos reservados. Hecho en Alemania."
   }
 }
