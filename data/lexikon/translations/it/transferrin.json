@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La transferrina è la proteina di trasporto del ferro nel sangue. Nella carenza di ferro, la transferrina aumenta perché il corpo fornisce più capacità di trasporto. In caso di infiammazione o sovraccarico di ferro, il valore è solitamente ridotto. Discutete questo valore insieme a ferritina e ferro sierico con il vostro medico.",
+  "metaDescription": "Transferrina elevata o bassa? Valori normali, significato nella carenza di ferro e cause — spiegato in modo semplice.",
+  "causesElevated": ["Carenza di ferro", "Gravidanza", "Integratori di estrogeni"],
+  "causesLow": ["Malattie infiammatorie", "Malattia epatica", "Sovraccarico di ferro (emocromatosi)", "Malnutrizione"],
+  "doctorQuestions": [
+    "Come dovrebbe essere valutata la mia transferrina insieme alla ferritina?",
+    "Ho bisogno di integratori di ferro?",
+    "Potrebbe essere presente emocromatosi?"
+  ],
+  "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
+  "categoryLabel": "Valori del ferro",
+  "pageTitle": "Valore transferrina — Proteina di trasporto del ferro spiegata | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "尿素氮（BUN）是蛋白质代谢产物，由肾脏排出。升高可能提示肾功能不全或脱水，低值可能与低蛋白饮食有关。",
+  "metaDescription": "尿素氮偏高或偏低？正常范围、肾功能意义及原因——简单易懂的解释。",
+  "causesElevated": ["肾功能不全", "脱水", "高蛋白饮食", "消化道出血"],
+  "causesLow": ["低蛋白饮食", "严重肝病", "妊娠"],
+  "doctorQuestions": [
+    "我的肾功能正常吗？",
+    "BUN升高是脱水还是肾脏问题？",
+    "我的饮食需要调整吗？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常", "elevated": "轻度升高", "high": "显著升高" },
+  "categoryLabel": "肾功能指标",
+  "pageTitle": "BUN值 — 尿素氮详解 | Medyra"
+}

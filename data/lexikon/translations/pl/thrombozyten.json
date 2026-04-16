@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Trombocyty (płytki krwi) to komórki krwi odpowiedzialne za krzepnięcie. Niski wynik może zwiększać ryzyko krwawienia, wysoki — wskazywać na stan zapalny lub inne schorzenia. Omów nieprawidłowe wyniki z lekarzem.",
+  "metaDescription": "Trombocyty (płytki krwi) wysokie lub niskie? Wartości prawidłowe, przyczyny i co oznaczają nieprawidłowe wyniki — wyjaśnione prosto.",
+  "causesElevated": ["Reakcje zapalne", "Niedobór żelaza", "Po operacji", "Choroby mieloproliferacyjne"],
+  "causesLow": ["Zakażenia wirusowe", "Niektóre leki", "Choroby autoimmunologiczne", "Choroba wątroby"],
+  "doctorQuestions": [
+    "Czy moja liczba płytek krwi stwarza zwiększone ryzyko krwawienia?",
+    "Czy jakiś mój lek wpływa na płytki krwi?",
+    "Kiedy wartość powinna być ponownie sprawdzona?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Nieznacznie podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Morfologia krwi",
+  "pageTitle": "Wartość płytek krwi — Trombocyty wyjaśnione | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "El LDL es el colesterol «malo» que puede acumularse en las paredes de los vasos sanguíneos. Los niveles elevados aumentan el riesgo de infarto y accidente cerebrovascular. Los valores objetivo dependen de su perfil de riesgo personal. Consulte su nivel de LDL con su médico.",
+  "metaDescription": "LDL elevado? Valores normales, riesgo cardíaco y opciones de tratamiento para el colesterol malo alto — explicado de forma sencilla.",
+  "causesElevated": ["Dieta rica en grasas", "Predisposición genética (hipercolesterolemia familiar)", "Obesidad", "Hipotiroidismo", "Diabetes"],
+  "causesLow": ["Desnutrición", "Enfermedad hepática", "Estatinas"],
+  "doctorQuestions": [
+    "¿Qué valor objetivo de LDL es apropiado para mí?",
+    "¿Necesito estatinas u otros medicamentos?",
+    "¿Qué dieta reduce mi LDL?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Normal (bajo riesgo)", "elevated": "Elevado", "high": "Muy elevado" },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Valor LDL — Colesterol Malo explicado | Medyra"
+}

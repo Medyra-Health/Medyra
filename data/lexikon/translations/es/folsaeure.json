@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "El folato (ácido fólico) es una vitamina B esencial para la división celular y la formación sanguínea. La deficiencia puede causar anemia y es especialmente peligrosa durante el embarazo. Muchas personas no obtienen suficiente folato solo con la dieta. Consulte cualquier deficiencia con su médico.",
+  "metaDescription": "Folato demasiado bajo? Valores normales, riesgos en el embarazo, causas de deficiencia de ácido fólico — explicado de forma sencilla.",
+  "causesElevated": ["Sobredosis de suplementos de ácido fólico"],
+  "causesLow": ["Dieta desequilibrada", "Consumo de alcohol", "Malabsorción", "Ciertos medicamentos (p. ej., metotrexato)"],
+  "doctorQuestions": [
+    "¿Debería tomar folato durante o antes del embarazo?",
+    "¿Es suficiente mi nivel de folato para la formación sanguínea normal?",
+    "¿Qué alimentos son ricos en folato?"
+  ],
+  "rangeLabels": { "low": "Deficiente", "normal": "Suficiente", "elevated": "Elevado", "high": "Elevado" },
+  "categoryLabel": "Vitaminas",
+  "pageTitle": "Valor folato — Ácido fólico explicado | Medyra"
+}

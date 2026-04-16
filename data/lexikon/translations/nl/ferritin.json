@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Ferritine toont hoeveel ijzer er in het lichaam is opgeslagen. Een lage waarde wijst op uitgeputte ijzervoorraden, vaak lang voordat bloedarmoede zich ontwikkelt. Verhoogde waarden kunnen wijzen op ontsteking of ijzerstapeling. Bespreek abnormale waarden met uw arts.",
+  "metaDescription": "Ferritine laag of hoog? Normaalwaarden, diagnose van ijzertekort en oorzaken — eenvoudig uitgelegd.",
+  "causesElevated": ["Ontstekingsziekte (acute fase)", "Hemochromatose", "Leverziekte", "Frequente bloedtransfusies"],
+  "causesLow": ["IJzertekort", "Veganistisch dieet", "Zware menstruatie", "Malabsorptie"],
+  "doctorQuestions": [
+    "Heb ik ijzertekort ook als mijn hemoglobine normaal is?",
+    "Moet ik ijzersupplementen nemen?",
+    "Wat veroorzaakt mijn verhoogd ferritine?"
+  ],
+  "rangeLabels": { "low": "Tekort (vrouwen < 12, mannen < 30)", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
+  "categoryLabel": "IJzerwaarden",
+  "pageTitle": "Waarde ferritine — IJzervoorraden uitgelegd | Medyra"
+}

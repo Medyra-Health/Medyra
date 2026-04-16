@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Transferyna to białko transportowe żelaza we krwi. Przy niedoborze żelaza transferyna rośnie, ponieważ organizm zapewnia większą zdolność transportu. W stanach zapalnych lub przeciążeniu żelazem wartość jest zazwyczaj obniżona. Omów tę wartość wraz z ferrytyną i żelazem surowiczym z lekarzem.",
+  "metaDescription": "Transferyna podwyższona lub niska? Wartości prawidłowe, znaczenie w niedoborze żelaza i przyczyny — wyjaśnione prosto.",
+  "causesElevated": ["Niedobór żelaza", "Ciąża", "Suplementy estrogenów"],
+  "causesLow": ["Choroby zapalne", "Choroba wątroby", "Przeciążenie żelazem (hemochromatoza)", "Niedożywienie"],
+  "doctorQuestions": [
+    "Jak powinna być oceniana moja transferyna razem z ferrytyną?",
+    "Czy potrzebuję suplementów żelaza?",
+    "Czy może być obecna hemochromatoza?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Wskaźniki żelaza",
+  "pageTitle": "Wartość transferyny — Białko transportowe żelaza wyjaśnione | Medyra"
+}

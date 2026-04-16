@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Calcium (Ca) is een mineraal dat essentieel is voor botten, spieren en zenuwen. Hoge bloedspiegels kunnen wijzen op bijschildklierstornissen of botziekte; lage waarden kunnen wijzen op vitamine D-tekort of ondervoeding. Bespreek afwijkingen met uw arts.",
+  "metaDescription": "Calcium verhoogd of laag? Normaalwaarden, oorzaken en wat het betekent voor de botgezondheid — eenvoudig uitgelegd.",
+  "causesElevated": ["Primair hyperparathyreoïdie", "Kanker", "Vitamine D-overdosering", "Sarcoïdose"],
+  "causesLow": ["Vitamine D-tekort", "Hypoparathyreoïdie", "Magnesiumtekort", "Nierziekte"],
+  "doctorQuestions": [
+    "Wat veroorzaakt mijn verhoogd of laag calcium?",
+    "Moet ik mijn vitamine D-spiegel laten meten?",
+    "Heb ik een bijschildklierevaluatie nodig?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd (hypercalciëmie)", "high": "Sterk verhoogd" },
+  "categoryLabel": "Elektrolyten",
+  "pageTitle": "Waarde Ca — Calcium uitgelegd | Medyra"
+}

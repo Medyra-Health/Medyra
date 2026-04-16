@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "GOT/AST (aspartato aminotransferasa) es una enzima presente en el hígado, el corazón y los músculos. Los niveles elevados pueden indicar daño hepático o problemas cardíacos. En combinación con GPT/ALT, ayuda a determinar la causa. Consulte con su médico ante valores anormales.",
+  "metaDescription": "GOT / AST elevado? Valores normales, causas y significado de esta enzima hepática — explicado de forma sencilla.",
+  "causesElevated": ["Enfermedad hepática", "Infarto de miocardio", "Enfermedad muscular", "Consumo de alcohol", "Ciertos medicamentos"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Apunta la relación GOT/GPT a una causa específica?",
+    "¿Debería evaluarse mi corazón?",
+    "¿Cuándo debería revisarse el valor?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
+  "categoryLabel": "Valores hepáticos",
+  "pageTitle": "Valor GOT/AST — Aspartato Aminotransferasa explicada | Medyra"
+}

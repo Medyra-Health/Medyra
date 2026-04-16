@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "TSH (schildklierstimulerend hormoon) wordt geproduceerd door de hypofyse en reguleert de schildklier. Hoge TSH kan wijzen op hypothyreoïdie, terwijl lage TSH kan wijzen op hyperthyreoïdie. Beide kunnen symptomen veroorzaken zoals vermoeidheid of hartkloppingen. Bespreek abnormale waarden met uw arts.",
+  "metaDescription": "TSH verhoogd of laag? Normaalwaarden, oorzaken en wat schildklierhormoonwaarden betekenen — eenvoudig uitgelegd.",
+  "causesElevated": ["Hypothyreoïdie", "Hashimoto-thyroïditis", "Jodiumtekort", "Bepaalde medicijnen"],
+  "causesLow": ["Hyperthyreoïdie", "Ziekte van Graves", "Overmatige schildklierhormondosis"],
+  "doctorQuestions": [
+    "Wijst mijn TSH op hypo- of hyperthyreoïdie?",
+    "Moet ik ook fT3 en fT4 laten meten?",
+    "Heb ik schildklierhormonen of verdere evaluatie nodig?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd (hypothyreoïdie mogelijk)", "high": "Sterk verhoogd" },
+  "categoryLabel": "Schildklier",
+  "pageTitle": "Waarde TSH — Schildklierstimulerend Hormoon uitgelegd | Medyra"
+}

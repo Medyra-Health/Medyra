@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Mocznik (BUN) powstaje podczas metabolizmu białek i jest wydalany przez nerki. Podwyższone wartości mogą wskazywać na zmniejszoną czynność nerek lub dietę bogatą w białka. Omów nieprawidłowe wyniki z lekarzem.",
+  "metaDescription": "BUN / mocznik we krwi podwyższony? Wartości prawidłowe, przyczyny i co oznacza dla zdrowia nerek — wyjaśnione prosto.",
+  "causesElevated": ["Choroba nerek", "Odwodnienie", "Dieta bogata w białka", "Krwawienie z przewodu pokarmowego"],
+  "causesLow": ["Niedożywienie", "Choroba wątroby", "Nadmierne nawodnienie"],
+  "doctorQuestions": [
+    "Czy mój BUN jest związany z czynnością nerek?",
+    "Czy powinienem dostosować spożycie białka?",
+    "Czy potrzebuję dalszych badań nerek?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Wskaźniki nerkowe",
+  "pageTitle": "Wartość BUN — Mocznik we krwi wyjaśniony | Medyra"
+}

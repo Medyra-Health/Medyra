@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "O cloreto (Cl) é um eletrólito que ajuda a regular o equilíbrio ácido-base e o equilíbrio hídrico. Desvios do normal podem indicar problemas renais ou metabólicos. Geralmente é avaliado junto com sódio e potássio. Discuta valores anormais com o seu médico.",
+  "metaDescription": "Cloreto elevado ou baixo? Valores normais, causas e significado deste eletrólito — explicado de forma simples.",
+  "causesElevated": ["Desidratação", "Doença renal", "Diarréia", "Certos medicamentos"],
+  "causesLow": ["Vômitos", "Diuréticos", "Insuficiência cardíaca", "Acidose metabólica"],
+  "doctorQuestions": [
+    "Meu nível de cloreto indica um problema ácido-base?",
+    "Devo verificar meus outros eletrólitos ao mesmo tempo?",
+    "Algum medicamento poderia estar afetando meu nível de cloreto?"
+  ],
+  "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado (hipercloremia)", "high": "Muito elevado" },
+  "categoryLabel": "Eletrólitos",
+  "pageTitle": "Valor Cl — Cloreto explicado | Medyra"
+}

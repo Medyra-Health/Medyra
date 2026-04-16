@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "As plaquetas (PLT) são células sanguíneas responsáveis pela coagulação. Uma contagem baixa pode aumentar o risco de sangramento, enquanto uma contagem alta pode indicar inflamação ou outras condições. Discuta resultados anormais com o seu médico.",
+  "metaDescription": "Plaquetas (PLT) altas ou baixas? Valores normais, causas e o que significam contagens anormais — explicado de forma simples.",
+  "causesElevated": ["Reações inflamatórias", "Deficiência de ferro", "Após cirurgia", "Distúrbios mieloproliferativos"],
+  "causesLow": ["Infecções virais", "Certos medicamentos", "Doenças autoimunes", "Doença hepática"],
+  "doctorQuestions": [
+    "Minha contagem de plaquetas representa maior risco de sangramento?",
+    "Algum dos meus medicamentos está afetando as plaquetas?",
+    "Quando o valor deve ser reavaliado?"
+  ],
+  "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Ligeiramente elevado", "high": "Muito elevado" },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Valor PLT — Plaquetas explicadas | Medyra"
+}

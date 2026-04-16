@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "低密度脂蛋白（LDL）被称为"坏胆固醇"，高水平会增加动脉粥样硬化和心血管疾病风险。目标值因个人心血管风险不同而异。",
+  "metaDescription": "LDL偏高？正常范围、心血管风险及何时需要药物治疗——简单易懂的解释。",
+  "causesElevated": ["高饱和脂肪饮食", "缺乏运动", "肥胖", "遗传性高胆固醇血症", "甲状腺功能减退"],
+  "causesLow": ["素食饮食", "他汀类药物治疗", "营养不良"],
+  "doctorQuestions": [
+    "我的LDL水平对我来说是否过高？",
+    "我需要服用他汀类药物吗？",
+    "我的LDL目标值应该是多少？"
+  ],
+  "rangeLabels": { "low": "理想", "normal": "正常", "elevated": "临界偏高", "high": "显著偏高" },
+  "categoryLabel": "代谢指标",
+  "pageTitle": "LDL值 — 低密度脂蛋白详解 | Medyra"
+}

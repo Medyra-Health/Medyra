@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Vitamine B12 (cobalamine) is essentieel voor bloedaanmaak, het zenuwstelsel en celmetabolisme. Een tekort ontwikkelt zich langzaam en kan vermoeidheid, tintelingen en geheugenproblemen veroorzaken. Veganisten en ouderen lopen een hoger risico. Bespreek verdenkingen met uw arts.",
+  "metaDescription": "Vitamine B12 te laag? Normaalwaarden, tekortsymptomen en behandeling voor veganisten en ouderen — eenvoudig uitgelegd.",
+  "causesElevated": ["Leverziekte", "Bepaalde bloedziekten", "Overdosering supplementen"],
+  "causesLow": ["Veganistisch/vegetarisch dieet", "Atrofische gastritis", "Slechte darmopname", "Langdurig gebruik van metformine of protonpompremmers"],
+  "doctorQuestions": [
+    "Is mijn B12-spiegel voldoende, of is er een functioneel tekort?",
+    "Heb ik injecties of tabletten nodig?",
+    "Is de oorzaak een absorptieprobleem in de maag?"
+  ],
+  "rangeLabels": { "low": "Tekort", "normal": "Voldoende", "elevated": "Verhoogd", "high": "Verhoogd" },
+  "categoryLabel": "Vitaminen",
+  "pageTitle": "Waarde vitamine B12 — Cobalamine uitgelegd | Medyra"
+}

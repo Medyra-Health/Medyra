@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "GPT/ALT (alanina aminotransferasa) es una enzima hepática. Los niveles elevados pueden indicar inflamación o daño hepático, por ejemplo por alcohol, medicamentos o hígado graso. Consulte con su médico ante resultados ligeramente elevados.",
+  "metaDescription": "GPT / ALT elevado? Valores normales, causas y qué significa un nivel alto de enzimas hepáticas — explicado de forma sencilla.",
+  "causesElevated": ["Hígado graso", "Consumo de alcohol", "Hepatitis viral", "Efectos secundarios de medicamentos", "Enfermedad cardíaca"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Podría algún medicamento haber elevado mi nivel de GPT/ALT?",
+    "¿Debería hacerme una ecografía del hígado?",
+    "¿Qué puedo hacer para mejorar mis valores hepáticos?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
+  "categoryLabel": "Valores hepáticos",
+  "pageTitle": "Valor GPT/ALT — Alanina Aminotransferasa explicada | Medyra"
+}

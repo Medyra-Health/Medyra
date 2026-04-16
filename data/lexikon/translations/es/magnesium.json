@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "El magnesio (Mg) participa en más de 300 reacciones enzimáticas y es esencial para músculos, nervios y ritmo cardíaco. Los niveles bajos pueden causar calambres musculares y fatiga. Los niveles elevados son raros. Consulte con su médico ante síntomas persistentes.",
+  "metaDescription": "Magnesio bajo? Valores normales, causas de deficiencia y síntomas — explicado de forma sencilla.",
+  "causesElevated": ["Insuficiencia renal", "Sobredosis de suplementos de magnesio"],
+  "causesLow": ["Ingesta inadecuada", "Consumo de alcohol", "Diarrea / vómitos", "Diuréticos", "Diabetes"],
+  "doctorQuestions": [
+    "¿Están mis calambres musculares relacionados con deficiencia de magnesio?",
+    "¿Debería tomar suplementos de magnesio?",
+    "¿Qué alimentos aportan suficiente magnesio?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
+  "categoryLabel": "Electrolitos",
+  "pageTitle": "Valor Mg — Magnesio explicado | Medyra"
+}

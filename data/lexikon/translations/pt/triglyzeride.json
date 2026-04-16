@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Os triglicerídeos são gorduras sanguíneas que servem como reserva de energia. Níveis elevados podem aumentar o risco de doenças cardiovasculares e pancreatite. Álcool, açúcar e obesidade desempenham um papel importante. Discuta valores elevados com o seu médico.",
+  "metaDescription": "Triglicerídeos elevados? Valores normais, causas e o que fazer com gorduras sanguíneas altas — explicado de forma simples.",
+  "causesElevated": ["Dieta rica em açúcar", "Consumo de álcool", "Obesidade", "Diabetes", "Hipotireoidismo"],
+  "causesLow": ["Desnutrição", "Má absorção", "Certos medicamentos"],
+  "doctorQuestions": [
+    "Quais mudanças dietéticas ou de estilo de vida reduzirão meus triglicerídeos?",
+    "Preciso de medicação?",
+    "Há risco de pancreatite?"
+  ],
+  "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado", "high": "Muito elevado (risco de pancreatite)" },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Valor TG — Triglicerídeos explicados | Medyra"
+}

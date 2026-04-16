@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Hematokryt (Hkt) wskazuje odsetek krwi składający się z czerwonych krwinek. Niska wartość może wskazywać na anemię, wysoka — na odwodnienie lub inne schorzenia. Omów nieprawidłowe wartości z lekarzem.",
+  "metaDescription": "Hematokryt (Hkt) wysoki lub niski? Wartości prawidłowe, przyczyny i kiedy udać się do lekarza — wyjaśnione klarownie.",
+  "causesElevated": ["Odwodnienie", "Palenie tytoniu", "Czerwienica prawdziwa", "Duże wysokości"],
+  "causesLow": ["Anemia", "Utrata krwi", "Niedobór żelaza", "Ciąża"],
+  "doctorQuestions": [
+    "Czy mój hematokryt jest zgodny z anemią?",
+    "Czy powinienem zwiększyć spożycie płynów?",
+    "Czy potrzebuję dalszych badań krwi?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Morfologia krwi",
+  "pageTitle": "Wartość Hkt — Hematokryt wyjaśniony | Medyra"
+}

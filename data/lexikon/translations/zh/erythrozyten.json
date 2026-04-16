@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "红细胞（RBC）将氧气从肺部输送到身体组织。计数低可能提示贫血，计数高可能提示脱水。异常结果应与医生讨论。",
+  "metaDescription": "红细胞/RBC偏低或偏高？正常范围、原因及对健康的意义——简单易懂的解释。",
+  "causesElevated": ["脱水", "高海拔", "吸烟", "真性红细胞增多症"],
+  "causesLow": ["缺铁", "维生素B12缺乏", "叶酸缺乏", "慢性疾病", "失血性贫血"],
+  "doctorQuestions": [
+    "我可能有贫血吗？",
+    "是哪种营养素缺乏导致的？",
+    "需要进一步检查吗？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常（男性）", "elevated": "升高", "high": "显著升高" },
+  "categoryLabel": "血常规",
+  "pageTitle": "RBC值 — 红细胞详解 | Medyra"
+}
