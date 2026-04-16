@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Protrombinоvoe vremya (Quick) otsenivaet vneshniy put svertyvаniya krovi. Norma: 70-130%. Snizhenie nablyudaetsya pri prieme antikoagulyantov ili zabolevaniyakh pecheni.",
+  "metaDescription": "Protrombinоvoe vremya snizheno? Norma i prichiny narusheniya svertyvаniya — obyasnenie.",
+  "causesElevated": [],
+  "causesLow": [
+    "Varfarin/antikoagulyatny",
+    "Zabolevaniya pecheni",
+    "Defitsit vitamina K",
+    "DVS-sindrom"
+  ],
+  "doctorQuestions": [
+    "Pravilnaya li doza antikoagulyanta?",
+    "Est li zabolevanie pecheni?",
+    "Est li risk krovotecheniya?"
+  ],
+  "rangeLabels": {
+    "low": "Risk krovotecheniya",
+    "normal": "Norma",
+    "elevated": "Povyshen",
+    "high": "Vysokiy"
+  },
+  "categoryLabel": "Koagulyatsiya",
+  "pageTitle": "Protrombinоvoe vremya (Quick): norma | Medyra"
+}

@@ -1,0 +1,28 @@
+{
+  "shortAnswer": "Natriy reguliruet vodny balans i davlenie krovi. Norma: 136-145 mmol/l. Nizkiy natriy vyzyvaet ustalost i sputannost soznaniya, vysokiy — zhazhddu i nevrologicheskie simptomy.",
+  "metaDescription": "Natriy povyshen ili ponizhen? Norma i prichiny narusheniya vodnogo balansa — obyasnenie.",
+  "causesElevated": [
+    "Degidratatsiya",
+    "Nesakharniy diabet",
+    "Izbytok soli v diete"
+  ],
+  "causesLow": [
+    "Obilnoe pite",
+    "Diuretiki",
+    "Rvota",
+    "Nadpochechnikovaya nedostatochnost"
+  ],
+  "doctorQuestions": [
+    "Nuzhno li izmenit pitevoy rezhim?",
+    "Est li narusheniya gormonov?",
+    "Nuzhna li korrektsiya terapii?"
+  ],
+  "rangeLabels": {
+    "low": "Gipоnatriyemiya",
+    "normal": "Norma",
+    "elevated": "Umerenno povyshen",
+    "high": "Gipernatriyemiya"
+  },
+  "categoryLabel": "Elektrolity",
+  "pageTitle": "Natriy: norma i vodny balans | Medyra"
+}

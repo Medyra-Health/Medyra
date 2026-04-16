@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "FT4 (svobodny tiroksin) — osnovnoy gormon shchitovidnoy zhelezy. Norma: 12-22 pmol/l. V sochetanii s TTG pozvolyaet otsenit funktsiy shchitovidnoy zhelezy.",
+  "metaDescription": "FT4 povyshen ili ponizhen? Norma tiroksina i funktsiya shchitovidnoy zhelezy — obyasnenie.",
+  "causesElevated": [
+    "Gipertireoz",
+    "Bolezn Greyvsa",
+    "Adenoma shchitovidnoy zhelezy"
+  ],
+  "causesLow": [
+    "Gipotireoz",
+    "Tireoidit Khashimoto",
+    "Posle terapii"
+  ],
+  "doctorQuestions": [
+    "Nuzhno li lechenie shchitovidnoy zhelezy?",
+    "Kak chasto proveryat gormony?"
+  ],
+  "rangeLabels": {
+    "low": "Nizkiy",
+    "normal": "Norma",
+    "elevated": "Umerenno povyshen",
+    "high": "Znachitelno povyshen"
+  },
+  "categoryLabel": "Shchitovidnaya zheleza",
+  "pageTitle": "FT4 — Svobodny tiroksin: norma i znachenie | Medyra"
+}

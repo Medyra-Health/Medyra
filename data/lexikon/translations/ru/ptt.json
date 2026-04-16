@@ -1,0 +1,27 @@
+{
+  "shortAnswer": "AChTV (aktivirovannoe chastichnoe tromboplastinovoe vremya) otsenivaet vnutrenniy put svertyvаniya. Norma: 25-38 sekund. Ispolzuetsya dlya monitoringa geparinovoy terapii.",
+  "metaDescription": "AChTV povysheno? Norma i znachenie pri narusheniyakh svertyvаniya — obyasnenie.",
+  "causesElevated": [
+    "Geparinovaya terapiya",
+    "Defitsit faktorov svertyvаniya",
+    "Bolezn fon Villebranda",
+    "Antifosfolipidny sindrom"
+  ],
+  "causesLow": [
+    "Tromboz",
+    "Vospalenie"
+  ],
+  "doctorQuestions": [
+    "Pravilnaya li doza geparina?",
+    "Est li narushenie svertyvаniya?",
+    "Kogda sleduyushchiy kontrol?"
+  ],
+  "rangeLabels": {
+    "low": "Nizkiy",
+    "normal": "Norma",
+    "elevated": "Umerenno povyshen",
+    "high": "Risk krovotecheniya"
+  },
+  "categoryLabel": "Koagulyatsiya",
+  "pageTitle": "AChTV (PTT) — Svertyvayemost krovi: norma | Medyra"
+}
