@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "谷草转氨酶（GOT/AST）存在于肝脏、心肌和肌肉中。升高可能提示肝脏损伤、心肌损伤或肌肉疾病。应结合其他指标综合判断。",
+  "metaDescription": "GOT/AST偏高？正常范围、原因及何时就医——简单易懂的解释。",
+  "causesElevated": ["肝炎", "脂肪肝", "心肌梗死", "肌肉损伤", "剧烈运动"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "GOT升高是肝脏问题还是心脏问题？",
+    "需要进一步检查吗？",
+    "我应该改变生活方式吗？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常", "elevated": "轻度升高", "high": "显著升高" },
+  "categoryLabel": "肝功能指标",
+  "pageTitle": "GOT/AST值 — 谷草转氨酶详解 | Medyra"
+}

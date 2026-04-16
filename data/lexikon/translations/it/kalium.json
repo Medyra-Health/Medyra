@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Il potassio (K) è un elettrolita che regola il ritmo cardiaco, i muscoli e i nervi. I livelli bassi possono causare aritmie cardiache e debolezza muscolare; i livelli alti sono anch'essi pericolosi. Le deviazioni significative devono essere discusse prontamente con il vostro medico.",
+  "metaDescription": "Potassio elevato o basso? Valori normali, rischio cardiaco e cause dello squilibrio di potassio — spiegato in modo semplice.",
+  "causesElevated": ["Malattia renale", "ACE-inibitori o diuretici risparmiatori di potassio", "Eccessiva assunzione di potassio", "Acidosi"],
+  "causesLow": ["Vomito / diarrea", "Diuretici", "Carenza di magnesio", "Assunzione inadeguata"],
+  "doctorQuestions": [
+    "C'è rischio di aritmia cardiaca?",
+    "Devo regolare l'assunzione di potassio attraverso la dieta?",
+    "Un farmaco dovrebbe essere cambiato?"
+  ],
+  "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato (iperpotassiemia)", "high": "Molto elevato (pericoloso)" },
+  "categoryLabel": "Elettroliti",
+  "pageTitle": "Valore K — Potassio spiegato | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Os eritrócitos (glóbulos vermelhos) transportam oxigênio dos pulmões para os tecidos do corpo. Uma contagem baixa pode indicar anemia, enquanto uma contagem alta pode sugerir desidratação. Discuta quaisquer resultados anormais com o seu médico.",
+  "metaDescription": "Eritrócitos / glóbulos vermelhos baixos ou altos? Valores normais, causas e o que significa para a saúde — explicado de forma simples.",
+  "causesElevated": ["Desidratação", "Altitude elevada", "Tabagismo", "Policitemia vera"],
+  "causesLow": ["Deficiência de ferro", "Deficiência de vitamina B12", "Deficiência de folato", "Doenças crônicas", "Anemia por perda de sangue"],
+  "doctorQuestions": [
+    "Posso ter anemia?",
+    "Qual deficiência nutricional poderia estar causando isso?",
+    "São necessários mais exames?"
+  ],
+  "rangeLabels": { "low": "Baixo", "normal": "Normal (homens)", "elevated": "Elevado", "high": "Muito elevado" },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Valor eritrócitos — Glóbulos vermelhos explicados | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "血细胞比容（HCT）是红细胞占血液总量的百分比。低值通常提示贫血，高值可能提示脱水或红细胞增多症。",
+  "metaDescription": "血细胞比容偏低或偏高？正常范围、原因及意义——简单易懂的解释。",
+  "causesElevated": ["脱水", "高海拔", "吸烟", "真性红细胞增多症"],
+  "causesLow": ["贫血", "失血", "维生素B12缺乏", "慢性疾病"],
+  "doctorQuestions": [
+    "我的血细胞比容提示贫血吗？",
+    "我需要补液或其他治疗吗？",
+    "需要进一步检查吗？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常（女性）", "elevated": "正常（男性）", "high": "升高" },
+  "categoryLabel": "血常规",
+  "pageTitle": "HCT值 — 血细胞比容详解 | Medyra"
+}

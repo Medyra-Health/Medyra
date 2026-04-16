@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Leukocyten in de urine kunnen wijzen op ontsteking van de urinewegen. Kleine hoeveelheden kunnen normaal zijn, maar hogere waarden kunnen duiden op een urineweginfectie of nierontsteking. Bespreek positieve bevindingen met uw arts.",
+  "metaDescription": "Leukocyten in urine verhoogd? Oorzaken, betekenis en wanneer het wijst op een urineweginfectie — eenvoudig uitgelegd.",
+  "causesElevated": ["Urineweginfectie (cystitis)", "Nierontsteking (pyelonefritis)", "Urethritis", "Nierziekte"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Is er een urineweginfectie en heb ik antibiotica nodig?",
+    "Moet ik een urinekweek laten afnemen?",
+    "Kunnen leukocyten in de urine wijzen op nierziekte?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
+  "categoryLabel": "Urinewaarden",
+  "pageTitle": "Leukocyten in urine — Urineweginfectie uitgelegd | Medyra"
+}

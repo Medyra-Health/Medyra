@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "高密度脂蛋白（HDL）被称为"好胆固醇"，有助于将胆固醇从血管运回肝脏。HDL越高，心血管保护作用越强；HDL过低则增加心血管风险。",
+  "metaDescription": "HDL偏低？正常范围、好胆固醇的意义及如何提升——简单易懂的解释。",
+  "causesElevated": ["规律有氧运动", "适量饮酒", "遗传因素"],
+  "causesLow": ["缺乏运动", "吸烟", "肥胖", "高碳水化合物饮食", "2型糖尿病"],
+  "doctorQuestions": [
+    "我的HDL水平对心脏健康有意义吗？",
+    "如何提高我的HDL？",
+    "需要结合其他血脂指标综合评估吗？"
+  ],
+  "rangeLabels": { "low": "偏低（风险）", "normal": "正常", "elevated": "理想" },
+  "categoryLabel": "代谢指标",
+  "pageTitle": "HDL值 — 高密度脂蛋白详解 | Medyra"
+}

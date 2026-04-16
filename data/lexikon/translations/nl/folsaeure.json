@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Folaat (foliumzuur) is een B-vitamine dat essentieel is voor celdeling en bloedaanmaak. Een tekort kan leiden tot bloedarmoede en is bijzonder gevaarlijk tijdens de zwangerschap. Veel mensen krijgen niet genoeg folaat via de voeding. Bespreek een tekort met uw arts.",
+  "metaDescription": "Folaat te laag? Normaalwaarden, zwangerschapsrisico's, oorzaken van foliumzuurtekort — eenvoudig uitgelegd.",
+  "causesElevated": ["Overdosering foliumzuursupplementen"],
+  "causesLow": ["Onevenwichtig dieet", "Alcoholgebruik", "Malabsorptie", "Bepaalde medicijnen (bijv. methotrexaat)"],
+  "doctorQuestions": [
+    "Moet ik folaat nemen tijdens of voor de zwangerschap?",
+    "Is mijn folaatspiegel voldoende voor normale bloedaanmaak?",
+    "Welke voedingsmiddelen zijn rijk aan folaat?"
+  ],
+  "rangeLabels": { "low": "Tekort", "normal": "Voldoende", "elevated": "Verhoogd", "high": "Verhoogd" },
+  "categoryLabel": "Vitaminen",
+  "pageTitle": "Waarde folaat — Foliumzuur uitgelegd | Medyra"
+}

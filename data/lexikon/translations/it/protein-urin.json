@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le proteine nelle urine (proteinuria) possono indicare danni renali, poiché i reni sani normalmente trattengono le proteine. Piccole quantità possono comparire dopo l'esercizio fisico o la febbre. I valori persistenti devono essere discussi con il vostro medico, in quanto possono indicare malattia renale.",
+  "metaDescription": "Proteine nelle urine (proteinuria)? Cause, rischio di malattia renale e cosa significa il risultato — spiegato in modo semplice.",
+  "causesElevated": ["Malattia renale cronica", "Diabete (nefropatia diabetica)", "Ipertensione arteriosa", "Intenso sforzo fisico", "Infiammazione renale"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "La proteinuria indica danni renali?",
+    "Dovrebbe essere fatto un campione di urina delle 24 ore?",
+    "Quali misure proteggeranno la mia funzionalità renale?"
+  ],
+  "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
+  "categoryLabel": "Valori urinari",
+  "pageTitle": "Proteine nelle urine — Proteinuria spiegata | Medyra"
+}

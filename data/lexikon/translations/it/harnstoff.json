@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "L'urea (BUN) si produce quando le proteine vengono metabolizzate ed è escreta dai reni. I livelli elevati possono indicare una ridotta funzionalità renale o una dieta ricca di proteine. Discutete i risultati anomali con il vostro medico.",
+  "metaDescription": "BUN / azoto ureico nel sangue elevato? Valori normali, cause e cosa significa per la salute renale — spiegato in modo semplice.",
+  "causesElevated": ["Malattia renale", "Disidratazione", "Dieta ricca di proteine", "Sanguinamento gastrointestinale"],
+  "causesLow": ["Malnutrizione", "Malattia epatica", "Iperidratazione"],
+  "doctorQuestions": [
+    "Il mio BUN è correlato alla mia funzionalità renale?",
+    "Dovrei ridurre l'assunzione di proteine?",
+    "Ho bisogno di ulteriori test renali?"
+  ],
+  "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
+  "categoryLabel": "Valori renali",
+  "pageTitle": "Valore BUN — Azoto Ureico nel Sangue spiegato | Medyra"
+}

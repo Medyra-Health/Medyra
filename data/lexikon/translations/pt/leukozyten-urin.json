@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Leucócitos na urina podem indicar inflamação do trato urinário. Pequenas quantidades podem ser normais, mas valores mais altos podem indicar infecção urinária ou inflamação renal. Discuta achados positivos com o seu médico.",
+  "metaDescription": "Leucócitos na urina elevados? Causas, significado e quando indica infecção urinária — explicado de forma simples.",
+  "causesElevated": ["Infecção do trato urinário (cistite)", "Inflamação renal (pielonefrite)", "Uretrite", "Doença renal"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Há uma infecção urinária e preciso de antibióticos?",
+    "Devo fazer uma urocultura?",
+    "Os leucócitos na urina poderiam indicar doença renal?"
+  ],
+  "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado", "high": "Muito elevado" },
+  "categoryLabel": "Valores urinários",
+  "pageTitle": "Leucócitos na urina — Infecção urinária explicada | Medyra"
+}

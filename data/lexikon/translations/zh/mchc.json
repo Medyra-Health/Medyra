@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "平均红细胞血红蛋白浓度（MCHC）反映红细胞中血红蛋白的浓度。低值提示低色素性贫血，高值较少见，可能提示遗传性球形红细胞增多症。",
+  "metaDescription": "MCHC偏低或偏高？正常范围、原因及意义——简单易懂的解释。",
+  "causesElevated": ["遗传性球形红细胞增多症", "严重脱水"],
+  "causesLow": ["缺铁性贫血", "地中海贫血"],
+  "doctorQuestions": [
+    "MCHC提示哪种类型的贫血？",
+    "需要进一步的血液检查吗？",
+    "我需要补铁吗？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常", "elevated": "升高" },
+  "categoryLabel": "血常规",
+  "pageTitle": "MCHC值 — 平均红细胞血红蛋白浓度详解 | Medyra"
+}

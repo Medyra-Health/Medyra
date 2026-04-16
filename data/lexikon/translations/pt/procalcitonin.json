@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "PCT (procalcitonina) é um marcador específico para infecções bacterianas. Níveis elevados podem indicar uma infecção bacteriana grave ou sepse. O exame ajuda os médicos a decidir se antibióticos são necessários. Discuta níveis elevados com o seu médico imediatamente.",
+  "metaDescription": "Procalcitonina (PCT) elevada? Valores normais, causas e seu papel como marcador de sepse — explicado de forma simples.",
+  "causesElevated": ["Infecção bacteriana grave", "Sepse", "Falência multiorgânica", "Queimaduras graves"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Meu PCT indica uma infecção bacteriana?",
+    "Preciso de antibióticos?",
+    "Devo ser hospitalizado?"
+  ],
+  "rangeLabels": { "low": "Baixo", "normal": "Normal / baixo", "elevated": "Ligeiramente elevado", "high": "Muito elevado (sepse suspeita)" },
+  "categoryLabel": "Marcadores inflamatórios",
+  "pageTitle": "Valor PCT — Procalcitonina explicada | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Trombocyten (bloedplaatjes) zijn bloedcellen die verantwoordelijk zijn voor de stolling. Een laag aantal kan het bloedingsrisico verhogen, terwijl een hoog aantal kan wijzen op ontsteking of andere aandoeningen. Bespreek abnormale resultaten met uw arts.",
+  "metaDescription": "Trombocyten (bloedplaatjes) hoog of laag? Normaalwaarden, oorzaken en wat abnormale aantallen betekenen — eenvoudig uitgelegd.",
+  "causesElevated": ["Ontstekingsreacties", "IJzertekort", "Na een operatie", "Myeloproliferatieve aandoeningen"],
+  "causesLow": ["Virale infecties", "Bepaalde medicijnen", "Auto-immuunziekten", "Leverziekte"],
+  "doctorQuestions": [
+    "Geeft mijn trombocytenaantal een verhoogd bloedingsrisico?",
+    "Beïnvloedt een van mijn medicijnen de bloedplaatjes?",
+    "Wanneer moet de waarde opnieuw worden gecontroleerd?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Licht verhoogd", "high": "Sterk verhoogd" },
+  "categoryLabel": "Bloedbeeld",
+  "pageTitle": "Waarde bloedplaatjes — Trombocyten uitgelegd | Medyra"
+}

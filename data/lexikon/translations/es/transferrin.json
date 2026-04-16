@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La transferrina es la proteína transportadora de hierro en la sangre. En la deficiencia de hierro, la transferrina aumenta porque el cuerpo proporciona más capacidad de transporte. En inflamación o sobrecarga de hierro, el valor suele estar reducido. Consulte este valor junto con ferritina y hierro sérico con su médico.",
+  "metaDescription": "Transferrina elevada o baja? Valores normales, significado en deficiencia de hierro y causas — explicado de forma sencilla.",
+  "causesElevated": ["Deficiencia de hierro", "Embarazo", "Suplementos de estrógenos"],
+  "causesLow": ["Enfermedades inflamatorias", "Enfermedad hepática", "Sobrecarga de hierro (hemocromatosis)", "Desnutrición"],
+  "doctorQuestions": [
+    "¿Cómo debería evaluarse mi transferrina junto con la ferritina?",
+    "¿Necesito suplementos de hierro?",
+    "¿Podría estar presente hemocromatosis?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
+  "categoryLabel": "Valores de hierro",
+  "pageTitle": "Valor transferrina — Proteína transportadora de hierro explicada | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Wapń (Ca) jest minerałem niezbędnym dla kości, mięśni i nerwów. Wysokie wartości we krwi mogą wskazywać na zaburzenia przytarczyc lub chorobę kości; niskie — na niedobór witaminy D lub niedożywienie. Omów odchylenia z lekarzem.",
+  "metaDescription": "Wapń podwyższony lub niski? Wartości prawidłowe, przyczyny i co oznacza dla zdrowia kości — wyjaśnione prosto.",
+  "causesElevated": ["Pierwotna nadczynność przytarczyc", "Nowotwór", "Przedawkowanie witaminy D", "Sarkoidoza"],
+  "causesLow": ["Niedobór witaminy D", "Niedoczynność przytarczyc", "Niedobór magnezu", "Choroba nerek"],
+  "doctorQuestions": [
+    "Co powoduje mój podwyższony lub niski wapń?",
+    "Czy powinienem sprawdzić poziom witaminy D?",
+    "Czy potrzebuję oceny przytarczyc?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone (hiperkalcemia)", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Elektrolity",
+  "pageTitle": "Wartość Ca — Wapń wyjaśniony | Medyra"
+}

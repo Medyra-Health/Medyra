@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Il magnesio (Mg) è coinvolto in oltre 300 reazioni enzimatiche ed è essenziale per muscoli, nervi e ritmo cardiaco. Livelli bassi possono causare crampi muscolari e stanchezza. I livelli elevati sono rari. Discutete i sintomi persistenti con il vostro medico.",
+  "metaDescription": "Magnesio basso? Valori normali, cause della carenza e sintomi spiegati in modo semplice.",
+  "causesElevated": ["Insufficienza renale", "Sovradosaggio di integratori di magnesio"],
+  "causesLow": ["Assunzione inadeguata", "Consumo di alcol", "Diarrea / vomito", "Diuretici", "Diabete"],
+  "doctorQuestions": [
+    "I miei crampi muscolari sono correlati alla carenza di magnesio?",
+    "Dovrei assumere integratori di magnesio?",
+    "Quali alimenti forniscono magnesio sufficiente?"
+  ],
+  "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
+  "categoryLabel": "Elettroliti",
+  "pageTitle": "Valore Mg — Magnesio spiegato | Medyra"
+}

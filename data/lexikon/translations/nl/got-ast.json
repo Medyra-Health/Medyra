@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "GOT/AST (aspartaataminotransferase) is een enzym dat voorkomt in de lever, het hart en de spieren. Verhoogde waarden kunnen wijzen op leverschade of hartproblemen. In combinatie met GPT/ALT helpt het de oorzaak te bepalen. Bespreek abnormale waarden met uw arts.",
+  "metaDescription": "GOT / AST verhoogd? Normaalwaarden, oorzaken en betekenis van dit leverenzym — eenvoudig uitgelegd.",
+  "causesElevated": ["Leverziekte", "Hartinfarct", "Spierziekte", "Alcoholgebruik", "Bepaalde medicijnen"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Wijst de GOT/GPT-verhouding op een specifieke oorzaak?",
+    "Moet mijn hart worden onderzocht?",
+    "Wanneer moet de waarde opnieuw worden gecontroleerd?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
+  "categoryLabel": "Leverwaarden",
+  "pageTitle": "Waarde GOT/AST — Aspartaataminotransferase uitgelegd | Medyra"
+}

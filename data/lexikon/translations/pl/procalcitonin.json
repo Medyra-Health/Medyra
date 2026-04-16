@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "PCT (prokalcytonina) to specyficzny marker infekcji bakteryjnych. Podwyższone wartości mogą wskazywać na ciężką infekcję bakteryjną lub sepsę. Badanie pomaga lekarzom zdecydować, czy konieczne są antybiotyki. Natychmiast omów podwyższone wartości z lekarzem.",
+  "metaDescription": "Prokalcytonina (PCT) podwyższona? Wartości prawidłowe, przyczyny i rola jako markera sepsy — wyjaśnione prosto.",
+  "causesElevated": ["Ciężka infekcja bakteryjna", "Sepsa", "Niewydolność wielonarządowa", "Ciężkie oparzenia"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy moje PCT wskazuje na infekcję bakteryjną?",
+    "Czy potrzebuję antybiotyków?",
+    "Czy powinienem być hospitalizowany?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne / niskie", "elevated": "Nieznacznie podwyższone", "high": "Znacznie podwyższone (podejrzenie sepsy)" },
+  "categoryLabel": "Markery zapalne",
+  "pageTitle": "Wartość PCT — Prokalcytonina wyjaśniona | Medyra"
+}

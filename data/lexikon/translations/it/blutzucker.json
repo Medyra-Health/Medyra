@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La glicemia a digiuno misura la concentrazione di zucchero nel sangue dopo almeno 8 ore senza mangiare. Valori superiori a 126 mg/dl possono indicare diabete; valori tra 100 e 125 mg/dl suggeriscono prediabete. Discutete i valori elevati con il vostro medico.",
+  "metaDescription": "Glicemia a digiuno elevata? Valori normali, rischio di diabete e cosa significa il valore — spiegato in modo semplice.",
+  "causesElevated": ["Diabete mellito", "Resistenza all'insulina", "Risposta allo stress", "Alcuni farmaci (p.es. corticosteroidi)"],
+  "causesLow": ["Troppa insulina", "Alcuni farmaci", "Digiuno dopo esercizio fisico", "Condizioni rare"],
+  "doctorQuestions": [
+    "Dovrei fare un test di tolleranza al glucosio orale?",
+    "Ho il diabete o il prediabete?",
+    "Quali cambiamenti dietetici mi aiuterebbero?"
+  ],
+  "rangeLabels": { "low": "Basso", "normal": "Normale (a digiuno)", "elevated": "Range prediabetico", "high": "Range diabetico" },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Valore glicemia — Glicemia a digiuno spiegata | Medyra"
+}

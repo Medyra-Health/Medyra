@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "降钙素原（PCT）是细菌感染的特异性标志物。显著升高高度提示严重细菌感染或败血症，常用于指导抗生素治疗。",
+  "metaDescription": "降钙素原偏高？正常范围、细菌感染意义及何时就医——简单易懂的解释。",
+  "causesElevated": ["严重细菌感染", "败血症", "多器官功能衰竭", "重度手术创伤"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "PCT升高提示严重感染吗？",
+    "我需要使用抗生素吗？",
+    "需要住院治疗吗？"
+  ],
+  "rangeLabels": { "low": "正常", "normal": "轻度升高", "elevated": "中度升高", "high": "显著升高" },
+  "categoryLabel": "炎症标志物",
+  "pageTitle": "PCT值 — 降钙素原详解 | Medyra"
+}

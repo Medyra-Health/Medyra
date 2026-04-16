@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "El hierro sérico mide la cantidad de hierro en la sangre en el momento de la extracción. Los valores bajos pueden indicar deficiencia de hierro; los valores altos pueden sugerir sobrecarga de hierro. Como los niveles fluctúan significativamente, el hierro sérico siempre se evalúa junto con ferritina y transferrina.",
+  "metaDescription": "Hierro sérico elevado o bajo? Valores normales, diagnóstico de deficiencia de hierro y significado — explicado de forma sencilla.",
+  "causesElevated": ["Hemocromatosis", "Hemólisis", "Enfermedad hepática", "Sobredosis de suplementos de hierro"],
+  "causesLow": ["Deficiencia de hierro", "Inflamación crónica", "Menstruación abundante", "Ingesta inadecuada de hierro"],
+  "doctorQuestions": [
+    "¿Hay una verdadera deficiencia de hierro?",
+    "¿Necesito suplementos de hierro?",
+    "¿Debería hacerme pruebas de hemocromatosis?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
+  "categoryLabel": "Valores de hierro",
+  "pageTitle": "Valor Fe — Hierro Sérico explicado | Medyra"
+}

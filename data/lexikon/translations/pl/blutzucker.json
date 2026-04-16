@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Glukoza na czczo mierzy stężenie cukru we krwi po co najmniej 8 godzinach bez jedzenia. Wartości powyżej 126 mg/dl mogą wskazywać na cukrzycę; wartości między 100 a 125 mg/dl sugerują stan przedcukrzycowy. Omów podwyższone wartości z lekarzem.",
+  "metaDescription": "Glukoza na czczo podwyższona? Wartości prawidłowe, ryzyko cukrzycy i co oznacza ta wartość — wyjaśnione prosto.",
+  "causesElevated": ["Cukrzyca mellitus", "Insulinooporność", "Reakcja na stres", "Niektóre leki (np. kortykosteroidy)"],
+  "causesLow": ["Za dużo insuliny", "Niektóre leki", "Post po wysiłku fizycznym", "Rzadkie schorzenia"],
+  "doctorQuestions": [
+    "Czy powinienem wykonać doustny test tolerancji glukozy?",
+    "Czy mam cukrzycę lub stan przedcukrzycowy?",
+    "Jakie zmiany diety by mi pomogły?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne (na czczo)", "elevated": "Zakres przedcukrzycowy", "high": "Zakres cukrzycowy" },
+  "categoryLabel": "Metabolizm",
+  "pageTitle": "Wartość glukozy — Glukoza na czczo wyjaśniona | Medyra"
+}

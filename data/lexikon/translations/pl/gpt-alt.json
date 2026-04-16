@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "GPT/ALT (aminotransferaza alaninowa) to enzym wątrobowy. Podwyższone wartości mogą wskazywać na zapalenie lub uszkodzenie wątroby, np. przez alkohol, leki lub stłuszczenie wątroby. Omów nieznacznie podwyższone wyniki z lekarzem.",
+  "metaDescription": "GPT / ALT podwyższone? Wartości prawidłowe, przyczyny i co oznaczają wysokie enzymy wątrobowe — wyjaśnione prosto.",
+  "causesElevated": ["Stłuszczenie wątroby", "Spożycie alkoholu", "Wirusowe zapalenie wątroby", "Skutki uboczne leków", "Choroba serca"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy jakiś lek mógł podwyższyć moje GPT/ALT?",
+    "Czy powinienem zrobić USG wątroby?",
+    "Co mogę zrobić, aby poprawić wyniki wątrobowe?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Wskaźniki wątrobowe",
+  "pageTitle": "Wartość GPT/ALT — Aminotransferaza alaninowa wyjaśniona | Medyra"
+}

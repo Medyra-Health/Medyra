@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "PTT (czas częściowej tromboplastyny) mierzy, jak szybko krew krzepnie przez wewnętrzną kaskadę krzepnięcia. Wydłużone wartości mogą wskazywać na zaburzenie krzepnięcia lub działanie heparyny. Badanie jest używane przed operacjami i przy podejrzeniu skazy krwotocznej. Omów nieprawidłowe wartości z lekarzem.",
+  "metaDescription": "PTT podwyższone? Wartości prawidłowe, znaczenie czasu krzepnięcia i przyczyny w terapii heparyną — wyjaśnione prosto.",
+  "causesElevated": ["Terapia heparyną", "Hemofilia", "Niedobór czynników krzepnięcia", "Choroba von Willebranda"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy istnieje zaburzenie krzepnięcia wyjaśniające moje PTT?",
+    "Czy moja dawka heparyny jest prawidłowa?",
+    "Czy potrzebuję dalszych badań krzepnięcia przed operacją?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Wydłużone", "high": "Znacznie wydłużone" },
+  "categoryLabel": "Krzepnięcie",
+  "pageTitle": "Wartość PTT — Czas częściowej tromboplastyny wyjaśniony | Medyra"
+}

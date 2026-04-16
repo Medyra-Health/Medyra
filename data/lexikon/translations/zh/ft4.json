@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "游离甲状腺素（FT4）是甲状腺产生的主要激素。偏高提示甲状腺功能亢进，偏低提示甲状腺功能减退。应结合TSH和FT3综合判断。",
+  "metaDescription": "FT4偏高或偏低？正常范围、甲状腺功能意义及原因——简单易懂的解释。",
+  "causesElevated": ["甲状腺功能亢进", "Graves病", "甲状腺炎"],
+  "causesLow": ["甲状腺功能减退", "垂体功能减退", "桥本甲状腺炎"],
+  "doctorQuestions": [
+    "FT4异常提示甲亢还是甲减？",
+    "我需要甲状腺激素替代治疗吗？",
+    "需要进一步检查吗？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常", "elevated": "升高" },
+  "categoryLabel": "甲状腺指标",
+  "pageTitle": "FT4值 — 游离甲状腺素详解 | Medyra"
+}

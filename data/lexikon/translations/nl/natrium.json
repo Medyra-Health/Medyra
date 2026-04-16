@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Natrium (Na) is een vitaal elektrolyt dat de vochtbalans en bloeddruk reguleert. Lage waarden (hyponatriëmie) kunnen verwarring en stuipen veroorzaken; hoge waarden (hypernatriëmie) wijzen op uitdroging. Bespreek afwijkingen met uw arts.",
+  "metaDescription": "Natrium verhoogd of laag? Normaalwaarden, oorzaken van elektrolytonbalans en wanneer de arts raadplegen — eenvoudig uitgelegd.",
+  "causesElevated": ["Uitdroging", "Te veel zoutinname", "Bepaalde medicijnen", "Diabetes insipidus"],
+  "causesLow": ["Overmatige vochtinname", "Nierziekte", "Hartfalen", "Bepaalde medicijnen (diuretica)", "Braken / diarree"],
+  "doctorQuestions": [
+    "Wat veroorzaakt mijn natriumonevenwicht?",
+    "Moet ik mijn vochtinname aanpassen?",
+    "Kan een medicijn mijn natriumwaarde beïnvloeden?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd (hypernatriëmie)", "high": "Sterk verhoogd" },
+  "categoryLabel": "Elektrolyten",
+  "pageTitle": "Waarde Na — Natrium uitgelegd | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "HbA1c pokazuje średni poziom glukozy we krwi w ciągu ostatnich 2–3 miesięcy. Wartości powyżej 6,5% mogą wskazywać na cukrzycę. Wartości między 5,7% a 6,4% są uznawane za stan przedcukrzycowy. Zawsze omawiaj podwyższone wartości z lekarzem.",
+  "metaDescription": "HbA1c podwyższone? Wartości prawidłowe, ryzyko cukrzycy i co oznacza długoterminowy cukier we krwi — wyjaśnione prosto.",
+  "causesElevated": ["Cukrzyca typu 2", "Cukrzyca typu 1", "Źle kontrolowana cukrzyca", "Insulinooporność"],
+  "causesLow": ["Hemoliza", "Niedokrwistość z utraty krwi", "Niektóre warianty hemoglobiny"],
+  "doctorQuestions": [
+    "Czy moje HbA1c wskazuje na cukrzycę lub stan przedcukrzycowy?",
+    "Jakie zmiany diety lub stylu życia zaleca Pan/Pani?",
+    "Czy potrzebuję leków?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Stan przedcukrzycowy", "high": "Zakres cukrzycowy" },
+  "categoryLabel": "Metabolizm",
+  "pageTitle": "Wartość HbA1c — Długoterminowy cukier we krwi wyjaśniony | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "γ-谷氨酰转移酶（GGT）是反映肝胆疾病和酒精损伤的敏感指标。持续升高应与医生讨论，尤其是有饮酒史者。",
+  "metaDescription": "GGT偏高？正常范围、酒精和肝脏原因及意义——简单易懂的解释。",
+  "causesElevated": ["酒精摄入", "脂肪肝", "胆道疾病", "某些药物", "肝炎"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "GGT升高是由酒精还是肝脏疾病引起的？",
+    "我需要戒酒吗？",
+    "需要做肝脏超声检查吗？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常", "elevated": "轻度升高", "high": "显著升高" },
+  "categoryLabel": "肝功能指标",
+  "pageTitle": "GGT值 — γ-谷氨酰转移酶详解 | Medyra"
+}

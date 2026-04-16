@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Magnez (Mg) bierze udział w ponad 300 reakcjach enzymatycznych i jest niezbędny dla mięśni, nerwów i rytmu serca. Niskie wartości mogą powodować skurcze mięśni i zmęczenie. Podwyższone wartości są rzadkie. Omów uporczywe objawy z lekarzem.",
+  "metaDescription": "Magnez niski? Wartości prawidłowe, przyczyny niedoboru i objawy — wyjaśnione prosto.",
+  "causesElevated": ["Niewydolność nerek", "Przedawkowanie suplementów magnezu"],
+  "causesLow": ["Niewystarczające spożycie", "Spożycie alkoholu", "Biegunka / wymioty", "Diuretyki", "Cukrzyca"],
+  "doctorQuestions": [
+    "Czy moje skurcze mięśni są związane z niedoborem magnezu?",
+    "Czy powinienem przyjmować suplementy magnezu?",
+    "Jakie pokarmy zapewniają wystarczającą ilość magnezu?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Elektrolity",
+  "pageTitle": "Wartość Mg — Magnez wyjaśniony | Medyra"
+}

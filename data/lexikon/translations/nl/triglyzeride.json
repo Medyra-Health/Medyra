@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Triglyceriden zijn bloedvetten die dienen als energiereserve. Verhoogde waarden kunnen het risico op hart- en vaatziekten en pancreatitis verhogen. Alcohol, suiker en obesitas spelen een grote rol. Bespreek verhoogde waarden met uw arts.",
+  "metaDescription": "Triglyceriden verhoogd? Normaalwaarden, oorzaken en wat u kunt doen bij hoge bloedvetten — eenvoudig uitgelegd.",
+  "causesElevated": ["Suikerrijk dieet", "Alcoholgebruik", "Obesitas", "Diabetes", "Hypothyreoïdie"],
+  "causesLow": ["Ondervoeding", "Malabsorptie", "Bepaalde medicijnen"],
+  "doctorQuestions": [
+    "Welke dieet- of leefstijlveranderingen verlagen mijn triglyceriden?",
+    "Heb ik medicatie nodig?",
+    "Is er risico op pancreatitis?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd (pancreatitisrisico)" },
+  "categoryLabel": "Stofwisseling",
+  "pageTitle": "Waarde TG — Triglyceriden uitgelegd | Medyra"
+}

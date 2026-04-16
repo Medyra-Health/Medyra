@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "fT4 (vrij thyroxine) is het belangrijkste schildklierhormoon en wordt in de lever omgezet in het actieve fT3. Verhoogde waarden kunnen wijzen op hyperthyreoïdie; lage waarden kunnen duiden op hypothyreoïdie. Deze waarde moet altijd worden beoordeeld samen met TSH.",
+  "metaDescription": "fT4 verhoogd of laag? Normaalwaarden, betekenis van vrij thyroxine en schildklierfunctie — eenvoudig uitgelegd.",
+  "causesElevated": ["Hyperthyreoïdie", "Ziekte van Graves", "Overdosering schildklierhormoon"],
+  "causesLow": ["Hypothyreoïdie", "Hashimoto-thyroïditis", "Hypofyseziekte"],
+  "doctorQuestions": [
+    "Hoe verhoud mijn fT4 zich tot mijn TSH-waarde?",
+    "Heb ik schildklierhormonen nodig?",
+    "Moet ik een schildklierechografie laten maken?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
+  "categoryLabel": "Schildklier",
+  "pageTitle": "Waarde fT4 — Vrij Thyroxine uitgelegd | Medyra"
+}

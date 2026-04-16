@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "El valor Quick (tiempo de protrombina) mide la capacidad de coagulación de la sangre por la vía extrínseca. Los valores bajos indican tiempo de coagulación prolongado y mayor riesgo de hemorragia. El valor está estrechamente vinculado a la función hepática y la vitamina K. Consulte con su médico ante valores anormales.",
+  "metaDescription": "Valor Quick / tiempo de protrombina bajo? Valores normales, riesgo de hemorragia y causas — explicado de forma sencilla.",
+  "causesElevated": [],
+  "causesLow": ["Warfarina / terapia anticoagulante", "Enfermedad hepática", "Deficiencia de vitamina K", "Trastornos de coagulación"],
+  "doctorQuestions": [
+    "¿Se debe mi valor Quick a warfarina o enfermedad hepática?",
+    "¿Necesito un valor Quick normal antes de una cirugía?",
+    "¿Debería tomar vitamina K?"
+  ],
+  "rangeLabels": { "low": "Bajo (riesgo de hemorragia)", "normal": "Normal", "elevated": "Elevado (raramente relevante clínicamente)", "high": "Elevado" },
+  "categoryLabel": "Coagulación",
+  "pageTitle": "Valor Quick — Tiempo de Protrombina explicado | Medyra"
+}

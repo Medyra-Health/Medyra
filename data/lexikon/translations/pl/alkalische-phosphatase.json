@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Fosfataza zasadowa (ALP) to enzym występujący w wątrobie, kościach i drogach żółciowych. Podwyższone wartości mogą wskazywać na chorobę dróg żółciowych, problemy z wątrobą lub zaburzenia kości. Omów stale podwyższone wartości z lekarzem.",
+  "metaDescription": "Fosfataza zasadowa (ALP) podwyższona? Wartości prawidłowe, przyczyny i znaczenie dla zdrowia wątroby i kości — wyjaśnione prosto.",
+  "causesElevated": ["Choroba dróg żółciowych", "Choroba wątroby", "Choroba kości (np. choroba Pageta)", "Ciąża", "Prawidłowy wzrost u dzieci"],
+  "causesLow": ["Niedoczynność tarczycy", "Niedobór witaminy B12", "Niedobór cynku"],
+  "doctorQuestions": [
+    "Czy podwyższenie pochodzi z wątroby czy z kości?",
+    "Czy powinienem wykluczyć infekcję dróg żółciowych?",
+    "Czy potrzebuję dalszych badań?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Wskaźniki wątrobowe",
+  "pageTitle": "Wartość AP — Fosfataza zasadowa wyjaśniona | Medyra"
+}

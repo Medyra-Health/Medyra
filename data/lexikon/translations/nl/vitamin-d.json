@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Vitamine D is essentieel voor botten, het immuunsysteem en spieren. Een tekort is zeer gebruikelijk, vooral in de winter. Lage waarden kunnen vermoeidheid en botpijn veroorzaken. Bespreek een tekort met uw arts voordat u supplementen neemt.",
+  "metaDescription": "Vitamine D te laag? Normaalwaarden, tekort symptomen en wanneer suppletie zinvol is — eenvoudig uitgelegd.",
+  "causesElevated": ["Overdosering voedingssupplementen"],
+  "causesLow": ["Weinig blootstelling aan zonlicht", "Donkere huidtint", "Hogere leeftijd", "Malabsorptie", "Nierziekte"],
+  "doctorQuestions": [
+    "Hoe ernstig is mijn vitamine D-tekort?",
+    "Welke dosis vitamine D moet ik nemen?",
+    "Hoe lang moet ik supplementen nemen?"
+  ],
+  "rangeLabels": { "low": "Tekort", "normal": "Voldoende", "elevated": "Grenswaarde (insufficiëntie)", "high": "Mogelijk te hoog" },
+  "categoryLabel": "Vitaminen",
+  "pageTitle": "Waarde vitamine D — 25-OH Vitamine D uitgelegd | Medyra"
+}

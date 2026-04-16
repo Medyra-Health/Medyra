@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "PTT (tempo di tromboplastina parziale) misura quanto velocemente il sangue coagula attraverso la via intrinseca. I valori prolungati possono indicare un disturbo della coagulazione o l'effetto dell'eparina. Il test viene utilizzato prima degli interventi chirurgici e quando si sospetta una tendenza al sanguinamento. Discutete i valori anomali con il vostro medico.",
+  "metaDescription": "PTT elevato? Valori normali, significato del tempo di coagulazione e cause nella terapia con eparina — spiegato in modo semplice.",
+  "causesElevated": ["Terapia con eparina", "Emofilia", "Carenza di fattori della coagulazione", "Malattia di von Willebrand"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "C'è un disturbo della coagulazione che spiega il mio PTT?",
+    "La mia dose di eparina è corretta?",
+    "Ho bisogno di ulteriori test della coagulazione prima dell'intervento chirurgico?"
+  ],
+  "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Prolungato", "high": "Molto prolungato" },
+  "categoryLabel": "Coagulazione",
+  "pageTitle": "Valore PTT — Tempo di Tromboplastina Parziale spiegato | Medyra"
+}

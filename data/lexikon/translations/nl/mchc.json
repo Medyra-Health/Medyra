@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "MCHC meet de concentratie van hemoglobine in rode bloedcellen. Lage waarden kunnen wijzen op ijzergebreksbloedarmoede of bepaalde andere typen bloedarmoede. Sterk verhoogde waarden zijn zeldzaam. Bespreek abnormale resultaten met uw arts.",
+  "metaDescription": "MCHC laag of hoog? Normaalwaarden, betekenis en oorzaken van abnormale hemoglobineconcentratie — eenvoudig uitgelegd.",
+  "causesElevated": ["Erfelijke sferocytose", "Ernstige uitdroging"],
+  "causesLow": ["IJzergebreksbloedarmoede", "Thalassemie", "Bloedarmoede door bloedverlies"],
+  "doctorQuestions": [
+    "Welk type bloedarmoede zou mijn MCHC kunnen verklaren?",
+    "Zijn verdere onderzoeken nodig?",
+    "Moet de waarde worden bewaakt?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Licht verhoogd", "high": "Verhoogd" },
+  "categoryLabel": "Bloedbeeld",
+  "pageTitle": "Waarde MCHC — Gemiddelde Cellulaire Hemoglobineconcentratie uitgelegd | Medyra"
+}

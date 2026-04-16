@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Erytrocyten (rode bloedcellen) transporteren zuurstof van de longen naar de weefsels van het lichaam. Een laag aantal kan wijzen op bloedarmoede, terwijl een hoog aantal kan duiden op uitdroging. Bespreek abnormale resultaten met uw arts.",
+  "metaDescription": "Erytrocyten / rode bloedcellen laag of hoog? Normaalwaarden, oorzaken en wat het betekent voor uw gezondheid — eenvoudig uitgelegd.",
+  "causesElevated": ["Uitdroging", "Grote hoogte", "Roken", "Polycythemia vera"],
+  "causesLow": ["IJzertekort", "Vitamine B12-tekort", "Foliumzuurtekort", "Chronische ziekten", "Bloedarmoede door bloedverlies"],
+  "doctorQuestions": [
+    "Heb ik mogelijk bloedarmoede?",
+    "Welk voedingstekort zou dit kunnen veroorzaken?",
+    "Zijn verdere onderzoeken noodzakelijk?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal (mannen)", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
+  "categoryLabel": "Bloedbeeld",
+  "pageTitle": "Waarde erytrocyten — Rode bloedcellen uitgelegd | Medyra"
+}

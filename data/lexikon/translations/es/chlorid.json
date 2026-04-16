@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "El cloruro (Cl) es un electrolito que ayuda a regular el equilibrio ácido-base y el equilibrio de líquidos. Las desviaciones de lo normal pueden indicar problemas renales o metabólicos. Generalmente se evalúa junto con sodio y potasio. Consulte con su médico ante valores anormales.",
+  "metaDescription": "Cloruro elevado o bajo? Valores normales, causas y significado de este electrolito — explicado de forma sencilla.",
+  "causesElevated": ["Deshidratación", "Enfermedad renal", "Diarrea", "Ciertos medicamentos"],
+  "causesLow": ["Vómitos", "Diuréticos", "Insuficiencia cardíaca", "Acidosis metabólica"],
+  "doctorQuestions": [
+    "¿Indica mi nivel de cloruro un problema ácido-base?",
+    "¿Debería revisar mis otros electrolitos al mismo tiempo?",
+    "¿Podría algún medicamento estar afectando mi nivel de cloruro?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado (hipercloremia)", "high": "Muy elevado" },
+  "categoryLabel": "Electrolitos",
+  "pageTitle": "Valor Cl — Cloruro explicado | Medyra"
+}

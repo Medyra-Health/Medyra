@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "VES (velocità di eritrosedimentazione) misura quanto velocemente i globuli rossi si depositano in un campione di sangue. Un valore elevato può indicare infiammazione, infezione o altre condizioni. La VES è un marcatore aspecifico e viene solitamente valutata insieme ad altri esami.",
+  "metaDescription": "VES elevata? Valori normali, cause e significato della velocità di eritrosedimentazione — spiegato in modo semplice.",
+  "causesElevated": ["Infezioni", "Malattie infiammatorie", "Malattie autoimmuni", "Anemia", "Cancro"],
+  "causesLow": ["Policitemia", "Insufficienza cardiaca"],
+  "doctorQuestions": [
+    "Quale condizione potrebbe spiegare la mia VES elevata?",
+    "Dovrei controllare anche CRP e altri valori?",
+    "Ho bisogno di ulteriori esami?"
+  ],
+  "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
+  "categoryLabel": "Marcatori infiammatori",
+  "pageTitle": "Valore VES — Velocità di Eritrosedimentazione spiegata | Medyra"
+}

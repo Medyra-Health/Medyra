@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "GGT (gamma-glutamylotransferaza) to enzym wątrobowy szczególnie wrażliwy na alkohol i problemy z drogami żółciowymi. Podwyższone wartości mogą wskazywać na stłuszczenie wątroby, spożycie alkoholu lub chorobę pęcherzyka żółciowego. Stale wysokie wartości należy omówić z lekarzem.",
+  "metaDescription": "GGT podwyższone? Wartości prawidłowe, przyczyny i co oznacza wysoki poziom gamma-GT — wyjaśnione prosto.",
+  "causesElevated": ["Spożycie alkoholu", "Stłuszczenie wątroby", "Choroba pęcherzyka żółciowego", "Niektóre leki", "Otyłość"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy alkohol lub leki mogły podwyższyć moje GGT?",
+    "Czy potrzebuję badania wątroby?",
+    "Jakie zmiany stylu życia mogłyby obniżyć tę wartość?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Wskaźniki wątrobowe",
+  "pageTitle": "Wartość GGT — Gamma-glutamylotransferaza wyjaśniona | Medyra"
+}

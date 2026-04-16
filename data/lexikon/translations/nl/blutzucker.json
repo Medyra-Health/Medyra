@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Nuchtere bloedglucose meet de bloedsuikerconcentratie na minimaal 8 uur zonder eten. Waarden boven 126 mg/dl kunnen wijzen op diabetes; waarden tussen 100 en 125 mg/dl suggereren prediabetes. Bespreek verhoogde waarden met uw arts.",
+  "metaDescription": "Nuchtere bloedglucose verhoogd? Normaalwaarden, diabetesrisico en wat de waarde betekent — eenvoudig uitgelegd.",
+  "causesElevated": ["Diabetes mellitus", "Insulineresistentie", "Stressreactie", "Bepaalde medicijnen (bijv. corticosteroïden)"],
+  "causesLow": ["Te veel insuline", "Bepaalde medicijnen", "Nuchter na inspanning", "Zeldzame aandoeningen"],
+  "doctorQuestions": [
+    "Moet ik een orale glucosetolerantietest ondergaan?",
+    "Heb ik diabetes of prediabetes?",
+    "Welke voedingsveranderingen zouden mij helpen?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal (nuchter)", "elevated": "Prediabetesbereik", "high": "Diabetesbereik" },
+  "categoryLabel": "Stofwisseling",
+  "pageTitle": "Waarde bloedglucose — Nuchtere bloedsuiker uitgelegd | Medyra"
+}

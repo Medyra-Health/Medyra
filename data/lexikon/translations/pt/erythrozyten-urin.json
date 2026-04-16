@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Eritrócitos na urina (hematúria) significa que há sangue na urina. Isso pode indicar infecções urinárias, cálculos renais ou outras condições. Mesmo sem sintomas, um achado positivo deve ser discutido com o seu médico.",
+  "metaDescription": "Sangue na urina (hematúria)? Eritrócitos na urina: causas, significado e quando consultar o médico — explicado de forma simples.",
+  "causesElevated": ["Infecção do trato urinário", "Cálculos renais", "Cistite", "Doença renal", "Trauma", "Certos medicamentos"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "O que está causando os eritrócitos na minha urina?",
+    "Preciso de um exame da bexiga ou rim?",
+    "Devo fazer uma ultrassonografia?"
+  ],
+  "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado", "high": "Muito elevado" },
+  "categoryLabel": "Valores urinários",
+  "pageTitle": "Eritrócitos na urina — Hematúria explicada | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "促甲状腺激素（TSH）由垂体分泌，调控甲状腺功能。TSH升高提示甲状腺功能减退，TSH降低提示甲状腺功能亢进。异常值应与医生讨论。",
+  "metaDescription": "TSH偏高或偏低？正常范围、甲状腺功能意义及何时就医——简单易懂的解释。",
+  "causesElevated": ["甲状腺功能减退", "桥本甲状腺炎", "甲状腺切除后", "某些药物"],
+  "causesLow": ["甲状腺功能亢进", "Graves病", "甲状腺毒症", "某些药物"],
+  "doctorQuestions": [
+    "我的甲状腺功能正常吗？",
+    "我需要服用甲状腺激素替代治疗吗？",
+    "需要进一步检查FT3和FT4吗？"
+  ],
+  "rangeLabels": { "low": "偏低（甲亢）", "normal": "正常", "elevated": "轻度升高", "high": "显著升高（甲减）" },
+  "categoryLabel": "甲状腺指标",
+  "pageTitle": "TSH值 — 促甲状腺激素详解 | Medyra"
+}

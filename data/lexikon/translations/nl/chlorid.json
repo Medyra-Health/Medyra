@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Chloride (Cl) is een elektrolyt dat helpt de zuur-base-balans en vochtbalans te reguleren. Afwijkingen van normaal kunnen wijzen op nier- of stofwisselingsproblemen. Het wordt meestal beoordeeld samen met natrium en kalium. Bespreek abnormale waarden met uw arts.",
+  "metaDescription": "Chloride verhoogd of laag? Normaalwaarden, oorzaken en betekenis van dit elektrolyt — eenvoudig uitgelegd.",
+  "causesElevated": ["Uitdroging", "Nierziekte", "Diarree", "Bepaalde medicijnen"],
+  "causesLow": ["Braken", "Diuretica", "Hartfalen", "Metabole acidose"],
+  "doctorQuestions": [
+    "Wijst mijn chloridewaarde op een zuur-base-probleem?",
+    "Moet ik mijn andere elektrolyten tegelijkertijd laten controleren?",
+    "Kan een medicijn mijn chloridewaarde beïnvloeden?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd (hyperchloriëmie)", "high": "Sterk verhoogd" },
+  "categoryLabel": "Elektrolyten",
+  "pageTitle": "Waarde Cl — Chloride uitgelegd | Medyra"
+}

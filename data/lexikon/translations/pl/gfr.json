@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "eGFR (szacunkowy współczynnik filtracji kłębuszkowej) szacuje, jak dobrze nerki filtrują krew. Wartości powyżej 90 są uznawane za prawidłowe. Niższe wartości mogą wskazywać na zmniejszoną czynność nerek. Zalecenia zależą od stadium. Omów wartość z lekarzem.",
+  "metaDescription": "eGFR niskie? Wartości prawidłowe, stadia czynności nerek i kiedy udać się do lekarza — wyjaśnione prosto.",
+  "causesElevated": [],
+  "causesLow": ["Przewlekła choroba nerek", "Cukrzyca", "Nadciśnienie tętnicze", "Nawracające infekcje nerek", "Niektóre leki"],
+  "doctorQuestions": [
+    "W którym stadium choroby nerek jestem?",
+    "Co mogę zrobić, aby chronić nerki?",
+    "Czy powinienem zobaczyć się z nefrologiem?"
+  ],
+  "rangeLabels": { "low": "Upośledzone (PChN)", "normal": "Normalne (≥ 90)", "elevated": "Nieznacznie zmniejszone", "high": "Upośledzone (PChN)" },
+  "categoryLabel": "Wskaźniki nerkowe",
+  "pageTitle": "Wartość eGFR — Współczynnik filtracji kłębuszkowej wyjaśniony | Medyra"
+}

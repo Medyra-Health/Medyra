@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Kwas moczowy powstaje podczas rozkładu puryn z pożywienia. Wysokie wartości mogą wskazywać na dnę moczanową lub sprzyjać powstawaniu kamieni nerkowych. Dieta i alkohol odgrywają ważną rolę. Omów podwyższone wartości z lekarzem, szczególnie jeśli odczuwasz bóle stawów.",
+  "metaDescription": "Kwas moczowy podwyższony? Wartości prawidłowe, ryzyko dny moczanowej i co zrobić przy wysokim kwasie moczowym — wyjaśnione prosto.",
+  "causesElevated": ["Dieta bogata w puryny (mięso, podroby)", "Spożycie alkoholu", "Choroba nerek", "Niektóre leki", "Otyłość"],
+  "causesLow": ["Niektóre leki", "Choroba wątroby"],
+  "doctorQuestions": [
+    "Czy moja wartość sugeruje dnę moczanową?",
+    "Jakie zmiany diety mogę wprowadzić?",
+    "Czy potrzebuję leków obniżających kwas moczowy?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone (hiperurykemia)", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Wskaźniki nerkowe",
+  "pageTitle": "Wartość kwasu moczowego — Ryzyko dny moczanowej wyjaśnione | Medyra"
+}

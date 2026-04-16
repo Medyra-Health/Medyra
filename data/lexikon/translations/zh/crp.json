@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "C反应蛋白（CRP）是炎症标志物，感染或组织损伤时迅速升高。CRP升高提示体内有炎症，但需结合临床症状判断原因。",
+  "metaDescription": "CRP偏高？正常范围、感染和炎症原因及何时就医——简单易懂的解释。",
+  "causesElevated": ["细菌感染", "病毒感染", "自身免疫性疾病", "手术后", "组织损伤", "癌症"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "CRP升高提示感染了吗？",
+    "我需要使用抗生素吗？",
+    "需要复查CRP吗？"
+  ],
+  "rangeLabels": { "low": "正常", "normal": "轻度升高", "elevated": "中度升高", "high": "显著升高" },
+  "categoryLabel": "炎症标志物",
+  "pageTitle": "CRP值 — C反应蛋白详解 | Medyra"
+}

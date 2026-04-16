@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "LDL é o colesterol «ruim» que pode se acumular nas paredes dos vasos sanguíneos. Níveis elevados aumentam o risco de infarto e acidente vascular cerebral. Os valores alvo dependem do seu perfil de risco pessoal. Discuta seu nível de LDL com o seu médico.",
+  "metaDescription": "LDL elevado? Valores normais, risco cardíaco e opções de tratamento para colesterol ruim alto — explicado de forma simples.",
+  "causesElevated": ["Dieta rica em gorduras", "Predisposição genética (hipercolesterolemia familiar)", "Obesidade", "Hipotireoidismo", "Diabetes"],
+  "causesLow": ["Desnutrição", "Doença hepática", "Estatinas"],
+  "doctorQuestions": [
+    "Qual valor alvo de LDL é adequado para mim?",
+    "Preciso de estatinas ou outros medicamentos?",
+    "Qual dieta reduz meu LDL?"
+  ],
+  "rangeLabels": { "low": "Baixo", "normal": "Normal (baixo risco)", "elevated": "Elevado", "high": "Muito elevado" },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Valor LDL — Colesterol Ruim explicado | Medyra"
+}

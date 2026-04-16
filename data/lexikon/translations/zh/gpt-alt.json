@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "谷丙转氨酶（GPT/ALT）主要存在于肝细胞中。升高提示肝细胞受损，常见于脂肪肝、肝炎或药物损伤。轻度升高应与医生复查。",
+  "metaDescription": "GPT/ALT偏高？正常范围、肝脏损伤原因及何时就医——简单易懂的解释。",
+  "causesElevated": ["脂肪肝", "酒精性肝病", "病毒性肝炎", "药物性肝损伤", "肝硬化"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我的肝脏受损了吗？",
+    "是哪种原因导致的转氨酶升高？",
+    "我需要进一步的肝脏检查吗？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常", "elevated": "轻度升高", "high": "显著升高" },
+  "categoryLabel": "肝功能指标",
+  "pageTitle": "GPT/ALT值 — 谷丙转氨酶详解 | Medyra"
+}

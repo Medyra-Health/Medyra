@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Bilirubine is een afbraakproduct van rode bloedcellen. Verhoogde waarden kunnen wijzen op leverproblemen of galwegobstructie en kunnen geelzucht veroorzaken. Licht verhoogde waarden komen ook voor bij het syndroom van Gilbert, dat onschadelijk is.",
+  "metaDescription": "Bilirubine verhoogd? Normaalwaarden, oorzaken en wanneer het wijst op geelzucht of leverziekte — eenvoudig uitgelegd.",
+  "causesElevated": ["Leverziekte", "Galstenen", "Hemolyse (afbraak van rode bloedcellen)", "Syndroom van Gilbert", "Bepaalde medicijnen"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Kan een galblaasprobleem achter mijn bilirubinewaarde zitten?",
+    "Heb ik een echo nodig?",
+    "Is een licht verhoogd niveau onschadelijk in mijn geval?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Licht verhoogd", "high": "Sterk verhoogd (geelzucht mogelijk)" },
+  "categoryLabel": "Leverwaarden",
+  "pageTitle": "Waarde bili — Bilirubine uitgelegd | Medyra"
+}

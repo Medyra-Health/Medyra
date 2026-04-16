@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "fT3 (wolna trijodotyronina) to aktywny hormon tarczycy wpływający na metabolizm, tętno i wiele funkcji organizmu. Podwyższone wartości mogą wskazywać na nadczynność tarczycy, niskie — na niedoczynność. Omów odchylenia z lekarzem.",
+  "metaDescription": "fT3 podwyższone lub niskie? Wartości prawidłowe, znaczenie i przyczyny odchyleń wolnej trijodotyroniny — wyjaśnione prosto.",
+  "causesElevated": ["Nadczynność tarczycy", "Choroba Gravesa-Basedowa", "Zapalenie tarczycy"],
+  "causesLow": ["Niedoczynność tarczycy", "Zapalenie tarczycy Hashimoto", "Niedobór jodu", "Ciężka choroba ogólnoustrojowa"],
+  "doctorQuestions": [
+    "Jak należy interpretować moje fT3 w odniesieniu do fT4 i TSH?",
+    "Czy jest zaburzenie tarczycy?",
+    "Czy potrzebuję scyntygrafii tarczycy?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Tarczyca",
+  "pageTitle": "Wartość fT3 — Wolna trijodotyronina wyjaśniona | Medyra"
+}
