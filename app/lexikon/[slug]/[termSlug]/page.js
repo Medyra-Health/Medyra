@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
 import { getAllSlugs, getEntryTranslated, getRelatedEntries, SUPPORTED_LANGS } from '@/lib/lexikon'
+import { getLexikonUI } from '@/lib/lexikonUI'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import FeaturedSnippet from '@/components/lexikon/FeaturedSnippet'
 import RangeTable from '@/components/lexikon/RangeTable'
@@ -152,7 +153,7 @@ export default async function LexikonTranslatedPage({ params }) {
             className={`text-xs font-semibold px-3 py-1.5 rounded-full border ${cat.bg} ${cat.text} ${cat.border} hover:opacity-80 transition-opacity`}>
             {t?.categoryLabel || entry.category}
           </Link>
-          <p className="text-xs text-gray-400">Reviewed: {reviewDate}</p>
+          <p className="text-xs text-gray-400">{getLexikonUI(lang).reviewed || 'Reviewed'}: {reviewDate}</p>
         </div>
 
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 leading-tight">
@@ -161,20 +162,20 @@ export default async function LexikonTranslatedPage({ params }) {
         </h1>
         {entry.unit && (
           <p className="text-sm text-gray-400 mb-6">
-            Unit: <span className="font-semibold text-gray-600">{entry.unit}</span>
+            {getLexikonUI(lang).unit || 'Unit'}: <span className="font-semibold text-gray-600">{entry.unit}</span>
           </p>
         )}
 
-        <FeaturedSnippet text={entry.shortAnswer} accent={cat.accent} />
+        <FeaturedSnippet text={entry.shortAnswer} accent={cat.accent} lang={lang} />
 
-        {translatedRanges && <RangeTable ranges={translatedRanges} unit={entry.unit} />}
+        {translatedRanges && <RangeTable ranges={translatedRanges} unit={entry.unit} lang={lang} />}
 
-        <CausesSection causesElevated={entry.causesElevated} causesLow={entry.causesLow} />
+        <CausesSection causesElevated={entry.causesElevated} causesLow={entry.causesLow} lang={lang} />
 
         {entry.doctorQuestions?.length > 0 && (
           <div className="my-8">
             <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-              <span className="text-xl">🩺</span> Questions for Your Doctor
+              <span className="text-xl">🩺</span> {t?.doctorQuestionsLabel || getLexikonUI(lang).doctorQuestions}
             </h2>
             <ul className="space-y-3">
               {entry.doctorQuestions.map((q, i) => (
@@ -187,9 +188,9 @@ export default async function LexikonTranslatedPage({ params }) {
           </div>
         )}
 
-        <DoctorCTA slug={termSlug} />
-        {related.length > 0 && <RelatedValues entries={related} />}
-        <MedicalDisclaimer />
+        <DoctorCTA slug={termSlug} lang={lang} />
+        {related.length > 0 && <RelatedValues entries={related} lang={lang} />}
+        <MedicalDisclaimer lang={lang} />
       </main>
     </div>
   )

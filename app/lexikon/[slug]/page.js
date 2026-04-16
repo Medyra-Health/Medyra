@@ -10,6 +10,7 @@ import DoctorCTA from '@/components/lexikon/DoctorCTA'
 import RelatedValues from '@/components/lexikon/RelatedValues'
 import JsonLd from '@/components/lexikon/JsonLd'
 import MedicalDisclaimer from '@/components/lexikon/MedicalDisclaimer'
+import LexikonAutoRedirect from '@/components/lexikon/LexikonAutoRedirect'
 
 // Per-category accent colours (light theme)
 const CATEGORY_COLORS = {
@@ -68,6 +69,8 @@ export default async function LexikonEntryPage({ params }) {
   return (
     <div className="min-h-screen bg-gray-50">
       <JsonLd entry={entry} />
+      {/* Auto-redirect to translated version if user's saved language is not DE */}
+      <LexikonAutoRedirect termSlug={slug} />
 
       {/* Header */}
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
@@ -109,16 +112,10 @@ export default async function LexikonEntryPage({ params }) {
           <p className="text-sm text-gray-400 mb-6">Einheit: <span className="font-semibold text-gray-600">{entry.unit}</span></p>
         )}
 
-        {/* Quick answer */}
-        <FeaturedSnippet text={entry.shortAnswer} accent={cat.accent} />
+        <FeaturedSnippet text={entry.shortAnswer} accent={cat.accent} lang="de" />
+        {entry.ranges && <RangeTable ranges={entry.ranges} unit={entry.unit} lang="de" />}
+        <CausesSection causesElevated={entry.causesElevated} causesLow={entry.causesLow} lang="de" />
 
-        {/* Range table */}
-        {entry.ranges && <RangeTable ranges={entry.ranges} unit={entry.unit} />}
-
-        {/* Causes */}
-        <CausesSection causesElevated={entry.causesElevated} causesLow={entry.causesLow} />
-
-        {/* Doctor questions */}
         {entry.doctorQuestions?.length > 0 && (
           <div className="my-8">
             <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
@@ -135,11 +132,9 @@ export default async function LexikonEntryPage({ params }) {
           </div>
         )}
 
-        <DoctorCTA slug={entry.slug} />
-
-        {related.length > 0 && <RelatedValues entries={related} />}
-
-        <MedicalDisclaimer />
+        <DoctorCTA slug={entry.slug} lang="de" />
+        {related.length > 0 && <RelatedValues entries={related} lang="de" />}
+        <MedicalDisclaimer lang="de" />
       </main>
 
     </div>
