@@ -24,35 +24,94 @@ const languages = [
   { code: 'ur', name: 'اردو',        short: 'UR' },
 ];
 
+// Languages that appear in the URL path for Lexikon (all except 'de' which uses /lexikon/slug directly)
+const LEXIKON_URL_LANGS = new Set(['en','tr','bn','fr','ar','es','it','pt','nl','pl','zh','ja','ko','hi','ur','ru']);
+
+// Detect current language from the URL (for Lexikon pages)
+function getLangFromPath(pathname) {
+  const parts = pathname.split('/').filter(Boolean);
+  // /lexikon/[lang]/[termSlug]
+  if (parts[0] === 'lexikon' && parts.length === 3 && LEXIKON_URL_LANGS.has(parts[1])) {
+    return parts[1];
+  }
+  // /lexikon/[termSlug] — German entry
+  if (parts[0] === 'lexikon' && parts.length === 2 && !LEXIKON_URL_LANGS.has(parts[1])) {
+    return 'de';
+  }
+  // /lexikon index
+  if (parts[0] === 'lexikon' && parts.length === 1) {
+    return 'de';
+  }
+  return null; // not a lexikon page — use cookie/localStorage
+}
+
 export default function LanguageSwitcher() {
-  const [locale, setLocale] = useState('en');
+  const [locale, setLocale] = useState('de');
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
+  // Sync displayed locale with URL (for Lexikon) or with saved preference (everywhere else)
   useEffect(() => {
-    const saved = localStorage.getItem('preferredLanguage') || 'en';
-    setLocale(saved);
-    if (saved === 'ar' || saved === 'ur') {
-      document.documentElement.setAttribute('dir', 'rtl');
+    const urlLang = getLangFromPath(pathname);
+    if (urlLang) {
+      setLocale(urlLang);
+      applyDir(urlLang);
     } else {
-      document.documentElement.setAttribute('dir', 'ltr');
+      const saved = localStorage.getItem('preferredLanguage') || 'en';
+      setLocale(saved);
+      applyDir(saved);
     }
-    document.documentElement.setAttribute('lang', saved);
-  }, []);
+  }, [pathname]);
+
+  function applyDir(lang) {
+    const rtl = lang === 'ar' || lang === 'ur';
+    document.documentElement.setAttribute('dir', rtl ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', lang);
+  }
+
+  function setLocaleCookie(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    document.cookie = `locale=${lang}; path=/; max-age=31536000; SameSite=Lax`;
+  }
 
   const changeLanguage = (newLocale) => {
-    localStorage.setItem('preferredLanguage', newLocale);
-    // Set cookie so server components (layout) can read the locale
-    document.cookie = `locale=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
+    setLocaleCookie(newLocale);
     setLocale(newLocale);
-    document.documentElement.setAttribute('dir', (newLocale === 'ar' || newLocale === 'ur') ? 'rtl' : 'ltr');
-    document.documentElement.setAttribute('lang', newLocale);
+    applyDir(newLocale);
     setIsOpen(false);
+
+    // Smart Lexikon navigation: switch URL to the translated version
+    const parts = pathname.split('/').filter(Boolean);
+
+    if (parts[0] === 'lexikon' && parts.length === 3 && LEXIKON_URL_LANGS.has(parts[1])) {
+      // Currently on /lexikon/[lang]/[termSlug] — swap language
+      const termSlug = parts[2];
+      if (newLocale === 'de') {
+        router.push(`/lexikon/${termSlug}`);
+      } else {
+        router.push(`/lexikon/${newLocale}/${termSlug}`);
+      }
+      return;
+    }
+
+    if (parts[0] === 'lexikon' && parts.length === 2 && !LEXIKON_URL_LANGS.has(parts[1])) {
+      // Currently on /lexikon/[termSlug] — German entry page
+      const termSlug = parts[1];
+      if (newLocale !== 'de') {
+        router.push(`/lexikon/${newLocale}/${termSlug}`);
+        return;
+      }
+      // Switching to DE on a DE page — just refresh UI language
+      router.refresh();
+      return;
+    }
+
+    // All other pages: just refresh so the server re-reads the cookie
     router.refresh();
   };
 
-  const currentLang = languages.find(l => l.code === locale) || languages[0];
+  const currentLang = languages.find(l => l.code === locale) || languages.find(l => l.code === 'en');
 
   return (
     <div className="relative">
