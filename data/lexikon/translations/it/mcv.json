@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "MCV misura la dimensione media dei globuli rossi. Le cellule piccole possono indicare carenza di ferro, mentre le cellule grandi possono suggerire carenza di vitamina B12 o folato. Discutete i risultati anomali con il vostro medico.",
+  "metaDescription": "MCV alto o basso? Valori normali, cause di dimensioni anomale dei globuli rossi e cosa significa — spiegato in modo semplice.",
+  "causesElevated": ["Carenza di vitamina B12", "Carenza di folato", "Consumo di alcol", "Ipotiroidismo"],
+  "causesLow": ["Carenza di ferro", "Talassemia", "Malattie infiammatorie croniche"],
+  "doctorQuestions": [
+    "Il mio MCV suggerisce una carenza nutrizionale?",
+    "Dovrei assumere vitamina B12 o folato?",
+    "Ho bisogno di un esame del sangue più dettagliato?"
+  ],
+  "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato (macrocitosi)", "high": "Molto elevato" },
+  "categoryLabel": "Emocromo",
+  "pageTitle": "Valore MCV — Volume Corpuscolare Medio spiegato | Medyra"
+}

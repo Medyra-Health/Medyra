@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "fT3 (vrij trijoodthyronine) is het actieve schildklierhormoon dat het metabolisme, de hartslag en vele lichaamsfuncties beïnvloedt. Verhoogde waarden kunnen wijzen op hyperthyreoïdie, terwijl lage waarden kunnen duiden op hypothyreoïdie. Bespreek afwijkingen met uw arts.",
+  "metaDescription": "fT3 verhoogd of laag? Normaalwaarden, betekenis en oorzaken van vrij trijoodthyronine-afwijkingen — eenvoudig uitgelegd.",
+  "causesElevated": ["Hyperthyreoïdie", "Ziekte van Graves", "Schildklierontsteking"],
+  "causesLow": ["Hypothyreoïdie", "Hashimoto-thyroïditis", "Jodiumtekort", "Ernstige systeemziekte"],
+  "doctorQuestions": [
+    "Hoe moet mijn fT3 worden geïnterpreteerd in relatie tot fT4 en TSH?",
+    "Is er een schildklierstoornis?",
+    "Heb ik een schildklierscan nodig?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
+  "categoryLabel": "Schildklier",
+  "pageTitle": "Waarde fT3 — Vrij Trijoodthyronine uitgelegd | Medyra"
+}

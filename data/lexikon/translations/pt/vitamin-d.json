@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "A vitamina D é essencial para os ossos, o sistema imunológico e os músculos. A deficiência é muito comum, especialmente no inverno. Níveis baixos podem causar fadiga e dores ósseas. Discuta qualquer deficiência com o seu médico antes de tomar suplementos.",
+  "metaDescription": "Vitamina D muito baixa? Valores normais, sintomas de deficiência e quando a suplementação faz sentido — explicado de forma simples.",
+  "causesElevated": ["Overdose de suplementos alimentares"],
+  "causesLow": ["Pouca exposição solar", "Tom de pele escuro", "Idade avançada", "Má absorção", "Doença renal"],
+  "doctorQuestions": [
+    "Qual é a gravidade da minha deficiência de vitamina D?",
+    "Qual dose de vitamina D devo tomar?",
+    "Por quanto tempo devo fazer suplementação?"
+  ],
+  "rangeLabels": { "low": "Deficiente", "normal": "Suficiente", "elevated": "Limítrofe (insuficiência)", "high": "Possivelmente muito alto" },
+  "categoryLabel": "Vitaminas",
+  "pageTitle": "Valor vitamina D — 25-OH Vitamina D explicada | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Hemoglobina (Hb) to białko w czerwonych krwinkach transportujące tlen z płuc do narządów i tkanek. Prawidłowe wartości to 12–16 g/dl u kobiet i 13,5–17,5 g/dl u mężczyzn. Niski poziom wskazuje na anemię i może powodować zmęczenie. Omów nieprawidłowe wyniki z lekarzem.",
+  "metaDescription": "Hemoglobina (Hb) zbyt niska? Wartości prawidłowe dla mężczyzn i kobiet, przyczyny anemii i kiedy udać się do lekarza — wyjaśnione prosto.",
+  "causesElevated": ["Odwodnienie", "Palenie tytoniu", "Duże wysokości", "Czerwienica prawdziwa"],
+  "causesLow": ["Niedobór żelaza", "Niedobór witaminy B12", "Choroba przewlekła", "Utrata krwi", "Niedobór kwasu foliowego"],
+  "doctorQuestions": [
+    "Jaki rodzaj anemii mogę mieć?",
+    "Czy potrzebuję suplementów żelaza lub innych suplementów?",
+    "Kiedy ta wartość powinna być ponownie sprawdzona?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Morfologia krwi",
+  "pageTitle": "Wartość Hb — Hemoglobina wyjaśniona | Medyra"
+}

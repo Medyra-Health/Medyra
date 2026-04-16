@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "TSH (tyreotropina) jest produkowany przez przysadkę mózgową i reguluje tarczycę. Wysokie TSH może wskazywać na niedoczynność tarczycy, niskie — na nadczynność. Oba mogą powodować objawy takie jak zmęczenie lub kołatanie serca. Omów nieprawidłowe wartości z lekarzem.",
+  "metaDescription": "TSH podwyższone lub niskie? Wartości prawidłowe, przyczyny i co oznaczają poziomy hormonów tarczycy — wyjaśnione prosto.",
+  "causesElevated": ["Niedoczynność tarczycy", "Zapalenie tarczycy Hashimoto", "Niedobór jodu", "Niektóre leki"],
+  "causesLow": ["Nadczynność tarczycy", "Choroba Gravesa-Basedowa", "Nadmierna dawka hormonów tarczycy"],
+  "doctorQuestions": [
+    "Czy moje TSH wskazuje na niedoczynność lub nadczynność tarczycy?",
+    "Czy powinienem też zmierzyć fT3 i fT4?",
+    "Czy potrzebuję hormonów tarczycy lub dalszej oceny?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone (możliwa niedoczynność tarczycy)", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Tarczyca",
+  "pageTitle": "Wartość TSH — Tyreotropina wyjaśniona | Medyra"
+}

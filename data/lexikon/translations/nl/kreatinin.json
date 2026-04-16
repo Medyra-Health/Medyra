@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Creatinine is een afvalproduct van het spiermetabolisme dat door de nieren wordt gefilterd. Verhoogde waarden kunnen wijzen op verminderde nierfunctie. De waarde is ook afhankelijk van spiermassa en vochtinname. Bespreek abnormale waarden met uw arts.",
+  "metaDescription": "Creatinine verhoogd? Normaalwaarden, oorzaken en wat hoge creatininewaarden betekenen voor de nierfunctie — eenvoudig uitgelegd.",
+  "causesElevated": ["Nierziekte", "Uitdroging", "Hoge spiermassa", "Bepaalde medicijnen", "Overmatige vleesconsumptie"],
+  "causesLow": ["Lage spiermassa", "Ondervoeding", "Zwangerschap"],
+  "doctorQuestions": [
+    "Is mijn nierfunctie aangetast?",
+    "Moet mijn eGFR worden berekend?",
+    "Moet ik letten op mijn vochtinname of dieet?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Licht verhoogd", "high": "Sterk verhoogd" },
+  "categoryLabel": "Nierwaarden",
+  "pageTitle": "Waarde creatinine — Nierfunctie uitgelegd | Medyra"
+}

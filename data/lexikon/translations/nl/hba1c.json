@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "HbA1c toont het gemiddelde bloedsuikergehalte over de afgelopen 2–3 maanden. Waarden boven 6,5% kunnen wijzen op diabetes. Waarden tussen 5,7% en 6,4% worden als prediabetes beschouwd. Bespreek altijd verhoogde waarden met uw arts.",
+  "metaDescription": "HbA1c verhoogd? Normaalwaarden, diabetesrisico en wat langetermijnbloedsuiker betekent — eenvoudig uitgelegd.",
+  "causesElevated": ["Diabetes type 2", "Diabetes type 1", "Slecht gecontroleerde diabetes", "Insulineresistentie"],
+  "causesLow": ["Hemolyse", "Bloedarmoede door bloedverlies", "Bepaalde hemoglobinevarianten"],
+  "doctorQuestions": [
+    "Wijst mijn HbA1c op diabetes of prediabetes?",
+    "Welke dieet- of leefstijlveranderingen raadt u aan?",
+    "Heb ik medicatie nodig?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Prediabetes", "high": "Diabetesbereik" },
+  "categoryLabel": "Stofwisseling",
+  "pageTitle": "Waarde HbA1c — Langetermijnbloedsuiker uitgelegd | Medyra"
+}

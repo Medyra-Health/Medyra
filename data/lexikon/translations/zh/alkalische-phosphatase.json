@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "碱性磷酸酶（ALP）存在于肝脏、骨骼和胆道中。升高可能提示胆道疾病、骨病或肝脏问题。应结合其他肝功能指标综合判断。",
+  "metaDescription": "ALP偏高？正常范围、原因及意义——简单易懂的解释。",
+  "causesElevated": ["胆道梗阻", "肝炎", "骨转移", "佩吉特病", "生长期儿童"],
+  "causesLow": ["甲状腺功能减退", "贫血", "锌缺乏"],
+  "doctorQuestions": [
+    "ALP升高是由肝脏还是骨骼问题引起的？",
+    "需要进一步的肝脏或骨骼检查吗？",
+    "我需要改变饮食吗？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常", "elevated": "轻度升高", "high": "显著升高" },
+  "categoryLabel": "肝功能指标",
+  "pageTitle": "ALP值 — 碱性磷酸酶详解 | Medyra"
+}

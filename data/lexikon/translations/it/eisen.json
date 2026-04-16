@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Il ferro sierico misura la quantità di ferro nel sangue al momento del prelievo. I valori bassi possono indicare carenza di ferro; i valori alti possono suggerire sovraccarico di ferro. Poiché i livelli fluttuano significativamente, il ferro sierico viene sempre valutato insieme a ferritina e transferrina.",
+  "metaDescription": "Ferro sierico elevato o basso? Valori normali, diagnosi di carenza di ferro e significato — spiegato in modo semplice.",
+  "causesElevated": ["Emocromatosi", "Emolisi", "Malattia epatica", "Sovradosaggio di integratori di ferro"],
+  "causesLow": ["Carenza di ferro", "Infiammazione cronica", "Mestruazioni abbondanti", "Assunzione inadeguata di ferro"],
+  "doctorQuestions": [
+    "C'è una vera carenza di ferro?",
+    "Ho bisogno di integratori di ferro?",
+    "Dovrei essere testato per l'emocromatosi?"
+  ],
+  "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
+  "categoryLabel": "Valori del ferro",
+  "pageTitle": "Valore Fe — Ferro Sierico spiegato | Medyra"
+}

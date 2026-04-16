@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Los leucocitos en orina pueden indicar inflamación del tracto urinario. Pequeñas cantidades pueden ser normales, pero valores más altos pueden apuntar a una infección urinaria o inflamación renal. Consulte con su médico ante hallazgos positivos.",
+  "metaDescription": "Leucocitos en orina elevados? Causas, significado y cuándo indica una infección urinaria — explicado de forma sencilla.",
+  "causesElevated": ["Infección del tracto urinario (cistitis)", "Inflamación renal (pielonefritis)", "Uretritis", "Enfermedad renal"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Hay una infección urinaria y necesito antibióticos?",
+    "¿Debería hacerme un urocultivo?",
+    "¿Podrían los leucocitos en orina indicar enfermedad renal?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
+  "categoryLabel": "Valores de orina",
+  "pageTitle": "Leucocitos en orina — Infección urinaria explicada | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "PTT (tempo de tromboplastina parcial) mede quão rapidamente o sangue coagula pela via intrínseca. Valores prolongados podem indicar um distúrbio de coagulação ou o efeito da heparina. O exame é usado antes de cirurgias e quando há suspeita de tendência hemorrágica. Discuta valores anormais com o seu médico.",
+  "metaDescription": "PTT elevado? Valores normais, significado do tempo de coagulação e causas na terapia com heparina — explicado de forma simples.",
+  "causesElevated": ["Terapia com heparina", "Hemofilia", "Deficiência de fatores de coagulação", "Doença de von Willebrand"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Há um distúrbio de coagulação que explique meu PTT?",
+    "Minha dose de heparina está correta?",
+    "Preciso de mais testes de coagulação antes da cirurgia?"
+  ],
+  "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Prolongado", "high": "Muito prolongado" },
+  "categoryLabel": "Coagulação",
+  "pageTitle": "Valor PTT — Tempo de Tromboplastina Parcial explicado | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Folian (kwas foliowy) to witamina B niezbędna do podziału komórek i tworzenia krwi. Niedobór może prowadzić do anemii i jest szczególnie niebezpieczny w czasie ciąży. Wiele osób nie otrzymuje wystarczającej ilości folianu tylko z diety. Omów wszelki niedobór z lekarzem.",
+  "metaDescription": "Folian zbyt niski? Wartości prawidłowe, ryzyko w ciąży, przyczyny niedoboru kwasu foliowego — wyjaśnione prosto.",
+  "causesElevated": ["Przedawkowanie suplementów kwasu foliowego"],
+  "causesLow": ["Niezrównoważona dieta", "Spożycie alkoholu", "Zaburzenia wchłaniania", "Niektóre leki (np. metotreksat)"],
+  "doctorQuestions": [
+    "Czy powinienem przyjmować folian w czasie ciąży lub przed nią?",
+    "Czy mój poziom folianu jest wystarczający do prawidłowego tworzenia krwi?",
+    "Które pokarmy są bogate w folian?"
+  ],
+  "rangeLabels": { "low": "Niedobór", "normal": "Wystarczający", "elevated": "Podwyższone", "high": "Podwyższone" },
+  "categoryLabel": "Witaminy",
+  "pageTitle": "Wartość folianu — Kwas foliowy wyjaśniony | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "估算肾小球滤过率（eGFR）反映肾脏过滤血液的能力。数值越低，肾功能越差。eGFR低于60持续超过3个月提示慢性肾脏病。",
+  "metaDescription": "eGFR偏低？正常范围、慢性肾脏病分期及何时就医——简单易懂的解释。",
+  "causesElevated": [],
+  "causesLow": ["慢性肾脏病", "糖尿病肾病", "高血压肾损伤", "急性肾损伤", "老龄化"],
+  "doctorQuestions": [
+    "我处于慢性肾脏病哪个阶段？",
+    "我需要看肾脏专科医生吗？",
+    "我应该如何保护肾功能？"
+  ],
+  "rangeLabels": { "low": "严重降低", "normal": "正常", "elevated": "轻度降低" },
+  "categoryLabel": "肾功能指标",
+  "pageTitle": "eGFR值 — 肾小球滤过率详解 | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Leukocyty w moczu mogą wskazywać na stan zapalny dróg moczowych. Małe ilości mogą być prawidłowe, ale wyższe wartości mogą wskazywać na infekcję dróg moczowych lub zapalenie nerek. Omów pozytywne wyniki z lekarzem.",
+  "metaDescription": "Leukocyty w moczu podwyższone? Przyczyny, znaczenie i kiedy wskazuje na infekcję dróg moczowych — wyjaśnione prosto.",
+  "causesElevated": ["Infekcja dróg moczowych (zapalenie pęcherza)", "Zapalenie nerek (odmiedniczkowe zapalenie nerek)", "Zapalenie cewki moczowej", "Choroba nerek"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy jest infekcja dróg moczowych i czy potrzebuję antybiotyków?",
+    "Czy powinienem mieć posiew moczu?",
+    "Czy leukocyty w moczu mogą wskazywać na chorobę nerek?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Wskaźniki moczu",
+  "pageTitle": "Leukocyty w moczu — Infekcja dróg moczowych wyjaśniona | Medyra"
+}

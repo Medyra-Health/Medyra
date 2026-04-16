@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "O cálcio (Ca) é um mineral essencial para ossos, músculos e nervos. Níveis sanguíneos altos podem indicar distúrbios da paratireoide ou doença óssea; níveis baixos podem indicar deficiência de vitamina D ou desnutrição. Discuta qualquer desvio com o seu médico.",
+  "metaDescription": "Cálcio elevado ou baixo? Valores normais, causas e o que significa para a saúde óssea — explicado de forma simples.",
+  "causesElevated": ["Hiperparatireoidismo primário", "Câncer", "Overdose de vitamina D", "Sarcoidose"],
+  "causesLow": ["Deficiência de vitamina D", "Hipoparatireoidismo", "Deficiência de magnésio", "Doença renal"],
+  "doctorQuestions": [
+    "O que está causando meu cálcio elevado ou baixo?",
+    "Devo verificar meu nível de vitamina D?",
+    "Preciso de uma avaliação da paratireoide?"
+  ],
+  "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado (hipercalcemia)", "high": "Muito elevado" },
+  "categoryLabel": "Eletrólitos",
+  "pageTitle": "Valor Ca — Cálcio explicado | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "平均红细胞体积（MCV）反映红细胞的平均大小。低值提示小细胞性贫血（如缺铁），高值提示大细胞性贫血（如维生素B12或叶酸缺乏）。",
+  "metaDescription": "MCV偏低或偏高？正常范围、贫血类型及原因——简单易懂的解释。",
+  "causesElevated": ["维生素B12缺乏", "叶酸缺乏", "酗酒", "甲状腺功能减退"],
+  "causesLow": ["缺铁性贫血", "地中海贫血", "慢性疾病"],
+  "doctorQuestions": [
+    "MCV提示哪种类型的贫血？",
+    "我需要补充维生素B12或叶酸吗？",
+    "需要进一步检查吗？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常", "elevated": "升高", "high": "显著升高" },
+  "categoryLabel": "血常规",
+  "pageTitle": "MCV值 — 平均红细胞体积详解 | Medyra"
+}

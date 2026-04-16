@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "糖化血红蛋白（HbA1c）反映过去2-3个月的平均血糖水平，是糖尿病诊断和监测的重要指标。目标值因个人情况而异，应与医生共同制定。",
+  "metaDescription": "HbA1c偏高？正常范围、糖尿病风险及血糖控制意义——简单易懂的解释。",
+  "causesElevated": ["2型糖尿病", "1型糖尿病", "糖尿病前期", "血糖控制不佳"],
+  "causesLow": ["低血糖", "溶血性贫血", "铁缺乏"],
+  "doctorQuestions": [
+    "我的HbA1c是否提示糖尿病或糖尿病前期？",
+    "我的血糖控制目标是多少？",
+    "我需要调整饮食、运动或药物吗？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常", "elevated": "糖尿病前期", "high": "糖尿病范围" },
+  "categoryLabel": "代谢指标",
+  "pageTitle": "HbA1c值 — 糖化血红蛋白详解 | Medyra"
+}

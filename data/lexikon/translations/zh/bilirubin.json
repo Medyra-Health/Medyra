@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "胆红素是红细胞分解的产物，由肝脏处理后排出。升高可导致黄疸，可能提示肝脏疾病、胆道梗阻或溶血性贫血。",
+  "metaDescription": "胆红素偏高？正常范围、黄疸原因及何时就医——简单易懂的解释。",
+  "causesElevated": ["肝炎", "肝硬化", "胆道梗阻", "溶血性贫血", "Gilbert综合征"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我的胆红素升高是由肝脏还是胆道问题引起的？",
+    "需要进一步检查吗？",
+    "我有黄疸的风险吗？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常", "elevated": "轻度升高", "high": "显著升高" },
+  "categoryLabel": "肝功能指标",
+  "pageTitle": "胆红素值 — 总胆红素详解 | Medyra"
+}

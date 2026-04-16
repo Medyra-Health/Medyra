@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "El MCHC mide la concentración de hemoglobina en los glóbulos rojos. Los valores bajos pueden indicar anemia por deficiencia de hierro u otros tipos de anemia. Los valores muy elevados son poco frecuentes. Consulte con su médico ante resultados anormales.",
+  "metaDescription": "MCHC bajo o alto? Valores normales, significado y causas de concentración anormal de hemoglobina — explicado de forma sencilla.",
+  "causesElevated": ["Esferocitosis hereditaria", "Deshidratación grave"],
+  "causesLow": ["Anemia ferropénica", "Talasemia", "Anemia por pérdida de sangre"],
+  "doctorQuestions": [
+    "¿Qué tipo de anemia podría explicar mi MCHC?",
+    "¿Se necesitan más pruebas?",
+    "¿Debería monitorizarse el valor?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Ligeramente elevado", "high": "Elevado" },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Valor MCHC — Concentración de Hemoglobina Corpuscular Media explicada | Medyra"
+}
