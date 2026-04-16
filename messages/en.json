@@ -417,5 +417,23 @@
     "pricingCta": {
       "note": "2 free reports every month · No credit card required · Cancel anytime"
     }
+  },
+  "siteFooter": {
+    "tagline": "Understand your lab results — in your language, in 60 seconds.",
+    "product": "Product",
+    "upload": "Upload Report",
+    "prep": "Prepare Doctor Visit",
+    "healthVault": "Health Vault",
+    "pricing": "Pricing",
+    "learn": "Learn",
+    "lexikon": "Medical Lexicon",
+    "blog": "Blog",
+    "verstehen": "Understand Medical Letters",
+    "company": "Company",
+    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "disclaimer": "Not a substitute for medical advice · GDPR-compliant",
+    "copyright": "© 2026 Medyra. All rights reserved. Made in Germany."
   }
 }

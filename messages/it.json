@@ -415,5 +415,23 @@
     "pricingCta": {
       "note": "2 referti gratuiti ogni mese · Senza carta · Disdici in qualsiasi momento"
     }
+  },
+  "siteFooter": {
+    "tagline": "Capisci i tuoi esami — nella tua lingua, in 60 secondi.",
+    "product": "Prodotto",
+    "upload": "Carica referto",
+    "prep": "Prepara visita medica",
+    "healthVault": "Health Vault",
+    "pricing": "Prezzi",
+    "learn": "Impara",
+    "lexikon": "Lessico medico",
+    "blog": "Blog",
+    "verstehen": "Capire lettere mediche",
+    "company": "Azienda",
+    "privacy": "Privacy",
+    "terms": "Termini",
+    "contact": "Contatti",
+    "disclaimer": "Non sostituisce il parere medico · Conforme al GDPR",
+    "copyright": "© 2026 Medyra. Tutti i diritti riservati. Prodotto in Germania."
   }
 }

@@ -415,5 +415,23 @@
     "pricingCta": {
       "note": "2 relatórios gratuitos por mês · Sem cartão · Cancele a qualquer momento"
     }
+  },
+  "siteFooter": {
+    "tagline": "Entenda seus exames — no seu idioma, em 60 segundos.",
+    "product": "Produto",
+    "upload": "Enviar relatório",
+    "prep": "Preparar consulta",
+    "healthVault": "Health Vault",
+    "pricing": "Preços",
+    "learn": "Aprender",
+    "lexikon": "Léxico médico",
+    "blog": "Blog",
+    "verstehen": "Entender cartas médicas",
+    "company": "Empresa",
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "contact": "Contato",
+    "disclaimer": "Não substitui aconselhamento médico · Conforme ao GDPR",
+    "copyright": "© 2026 Medyra. Todos os direitos reservados. Feito na Alemanha."
   }
 }

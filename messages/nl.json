@@ -417,5 +417,23 @@
     "pricingCta": {
       "note": "2 gratis rapporten per maand · Geen creditcard · Opzegbaar"
     }
+  },
+  "siteFooter": {
+    "tagline": "Begrijp uw bloedwaarden — in uw taal, in 60 seconden.",
+    "product": "Product",
+    "upload": "Rapport uploaden",
+    "prep": "Doktersbezoek voorbereiden",
+    "healthVault": "Health Vault",
+    "pricing": "Prijzen",
+    "learn": "Leren",
+    "lexikon": "Medisch lexicon",
+    "blog": "Blog",
+    "verstehen": "Medische brieven begrijpen",
+    "company": "Bedrijf",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "contact": "Contact",
+    "disclaimer": "Geen vervanging voor medisch advies · AVG-conform",
+    "copyright": "© 2026 Medyra. Alle rechten voorbehouden. Gemaakt in Duitsland."
   }
 }

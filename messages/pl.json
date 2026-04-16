@@ -415,5 +415,23 @@
     "pricingCta": {
       "note": "2 bezpłatne raporty co miesiąc · Bez karty · Anuluj w dowolnym momencie"
     }
+  },
+  "siteFooter": {
+    "tagline": "Zrozum swoje wyniki — w swoim języku, w 60 sekund.",
+    "product": "Produkt",
+    "upload": "Prześlij raport",
+    "prep": "Przygotuj wizytę",
+    "healthVault": "Health Vault",
+    "pricing": "Cennik",
+    "learn": "Ucz się",
+    "lexikon": "Leksykon medyczny",
+    "blog": "Blog",
+    "verstehen": "Zrozum listy medyczne",
+    "company": "Firma",
+    "privacy": "Prywatność",
+    "terms": "Warunki",
+    "contact": "Kontakt",
+    "disclaimer": "Nie zastępuje porady lekarskiej · Zgodny z RODO",
+    "copyright": "© 2026 Medyra. Wszelkie prawa zastrzeżone. Wyprodukowano w Niemczech."
   }
 }

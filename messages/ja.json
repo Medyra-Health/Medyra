@@ -415,5 +415,23 @@
     "pricingCta": {
       "note": "毎月2件無料 · カード不要 · いつでもキャンセル"
     }
+  },
+  "siteFooter": {
+    "tagline": "検査結果をあなたの言語で理解しましょう — 60秒で。",
+    "product": "製品",
+    "upload": "レポートをアップロード",
+    "prep": "診察の準備",
+    "healthVault": "ヘルスボルト",
+    "pricing": "料金",
+    "learn": "学ぶ",
+    "lexikon": "医学辞典",
+    "blog": "ブログ",
+    "verstehen": "医療書類を理解する",
+    "company": "会社",
+    "privacy": "プライバシー",
+    "terms": "利用規約",
+    "contact": "お問い合わせ",
+    "disclaimer": "医療アドバイスの代わりにはなりません · GDPR準拠",
+    "copyright": "© 2026 Medyra. 全著作権所有。ドイツ製。"
   }
 }

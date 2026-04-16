@@ -415,5 +415,23 @@
     "pricingCta": {
       "note": "2 rapports gratuits par mois · Sans carte bancaire · Résiliable à tout moment"
     }
+  },
+  "siteFooter": {
+    "tagline": "Comprenez vos analyses — dans votre langue, en 60 secondes.",
+    "product": "Produit",
+    "upload": "Télécharger un rapport",
+    "prep": "Préparer une consultation",
+    "healthVault": "Health Vault",
+    "pricing": "Tarifs",
+    "learn": "Apprendre",
+    "lexikon": "Lexique médical",
+    "blog": "Blog",
+    "verstehen": "Comprendre les courriers médicaux",
+    "company": "Entreprise",
+    "privacy": "Confidentialité",
+    "terms": "CGU",
+    "contact": "Contact",
+    "disclaimer": "Ne remplace pas un avis médical · Conforme RGPD",
+    "copyright": "© 2026 Medyra. Tous droits réservés. Fabriqué en Allemagne."
   }
 }
