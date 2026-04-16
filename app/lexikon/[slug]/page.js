@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
 import { getAllSlugs, getEntry, getRelatedEntries, SUPPORTED_LANGS } from '@/lib/lexikon'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 import FeaturedSnippet from '@/components/lexikon/FeaturedSnippet'
 import RangeTable from '@/components/lexikon/RangeTable'
 import CausesSection from '@/components/lexikon/CausesSection'
@@ -76,6 +77,7 @@ export default async function LexikonEntryPage({ params }) {
             <Link href="/lexikon" className="text-sm text-gray-500 hover:text-gray-800 transition-colors hidden sm:block">
               ← Lexikon
             </Link>
+            <LanguageSwitcher />
             <Link href={`/upload?source=lexikon&term=${entry.slug}`}
               className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-1.5 rounded-lg text-xs transition-colors">
               Befund hochladen

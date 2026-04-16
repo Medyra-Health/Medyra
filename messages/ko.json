@@ -415,5 +415,23 @@
     "pricingCta": {
       "note": "매월 2개 무료 · 카드 불필요 · 언제든 취소"
     }
+  },
+  "siteFooter": {
+    "tagline": "검사 결과를 내 언어로 이해하세요 — 60초 안에.",
+    "product": "제품",
+    "upload": "보고서 업로드",
+    "prep": "진료 준비",
+    "healthVault": "헬스 볼트",
+    "pricing": "가격",
+    "learn": "학습",
+    "lexikon": "의학 사전",
+    "blog": "블로그",
+    "verstehen": "의료 서신 이해",
+    "company": "회사",
+    "privacy": "개인정보",
+    "terms": "이용약관",
+    "contact": "문의",
+    "disclaimer": "의료 조언을 대체하지 않습니다 · GDPR 준수",
+    "copyright": "© 2026 Medyra. 모든 권리 보유. 독일 제조."
   }
 }

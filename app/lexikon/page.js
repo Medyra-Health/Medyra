@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { getEntriesByCategory } from '@/lib/lexikon'
 import LexikonIndex from './LexikonIndex'
 
@@ -26,6 +27,7 @@ export default function LexikonPage() {
           <Link href="/"><MedyraLogo size="md" /></Link>
           <nav className="flex items-center gap-3">
             <Link href="/" className="text-sm text-gray-500 hover:text-gray-800 transition-colors hidden sm:block">← Startseite</Link>
+            <LanguageSwitcher />
             <Link href="/upload" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-1.5 rounded-lg text-xs transition-colors">
               Befund hochladen
             </Link>
