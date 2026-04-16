@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Cholesterol is een essentieel bloedvet, maar hoge waarden kunnen het cardiovasculaire risico verhogen. Waarden boven 200 mg/dl worden als grenswaarde beschouwd. Wat het meest telt is de LDL/HDL-verhouding. Bespreek verhoogde waarden met uw arts.",
+  "metaDescription": "Cholesterol verhoogd? Normaalwaarden, cardiovasculair risico en oorzaken van hoog totaalcholesterol — eenvoudig uitgelegd.",
+  "causesElevated": ["Vetrijk dieet", "Genetische aanleg", "Obesitas", "Hypothyreoïdie", "Diabetes"],
+  "causesLow": ["Ondervoeding", "Leverziekte", "Malabsorptie"],
+  "doctorQuestions": [
+    "Wat is mijn LDL/HDL-verhouding?",
+    "Heb ik cholesterolverlagende medicatie nodig?",
+    "Welke voedingsveranderingen zijn zinvol?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Wenselijk", "elevated": "Grenswaarde hoog", "high": "Verhoogd" },
+  "categoryLabel": "Stofwisseling",
+  "pageTitle": "Waarde TC — Totaal Cholesterol uitgelegd | Medyra"
+}

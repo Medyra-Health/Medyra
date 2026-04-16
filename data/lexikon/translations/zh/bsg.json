@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "红细胞沉降率（ESR/BSG）是非特异性炎症指标。升高提示体内存在炎症、感染或自身免疫性疾病，但需结合其他检查综合判断。",
+  "metaDescription": "血沉偏高？正常范围、炎症原因及意义——简单易懂的解释。",
+  "causesElevated": ["感染", "自身免疫性疾病", "肿瘤", "贫血", "妊娠"],
+  "causesLow": ["真性红细胞增多症", "镰状细胞贫血"],
+  "doctorQuestions": [
+    "血沉升高提示哪种炎症或疾病？",
+    "需要进一步检查吗？",
+    "我是否有自身免疫性疾病的风险？"
+  ],
+  "rangeLabels": { "low": "偏低", "normal": "正常", "elevated": "轻度升高", "high": "显著升高" },
+  "categoryLabel": "炎症标志物",
+  "pageTitle": "ESR值 — 红细胞沉降率详解 | Medyra"
+}

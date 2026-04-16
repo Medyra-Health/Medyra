@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "MCHC misura la concentrazione di emoglobina nei globuli rossi. I valori bassi possono indicare anemia sideropenica o altri tipi di anemia. I valori molto elevati sono rari. Discutete i risultati anomali con il vostro medico.",
+  "metaDescription": "MCHC basso o alto? Valori normali, significato e cause di concentrazione anomala di emoglobina — spiegato in modo semplice.",
+  "causesElevated": ["Sferocitosi ereditaria", "Grave disidratazione"],
+  "causesLow": ["Anemia sideropenica", "Talassemia", "Anemia da perdita di sangue"],
+  "doctorQuestions": [
+    "Che tipo di anemia potrebbe spiegare il mio MCHC?",
+    "Sono necessari ulteriori esami?",
+    "Il valore dovrebbe essere monitorato?"
+  ],
+  "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Leggermente elevato", "high": "Elevato" },
+  "categoryLabel": "Emocromo",
+  "pageTitle": "Valore MCHC — Concentrazione di Emoglobina Corpuscolare Media spiegata | Medyra"
+}

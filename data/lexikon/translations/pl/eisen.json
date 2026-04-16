@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Żelazo surowicze mierzy ilość żelaza we krwi w momencie pobrania. Niskie wartości mogą wskazywać na niedobór żelaza; wysokie — na przeciążenie żelazem. Ponieważ poziomy znacznie fluktuują, żelazo surowicze jest zawsze oceniane razem z ferrytyną i transferyną.",
+  "metaDescription": "Żelazo surowicze podwyższone lub niskie? Wartości prawidłowe, diagnoza niedoboru żelaza i znaczenie — wyjaśnione prosto.",
+  "causesElevated": ["Hemochromatoza", "Hemoliza", "Choroba wątroby", "Przedawkowanie suplementów żelaza"],
+  "causesLow": ["Niedobór żelaza", "Przewlekły stan zapalny", "Obfite miesiączkowanie", "Niewystarczające spożycie żelaza"],
+  "doctorQuestions": [
+    "Czy istnieje prawdziwy niedobór żelaza?",
+    "Czy potrzebuję suplementów żelaza?",
+    "Czy powinienem zostać przebadany pod kątem hemochromatozy?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Wskaźniki żelaza",
+  "pageTitle": "Wartość Fe — Żelazo surowicze wyjaśnione | Medyra"
+}

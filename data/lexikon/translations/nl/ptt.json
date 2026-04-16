@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "PTT (partiële tromboplastinetijd) meet hoe snel bloed stolt via de intrinsieke stollingscascade. Verlengde waarden kunnen wijzen op een stollingsstoornis of het effect van heparine. De test wordt gebruikt vóór operaties en wanneer bloedingsneiging wordt vermoed. Bespreek abnormale waarden met uw arts.",
+  "metaDescription": "PTT verhoogd? Normaalwaarden, betekenis van stollingstijd en oorzaken bij heparinetherapie — eenvoudig uitgelegd.",
+  "causesElevated": ["Heparinetherapie", "Hemofilie", "Stollingsfactordeficiëntie", "Ziekte van Von Willebrand"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Is er een stollingsstoornis die mijn PTT verklaart?",
+    "Is mijn heparinedosis correct?",
+    "Heb ik verdere stollingstests nodig vóór een operatie?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verlengd", "high": "Sterk verlengd" },
+  "categoryLabel": "Stolling",
+  "pageTitle": "Waarde PTT — Partiële Tromboplastinetijd uitgelegd | Medyra"
+}

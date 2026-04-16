@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "El colesterol es una grasa sanguínea esencial, pero los niveles altos pueden aumentar el riesgo cardiovascular. Los valores superiores a 200 mg/dl se consideran limítrofes. Lo más importante es la relación LDL/HDL. Consulte con su médico ante valores elevados.",
+  "metaDescription": "Colesterol elevado? Valores normales, riesgo cardiovascular y causas del colesterol total alto — explicado de forma sencilla.",
+  "causesElevated": ["Dieta rica en grasas", "Predisposición genética", "Obesidad", "Hipotiroidismo", "Diabetes"],
+  "causesLow": ["Desnutrición", "Enfermedad hepática", "Malabsorción"],
+  "doctorQuestions": [
+    "¿Cuál es mi relación LDL/HDL?",
+    "¿Necesito medicación reductora del colesterol?",
+    "¿Qué cambios dietéticos tienen sentido?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Deseable", "elevated": "Limítrofe alto", "high": "Elevado" },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Valor CT — Colesterol Total explicado | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Bilirubina jest produktem rozpadu czerwonych krwinek. Podwyższone wartości mogą wskazywać na problemy z wątrobą lub niedrożność dróg żółciowych i mogą powodować żółtaczkę. Nieznacznie podwyższone wartości obserwuje się też w nieszkodliwym zespole Gilberta.",
+  "metaDescription": "Bilirubina podwyższona? Wartości prawidłowe, przyczyny i kiedy wskazuje na żółtaczkę lub chorobę wątroby — wyjaśnione prosto.",
+  "causesElevated": ["Choroba wątroby", "Kamica żółciowa", "Hemoliza (rozpad czerwonych krwinek)", "Zespół Gilberta", "Niektóre leki"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy choroba pęcherzyka żółciowego może być przyczyną mojego poziomu bilirubiny?",
+    "Czy potrzebuję USG?",
+    "Czy nieznacznie podwyższona wartość jest nieszkodliwa w moim przypadku?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Nieznacznie podwyższone", "high": "Znacznie podwyższone (możliwa żółtaczka)" },
+  "categoryLabel": "Wskaźniki wątrobowe",
+  "pageTitle": "Wartość bili — Bilirubina wyjaśniona | Medyra"
+}

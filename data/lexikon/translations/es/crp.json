@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "La PCR (proteína C reactiva) es un marcador de inflamación que aumenta durante infecciones o condiciones inflamatorias. Los valores normales están por debajo de 5 mg/l. Los niveles elevados pueden indicar infección o inflamación. Busque atención médica inmediata si los niveles están significativamente elevados.",
+  "metaDescription": "PCR elevada? Valores normales, causas de la proteína C reactiva alta y cuándo consultar al médico — explicado de forma sencilla.",
+  "causesElevated": ["Infección bacteriana aguda", "Inflamación crónica", "Inflamación tisular", "Enfermedades autoinmunes", "Después de cirugía"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Debería revisarse este valor en 2 semanas?",
+    "¿Necesito más investigaciones?",
+    "¿Podría haber una inflamación crónica?"
+  ],
+  "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Ligeramente elevado", "high": "Muy elevado" },
+  "categoryLabel": "Marcadores inflamatorios",
+  "pageTitle": "Valor CRP — Proteína C Reactiva explicada | Medyra"
+}

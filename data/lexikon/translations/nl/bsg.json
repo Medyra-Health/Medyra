@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "BSE (bezinkingssnelheid van erytrocyten) meet hoe snel rode bloedcellen bezinken in een bloedmonster. Een verhoogde waarde kan wijzen op ontsteking, infectie of andere aandoeningen. BSE is een aspecifieke marker en wordt meestal samen met andere tests beoordeeld.",
+  "metaDescription": "BSE verhoogd? Normaalwaarden, oorzaken en betekenis van bezinkingssnelheid — eenvoudig uitgelegd.",
+  "causesElevated": ["Infecties", "Ontstekingsziekten", "Auto-immuunziekten", "Bloedarmoede", "Kanker"],
+  "causesLow": ["Polycythemie", "Hartfalen"],
+  "doctorQuestions": [
+    "Welke aandoening zou mijn verhoogde BSE kunnen verklaren?",
+    "Moet ik ook CRP en andere waarden controleren?",
+    "Heb ik verdere onderzoeken nodig?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
+  "categoryLabel": "Ontstekingsmarkers",
+  "pageTitle": "Waarde BSE — Bezinkingssnelheid uitgelegd | Medyra"
+}

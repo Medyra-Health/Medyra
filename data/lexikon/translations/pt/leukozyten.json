@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Os leucócitos (glóbulos brancos) são as células do sistema imunológico que combatem infecções. Níveis elevados podem indicar infecção ou inflamação, enquanto níveis baixos podem sinalizar uma resposta imune enfraquecida. Sempre discuta valores anormais com o seu médico.",
+  "metaDescription": "Leucócitos / glóbulos brancos altos ou baixos? Valores normais, causas e quando consultar o médico — explicado de forma simples.",
+  "causesElevated": ["Infecção bacteriana", "Infecção viral", "Doença inflamatória", "Estresse", "Uso de corticosteroides", "Tabagismo"],
+  "causesLow": ["Infecções virais (p.ex. gripe)", "Distúrbios da medula óssea", "Certos medicamentos", "Doenças autoimunes"],
+  "doctorQuestions": [
+    "Este valor sugere uma infecção e preciso de antibióticos?",
+    "O valor deveria ser reavaliado em algumas semanas?",
+    "Algum medicamento poderia estar afetando minha contagem de glóbulos brancos?"
+  ],
+  "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Ligeiramente elevado", "high": "Muito elevado" },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Valor leucócitos — Glóbulos brancos explicados | Medyra"
+}

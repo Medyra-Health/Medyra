@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Bloedureum (BUN) wordt geproduceerd wanneer eiwitten worden afgebroken en door de nieren uitgescheiden. Verhoogde waarden kunnen wijzen op verminderde nierfunctie of een eiwitrijk dieet. Bespreek abnormale bevindingen met uw arts.",
+  "metaDescription": "BUN / bloedureum verhoogd? Normaalwaarden, oorzaken en wat het betekent voor de nierengezondheid — eenvoudig uitgelegd.",
+  "causesElevated": ["Nierziekte", "Uitdroging", "Eiwitrijk dieet", "Maagdarmbloeding"],
+  "causesLow": ["Ondervoeding", "Leverziekte", "Overhydratie"],
+  "doctorQuestions": [
+    "Is mijn BUN gerelateerd aan mijn nierfunctie?",
+    "Moet ik mijn eiwitinname aanpassen?",
+    "Heb ik verdere niertests nodig?"
+  ],
+  "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
+  "categoryLabel": "Nierwaarden",
+  "pageTitle": "Waarde BUN — Bloedureum uitgelegd | Medyra"
+}

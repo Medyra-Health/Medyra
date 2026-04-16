@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Białko w moczu (białkomocz) może wskazywać na uszkodzenie nerek, ponieważ zdrowe nerki zwykle zatrzymują białko. Małe ilości mogą pojawić się po wysiłku lub gorączce. Utrzymujące się wartości należy omówić z lekarzem, ponieważ mogą wskazywać na chorobę nerek.",
+  "metaDescription": "Białko w moczu (białkomocz)? Przyczyny, ryzyko choroby nerek i co oznacza wynik — wyjaśnione prosto.",
+  "causesElevated": ["Przewlekła choroba nerek", "Cukrzyca (nefropatia cukrzycowa)", "Nadciśnienie tętnicze", "Intensywny wysiłek fizyczny", "Zapalenie nerek"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy białkomocz wskazuje na uszkodzenie nerek?",
+    "Czy należy zebrać dobową zbiórka moczu?",
+    "Jakie środki ochronią moją czynność nerek?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Wskaźniki moczu",
+  "pageTitle": "Białko w moczu — Białkomocz wyjaśniony | Medyra"
+}

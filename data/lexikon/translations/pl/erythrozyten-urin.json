@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Erytrocyty w moczu (krwiomocz) oznaczają, że w moczu jest krew. Może to wskazywać na infekcje dróg moczowych, kamienie nerkowe lub inne schorzenia. Nawet bez objawów pozytywny wynik należy omówić z lekarzem.",
+  "metaDescription": "Krew w moczu (krwiomocz)? Erytrocyty w moczu: przyczyny, znaczenie i kiedy udać się do lekarza — wyjaśnione prosto.",
+  "causesElevated": ["Infekcja dróg moczowych", "Kamienie nerkowe", "Zapalenie pęcherza", "Choroba nerek", "Uraz", "Niektóre leki"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Co powoduje erytrocyty w moim moczu?",
+    "Czy potrzebuję badania pęcherza lub nerek?",
+    "Czy powinienem mieć USG?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Wskaźniki moczu",
+  "pageTitle": "Erytrocyty w moczu — Krwiomocz wyjaśniony | Medyra"
+}

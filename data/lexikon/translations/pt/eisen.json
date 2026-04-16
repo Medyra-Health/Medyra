@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "O ferro sérico mede a quantidade de ferro no sangue no momento da coleta. Valores baixos podem indicar deficiência de ferro; valores altos podem sugerir sobrecarga de ferro. Como os níveis flutuam significativamente, o ferro sérico é sempre avaliado junto com ferritina e transferrina.",
+  "metaDescription": "Ferro sérico elevado ou baixo? Valores normais, diagnóstico de deficiência de ferro e significado — explicado de forma simples.",
+  "causesElevated": ["Hemocromatose", "Hemólise", "Doença hepática", "Overdose de suplementos de ferro"],
+  "causesLow": ["Deficiência de ferro", "Inflamação crônica", "Menstruação intensa", "Ingestão inadequada de ferro"],
+  "doctorQuestions": [
+    "Há uma deficiência real de ferro?",
+    "Preciso de suplementos de ferro?",
+    "Devo ser testado para hemocromatose?"
+  ],
+  "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado", "high": "Muito elevado" },
+  "categoryLabel": "Valores de ferro",
+  "pageTitle": "Valor Fe — Ferro Sérico explicado | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "MCV mierzy średnią wielkość czerwonych krwinek. Małe komórki mogą wskazywać na niedobór żelaza, duże — na niedobór witaminy B12 lub kwasu foliowego. Omów nieprawidłowe wyniki z lekarzem.",
+  "metaDescription": "MCV wysokie lub niskie? Wartości prawidłowe, przyczyny nieprawidłowej wielkości czerwonych krwinek i co to oznacza — wyjaśnione prosto.",
+  "causesElevated": ["Niedobór witaminy B12", "Niedobór kwasu foliowego", "Spożycie alkoholu", "Niedoczynność tarczycy"],
+  "causesLow": ["Niedobór żelaza", "Talasemia", "Przewlekłe choroby zapalne"],
+  "doctorQuestions": [
+    "Czy moje MCV sugeruje niedobór składników odżywczych?",
+    "Czy powinienem przyjmować witaminę B12 lub kwas foliowy?",
+    "Czy potrzebuję bardziej szczegółowego badania krwi?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone (makrocytoza)", "high": "Znacznie podwyższone" },
+  "categoryLabel": "Morfologia krwi",
+  "pageTitle": "Wartość MCV — Średnia Objętość Krwinki wyjaśniona | Medyra"
+}
