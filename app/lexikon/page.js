@@ -3,6 +3,7 @@ import MedyraLogo from '@/components/MedyraLogo'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { getEntriesByCategory } from '@/lib/lexikon'
 import LexikonIndex from './LexikonIndex'
+import LexikonHero from './LexikonHero'
 
 const SUPPORTED_LANGS = ['en','tr','bn','fr','ar','es','it','pt','nl','pl','zh','ja','ko','hi','ur','ru']
 
@@ -45,21 +46,8 @@ export default function LexikonPage() {
       </header>
 
       <main className="container mx-auto px-4 py-12 max-w-5xl">
-        {/* Hero */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-5">
-            <span className="w-2 h-2 rounded-full bg-emerald-500" />
-            {totalCount} Laborwerte erklärt — kostenlos & ohne Anmeldung
-          </div>
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-            Medizinisches Lexikon<br />
-            <span className="text-emerald-600">Laborwerte</span> einfach erklärt
-          </h1>
-          <p className="text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            Was bedeutet mein CRP-Wert? Warum ist TSH erhöht? Dieses Lexikon erklärt Ihre Laborwerte
-            in verständlichem Deutsch — mit Normwerten, möglichen Ursachen und Fragen für Ihren nächsten Arzttermin.
-          </p>
-        </div>
+        {/* Hero — language-aware client component */}
+        <LexikonHero totalCount={totalCount} />
 
         {/* Client searchable index */}
         <LexikonIndex entriesByCategory={entriesByCategory} />
