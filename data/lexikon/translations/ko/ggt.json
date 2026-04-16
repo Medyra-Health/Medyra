@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "감마-글루타밀전이효소(GGT)는 간담도 질환과 알코올 섭취에 민감한 지표입니다. 지속적인 상승은 의사와 상담이 필요합니다.",
+  "metaDescription": "GGT가 높나요? 정상 범위, 알코올과 간 원인, 의미 — 쉽게 설명합니다.",
+  "causesElevated": ["알코올 섭취", "지방간", "담도 질환", "일부 약물", "간염"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "GGT 상승이 알코올 때문입니까, 간 질환 때문입니까?",
+    "금주가 필요합니까?",
+    "간 초음파 검사가 필요합니까?"
+  ],
+  "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "경미한 상승", "high": "현저한 상승" },
+  "categoryLabel": "간 기능 검사",
+  "pageTitle": "GGT 수치 — 감마-GTP 쉽게 알아보기 | Medyra"
+}

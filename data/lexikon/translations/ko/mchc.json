@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "평균 적혈구 혈색소 농도(MCHC)는 적혈구 내 헤모글로빈 농도를 나타냅니다. 낮은 수치는 저색소성 빈혈을, 높은 수치는 유전성 구상 적혈구증 등을 나타낼 수 있습니다.",
+  "metaDescription": "MCHC가 낮거나 높나요? 정상 범위, 원인, 의미 — 쉽게 설명합니다.",
+  "causesElevated": ["유전성 구상 적혈구증", "심한 탈수"],
+  "causesLow": ["철 결핍성 빈혈", "지중해 빈혈"],
+  "doctorQuestions": [
+    "MCHC는 어떤 유형의 빈혈을 나타냅니까?",
+    "추가 혈액 검사가 필요합니까?",
+    "철분 보충제가 필요합니까?"
+  ],
+  "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "혈구 검사",
+  "pageTitle": "MCHC 수치 — 평균 적혈구 혈색소 농도 쉽게 알아보기 | Medyra"
+}

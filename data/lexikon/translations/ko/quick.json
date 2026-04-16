@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "프로트롬빈 시간 백분율(Quick 값)은 외인계 응고 경로를 평가하며 INR과 밀접하게 관련됩니다. 수치가 낮을수록 응고 기능이 저하되어 출혈 위험이 높아집니다.",
+  "metaDescription": "Quick 값이 낮나요? 정상 범위, 응고 기능 의미, 원인 — 쉽게 설명합니다.",
+  "causesElevated": [],
+  "causesLow": ["와파린 치료", "비타민 K 결핍", "간 질환", "응고 인자 결핍"],
+  "doctorQuestions": [
+    "응고 기능이 정상입니까?",
+    "비타민 K 보충이 필요합니까?",
+    "출혈 위험이 있습니까?"
+  ],
+  "rangeLabels": { "low": "낮음(출혈 위험)", "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "응고 검사",
+  "pageTitle": "Quick 수치 — 프로트롬빈 시간 쉽게 알아보기 | Medyra"
+}
