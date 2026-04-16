@@ -415,5 +415,23 @@
     "pricingCta": {
       "note": "Her ay 2 ücretsiz rapor · Kart gerekmez · İstediğinizde iptal"
     }
+  },
+  "siteFooter": {
+    "tagline": "Laboratuvar sonuçlarınızı anlayın — kendi dilinizde, 60 saniyede.",
+    "product": "Ürün",
+    "upload": "Rapor Yükle",
+    "prep": "Doktor Ziyareti Hazırlığı",
+    "healthVault": "Sağlık Kasası",
+    "pricing": "Fiyatlar",
+    "learn": "Öğren",
+    "lexikon": "Tıbbi Sözlük",
+    "blog": "Blog",
+    "verstehen": "Tıbbi Mektupları Anla",
+    "company": "Şirket",
+    "privacy": "Gizlilik",
+    "terms": "Şartlar",
+    "contact": "İletişim",
+    "disclaimer": "Tıbbi tavsiyenin yerini tutmaz · GDPR uyumlu",
+    "copyright": "© 2026 Medyra. Tüm hakları saklıdır. Almanyada üretilmiştir."
   }
 }

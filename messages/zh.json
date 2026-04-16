@@ -415,5 +415,23 @@
     "pricingCta": {
       "note": "每月2份免费报告 · 无需信用卡 · 随时取消"
     }
+  },
+  "siteFooter": {
+    "tagline": "用您的语言理解化验结果——60秒内完成。",
+    "product": "产品",
+    "upload": "上传报告",
+    "prep": "准备就诊",
+    "healthVault": "健康保险库",
+    "pricing": "定价",
+    "learn": "学习",
+    "lexikon": "医学词典",
+    "blog": "博客",
+    "verstehen": "理解医疗信件",
+    "company": "公司",
+    "privacy": "隐私政策",
+    "terms": "条款",
+    "contact": "联系我们",
+    "disclaimer": "不能替代医疗建议 · 符合GDPR",
+    "copyright": "© 2026 Medyra. 保留所有权利。德国制造。"
   }
 }
