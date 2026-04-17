@@ -6,7 +6,8 @@ import Link from 'next/link'
 import {
   ArrowLeft, Plus, Trash2, User, Baby, Users, Heart,
   Crown, Lock, ChevronRight, Loader2, Check, X, Edit2,
-  Shield, Sparkles, TrendingUp
+  Shield, Sparkles, TrendingUp, GitCompareArrows, BarChart3,
+  AlertTriangle, CheckCircle, Minus
 } from 'lucide-react'
 import MedyraLogo from '@/components/MedyraLogo'
 
@@ -213,6 +214,205 @@ function CreateModal({ onClose, onCreated }) {
   )
 }
 
+const BIOMARKER_LABELS = {
+  hemoglobin: 'Hemoglobin', ferritin: 'Ferritin', tsh: 'TSH', hba1c: 'HbA1c',
+  cholesterol: 'Cholesterol', vitaminD: 'Vitamin D', crp: 'CRP', egfr: 'eGFR',
+}
+const BIOMARKER_UNITS = {
+  hemoglobin: 'g/dL', ferritin: 'µg/L', tsh: 'mIU/L', hba1c: '%',
+  cholesterol: 'mg/dL', vitaminD: 'nmol/L', crp: 'mg/L', egfr: 'mL/min',
+}
+const BIOMARKER_RANGES = {
+  hemoglobin: [12, 17.5], ferritin: [15, 150], tsh: [0.4, 4.0], hba1c: [0, 5.6],
+  cholesterol: [0, 200], vitaminD: [50, 200], crp: [0, 5], egfr: [60, 120],
+}
+
+function getBioFlag(key, value) {
+  const r = BIOMARKER_RANGES[key]
+  if (!r || value == null) return 'none'
+  if (value < r[0]) return 'low'
+  if (value > r[1]) return 'high'
+  return 'normal'
+}
+
+function getLatestBiomarker(profile, key) {
+  const entries = (profile.biomarkers || []).filter(b => b.key === key || b.marker === key)
+  if (!entries.length) return null
+  entries.sort((a, b) => new Date(b.date || b.createdAt || 0) - new Date(a.date || a.createdAt || 0))
+  return entries[0].value ?? entries[0].val ?? null
+}
+
+function CompareSection({ profiles }) {
+  const [selA, setSelA] = useState(profiles[0]?.id || '')
+  const [selB, setSelB] = useState(profiles[1]?.id || '')
+
+  const pA = profiles.find(p => p.id === selA)
+  const pB = profiles.find(p => p.id === selB)
+  const bioKeys = Object.keys(BIOMARKER_LABELS)
+
+  const rows = bioKeys.map(key => {
+    const vA = pA ? getLatestBiomarker(pA, key) : null
+    const vB = pB ? getLatestBiomarker(pB, key) : null
+    const fA = getBioFlag(key, vA)
+    const fB = getBioFlag(key, vB)
+    const diff = vA != null && vB != null ? +(vB - vA).toFixed(2) : null
+    return { key, label: BIOMARKER_LABELS[key], unit: BIOMARKER_UNITS[key], vA, vB, fA, fB, diff }
+  }).filter(r => r.vA != null || r.vB != null)
+
+  const flagColor = f => f === 'high' ? 'text-orange-600' : f === 'low' ? 'text-yellow-600' : f === 'normal' ? 'text-emerald-600' : 'text-gray-400'
+  const flagBg = f => f === 'high' ? 'bg-orange-50' : f === 'low' ? 'bg-yellow-50' : f === 'normal' ? 'bg-emerald-50' : 'bg-gray-50'
+  const dotColor = p => `bg-${(p?.color || 'emerald')}-500`
+
+  return (
+    <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden mt-6">
+      <div className="flex items-center gap-2 px-5 py-4 border-b border-gray-100">
+        <GitCompareArrows className="h-4 w-4 text-emerald-600" />
+        <h3 className="text-sm font-bold text-gray-800">Compare Profiles</h3>
+      </div>
+
+      {/* Profile selectors */}
+      <div className="grid grid-cols-2 gap-3 px-5 py-4 bg-gray-50 border-b border-gray-100">
+        {[{ sel: selA, set: setSelA, label: 'Profile A' }, { sel: selB, set: setSelB, label: 'Profile B' }].map(({ sel, set, label }) => (
+          <div key={label}>
+            <p className="text-xs font-semibold text-gray-500 mb-1.5">{label}</p>
+            <select
+              value={sel}
+              onChange={e => set(e.target.value)}
+              className="w-full border border-gray-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            >
+              {profiles.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}
+            </select>
+          </div>
+        ))}
+      </div>
+
+      {rows.length === 0 ? (
+        <div className="text-center py-10 text-sm text-gray-400">
+          No biomarker data yet. Upload reports assigned to these profiles to see comparison.
+        </div>
+      ) : (
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-gray-100">
+                <th className="text-left px-5 py-3 text-xs font-semibold text-gray-500 w-32">Marker</th>
+                <th className="text-center px-4 py-3 text-xs font-semibold text-gray-700">
+                  <span className="flex items-center justify-center gap-1.5">
+                    <span className={`w-2 h-2 rounded-full ${pA ? dotColor(pA) : 'bg-gray-300'}`} />
+                    {pA?.name || '—'}
+                  </span>
+                </th>
+                <th className="text-center px-4 py-3 text-xs font-semibold text-gray-700">
+                  <span className="flex items-center justify-center gap-1.5">
+                    <span className={`w-2 h-2 rounded-full ${pB ? dotColor(pB) : 'bg-gray-300'}`} />
+                    {pB?.name || '—'}
+                  </span>
+                </th>
+                <th className="text-center px-4 py-3 text-xs font-semibold text-gray-500 hidden sm:table-cell">Difference</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r, i) => (
+                <tr key={r.key} className={`border-b border-gray-50 ${i % 2 === 0 ? '' : 'bg-gray-50/50'}`}>
+                  <td className="px-5 py-2.5">
+                    <p className="text-xs font-semibold text-gray-700">{r.label}</p>
+                    <p className="text-xs text-gray-400">{r.unit}</p>
+                  </td>
+                  <td className="text-center px-4 py-2.5">
+                    {r.vA != null ? (
+                      <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded-full ${flagBg(r.fA)} ${flagColor(r.fA)}`}>
+                        {r.vA}
+                      </span>
+                    ) : <span className="text-gray-300 text-xs">—</span>}
+                  </td>
+                  <td className="text-center px-4 py-2.5">
+                    {r.vB != null ? (
+                      <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded-full ${flagBg(r.fB)} ${flagColor(r.fB)}`}>
+                        {r.vB}
+                      </span>
+                    ) : <span className="text-gray-300 text-xs">—</span>}
+                  </td>
+                  <td className="text-center px-4 py-2.5 hidden sm:table-cell">
+                    {r.diff !== null ? (
+                      <span className={`text-xs font-semibold ${r.diff > 0 ? 'text-orange-500' : r.diff < 0 ? 'text-blue-500' : 'text-gray-400'}`}>
+                        {r.diff > 0 ? '+' : ''}{r.diff}
+                      </span>
+                    ) : <span className="text-gray-300 text-xs">—</span>}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function OverviewSection({ profiles }) {
+  const bioKeys = Object.keys(BIOMARKER_LABELS)
+
+  const data = profiles.map(p => ({
+    profile: p,
+    markers: bioKeys.map(key => ({
+      key,
+      label: BIOMARKER_LABELS[key],
+      unit: BIOMARKER_UNITS[key],
+      value: getLatestBiomarker(p, key),
+      flag: getBioFlag(key, getLatestBiomarker(p, key)),
+    })).filter(m => m.value != null),
+  })).filter(d => d.markers.length > 0)
+
+  if (data.length === 0) return null
+
+  const flagIcon = f => f === 'high' ? <TrendingUp className="h-3 w-3" /> : f === 'low' ? <AlertTriangle className="h-3 w-3" /> : <CheckCircle className="h-3 w-3" />
+  const flagColor = f => f === 'high' ? 'text-orange-500' : f === 'low' ? 'text-yellow-600' : 'text-emerald-600'
+
+  return (
+    <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden mt-4">
+      <div className="flex items-center gap-2 px-5 py-4 border-b border-gray-100">
+        <BarChart3 className="h-4 w-4 text-violet-600" />
+        <h3 className="text-sm font-bold text-gray-800">Family Overview</h3>
+        <span className="text-xs text-gray-400 ml-1">Latest values across all profiles</span>
+      </div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 p-5">
+        {data.map(({ profile, markers }) => {
+          const theme = COLOR_THEME[profile.color] || COLOR_THEME.emerald
+          const abnormal = markers.filter(m => m.flag !== 'normal').length
+          return (
+            <div key={profile.id} className={`rounded-xl border-2 ${theme.border} ${theme.bg} p-4`}>
+              <div className="flex items-center gap-2 mb-3">
+                <span className={`w-2 h-2 rounded-full ${theme.dot}`} />
+                <p className={`text-sm font-bold ${theme.text}`}>{profile.name}</p>
+                {abnormal > 0 && (
+                  <span className="ml-auto text-xs bg-orange-100 text-orange-600 px-1.5 py-0.5 rounded-full font-semibold">
+                    {abnormal} flagged
+                  </span>
+                )}
+              </div>
+              <div className="space-y-1.5">
+                {markers.slice(0, 6).map(m => (
+                  <div key={m.key} className="flex items-center justify-between">
+                    <span className="text-xs text-gray-600">{m.label}</span>
+                    <span className={`flex items-center gap-1 text-xs font-semibold ${flagColor(m.flag)}`}>
+                      {flagIcon(m.flag)}
+                      {m.value} {m.unit}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <Link href={`/dashboard?profile=${profile.id}`}
+                className={`mt-3 text-xs font-semibold ${theme.text} flex items-center gap-0.5 hover:underline`}>
+                View full timeline <ChevronRight className="h-3 w-3" />
+              </Link>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
 export default function ProfilesPage() {
   const { user, isLoaded } = useUser()
   const [data, setData] = useState(null)
@@ -387,6 +587,12 @@ export default function ProfilesPage() {
                 ))}
               </div>
             </div>
+
+            {/* Family overview — all profiles side by side */}
+            {profiles.length >= 1 && <OverviewSection profiles={profiles} />}
+
+            {/* Compare two profiles */}
+            {profiles.length >= 2 && <CompareSection profiles={profiles} />}
           </>
         )}
       </main>

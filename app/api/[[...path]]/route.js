@@ -503,6 +503,20 @@ async function handleGetReport(reportId) {
   return handleCORS(NextResponse.json({ success: true, report }))
 }
 
+async function handleAssignReportToProfile(request, reportId) {
+  const { userId } = await auth()
+  if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  const { profileId } = await request.json()
+  if (!profileId) return handleCORS(NextResponse.json({ error: 'profileId required' }, { status: 400 }))
+  const database = await connectToMongo()
+  const result = await database.collection('reports').updateOne(
+    { id: reportId, userId },
+    { $set: { profileId, updatedAt: new Date() } }
+  )
+  if (result.matchedCount === 0) return handleCORS(NextResponse.json({ error: 'Report not found' }, { status: 404 }))
+  return handleCORS(NextResponse.json({ success: true }))
+}
+
 async function handleChat(request, reportId) {
   const { userId } = await auth()
   if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
@@ -767,6 +781,12 @@ async function handleRoute(request) {
     const chatMatch = route.match(/^\/reports\/([^/]+)\/chat$/)
     if (chatMatch && method === 'POST') {
       return handleChat(request, chatMatch[1])
+    }
+
+    // Assign report to profile
+    const assignMatch = route.match(/^\/reports\/([^/]+)\/assign$/)
+    if (assignMatch && method === 'PATCH') {
+      return handleAssignReportToProfile(request, assignMatch[1])
     }
 
     // Get specific report
