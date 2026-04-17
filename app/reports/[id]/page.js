@@ -3,7 +3,7 @@
 import { use, useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import { useUser } from '@clerk/nextjs'
-import { AlertTriangle, CheckCircle, MessageSquare, Send, ArrowLeft, X, Zap, TrendingUp, TrendingDown, Activity, Download } from 'lucide-react'
+import { AlertTriangle, CheckCircle, MessageSquare, Send, ArrowLeft, X, Zap, TrendingUp, TrendingDown, Activity, Download, UserCircle, Check, ChevronDown, ChevronUp } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
@@ -21,7 +21,6 @@ export default function ReportDetailPage({ params }) {
   const t = useTranslations()
   const [report, setReport] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [chatOpen, setChatOpen] = useState(false)
   const [question, setQuestion] = useState('')
   const [chatHistory, setChatHistory] = useState([])
   const [sending, setSending] = useState(false)
@@ -29,7 +28,12 @@ export default function ReportDetailPage({ params }) {
   const [chatUsed, setChatUsed] = useState(0)
   const [chatLimit, setChatLimit] = useState(null) // null = unlimited
   const [chatLimitReached, setChatLimitReached] = useState(false)
+  const [profiles, setProfiles] = useState([])
+  const [showAssignBanner, setShowAssignBanner] = useState(false)
+  const [assigningProfile, setAssigningProfile] = useState(null)
+  const [chatCollapsed, setChatCollapsed] = useState(false)
   const chatEndRef = useRef(null)
+  const chatInputRef = useRef(null)
 
   useEffect(() => {
     if (isLoaded && user) fetchReport()
@@ -41,9 +45,12 @@ export default function ReportDetailPage({ params }) {
 
   async function fetchReport() {
     try {
-      const response = await fetch(`/api/reports/${reportId}`)
-      if (!response.ok) throw new Error('Failed to load report')
-      const data = await response.json()
+      const [reportRes, profilesRes] = await Promise.all([
+        fetch(`/api/reports/${reportId}`),
+        fetch('/api/profiles'),
+      ])
+      if (!reportRes.ok) throw new Error('Failed to load report')
+      const data = await reportRes.json()
       const r = data.report
       if (r && typeof r.explanation === 'string') {
         try { r.explanation = JSON.parse(r.explanation) } catch { r.explanation = { summary: r.explanation, tests: [], questionsForDoctor: [] } }
@@ -52,13 +59,37 @@ export default function ReportDetailPage({ params }) {
       const convs = r.conversations || []
       setChatHistory(convs)
       setChatUsed(convs.length)
-      setTimeout(() => setChatOpen(true), 1800)
+
+      if (profilesRes.ok) {
+        const pd = await profilesRes.json()
+        const profileList = pd.profiles || []
+        setProfiles(profileList)
+        if (profileList.length > 0 && !r.profileId) setShowAssignBanner(true)
+      }
     } catch (error) {
       console.error('Error:', error)
       toast.error(t('errors.uploadFailed'))
     } finally {
       setLoading(false)
     }
+  }
+
+  async function assignToProfile(profileId) {
+    setAssigningProfile(profileId)
+    try {
+      const res = await fetch(`/api/reports/${reportId}/assign`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ profileId }),
+      })
+      if (res.ok) {
+        setReport(prev => ({ ...prev, profileId }))
+        setShowAssignBanner(false)
+        const profile = profiles.find(p => p.id === profileId)
+        toast.success(`Saved to ${profile?.name || 'profile'}`)
+      }
+    } catch {}
+    finally { setAssigningProfile(null) }
   }
 
   async function sendQuestion(overrideQ) {
@@ -401,7 +432,7 @@ export default function ReportDetailPage({ params }) {
         </div>
       </header>
 
-      <div className="container mx-auto px-3 sm:px-4 py-5 sm:py-6 max-w-4xl pb-28 sm:pb-32">
+      <div className="container mx-auto px-3 sm:px-4 py-5 sm:py-6 max-w-4xl pb-8">
 
         {/* Disclaimer */}
         <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-5 flex gap-2">
@@ -421,6 +452,54 @@ export default function ReportDetailPage({ params }) {
             </Button>
           </Link>
         </div>
+
+        {/* ── PROFILE ASSIGNMENT BANNER ── */}
+        {showAssignBanner && profiles.length > 0 && (
+          <div className="bg-white border border-emerald-200 rounded-xl p-4 mb-5 shadow-sm">
+            <div className="flex items-start justify-between gap-2 mb-3">
+              <div className="flex items-center gap-2">
+                <UserCircle className="h-4 w-4 text-emerald-600 flex-shrink-0" />
+                <p className="text-sm font-semibold text-gray-800">Save this report to a profile</p>
+              </div>
+              <button onClick={() => setShowAssignBanner(false)} className="text-gray-400 hover:text-gray-600 flex-shrink-0">
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {profiles.map(p => (
+                <button
+                  key={p.id}
+                  onClick={() => assignToProfile(p.id)}
+                  disabled={assigningProfile !== null}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-semibold transition-all ${
+                    assigningProfile === p.id
+                      ? 'bg-emerald-100 border-emerald-300 text-emerald-700'
+                      : 'bg-gray-50 border-gray-200 text-gray-700 hover:bg-emerald-50 hover:border-emerald-300 hover:text-emerald-700'
+                  }`}
+                >
+                  <span className={`w-2 h-2 rounded-full bg-${p.color || 'emerald'}-500`} />
+                  {assigningProfile === p.id ? 'Saving…' : p.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Show assigned profile badge */}
+        {report.profileId && profiles.length > 0 && (
+          <div className="flex items-center gap-1.5 mb-3">
+            {(() => {
+              const p = profiles.find(pr => pr.id === report.profileId)
+              if (!p) return null
+              return (
+                <span className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">
+                  <span className={`w-2 h-2 rounded-full bg-${p.color || 'emerald'}-500`} />
+                  {p.name}
+                </span>
+              )
+            })()}
+          </div>
+        )}
 
         {/* ── HEALTH OVERVIEW ── */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
@@ -561,7 +640,7 @@ export default function ReportDetailPage({ params }) {
 
         {/* Questions for Doctor */}
         {explanation.questionsForDoctor && explanation.questionsForDoctor.length > 0 && (
-          <Card>
+          <Card className="mb-5">
             <CardHeader className="pb-2">
               <CardTitle className="text-sm">{t('report.questionsForDoctor')}</CardTitle>
               <CardDescription className="text-xs">{t('report.discussWithPhysician')}</CardDescription>
@@ -578,143 +657,139 @@ export default function ReportDetailPage({ params }) {
             </CardContent>
           </Card>
         )}
-      </div>
 
-      {/* ── FLOATING CHAT ── */}
-      {/* Mobile overlay backdrop */}
-      {chatOpen && (
-        <div className="fixed inset-0 bg-black/30 z-40 sm:hidden" onClick={() => setChatOpen(false)} />
-      )}
-      <div className={`fixed z-50 no-print transition-all duration-300 ${
-        chatOpen
-          ? 'inset-x-0 bottom-0 sm:inset-x-auto sm:bottom-6 sm:right-4'
-          : 'bottom-6 right-4'
-      }`}>
-        {chatOpen ? (
-          <div className="bg-white shadow-2xl border border-gray-200 flex flex-col rounded-t-3xl sm:rounded-2xl w-full sm:w-96" style={{ height: 'min(70vh, 520px)' }}>
-            {/* Mobile drag handle */}
-            <div className="flex justify-center pt-2 pb-1 sm:hidden">
-              <div className="w-10 h-1 bg-gray-300 rounded-full" />
-            </div>
-            {/* Chat header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-emerald-50 rounded-t-3xl sm:rounded-t-2xl">
-              <div className="flex items-center gap-2 min-w-0">
-                <div className={`w-2 h-2 rounded-full flex-shrink-0 ${chatLimitReached ? 'bg-red-400' : 'bg-emerald-500 animate-pulse'}`} />
-                <div className="min-w-0">
-                  <p className="font-semibold text-sm text-gray-800 leading-none">Medyra AI</p>
-                  <p className="text-xs text-gray-400 leading-none mt-0.5">{t('report.chatPoweredBy')}</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 flex-shrink-0">
-                {/* Usage counter */}
-                {chatLimit !== null ? (
-                  <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
-                    chatLimitReached ? 'bg-red-100 text-red-600' :
-                    chatUsed >= chatLimit * 0.8 ? 'bg-orange-100 text-orange-600' :
-                    'bg-gray-100 text-gray-500'
-                  }`}>
-                    {chatUsed}/{chatLimit} questions
-                  </span>
-                ) : (
-                  <span className="text-xs bg-emerald-100 text-emerald-600 px-2 py-0.5 rounded-full font-semibold">∞ unlimited</span>
-                )}
-                <button onClick={() => setChatOpen(false)} className="text-gray-400 hover:text-gray-600 p-1">
-                  <X className="h-4 w-4" />
-                </button>
-              </div>
-            </div>
-
-            {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-3 space-y-3">
-              {chatHistory.length === 0 && (
-                <div className="py-4">
-                  <p className="text-xs text-gray-400 text-center mb-3">{t('report.chatGreeting')}</p>
-                  <div className="space-y-1.5">
-                    {[
-                      t('report.chatQ1'),
-                      t('report.chatQ2'),
-                      t('report.chatQ3'),
-                      t('report.chatQ4'),
-                    ].map(q => (
-                      <button
-                        key={q}
-                        disabled={sending}
-                        onClick={() => sendQuestion(q)}
-                        className="w-full text-left text-xs text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-lg px-3 py-2 transition-colors border border-emerald-100 disabled:opacity-50"
-                      >
-                        {q}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-              {chatHistory.map((chat, i) => (
-                <div key={i} className="space-y-2">
-                  <div className="flex justify-end">
-                    <div className="bg-emerald-500 text-white text-xs rounded-2xl rounded-tr-sm px-3 py-2 max-w-[80%]">
-                      {chat.question}
-                    </div>
-                  </div>
-                  <div className="flex justify-start">
-                    <div className="bg-gray-100 text-gray-800 text-xs rounded-2xl rounded-tl-sm px-3 py-2 max-w-[90%] whitespace-pre-wrap">
-                      {chat.answer}
-                    </div>
-                  </div>
-                </div>
-              ))}
-              {sending && (
-                <div className="flex justify-start">
-                  <div className="bg-gray-100 text-gray-400 text-xs rounded-2xl rounded-tl-sm px-3 py-2">
-                    <span className="inline-flex gap-1">
-                      <span className="animate-bounce" style={{animationDelay:'0ms'}}>·</span>
-                      <span className="animate-bounce" style={{animationDelay:'150ms'}}>·</span>
-                      <span className="animate-bounce" style={{animationDelay:'300ms'}}>·</span>
-                    </span>
-                  </div>
-                </div>
-              )}
-              <div ref={chatEndRef} />
-            </div>
-
-            {/* Input / limit reached */}
-            {chatLimitReached ? (
-              <div className="p-3 border-t border-gray-100 text-center">
-                <p className="text-xs text-red-600 font-medium mb-1.5">{t('report.chatLimitReached')}</p>
-                <p className="text-xs text-gray-400 mb-2">
-                  {t('report.chatLimitInfo')}
-                </p>
-                <a href="/pricing" className="inline-block text-xs bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-4 py-1.5 rounded-full transition-colors">
-                  {t('report.chatUpgrade')} →
-                </a>
-              </div>
-            ) : (
-              <div className="p-3 border-t border-gray-100 flex gap-2">
-                <Input
-                  placeholder={t('report.chatPlaceholder')}
-                  value={question}
-                  onChange={e => setQuestion(e.target.value)}
-                  onKeyDown={e => e.key === 'Enter' && !e.shiftKey && sendQuestion()}
-                  disabled={sending}
-                  className="text-xs h-8"
-                />
-                <Button onClick={() => sendQuestion()} disabled={sending || !question.trim()} size="sm" className="h-8 w-8 p-0 bg-emerald-500 hover:bg-emerald-600 flex-shrink-0">
-                  <Send className="h-3 w-3" />
-                </Button>
-              </div>
-            )}
-          </div>
-        ) : (
+        {/* ── INLINE AI CHAT ── */}
+        <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
+          {/* Chat header */}
           <button
-            onClick={() => setChatOpen(true)}
-            className="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-xl flex items-center justify-center transition-all hover:scale-110 active:scale-95"
-            title="Ask AI about your results"
+            onClick={() => setChatCollapsed(c => !c)}
+            className="w-full flex items-center justify-between px-4 py-3 bg-emerald-50 border-b border-emerald-100 hover:bg-emerald-100 transition-colors"
           >
-            <MessageSquare className="h-6 w-6" />
-            {chatHistory.length === 0 && (
-              <span className="absolute -top-1 -right-1 w-4 h-4 bg-orange-500 rounded-full text-white text-xs flex items-center justify-center font-bold">!</span>
-            )}
+            <div className="flex items-center gap-2.5">
+              <div className={`w-2 h-2 rounded-full flex-shrink-0 ${chatLimitReached ? 'bg-red-400' : 'bg-emerald-500 animate-pulse'}`} />
+              <div className="text-left">
+                <p className="font-semibold text-sm text-gray-800 leading-none">Medyra AI</p>
+                <p className="text-xs text-gray-500 leading-none mt-0.5">{t('report.chatPoweredBy')}</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              {chatLimit !== null ? (
+                <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
+                  chatLimitReached ? 'bg-red-100 text-red-600' :
+                  chatUsed >= chatLimit * 0.8 ? 'bg-orange-100 text-orange-600' :
+                  'bg-gray-100 text-gray-500'
+                }`}>
+                  {chatUsed}/{chatLimit}
+                </span>
+              ) : (
+                <span className="text-xs bg-emerald-100 text-emerald-600 px-2 py-0.5 rounded-full font-semibold">∞ unlimited</span>
+              )}
+              {chatCollapsed ? <ChevronDown className="h-4 w-4 text-gray-400" /> : <ChevronUp className="h-4 w-4 text-gray-400" />}
+            </div>
           </button>
-        )}
+
+          {!chatCollapsed && (
+            <>
+              {/* Messages area */}
+              <div className="overflow-y-auto p-4 space-y-4" style={{ maxHeight: '420px', minHeight: chatHistory.length === 0 ? '200px' : '280px' }}>
+                {chatHistory.length === 0 && (
+                  <div>
+                    <p className="text-sm text-gray-400 text-center mb-4">{t('report.chatGreeting')}</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {[
+                        t('report.chatQ1'),
+                        t('report.chatQ2'),
+                        t('report.chatQ3'),
+                        t('report.chatQ4'),
+                      ].map(q => (
+                        <button
+                          key={q}
+                          disabled={sending}
+                          onClick={() => sendQuestion(q)}
+                          className="text-left text-xs text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-xl px-4 py-3 transition-colors border border-emerald-200 disabled:opacity-50 leading-relaxed"
+                        >
+                          {q}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {chatHistory.map((chat, i) => (
+                  <div key={i} className="space-y-2">
+                    <div className="flex justify-end">
+                      <div className="bg-emerald-500 text-white text-sm rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[85%] leading-relaxed">
+                        {chat.question}
+                      </div>
+                    </div>
+                    <div className="flex justify-start gap-2.5">
+                      <div className="w-7 h-7 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <MessageSquare className="h-3.5 w-3.5 text-emerald-600" />
+                      </div>
+                      <div className="bg-gray-100 text-gray-800 text-sm rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] whitespace-pre-wrap leading-relaxed">
+                        {chat.answer}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                {sending && (
+                  <div className="flex justify-start gap-2.5">
+                    <div className="w-7 h-7 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                      <MessageSquare className="h-3.5 w-3.5 text-emerald-600" />
+                    </div>
+                    <div className="bg-gray-100 text-gray-400 text-sm rounded-2xl rounded-tl-sm px-4 py-2.5">
+                      <span className="inline-flex gap-1 items-center">
+                        <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{animationDelay:'0ms'}} />
+                        <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{animationDelay:'150ms'}} />
+                        <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{animationDelay:'300ms'}} />
+                      </span>
+                    </div>
+                  </div>
+                )}
+                <div ref={chatEndRef} />
+              </div>
+
+              {/* Input row */}
+              {chatLimitReached ? (
+                <div className="px-4 py-4 border-t border-gray-100 text-center bg-gray-50">
+                  <p className="text-sm text-red-600 font-medium mb-1">{t('report.chatLimitReached')}</p>
+                  <p className="text-xs text-gray-400 mb-3">{t('report.chatLimitInfo')}</p>
+                  <a href="/pricing" className="inline-block text-sm bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-5 py-2 rounded-full transition-colors">
+                    {t('report.chatUpgrade')} →
+                  </a>
+                </div>
+              ) : (
+                <div className="px-4 py-3 border-t border-gray-100 flex gap-2 items-end bg-white">
+                  <textarea
+                    ref={chatInputRef}
+                    placeholder={t('report.chatPlaceholder')}
+                    value={question}
+                    onChange={e => {
+                      setQuestion(e.target.value)
+                      e.target.style.height = 'auto'
+                      e.target.style.height = Math.min(e.target.scrollHeight, 120) + 'px'
+                    }}
+                    onKeyDown={e => {
+                      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendQuestion() }
+                    }}
+                    disabled={sending}
+                    rows={1}
+                    className="flex-1 resize-none rounded-xl border border-gray-200 px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 disabled:opacity-50 bg-gray-50 overflow-hidden leading-relaxed"
+                    style={{ minHeight: '42px', maxHeight: '120px' }}
+                  />
+                  <Button
+                    onClick={() => sendQuestion()}
+                    disabled={sending || !question.trim()}
+                    size="sm"
+                    className="h-[42px] w-[42px] p-0 bg-emerald-500 hover:bg-emerald-600 rounded-xl flex-shrink-0"
+                  >
+                    <Send className="h-4 w-4" />
+                  </Button>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+
       </div>
     </div>
   )
