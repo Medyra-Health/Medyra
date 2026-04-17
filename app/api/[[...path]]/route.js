@@ -482,9 +482,13 @@ async function handleAnalyzeReport(request) {
 async function handleGetReports(request) {
   const { userId } = await auth()
   if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  const url = new URL(request.url)
+  const profileId = url.searchParams.get('profileId')
+  const query = { userId }
+  if (profileId) query.profileId = profileId
   const database = await connectToMongo()
   const raw = await database.collection('reports')
-    .find({ userId })
+    .find(query)
     .project({ extractedText: 0 })
     .sort({ createdAt: -1 })
     .limit(100)
@@ -503,18 +507,75 @@ async function handleGetReport(reportId) {
   return handleCORS(NextResponse.json({ success: true, report }))
 }
 
+// Biomarker keyword matcher — maps test name patterns to tracked keys
+const BIOMARKER_PATTERNS = [
+  { key: 'hemoglobin', patterns: [/hemoglobin/i, /\bhgb\b/i, /\bhb\b/i] },
+  { key: 'ferritin',   patterns: [/ferritin/i] },
+  { key: 'tsh',        patterns: [/\btsh\b/i, /thyroid.stimulating/i] },
+  { key: 'hba1c',      patterns: [/hba1c/i, /hb\s?a1c/i, /glycat/i, /glycosylated/i] },
+  { key: 'cholesterol',patterns: [/total\s*cholesterol/i, /cholesterol/i] },
+  { key: 'vitaminD',   patterns: [/vitamin\s*d/i, /25.oh/i, /calcifediol/i] },
+  { key: 'crp',        patterns: [/\bcrp\b/i, /c.reactive/i] },
+  { key: 'egfr',       patterns: [/\begfr\b/i, /glomerular\s*filtration/i] },
+]
+
+function extractBiomarkersFromTests(tests, reportDate) {
+  const entries = []
+  for (const test of (tests || [])) {
+    const name = test.name || ''
+    const raw = test.value || ''
+    // Parse numeric value from strings like "14.5 g/dL" or "143 mg/dL"
+    const numMatch = String(raw).match(/[\d.]+/)
+    if (!numMatch) continue
+    const value = parseFloat(numMatch[0])
+    if (isNaN(value)) continue
+    for (const { key, patterns } of BIOMARKER_PATTERNS) {
+      if (patterns.some(p => p.test(name))) {
+        entries.push({ key, value, date: reportDate, flag: test.flag || 'normal' })
+        break
+      }
+    }
+  }
+  return entries
+}
+
 async function handleAssignReportToProfile(request, reportId) {
   const { userId } = await auth()
   if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
   const { profileId } = await request.json()
   if (!profileId) return handleCORS(NextResponse.json({ error: 'profileId required' }, { status: 400 }))
   const database = await connectToMongo()
-  const result = await database.collection('reports').updateOne(
+
+  // Load report to extract biomarkers
+  const raw = await database.collection('reports').findOne({ id: reportId, userId })
+  if (!raw) return handleCORS(NextResponse.json({ error: 'Report not found' }, { status: 404 }))
+
+  // Assign profileId on report
+  await database.collection('reports').updateOne(
     { id: reportId, userId },
     { $set: { profileId, updatedAt: new Date() } }
   )
-  if (result.matchedCount === 0) return handleCORS(NextResponse.json({ error: 'Report not found' }, { status: 404 }))
-  return handleCORS(NextResponse.json({ success: true }))
+
+  // Extract biomarkers and push to profile
+  const report = decryptReport(raw)
+  let tests = []
+  try {
+    const exp = typeof report.explanation === 'string' ? JSON.parse(report.explanation) : report.explanation
+    tests = exp?.tests || []
+  } catch {}
+
+  const biomarkerEntries = extractBiomarkersFromTests(tests, report.createdAt || new Date())
+  if (biomarkerEntries.length > 0) {
+    await database.collection('users').updateOne(
+      { clerkId: userId, 'profiles.id': profileId },
+      {
+        $push: { 'profiles.$.biomarkers': { $each: biomarkerEntries.map(e => ({ ...e, reportId, recordedAt: new Date() })) } },
+        $set: { 'profiles.$.updatedAt': new Date() },
+      }
+    )
+  }
+
+  return handleCORS(NextResponse.json({ success: true, biomarkersExtracted: biomarkerEntries.length }))
 }
 
 async function handleChat(request, reportId) {

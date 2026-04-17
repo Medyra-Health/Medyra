@@ -7,7 +7,7 @@ import {
   ArrowLeft, Plus, Trash2, User, Baby, Users, Heart,
   Crown, Lock, ChevronRight, Loader2, Check, X, Edit2,
   Shield, Sparkles, TrendingUp, GitCompareArrows, BarChart3,
-  AlertTriangle, CheckCircle, Minus
+  AlertTriangle, CheckCircle, Minus, FileText, ExternalLink
 } from 'lucide-react'
 import MedyraLogo from '@/components/MedyraLogo'
 
@@ -101,6 +101,8 @@ function ProfileCard({ profile, onDelete, onEdit }) {
           View timeline <ChevronRight className="h-3 w-3" />
         </Link>
       </div>
+
+      <ProfileReportsList profile={profile} />
     </div>
   )
 }
@@ -409,6 +411,82 @@ function OverviewSection({ profiles }) {
           )
         })}
       </div>
+    </div>
+  )
+}
+
+function ProfileReportsList({ profile }) {
+  const [reports, setReports] = useState(null)
+  const [open, setOpen] = useState(false)
+  const theme = COLOR_THEME[profile.color] || COLOR_THEME.emerald
+
+  async function load() {
+    if (reports !== null) return
+    try {
+      const res = await fetch(`/api/reports?profileId=${profile.id}`)
+      const json = await res.json()
+      setReports(json.reports || [])
+    } catch { setReports([]) }
+  }
+
+  function toggle() {
+    setOpen(o => !o)
+    if (!open) load()
+  }
+
+  const getFlagDot = flag => {
+    if (flag === 'critical') return 'bg-red-500'
+    if (flag === 'high' || flag === 'low') return 'bg-orange-400'
+    return 'bg-emerald-500'
+  }
+
+  return (
+    <div className="mt-3 border-t border-gray-100 pt-3">
+      <button
+        onClick={toggle}
+        className={`w-full flex items-center justify-between text-xs font-semibold ${theme.text} hover:opacity-80 transition-opacity`}
+      >
+        <span className="flex items-center gap-1.5">
+          <FileText className="h-3.5 w-3.5" />
+          Reports in this profile
+        </span>
+        <ChevronRight className={`h-3.5 w-3.5 transition-transform ${open ? 'rotate-90' : ''}`} />
+      </button>
+
+      {open && (
+        <div className="mt-2 space-y-1.5">
+          {reports === null ? (
+            <div className="flex justify-center py-3">
+              <Loader2 className="h-4 w-4 animate-spin text-gray-400" />
+            </div>
+          ) : reports.length === 0 ? (
+            <p className="text-xs text-gray-400 text-center py-2">No reports assigned yet</p>
+          ) : (
+            reports.map(r => {
+              const exp = typeof r.explanation === 'object' ? r.explanation : {}
+              const tests = exp.tests || []
+              const criticals = tests.filter(t => t.flag === 'critical').length
+              const highs = tests.filter(t => t.flag === 'high' || t.flag === 'low').length
+              return (
+                <Link
+                  key={r.id}
+                  href={`/reports/${r.id}`}
+                  className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all group"
+                >
+                  <FileText className="h-3.5 w-3.5 text-gray-400 flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs font-medium text-gray-700 truncate">{r.fileName || 'Report'}</p>
+                    <p className="text-xs text-gray-400">{new Date(r.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
+                  </div>
+                  {criticals > 0 && <span className="text-xs bg-red-100 text-red-600 font-semibold px-1.5 py-0.5 rounded-full flex-shrink-0">{criticals} critical</span>}
+                  {!criticals && highs > 0 && <span className="text-xs bg-orange-100 text-orange-600 font-semibold px-1.5 py-0.5 rounded-full flex-shrink-0">{highs} flagged</span>}
+                  <ExternalLink className="h-3 w-3 text-gray-300 group-hover:text-gray-500 flex-shrink-0" />
+                </Link>
+              )
+            })
+          )}
+        </div>
+      )}
     </div>
   )
 }

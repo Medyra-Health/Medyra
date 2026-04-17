@@ -14,6 +14,88 @@ import { toast } from 'sonner'
 import MedyraLogo from '@/components/MedyraLogo'
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts'
 
+// Renders AI markdown to JSX: **bold**, *italic*, numbered lists, bullet points, ⚠️ warnings
+function MarkdownAnswer({ text }) {
+  if (!text) return null
+
+  // Split into blocks by double newline
+  const blocks = text.split(/\n{2,}/)
+
+  return (
+    <div className="space-y-2.5 text-sm leading-relaxed text-gray-800">
+      {blocks.map((block, bi) => {
+        const trimmed = block.trim()
+        if (!trimmed) return null
+
+        // Ordered list block: lines starting with "1." "2." etc.
+        const isOrderedList = trimmed.split('\n').every(l => /^\d+[\.\)]\s/.test(l.trim()))
+        if (isOrderedList) {
+          return (
+            <ol key={bi} className="space-y-2 pl-1">
+              {trimmed.split('\n').map((line, li) => {
+                const content = line.replace(/^\d+[\.\)]\s*/, '').trim()
+                return (
+                  <li key={li} className="flex gap-2.5">
+                    <span className="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold flex items-center justify-center mt-0.5">
+                      {li + 1}
+                    </span>
+                    <span>{inlineMarkdown(content)}</span>
+                  </li>
+                )
+              })}
+            </ol>
+          )
+        }
+
+        // Unordered list block: lines starting with "- " or "• " or "* "
+        const listLines = trimmed.split('\n').filter(l => /^[-•*]\s/.test(l.trim()))
+        if (listLines.length > 0 && listLines.length === trimmed.split('\n').filter(l => l.trim()).length) {
+          return (
+            <ul key={bi} className="space-y-1.5 pl-1">
+              {listLines.map((line, li) => {
+                const content = line.replace(/^[-•*]\s*/, '').trim()
+                return (
+                  <li key={li} className="flex gap-2">
+                    <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2" />
+                    <span>{inlineMarkdown(content)}</span>
+                  </li>
+                )
+              })}
+            </ul>
+          )
+        }
+
+        // Warning block: starts with ⚠️
+        if (trimmed.startsWith('⚠️') || trimmed.startsWith('⚠')) {
+          return (
+            <div key={bi} className="flex gap-2 bg-orange-50 border border-orange-200 rounded-xl px-3 py-2.5">
+              <span className="flex-shrink-0 text-base">⚠️</span>
+              <span className="text-orange-800">{inlineMarkdown(trimmed.replace(/^⚠️?\s*/, ''))}</span>
+            </div>
+          )
+        }
+
+        // Regular paragraph (may span multiple lines with single \n)
+        return <p key={bi}>{inlineMarkdown(trimmed)}</p>
+      })}
+    </div>
+  )
+}
+
+function inlineMarkdown(text) {
+  // Split on bold (**text**) and italic (*text*)
+  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/)
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i} className="font-semibold text-gray-900">{part.slice(2, -2)}</strong>
+    }
+    if (part.startsWith('*') && part.endsWith('*') && part.length > 2) {
+      return <em key={i}>{part.slice(1, -1)}</em>
+    }
+    return part
+  })
+}
+
 export default function ReportDetailPage({ params }) {
   const unwrappedParams = use(params)
   const reportId = unwrappedParams.id
@@ -63,8 +145,9 @@ export default function ReportDetailPage({ params }) {
       if (profilesRes.ok) {
         const pd = await profilesRes.json()
         const profileList = pd.profiles || []
+        const isPaid = pd.tier && pd.tier !== 'free' && pd.tier !== 'onetime'
         setProfiles(profileList)
-        if (profileList.length > 0 && !r.profileId) setShowAssignBanner(true)
+        if (profileList.length > 0 && !r.profileId && isPaid) setShowAssignBanner(true)
       }
     } catch (error) {
       console.error('Error:', error)
@@ -83,10 +166,12 @@ export default function ReportDetailPage({ params }) {
         body: JSON.stringify({ profileId }),
       })
       if (res.ok) {
+        const data = await res.json()
         setReport(prev => ({ ...prev, profileId }))
         setShowAssignBanner(false)
         const profile = profiles.find(p => p.id === profileId)
-        toast.success(`Saved to ${profile?.name || 'profile'}`)
+        const bioMsg = data.biomarkersExtracted > 0 ? ` · ${data.biomarkersExtracted} biomarkers recorded` : ''
+        toast.success(`Saved to ${profile?.name || 'profile'}${bioMsg}`)
       }
     } catch {}
     finally { setAssigningProfile(null) }
@@ -725,8 +810,8 @@ export default function ReportDetailPage({ params }) {
                       <div className="w-7 h-7 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <MessageSquare className="h-3.5 w-3.5 text-emerald-600" />
                       </div>
-                      <div className="bg-gray-100 text-gray-800 text-sm rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%] whitespace-pre-wrap leading-relaxed">
-                        {chat.answer}
+                      <div className="bg-gray-100 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%]">
+                        <MarkdownAnswer text={chat.answer} />
                       </div>
                     </div>
                   </div>
