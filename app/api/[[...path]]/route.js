@@ -564,18 +564,24 @@ async function handleAssignReportToProfile(request, reportId) {
     tests = exp?.tests || []
   } catch {}
 
-  const biomarkerEntries = extractBiomarkersFromTests(tests, report.createdAt || new Date())
-  if (biomarkerEntries.length > 0) {
+  const flat = extractBiomarkersFromTests(tests, report.createdAt || new Date())
+  if (flat.length > 0) {
+    // Store as one grouped entry per report (format HealthTimeline expects)
+    const biomarkerEntry = {
+      reportId,
+      recordedAt: report.createdAt || new Date(),
+      values: flat.map(e => ({ key: e.key, name: e.key, value: e.value, flag: e.flag })),
+    }
     await database.collection('users').updateOne(
       { clerkId: userId, 'profiles.id': profileId },
       {
-        $push: { 'profiles.$.biomarkers': { $each: biomarkerEntries.map(e => ({ ...e, reportId, recordedAt: new Date() })) } },
+        $push: { 'profiles.$.biomarkers': biomarkerEntry },
         $set: { 'profiles.$.updatedAt': new Date() },
       }
     )
   }
 
-  return handleCORS(NextResponse.json({ success: true, biomarkersExtracted: biomarkerEntries.length }))
+  return handleCORS(NextResponse.json({ success: true, biomarkersExtracted: flat.length }))
 }
 
 async function handleChat(request, reportId) {
