@@ -97,8 +97,8 @@ function ProfileCard({ profile, onDelete, onEdit }) {
           <div className={`w-2 h-2 rounded-full ${theme.dot}`} />
           <span className="text-xs text-gray-500">{profile.biomarkers?.length || 0} biomarker entries</span>
         </div>
-        <Link href={`/dashboard?profile=${profile.id}`} className={`text-xs font-semibold ${theme.text} flex items-center gap-0.5 hover:underline`}>
-          View timeline <ChevronRight className="h-3 w-3" />
+        <Link href={`/profiles/${profile.id}`} className={`text-xs font-semibold ${theme.text} flex items-center gap-0.5 hover:underline`}>
+          View profile <ChevronRight className="h-3 w-3" />
         </Link>
       </div>
 
