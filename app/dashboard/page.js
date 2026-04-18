@@ -163,8 +163,8 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
             canCreate={canCreate}
             tier={tier}
           />
-          <Link href="/profiles" className="text-xs text-emerald-600 hover:text-emerald-700 font-semibold">
-            Manage
+          <Link href={selectedProfile ? `/profiles/${selectedProfile.id}` : '/profiles'} className="text-xs text-emerald-600 hover:text-emerald-700 font-semibold">
+            View Profile
           </Link>
         </div>
       </div>
@@ -179,7 +179,7 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
         <div className="grid grid-cols-3 gap-3">
           {[
             { label: 'Reports',   value: selectedProfile?.biomarkers?.length || 0 },
-            { label: 'Biomarkers', value: selectedProfile?.biomarkers?.reduce((n, e) => n + (e.values?.length || 0), 0) || 0 },
+            { label: 'Biomarkers', value: selectedProfile?.biomarkers?.reduce((n, e) => n + (e.values?.length || e.key ? 1 : 0), 0) || 0 },
             { label: 'Tracked since', value: selectedProfile?.createdAt ? new Date(selectedProfile.createdAt).toLocaleDateString('en-GB', { month: 'short', year: '2-digit' }) : '—' },
           ].map(({ label, value }) => (
             <div key={label} className="text-center bg-gray-50 rounded-xl p-3">
