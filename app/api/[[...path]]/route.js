@@ -222,14 +222,57 @@ RULES:
 - End every response with a gentle reminder to discuss findings with their doctor if the topic is clinical
 - NEVER respond with JSON — always respond in natural conversational text`
 
-// Chat quotas per subscription tier (questions per report)
-const CHAT_LIMITS = {
-  free:     5,
-  onetime:  5,
-  personal: 20,
-  family:   20,
-  clinic:   100,
-  admin:    Infinity,
+// Monthly chat fair-use limits (hard cap — silently blocked, no auto-upgrade)
+const FAIR_USE_LIMITS = {
+  free:     { chat: 4   },
+  personal: { chat: 200 },
+  family:   { chat: 400 },
+  clinic:   { chat: 999999 },
+  admin:    { chat: Infinity },
+}
+
+const FAIR_USE_MSG = "You've reached your fair use limit for this month. Contact us if you need more."
+
+function currentMonthKey() {
+  const d = new Date()
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`
+}
+
+// Returns { allowed, used, limit } and resets counters if month has rolled over.
+// Does NOT increment — call incrementFairUse separately after the action succeeds.
+async function checkFairUse(userId, feature, database) {
+  const user = await database.collection('users').findOne({ clerkId: userId })
+  const tier = user?.subscription?.tier || 'free'
+  const limits = FAIR_USE_LIMITS[tier] ?? FAIR_USE_LIMITS.free
+  const limit = limits[feature] ?? 4
+
+  const monthKey = currentMonthKey()
+  const fairUse = user?.fairUse || {}
+  const stored = fairUse[feature] || {}
+
+  const used = stored.month === monthKey ? (stored.count || 0) : 0
+
+  return { allowed: limit === Infinity || used < limit, used, limit, tier }
+}
+
+async function incrementFairUse(userId, feature, database) {
+  const monthKey = currentMonthKey()
+  await database.collection('users').updateOne(
+    { clerkId: userId },
+    [
+      {
+        $set: {
+          [`fairUse.${feature}`]: {
+            $cond: {
+              if: { $eq: [{ $ifNull: [`$fairUse.${feature}.month`, ''] }, monthKey] },
+              then: { month: monthKey, count: { $add: [`$fairUse.${feature}.count`, 1] } },
+              else: { month: monthKey, count: 1 },
+            },
+          },
+        },
+      },
+    ]
+  )
 }
 
 // ============================================================================
@@ -608,20 +651,19 @@ async function handleChat(request, reportId) {
   const { question } = body
   if (!question?.trim()) return handleCORS(NextResponse.json({ error: 'Question required' }, { status: 400 }))
 
-  // Enforce per-report chat limit based on tier
-  const tier = admin ? 'admin' : (usageInfo.tier || 'free')
-  const chatLimit = CHAT_LIMITS[tier] ?? CHAT_LIMITS.free
-  const chatUsed = Array.isArray(report.conversations) ? report.conversations.length : 0
-
-  if (chatUsed >= chatLimit) {
+  // Enforce monthly chat fair-use limit
+  const fairUseCheck = admin ? { allowed: true, used: 0, limit: Infinity } : await checkFairUse(userId, 'chat', database)
+  if (!fairUseCheck.allowed) {
     return handleCORS(NextResponse.json({
-      error: 'Chat limit reached for this report. Upgrade your plan for more questions.',
-      chatUsed,
-      chatLimit: chatLimit === Infinity ? null : chatLimit,
+      error: FAIR_USE_MSG,
+      chatUsed: fairUseCheck.used,
+      chatLimit: fairUseCheck.limit,
       chatRemaining: 0,
       limitReached: true,
     }, { status: 429 }))
   }
+
+  const chatUsed = fairUseCheck.used
 
   // Build rich context: current report + patient history
   const currentCtx = report.explanation
@@ -656,18 +698,16 @@ async function handleChat(request, reportId) {
   })
   const answer = response.content[0].text
   const newChatUsed = chatUsed + 1
+  const { limit: chatLimit } = fairUseCheck
   const chatRemaining = chatLimit === Infinity ? null : Math.max(0, chatLimit - newChatUsed)
 
-  await database.collection('reports').updateOne(
-    { id: reportId },
-    { $push: { conversations: { question: encrypt(question), answer: encrypt(answer), timestamp: new Date() } } }
-  )
-
-  // Track global chat usage on user document for admin analytics
-  await database.collection('users').updateOne(
-    { clerkId: userId },
-    { $inc: { totalChatMessages: 1 }, $set: { lastChatAt: new Date() } }
-  )
+  await Promise.all([
+    database.collection('reports').updateOne(
+      { id: reportId },
+      { $push: { conversations: { question: encrypt(question), answer: encrypt(answer), timestamp: new Date() } } }
+    ),
+    admin ? Promise.resolve() : incrementFairUse(userId, 'chat', database),
+  ])
 
   return handleCORS(NextResponse.json({
     success: true,
@@ -709,10 +749,9 @@ async function handleCheckout(request) {
   const { tier, origin } = await request.json()
 
   const prices = {
-    onetime: { amount: 4.99, mode: 'payment', description: 'One-time report analysis' },
-    personal: { amount: 18.00, mode: 'subscription', description: 'Personal Plan — Unlimited reports/month' },
-    family: { amount: 38.00, mode: 'subscription', description: 'Family Plan — Unlimited reports/month' },
-    clinic: { amount: 199.00, mode: 'subscription', description: 'Clinic Monthly' }
+    personal: { amount: 4.99,  mode: 'subscription', description: 'Personal Plan — 20 reports/month' },
+    family:   { amount: 9.99,  mode: 'subscription', description: 'Family Plan — 50 reports/month, 5 profiles' },
+    clinic:   { amount: 199.00, mode: 'subscription', description: 'Clinic — Unlimited everything' },
   }
 
   const priceInfo = prices[tier]
@@ -764,7 +803,7 @@ async function handleStripeWebhook(request) {
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object
     const { userId, tier } = session.metadata
-    const limits = { onetime: 2, personal: 999999, family: 999999, clinic: 999999 }
+    const limits = { personal: 10, family: 25, clinic: 999999 }
     await database.collection('users').updateOne(
       { clerkId: userId },
       {

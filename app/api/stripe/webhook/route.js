@@ -20,9 +20,9 @@ async function getDb() {
 
 // ── Tier → usage limits (reports per month) ───────────────────────────────
 const TIER_LIMITS = {
-  onetime:  1,
-  personal: 5,
-  family:   15,
+  free:     2,
+  personal: 10,
+  family:   25,
   clinic:   999999,
 }
 
@@ -63,7 +63,7 @@ async function deactivateSubscription(db, stripeCustomerId) {
       $set: {
         'subscription.tier': 'free',
         'subscription.status': 'cancelled',
-        'subscription.usageLimit': 3,
+        'subscription.usageLimit': TIER_LIMITS.free,
         updatedAt: new Date(),
       },
     }
