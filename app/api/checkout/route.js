@@ -17,12 +17,10 @@ async function getDb() {
   return _db
 }
 
-// Plan config — use price_data (dynamic) so no Stripe Price IDs needed.
-// All tiers use allow_promotion_codes so users can enter LAUNCH50 at checkout.
+// Plan config — dynamic price_data, no Stripe Price IDs needed.
 const PLANS = {
-  onetime:  { amount: 299,  mode: 'payment',      label: 'Medyra One-Time Report' },
-  personal: { amount: 900,  mode: 'subscription', label: 'Medyra Personal' },
-  family:   { amount: 1800, mode: 'subscription', label: 'Medyra Family' },
+  personal: { amount: 499,  mode: 'subscription', label: 'Medyra Personal — €4.99/month' },
+  family:   { amount: 999,  mode: 'subscription', label: 'Medyra Family — €9.99/month' },
 }
 
 export async function POST(request) {
