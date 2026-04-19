@@ -25,7 +25,7 @@ const TIERS = [
     highlighted: false,
     color: 'gray',
     features: [
-      { icon: FileText,      text: '2 reports / month' },
+      { icon: FileText,      text: '3 reports / month' },
       { icon: Stethoscope,   text: '1 doctor visit prep / month' },
       { icon: MessageCircle, text: '4 AI chat messages / month' },
       { icon: Users,         text: '1 profile (yourself)' },
@@ -45,7 +45,7 @@ const TIERS = [
     highlighted: true,
     color: 'emerald',
     features: [
-      { icon: FileText,      text: '10 reports / month' },
+      { icon: FileText,      text: '20 reports / month' },
       { icon: Stethoscope,   text: 'Unlimited doctor visit preps*' },
       { icon: MessageCircle, text: 'Unlimited AI chat*' },
       { icon: Users,         text: '1 profile' },
@@ -65,7 +65,7 @@ const TIERS = [
     highlighted: false,
     color: 'teal',
     features: [
-      { icon: FileText,      text: '25 reports / month' },
+      { icon: FileText,      text: '50 reports / month' },
       { icon: Stethoscope,   text: 'Unlimited doctor visit preps*' },
       { icon: MessageCircle, text: 'Unlimited AI chat*' },
       { icon: Users,         text: 'Up to 5 member profiles' },
@@ -99,7 +99,7 @@ const TIERS = [
 
 // Comparison table rows
 const COMPARE_ROWS = [
-  { label: 'Reports / month',       values: ['2',         '10',          '25',          'Unlimited'] },
+  { label: 'Reports / month',       values: ['3',         '20',          '50',          'Unlimited'] },
   { label: 'AI chat messages',      values: ['4 / month', 'Unlimited*',  'Unlimited*',  'Unlimited'] },
   { label: 'Doctor visit preps',    values: ['1 / month', 'Unlimited*',  'Unlimited*',  'Unlimited'] },
   { label: 'PDF export',            values: ['Watermarked','Unlimited*', 'Unlimited*',  'Full']      },
@@ -143,7 +143,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'How does the Family plan work?',
-    a: 'One subscription covers up to 5 family members, each with their own secure profile and shared health history. The 25 monthly reports are shared across all members.',
+    a: 'One subscription covers up to 5 family members, each with their own secure profile and shared health history. The 50 monthly reports are shared across all members.',
   },
   {
     q: 'What is a doctor visit prep?',

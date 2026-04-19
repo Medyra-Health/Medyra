@@ -373,7 +373,7 @@ async function isAdminUser() {
   }
 }
 
-const FREE_REPORT_LIMIT = 2 // per calendar month
+const FREE_REPORT_LIMIT = 3 // per calendar month
 
 function startOfCurrentMonth() {
   const d = new Date()
@@ -803,7 +803,7 @@ async function handleStripeWebhook(request) {
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object
     const { userId, tier } = session.metadata
-    const limits = { personal: 10, family: 25, clinic: 999999 }
+    const limits = { personal: 20, family: 50, clinic: 999999 }
     await database.collection('users').updateOne(
       { clerkId: userId },
       {
