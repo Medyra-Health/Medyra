@@ -3,16 +3,17 @@ import { auth } from '@clerk/nextjs/server'
 import Anthropic from '@anthropic-ai/sdk'
 import { MongoClient } from 'mongodb'
 
-// ── Access rules ───────────────────────────────────────────────────────────
-// null = unlimited, 0 = not included, number = uses per calendar month
+// Monthly prep limits. null = truly unlimited (clinic/admin).
+// Personal/Family are shown as "unlimited" in UI but have a silent fair-use cap.
 const PREP_LIMITS = {
-  free:     0,   // not included
-  onetime:  1,   // 1 session included
-  personal: 5,   // 5 sessions per month
-  family:   15,  // 15 sessions per month shared
+  free:     1,   // 1 session per month
+  personal: 30,  // fair-use cap (shown as unlimited)
+  family:   60,  // fair-use cap (shown as unlimited)
   clinic:   null,
   admin:    null,
 }
+
+const FAIR_USE_MSG = "You've reached your fair use limit for this month. Contact us if you need more."
 
 const ADMIN_EMAIL = 'abralur28@gmail.com'
 
@@ -234,7 +235,8 @@ export async function POST(request) {
     ).length
     if (used >= monthLimit) {
       return NextResponse.json({
-        error: 'limit_reached',
+        error: FAIR_USE_MSG,
+        limitReached: true,
         tier: effectiveTier,
         limit: monthLimit,
         used,
