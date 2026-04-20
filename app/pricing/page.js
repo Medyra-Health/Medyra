@@ -5,7 +5,7 @@ import Link from 'next/link'
 import {
   Check, X, Loader2, Shield, Brain, Globe,
   ChevronDown, ChevronUp, ArrowRight, ArrowLeft, Sparkles,
-  Users, FileText, MessageCircle, Stethoscope, History, Download, Mail,
+  Users, FileText, MessageCircle, Stethoscope, History, Download,
 } from 'lucide-react'
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 import { useTranslations } from 'next-intl'
@@ -313,11 +313,7 @@ export default function PricingPage() {
                     <span className="text-xs font-black uppercase tracking-widest text-gray-400">{t('fairUse.label')}</span>
                   </div>
                   <h3 className="text-lg font-black text-gray-900 mb-2">{t('fairUse.title')}</h3>
-                  <p className="text-[13px] text-gray-500 leading-relaxed mb-4">{t('fairUse.body')}</p>
-                  <a href="mailto:hello@medyra.de"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 hover:text-emerald-700 transition-colors">
-                    <Mail className="h-3.5 w-3.5" /> hello@medyra.de
-                  </a>
+                  <p className="text-[13px] text-gray-500 leading-relaxed">{t('fairUse.body')}</p>
                 </div>
 
                 {/* Right: cap table */}
