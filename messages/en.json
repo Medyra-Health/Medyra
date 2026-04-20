@@ -23,7 +23,7 @@
   },
   "problem": {
     "heading": "Does this look familiar?",
-    "subheading": "Most patients receive lab results they can't understand. Medyra translates every value into plain language — instantly.",
+    "subheading": "Most patients receive lab results they can't understand. Medyra translates every value into plain language, instantly.",
     "before": "Your lab report",
     "after": "What Medyra tells you",
     "badge": "The problem we solve",
@@ -259,7 +259,7 @@
     "allValuesNormal": "All values normal",
     "keyTakeaways": "Key Takeaways",
     "valuesNeedingAttention": "Values that need your attention",
-    "greatResults": "Great results — discuss with your doctor",
+    "greatResults": "Great results. Discuss with your doctor.",
     "allReports": "All Reports",
     "saveAsPdf": "Save as PDF",
     "chatGreeting": "Hi! I've read your report. Ask me anything:",
@@ -329,14 +329,14 @@
   },
   "landing": {
     "hero": {
-      "badge": "Free to start · No credit card needed",
+      "badge": "3 free reports per month. No credit card needed.",
       "title1": "Your health data,",
       "title2": "finally clear.",
       "description": "Upload any medical report or health document and get a plain-language explanation from AI in under 60 seconds. No medical degree required.",
       "ctaAnalyse": "Analyse My Report Free",
       "ctaHowItWorks": "See how it works",
       "ctaUpload": "Upload My Report",
-      "tag1": "2 free reports/month",
+      "tag1": "3 free reports/month",
       "tag2": "GDPR encrypted",
       "tag3": "Results in ~30s",
       "tag4": "PDF, JPG, PNG, TXT"
@@ -350,7 +350,7 @@
     "howItWorks": {
       "badge": "Simple process",
       "step1Title": "Upload your report",
-      "step1Desc": "Drop any PDF, JPG, PNG or TXT. Our AI reads the text — even from scanned photos.",
+      "step1Desc": "Drop any PDF, JPG, PNG or TXT. Our AI reads the text, even from scanned photos.",
       "step1Detail": "Encrypted immediately",
       "step2Title": "AI analyses in ~30s",
       "step2Desc": "Claude AI identifies every test value, flags abnormal results, and writes a plain-language explanation.",
@@ -358,32 +358,32 @@
       "step3Title": "Get your answers",
       "step3Desc": "Read your results, chat with the AI for follow-up questions, and export a PDF for your next appointment.",
       "step3Detail": "Share with your doctor",
-      "cta": "Start free — no credit card"
+      "cta": "Start free, no credit card needed"
     },
     "doctorVisit": {
       "badge": "New feature",
       "title1": "Going to the doctor?",
       "title2": "Arrive prepared.",
-      "description": "Describe how you feel — in any language. Medyra turns it into a structured, professional German summary your doctor can read in seconds.",
+      "description": "Describe how you feel in any language. Medyra turns it into a structured, professional German summary your doctor can read in seconds.",
       "step1Title": "Describe in any language",
-      "step1Desc": "Write freely in English, Arabic, Hindi, Turkish — whatever feels natural. No medical knowledge needed.",
+      "step1Desc": "Write freely in English, Arabic, Hindi, Turkish, whatever feels natural. No medical knowledge needed.",
       "step2Title": "AI structures it instantly",
       "step2Desc": "Claude converts your description into a formal German clinical summary: chief complaints, timeline, history, and suggested questions.",
       "step3Title": "Print & bring to the appointment",
-      "step3Desc": "One click prints a clean A4 sheet with the Medyra header — hand it to your doctor at the start of your visit.",
+      "step3Desc": "One click prints a clean A4 sheet with the Medyra header. Hand it to your doctor at the start of your visit.",
       "cta": "Prepare for my appointment",
       "freePlan": "Free plan includes 1 prep document per month"
     },
     "languages": {
       "badge": "Global reach",
       "title": "Available in 18 languages",
-      "subtitle": "From Germany to the world — understand your health in your own language."
+      "subtitle": "From Germany to the world. Understand your health in your own language."
     },
     "newToGermany": {
       "badge": "New to Germany",
       "title": "New to Germany?",
       "titleHighlight": "We've got you.",
-      "subtitle": "Health documents in Germany are written for Germans. Whether you just arrived or have been here for years — Medyra turns bureaucratic paperwork into plain language, in your language.",
+      "subtitle": "Health documents in Germany are written for Germans. Whether you just arrived or have been here for years, Medyra turns bureaucratic paperwork into plain language in your language.",
       "pill1": "Health Insurance Letter",
       "pill2": "Lab Results",
       "pill3": "Prescription",
@@ -394,8 +394,8 @@
     },
     "security": {
       "badge": "Bank-grade encryption",
-      "title": "Your data is encrypted — even from us",
-      "subtitle": "Every report, every value, every AI explanation is encrypted with AES-256-GCM before it touches our database. We store ciphertext. Only you hold the key — through your account.",
+      "title": "Your data is encrypted, safe even from us",
+      "subtitle": "Every report, every value, every AI explanation is encrypted with AES-256-GCM before it touches our database. We store ciphertext. Only you hold the key, through your account.",
       "yourReport": "Your report",
       "ourDatabase": "Our database",
       "feat1Title": "AES-256-GCM",
@@ -403,7 +403,7 @@
       "feat2Title": "GDPR Art. 32",
       "feat2Desc": "Encryption required for personal health data (§9 BDSG)",
       "feat3Title": "Unique IV per field",
-      "feat3Desc": "No two ciphertexts are alike — even for identical values",
+      "feat3Desc": "No two ciphertexts are alike, even for identical values",
       "feat4Title": "Zero plaintext stored",
       "feat4Desc": "Breach of our DB reveals nothing readable",
       "deepDive": "How does it work technically? Read the deep dive"
@@ -415,11 +415,11 @@
       "minRead": "min read"
     },
     "pricingCta": {
-      "note": "2 free reports every month · No credit card required · Cancel anytime"
+      "note": "3 free reports every month. No credit card required. Cancel anytime."
     }
   },
   "siteFooter": {
-    "tagline": "Understand your lab results — in your language, in 60 seconds.",
+    "tagline": "Understand your health data in your language in 60 seconds.",
     "product": "Product",
     "upload": "Upload Report",
     "prep": "Prepare Doctor Visit",
