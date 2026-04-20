@@ -44,7 +44,7 @@ const COLOR_THEME = {
 }
 
 const TIER_LABELS = {
-  free: 'Free', onetime: 'One-Time', personal: 'Personal', family: 'Family', clinic: 'Clinic', admin: 'Admin',
+  free: 'Free', personal: 'Personal', family: 'Family', clinic: 'Clinic', admin: 'Admin',
 }
 
 function ProfileCard({ profile, onDelete, onEdit }) {
@@ -521,7 +521,7 @@ export default function ProfilesPage() {
   const tier = data?.tier || 'free'
   const limit = data?.limit ?? 0
   const canCreate = data?.canCreate ?? false
-  const isPaid = tier !== 'free' && tier !== 'onetime'
+  const isPaid = tier !== 'free'
 
   if (!isLoaded || loading) {
     return (
@@ -593,7 +593,7 @@ export default function ProfilesPage() {
             </div>
             <Link href="/pricing">
               <button className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-3 rounded-xl transition-colors">
-                Upgrade to Personal — €9/mo
+                Upgrade to Personal — €4.99/mo
               </button>
             </Link>
           </div>

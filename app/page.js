@@ -367,7 +367,7 @@ function CampaignSection() {
               <SignedOut>
                 <SignInButton mode="modal">
                   <button className={`w-full py-2.5 rounded-xl text-sm font-bold text-white transition-colors ${a.btn}`}>
-                    Try it free — 2 reports/month →
+                    Try it free — 3 reports/month →
                   </button>
                 </SignInButton>
               </SignedOut>
