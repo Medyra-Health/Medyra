@@ -44,7 +44,7 @@ function NewToGermanySection() {
       id: 'insurance',
       pill: t('landing.newToGermany.pill1'),
       heading: 'What does this letter even mean?',
-      body: 'Krankenkasse letters are dense German bureaucracy. Medyra reads it and tells you exactly what you owe, what you\'re covered for, and what to do next — in plain English.',
+      body: 'Krankenkasse letters are dense German bureaucracy. Medyra reads it and tells you exactly what you owe, what you\'re covered for, and what to do next in plain English.',
       preview: [
         { label: 'Coverage start', value: '01.04.2024', ok: true },
         { label: 'Monthly premium', value: '€ 109,19', ok: true },
@@ -64,7 +64,7 @@ function NewToGermanySection() {
         { label: 'TSH', value: '2.1 mIU/L', ok: true },
         { label: 'Cholesterin', value: '195 mg/dL', ok: true },
       ],
-      badge: 'Iron levels low — ask about supplements 💡',
+      badge: 'Iron levels low. Ask about supplements 💡',
     },
     {
       id: 'prescription',
@@ -204,15 +204,15 @@ const CAMPAIGNS = [
     gradient: 'from-slate-900 via-slate-800 to-gray-900',
     accent: 'emerald',
     mockLines: [
-      { label: 'Hämoglobin', raw: '11.8 g/dL ↓', plain: 'Slightly low — may cause fatigue', flag: 'warn' },
-      { label: 'Leukozyten', raw: '8.4 G/L', plain: 'Normal range — no concern', flag: 'ok' },
-      { label: 'Ferritin', raw: '8 µg/L ↓', plain: 'Low iron stores — discuss supplements', flag: 'warn' },
+      { label: 'Hämoglobin', raw: '11.8 g/dL ↓', plain: 'Slightly low, may cause fatigue', flag: 'warn' },
+      { label: 'Leukozyten', raw: '8.4 G/L', plain: 'Normal range, no concern', flag: 'ok' },
+      { label: 'Ferritin', raw: '8 µg/L ↓', plain: 'Low iron stores. Discuss supplements.', flag: 'warn' },
     ],
   },
   {
     tag: 'Mental Health Awareness',
     title: 'Clear results, calm mind.',
-    body: 'Addressing the "jargon anxiety" that occurs when patients receive complex medical results they cannot interpret — because clarity is a vital part of mental well-being.',
+    body: 'Addressing the "jargon anxiety" that occurs when patients receive complex medical results they cannot interpret. Clarity is a vital part of mental well-being.',
     visual: '🧠',
     gradient: 'from-violet-950 via-slate-900 to-gray-900',
     accent: 'violet',
@@ -225,13 +225,13 @@ const CAMPAIGNS = [
   {
     tag: 'European Patients\' Rights Day',
     title: 'Your health data, finally clear.',
-    body: 'Empowering patients to advocate for themselves by reclaiming their right to understand their own medical data — because knowledge is the foundation of care.',
+    body: 'Empowering patients to advocate for themselves by reclaiming their right to understand their own medical data. Knowledge is the foundation of care.',
     visual: '🇪🇺',
     gradient: 'from-blue-950 via-slate-900 to-gray-900',
     accent: 'blue',
     mockLines: [
       { label: 'Your right (EU)', raw: 'Art. 15 GDPR', plain: 'Access and understand your health data', flag: 'ok' },
-      { label: 'Blood panel', raw: '18 values', plain: 'Every result explained — in your language', flag: 'ok' },
+      { label: 'Blood panel', raw: '18 values', plain: 'Every result explained in your language', flag: 'ok' },
       { label: 'Report language', raw: 'German', plain: 'Translated to English, Arabic, Hindi...', flag: 'ok' },
     ],
   },
@@ -367,7 +367,7 @@ function CampaignSection() {
               <SignedOut>
                 <SignInButton mode="modal">
                   <button className={`w-full py-2.5 rounded-xl text-sm font-bold text-white transition-colors ${a.btn}`}>
-                    Try it free — 3 reports/month →
+                    Try it free, 3 reports per month
                   </button>
                 </SignInButton>
               </SignedOut>
@@ -683,7 +683,7 @@ export default function LandingPage() {
                         <Brain className="h-3 w-3" /> AI Summary
                       </p>
                       <p className="text-xs text-gray-300 leading-relaxed">
-                        Your thyroid (TSH) is healthy. Blood sugar and inflammation markers need attention — book a follow-up with your doctor.
+                        Your thyroid (TSH) is healthy. Blood sugar and inflammation markers need attention. Book a follow-up with your doctor.
                       </p>
                     </div>
                   </div>
@@ -715,7 +715,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sr">
             {[
-              { value: '2/mo', labelKey: 'landing.trust.stat1Label', color: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20' },
+              { value: '3/mo', labelKey: 'landing.trust.stat1Label', color: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20' },
               { value: '~30s', labelKey: 'landing.trust.stat2Label', color: 'text-blue-400',    bg: 'bg-blue-500/10',    border: 'border-blue-500/20'    },
               { value: '18',   labelKey: 'landing.trust.stat3Label', color: 'text-violet-400',  bg: 'bg-violet-500/10',  border: 'border-violet-500/20'  },
               { value: '256',  labelKey: 'landing.trust.stat4Label', color: 'text-amber-400',   bg: 'bg-amber-500/10',   border: 'border-amber-500/20'   },
@@ -769,11 +769,11 @@ export default function LandingPage() {
               </div>
               <div className="space-y-2">
                 {[
-                  { icon: CheckCircle, color: 'text-emerald-400', bg: 'bg-emerald-500/5 border-emerald-500/10', text: 'Your thyroid (TSH) is within the normal range — no action needed.' },
-                  { icon: AlertCircle, color: 'text-orange-400', bg: 'bg-orange-500/5 border-orange-500/10',   text: 'Blood sugar (HbA1c) slightly elevated — discuss pre-diabetes risk with your doctor.' },
-                  { icon: AlertCircle, color: 'text-orange-400', bg: 'bg-orange-500/5 border-orange-500/10',   text: 'Kidney filtration (eGFR) mildly reduced — worth monitoring over time.' },
-                  { icon: AlertTriangle, color: 'text-red-400', bg: 'bg-red-500/5 border-red-500/10',          text: 'Inflammation (CRP) elevated — your doctor should investigate soon.' },
-                  { icon: AlertCircle, color: 'text-orange-400', bg: 'bg-orange-500/5 border-orange-500/10',   text: 'Iron stores (Ferritin) low — may cause fatigue.' },
+                  { icon: CheckCircle, color: 'text-emerald-400', bg: 'bg-emerald-500/5 border-emerald-500/10', text: 'Your thyroid (TSH) is within the normal range, no action needed.' },
+                  { icon: AlertCircle, color: 'text-orange-400', bg: 'bg-orange-500/5 border-orange-500/10',   text: 'Blood sugar (HbA1c) slightly elevated. Discuss pre-diabetes risk with your doctor.' },
+                  { icon: AlertCircle, color: 'text-orange-400', bg: 'bg-orange-500/5 border-orange-500/10',   text: 'Kidney filtration (eGFR) mildly reduced, worth monitoring over time.' },
+                  { icon: AlertTriangle, color: 'text-red-400', bg: 'bg-red-500/5 border-red-500/10',          text: 'Inflammation (CRP) elevated. Your doctor should investigate soon.' },
+                  { icon: AlertCircle, color: 'text-orange-400', bg: 'bg-orange-500/5 border-orange-500/10',   text: 'Iron stores (Ferritin) low. This may cause fatigue.' },
                 ].map(({ icon: Icon, color, bg, text }, i) => (
                   <div key={i} className={`flex gap-2.5 items-start px-3 py-2.5 rounded-xl border ${bg} transition-colors`}>
                     <Icon className={`h-3.5 w-3.5 flex-shrink-0 mt-0.5 ${color}`} />
@@ -1047,25 +1047,25 @@ export default function LandingPage() {
                 {
                   icon: '👨‍👩‍👧‍👦',
                   title: 'One account, whole family',
-                  desc: 'Create separate profiles for each family member — partner, children, elderly parents. Each has their own private health timeline.',
+                  desc: 'Create separate profiles for each family member, including partner, children, and elderly parents. Each has their own private health timeline.',
                   color: 'text-emerald-400',
                 },
                 {
                   icon: '📈',
                   title: 'Automatic biomarker tracking',
-                  desc: 'Hemoglobin, ferritin, TSH, HbA1c, cholesterol, vitamin D, CRP, eGFR — Medyra reads them from every uploaded report and plots them automatically.',
+                  desc: 'Hemoglobin, ferritin, TSH, HbA1c, cholesterol, vitamin D, CRP, eGFR. Medyra reads them from every uploaded report and plots them automatically.',
                   color: 'text-blue-400',
                 },
                 {
                   icon: '⚠️',
                   title: 'Trend alerts that matter',
-                  desc: 'If a value changes by more than 10% since your first reading, Medyra flags it. A single value means nothing — the trend tells the story.',
+                  desc: 'If a value changes by more than 10% since your first reading, Medyra flags it. A single value means nothing. The trend tells the story.',
                   color: 'text-amber-400',
                 },
                 {
                   icon: '🩺',
                   title: 'Doctor prep with full history',
-                  desc: 'When you generate a doctor summary, select a profile. Your lab history is automatically pulled in — no typing, no forgetting, no gaps.',
+                  desc: 'When you generate a doctor summary, select a profile. Your lab history is automatically pulled in. No typing, no forgetting, no gaps.',
                   color: 'text-violet-400',
                 },
               ].map((f, i) => (
@@ -1264,9 +1264,9 @@ export default function LandingPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {[
-              { href: '/blog/doctor-visit-prep-germany',           tag: 'Doctor Visit · New', accent: 'border-l-violet-500',  tagColor: 'text-violet-400',  title: "How to Prepare for a Doctor's Appointment in Germany",         desc: 'Describe symptoms in any language — Medyra generates a structured German summary for your doctor.', time: '6 min' },
+              { href: '/blog/doctor-visit-prep-germany',           tag: 'Doctor Visit · New', accent: 'border-l-violet-500',  tagColor: 'text-violet-400',  title: "How to Prepare for a Doctor's Appointment in Germany",         desc: 'Describe symptoms in any language. Medyra generates a structured German summary for your doctor.', time: '6 min' },
               { href: '/blog/arztbrief-verstehen-fur-senioren',    tag: 'Für Senioren · Neu', accent: 'border-l-blue-500',    tagColor: 'text-blue-400',    title: 'Ihren Arztbrief einfach verstehen — Medyra für Senioren',       desc: 'Befund erhalten und nicht verstanden? Medyra erklärt alles auf Deutsch — zum Lesen oder Vorlesen lassen.', time: '5 Min.' },
-              { href: '/blog/how-to-read-lab-results-germany-expat', tag: 'Germany · Expat',  accent: 'border-l-emerald-500', tagColor: 'text-emerald-400', title: 'How to Read Your Lab Results in Germany as an Expat',           desc: 'Decode your Laborbefund — abbreviations, reference ranges, and what flagged values actually mean.', time: '7 min' },
+              { href: '/blog/how-to-read-lab-results-germany-expat', tag: 'Germany · Expat',  accent: 'border-l-emerald-500', tagColor: 'text-emerald-400', title: 'How to Read Your Lab Results in Germany as an Expat',           desc: 'Decode your Laborbefund. Abbreviations, reference ranges, and what flagged values actually mean.', time: '7 min' },
             ].map((post, i) => (
               <Link key={post.href} href={post.href} className={`block group sr d${i+1}`}>
                 <div className={`bg-gray-900 rounded-2xl border border-white/5 border-l-2 ${post.accent} p-5 h-full glow-card hover:border-l-2 hover:bg-gray-800/60 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]`}>
