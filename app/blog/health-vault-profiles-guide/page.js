@@ -277,7 +277,7 @@ export default function BlogPost() {
             </div>
             <p className="text-white font-bold text-xl">Start building your Health Vault</p>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Personal plan — 2 profiles · 5 doctor summaries/month · Unlimited reports · From €9/month
+              Personal plan — 2 health profiles · 20 reports/month · AI chat & prep summaries · From €4.99/month
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link

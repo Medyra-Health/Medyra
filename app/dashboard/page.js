@@ -25,7 +25,6 @@ const HealthTimeline = dynamic(() => import('@/components/HealthTimeline'), {
 
 const PLAN_META = {
   free:     { label: 'Free',      color: 'text-gray-600',    bg: 'bg-gray-100',    border: 'border-gray-200',    icon: null,  profileLimit: 0 },
-  onetime:  { label: 'One-Time',  color: 'text-blue-700',    bg: 'bg-blue-100',    border: 'border-blue-200',    icon: Zap,   profileLimit: 0 },
   personal: { label: 'Personal',  color: 'text-emerald-700', bg: 'bg-emerald-100', border: 'border-emerald-200', icon: Star,  profileLimit: 2 },
   family:   { label: 'Family',    color: 'text-purple-700',  bg: 'bg-purple-100',  border: 'border-purple-200',  icon: Users, profileLimit: 5 },
   clinic:   { label: 'Clinic',    color: 'text-indigo-700',  bg: 'bg-indigo-100',  border: 'border-indigo-200',  icon: Crown, profileLimit: null },
@@ -84,7 +83,7 @@ function ProfileSwitcher({ profiles, selected, onChange, canCreate, tier }) {
 }
 
 function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canCreate }) {
-  const isPaid = tier !== 'free' && tier !== 'onetime'
+  const isPaid = tier !== 'free'
   const selectedProfile = profiles.find(p => p.id === selectedProfileId) || profiles[0]
 
   if (!isPaid) {
@@ -120,7 +119,7 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
             Unlock Health Vault <ArrowRight className="h-4 w-4" />
           </button>
         </Link>
-        <p className="text-center text-[10px] text-gray-600 mt-2">Personal plan — €9/mo · Family plan — €18/mo</p>
+        <p className="text-center text-[10px] text-gray-600 mt-2">Personal plan — €4.99/mo · Family plan — €9.99/mo</p>
       </div>
     )
   }
