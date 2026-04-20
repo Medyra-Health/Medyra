@@ -500,8 +500,8 @@
     "fairUse": {
       "label": "Fair Use",
       "title": "Fair Use Policy",
-      "body": "Paid plans have generous monthly soft limits that virtually no normal user will ever reach. If you do hit one, we silently block and reach out personally — no auto-upgrade prompts.",
-      "tableTitle": "Silent hard caps",
+      "body": "Paid plans include generous monthly soft limits that virtually no everyday user will ever reach. If you do hit one, that feature quietly pauses until the next month with no auto-upgrade.",
+      "tableTitle": "Monthly soft caps",
       "featureCol": "Feature",
       "personalCol": "Personal",
       "familyCol": "Family",
@@ -514,7 +514,7 @@
       "cap3": "PDF exports",
       "cap3p": "50 / month",
       "cap3f": "100 / month",
-      "footnote": "Anyone genuinely reaching these limits hears from us directly — no auto-upgrade, just a conversation."
+      "footnote": "* Unlimited means no hard cap on reports. The soft limits above apply only to AI chat, prep summaries, and PDF exports."
     },
     "compare": {
       "title": "Compare plans",
