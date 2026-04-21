@@ -40,7 +40,7 @@ export default function ContactPage() {
                 <span className="text-white font-black text-sm">AR</span>
               </div>
               <div>
-                <p className="font-bold text-gray-900 text-sm">Abralur Rahman</p>
+                <p className="font-bold text-gray-900 text-sm">Mohammad Abralur Rahman Akash</p>
                 <p className="text-xs text-emerald-600 font-semibold">Founder & CEO</p>
               </div>
             </div>
