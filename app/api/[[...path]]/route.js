@@ -793,11 +793,18 @@ async function handleStripeWebhook(request) {
   const body = await request.text()
   const sig = request.headers.get('stripe-signature')
 
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET
+  if (!webhookSecret) {
+    console.error('[Stripe webhook] STRIPE_WEBHOOK_SECRET not set in environment')
+    return handleCORS(NextResponse.json({ error: 'Webhook secret not configured' }, { status: 500 }))
+  }
+
   let event
   try {
-    event = stripe.webhooks.constructEvent(body, sig, process.env.STRIPE_WEBHOOK_SECRET || 'whsec_test')
-  } catch {
-    return handleCORS(NextResponse.json({ error: 'Webhook error' }, { status: 400 }))
+    event = stripe.webhooks.constructEvent(body, sig, webhookSecret)
+  } catch (err) {
+    console.error('[Stripe webhook] Signature verification failed:', err.message)
+    return handleCORS(NextResponse.json({ error: `Webhook error: ${err.message}` }, { status: 400 }))
   }
 
   if (event.type === 'checkout.session.completed') {
