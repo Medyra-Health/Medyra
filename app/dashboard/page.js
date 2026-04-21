@@ -8,7 +8,7 @@ import {
   Upload, Clock, AlertCircle, ChevronRight, Infinity, FileText,
   TrendingUp, Crown, Zap, Star, Stethoscope, Users, Plus,
   ChevronDown, Shield, Sparkles, Activity, User, RefreshCw,
-  ArrowRight, Lock,
+  ArrowRight, Lock, Settings,
 } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import MedyraUserButton from '@/components/MedyraUserButton'
@@ -36,6 +36,38 @@ const COLOR_DOT = {
   rose: 'bg-rose-500', amber: 'bg-amber-500', teal: 'bg-teal-500',
 }
 const REL_ICONS = { self: User, partner: '❤️', child: '👶', parent: '👴' }
+
+function ManageSubscriptionButton() {
+  const [loading, setLoading] = useState(false)
+
+  async function handleManage() {
+    setLoading(true)
+    try {
+      const res = await fetch('/api/billing-portal', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ origin: window.location.origin }),
+      })
+      const data = await res.json()
+      if (data.url) window.location.href = data.url
+    } catch {
+      // silently fail
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <button
+      onClick={handleManage}
+      disabled={loading}
+      className="text-xs font-semibold text-gray-500 hover:text-gray-700 flex items-center gap-1 transition-colors disabled:opacity-50"
+    >
+      {loading ? <RefreshCw className="h-3 w-3 animate-spin" /> : <Settings className="h-3 w-3" />}
+      Manage plan
+    </button>
+  )
+}
 
 function ProfileSwitcher({ profiles, selected, onChange, canCreate, tier }) {
   const [open, setOpen] = useState(false)
@@ -289,12 +321,14 @@ export default function DashboardPage() {
               {PlanIcon && <PlanIcon className="h-3.5 w-3.5" />}
               {meta.label} Plan
             </span>
-            {!isPaid && (
+            {!isPaid ? (
               <Link href="/pricing">
                 <button className="text-xs font-semibold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 transition-colors">
                   Upgrade <ArrowRight className="h-3 w-3" />
                 </button>
               </Link>
+            ) : (
+              <ManageSubscriptionButton />
             )}
           </div>
         </div>
