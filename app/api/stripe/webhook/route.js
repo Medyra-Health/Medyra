@@ -2,9 +2,6 @@ import { NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { MongoClient } from 'mongodb'
 
-// ── Stripe must have raw body for signature verification ──────────────────
-export const config = { api: { bodyParser: false } }
-
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: '2024-06-20' })
 
 // ── MongoDB ───────────────────────────────────────────────────────────────
@@ -93,10 +90,17 @@ export async function POST(request) {
     return NextResponse.json({ error: `Webhook error: ${err.message}` }, { status: 400 })
   }
 
-  const db = await getDb()
-  const obj = event.data.object
-
   console.log(`[Stripe webhook] Event: ${event.type}`)
+
+  let db
+  try {
+    db = await getDb()
+  } catch (err) {
+    console.error('[Stripe webhook] DB connection failed:', err.message)
+    return NextResponse.json({ error: 'Database unavailable' }, { status: 500 })
+  }
+
+  const obj = event.data.object
 
   try {
     switch (event.type) {
