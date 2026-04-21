@@ -518,7 +518,7 @@ export default function PrepPage() {
                   <><Lock className="h-3.5 w-3.5" /> {t('prep.usageLimitReached')}</>
                 ) : (
                   <><FileText className="h-3.5 w-3.5" />
-                    {t('prep.usageCount').replace('{used}', usage.used).replace('{limit}', usage.limit)}
+                    {t('prep.usageCount', { used: usage.used, limit: usage.limit })}
                   </>
                 )}
               </div>
