@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La VSG (velocidad de sedimentación globular) mide la rapidez con que los glóbulos rojos se asientan en una muestra de sangre. Un valor elevado puede indicar inflamación, infección u otras condiciones. La VSG es un marcador inespecífico y suele evaluarse junto con otras pruebas.",
-  "metaDescription": "VSG elevada? Valores normales, causas y significado de la velocidad de sedimentación — explicado de forma sencilla.",
+  "metaDescription": "VSG elevada? Valores normales, causas y significado de la velocidad de sedimentación: explicado de forma sencilla.",
   "causesElevated": ["Infecciones", "Enfermedades inflamatorias", "Enfermedades autoinmunes", "Anemia", "Cáncer"],
   "causesLow": ["Policitemia", "Insuficiencia cardíaca"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
   "categoryLabel": "Marcadores inflamatorios",
-  "pageTitle": "Valor VSG — Velocidad de Sedimentación Globular explicada | Medyra"
+  "pageTitle": "Valor VSG: Velocidad de Sedimentación Globular explicada | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Kalsiyum (Ca), kemikler, kaslar ve sinirler için gerekli bir mineraldir. Yüksek kan değerleri paratiroid bezi bozuklukları veya kemik hastalıklarına; düşük değerler ise D vitamini eksikliğine veya yetersiz beslenmeye işaret edebilir. Anormallikleri doktorunuzla görüşün.",
-  "metaDescription": "Kalsiyum yüksek veya düşük mü? Normal değerler, nedenler ve kemik sağlığı için önemi — basitçe açıklandı.",
+  "metaDescription": "Kalsiyum yüksek veya düşük mü? Normal değerler, nedenler ve kemik sağlığı için önemi: basitçe açıklandı.",
   "causesElevated": ["Primer hiperparatiroidi", "Kanser", "D vitamini fazlalığı", "Sarkoidoz"],
   "causesLow": ["D vitamini eksikliği", "Hipoparatiroidi", "Magnezyum eksikliği", "Böbrek hastalığı"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek (hiperkalsemi)", "high": "Çok yüksek" },
   "categoryLabel": "Elektrolitler",
-  "pageTitle": "Ca değeri — Kalsiyum açıklaması | Medyra"
+  "pageTitle": "Ca değeri: Kalsiyum açıklaması | Medyra"
 }

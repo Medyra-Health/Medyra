@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GOT/AST (aminotransferaza asparaginianowa) to enzym występujący w wątrobie, sercu i mięśniach. Podwyższone wartości mogą wskazywać na uszkodzenie wątroby lub problemy z sercem. W połączeniu z GPT/ALT pomaga określić przyczynę. Omów nieprawidłowe wartości z lekarzem.",
-  "metaDescription": "GOT / AST podwyższone? Wartości prawidłowe, przyczyny i znaczenie tego enzymu wątrobowego — wyjaśnione prosto.",
+  "metaDescription": "GOT / AST podwyższone? Wartości prawidłowe, przyczyny i znaczenie tego enzymu wątrobowego: wyjaśnione prosto.",
   "causesElevated": ["Choroba wątroby", "Zawał serca", "Choroba mięśni", "Spożycie alkoholu", "Niektóre leki"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
   "categoryLabel": "Wskaźniki wątrobowe",
-  "pageTitle": "Wartość GOT/AST — Aminotransferaza asparaginianowa wyjaśniona | Medyra"
+  "pageTitle": "Wartość GOT/AST: Aminotransferaza asparaginianowa wyjaśniona | Medyra"
 }

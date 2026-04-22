@@ -1,6 +1,6 @@
 {
   "shortAnswer": "PTT (partial thromboplastin time) measures how quickly blood clots via the intrinsic clotting pathway. Prolonged values may indicate a clotting disorder or the effect of heparin. The test is used before surgeries and when bleeding tendencies are suspected. Discuss any abnormal values with your doctor.",
-  "metaDescription": "PTT elevated? Normal ranges, meaning of clotting time, and causes in heparin therapy — explained simply.",
+  "metaDescription": "PTT elevated? Normal ranges, meaning of clotting time, and causes in heparin therapy: explained simply.",
   "causesElevated": ["Heparin therapy", "Hemophilia", "Clotting factor deficiency", "Von Willebrand disease"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Prolonged", "high": "Highly prolonged" },
   "categoryLabel": "Coagulation",
-  "pageTitle": "PTT value — Partial Thromboplastin Time explained | Medyra"
+  "pageTitle": "PTT value: Partial Thromboplastin Time explained | Medyra"
 }

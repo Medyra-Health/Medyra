@@ -2,14 +2,14 @@ import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
 
 export const metadata = {
-  title: 'Ihren Arztbrief einfach verstehen — Medyra für Senioren | Medyra',
+  title: 'Ihren Arztbrief einfach verstehen, Medyra für Senioren | Medyra',
   description:
-    'Befund, Arztbrief oder Entlassungsbericht erhalten und nicht verstanden? Medyra erklärt Ihren medizinischen Brief auf Deutsch, ohne Fachbegriffe — zum Lesen oder Vorlesen lassen.',
+    'Befund, Arztbrief oder Entlassungsbericht erhalten und nicht verstanden? Medyra erklärt Ihren medizinischen Brief auf Deutsch, ohne Fachbegriffe, zum Lesen oder Vorlesen lassen.',
   alternates: { canonical: 'https://medyra.de/blog/arztbrief-verstehen-fur-senioren' },
   openGraph: {
-    title: 'Ihren Arztbrief einfach verstehen — Medyra für Senioren',
+    title: 'Ihren Arztbrief einfach verstehen, Medyra für Senioren',
     description:
-      'Medyra übersetzt Ihren Befund oder Arztbrief in einfaches Deutsch. Kein Fachlatein, keine Verwirrung. Einfach hochladen — Erklärung erhalten.',
+      'Medyra übersetzt Ihren Befund oder Arztbrief in einfaches Deutsch. Kein Fachlatein, keine Verwirrung. Einfach hochladen, Erklärung erhalten.',
     url: 'https://medyra.de/blog/arztbrief-verstehen-fur-senioren',
   },
   keywords: [
@@ -41,7 +41,7 @@ export default function BlogPost() {
             ))}
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            Ihren Arztbrief einfach verstehen — Medyra erklärt alles auf Deutsch
+            Ihren Arztbrief einfach verstehen, Medyra erklärt alles auf Deutsch
           </h1>
           <p className="text-gray-500 text-sm">11 April 2026 · 5 Min. Lesezeit · Von Medyra</p>
         </div>
@@ -58,7 +58,7 @@ export default function BlogPost() {
           <p>
             Genau für diese Situation haben wir <strong>Medyra für Senioren</strong> entwickelt. Diese Seite
             erklärt Ihnen, was ein Arztbrief, Befund oder Entlassungsbericht ist, warum diese Dokumente so
-            schwer zu lesen sind — und wie Medyra Ihnen helfen kann, alles zu verstehen, ohne einen Arzt anrufen
+            schwer zu lesen sind, und wie Medyra Ihnen helfen kann, alles zu verstehen, ohne einen Arzt anrufen
             zu müssen.
           </p>
 
@@ -66,14 +66,14 @@ export default function BlogPost() {
 
           <p>
             Im deutschen Gesundheitssystem gibt es drei häufige Arten von medizinischen Dokumenten, die Patienten
-            erhalten — und alle drei sehen auf den ersten Blick ähnlich aus:
+            erhalten, und alle drei sehen auf den ersten Blick ähnlich aus:
           </p>
 
           <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 space-y-4 not-prose">
             <div>
               <p className="font-bold text-gray-900 mb-1">📄 Der Befund</p>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Das Ergebnis einer Untersuchung — zum Beispiel Bluttest, Röntgen, Ultraschall oder EKG. Der Befund
+                Das Ergebnis einer Untersuchung, zum Beispiel Bluttest, Röntgen, Ultraschall oder EKG. Der Befund
                 zeigt Messwerte und markiert, welche Werte außerhalb des Normalbereichs liegen. Er kommt meist
                 vom Labor oder einem Facharzt.
               </p>
@@ -99,7 +99,7 @@ export default function BlogPost() {
           <h2 className="text-xl font-bold text-gray-900 mt-8">Warum sind diese Dokumente so schwer zu lesen?</h2>
 
           <p>
-            Arztbriefe und Befunde werden nicht für Patienten geschrieben — sie werden für Ärzte geschrieben.
+            Arztbriefe und Befunde werden nicht für Patienten geschrieben, sie werden für Ärzte geschrieben.
             Mediziner haben eine eigene Sprache, die auf Latein und Griechisch basiert und in Deutschland besonders
             komprimiert formuliert wird. Ein einziger Satz kann mehrere Diagnosen, Behandlungen und Empfehlungen
             gleichzeitig enthalten.
@@ -107,7 +107,7 @@ export default function BlogPost() {
 
           <p>
             Dazu kommt: Selbst wenn Sie die einzelnen Wörter nachschlagen könnten, ist der Zusammenhang oft nicht
-            klar. Was bedeutet „leicht erhöhter Troponin-Wert" für Ihren Alltag? Müssen Sie sofort handeln — oder
+            klar. Was bedeutet „leicht erhöhter Troponin-Wert" für Ihren Alltag? Müssen Sie sofort handeln, oder
             ist das harmlos? Diese Fragen beantwortet der Brief meistens nicht.
           </p>
 
@@ -116,11 +116,11 @@ export default function BlogPost() {
             letzten Brief stand. Oder sie rufen ihre Kinder an, die dann selbst versuchen, es zu recherchieren.
           </p>
 
-          <h2 className="text-xl font-bold text-gray-900 mt-8">Wie Medyra Ihnen hilft — Schritt für Schritt</h2>
+          <h2 className="text-xl font-bold text-gray-900 mt-8">Wie Medyra Ihnen hilft, Schritt für Schritt</h2>
 
           <p>
             Medyra ist ein KI-Dienst, der Ihren Arztbrief liest und Ihnen alles in einfachem Deutsch erklärt.
-            Sie brauchen keine technischen Kenntnisse — nur Ihr Dokument und ein Gerät mit Internet.
+            Sie brauchen keine technischen Kenntnisse, nur Ihr Dokument und ein Gerät mit Internet.
           </p>
 
           <div className="space-y-6 not-prose">
@@ -155,8 +155,8 @@ export default function BlogPost() {
                 <p className="font-bold text-gray-900 mb-1">Medyra liest und erklärt</p>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   Das dauert etwa 30 Sekunden. Danach sehen Sie eine Zusammenfassung und eine Erklärung jedes
-                  wichtigen Werts — in einfachem Deutsch, ohne Fachbegriffe. Zum Beispiel: statt
-                  „Ejektionsfraktion 45 %" lesen Sie „Ihre Herzpumpleistung ist leicht eingeschränkt — sprechen
+                  wichtigen Werts, in einfachem Deutsch, ohne Fachbegriffe. Zum Beispiel: statt
+                  „Ejektionsfraktion 45 %" lesen Sie „Ihre Herzpumpleistung ist leicht eingeschränkt, sprechen
                   Sie mit Ihrem Arzt darüber."
                 </p>
               </div>
@@ -167,19 +167,19 @@ export default function BlogPost() {
           <h2 className="text-xl font-bold text-gray-900 mt-8">Die Vorlesen-Funktion: einfach zuhören</h2>
 
           <p>
-            Wenn Lesen anstrengend ist — wegen Sehproblemen, Müdigkeit oder einfach weil es so viel auf einmal
-            ist — gibt es bei Medyra eine besondere Funktion: den <strong>„Vorlesen lassen"</strong>-Knopf.
+            Wenn Lesen anstrengend ist, wegen Sehproblemen, Müdigkeit oder einfach weil es so viel auf einmal
+            ist, gibt es bei Medyra eine besondere Funktion: den <strong>„Vorlesen lassen"</strong>-Knopf.
           </p>
 
           <p>
             Nachdem Ihr Dokument erklärt wurde, sehen Sie einen großen grünen Knopf mit der Aufschrift{' '}
             <strong>„Vorlesen lassen"</strong>. Wenn Sie darauf drücken, liest Ihnen Ihr Gerät die gesamte
-            Erklärung laut vor — in klarem Deutsch, etwas langsamer als normal, damit alles gut verständlich ist.
+            Erklärung laut vor, in klarem Deutsch, etwas langsamer als normal, damit alles gut verständlich ist.
           </p>
 
           <p>
             Sie können die Vorlesung jederzeit stoppen, indem Sie erneut auf den Knopf drücken. Es gibt keine
-            Einstellungen, die Sie verstehen müssen — es funktioniert einfach.
+            Einstellungen, die Sie verstehen müssen, es funktioniert einfach.
           </p>
 
           <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-5 not-prose">
@@ -195,7 +195,7 @@ export default function BlogPost() {
 
           <p>
             Auf der Ergebnisseite finden Sie einen Knopf zum Drucken. Die ausgedruckte Erklärung können Sie
-            beim nächsten Termin mitbringen — und Ihrem Arzt zeigen, wenn Sie Fragen haben. Viele Patienten
+            beim nächsten Termin mitbringen, und Ihrem Arzt zeigen, wenn Sie Fragen haben. Viele Patienten
             nutzen Medyra genau so: einmal vor dem Termin hochladen, ausdrucken, mitnehmen.
           </p>
 
@@ -207,7 +207,7 @@ export default function BlogPost() {
           </p>
 
           <ul className="list-disc pl-5 space-y-2 text-sm">
-            <li>Alle Dokumente werden <strong>verschlüsselt gespeichert</strong> — niemand anderes kann sie lesen</li>
+            <li>Alle Dokumente werden <strong>verschlüsselt gespeichert</strong>, niemand anderes kann sie lesen</li>
             <li>Ihre Daten werden <strong>nicht an Dritte weitergegeben</strong></li>
             <li>Medyra ist <strong>DSGVO-konform</strong> und folgt deutschem Datenschutzrecht</li>
             <li>Dokumente werden nach 30 Tagen automatisch gelöscht</li>
@@ -221,7 +221,7 @@ export default function BlogPost() {
           <h2 className="text-xl font-bold text-gray-900 mt-8">Für Kinder und Angehörige: Link weiterschicken</h2>
 
           <p>
-            Wenn Ihre Eltern oder Großeltern einen Befund erhalten haben und Hilfe brauchen — schicken Sie
+            Wenn Ihre Eltern oder Großeltern einen Befund erhalten haben und Hilfe brauchen, schicken Sie
             ihnen einfach diesen Link: <strong>medyra.de/verstehen</strong>
           </p>
 
@@ -239,7 +239,7 @@ export default function BlogPost() {
 
           <p>
             Medyra ist kein Arzt und ersetzt keine medizinische Beratung. Die Erklärungen helfen Ihnen,
-            Ihren Befund besser zu verstehen — aber sie sind keine Diagnose und keine Behandlungsempfehlung.
+            Ihren Befund besser zu verstehen, aber sie sind keine Diagnose und keine Behandlungsempfehlung.
             Bei ernsthaften Fragen wenden Sie sich bitte immer an Ihren Arzt.
           </p>
 

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La fT4 (thyroxine libre) est la principale hormone thyroïdienne et est convertie dans le foie en fT3 active. Des valeurs élevées peuvent indiquer une hyperthyroïdie, des valeurs basses une hypothyroïdie. Cette valeur doit toujours être évaluée conjointement avec la TSH.",
-  "metaDescription": "fT4 élevée ou basse ? Valeurs normales, signification de la thyroxine libre et fonction thyroïdienne — expliqués simplement.",
+  "metaDescription": "fT4 élevée ou basse ? Valeurs normales, signification de la thyroxine libre et fonction thyroïdienne: expliqués simplement.",
   "causesElevated": ["Hyperthyroïdie", "Maladie de Basedow", "Surdosage d'hormones thyroïdiennes"],
   "causesLow": ["Hypothyroïdie", "Thyroïdite de Hashimoto", "Maladie hypophysaire"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
   "categoryLabel": "Thyroïde",
-  "pageTitle": "Valeur fT4 — Thyroxine libre expliquée | Medyra"
+  "pageTitle": "Valeur fT4: Thyroxine libre expliquée | Medyra"
 }

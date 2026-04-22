@@ -242,7 +242,7 @@ export default function VerstehensPage() {
               <span className="text-emerald-600">einfach erklärt.</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 leading-relaxed mb-12 max-w-md mx-auto">
-              Laden Sie Ihren Befund hoch — wir erklären alles auf Deutsch, ohne Fachbegriffe.
+              Laden Sie Ihren Befund hoch, wir erklären alles auf Deutsch, ohne Fachbegriffe.
             </p>
 
             {/* Error banner */}
@@ -256,7 +256,7 @@ export default function VerstehensPage() {
               </div>
             )}
 
-            {/* Upload zone — signed out */}
+            {/* Upload zone, signed out */}
             <SignedOut>
               <div className="border-4 border-dashed border-gray-200 rounded-3xl p-12 bg-gray-50 text-center">
                 <div className="w-24 h-24 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-6">
@@ -274,7 +274,7 @@ export default function VerstehensPage() {
               </div>
             </SignedOut>
 
-            {/* Upload zone — signed in */}
+            {/* Upload zone, signed in */}
             <SignedIn>
               <div
                 {...getRootProps()}

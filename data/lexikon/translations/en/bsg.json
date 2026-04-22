@@ -1,6 +1,6 @@
 {
   "shortAnswer": "ESR (erythrocyte sedimentation rate) measures how quickly red blood cells settle in a blood sample. An elevated value may indicate inflammation, infection, or other conditions. ESR is a non-specific marker and is usually assessed alongside other tests.",
-  "metaDescription": "ESR elevated? Normal ranges, causes, and meaning of erythrocyte sedimentation rate — explained simply.",
+  "metaDescription": "ESR elevated? Normal ranges, causes, and meaning of erythrocyte sedimentation rate: explained simply.",
   "causesElevated": ["Infections", "Inflammatory diseases", "Autoimmune diseases", "Anemia", "Cancer"],
   "causesLow": ["Polycythemia", "Heart failure"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Inflammatory Markers",
-  "pageTitle": "ESR value — Erythrocyte Sedimentation Rate explained | Medyra"
+  "pageTitle": "ESR value: Erythrocyte Sedimentation Rate explained | Medyra"
 }

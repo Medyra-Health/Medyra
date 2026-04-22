@@ -2,12 +2,12 @@ import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
 
 export const metadata = {
-  title: 'Health & Lab Results Blog — Medyra',
+  title: 'Health & Lab Results Blog, Medyra',
   description:
     'Practical guides to understanding your medical reports, lab values, and blood test results. Written for patients, not doctors. Available in plain language.',
   alternates: { canonical: 'https://medyra.de/blog' },
   openGraph: {
-    title: 'Health & Lab Results Blog — Medyra',
+    title: 'Health & Lab Results Blog, Medyra',
     description: 'Plain language guides to understanding your lab results and medical reports.',
     url: 'https://medyra.de/blog',
   },
@@ -16,9 +16,9 @@ export const metadata = {
 const POSTS = [
   {
     slug: 'medizinisches-lexikon-guide',
-    title: 'Medyra Lexikon: How to Look Up Any Lab Value — Complete Guide',
+    title: 'Medyra Lexikon: How to Look Up Any Lab Value, Complete Guide',
     description:
-      'CRP too high? HbA1c elevated? A step-by-step guide to using the Medyra Medical Lexikon — 46 plain-German lab value pages with reference ranges, causes, and ready-made doctor questions. Learn when to use it, how to search, and how to combine it with Doctor Visit.',
+      'CRP too high? HbA1c elevated? A step-by-step guide to using the Medyra Medical Lexikon, 46 plain-German lab value pages with reference ranges, causes, and ready-made doctor questions. Learn when to use it, how to search, and how to combine it with Doctor Visit.',
     date: '16 April 2026',
     readTime: '7 min read',
     tags: ['Lexikon', 'Laborwerte', 'Guide'],
@@ -28,7 +28,7 @@ const POSTS = [
     slug: 'health-vault-profiles-guide',
     title: 'Health Vault & Profiles: Track Your Family\'s Health Over Time',
     description:
-      'Create health profiles for yourself, your partner, children, and parents. Medyra tracks biomarkers like hemoglobin, cholesterol, and vitamin D across months and years — and automatically includes your history in every doctor summary.',
+      'Create health profiles for yourself, your partner, children, and parents. Medyra tracks biomarkers like hemoglobin, cholesterol, and vitamin D across months and years, and automatically includes your history in every doctor summary.',
     date: '16 April 2026',
     readTime: '8 min read',
     tags: ['Health Vault', 'Profiles', 'Family Health'],
@@ -36,9 +36,9 @@ const POSTS = [
   },
   {
     slug: 'doctor-visit-prep-germany',
-    title: 'How to Prepare for a Doctor\'s Appointment in Germany — Medyra Doctor Visit',
+    title: 'How to Prepare for a Doctor\'s Appointment in Germany, Medyra Doctor Visit',
     description:
-      'Describe your symptoms in any language — English, Arabic, Hindi, Turkish — and Medyra generates a structured German clinical summary your doctor can read in seconds. Here\'s exactly how it works.',
+      'Describe your symptoms in any language, English, Arabic, Hindi, Turkish, and Medyra generates a structured German clinical summary your doctor can read in seconds. Here\'s exactly how it works.',
     date: '11 April 2026',
     readTime: '6 min read',
     tags: ['Doctor Visit', 'Germany', 'Expat'],
@@ -46,9 +46,9 @@ const POSTS = [
   },
   {
     slug: 'arztbrief-verstehen-fur-senioren',
-    title: 'Ihren Arztbrief einfach verstehen — Medyra erklärt alles auf Deutsch',
+    title: 'Ihren Arztbrief einfach verstehen, Medyra erklärt alles auf Deutsch',
     description:
-      'Befund, Arztbrief oder Entlassungsbericht erhalten und nicht verstanden? Medyra liest Ihr Dokument und erklärt alles in einfachem Deutsch — zum Lesen oder Vorlesen lassen. Speziell für Senioren und ihre Angehörigen.',
+      'Befund, Arztbrief oder Entlassungsbericht erhalten und nicht verstanden? Medyra liest Ihr Dokument und erklärt alles in einfachem Deutsch, zum Lesen oder Vorlesen lassen. Speziell für Senioren und ihre Angehörigen.',
     date: '11 April 2026',
     readTime: '5 Min. Lesezeit',
     tags: ['Für Senioren', 'Arztbrief', 'Deutsch'],
@@ -67,7 +67,7 @@ const POSTS = [
     slug: 'how-to-read-lab-results-germany-expat',
     title: 'How to Read Your Lab Results in Germany as an Expat',
     description:
-      'A practical guide for international residents navigating German medical reports — from decoding abbreviations to knowing when a value is actually a problem.',
+      'A practical guide for international residents navigating German medical reports, from decoding abbreviations to knowing when a value is actually a problem.',
     date: '2 April 2026',
     readTime: '7 min read',
     tags: ['Germany', 'Expat', 'Lab Results'],
@@ -76,7 +76,7 @@ const POSTS = [
     slug: 'what-is-tsh-and-why-does-it-matter',
     title: 'What Is TSH and Why Does It Matter?',
     description:
-      'TSH is one of the most commonly tested hormones — and one of the most misunderstood. Here is what your thyroid result actually means.',
+      'TSH is one of the most commonly tested hormones, and one of the most misunderstood. Here is what your thyroid result actually means.',
     date: '2 April 2026',
     readTime: '6 min read',
     tags: ['Thyroid', 'TSH', 'Hormones'],
@@ -85,7 +85,7 @@ const POSTS = [
     slug: 'understanding-your-blood-test-results',
     title: 'Understanding Your Blood Test Results: A Complete Plain-Language Guide',
     description:
-      'CBC, CRP, HbA1c, cholesterol — this guide explains the most common blood test values in plain language so you can walk into your next appointment informed.',
+      'CBC, CRP, HbA1c, cholesterol, this guide explains the most common blood test values in plain language so you can walk into your next appointment informed.',
     date: '2 April 2026',
     readTime: '9 min read',
     tags: ['Blood Test', 'CBC', 'Cholesterol'],
@@ -107,7 +107,7 @@ export default function BlogPage() {
           <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-2">Medyra Blog</p>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Health & Lab Results</h1>
           <p className="text-gray-500 text-base leading-relaxed">
-            Plain language guides for understanding your medical reports. No jargon — just clear explanations written for patients.
+            Plain language guides for understanding your medical reports. No jargon, just clear explanations written for patients.
           </p>
         </div>
 
@@ -142,13 +142,13 @@ export default function BlogPage() {
         <div className="mt-14 p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
           <p className="text-sm font-semibold text-emerald-800 mb-1">Want instant explanations for your own results?</p>
           <p className="text-xs text-emerald-700 leading-relaxed mb-3">
-            Upload your medical report and Medyra will explain every value in plain language — in under 60 seconds, in your language, GDPR compliant.
+            Upload your medical report and Medyra will explain every value in plain language, in under 60 seconds, in your language, GDPR compliant.
           </p>
           <Link
             href="/upload"
             className="inline-flex items-center gap-1.5 bg-emerald-600 text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors"
           >
-            Analyse my report — it&apos;s free →
+            Analyse my report, it&apos;s free →
           </Link>
         </div>
       </main>

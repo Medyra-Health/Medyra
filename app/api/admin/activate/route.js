@@ -18,7 +18,7 @@ export async function POST() {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
-  // Verify email via direct Clerk REST API — no SDK, always works
+  // Verify email via direct Clerk REST API, no SDK, always works
   const clerkRes = await fetch(`https://api.clerk.com/v1/users/${userId}`, {
     headers: { Authorization: `Bearer ${process.env.CLERK_SECRET_KEY}` },
   })
@@ -28,7 +28,7 @@ export async function POST() {
   const clerkUser = await clerkRes.json()
   const email = clerkUser.email_addresses?.[0]?.email_address
   if (email !== ADMIN_EMAIL) {
-    return NextResponse.json({ error: `Forbidden — ${email} is not the admin account` }, { status: 403 })
+    return NextResponse.json({ error: `Forbidden, ${email} is not the admin account` }, { status: 403 })
   }
 
   const db = await getDb()

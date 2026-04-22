@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Gli eritrociti nelle urine (ematuria) significa che c'è sangue nelle urine. Questo può indicare infezioni delle vie urinarie, calcoli renali o altre condizioni. Anche senza sintomi, un risultato positivo deve essere discusso con il vostro medico.",
-  "metaDescription": "Sangue nelle urine (ematuria)? Eritrociti nelle urine: cause, significato e quando consultare il medico — spiegato in modo semplice.",
+  "metaDescription": "Sangue nelle urine (ematuria)? Eritrociti nelle urine: cause, significato e quando consultare il medico: spiegato in modo semplice.",
   "causesElevated": ["Infezione delle vie urinarie", "Calcoli renali", "Cistite", "Malattia renale", "Trauma", "Alcuni farmaci"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
   "categoryLabel": "Valori urinari",
-  "pageTitle": "Eritrociti nelle urine — Ematuria spiegata | Medyra"
+  "pageTitle": "Eritrociti nelle urine: Ematuria spiegata | Medyra"
 }

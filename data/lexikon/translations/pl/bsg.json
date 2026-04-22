@@ -1,6 +1,6 @@
 {
   "shortAnswer": "OB (odczyn Biernackiego) mierzy, jak szybko czerwone krwinki osiadają w próbce krwi. Podwyższona wartość może wskazywać na stan zapalny, infekcję lub inne schorzenia. OB jest niespecyficznym markerem i zazwyczaj oceniany jest razem z innymi badaniami.",
-  "metaDescription": "OB podwyższone? Wartości prawidłowe, przyczyny i znaczenie odczynu Biernackiego — wyjaśnione prosto.",
+  "metaDescription": "OB podwyższone? Wartości prawidłowe, przyczyny i znaczenie odczynu Biernackiego: wyjaśnione prosto.",
   "causesElevated": ["Infekcje", "Choroby zapalne", "Choroby autoimmunologiczne", "Anemia", "Nowotwory"],
   "causesLow": ["Czerwienica", "Niewydolność serca"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
   "categoryLabel": "Markery zapalne",
-  "pageTitle": "Wartość OB — Odczyn Biernackiego wyjaśniony | Medyra"
+  "pageTitle": "Wartość OB: Odczyn Biernackiego wyjaśniony | Medyra"
 }

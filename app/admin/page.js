@@ -253,7 +253,7 @@ export default function AdminPage() {
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
                   <MessageSquare className="h-5 w-5 text-emerald-600" />
-                  <h2 className="text-sm font-semibold text-gray-700">Medyra AI — Chat Usage</h2>
+                  <h2 className="text-sm font-semibold text-gray-700">Medyra AI, Chat Usage</h2>
                 </div>
                 <a
                   href="https://console.anthropic.com/settings/usage"
@@ -343,7 +343,7 @@ export default function AdminPage() {
             <div className="lg:col-span-2 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
               <div className="flex items-center gap-2 mb-4">
                 <Stethoscope className="h-5 w-5 text-violet-600" />
-                <h2 className="text-sm font-semibold text-gray-700">Doctor Visit Prep — AI Summaries</h2>
+                <h2 className="text-sm font-semibold text-gray-700">Doctor Visit Prep, AI Summaries</h2>
               </div>
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div className="text-center p-3 bg-violet-50 rounded-xl border border-violet-100">
@@ -363,7 +363,7 @@ export default function AdminPage() {
               </div>
             </div>
             <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
-              <h2 className="text-sm font-semibold text-gray-700 mb-4">Most Active — Prep Users</h2>
+              <h2 className="text-sm font-semibold text-gray-700 mb-4">Most Active, Prep Users</h2>
               {prepStats.topUsers && prepStats.topUsers.length > 0 ? (
                 <div className="space-y-3">
                   {prepStats.topUsers.map((u, i) => (
@@ -392,7 +392,7 @@ export default function AdminPage() {
         <div className="grid lg:grid-cols-3 gap-4">
           {/* Line chart */}
           <div className="lg:col-span-2 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
-            <h2 className="text-sm font-semibold text-gray-700 mb-4">Activity — Last 30 Days</h2>
+            <h2 className="text-sm font-semibold text-gray-700 mb-4">Activity, Last 30 Days</h2>
             <AdminChart data={chartData} />
           </div>
 
@@ -601,7 +601,7 @@ export default function AdminPage() {
                 <div className="flex-1 min-w-0">
                   <p className={`font-bold text-sm ${encVerify.status === 'ENCRYPTED' ? 'text-emerald-700' : 'text-red-700'}`}>{encVerify.status}</p>
                   <p className="text-xs text-gray-500 mt-0.5">
-                    Encryption key configured: <strong>{encVerify.encryptionKeyConfigured ? 'Yes' : 'NO — add ENCRYPTION_KEY to Vercel env vars!'}</strong>
+                    Encryption key configured: <strong>{encVerify.encryptionKeyConfigured ? 'Yes' : 'NO, add ENCRYPTION_KEY to Vercel env vars!'}</strong>
                     {' · '}{encVerify.totalChecked} reports checked
                   </p>
                   {encVerify.status !== 'ENCRYPTED' && (

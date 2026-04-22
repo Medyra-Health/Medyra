@@ -1,6 +1,6 @@
 {
   "shortAnswer": "빌리루빈은 적혈구 분해 산물로 간에서 처리됩니다. 상승하면 황달이 생길 수 있으며, 간 질환, 담도 폐색, 용혈성 빈혈을 나타낼 수 있습니다.",
-  "metaDescription": "빌리루빈이 높나요? 정상 범위, 황달 원인, 언제 의사를 만나야 하는지 — 쉽게 설명합니다.",
+  "metaDescription": "빌리루빈이 높나요? 정상 범위, 황달 원인, 언제 의사를 만나야 하는지: 쉽게 설명합니다.",
   "causesElevated": ["간염", "간경변", "담도 폐색", "용혈성 빈혈", "Gilbert 증후군"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "경미한 상승", "high": "현저한 상승" },
   "categoryLabel": "간 기능 검사",
-  "pageTitle": "빌리루빈 수치 — 총 빌리루빈 쉽게 알아보기 | Medyra"
+  "pageTitle": "빌리루빈 수치: 총 빌리루빈 쉽게 알아보기 | Medyra"
 }

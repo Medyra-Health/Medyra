@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GPT/ALT (alanina aminotransferasi) è un enzima epatico. I livelli elevati possono indicare infiammazione o danno epatico, ad esempio da alcol, farmaci o steatosi epatica. Discutete risultati leggermente elevati con il vostro medico.",
-  "metaDescription": "GPT / ALT elevato? Valori normali, cause e cosa significa un alto livello di enzimi epatici — spiegato in modo semplice.",
+  "metaDescription": "GPT / ALT elevato? Valori normali, cause e cosa significa un alto livello di enzimi epatici: spiegato in modo semplice.",
   "causesElevated": ["Steatosi epatica", "Consumo di alcol", "Epatite virale", "Effetti collaterali di farmaci", "Malattia cardiaca"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
   "categoryLabel": "Valori epatici",
-  "pageTitle": "Valore GPT/ALT — Alanina Aminotransferasi spiegata | Medyra"
+  "pageTitle": "Valore GPT/ALT: Alanina Aminotransferasi spiegata | Medyra"
 }

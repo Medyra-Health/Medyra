@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Witamina B12 (kobalamina) jest niezbędna do tworzenia krwi, układu nerwowego i metabolizmu komórkowego. Niedobór rozwija się powoli i może powodować zmęczenie, mrowienie i problemy z pamięcią. Weganie i osoby starsze są bardziej narażone. Omów wszelkie podejrzenia z lekarzem.",
-  "metaDescription": "Witamina B12 zbyt niska? Wartości prawidłowe, objawy niedoboru i leczenie weganów i osób starszych — wyjaśnione prosto.",
+  "metaDescription": "Witamina B12 zbyt niska? Wartości prawidłowe, objawy niedoboru i leczenie weganów i osób starszych: wyjaśnione prosto.",
   "causesElevated": ["Choroba wątroby", "Niektóre choroby krwi", "Przedawkowanie suplementów"],
   "causesLow": ["Dieta wegańska/wegetariańska", "Zanikowe zapalenie błony śluzowej żołądka", "Słabe wchłanianie jelitowe", "Długotrwałe stosowanie metforminy lub inhibitorów pompy protonowej"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niedobór", "normal": "Wystarczający", "elevated": "Podwyższone", "high": "Podwyższone" },
   "categoryLabel": "Witaminy",
-  "pageTitle": "Wartość witaminy B12 — Kobalamina wyjaśniona | Medyra"
+  "pageTitle": "Wartość witaminy B12: Kobalamina wyjaśniona | Medyra"
 }

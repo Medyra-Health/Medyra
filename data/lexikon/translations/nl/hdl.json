@@ -1,6 +1,6 @@
 {
   "shortAnswer": "HDL staat bekend als het 'goede' cholesterol omdat het overtollig cholesterol terugvoert naar de lever. Hoge HDL-waarden beschermen het hart. Lage waarden kunnen het cardiovasculaire risico verhogen. Bespreek lage HDL-waarden met uw arts.",
-  "metaDescription": "HDL te laag? Normaalwaarden, oorzaken en hoe goed cholesterol te verhogen — eenvoudig uitgelegd.",
+  "metaDescription": "HDL te laag? Normaalwaarden, oorzaken en hoe goed cholesterol te verhogen: eenvoudig uitgelegd.",
   "causesElevated": ["Regelmatige lichaamsbeweging", "Matig alcoholgebruik"],
   "causesLow": ["Lichamelijke inactiviteit", "Obesitas", "Roken", "Diabetes", "Verhoogde triglyceriden"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Te laag (verhoogd risico)", "normal": "Wenselijk (≥ 40)", "elevated": "Optimaal (≥ 60)", "high": "Optimaal (≥ 60)" },
   "categoryLabel": "Stofwisseling",
-  "pageTitle": "Waarde HDL — Goed Cholesterol uitgelegd | Medyra"
+  "pageTitle": "Waarde HDL: Goed Cholesterol uitgelegd | Medyra"
 }

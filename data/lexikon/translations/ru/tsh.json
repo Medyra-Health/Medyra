@@ -1,6 +1,6 @@
 {
-  "shortAnswer": "TTG (tireotropny gormon) reguliruet funktsiyu shchitovidnoy zhelezy. Norma: 0.4-4.0 mME/l. Povyshenie ukazyvaet na gipotireoz, snizhenie — na gipertireoz.",
-  "metaDescription": "TTG povyshen ili ponizhen? Norma tireotropnogo gormona i bolezni shchitovidnoy zhelezy — obyasnenie.",
+  "shortAnswer": "TTG (tireotropny gormon) reguliruet funktsiyu shchitovidnoy zhelezy. Norma: 0.4-4.0 mME/l. Povyshenie ukazyvaet na gipotireoz, snizhenie: na gipertireoz.",
+  "metaDescription": "TTG povyshen ili ponizhen? Norma tireotropnogo gormona i bolezni shchitovidnoy zhelezy: obyasnenie.",
   "causesElevated": [
     "Gipotireoz",
     "Tireoidit Khashimoto",
@@ -24,5 +24,5 @@
     "high": "Gipotireoz"
   },
   "categoryLabel": "Shchitovidnaya zheleza",
-  "pageTitle": "TTG (TSH) — Tireotropny gormon: norma | Medyra"
+  "pageTitle": "TTG (TSH): Tireotropny gormon: norma | Medyra"
 }

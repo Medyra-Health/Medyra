@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Gli eritrociti (globuli rossi) trasportano l'ossigeno dai polmoni ai tessuti del corpo. Un basso conteggio può indicare anemia, mentre un conteggio alto può suggerire disidratazione. Discutete con il vostro medico qualsiasi risultato anomalo.",
-  "metaDescription": "Eritrociti / globuli rossi bassi o alti? Valori normali, cause e cosa significa per la salute — spiegato in modo semplice.",
+  "metaDescription": "Eritrociti / globuli rossi bassi o alti? Valori normali, cause e cosa significa per la salute: spiegato in modo semplice.",
   "causesElevated": ["Disidratazione", "Altitudine elevata", "Fumo", "Policitemia vera"],
   "causesLow": ["Carenza di ferro", "Carenza di vitamina B12", "Carenza di folato", "Malattie croniche", "Anemia da perdita di sangue"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale (uomini)", "elevated": "Elevato", "high": "Molto elevato" },
   "categoryLabel": "Emocromo",
-  "pageTitle": "Valore eritrociti — Globuli rossi spiegati | Medyra"
+  "pageTitle": "Valore eritrociti: Globuli rossi spiegati | Medyra"
 }

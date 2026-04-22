@@ -1,6 +1,6 @@
 {
   "shortAnswer": "비타민 D는 뼈, 면역계, 근육 기능에 필수적입니다. 특히 겨울에 결핍이 흔하며, 낮은 수치는 피로와 뼈 통증을 유발할 수 있습니다. 보충 전 의사와 상담하세요.",
-  "metaDescription": "비타민 D가 낮나요? 정상 범위, 결핍 증상, 언제 보충이 필요한지 — 쉽게 설명합니다.",
+  "metaDescription": "비타민 D가 낮나요? 정상 범위, 결핍 증상, 언제 보충이 필요한지: 쉽게 설명합니다.",
   "causesElevated": ["보충제 과다 섭취"],
   "causesLow": ["햇빛 노출 부족", "짙은 피부색", "고령", "흡수 장애", "신장 질환"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "결핍", "normal": "충분", "elevated": "경계(부족)", "high": "과다 가능성" },
   "categoryLabel": "비타민",
-  "pageTitle": "비타민 D 수치 — 25-OH 비타민 D 쉽게 알아보기 | Medyra"
+  "pageTitle": "비타민 D 수치: 25-OH 비타민 D 쉽게 알아보기 | Medyra"
 }

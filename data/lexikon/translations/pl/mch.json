@@ -1,6 +1,6 @@
 {
-  "shortAnswer": "MCH mierzy średnią ilość hemoglobiny w jednej czerwonej krwince. Niskie wartości mogą wskazywać na niedobór żelaza, wysokie — na niedobór witaminy B12. Omów nieprawidłowe wyniki z lekarzem.",
-  "metaDescription": "MCH niskie lub wysokie? Wartości prawidłowe, znaczenie i przyczyny nieprawidłowej zawartości hemoglobiny na komórkę — wyjaśnione prosto.",
+  "shortAnswer": "MCH mierzy średnią ilość hemoglobiny w jednej czerwonej krwince. Niskie wartości mogą wskazywać na niedobór żelaza, wysokie: na niedobór witaminy B12. Omów nieprawidłowe wyniki z lekarzem.",
+  "metaDescription": "MCH niskie lub wysokie? Wartości prawidłowe, znaczenie i przyczyny nieprawidłowej zawartości hemoglobiny na komórkę: wyjaśnione prosto.",
   "causesElevated": ["Niedobór witaminy B12", "Niedobór kwasu foliowego", "Spożycie alkoholu"],
   "causesLow": ["Niedobór żelaza", "Talasemia", "Choroba przewlekła"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
   "categoryLabel": "Morfologia krwi",
-  "pageTitle": "Wartość MCH — Średnia Hemoglobina Krwinkowa wyjaśniona | Medyra"
+  "pageTitle": "Wartość MCH: Średnia Hemoglobina Krwinkowa wyjaśniona | Medyra"
 }

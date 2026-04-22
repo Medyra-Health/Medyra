@@ -1,6 +1,6 @@
 {
   "shortAnswer": "İdrarda protein (proteinüri), sağlıklı böbrekler normalde proteini tuttuğu için böbrek hasarına işaret edebilir. Egzersiz veya ateş sonrasında az miktarlar görülebilir. Süregelen değerler böbrek hastalığına işaret edebileceğinden doktorunuzla görüşülmelidir.",
-  "metaDescription": "İdrarda protein (proteinüri)? Nedenler, böbrek hastalığı riski ve bulgunun anlamı — basitçe açıklandı.",
+  "metaDescription": "İdrarda protein (proteinüri)? Nedenler, böbrek hastalığı riski ve bulgunun anlamı: basitçe açıklandı.",
   "causesElevated": ["Kronik böbrek hastalığı", "Diyabet (diyabetik nefropati)", "Yüksek tansiyon", "Yoğun fiziksel egzersiz", "Böbrek iltihabı"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "İdrar Değerleri",
-  "pageTitle": "İdrarda protein — Proteinüri açıklaması | Medyra"
+  "pageTitle": "İdrarda protein: Proteinüri açıklaması | Medyra"
 }

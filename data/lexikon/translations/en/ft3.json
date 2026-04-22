@@ -1,6 +1,6 @@
 {
   "shortAnswer": "fT3 (free triiodothyronine) is the active thyroid hormone that influences metabolism, heart rate, and many body functions. Elevated levels may indicate hyperthyroidism, while low levels may point to hypothyroidism. Discuss any deviations with your doctor.",
-  "metaDescription": "fT3 elevated or low? Normal ranges, meaning, and causes of free triiodothyronine abnormalities — explained simply.",
+  "metaDescription": "fT3 elevated or low? Normal ranges, meaning, and causes of free triiodothyronine abnormalities: explained simply.",
   "causesElevated": ["Hyperthyroidism", "Graves' disease", "Thyroid inflammation"],
   "causesLow": ["Hypothyroidism", "Hashimoto's thyroiditis", "Iodine deficiency", "Severe systemic illness"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Thyroid",
-  "pageTitle": "fT3 value — Free Triiodothyronine explained | Medyra"
+  "pageTitle": "fT3 value: Free Triiodothyronine explained | Medyra"
 }

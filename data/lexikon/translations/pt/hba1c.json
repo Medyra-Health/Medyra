@@ -1,6 +1,6 @@
 {
   "shortAnswer": "HbA1c mostra o nível médio de glicose no sangue nos últimos 2–3 meses. Valores acima de 6,5% podem indicar diabetes. Valores entre 5,7% e 6,4% são considerados pré-diabetes. Sempre discuta valores elevados com o seu médico.",
-  "metaDescription": "HbA1c elevado? Valores normais, risco de diabetes e o que significa a glicemia a longo prazo — explicado de forma simples.",
+  "metaDescription": "HbA1c elevado? Valores normais, risco de diabetes e o que significa a glicemia a longo prazo: explicado de forma simples.",
   "causesElevated": ["Diabetes tipo 2", "Diabetes tipo 1", "Diabetes mal controlado", "Resistência à insulina"],
   "causesLow": ["Hemólise", "Anemia por perda de sangue", "Certas variantes de hemoglobina"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Pré-diabetes", "high": "Faixa diabética" },
   "categoryLabel": "Metabolismo",
-  "pageTitle": "Valor HbA1c — Glicemia a longo prazo explicada | Medyra"
+  "pageTitle": "Valor HbA1c: Glicemia a longo prazo explicada | Medyra"
 }

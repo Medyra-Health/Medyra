@@ -1,6 +1,6 @@
 {
   "shortAnswer": "L'hémoglobine (Hb) est la protéine des globules rouges qui transporte l'oxygène des poumons vers les organes. Les valeurs normales sont de 12–16 g/dl pour les femmes et 13,5–17,5 g/dl pour les hommes. Une valeur basse indique une anémie et peut causer de la fatigue. Discutez des résultats anormaux avec votre médecin.",
-  "metaDescription": "Hémoglobine (Hb) trop basse ? Valeurs normales pour hommes et femmes, causes de l'anémie et quand consulter — expliqués simplement.",
+  "metaDescription": "Hémoglobine (Hb) trop basse ? Valeurs normales pour hommes et femmes, causes de l'anémie et quand consulter: expliqués simplement.",
   "causesElevated": ["Déshydratation", "Tabagisme", "Altitude élevée", "Polyglobulie vraie"],
   "causesLow": ["Carence en fer", "Carence en vitamine B12", "Maladie chronique", "Perte de sang", "Carence en folates"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
   "categoryLabel": "Numération formule sanguine",
-  "pageTitle": "Valeur Hb — Hémoglobine expliquée | Medyra"
+  "pageTitle": "Valeur Hb: Hémoglobine expliquée | Medyra"
 }

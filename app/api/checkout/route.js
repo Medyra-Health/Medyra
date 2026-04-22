@@ -17,10 +17,10 @@ async function getDb() {
   return _db
 }
 
-// Plan config — dynamic price_data, no Stripe Price IDs needed.
+// Plan config, dynamic price_data, no Stripe Price IDs needed.
 const PLANS = {
-  personal: { amount: 499,  mode: 'subscription', label: 'Medyra Personal — €4.99/month' },
-  family:   { amount: 999,  mode: 'subscription', label: 'Medyra Family — €9.99/month' },
+  personal: { amount: 499,  mode: 'subscription', label: 'Medyra Personal, €4.99/month' },
+  family:   { amount: 999,  mode: 'subscription', label: 'Medyra Family, €9.99/month' },
 }
 
 export async function POST(request) {

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Le MCH mesure la quantité moyenne d'hémoglobine dans un globule rouge. Des valeurs basses peuvent indiquer une carence en fer, des valeurs élevées peuvent suggérer une carence en vitamine B12. Discutez de tout résultat anormal avec votre médecin.",
-  "metaDescription": "MCH bas ou élevé ? Valeurs normales, signification et causes de la teneur anormale en hémoglobine — expliqués simplement.",
+  "metaDescription": "MCH bas ou élevé ? Valeurs normales, signification et causes de la teneur anormale en hémoglobine: expliqués simplement.",
   "causesElevated": ["Carence en vitamine B12", "Carence en folates", "Consommation d'alcool"],
   "causesLow": ["Carence en fer", "Thalassémie", "Maladie chronique"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
   "categoryLabel": "Numération formule sanguine",
-  "pageTitle": "Valeur MCH — Teneur corpusculaire moyenne en hémoglobine expliquée | Medyra"
+  "pageTitle": "Valeur MCH: Teneur corpusculaire moyenne en hémoglobine expliquée | Medyra"
 }

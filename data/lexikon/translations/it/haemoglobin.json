@@ -1,6 +1,6 @@
 {
   "shortAnswer": "L'emoglobina (Hb) è la proteina nei globuli rossi che trasporta l'ossigeno dai polmoni agli organi e ai tessuti. I valori normali sono 12–16 g/dl per le donne e 13,5–17,5 g/dl per gli uomini. Un livello basso indica anemia e può causare stanchezza. Discutete i risultati anomali con il vostro medico.",
-  "metaDescription": "Emoglobina (Hb) troppo bassa? Valori normali per uomini e donne, cause dell'anemia e quando consultare il medico — spiegato in modo semplice.",
+  "metaDescription": "Emoglobina (Hb) troppo bassa? Valori normali per uomini e donne, cause dell'anemia e quando consultare il medico: spiegato in modo semplice.",
   "causesElevated": ["Disidratazione", "Fumo", "Altitudine elevata", "Policitemia vera"],
   "causesLow": ["Carenza di ferro", "Carenza di vitamina B12", "Malattia cronica", "Perdita di sangue", "Carenza di folato"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
   "categoryLabel": "Emocromo",
-  "pageTitle": "Valore Hb — Emoglobina spiegata | Medyra"
+  "pageTitle": "Valore Hb: Emoglobina spiegata | Medyra"
 }

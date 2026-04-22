@@ -1,6 +1,6 @@
 {
   "shortAnswer": "MCH meet de gemiddelde hoeveelheid hemoglobine in één rode bloedcel. Lage waarden kunnen wijzen op ijzertekort, terwijl hoge waarden kunnen duiden op vitamine B12-tekort. Bespreek abnormale bevindingen met uw arts.",
-  "metaDescription": "MCH laag of hoog? Normaalwaarden, betekenis en oorzaken van abnormaal hemoglobinegehalte per cel — eenvoudig uitgelegd.",
+  "metaDescription": "MCH laag of hoog? Normaalwaarden, betekenis en oorzaken van abnormaal hemoglobinegehalte per cel: eenvoudig uitgelegd.",
   "causesElevated": ["Vitamine B12-tekort", "Foliumzuurtekort", "Alcoholgebruik"],
   "causesLow": ["IJzertekort", "Thalassemie", "Chronische ziekte"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "Bloedbeeld",
-  "pageTitle": "Waarde MCH — Gemiddeld Cellulair Hemoglobine uitgelegd | Medyra"
+  "pageTitle": "Waarde MCH: Gemiddeld Cellulair Hemoglobine uitgelegd | Medyra"
 }

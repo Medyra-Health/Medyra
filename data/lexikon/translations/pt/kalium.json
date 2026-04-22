@@ -1,6 +1,6 @@
 {
   "shortAnswer": "O potássio (K) é um eletrólito que regula o ritmo cardíaco, músculos e nervos. Níveis baixos podem causar arritmias cardíacas e fraqueza muscular; níveis altos também são perigosos. Desvios significativos devem ser discutidos com o seu médico prontamente.",
-  "metaDescription": "Potássio elevado ou baixo? Valores normais, risco cardíaco e causas do desequilíbrio de potássio — explicado de forma simples.",
+  "metaDescription": "Potássio elevado ou baixo? Valores normais, risco cardíaco e causas do desequilíbrio de potássio: explicado de forma simples.",
   "causesElevated": ["Doença renal", "Inibidores da ECA ou diuréticos poupadores de potássio", "Ingestão excessiva de potássio", "Acidose"],
   "causesLow": ["Vômitos / diarréia", "Diuréticos", "Deficiência de magnésio", "Ingestão inadequada"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado (hipercalemia)", "high": "Muito elevado (perigoso)" },
   "categoryLabel": "Eletrólitos",
-  "pageTitle": "Valor K — Potássio explicado | Medyra"
+  "pageTitle": "Valor K: Potássio explicado | Medyra"
 }
