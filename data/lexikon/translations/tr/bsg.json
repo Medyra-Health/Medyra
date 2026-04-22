@@ -1,6 +1,6 @@
 {
   "shortAnswer": "ESR (eritrosit sedimentasyon hızı), kırmızı kan hücrelerinin bir kan örneğinde ne kadar hızlı çöktüğünü ölçer. Yüksek bir değer iltihap, enfeksiyon veya diğer durumları gösterebilir. ESR spesifik olmayan bir belirteçtir ve genellikle diğer testlerle birlikte değerlendirilir.",
-  "metaDescription": "ESR yüksek mi? Normal değerler, nedenler ve eritrosit sedimentasyon hızının anlamı — basitçe açıklandı.",
+  "metaDescription": "ESR yüksek mi? Normal değerler, nedenler ve eritrosit sedimentasyon hızının anlamı: basitçe açıklandı.",
   "causesElevated": ["Enfeksiyonlar", "İnflamatuar hastalıklar", "Otoimmün hastalıklar", "Anemi", "Kanser"],
   "causesLow": ["Polisitemi", "Kalp yetmezliği"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "İltihap Belirteçleri",
-  "pageTitle": "ESR değeri — Eritrosit Sedimentasyon Hızı açıklaması | Medyra"
+  "pageTitle": "ESR değeri: Eritrosit Sedimentasyon Hızı açıklaması | Medyra"
 }

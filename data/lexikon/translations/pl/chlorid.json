@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Chlorki (Cl) to elektrolit pomagający regulować równowagę kwasowo-zasadową i gospodarkę wodną. Odchylenia od normy mogą wskazywać na problemy nerkowe lub metaboliczne. Zazwyczaj oceniany jest razem z sodem i potasem. Omów nieprawidłowe wartości z lekarzem.",
-  "metaDescription": "Chlorki podwyższone lub niskie? Wartości prawidłowe, przyczyny i znaczenie tego elektrolitu — wyjaśnione prosto.",
+  "metaDescription": "Chlorki podwyższone lub niskie? Wartości prawidłowe, przyczyny i znaczenie tego elektrolitu: wyjaśnione prosto.",
   "causesElevated": ["Odwodnienie", "Choroba nerek", "Biegunka", "Niektóre leki"],
   "causesLow": ["Wymioty", "Diuretyki", "Niewydolność serca", "Kwasica metaboliczna"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone (hiperchloriemia)", "high": "Znacznie podwyższone" },
   "categoryLabel": "Elektrolity",
-  "pageTitle": "Wartość Cl — Chlorki wyjaśnione | Medyra"
+  "pageTitle": "Wartość Cl: Chlorki wyjaśnione | Medyra"
 }

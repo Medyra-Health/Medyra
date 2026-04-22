@@ -1,6 +1,6 @@
 {
   "shortAnswer": "White blood cells in urine can indicate inflammation of the urinary tract. Small amounts may be normal, but higher values may point to a urinary tract infection or kidney inflammation. Discuss positive findings with your doctor.",
-  "metaDescription": "White blood cells in urine elevated? Causes, meaning, and when it indicates a urinary tract infection — explained simply.",
+  "metaDescription": "White blood cells in urine elevated? Causes, meaning, and when it indicates a urinary tract infection: explained simply.",
   "causesElevated": ["Urinary tract infection (cystitis)", "Kidney inflammation (pyelonephritis)", "Urethritis", "Kidney disease"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Urine Values",
-  "pageTitle": "WBC in urine — Urinary tract infection explained | Medyra"
+  "pageTitle": "WBC in urine: Urinary tract infection explained | Medyra"
 }

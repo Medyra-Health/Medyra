@@ -1,6 +1,6 @@
 {
   "shortAnswer": "HDL znany jest jako „dobry" cholesterol, ponieważ transportuje nadmiar cholesterolu z powrotem do wątroby. Wysokie wartości HDL chronią serce. Niskie wartości mogą zwiększać ryzyko sercowo-naczyniowe. Omów niskie wartości HDL z lekarzem.",
-  "metaDescription": "HDL zbyt niskie? Wartości prawidłowe, przyczyny i jak podnieść dobry cholesterol — wyjaśnione prosto.",
+  "metaDescription": "HDL zbyt niskie? Wartości prawidłowe, przyczyny i jak podnieść dobry cholesterol: wyjaśnione prosto.",
   "causesElevated": ["Regularna aktywność fizyczna", "Umiarkowane spożycie alkoholu"],
   "causesLow": ["Brak aktywności fizycznej", "Otyłość", "Palenie tytoniu", "Cukrzyca", "Podwyższone trójglicerydy"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Zbyt niskie (zwiększone ryzyko)", "normal": "Pożądane (≥ 40)", "elevated": "Optymalne (≥ 60)", "high": "Optymalne (≥ 60)" },
   "categoryLabel": "Metabolizm",
-  "pageTitle": "Wartość HDL — Dobry cholesterol wyjaśniony | Medyra"
+  "pageTitle": "Wartość HDL: Dobry cholesterol wyjaśniony | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "I leucociti nelle urine possono indicare un'infiammazione del tratto urinario. Piccole quantità possono essere normali, ma valori più alti possono indicare un'infezione delle vie urinarie o un'infiammazione renale. Discutete i risultati positivi con il vostro medico.",
-  "metaDescription": "Leucociti nelle urine elevati? Cause, significato e quando indica un'infezione delle vie urinarie — spiegato in modo semplice.",
+  "metaDescription": "Leucociti nelle urine elevati? Cause, significato e quando indica un'infezione delle vie urinarie: spiegato in modo semplice.",
   "causesElevated": ["Infezione delle vie urinarie (cistite)", "Infiammazione renale (pielonefrite)", "Uretrite", "Malattia renale"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
   "categoryLabel": "Valori urinari",
-  "pageTitle": "Leucociti nelle urine — Infezione delle vie urinarie spiegata | Medyra"
+  "pageTitle": "Leucociti nelle urine: Infezione delle vie urinarie spiegata | Medyra"
 }

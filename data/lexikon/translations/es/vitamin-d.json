@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La vitamina D es esencial para los huesos, el sistema inmunitario y los músculos. La deficiencia es muy común, especialmente en invierno. Los niveles bajos pueden causar fatiga y dolor óseo. Consulte con su médico cualquier deficiencia antes de tomar suplementos.",
-  "metaDescription": "Vitamina D demasiado baja? Valores normales, síntomas de deficiencia y cuándo la suplementación tiene sentido — explicado de forma sencilla.",
+  "metaDescription": "Vitamina D demasiado baja? Valores normales, síntomas de deficiencia y cuándo la suplementación tiene sentido: explicado de forma sencilla.",
   "causesElevated": ["Sobredosis de suplementos dietéticos"],
   "causesLow": ["Poca exposición solar", "Tono de piel oscuro", "Edad avanzada", "Malabsorción", "Enfermedad renal"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Deficiente", "normal": "Suficiente", "elevated": "Limítrofe (insuficiencia)", "high": "Posiblemente demasiado alto" },
   "categoryLabel": "Vitaminas",
-  "pageTitle": "Valor vitamina D — 25-OH Vitamina D explicada | Medyra"
+  "pageTitle": "Valor vitamina D: 25-OH Vitamina D explicada | Medyra"
 }

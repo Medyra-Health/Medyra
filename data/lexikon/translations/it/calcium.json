@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Il calcio (Ca) è un minerale essenziale per ossa, muscoli e nervi. Livelli ematici alti possono indicare disturbi paratiroidei o malattia ossea; livelli bassi possono indicare carenza di vitamina D o malnutrizione. Discutete qualsiasi deviazione con il vostro medico.",
-  "metaDescription": "Calcio elevato o basso? Valori normali, cause e cosa significa per la salute ossea — spiegato in modo semplice.",
+  "metaDescription": "Calcio elevato o basso? Valori normali, cause e cosa significa per la salute ossea: spiegato in modo semplice.",
   "causesElevated": ["Iperparatiroidismo primario", "Cancro", "Sovradosaggio di vitamina D", "Sarcoidosi"],
   "causesLow": ["Carenza di vitamina D", "Ipoparatiroidismo", "Carenza di magnesio", "Malattia renale"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato (ipercalcemia)", "high": "Molto elevato" },
   "categoryLabel": "Elettroliti",
-  "pageTitle": "Valore Ca — Calcio spiegato | Medyra"
+  "pageTitle": "Valore Ca: Calcio spiegato | Medyra"
 }

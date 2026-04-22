@@ -1,6 +1,6 @@
 {
   "shortAnswer": "적혈구 침강 속도(ESR/BSG)는 비특이적 염증 지표입니다. 상승은 염증, 감염, 자가면역 질환을 나타낼 수 있으며 다른 검사와 함께 종합 평가가 필요합니다.",
-  "metaDescription": "혈침이 높나요? 정상 범위, 염증 원인, 의미 — 쉽게 설명합니다.",
+  "metaDescription": "혈침이 높나요? 정상 범위, 염증 원인, 의미: 쉽게 설명합니다.",
   "causesElevated": ["감염", "자가면역 질환", "종양", "빈혈", "임신"],
   "causesLow": ["진성 적혈구 증가증", "겸상 적혈구 빈혈"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "경미한 상승", "high": "현저한 상승" },
   "categoryLabel": "염증 지표",
-  "pageTitle": "ESR 수치 — 적혈구 침강 속도 쉽게 알아보기 | Medyra"
+  "pageTitle": "ESR 수치: 적혈구 침강 속도 쉽게 알아보기 | Medyra"
 }

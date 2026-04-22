@@ -1,6 +1,6 @@
 {
   "shortAnswer": "혈소판(PLT)은 혈액 응고에 관여합니다. 낮은 수치는 출혈 위험 증가를, 높은 수치는 혈전 위험을 나타낼 수 있습니다. 이상 수치는 의사와 상담하세요.",
-  "metaDescription": "혈소판이 낮거나 높나요? 정상 범위, 원인, 건강에 미치는 의미 — 쉽게 설명합니다.",
+  "metaDescription": "혈소판이 낮거나 높나요? 정상 범위, 원인, 건강에 미치는 의미: 쉽게 설명합니다.",
   "causesElevated": ["감염", "염증", "철 결핍", "비장 절제 후", "본태성 혈소판 증가증"],
   "causesLow": ["바이러스 감염", "자가면역 질환", "일부 약물", "골수 질환", "간경변"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "상승", "high": "현저한 상승" },
   "categoryLabel": "혈구 검사",
-  "pageTitle": "PLT 수치 — 혈소판 쉽게 알아보기 | Medyra"
+  "pageTitle": "PLT 수치: 혈소판 쉽게 알아보기 | Medyra"
 }

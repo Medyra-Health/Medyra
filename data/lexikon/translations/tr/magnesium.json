@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Magnezyum (Mg), 300'den fazla enzim reaksiyonunda yer alır ve kaslar, sinirler ve kalp ritmi için önemlidir. Düşük değerler kas kramplarına ve yorgunluğa neden olabilir. Yüksek değerler nadirdir. Süregelen şikayetleri doktorunuzla görüşün.",
-  "metaDescription": "Magnezyum düşük mü? Normal değerler, eksiklik nedenleri ve belirtileri — basitçe açıklandı.",
+  "metaDescription": "Magnezyum düşük mü? Normal değerler, eksiklik nedenleri ve belirtileri: basitçe açıklandı.",
   "causesElevated": ["Böbrek yetmezliği", "Magnezyum takviyelerinin aşırı kullanımı"],
   "causesLow": ["Yetersiz alım", "Alkol kullanımı", "İshal / kusma", "Diüretikler", "Diyabet"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "Elektrolitler",
-  "pageTitle": "Mg değeri — Magnezyum açıklaması | Medyra"
+  "pageTitle": "Mg değeri: Magnezyum açıklaması | Medyra"
 }

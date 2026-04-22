@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GOT/AST (aspartate aminotransferase) is an enzyme found in the liver, heart, and muscles. Elevated levels can indicate liver damage or heart problems. In combination with GPT/ALT, it helps narrow down the cause. Discuss abnormal values with your doctor.",
-  "metaDescription": "GOT / AST elevated? Normal ranges, causes, and meaning of this liver enzyme — explained simply.",
+  "metaDescription": "GOT / AST elevated? Normal ranges, causes, and meaning of this liver enzyme: explained simply.",
   "causesElevated": ["Liver disease", "Heart attack", "Muscle disease", "Alcohol use", "Certain medications"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Liver Values",
-  "pageTitle": "GOT/AST value — Aspartate Aminotransferase explained | Medyra"
+  "pageTitle": "GOT/AST value: Aspartate Aminotransferase explained | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La proteína en orina (proteinuria) puede indicar daño renal, ya que los riñones sanos normalmente retienen las proteínas. Pequeñas cantidades pueden aparecer después del ejercicio o la fiebre. Los valores persistentes deben discutirse con su médico, ya que pueden apuntar a enfermedad renal.",
-  "metaDescription": "Proteína en orina (proteinuria)? Causas, riesgo de enfermedad renal y qué significa el hallazgo — explicado de forma sencilla.",
+  "metaDescription": "Proteína en orina (proteinuria)? Causas, riesgo de enfermedad renal y qué significa el hallazgo: explicado de forma sencilla.",
   "causesElevated": ["Enfermedad renal crónica", "Diabetes (nefropatía diabética)", "Hipertensión arterial", "Esfuerzo físico intenso", "Inflamación renal"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
   "categoryLabel": "Valores de orina",
-  "pageTitle": "Proteína en orina — Proteinuria explicada | Medyra"
+  "pageTitle": "Proteína en orina: Proteinuria explicada | Medyra"
 }

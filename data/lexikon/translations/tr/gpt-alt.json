@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GPT/ALT (alanin aminotransferaz) bir karaciğer enzimidir. Yüksek değerler karaciğer iltihabı veya hasarına işaret edebilir; örneğin alkol, ilaçlar veya yağlı karaciğer hastalığından kaynaklanabilir. Hafif yüksek sonuçları doktorunuzla görüşün.",
-  "metaDescription": "GPT / ALT yüksek mi? Normal değerler, nedenler ve yüksek karaciğer enziminin anlamı — basitçe açıklandı.",
+  "metaDescription": "GPT / ALT yüksek mi? Normal değerler, nedenler ve yüksek karaciğer enziminin anlamı: basitçe açıklandı.",
   "causesElevated": ["Yağlı karaciğer hastalığı", "Alkol kullanımı", "Viral hepatit", "İlaç yan etkileri", "Kalp hastalığı"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "Karaciğer Değerleri",
-  "pageTitle": "GPT/ALT değeri — Alanin Aminotransferaz açıklaması | Medyra"
+  "pageTitle": "GPT/ALT değeri: Alanin Aminotransferaz açıklaması | Medyra"
 }

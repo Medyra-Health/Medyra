@@ -2,7 +2,7 @@ export default function JsonLd({ entry }) {
   const medicalPage = {
     '@context': 'https://schema.org',
     '@type': 'MedicalWebPage',
-    name: `${entry.acronym} — ${entry.fullName}`,
+    name: `${entry.acronym}: ${entry.fullName}`,
     description: entry.metaDescription,
     url: `https://medyra.de/lexikon/${entry.slug}`,
     inLanguage: 'de-DE',

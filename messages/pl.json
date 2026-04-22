@@ -18,7 +18,7 @@
     "subtitle": "W końcu po ludzku",
     "description": "Przestań szukać terminów medycznych w Google. Prześlij wyniki i uzyskaj jasne, prywatne wyjaśnienie AI w mniej niż 60 sekund.",
     "cta": "Analizuj pierwszy raport bezpłatnie",
-    "disclaimer": "Tylko informacje edukacyjne — nie zastępuje porady medycznej.",
+    "disclaimer": "Tylko informacje edukacyjne: nie zastępuje porady medycznej.",
     "secondaryCta": "Zobacz cennik"
   },
   "features": {
@@ -151,9 +151,9 @@
     "comingSoon": "Wkrótce",
     "goToDashboard": "Przejdź do panelu",
     "faqTitle": "Często zadawane pytania",
-    "launchOfferBanner": "🔥 Oferta startowa — 50% zniżki na wszystkie płatne plany",
+    "launchOfferBanner": "🔥 Oferta startowa: 50% zniżki na wszystkie płatne plany",
     "limitedOffer": "Ograniczona oferta startowa",
-    "fiftyOff": "50% zniżki — dopóki trwa",
+    "fiftyOff": "50% zniżki: dopóki trwa",
     "applyCode": "Wprowadź kod przy kasie. Obowiązuje dla wszystkich płatnych planów.",
     "copied": "Skopiowano!",
     "copyCode": "Kopiuj kod",
@@ -257,7 +257,7 @@
     "allValuesNormal": "Wszystkie wartości prawidłowe",
     "keyTakeaways": "Kluczowe punkty",
     "valuesNeedingAttention": "Wartości wymagające uwagi",
-    "greatResults": "Świetne wyniki — omów z lekarzem",
+    "greatResults": "Świetne wyniki: omów z lekarzem",
     "allReports": "Wszystkie raporty",
     "saveAsPdf": "Zapisz jako PDF",
     "chatGreeting": "Cześć! Przeczytałem twój raport. Pytaj o wszystko:",
@@ -348,7 +348,7 @@
     "howItWorks": {
       "badge": "Prosty proces",
       "step1Title": "Prześlij raport",
-      "step1Desc": "Przeciągnij PDF, JPG, PNG lub TXT. Nasza AI odczytuje tekst — nawet ze skanowanych zdjęć.",
+      "step1Desc": "Przeciągnij PDF, JPG, PNG lub TXT. Nasza AI odczytuje tekst: nawet ze skanowanych zdjęć.",
       "step1Detail": "Natychmiastowe szyfrowanie",
       "step2Title": "AI analizuje w ~30s",
       "step2Desc": "Claude AI identyfikuje każdą wartość, oznacza nieprawidłowe wyniki i pisze jasne wyjaśnienie.",
@@ -356,26 +356,26 @@
       "step3Title": "Uzyskaj odpowiedzi",
       "step3Desc": "Przeczytaj wyniki, porozmawiaj z AI i wyeksportuj PDF na następną wizytę.",
       "step3Detail": "Udostępnij lekarzowi",
-      "cta": "Zacznij za darmo — bez karty"
+      "cta": "Zacznij za darmo: bez karty"
     },
     "doctorVisit": {
       "badge": "Nowa funkcja",
       "title1": "Idziesz do lekarza?",
       "title2": "Przyjedź przygotowany.",
-      "description": "Opisz, jak się czujesz — w dowolnym języku. Medyra tworzy ustrukturyzowane, profesjonalne podsumowanie po niemiecku, które lekarz może przeczytać w kilka sekund.",
+      "description": "Opisz, jak się czujesz: w dowolnym języku. Medyra tworzy ustrukturyzowane, profesjonalne podsumowanie po niemiecku, które lekarz może przeczytać w kilka sekund.",
       "step1Title": "Opisz w dowolnym języku",
-      "step1Desc": "Pisz swobodnie po polsku, arabsku, hindi, turecku — jak chcesz. Wiedza medyczna nie jest wymagana.",
+      "step1Desc": "Pisz swobodnie po polsku, arabsku, hindi, turecku: jak chcesz. Wiedza medyczna nie jest wymagana.",
       "step2Title": "AI natychmiast strukturyzuje",
       "step2Desc": "Claude tworzy formalne podsumowanie kliniczne po niemiecku: główne dolegliwości, oś czasu, wywiad i pytania.",
       "step3Title": "Wydrukuj i zabierz na wizytę",
-      "step3Desc": "Jedno kliknięcie drukuje czysty arkusz A4 — wręcz go lekarzowi na początku wizyty.",
+      "step3Desc": "Jedno kliknięcie drukuje czysty arkusz A4: wręcz go lekarzowi na początku wizyty.",
       "cta": "Przygotuj się na wizytę",
       "freePlan": "Bezpłatny plan: 1 podsumowanie miesięcznie"
     },
     "languages": {
       "badge": "Globalny zasięg",
       "title": "Dostępny w 18 językach",
-      "subtitle": "Z Niemiec do świata — rozumiej swoje zdrowie we własnym języku."
+      "subtitle": "Z Niemiec do świata: rozumiej swoje zdrowie we własnym języku."
     },
     "newToGermany": {
       "badge": "Nowy w Niemczech",
@@ -392,7 +392,7 @@
     },
     "security": {
       "badge": "Szyfrowanie bankowe",
-      "title": "Twoje dane są zaszyfrowane — nawet dla nas",
+      "title": "Twoje dane są zaszyfrowane: nawet dla nas",
       "subtitle": "Każdy raport, każda wartość, każde wyjaśnienie AI jest szyfrowane za pomocą AES-256-GCM przed zapisem do bazy danych.",
       "yourReport": "Twój raport",
       "ourDatabase": "Nasza baza danych",
@@ -401,7 +401,7 @@
       "feat2Title": "RODO Art. 32",
       "feat2Desc": "Szyfrowanie wymagane dla osobowych danych zdrowotnych",
       "feat3Title": "Unikalny IV na pole",
-      "feat3Desc": "Żadne dwa szyfrogramy nie są identyczne — nawet dla tych samych wartości",
+      "feat3Desc": "Żadne dwa szyfrogramy nie są identyczne: nawet dla tych samych wartości",
       "feat4Title": "Brak tekstu jawnego",
       "feat4Desc": "Naruszenie naszej bazy nie ujawnia niczego czytelnego",
       "deepDive": "Jak to działa technicznie? Przeczytaj szczegółową analizę"
@@ -417,7 +417,7 @@
     }
   },
   "siteFooter": {
-    "tagline": "Zrozum swoje wyniki — w swoim języku, w 60 sekund.",
+    "tagline": "Zrozum swoje wyniki: w swoim języku, w 60 sekund.",
     "product": "Produkt",
     "upload": "Prześlij raport",
     "prep": "Przygotuj wizytę",
@@ -512,7 +512,7 @@
       "cap3": "Eksporty PDF",
       "cap3p": "50 / miesiąc",
       "cap3f": "100 / miesiąc",
-      "footnote": "Kto naprawdę osiąga te limity, słyszy od nas bezpośrednio — bez automatycznej aktualizacji."
+      "footnote": "Kto naprawdę osiąga te limity, słyszy od nas bezpośrednio: bez automatycznej aktualizacji."
     },
     "compare": {
       "title": "Porównaj plany",
@@ -551,7 +551,7 @@
     "faq": {
       "title": "Często zadawane pytania",
       "q1": "Czy mogę anulować w dowolnym momencie?",
-      "a1": "Tak — anuluj z panelu. Dostęp trwa do końca okresu rozliczeniowego.",
+      "a1": "Tak: anuluj z panelu. Dostęp trwa do końca okresu rozliczeniowego.",
       "q2": "Czy moje dane są bezpieczne?",
       "a2": "Wszystkie dane są szyfrowane AES-256-GCM. Zgodność z RODO, dokumenty usuwane po 30 dniach.",
       "q3": "Co oznacza \"Nieograniczony*\"?",

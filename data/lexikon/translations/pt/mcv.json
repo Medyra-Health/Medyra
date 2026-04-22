@@ -1,6 +1,6 @@
 {
   "shortAnswer": "O MCV mede o tamanho médio dos glóbulos vermelhos. Células pequenas podem indicar deficiência de ferro, enquanto células grandes podem sugerir deficiência de vitamina B12 ou folato. Discuta resultados anormais com o seu médico.",
-  "metaDescription": "MCV alto ou baixo? Valores normais, causas de tamanho anormal de glóbulos vermelhos e o que significa — explicado de forma simples.",
+  "metaDescription": "MCV alto ou baixo? Valores normais, causas de tamanho anormal de glóbulos vermelhos e o que significa: explicado de forma simples.",
   "causesElevated": ["Deficiência de vitamina B12", "Deficiência de folato", "Consumo de álcool", "Hipotireoidismo"],
   "causesLow": ["Deficiência de ferro", "Talassemia", "Doenças inflamatórias crônicas"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado (macrocitose)", "high": "Muito elevado" },
   "categoryLabel": "Hemograma",
-  "pageTitle": "Valor MCV — Volume Corpuscular Médio explicado | Medyra"
+  "pageTitle": "Valor MCV: Volume Corpuscular Médio explicado | Medyra"
 }

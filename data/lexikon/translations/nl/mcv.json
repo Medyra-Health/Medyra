@@ -1,6 +1,6 @@
 {
   "shortAnswer": "MCV meet de gemiddelde grootte van rode bloedcellen. Kleine cellen kunnen wijzen op ijzertekort, terwijl grote cellen kunnen duiden op vitamine B12- of foliumzuurtekort. Bespreek abnormale resultaten met uw arts.",
-  "metaDescription": "MCV hoog of laag? Normaalwaarden, oorzaken van abnormale rode bloedcelgrootte en wat het betekent — eenvoudig uitgelegd.",
+  "metaDescription": "MCV hoog of laag? Normaalwaarden, oorzaken van abnormale rode bloedcelgrootte en wat het betekent: eenvoudig uitgelegd.",
   "causesElevated": ["Vitamine B12-tekort", "Foliumzuurtekort", "Alcoholgebruik", "Hypothyreoïdie"],
   "causesLow": ["IJzertekort", "Thalassemie", "Chronische ontstekingsziekten"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd (macrocytose)", "high": "Sterk verhoogd" },
   "categoryLabel": "Bloedbeeld",
-  "pageTitle": "Waarde MCV — Gemiddeld Celvolume uitgelegd | Medyra"
+  "pageTitle": "Waarde MCV: Gemiddeld Celvolume uitgelegd | Medyra"
 }

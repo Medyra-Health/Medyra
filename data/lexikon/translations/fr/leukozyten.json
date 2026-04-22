@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Les globules blancs (WBC) constituent votre système immunitaire. Des valeurs élevées peuvent indiquer une infection ou une inflammation, des valeurs basses une immunité affaiblie. Discutez toujours des valeurs anormales avec votre médecin.",
-  "metaDescription": "Globules blancs (WBC) élevés ou bas ? Valeurs normales, causes et quand consulter un médecin — expliqués simplement.",
+  "metaDescription": "Globules blancs (WBC) élevés ou bas ? Valeurs normales, causes et quand consulter un médecin: expliqués simplement.",
   "causesElevated": ["Infection bactérienne", "Infection virale", "Maladie inflammatoire", "Stress", "Corticostéroïdes", "Tabagisme"],
   "causesLow": ["Infections virales (p. ex. grippe)", "Troubles de la moelle osseuse", "Certains médicaments", "Maladies auto-immunes"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Légèrement élevé", "high": "Très élevé" },
   "categoryLabel": "Numération formule sanguine",
-  "pageTitle": "Valeur WBC — Globules blancs expliqués | Medyra"
+  "pageTitle": "Valeur WBC: Globules blancs expliqués | Medyra"
 }

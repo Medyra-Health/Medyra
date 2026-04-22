@@ -1,6 +1,6 @@
 {
   "shortAnswer": "eGFR (tahmini glomerüler filtrasyon hızı), böbreklerinizin kanı ne kadar iyi süzdüğünü tahmin eder. 90'ın üzerindeki değerler normal kabul edilir. Düşük değerler azalmış böbrek fonksiyonuna işaret edebilir. Değeri doktorunuzla görüşün.",
-  "metaDescription": "eGFR düşük mü? Normal değerler, böbrek fonksiyon aşamaları ve ne zaman doktora gidilmeli — basitçe açıklandı.",
+  "metaDescription": "eGFR düşük mü? Normal değerler, böbrek fonksiyon aşamaları ve ne zaman doktora gidilmeli: basitçe açıklandı.",
   "causesElevated": [],
   "causesLow": ["Kronik böbrek hastalığı", "Diyabet", "Yüksek tansiyon", "Tekrarlayan böbrek enfeksiyonları", "Bazı ilaçlar"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bozulmuş (KBH)", "normal": "Normal (≥ 90)", "elevated": "Hafif azalmış", "high": "Bozulmuş (KBH)" },
   "categoryLabel": "Böbrek Değerleri",
-  "pageTitle": "eGFR değeri — Glomerüler Filtrasyon Hızı açıklaması | Medyra"
+  "pageTitle": "eGFR değeri: Glomerüler Filtrasyon Hızı açıklaması | Medyra"
 }

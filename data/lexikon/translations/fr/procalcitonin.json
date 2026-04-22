@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La PCT (procalcitonine) est un marqueur spécifique des infections bactériennes. Des valeurs élevées peuvent indiquer une infection bactérienne sévère ou une septicémie. Le test aide les médecins à décider si des antibiotiques sont nécessaires. Discutez immédiatement des valeurs élevées avec votre médecin.",
-  "metaDescription": "Procalcitonine (PCT) élevée ? Valeurs normales, causes et rôle comme marqueur de sepsis — expliqués simplement.",
+  "metaDescription": "Procalcitonine (PCT) élevée ? Valeurs normales, causes et rôle comme marqueur de sepsis: expliqués simplement.",
   "causesElevated": ["Infection bactérienne sévère", "Septicémie", "Défaillance multiviscérale", "Brûlures graves"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal / bas", "elevated": "Légèrement élevé", "high": "Très élevé (sepsis suspecté)" },
   "categoryLabel": "Marqueurs inflammatoires",
-  "pageTitle": "Valeur PCT — Procalcitonine expliquée | Medyra"
+  "pageTitle": "Valeur PCT: Procalcitonine expliquée | Medyra"
 }

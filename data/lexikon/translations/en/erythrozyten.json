@@ -1,6 +1,6 @@
 {
   "shortAnswer": "RBC (red blood cells) carry oxygen from the lungs to the body's tissues. A low count may indicate anemia, while a high count can suggest dehydration. Discuss any abnormal results with your doctor.",
-  "metaDescription": "RBC / red blood cells low or high? Normal ranges, causes, and what it means for your health — explained simply.",
+  "metaDescription": "RBC / red blood cells low or high? Normal ranges, causes, and what it means for your health: explained simply.",
   "causesElevated": ["Dehydration", "High altitude", "Smoking", "Polycythemia vera"],
   "causesLow": ["Iron deficiency", "Vitamin B12 deficiency", "Folate deficiency", "Chronic diseases", "Blood loss anemia"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal (men)", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Blood Count",
-  "pageTitle": "RBC value — Red Blood Cells explained | Medyra"
+  "pageTitle": "RBC value: Red Blood Cells explained | Medyra"
 }

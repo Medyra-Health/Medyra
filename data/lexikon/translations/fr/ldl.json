@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Le LDL est le \"mauvais\" cholestérol qui peut s'accumuler dans les parois des vaisseaux sanguins. Des valeurs élevées augmentent le risque d'infarctus et d'AVC. Les valeurs cibles dépendent de votre profil de risque personnel. Discutez de votre LDL avec votre médecin.",
-  "metaDescription": "LDL élevé ? Valeurs normales, risque cardiaque et options de traitement pour le mauvais cholestérol — expliqués simplement.",
+  "metaDescription": "LDL élevé ? Valeurs normales, risque cardiaque et options de traitement pour le mauvais cholestérol: expliqués simplement.",
   "causesElevated": ["Alimentation riche en graisses", "Prédisposition génétique (hypercholestérolémie familiale)", "Obésité", "Hypothyroïdie", "Diabète"],
   "causesLow": ["Malnutrition", "Maladie hépatique", "Statines"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal (faible risque)", "elevated": "Élevé", "high": "Très élevé" },
   "categoryLabel": "Métabolisme",
-  "pageTitle": "Valeur LDL — Mauvais cholestérol expliqué | Medyra"
+  "pageTitle": "Valeur LDL: Mauvais cholestérol expliqué | Medyra"
 }

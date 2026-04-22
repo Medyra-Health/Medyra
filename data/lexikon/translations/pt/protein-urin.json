@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Proteína na urina (proteinúria) pode indicar dano renal, pois rins saudáveis normalmente retêm proteínas. Pequenas quantidades podem aparecer após exercício ou febre. Valores persistentes devem ser discutidos com o seu médico, pois podem indicar doença renal.",
-  "metaDescription": "Proteína na urina (proteinúria)? Causas, risco de doença renal e o que o achado significa — explicado de forma simples.",
+  "metaDescription": "Proteína na urina (proteinúria)? Causas, risco de doença renal e o que o achado significa: explicado de forma simples.",
   "causesElevated": ["Doença renal crônica", "Diabetes (nefropatia diabética)", "Hipertensão arterial", "Esforço físico intenso", "Inflamação renal"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado", "high": "Muito elevado" },
   "categoryLabel": "Valores urinários",
-  "pageTitle": "Proteína na urina — Proteinúria explicada | Medyra"
+  "pageTitle": "Proteína na urina: Proteinúria explicada | Medyra"
 }

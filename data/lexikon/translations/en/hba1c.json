@@ -1,6 +1,6 @@
 {
   "shortAnswer": "HbA1c shows the average blood sugar level over the past 2–3 months. Values above 6.5% may indicate diabetes. Values between 5.7% and 6.4% are considered prediabetes. Always discuss elevated values with your doctor.",
-  "metaDescription": "HbA1c elevated? Normal ranges, diabetes risk, and what long-term blood sugar means — explained simply.",
+  "metaDescription": "HbA1c elevated? Normal ranges, diabetes risk, and what long-term blood sugar means: explained simply.",
   "causesElevated": ["Type 2 diabetes", "Type 1 diabetes", "Poorly controlled diabetes", "Insulin resistance"],
   "causesLow": ["Hemolysis", "Blood loss anemia", "Certain hemoglobin variants"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Prediabetes", "high": "Diabetes range" },
   "categoryLabel": "Metabolism",
-  "pageTitle": "HbA1c value — Long-term blood sugar explained | Medyra"
+  "pageTitle": "HbA1c value: Long-term blood sugar explained | Medyra"
 }

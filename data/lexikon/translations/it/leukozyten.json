@@ -1,6 +1,6 @@
 {
   "shortAnswer": "I leucociti (globuli bianchi) sono le cellule del sistema immunitario che combattono le infezioni. Livelli elevati possono indicare un'infezione o un'infiammazione, mentre livelli bassi possono segnalare una risposta immunitaria indebolita. Discutete sempre con il vostro medico i valori anomali.",
-  "metaDescription": "Leucociti / globuli bianchi alti o bassi? Valori normali, cause e quando consultare il medico — spiegato in modo semplice.",
+  "metaDescription": "Leucociti / globuli bianchi alti o bassi? Valori normali, cause e quando consultare il medico: spiegato in modo semplice.",
   "causesElevated": ["Infezione batterica", "Infezione virale", "Malattia infiammatoria", "Stress", "Uso di corticosteroidi", "Fumo"],
   "causesLow": ["Infezioni virali (p.es. influenza)", "Disturbi del midollo osseo", "Alcuni farmaci", "Malattie autoimmuni"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Leggermente elevato", "high": "Molto elevato" },
   "categoryLabel": "Emocromo",
-  "pageTitle": "Valore leucociti — Globuli bianchi spiegati | Medyra"
+  "pageTitle": "Valore leucociti: Globuli bianchi spiegati | Medyra"
 }

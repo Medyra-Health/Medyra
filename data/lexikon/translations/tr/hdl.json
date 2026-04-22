@@ -1,6 +1,6 @@
 {
   "shortAnswer": "HDL, fazla kolesterolü karaciğere taşıdığı için \"iyi kolesterol\" olarak bilinir. Yüksek HDL değerleri kalbi korur. Düşük değerler kardiyovasküler riski artırabilir. Düşük HDL değerlerini doktorunuzla görüşün.",
-  "metaDescription": "HDL çok düşük mü? Normal değerler, nedenler ve iyi kolesterolü nasıl artırırsınız — basitçe açıklandı.",
+  "metaDescription": "HDL çok düşük mü? Normal değerler, nedenler ve iyi kolesterolü nasıl artırırsınız: basitçe açıklandı.",
   "causesElevated": ["Düzenli fiziksel aktivite", "Orta düzeyde alkol tüketimi"],
   "causesLow": ["Hareketsizlik", "Obezite", "Sigara içme", "Diyabet", "Yüksek trigliserit"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Çok düşük (artmış risk)", "normal": "İstenilen (≥ 40)", "elevated": "Optimal (≥ 60)", "high": "Optimal (≥ 60)" },
   "categoryLabel": "Metabolizma",
-  "pageTitle": "HDL değeri — İyi Kolesterol açıklaması | Medyra"
+  "pageTitle": "HDL değeri: İyi Kolesterol açıklaması | Medyra"
 }

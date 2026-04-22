@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Le cholestérol est une graisse sanguine essentielle mais en trop grande quantité il peut augmenter le risque cardiovasculaire. Des valeurs supérieures à 200 mg/dl sont considérées comme limite. Ce qui compte le plus est le rapport LDL/HDL. Discutez des valeurs élevées avec votre médecin.",
-  "metaDescription": "Cholestérol élevé ? Valeurs normales, risque cardiovasculaire et causes d'un cholestérol total élevé — expliqués simplement.",
+  "metaDescription": "Cholestérol élevé ? Valeurs normales, risque cardiovasculaire et causes d'un cholestérol total élevé: expliqués simplement.",
   "causesElevated": ["Alimentation riche en graisses", "Prédisposition génétique", "Obésité", "Hypothyroïdie", "Diabète"],
   "causesLow": ["Malnutrition", "Maladie hépatique", "Malabsorption"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Souhaitable", "elevated": "À la limite", "high": "Élevé" },
   "categoryLabel": "Métabolisme",
-  "pageTitle": "Valeur TC — Cholestérol total expliqué | Medyra"
+  "pageTitle": "Valeur TC: Cholestérol total expliqué | Medyra"
 }

@@ -4,12 +4,12 @@ import MedyraLogo from '@/components/MedyraLogo'
 export const metadata = {
   title: 'Understanding Your Blood Test Results: A Plain Language Guide | Medyra',
   description:
-    'What do CBC, HbA1c, CRP, and cholesterol results actually mean? This guide explains the most common blood test values in plain language — so you can understand your results before your next appointment.',
+    'What do CBC, HbA1c, CRP, and cholesterol results actually mean? This guide explains the most common blood test values in plain language, so you can understand your results before your next appointment.',
   alternates: { canonical: 'https://medyra.de/blog/understanding-your-blood-test-results' },
   openGraph: {
     title: 'Understanding Your Blood Test Results: A Complete Plain Language Guide',
     description:
-      'CBC, CRP, HbA1c, cholesterol, liver enzymes — explained in plain language. Know what your blood test results mean without needing a medical degree.',
+      'CBC, CRP, HbA1c, cholesterol, liver enzymes, explained in plain language. Know what your blood test results mean without needing a medical degree.',
     url: 'https://medyra.de/blog/understanding-your-blood-test-results',
   },
   keywords: [
@@ -66,7 +66,7 @@ const PANELS = [
     intro: 'Liver function tests check how well your liver is processing substances. They are commonly ordered as part of routine checks or before starting certain medications.',
     values: [
       { name: 'ALT (GPT / Alanine aminotransferase)', normal: 'Men: < 45 U/L · Women: < 35 U/L', desc: 'The most liver specific enzyme. Elevated ALT usually indicates liver cell damage or inflammation (hepatitis, fatty liver, medications).' },
-      { name: 'AST (GOT / Aspartate aminotransferase)', normal: '< 40 U/L', desc: 'Found in liver and muscle. Less specific than ALT — elevated AST can also indicate muscle damage (e.g. after intense exercise or a heart attack).' },
+      { name: 'AST (GOT / Aspartate aminotransferase)', normal: '< 40 U/L', desc: 'Found in liver and muscle. Less specific than ALT, elevated AST can also indicate muscle damage (e.g. after intense exercise or a heart attack).' },
       { name: 'GGT (Gamma-glutamyltransferase)', normal: 'Men: < 60 U/L · Women: < 40 U/L', desc: 'Sensitive to alcohol and certain medications. Often the first liver value to rise with regular alcohol consumption.' },
       { name: 'Bilirubin', normal: 'Total: < 17 µmol/L (< 1.0 mg/dL)', desc: 'A breakdown product of haemoglobin. Elevated bilirubin causes jaundice (yellowing of the skin or whites of the eyes). Can indicate liver disease, bile duct problems, or haemolysis.' },
     ],
@@ -113,13 +113,13 @@ export default function BlogPost() {
             want to understand what you are looking at now.
           </p>
           <p className="text-gray-600">
-            This guide covers the most commonly ordered blood test panels — what each value measures,
+            This guide covers the most commonly ordered blood test panels, what each value measures,
             what counts as normal, and what it means if a value is outside the reference range.
           </p>
 
           <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 text-sm text-blue-800">
             <strong>How to use this guide:</strong> Reference ranges here are approximate general adult values.
-            Your lab report will include ranges specific to your age and sex — always use those. Values
+            Your lab report will include ranges specific to your age and sex, always use those. Values
             slightly outside range do not automatically mean something is wrong; your doctor considers
             the full clinical picture.
           </div>
@@ -145,7 +145,7 @@ export default function BlogPost() {
           <h2 className="text-xl font-bold text-gray-900 mt-8">What to do with an out of range result</h2>
 
           <p className="text-sm leading-relaxed">
-            Seeing a flagged value can be alarming — but context is everything. A few guiding principles:
+            Seeing a flagged value can be alarming, but context is everything. A few guiding principles:
           </p>
           <ul className="list-disc pl-5 space-y-1.5 text-sm">
             <li><strong>Mildly out of range:</strong> Often not clinically significant on its own, especially without symptoms. Many labs flag anything outside the 2.5–97.5th percentile, which means 1 in 20 healthy people will have at least one flag.</li>
@@ -165,7 +165,7 @@ export default function BlogPost() {
           <p className="text-sm font-semibold text-emerald-800 mb-1">Get your specific results explained instantly</p>
           <p className="text-xs text-emerald-700 leading-relaxed mb-3">
             Rather than looking up each value manually, upload your lab report and Medyra will explain
-            every value in context — including what is flagged, what it means for you, and what questions
+            every value in context, including what is flagged, what it means for you, and what questions
             to ask your doctor. Free to start, 16 languages, GDPR compliant.
           </p>
           <Link

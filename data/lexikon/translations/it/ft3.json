@@ -1,6 +1,6 @@
 {
   "shortAnswer": "fT3 (triiodotironina libera) è l'ormone tiroideo attivo che influenza il metabolismo, la frequenza cardiaca e molte funzioni corporee. I livelli elevati possono indicare ipertiroidismo, mentre i livelli bassi possono indicare ipotiroidismo. Discutete qualsiasi deviazione con il vostro medico.",
-  "metaDescription": "fT3 elevato o basso? Valori normali, significato e cause di anomalie della triiodotironina libera — spiegato in modo semplice.",
+  "metaDescription": "fT3 elevato o basso? Valori normali, significato e cause di anomalie della triiodotironina libera: spiegato in modo semplice.",
   "causesElevated": ["Ipertiroidismo", "Malattia di Graves", "Infiammazione tiroidea"],
   "causesLow": ["Ipotiroidismo", "Tiroidite di Hashimoto", "Carenza di iodio", "Grave malattia sistemica"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
   "categoryLabel": "Tiroide",
-  "pageTitle": "Valore fT3 — Triiodotironina Libera spiegata | Medyra"
+  "pageTitle": "Valore fT3: Triiodotironina Libera spiegata | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Las plaquetas (PLT) son células sanguíneas responsables de la coagulación. Un recuento bajo puede aumentar el riesgo de hemorragia, mientras que un recuento alto puede indicar inflamación u otras condiciones. Consulte con su médico ante resultados anormales.",
-  "metaDescription": "Plaquetas (PLT) altas o bajas? Valores normales, causas y qué significan recuentos anormales de plaquetas — explicado de forma sencilla.",
+  "metaDescription": "Plaquetas (PLT) altas o bajas? Valores normales, causas y qué significan recuentos anormales de plaquetas: explicado de forma sencilla.",
   "causesElevated": ["Reacciones inflamatorias", "Deficiencia de hierro", "Después de cirugía", "Trastornos mieloproliferativos"],
   "causesLow": ["Infecciones virales", "Ciertos medicamentos", "Enfermedades autoinmunes", "Enfermedad hepática"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Ligeramente elevado", "high": "Muy elevado" },
   "categoryLabel": "Hemograma",
-  "pageTitle": "Valor PLT — Plaquetas explicadas | Medyra"
+  "pageTitle": "Valor PLT: Plaquetas explicadas | Medyra"
 }

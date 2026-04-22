@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Leukocyty (białe krwinki) to komórki układu odpornościowego zwalczające infekcje. Wysokie wartości mogą wskazywać na infekcję lub stan zapalny, niskie zaś na osłabioną odpowiedź immunologiczną. Zawsze omawiaj nieprawidłowe wartości z lekarzem.",
-  "metaDescription": "Leukocyty / białe krwinki wysokie lub niskie? Wartości prawidłowe, przyczyny i kiedy udać się do lekarza — wyjaśnione prosto.",
+  "metaDescription": "Leukocyty / białe krwinki wysokie lub niskie? Wartości prawidłowe, przyczyny i kiedy udać się do lekarza: wyjaśnione prosto.",
   "causesElevated": ["Zakażenie bakteryjne", "Zakażenie wirusowe", "Choroba zapalna", "Stres", "Stosowanie kortykosteroidów", "Palenie tytoniu"],
   "causesLow": ["Zakażenia wirusowe (np. grypa)", "Zaburzenia szpiku kostnego", "Niektóre leki", "Choroby autoimmunologiczne"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Nieznacznie podwyższone", "high": "Znacznie podwyższone" },
   "categoryLabel": "Morfologia krwi",
-  "pageTitle": "Wartość leukocytów — Białe krwinki wyjaśnione | Medyra"
+  "pageTitle": "Wartość leukocytów: Białe krwinki wyjaśnione | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Los eritrocitos en orina (hematuria) significa que hay sangre en la orina. Esto puede indicar infecciones urinarias, cálculos renales u otras condiciones. Incluso sin síntomas, un hallazgo positivo debe discutirse con su médico.",
-  "metaDescription": "Sangre en orina (hematuria)? Eritrocitos en orina: causas, significado y cuándo consultar al médico — explicado de forma sencilla.",
+  "metaDescription": "Sangre en orina (hematuria)? Eritrocitos en orina: causas, significado y cuándo consultar al médico: explicado de forma sencilla.",
   "causesElevated": ["Infección del tracto urinario", "Cálculos renales", "Cistitis", "Enfermedad renal", "Traumatismo", "Ciertos medicamentos"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
   "categoryLabel": "Valores de orina",
-  "pageTitle": "Eritrocitos en orina — Hematuria explicada | Medyra"
+  "pageTitle": "Eritrocitos en orina: Hematuria explicada | Medyra"
 }

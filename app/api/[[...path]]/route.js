@@ -8,10 +8,10 @@ import Stripe from 'stripe'
 import { createCipheriv, createDecipheriv, randomBytes } from 'crypto'
 
 // ============================================================================
-// ENCRYPTION — AES-256-GCM field-level encryption (GDPR Art. 32 / BDSG §64)
+// ENCRYPTION, AES-256-GCM field-level encryption (GDPR Art. 32 / BDSG §64)
 // All medical report data is encrypted before storage in MongoDB.
 // The ENCRYPTION_KEY env var must be a 64-character hex string (32 bytes).
-// Without the key, no stored ciphertext can be decrypted — not even by us.
+// Without the key, no stored ciphertext can be decrypted, not even by us.
 // ============================================================================
 
 const ENC_ALGO = 'aes-256-gcm'
@@ -20,7 +20,7 @@ function getEncKey() {
   const hex = process.env.ENCRYPTION_KEY
   if (!hex || hex.length !== 64) {
     if (process.env.NODE_ENV !== 'test') {
-      console.warn('[Medyra] ENCRYPTION_KEY not set or invalid — data stored unencrypted')
+      console.warn('[Medyra] ENCRYPTION_KEY not set or invalid, data stored unencrypted')
     }
     return null
   }
@@ -59,7 +59,7 @@ function decrypt(value) {
     dec += decipher.final('utf8')
     return dec
   } catch {
-    // Decryption failed — return raw value (backwards compat with old unencrypted data)
+    // Decryption failed, return raw value (backwards compat with old unencrypted data)
     return value
   }
 }
@@ -209,10 +209,10 @@ You MUST respond with VALID JSON only (no markdown, no code blocks):
 flag must be: "normal", "high", "low", or "critical"
 Return ONLY valid JSON. No other text.`
 
-const CHAT_PROMPT = `You are Medyra AI — a friendly, empathetic health assistant that helps patients understand their medical reports. Medyra AI is powered by Claude, made by Anthropic.
+const CHAT_PROMPT = `You are Medyra AI, a friendly, empathetic health assistant that helps patients understand their medical reports. Medyra AI is powered by Claude, made by Anthropic.
 
 RULES:
-- Respond in clear, plain language — no jargon
+- Respond in clear, plain language, no jargon
 - Never diagnose conditions or prescribe treatments
 - Always encourage the patient to consult their doctor for medical decisions
 - Be warm and reassuring, not scary
@@ -220,10 +220,10 @@ RULES:
 - When referencing past reports, mention the date/time to help the patient track trends
 - Keep answers concise but complete (2-5 sentences unless a longer explanation is truly needed)
 - End every response with a gentle reminder to discuss findings with their doctor if the topic is clinical
-- NEVER respond with JSON — always respond in natural conversational text
+- NEVER respond with JSON, always respond in natural conversational text
 - If a user sincerely asks what AI model or technology powers this assistant, be transparent: this assistant is powered by Claude AI, made by Anthropic`
 
-// Monthly chat fair-use limits (hard cap — silently blocked, no auto-upgrade)
+// Monthly chat fair-use limits (hard cap, silently blocked, no auto-upgrade)
 const FAIR_USE_LIMITS = {
   free:     { chat: 4   },
   personal: { chat: 200 },
@@ -240,7 +240,7 @@ function currentMonthKey() {
 }
 
 // Returns { allowed, used, limit } and resets counters if month has rolled over.
-// Does NOT increment — call incrementFairUse separately after the action succeeds.
+// Does NOT increment, call incrementFairUse separately after the action succeeds.
 async function checkFairUse(userId, feature, database) {
   const user = await database.collection('users').findOne({ clerkId: userId })
   const tier = user?.subscription?.tier || 'free'
@@ -551,7 +551,7 @@ async function handleGetReport(reportId) {
   return handleCORS(NextResponse.json({ success: true, report }))
 }
 
-// Biomarker keyword matcher — maps test name patterns to tracked keys
+// Biomarker keyword matcher, maps test name patterns to tracked keys
 const BIOMARKER_PATTERNS = [
   { key: 'hemoglobin', patterns: [/hemoglobin/i, /\bhgb\b/i, /\bhb\b/i] },
   { key: 'ferritin',   patterns: [/ferritin/i] },
@@ -750,9 +750,9 @@ async function handleCheckout(request) {
   const { tier, origin } = await request.json()
 
   const prices = {
-    personal: { amount: 4.99,  mode: 'subscription', description: 'Personal Plan — 20 reports/month' },
-    family:   { amount: 9.99,  mode: 'subscription', description: 'Family Plan — 50 reports/month, 5 profiles' },
-    clinic:   { amount: 199.00, mode: 'subscription', description: 'Clinic — Unlimited everything' },
+    personal: { amount: 4.99,  mode: 'subscription', description: 'Personal Plan, 20 reports/month' },
+    family:   { amount: 9.99,  mode: 'subscription', description: 'Family Plan, 50 reports/month, 5 profiles' },
+    clinic:   { amount: 199.00, mode: 'subscription', description: 'Clinic, Unlimited everything' },
   }
 
   const priceInfo = prices[tier]

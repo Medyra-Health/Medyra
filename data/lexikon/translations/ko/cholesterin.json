@@ -1,6 +1,6 @@
 {
   "shortAnswer": "총 콜레스테롤은 혈중 지질 검사의 중요한 지표입니다. 지속적인 상승은 심혈관 질환 위험을 높입니다. HDL, LDL, 중성지방과 함께 종합 평가합니다.",
-  "metaDescription": "총 콜레스테롤이 높나요? 정상 범위, 심혈관 위험, 생활 습관 조언 — 쉽게 설명합니다.",
+  "metaDescription": "총 콜레스테롤이 높나요? 정상 범위, 심혈관 위험, 생활 습관 조언: 쉽게 설명합니다.",
   "causesElevated": ["고지방 식이", "운동 부족", "비만", "가족성 고콜레스테롤혈증", "갑상선 기능 저하증"],
   "causesLow": ["영양 부족", "갑상선 기능 항진증", "간 질환"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "낮음", "normal": "이상적", "elevated": "경계 높음", "high": "현저히 높음" },
   "categoryLabel": "대사 검사",
-  "pageTitle": "총 콜레스테롤 수치 — 혈중 지질 쉽게 알아보기 | Medyra"
+  "pageTitle": "총 콜레스테롤 수치: 혈중 지질 쉽게 알아보기 | Medyra"
 }

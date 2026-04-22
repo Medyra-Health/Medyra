@@ -1,6 +1,6 @@
 {
   "shortAnswer": "fT4 (tiroxina livre) é o principal hormônio tireoidiano e é convertido no fígado em fT3 ativo. Níveis elevados podem indicar hipertireoidismo; níveis baixos podem indicar hipotireoidismo. Este valor deve sempre ser avaliado junto com TSH.",
-  "metaDescription": "fT4 elevado ou baixo? Valores normais, significado da tiroxina livre e função tireoidiana — explicado de forma simples.",
+  "metaDescription": "fT4 elevado ou baixo? Valores normais, significado da tiroxina livre e função tireoidiana: explicado de forma simples.",
   "causesElevated": ["Hipertireoidismo", "Doença de Graves", "Dose excessiva de hormônio tireoidiano"],
   "causesLow": ["Hipotireoidismo", "Tireoidite de Hashimoto", "Doença da hipófise"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado", "high": "Muito elevado" },
   "categoryLabel": "Tireoide",
-  "pageTitle": "Valor fT4 — Tiroxina Livre explicada | Medyra"
+  "pageTitle": "Valor fT4: Tiroxina Livre explicada | Medyra"
 }

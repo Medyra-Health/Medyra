@@ -1,6 +1,6 @@
 {
   "shortAnswer": "CRP (C-reactief proteïne) is een ontstekingsmarker die stijgt bij infecties of ontstekingsziekten. Normaalwaarden liggen onder 5 mg/l. Verhoogde waarden kunnen wijzen op infectie of ontsteking. Raadpleeg onmiddellijk een arts als de waarden significant verhoogd zijn.",
-  "metaDescription": "CRP verhoogd? Normaalwaarden, oorzaken van hoog C-reactief proteïne en wanneer de arts raadplegen — eenvoudig uitgelegd.",
+  "metaDescription": "CRP verhoogd? Normaalwaarden, oorzaken van hoog C-reactief proteïne en wanneer de arts raadplegen: eenvoudig uitgelegd.",
   "causesElevated": ["Acute bacteriële infectie", "Chronische ontsteking", "Weefselontsteking", "Auto-immuunziekten", "Na een operatie"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Licht verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "Ontstekingsmarkers",
-  "pageTitle": "Waarde CRP — C-Reactief Proteïne uitgelegd | Medyra"
+  "pageTitle": "Waarde CRP: C-Reactief Proteïne uitgelegd | Medyra"
 }

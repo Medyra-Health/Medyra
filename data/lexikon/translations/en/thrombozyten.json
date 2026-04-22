@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Platelets (PLT) are blood cells responsible for clotting. Low platelet counts can increase bleeding risk, while high counts may indicate inflammation or other conditions. Discuss abnormal results with your doctor.",
-  "metaDescription": "Platelets (PLT) high or low? Normal ranges, causes, and what abnormal platelet counts mean — explained simply.",
+  "metaDescription": "Platelets (PLT) high or low? Normal ranges, causes, and what abnormal platelet counts mean: explained simply.",
   "causesElevated": ["Inflammatory reactions", "Iron deficiency", "After surgery", "Myeloproliferative disorders"],
   "causesLow": ["Viral infections", "Certain medications", "Autoimmune diseases", "Liver disease"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Mildly elevated", "high": "Highly elevated" },
   "categoryLabel": "Blood Count",
-  "pageTitle": "PLT value — Platelets explained | Medyra"
+  "pageTitle": "PLT value: Platelets explained | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GGT (gamma-glutamyltransferase) is een leverenzym dat bijzonder gevoelig is voor alcohol en galwegproblemen. Verhoogde waarden kunnen wijzen op leververvetting, alcoholgebruik of galblaasziekte. Aanhoudend hoge waarden moeten worden besproken met uw arts.",
-  "metaDescription": "GGT verhoogd? Normaalwaarden, oorzaken en wat een hoge gamma-GT-waarde betekent — eenvoudig uitgelegd.",
+  "metaDescription": "GGT verhoogd? Normaalwaarden, oorzaken en wat een hoge gamma-GT-waarde betekent: eenvoudig uitgelegd.",
   "causesElevated": ["Alcoholgebruik", "Leververvetting", "Galblaasziekte", "Bepaalde medicijnen", "Obesitas"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "Leverwaarden",
-  "pageTitle": "Waarde GGT — Gamma-Glutamyltransferase uitgelegd | Medyra"
+  "pageTitle": "Waarde GGT: Gamma-Glutamyltransferase uitgelegd | Medyra"
 }

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Mail, MessageSquare, Clock, Building2 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Contact — Medyra',
+  title: 'Contact, Medyra',
   description: 'Get in touch with the Medyra team. Direct founder access for questions, feedback, and support.',
 }
 
@@ -45,7 +45,7 @@ export default function ContactPage() {
               </div>
             </div>
             <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-              Direct line to the founder. Questions about the product, partnerships, or anything else — reach out.
+              Direct line to the founder. Questions about the product, partnerships, or anything else, reach out.
             </p>
             <a
               href="mailto:abralur28@gmail.com"

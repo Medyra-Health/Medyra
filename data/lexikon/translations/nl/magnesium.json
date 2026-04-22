@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Magnesium (Mg) is betrokken bij meer dan 300 enzymreacties en is essentieel voor spieren, zenuwen en hartritme. Lage waarden kunnen spierkrampen en vermoeidheid veroorzaken. Verhoogde waarden zijn zeldzaam. Bespreek aanhoudende symptomen met uw arts.",
-  "metaDescription": "Magnesium laag? Normaalwaarden, oorzaken van tekort en symptomen — eenvoudig uitgelegd.",
+  "metaDescription": "Magnesium laag? Normaalwaarden, oorzaken van tekort en symptomen: eenvoudig uitgelegd.",
   "causesElevated": ["Nierfalen", "Overdosering magnesiumsupplementen"],
   "causesLow": ["Onvoldoende inname", "Alcoholgebruik", "Diarree / braken", "Diuretica", "Diabetes"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "Elektrolyten",
-  "pageTitle": "Waarde Mg — Magnesium uitgelegd | Medyra"
+  "pageTitle": "Waarde Mg: Magnesium uitgelegd | Medyra"
 }

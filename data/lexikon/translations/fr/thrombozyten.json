@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Les plaquettes (PLT) sont les cellules sanguines responsables de la coagulation. Une numération basse peut augmenter le risque de saignement, une numération élevée peut indiquer une inflammation. Discutez des résultats anormaux avec votre médecin.",
-  "metaDescription": "Plaquettes (PLT) élevées ou basses ? Valeurs normales, causes et signification — expliqués simplement.",
+  "metaDescription": "Plaquettes (PLT) élevées ou basses ? Valeurs normales, causes et signification: expliqués simplement.",
   "causesElevated": ["Réactions inflammatoires", "Carence en fer", "Après une chirurgie", "Troubles myéloprolifératifs"],
   "causesLow": ["Infections virales", "Certains médicaments", "Maladies auto-immunes", "Maladie hépatique"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Légèrement élevé", "high": "Très élevé" },
   "categoryLabel": "Numération formule sanguine",
-  "pageTitle": "Valeur PLT — Plaquettes expliquées | Medyra"
+  "pageTitle": "Valeur PLT: Plaquettes expliquées | Medyra"
 }

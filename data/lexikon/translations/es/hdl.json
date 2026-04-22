@@ -1,6 +1,6 @@
 {
   "shortAnswer": "El HDL es conocido como el colesterol «bueno» porque transporta el exceso de colesterol de vuelta al hígado. Los niveles altos de HDL protegen el corazón. Los niveles bajos pueden aumentar el riesgo cardiovascular. Consulte con su médico ante valores bajos de HDL.",
-  "metaDescription": "HDL demasiado bajo? Valores normales, causas y cómo elevar el colesterol bueno — explicado de forma sencilla.",
+  "metaDescription": "HDL demasiado bajo? Valores normales, causas y cómo elevar el colesterol bueno: explicado de forma sencilla.",
   "causesElevated": ["Actividad física regular", "Consumo moderado de alcohol"],
   "causesLow": ["Inactividad física", "Obesidad", "Tabaquismo", "Diabetes", "Triglicéridos elevados"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Demasiado bajo (riesgo aumentado)", "normal": "Deseable (≥ 40)", "elevated": "Óptimo (≥ 60)", "high": "Óptimo (≥ 60)" },
   "categoryLabel": "Metabolismo",
-  "pageTitle": "Valor HDL — Colesterol Bueno explicado | Medyra"
+  "pageTitle": "Valor HDL: Colesterol Bueno explicado | Medyra"
 }

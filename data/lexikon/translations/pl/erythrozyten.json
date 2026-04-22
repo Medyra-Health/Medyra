@@ -1,6 +1,6 @@
 {
-  "shortAnswer": "Erytrocyty (czerwone krwinki) transportują tlen z płuc do tkanek ciała. Niski wynik może wskazywać na anemię, wysoki — na odwodnienie. Omów każdy nieprawidłowy wynik z lekarzem.",
-  "metaDescription": "Erytrocyty / czerwone krwinki niskie lub wysokie? Wartości prawidłowe, przyczyny i co oznaczają dla zdrowia — wyjaśnione prosto.",
+  "shortAnswer": "Erytrocyty (czerwone krwinki) transportują tlen z płuc do tkanek ciała. Niski wynik może wskazywać na anemię, wysoki: na odwodnienie. Omów każdy nieprawidłowy wynik z lekarzem.",
+  "metaDescription": "Erytrocyty / czerwone krwinki niskie lub wysokie? Wartości prawidłowe, przyczyny i co oznaczają dla zdrowia: wyjaśnione prosto.",
   "causesElevated": ["Odwodnienie", "Duże wysokości", "Palenie tytoniu", "Czerwienica prawdziwa"],
   "causesLow": ["Niedobór żelaza", "Niedobór witaminy B12", "Niedobór kwasu foliowego", "Choroby przewlekłe", "Niedokrwistość z utraty krwi"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne (mężczyźni)", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
   "categoryLabel": "Morfologia krwi",
-  "pageTitle": "Wartość erytrocytów — Czerwone krwinki wyjaśnione | Medyra"
+  "pageTitle": "Wartość erytrocytów: Czerwone krwinki wyjaśnione | Medyra"
 }

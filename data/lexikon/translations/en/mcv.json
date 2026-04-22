@@ -1,6 +1,6 @@
 {
   "shortAnswer": "MCV measures the average size of red blood cells. Small cells may indicate iron deficiency, while large cells can suggest vitamin B12 or folate deficiency. Discuss any abnormal results with your doctor.",
-  "metaDescription": "MCV high or low? Normal ranges, causes of abnormal red blood cell size, and what it means — explained simply.",
+  "metaDescription": "MCV high or low? Normal ranges, causes of abnormal red blood cell size, and what it means: explained simply.",
   "causesElevated": ["Vitamin B12 deficiency", "Folate deficiency", "Alcohol use", "Hypothyroidism"],
   "causesLow": ["Iron deficiency", "Thalassemia", "Chronic inflammatory diseases"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated (macrocytosis)", "high": "Highly elevated" },
   "categoryLabel": "Blood Count",
-  "pageTitle": "MCV value — Mean Corpuscular Volume explained | Medyra"
+  "pageTitle": "MCV value: Mean Corpuscular Volume explained | Medyra"
 }

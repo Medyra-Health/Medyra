@@ -64,7 +64,7 @@ export async function generateMetadata({ params }) {
   if (!entry) return {}
 
   const t = entry._translation
-  const title = t?.pageTitle || `${entry.acronym} — ${entry.fullName} | Medyra`
+  const title = t?.pageTitle || `${entry.acronym}, ${entry.fullName} | Medyra`
   const description = entry.metaDescription
 
   const languages = {

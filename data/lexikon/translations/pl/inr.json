@@ -1,6 +1,6 @@
 {
   "shortAnswer": "INR mierzy czas krzepnięcia krwi i jest używany głównie do monitorowania leków przeciwzakrzepowych (np. warfaryny). Wartości powyżej 1,2 mogą wskazywać na wydłużony czas krzepnięcia, co zwiększa ryzyko krwawienia. Omów zmiany z lekarzem.",
-  "metaDescription": "INR podwyższone? Wartości prawidłowe, znaczenie w terapii warfaryną i zaburzenia krzepnięcia — wyjaśnione prosto.",
+  "metaDescription": "INR podwyższone? Wartości prawidłowe, znaczenie w terapii warfaryną i zaburzenia krzepnięcia: wyjaśnione prosto.",
   "causesElevated": ["Warfaryna / terapia przeciwzakrzepowa", "Choroba wątroby", "Niedobór witaminy K", "Zaburzenia krzepnięcia"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Nieznacznie podwyższone", "high": "Podwyższone / terapeutyczne (antykoagulacja)" },
   "categoryLabel": "Krzepnięcie",
-  "pageTitle": "Wartość INR — Międzynarodowy Znormalizowany Wskaźnik wyjaśniony | Medyra"
+  "pageTitle": "Wartość INR: Międzynarodowy Znormalizowany Wskaźnik wyjaśniony | Medyra"
 }

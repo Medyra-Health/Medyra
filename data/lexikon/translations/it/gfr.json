@@ -1,6 +1,6 @@
 {
   "shortAnswer": "eGFR (velocità di filtrazione glomerulare stimata) stima quanto bene i reni filtrano il sangue. I valori superiori a 90 sono considerati normali. I valori più bassi possono indicare una ridotta funzionalità renale. Le raccomandazioni dipendono dallo stadio. Discutete il valore con il vostro medico.",
-  "metaDescription": "eGFR basso? Valori normali, stadi della funzionalità renale e quando consultare il medico — spiegato in modo semplice.",
+  "metaDescription": "eGFR basso? Valori normali, stadi della funzionalità renale e quando consultare il medico: spiegato in modo semplice.",
   "causesElevated": [],
   "causesLow": ["Malattia renale cronica", "Diabete", "Ipertensione arteriosa", "Infezioni renali ripetute", "Alcuni farmaci"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Compromesso (MRC)", "normal": "Normale (≥ 90)", "elevated": "Leggermente ridotto", "high": "Compromesso (MRC)" },
   "categoryLabel": "Valori renali",
-  "pageTitle": "Valore eGFR — Velocità di Filtrazione Glomerulare spiegata | Medyra"
+  "pageTitle": "Valore eGFR: Velocità di Filtrazione Glomerulare spiegata | Medyra"
 }

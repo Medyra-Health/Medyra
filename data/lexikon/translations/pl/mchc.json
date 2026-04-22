@@ -1,6 +1,6 @@
 {
   "shortAnswer": "MCHC mierzy stężenie hemoglobiny w czerwonych krwinkach. Niskie wartości mogą wskazywać na niedokrwistość z niedoboru żelaza lub inne typy anemii. Bardzo wysokie wartości są rzadkie. Omów nieprawidłowe wyniki z lekarzem.",
-  "metaDescription": "MCHC niskie lub wysokie? Wartości prawidłowe, znaczenie i przyczyny nieprawidłowego stężenia hemoglobiny — wyjaśnione prosto.",
+  "metaDescription": "MCHC niskie lub wysokie? Wartości prawidłowe, znaczenie i przyczyny nieprawidłowego stężenia hemoglobiny: wyjaśnione prosto.",
   "causesElevated": ["Wrodzona sferocytoza", "Ciężkie odwodnienie"],
   "causesLow": ["Niedokrwistość z niedoboru żelaza", "Talasemia", "Niedokrwistość z utraty krwi"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Nieznacznie podwyższone", "high": "Podwyższone" },
   "categoryLabel": "Morfologia krwi",
-  "pageTitle": "Wartość MCHC — Średnie Stężenie Hemoglobiny wyjaśnione | Medyra"
+  "pageTitle": "Wartość MCHC: Średnie Stężenie Hemoglobiny wyjaśnione | Medyra"
 }

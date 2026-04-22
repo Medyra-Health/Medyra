@@ -1,6 +1,6 @@
 {
   "shortAnswer": "El ácido úrico se produce cuando se degradan las purinas de los alimentos. Niveles altos pueden indicar gota o promover cálculos renales. La dieta y el alcohol juegan un papel importante. Consulte los niveles elevados con su médico, especialmente si tiene dolor articular.",
-  "metaDescription": "Ácido úrico elevado? Valores normales, riesgo de gota y qué puede hacer ante el ácido úrico alto — explicado de forma sencilla.",
+  "metaDescription": "Ácido úrico elevado? Valores normales, riesgo de gota y qué puede hacer ante el ácido úrico alto: explicado de forma sencilla.",
   "causesElevated": ["Dieta rica en purinas (carne, vísceras)", "Consumo de alcohol", "Enfermedad renal", "Ciertos medicamentos", "Obesidad"],
   "causesLow": ["Ciertos medicamentos", "Enfermedad hepática"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado (hiperuricemia)", "high": "Muy elevado" },
   "categoryLabel": "Valores renales",
-  "pageTitle": "Valor ácido úrico — Riesgo de gota explicado | Medyra"
+  "pageTitle": "Valor ácido úrico: Riesgo de gota explicado | Medyra"
 }

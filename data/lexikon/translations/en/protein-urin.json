@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Protein in urine (proteinuria) can indicate kidney damage, as healthy kidneys normally retain protein. Small amounts may appear after exercise or fever. Persistent values should be discussed with your doctor, as they may point to kidney disease.",
-  "metaDescription": "Protein in urine (proteinuria)? Causes, kidney disease risk, and what the finding means — explained simply.",
+  "metaDescription": "Protein in urine (proteinuria)? Causes, kidney disease risk, and what the finding means: explained simply.",
   "causesElevated": ["Chronic kidney disease", "Diabetes (diabetic nephropathy)", "High blood pressure", "Intense physical exertion", "Kidney inflammation"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Urine Values",
-  "pageTitle": "Protein in urine — Proteinuria explained | Medyra"
+  "pageTitle": "Protein in urine: Proteinuria explained | Medyra"
 }

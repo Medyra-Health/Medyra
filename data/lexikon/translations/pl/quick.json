@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Wskaźnik Quicka (czas protrombinowy) mierzy zdolność krzepnięcia krwi przez zewnętrzną kaskadę krzepnięcia. Niskie wartości wskazują na wydłużony czas krzepnięcia i zwiększone ryzyko krwawienia. Wartość jest ściśle powiązana z funkcją wątroby i witaminą K. Omów nieprawidłowe wartości z lekarzem.",
-  "metaDescription": "Wskaźnik Quicka / czas protrombinowy niski? Wartości prawidłowe, ryzyko krwawienia i przyczyny — wyjaśnione prosto.",
+  "metaDescription": "Wskaźnik Quicka / czas protrombinowy niski? Wartości prawidłowe, ryzyko krwawienia i przyczyny: wyjaśnione prosto.",
   "causesElevated": [],
   "causesLow": ["Warfaryna / terapia przeciwzakrzepowa", "Choroba wątroby", "Niedobór witaminy K", "Zaburzenia krzepnięcia"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie (ryzyko krwawienia)", "normal": "Normalne", "elevated": "Podwyższone (rzadko istotne klinicznie)", "high": "Podwyższone" },
   "categoryLabel": "Krzepnięcie",
-  "pageTitle": "Wskaźnik Quicka — Czas protrombinowy wyjaśniony | Medyra"
+  "pageTitle": "Wskaźnik Quicka: Czas protrombinowy wyjaśniony | Medyra"
 }

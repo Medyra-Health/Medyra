@@ -151,7 +151,7 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
             Unlock Health Vault <ArrowRight className="h-4 w-4" />
           </button>
         </Link>
-        <p className="text-center text-[10px] text-gray-600 mt-2">Personal plan — €4.99/mo · Family plan — €9.99/mo</p>
+        <p className="text-center text-[10px] text-gray-600 mt-2">Personal plan, €4.99/mo · Family plan, €9.99/mo</p>
       </div>
     )
   }
@@ -364,7 +364,7 @@ export default function DashboardPage() {
             {usagePct >= 100 && (
               <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
                 <p className="text-xs text-red-600 font-medium flex items-center gap-1">
-                  <AlertCircle className="h-3.5 w-3.5" /> Limit reached — upgrade to continue
+                  <AlertCircle className="h-3.5 w-3.5" /> Limit reached, upgrade to continue
                 </p>
                 <Link href="/pricing"><Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white text-xs h-7">Upgrade</Button></Link>
               </div>
@@ -375,7 +375,7 @@ export default function DashboardPage() {
         {/* Main grid */}
         <div className="grid lg:grid-cols-3 gap-5 mb-5">
 
-          {/* Left — actions + recent reports */}
+          {/* Left, actions + recent reports */}
           <div className="space-y-4">
             {/* Quick actions */}
             <div className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm">
@@ -439,7 +439,7 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* Right — vault / timeline (2/3 width) */}
+          {/* Right, vault / timeline (2/3 width) */}
           <div className="lg:col-span-2">
             <VaultSection
               profiles={profiles}
@@ -473,7 +473,7 @@ export default function DashboardPage() {
             <div className="text-center py-10">
               <Stethoscope className="h-10 w-10 mx-auto text-gray-200 mb-3" />
               <p className="text-sm font-semibold text-gray-500 mb-1">No summaries yet</p>
-              <p className="text-xs text-gray-400 mb-5 max-w-xs mx-auto">Describe your symptoms and get a structured German clinical summary for your doctor — generated in seconds.</p>
+              <p className="text-xs text-gray-400 mb-5 max-w-xs mx-auto">Describe your symptoms and get a structured German clinical summary for your doctor, generated in seconds.</p>
               <Link href="/prep">
                 <button className="inline-flex items-center gap-2 bg-violet-500 hover:bg-violet-600 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors">
                   <Stethoscope className="h-4 w-4" /> Prepare for Doctor Visit

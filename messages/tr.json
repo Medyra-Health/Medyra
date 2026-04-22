@@ -18,7 +18,7 @@
     "subtitle": "Sonunda anlaşılır bir dilde",
     "description": "Tıbbi terimleri Google'da aramayı bırakın. Sonuçlarınızı yükleyin ve 60 saniyede net, özel bir yapay zeka açıklaması alın.",
     "cta": "İlk raporumu ücretsiz analiz et",
-    "disclaimer": "Yalnızca eğitim amaçlıdır — tıbbi tavsiyenin yerini tutmaz.",
+    "disclaimer": "Yalnızca eğitim amaçlıdır: tıbbi tavsiyenin yerini tutmaz.",
     "secondaryCta": "Fiyatları görüntüle"
   },
   "features": {
@@ -151,9 +151,9 @@
     "comingSoon": "Yakında",
     "goToDashboard": "Panele git",
     "faqTitle": "Sık sorulan sorular",
-    "launchOfferBanner": "🔥 Lansman teklifi — tüm ücretli planlarda %50 indirim",
+    "launchOfferBanner": "🔥 Lansman teklifi: tüm ücretli planlarda %50 indirim",
     "limitedOffer": "Sınırlı lansman teklifi",
-    "fiftyOff": "%50 indirim — süreç boyunca",
+    "fiftyOff": "%50 indirim: süreç boyunca",
     "applyCode": "Ödeme sırasında kodu girin. Tüm ücretli planlar için geçerli.",
     "copied": "Kopyalandı!",
     "copyCode": "Kodu kopyala",
@@ -257,7 +257,7 @@
     "allValuesNormal": "Tüm değerler normal",
     "keyTakeaways": "Önemli Noktalar",
     "valuesNeedingAttention": "Dikkat gerektiren değerler",
-    "greatResults": "Harika sonuçlar — doktorunuzla görüşün",
+    "greatResults": "Harika sonuçlar: doktorunuzla görüşün",
     "allReports": "Tüm Raporlar",
     "saveAsPdf": "PDF olarak kaydet",
     "chatGreeting": "Merhaba! Raporunuzu okudum. Bana her şeyi sorabilirsiniz:",
@@ -348,7 +348,7 @@
     "howItWorks": {
       "badge": "Basit süreç",
       "step1Title": "Raporunuzu yükleyin",
-      "step1Desc": "Herhangi bir PDF, JPG, PNG veya TXT bırakın. Yapay zekamız metni okur — taranan fotoğraflardan bile.",
+      "step1Desc": "Herhangi bir PDF, JPG, PNG veya TXT bırakın. Yapay zekamız metni okur: taranan fotoğraflardan bile.",
       "step1Detail": "Anında şifrelenir",
       "step2Title": "Yapay zeka ~30s'de analiz eder",
       "step2Desc": "Claude AI her test değerini tanımlar, anormal sonuçları işaretler ve sade dilde açıklama yazar.",
@@ -356,7 +356,7 @@
       "step3Title": "Yanıtlarınızı alın",
       "step3Desc": "Sonuçlarınızı okuyun, yapay zekayla sohbet edin ve sonraki randevunuz için PDF dışa aktarın.",
       "step3Detail": "Doktorunuzla paylaşın",
-      "cta": "Ücretsiz başla — kart gerekmez"
+      "cta": "Ücretsiz başla: kart gerekmez"
     },
     "doctorVisit": {
       "badge": "Yeni özellik",
@@ -364,18 +364,18 @@
       "title2": "Hazırlıklı gelin.",
       "description": "Nasıl hissettiğinizi herhangi bir dilde anlatın. Medyra bunu doktorunuzun saniyeler içinde okuyabileceği yapılandırılmış Almanca özete dönüştürür.",
       "step1Title": "Herhangi bir dilde anlatın",
-      "step1Desc": "Türkçe, Arapça, Hintçe, İngilizce — doğal gelen dilde özgürce yazın.",
+      "step1Desc": "Türkçe, Arapça, Hintçe, İngilizce: doğal gelen dilde özgürce yazın.",
       "step2Title": "Yapay zeka anında düzenler",
       "step2Desc": "Claude resmi Almanca klinik özet oluşturur: şikayetler, zaman çizelgesi, geçmiş ve sorular.",
       "step3Title": "Yazdır ve randevuya götür",
-      "step3Desc": "Tek tıkla temiz A4 sayfası yazdırın — randevu başında doktorunuza verin.",
+      "step3Desc": "Tek tıkla temiz A4 sayfası yazdırın: randevu başında doktorunuza verin.",
       "cta": "Randevuma hazırlan",
       "freePlan": "Ücretsiz plan ayda 1 özet içerir"
     },
     "languages": {
       "badge": "Küresel erişim",
       "title": "18 dilde mevcut",
-      "subtitle": "Almanya'dan dünyaya — sağlığınızı kendi dilinizde anlayın."
+      "subtitle": "Almanya'dan dünyaya: sağlığınızı kendi dilinizde anlayın."
     },
     "newToGermany": {
       "badge": "Almanya'da yeni",
@@ -392,7 +392,7 @@
     },
     "security": {
       "badge": "Banka düzeyinde şifreleme",
-      "title": "Verileriniz şifrelendi — bizden bile",
+      "title": "Verileriniz şifrelendi: bizden bile",
       "subtitle": "Her rapor, her değer, her yapay zeka açıklaması veritabanımıza dokunmadan önce AES-256-GCM ile şifrelenir.",
       "yourReport": "Raporunuz",
       "ourDatabase": "Veritabanımız",
@@ -417,7 +417,7 @@
     }
   },
   "siteFooter": {
-    "tagline": "Laboratuvar sonuçlarınızı anlayın — kendi dilinizde, 60 saniyede.",
+    "tagline": "Laboratuvar sonuçlarınızı anlayın: kendi dilinizde, 60 saniyede.",
     "product": "Ürün",
     "upload": "Rapor Yükle",
     "prep": "Doktor Ziyareti Hazırlığı",
@@ -512,7 +512,7 @@
       "cap3": "PDF dışa aktarımları",
       "cap3p": "50 / ay",
       "cap3f": "100 / ay",
-      "footnote": "Bu limitlere gerçekten ulaşan herkes bizden doğrudan haber alır — otomatik yükseltme yok."
+      "footnote": "Bu limitlere gerçekten ulaşan herkes bizden doğrudan haber alır: otomatik yükseltme yok."
     },
     "compare": {
       "title": "Planları karşılaştır",
@@ -551,7 +551,7 @@
     "faq": {
       "title": "Sık sorulan sorular",
       "q1": "İstediğim zaman iptal edebilir miyim?",
-      "a1": "Evet — panelinizden istediğiniz zaman iptal edin. Erişim fatura dönemi sonuna kadar devam eder.",
+      "a1": "Evet: panelinizden istediğiniz zaman iptal edin. Erişim fatura dönemi sonuna kadar devam eder.",
       "q2": "Sağlık verilerim güvende mi?",
       "a2": "Tüm veriler AES-256-GCM ile şifrelenir. GDPR uyumludur, belgeler 30 gün sonra otomatik silinir.",
       "q3": "\"Sınırsız*\" ne anlama gelir?",

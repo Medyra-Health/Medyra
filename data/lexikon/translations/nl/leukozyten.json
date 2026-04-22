@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Leukocyten (witte bloedcellen) zijn de cellen van het immuunsysteem die infecties bestrijden. Hoge waarden kunnen wijzen op een infectie of ontsteking, terwijl lage waarden kunnen wijzen op een verzwakte immuunrespons. Bespreek abnormale waarden altijd met uw arts.",
-  "metaDescription": "Leukocyten / witte bloedcellen hoog of laag? Normaalwaarden, oorzaken en wanneer de arts raadplegen — eenvoudig uitgelegd.",
+  "metaDescription": "Leukocyten / witte bloedcellen hoog of laag? Normaalwaarden, oorzaken en wanneer de arts raadplegen: eenvoudig uitgelegd.",
   "causesElevated": ["Bacteriële infectie", "Virale infectie", "Ontstekingsziekte", "Stress", "Gebruik van corticosteroïden", "Roken"],
   "causesLow": ["Virale infecties (bijv. griep)", "Beenmergaandoeningen", "Bepaalde medicijnen", "Auto-immuunziekten"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Licht verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "Bloedbeeld",
-  "pageTitle": "Waarde leukocyten — Witte bloedcellen uitgelegd | Medyra"
+  "pageTitle": "Waarde leukocyten: Witte bloedcellen uitgelegd | Medyra"
 }

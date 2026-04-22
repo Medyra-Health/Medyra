@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Triglycerides are blood fats that serve as an energy reserve. Elevated levels can increase the risk of cardiovascular disease and pancreatitis. Alcohol, sugar, and obesity play a major role. Discuss elevated values with your doctor.",
-  "metaDescription": "Triglycerides elevated? Normal ranges, causes, and what you can do about high blood fats — explained simply.",
+  "metaDescription": "Triglycerides elevated? Normal ranges, causes, and what you can do about high blood fats: explained simply.",
   "causesElevated": ["High-sugar diet", "Alcohol use", "Obesity", "Diabetes", "Hypothyroidism"],
   "causesLow": ["Malnutrition", "Malabsorption", "Certain medications"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated (pancreatitis risk)" },
   "categoryLabel": "Metabolism",
-  "pageTitle": "TG value — Triglycerides explained | Medyra"
+  "pageTitle": "TG value: Triglycerides explained | Medyra"
 }

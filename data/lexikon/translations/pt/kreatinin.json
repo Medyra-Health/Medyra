@@ -1,6 +1,6 @@
 {
   "shortAnswer": "A creatinina é um produto residual do metabolismo muscular filtrado pelos rins. Níveis elevados podem indicar função renal reduzida. O valor também depende da massa muscular e da ingestão de líquidos. Discuta valores anormais com o seu médico.",
-  "metaDescription": "Creatinina elevada? Valores normais, causas e o que significa creatinina alta para a função renal — explicado de forma simples.",
+  "metaDescription": "Creatinina elevada? Valores normais, causas e o que significa creatinina alta para a função renal: explicado de forma simples.",
   "causesElevated": ["Doença renal", "Desidratação", "Alta massa muscular", "Certos medicamentos", "Consumo excessivo de carne"],
   "causesLow": ["Baixa massa muscular", "Desnutrição", "Gravidez"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Ligeiramente elevado", "high": "Muito elevado" },
   "categoryLabel": "Valores renais",
-  "pageTitle": "Valor creatinina — Função renal explicada | Medyra"
+  "pageTitle": "Valor creatinina: Função renal explicada | Medyra"
 }

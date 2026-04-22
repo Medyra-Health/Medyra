@@ -593,7 +593,7 @@ export default function ProfilesPage() {
             </div>
             <Link href="/pricing">
               <button className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-3 rounded-xl transition-colors">
-                Upgrade to Personal — €4.99/mo
+                Upgrade to Personal, €4.99/mo
               </button>
             </Link>
           </div>
@@ -666,7 +666,7 @@ export default function ProfilesPage() {
               </div>
             </div>
 
-            {/* Family overview — all profiles side by side */}
+            {/* Family overview, all profiles side by side */}
             {profiles.length >= 1 && <OverviewSection profiles={profiles} />}
 
             {/* Compare two profiles */}

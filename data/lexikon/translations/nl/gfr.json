@@ -1,6 +1,6 @@
 {
   "shortAnswer": "eGFR (geschatte glomerulaire filtratiesnelheid) schat hoe goed uw nieren het bloed filteren. Waarden boven de 90 worden als normaal beschouwd. Lagere waarden kunnen wijzen op verminderde nierfunctie. Aanbevelingen zijn afhankelijk van het stadium. Bespreek de waarde met uw arts.",
-  "metaDescription": "eGFR laag? Normaalwaarden, stadia van nierfunctie en wanneer de arts raadplegen — eenvoudig uitgelegd.",
+  "metaDescription": "eGFR laag? Normaalwaarden, stadia van nierfunctie en wanneer de arts raadplegen: eenvoudig uitgelegd.",
   "causesElevated": [],
   "causesLow": ["Chronische nierziekte", "Diabetes", "Hoge bloeddruk", "Herhaalde nierontstekingen", "Bepaalde medicijnen"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Aangetast (CNZ)", "normal": "Normaal (≥ 90)", "elevated": "Licht verminderd", "high": "Aangetast (CNZ)" },
   "categoryLabel": "Nierwaarden",
-  "pageTitle": "Waarde eGFR — Glomerulaire Filtratiesnelheid uitgelegd | Medyra"
+  "pageTitle": "Waarde eGFR: Glomerulaire Filtratiesnelheid uitgelegd | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Vitamin D is essential for bones, the immune system, and muscles. Deficiency is very common, especially in winter. Low levels can cause fatigue and bone pain. Discuss any deficiency with your doctor before taking supplements.",
-  "metaDescription": "Vitamin D too low? Normal ranges, deficiency symptoms, and when supplementation makes sense — explained simply.",
+  "metaDescription": "Vitamin D too low? Normal ranges, deficiency symptoms, and when supplementation makes sense: explained simply.",
   "causesElevated": ["Overdose of dietary supplements"],
   "causesLow": ["Little sunlight exposure", "Dark skin tone", "Older age", "Malabsorption", "Kidney disease"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Deficient", "normal": "Sufficient", "elevated": "Borderline (insufficiency)", "high": "Possibly too high" },
   "categoryLabel": "Vitamins",
-  "pageTitle": "Vitamin D value — 25-OH Vitamin D explained | Medyra"
+  "pageTitle": "Vitamin D value: 25-OH Vitamin D explained | Medyra"
 }

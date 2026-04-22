@@ -1,6 +1,6 @@
 {
   "shortAnswer": "LDL è il colesterolo «cattivo» che può accumularsi nelle pareti dei vasi sanguigni. Livelli elevati aumentano il rischio di infarto e ictus. I valori obiettivo dipendono dal profilo di rischio personale. Discutete il vostro livello di LDL con il vostro medico.",
-  "metaDescription": "LDL elevato? Valori normali, rischio cardiaco e opzioni di trattamento per il colesterolo cattivo alto — spiegato in modo semplice.",
+  "metaDescription": "LDL elevato? Valori normali, rischio cardiaco e opzioni di trattamento per il colesterolo cattivo alto: spiegato in modo semplice.",
   "causesElevated": ["Dieta ricca di grassi", "Predisposizione genetica (ipercolesterolemia familiare)", "Obesità", "Ipotiroidismo", "Diabete"],
   "causesLow": ["Malnutrizione", "Malattia epatica", "Statine"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale (basso rischio)", "elevated": "Elevato", "high": "Molto elevato" },
   "categoryLabel": "Metabolismo",
-  "pageTitle": "Valore LDL — Colesterolo Cattivo spiegato | Medyra"
+  "pageTitle": "Valore LDL: Colesterolo Cattivo spiegato | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "활성화 부분 트롬보플라스틴 시간(PTT)은 내인계 응고 경로를 평가합니다. 연장은 응고 인자 결핍이나 항응고제 영향을 나타내고, 단축은 고응고 상태를 나타냅니다.",
-  "metaDescription": "PTT가 길거나 짧나요? 정상 범위, 응고 기능 의미, 원인 — 쉽게 설명합니다.",
+  "metaDescription": "PTT가 길거나 짧나요? 정상 범위, 응고 기능 의미, 원인: 쉽게 설명합니다.",
   "causesElevated": ["혈우병 A 또는 B", "헤파린 치료", "비타민 K 결핍", "심한 간 질환"],
   "causesLow": ["고응고 상태", "급성기 반응"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "연장", "high": "현저한 연장" },
   "categoryLabel": "응고 검사",
-  "pageTitle": "PTT 수치 — 활성화 부분 트롬보플라스틴 시간 쉽게 알아보기 | Medyra"
+  "pageTitle": "PTT 수치: 활성화 부분 트롬보플라스틴 시간 쉽게 알아보기 | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "CRP (proteina C reattiva) è un marcatore di infiammazione che aumenta durante infezioni o condizioni infiammatorie. I valori normali sono inferiori a 5 mg/l. I livelli elevati possono indicare un'infezione o un'infiammazione. Consultate subito un medico se i livelli sono significativamente elevati.",
-  "metaDescription": "CRP elevato? Valori normali, cause della proteina C reattiva alta e quando consultare il medico — spiegato in modo semplice.",
+  "metaDescription": "CRP elevato? Valori normali, cause della proteina C reattiva alta e quando consultare il medico: spiegato in modo semplice.",
   "causesElevated": ["Infezione batterica acuta", "Infiammazione cronica", "Infiammazione tissutale", "Malattie autoimmuni", "Dopo un intervento chirurgico"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Leggermente elevato", "high": "Molto elevato" },
   "categoryLabel": "Marcatori infiammatori",
-  "pageTitle": "Valore CRP — Proteina C Reattiva spiegata | Medyra"
+  "pageTitle": "Valore CRP: Proteina C Reattiva spiegata | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Potasyum (K), kalp ritmi, kaslar ve sinirleri düzenleyen bir elektrolitdir. Düşük değerler kalp ritim bozukluklarına ve kas zayıflığına neden olabilir; yüksek değerler de tehlikelidir. Belirgin sapmalar için doktorunuza hemen başvurun.",
-  "metaDescription": "Potasyum yüksek veya düşük mü? Normal değerler, kalp riski ve potasyum dengesizliğinin nedenleri — basitçe açıklandı.",
+  "metaDescription": "Potasyum yüksek veya düşük mü? Normal değerler, kalp riski ve potasyum dengesizliğinin nedenleri: basitçe açıklandı.",
   "causesElevated": ["Böbrek hastalığı", "ACE inhibitörleri veya potasyum koruyucu diüretikler", "Aşırı potasyum alımı", "Asidoz"],
   "causesLow": ["Kusma / ishal", "Diüretikler", "Magnezyum eksikliği", "Yetersiz alım"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek (hiperkaliemi)", "high": "Çok yüksek (tehlikeli)" },
   "categoryLabel": "Elektrolitler",
-  "pageTitle": "K değeri — Potasyum açıklaması | Medyra"
+  "pageTitle": "K değeri: Potasyum açıklaması | Medyra"
 }

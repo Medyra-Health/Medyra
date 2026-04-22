@@ -1,6 +1,6 @@
 {
   "shortAnswer": "CRP (C-reactive protein) is an inflammation marker that rises during infections or inflammatory conditions in the body. Normal values are below 5 mg/l. Elevated levels can indicate an infection or inflammation. Seek medical attention promptly if levels are significantly elevated.",
-  "metaDescription": "CRP elevated? Normal ranges, causes of high C-reactive protein, and when to see a doctor — explained simply.",
+  "metaDescription": "CRP elevated? Normal ranges, causes of high C-reactive protein, and when to see a doctor: explained simply.",
   "causesElevated": ["Acute bacterial infection", "Chronic inflammation", "Tissue inflammation", "Autoimmune diseases", "After surgery"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Mildly elevated", "high": "Highly elevated" },
   "categoryLabel": "Inflammatory Markers",
-  "pageTitle": "CRP value — C-Reactive Protein explained | Medyra"
+  "pageTitle": "CRP value: C-Reactive Protein explained | Medyra"
 }

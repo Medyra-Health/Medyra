@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Erytrocyten in de urine (hematurie) betekent dat er bloed in de urine aanwezig is. Dit kan wijzen op urineweginfecties, nierstenen of andere aandoeningen. Zelfs zonder symptomen moet een positieve bevinding worden besproken met uw arts.",
-  "metaDescription": "Bloed in urine (hematurie)? Erytrocyten in urine: oorzaken, betekenis en wanneer de arts raadplegen — eenvoudig uitgelegd.",
+  "metaDescription": "Bloed in urine (hematurie)? Erytrocyten in urine: oorzaken, betekenis en wanneer de arts raadplegen: eenvoudig uitgelegd.",
   "causesElevated": ["Urineweginfectie", "Nierstenen", "Cystitis", "Nierziekte", "Trauma", "Bepaalde medicijnen"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "Urinewaarden",
-  "pageTitle": "Erytrocyten in urine — Hematurie uitgelegd | Medyra"
+  "pageTitle": "Erytrocyten in urine: Hematurie uitgelegd | Medyra"
 }

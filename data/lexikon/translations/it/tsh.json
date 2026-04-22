@@ -1,6 +1,6 @@
 {
   "shortAnswer": "TSH (ormone stimolante la tiroide) è prodotto dall'ipofisi e regola la tiroide. Un TSH alto può indicare ipotiroidismo, mentre un TSH basso può indicare ipertiroidismo. Entrambi possono causare sintomi come stanchezza o palpitazioni. Discutete i valori anomali con il vostro medico.",
-  "metaDescription": "TSH elevato o basso? Valori normali, cause e cosa significano i livelli dell'ormone tiroideo — spiegato in modo semplice.",
+  "metaDescription": "TSH elevato o basso? Valori normali, cause e cosa significano i livelli dell'ormone tiroideo: spiegato in modo semplice.",
   "causesElevated": ["Ipotiroidismo", "Tiroidite di Hashimoto", "Carenza di iodio", "Alcuni farmaci"],
   "causesLow": ["Ipertiroidismo", "Malattia di Graves", "Dose eccessiva di ormone tiroideo"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato (ipotiroidismo possibile)", "high": "Molto elevato" },
   "categoryLabel": "Tiroide",
-  "pageTitle": "Valore TSH — Ormone Stimolante la Tiroide spiegato | Medyra"
+  "pageTitle": "Valore TSH: Ormone Stimolante la Tiroide spiegato | Medyra"
 }

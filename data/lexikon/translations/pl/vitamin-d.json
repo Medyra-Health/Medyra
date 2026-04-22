@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Witamina D jest niezbędna dla kości, układu odpornościowego i mięśni. Niedobór jest bardzo powszechny, szczególnie zimą. Niskie wartości mogą powodować zmęczenie i bóle kości. Omów niedobór z lekarzem przed przyjęciem suplementów.",
-  "metaDescription": "Witamina D zbyt niska? Wartości prawidłowe, objawy niedoboru i kiedy suplementacja ma sens — wyjaśnione prosto.",
+  "metaDescription": "Witamina D zbyt niska? Wartości prawidłowe, objawy niedoboru i kiedy suplementacja ma sens: wyjaśnione prosto.",
   "causesElevated": ["Przedawkowanie suplementów diety"],
   "causesLow": ["Mała ekspozycja na słońce", "Ciemna karnacja", "Starszy wiek", "Zaburzenia wchłaniania", "Choroba nerek"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niedobór", "normal": "Wystarczający", "elevated": "Graniczny (niewystarczalność)", "high": "Możliwie za wysoki" },
   "categoryLabel": "Witaminy",
-  "pageTitle": "Wartość witaminy D — 25-OH Witamina D wyjaśniona | Medyra"
+  "pageTitle": "Wartość witaminy D: 25-OH Witamina D wyjaśniona | Medyra"
 }

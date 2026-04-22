@@ -1,6 +1,6 @@
 {
-  "shortAnswer": "fT4 (wolna tyroksyna) to główny hormon tarczycy, przekształcany w wątrobie w aktywne fT3. Podwyższone wartości mogą wskazywać na nadczynność tarczycy, niskie — na niedoczynność. Ta wartość powinna być zawsze oceniana razem z TSH.",
-  "metaDescription": "fT4 podwyższone lub niskie? Wartości prawidłowe, znaczenie wolnej tyroksyny i funkcja tarczycy — wyjaśnione prosto.",
+  "shortAnswer": "fT4 (wolna tyroksyna) to główny hormon tarczycy, przekształcany w wątrobie w aktywne fT3. Podwyższone wartości mogą wskazywać na nadczynność tarczycy, niskie: na niedoczynność. Ta wartość powinna być zawsze oceniana razem z TSH.",
+  "metaDescription": "fT4 podwyższone lub niskie? Wartości prawidłowe, znaczenie wolnej tyroksyny i funkcja tarczycy: wyjaśnione prosto.",
   "causesElevated": ["Nadczynność tarczycy", "Choroba Gravesa-Basedowa", "Nadmierna dawka hormonu tarczycy"],
   "causesLow": ["Niedoczynność tarczycy", "Zapalenie tarczycy Hashimoto", "Choroba przysadki mózgowej"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
   "categoryLabel": "Tarczyca",
-  "pageTitle": "Wartość fT4 — Wolna tyroksyna wyjaśniona | Medyra"
+  "pageTitle": "Wartość fT4: Wolna tyroksyna wyjaśniona | Medyra"
 }

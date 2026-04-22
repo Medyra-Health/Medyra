@@ -2,12 +2,12 @@ import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
 
 export const metadata = {
-  title: 'Health Vault & Profiles: Track Your Family\'s Health Over Time — Medyra',
+  title: 'Health Vault & Profiles: Track Your Family\'s Health Over Time, Medyra',
   description:
     'Medyra\'s Health Vault lets you create profiles for yourself and your family, track biomarkers like hemoglobin, cholesterol, and vitamin D over time, and walk into every doctor appointment with a complete longitudinal history.',
   alternates: { canonical: 'https://medyra.de/blog/health-vault-profiles-guide' },
   openGraph: {
-    title: 'Health Vault & Profiles: Track Your Family\'s Health Over Time — Medyra',
+    title: 'Health Vault & Profiles: Track Your Family\'s Health Over Time, Medyra',
     description:
       'Create health profiles for every family member, track lab values over months and years, and let AI detect trends automatically.',
     url: 'https://medyra.de/blog/health-vault-profiles-guide',
@@ -52,14 +52,14 @@ export default function BlogPost() {
 
           <p className="text-lg text-gray-600 leading-relaxed">
             A single lab result tells you very little. A hemoglobin of 12.8 g/dL is either perfectly normal or
-            a significant drop — depending entirely on what it was six months ago. Medicine is longitudinal.
+            a significant drop, depending entirely on what it was six months ago. Medicine is longitudinal.
             Health is a story over time. Medyra&apos;s Health Vault is built on this idea.
           </p>
 
           <p>
             With the Personal and Family plans, you can now create health profiles for every member of your
             household, track key biomarkers across months and years, and walk into every appointment with a
-            complete, structured history — automatically included in any doctor summary you generate.
+            complete, structured history, automatically included in any doctor summary you generate.
           </p>
 
           {/* What is it */}
@@ -68,7 +68,7 @@ export default function BlogPost() {
           <p>
             The Health Vault is a private, encrypted store of longitudinal health data for you and your family.
             Each time you upload a lab report, Medyra reads the values and stores them against your profile.
-            Over time, it builds a timeline — a visual chart showing how each biomarker has moved, with
+            Over time, it builds a timeline, a visual chart showing how each biomarker has moved, with
             reference lines marking the normal range.
           </p>
 
@@ -108,7 +108,7 @@ export default function BlogPost() {
           <p>
             A Health Profile is a named record for one person. Each profile has its own timeline, its own
             biomarker history, and its own colour code so you can tell them apart at a glance. You can
-            set the relationship — Myself, Partner, Child, Parent — which helps Medyra contextualise the data.
+            set the relationship, Myself, Partner, Child, Parent, which helps Medyra contextualise the data.
           </p>
 
           <p>
@@ -117,9 +117,9 @@ export default function BlogPost() {
 
           <div className="space-y-3 not-prose my-4">
             {[
-              { plan: 'Free / One-Time', profiles: '0 profiles', note: 'Stateless — reports are analysed but nothing is stored long-term', color: 'bg-gray-100 text-gray-700' },
+              { plan: 'Free / One-Time', profiles: '0 profiles', note: 'Stateless, reports are analysed but nothing is stored long-term', color: 'bg-gray-100 text-gray-700' },
               { plan: 'Personal', profiles: '2 profiles', note: 'You + one family member. Perfect for a couple.', color: 'bg-emerald-50 text-emerald-800' },
-              { plan: 'Family', profiles: '5 profiles', note: 'The whole household — partner, children, elderly parent.', color: 'bg-violet-50 text-violet-800' },
+              { plan: 'Family', profiles: '5 profiles', note: 'The whole household, partner, children, elderly parent.', color: 'bg-violet-50 text-violet-800' },
               { plan: 'Clinic', profiles: 'Unlimited', note: 'For medical practices managing patient data at scale.', color: 'bg-blue-50 text-blue-800' },
             ].map(row => (
               <div key={row.plan} className={`flex items-center justify-between px-4 py-3 rounded-xl ${row.color}`}>
@@ -180,7 +180,7 @@ export default function BlogPost() {
                 <p className="font-bold text-gray-900 mb-1">Use profile context in Doctor Visit</p>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   When you generate a doctor prep summary, select which profile it is for. Medyra
-                  automatically pulls the relevant lab history into the summary — populating the
+                  automatically pulls the relevant lab history into the summary, populating the
                   <em> Relevante Vorgeschichte</em> section with your actual tracked values, flagging any
                   that are abnormal, and noting significant trends. Your doctor gets a richer picture
                   without you having to remember or type any of it.
@@ -194,7 +194,7 @@ export default function BlogPost() {
           <h2 className="text-xl font-bold text-gray-900 mt-8">Why longitudinal data changes everything</h2>
 
           <p>
-            Most people interact with their health data exactly once — when they receive a result and panic,
+            Most people interact with their health data exactly once, when they receive a result and panic,
             or receive a result and ignore it. Neither response is particularly useful. Context is what turns
             a number into information.
           </p>
@@ -202,7 +202,7 @@ export default function BlogPost() {
           <p>
             Consider a ferritin of 18 µg/L. It is technically within the normal range (15–150). But if your
             ferritin was 85 µg/L last year, a drop to 18 is a significant trend worth discussing. Your GP
-            may not notice this unless they have access to the previous value — and in Germany, where patients
+            may not notice this unless they have access to the previous value, and in Germany, where patients
             often switch between practices or see multiple specialists, that continuity is frequently lost.
           </p>
 
@@ -218,7 +218,7 @@ export default function BlogPost() {
 
           <p>
             That kind of contextual alert does not happen when you read a PDF in isolation. It requires memory.
-            The Health Vault gives Medyra — and you — that memory.
+            The Health Vault gives Medyra, and you, that memory.
           </p>
 
           {/* Family */}
@@ -226,7 +226,7 @@ export default function BlogPost() {
 
           <p>
             The Family plan supports up to five profiles. In practice this is designed for households where
-            one person — usually a parent or caregiver — manages the medical administration for everyone.
+            one person, usually a parent or caregiver, manages the medical administration for everyone.
           </p>
 
           <p>
@@ -235,19 +235,19 @@ export default function BlogPost() {
 
           <ul className="list-disc pl-5 space-y-2 text-sm">
             <li>
-              <strong>Parent tracking a child&apos;s iron levels</strong> — common in families with children
+              <strong>Parent tracking a child&apos;s iron levels</strong>, common in families with children
               on restrictive diets or with diagnosed anaemia
             </li>
             <li>
-              <strong>Adult child managing an elderly parent&apos;s health</strong> — uploading their lab reports
+              <strong>Adult child managing an elderly parent&apos;s health</strong>, uploading their lab reports
               and generating structured German summaries before GP appointments
             </li>
             <li>
-              <strong>Couples tracking chronic conditions together</strong> — one partner with diabetes,
+              <strong>Couples tracking chronic conditions together</strong>, one partner with diabetes,
               one with a thyroid condition; each has their own profile
             </li>
             <li>
-              <strong>Anyone who attends appointments with a family member</strong> — having the history
+              <strong>Anyone who attends appointments with a family member</strong>, having the history
               at your fingertips means you can answer questions on their behalf accurately
             </li>
           </ul>
@@ -277,7 +277,7 @@ export default function BlogPost() {
             </div>
             <p className="text-white font-bold text-xl">Start building your Health Vault</p>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Personal plan — 2 health profiles · 20 reports/month · AI chat & prep summaries · From €4.99/month
+              Personal plan, 2 health profiles · 20 reports/month · AI chat & prep summaries · From €4.99/month
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Il sodio (Na) è un elettrolita vitale che regola l'equilibrio dei liquidi e la pressione sanguigna. I livelli bassi (iponatremia) possono causare confusione e convulsioni; i livelli alti (ipernatremia) suggeriscono disidratazione. Discutete qualsiasi deviazione con il vostro medico.",
-  "metaDescription": "Sodio elevato o basso? Valori normali, cause di squilibrio elettrolitico e quando consultare il medico — spiegato in modo semplice.",
+  "metaDescription": "Sodio elevato o basso? Valori normali, cause di squilibrio elettrolitico e quando consultare il medico: spiegato in modo semplice.",
   "causesElevated": ["Disidratazione", "Eccessiva assunzione di sale", "Alcuni farmaci", "Diabete insipido"],
   "causesLow": ["Eccessiva assunzione di liquidi", "Malattia renale", "Insufficienza cardiaca", "Alcuni farmaci (diuretici)", "Vomito / diarrea"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato (ipernatremia)", "high": "Molto elevato" },
   "categoryLabel": "Elettroliti",
-  "pageTitle": "Valore Na — Sodio spiegato | Medyra"
+  "pageTitle": "Valore Na: Sodio spiegato | Medyra"
 }

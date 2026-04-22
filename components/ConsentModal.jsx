@@ -37,7 +37,7 @@ export default function ConsentModal({ onAccept, onDecline }) {
               <Shield className="h-5 w-5 text-white" />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-gray-900">Your Health Data — Your Control</h2>
+              <h2 className="text-lg font-bold text-gray-900">Your Health Data, Your Control</h2>
               <p className="text-xs text-emerald-700 font-medium">Required before your first upload · GDPR Art. 9</p>
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function ConsentModal({ onAccept, onDecline }) {
             <div className="text-xs text-gray-500 space-y-3 leading-relaxed bg-gray-50 rounded-xl p-4">
               <div>
                 <p className="font-semibold text-gray-700 mb-1">Legal basis</p>
-                <p>GDPR Art. 9(2)(a) — explicit consent for processing special category health data. You may withdraw consent at any time by deleting your account or emailing privacy@medyra.de.</p>
+                <p>GDPR Art. 9(2)(a), explicit consent for processing special category health data. You may withdraw consent at any time by deleting your account or emailing privacy@medyra.de.</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-700 mb-1">Data processors (sub-processors)</p>
@@ -147,14 +147,14 @@ export default function ConsentModal({ onAccept, onDecline }) {
             disabled={loading}
             className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold h-11"
           >
-            {loading ? 'Saving…' : 'I consent — process my report'}
+            {loading ? 'Saving…' : 'I consent, process my report'}
           </Button>
           <Button
             onClick={onDecline}
             variant="ghost"
             className="w-full text-gray-500 hover:text-gray-700 text-sm h-10"
           >
-            No thanks — I do not consent
+            No thanks, I do not consent
           </Button>
           <p className="text-center text-xs text-gray-400 mt-1">
             Declining means your report will not be uploaded or stored. You can change this decision at any time.

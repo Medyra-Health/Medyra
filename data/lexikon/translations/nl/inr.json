@@ -1,6 +1,6 @@
 {
   "shortAnswer": "INR meet de bloedstollingstijd en wordt voornamelijk gebruikt om antistollingsmiddelen (bijv. warfarine) te monitoren. Waarden boven 1,2 kunnen wijzen op verlengde stollingstijd, waardoor het bloedingsrisico toeneemt. Bespreek veranderingen met uw arts.",
-  "metaDescription": "INR verhoogd? Normaalwaarden, betekenis bij warfarinetherapie en stollingsstoornissen — eenvoudig uitgelegd.",
+  "metaDescription": "INR verhoogd? Normaalwaarden, betekenis bij warfarinetherapie en stollingsstoornissen: eenvoudig uitgelegd.",
   "causesElevated": ["Warfarine / antistollingstherapie", "Leverziekte", "Vitamine K-tekort", "Stollingsstoornissen"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Licht verhoogd", "high": "Verhoogd / therapeutisch (antistolling)" },
   "categoryLabel": "Stolling",
-  "pageTitle": "Waarde INR — Internationale Genormaliseerde Ratio uitgelegd | Medyra"
+  "pageTitle": "Waarde INR: Internationale Genormaliseerde Ratio uitgelegd | Medyra"
 }

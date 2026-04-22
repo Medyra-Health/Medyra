@@ -1,6 +1,6 @@
 {
   "shortAnswer": "LDL is het 'slechte' cholesterol dat zich kan ophopen in de wanden van bloedvaten. Verhoogde waarden verhogen het risico op hartinfarct en beroerte. Streefwaarden zijn afhankelijk van uw persoonlijk risicoprofiel. Bespreek uw LDL-waarde met uw arts.",
-  "metaDescription": "LDL verhoogd? Normaalwaarden, hartrisico en behandelingsopties voor hoog slecht cholesterol — eenvoudig uitgelegd.",
+  "metaDescription": "LDL verhoogd? Normaalwaarden, hartrisico en behandelingsopties voor hoog slecht cholesterol: eenvoudig uitgelegd.",
   "causesElevated": ["Vetrijk dieet", "Genetische aanleg (familiaire hypercholesterolemie)", "Obesitas", "Hypothyreoïdie", "Diabetes"],
   "causesLow": ["Ondervoeding", "Leverziekte", "Statines"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal (laag risico)", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "Stofwisseling",
-  "pageTitle": "Waarde LDL — Slecht Cholesterol uitgelegd | Medyra"
+  "pageTitle": "Waarde LDL: Slecht Cholesterol uitgelegd | Medyra"
 }

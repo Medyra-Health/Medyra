@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Potas (K) to elektrolit regulujący rytm serca, mięśnie i nerwy. Niskie wartości mogą powodować arytmię serca i osłabienie mięśni; wysokie wartości są również niebezpieczne. Istotne odchylenia należy niezwłocznie omówić z lekarzem.",
-  "metaDescription": "Potas podwyższony lub niski? Wartości prawidłowe, ryzyko sercowe i przyczyny zaburzeń potasu — wyjaśnione prosto.",
+  "metaDescription": "Potas podwyższony lub niski? Wartości prawidłowe, ryzyko sercowe i przyczyny zaburzeń potasu: wyjaśnione prosto.",
   "causesElevated": ["Choroba nerek", "Inhibitory ACE lub diuretyki oszczędzające potas", "Nadmierne spożycie potasu", "Kwasica"],
   "causesLow": ["Wymioty / biegunka", "Diuretyki", "Niedobór magnezu", "Niewystarczające spożycie"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone (hiperkaliemia)", "high": "Znacznie podwyższone (niebezpieczne)" },
   "categoryLabel": "Elektrolity",
-  "pageTitle": "Wartość K — Potas wyjaśniony | Medyra"
+  "pageTitle": "Wartość K: Potas wyjaśniony | Medyra"
 }

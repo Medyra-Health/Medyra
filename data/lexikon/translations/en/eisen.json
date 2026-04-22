@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Serum iron measures the amount of iron in the blood at the time of the blood draw. Low values may indicate iron deficiency; high values can suggest iron overload. Since levels fluctuate significantly, serum iron is always assessed together with ferritin and transferrin.",
-  "metaDescription": "Serum iron elevated or low? Normal ranges, iron deficiency diagnosis, and meaning — explained simply.",
+  "metaDescription": "Serum iron elevated or low? Normal ranges, iron deficiency diagnosis, and meaning: explained simply.",
   "causesElevated": ["Hemochromatosis", "Hemolysis", "Liver disease", "Overdose of iron supplements"],
   "causesLow": ["Iron deficiency", "Chronic inflammation", "Heavy menstruation", "Inadequate iron intake"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Iron Values",
-  "pageTitle": "Fe value — Serum Iron explained | Medyra"
+  "pageTitle": "Fe value: Serum Iron explained | Medyra"
 }

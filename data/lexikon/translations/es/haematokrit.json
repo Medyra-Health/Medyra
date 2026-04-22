@@ -1,6 +1,6 @@
 {
   "shortAnswer": "El hematocrito (Hkt) indica el porcentaje de sangre compuesto por glóbulos rojos. Un valor bajo puede indicar anemia, mientras que uno alto puede sugerir deshidratación u otras condiciones médicas. Consulte con su médico ante valores anormales.",
-  "metaDescription": "Hematocrito (Hkt) alto o bajo? Valores normales, causas y cuándo consultar al médico — explicado claramente.",
+  "metaDescription": "Hematocrito (Hkt) alto o bajo? Valores normales, causas y cuándo consultar al médico: explicado claramente.",
   "causesElevated": ["Deshidratación", "Tabaquismo", "Policitemia vera", "Altitud elevada"],
   "causesLow": ["Anemia", "Pérdida de sangre", "Deficiencia de hierro", "Embarazo"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
   "categoryLabel": "Hemograma",
-  "pageTitle": "Valor Hkt — Hematocrito explicado | Medyra"
+  "pageTitle": "Valor Hkt: Hematocrito explicado | Medyra"
 }

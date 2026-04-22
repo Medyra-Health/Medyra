@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La fosfatasa alcalina (ALP) es una enzima presente en el hígado, los huesos y las vías biliares. Los niveles elevados pueden indicar enfermedad biliar, problemas hepáticos o trastornos óseos. Consulte con su médico niveles persistentemente elevados.",
-  "metaDescription": "Fosfatasa alcalina (ALP) elevada? Valores normales, causas y significado para la salud hepática y ósea — explicado de forma sencilla.",
+  "metaDescription": "Fosfatasa alcalina (ALP) elevada? Valores normales, causas y significado para la salud hepática y ósea: explicado de forma sencilla.",
   "causesElevated": ["Enfermedad biliar", "Enfermedad hepática", "Enfermedad ósea (p. ej., enfermedad de Paget)", "Embarazo", "Crecimiento normal en niños"],
   "causesLow": ["Hipotiroidismo", "Deficiencia de vitamina B12", "Deficiencia de zinc"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
   "categoryLabel": "Valores hepáticos",
-  "pageTitle": "Valor AP — Fosfatasa Alcalina explicada | Medyra"
+  "pageTitle": "Valor AP: Fosfatasa Alcalina explicada | Medyra"
 }

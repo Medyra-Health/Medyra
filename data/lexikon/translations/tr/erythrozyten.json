@@ -1,6 +1,6 @@
 {
   "shortAnswer": "RBC (kırmızı kan hücreleri), oksijeni akciğerlerden vücut dokularına taşır. Düşük değerler anemi anlamına gelebilir; yüksek değerler ise dehidrasyon belirtisi olabilir. Anormal sonuçları doktorunuzla görüşün.",
-  "metaDescription": "RBC / kırmızı kan hücreleri düşük veya yüksek mi? Normal değerler, nedenler ve sağlığınız için önemi — basitçe açıklandı.",
+  "metaDescription": "RBC / kırmızı kan hücreleri düşük veya yüksek mi? Normal değerler, nedenler ve sağlığınız için önemi: basitçe açıklandı.",
   "causesElevated": ["Dehidrasyon", "Yüksek irtifada yaşam", "Sigara içme", "Polisitemi vera"],
   "causesLow": ["Demir eksikliği", "B12 vitamini eksikliği", "Folat eksikliği", "Kronik hastalıklar", "Kan kaybı anemisi"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal (erkekler)", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "Kan Sayımı",
-  "pageTitle": "RBC değeri — Kırmızı Kan Hücreleri açıklaması | Medyra"
+  "pageTitle": "RBC değeri: Kırmızı Kan Hücreleri açıklaması | Medyra"
 }

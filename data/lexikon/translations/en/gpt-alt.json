@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GPT/ALT (alanine aminotransferase) is a liver enzyme. Elevated levels can indicate liver inflammation or damage, for example from alcohol, medications, or fatty liver disease. Discuss mildly elevated results with your doctor.",
-  "metaDescription": "GPT / ALT elevated? Normal ranges, causes, and what high liver enzyme levels mean — explained simply.",
+  "metaDescription": "GPT / ALT elevated? Normal ranges, causes, and what high liver enzyme levels mean: explained simply.",
   "causesElevated": ["Fatty liver disease", "Alcohol use", "Viral hepatitis", "Medication side effects", "Heart disease"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Liver Values",
-  "pageTitle": "GPT/ALT value — Alanine Aminotransferase explained | Medyra"
+  "pageTitle": "GPT/ALT value: Alanine Aminotransferase explained | Medyra"
 }

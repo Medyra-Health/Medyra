@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La CRP (protéine C-réactive) est un marqueur inflammatoire qui augmente lors d'infections ou d'états inflammatoires. Les valeurs normales sont inférieures à 5 mg/l. Des valeurs élevées peuvent indiquer une infection ou une inflammation. Consultez votre médecin rapidement si les niveaux sont significativement élevés.",
-  "metaDescription": "CRP élevée ? Valeurs normales, causes de la protéine C-réactive élevée et quand consulter — expliqués simplement.",
+  "metaDescription": "CRP élevée ? Valeurs normales, causes de la protéine C-réactive élevée et quand consulter: expliqués simplement.",
   "causesElevated": ["Infection bactérienne aiguë", "Inflammation chronique", "Inflammation tissulaire", "Maladies auto-immunes", "Après une chirurgie"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Légèrement élevé", "high": "Très élevé" },
   "categoryLabel": "Marqueurs inflammatoires",
-  "pageTitle": "Valeur CRP — Protéine C-réactive expliquée | Medyra"
+  "pageTitle": "Valeur CRP: Protéine C-réactive expliquée | Medyra"
 }

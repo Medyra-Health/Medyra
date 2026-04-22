@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'What Is TSH and Why Does It Matter?',
     description:
-      'A plain language guide to TSH — what your thyroid test result means, what counts as normal, and when a result outside the reference range needs attention.',
+      'A plain language guide to TSH, what your thyroid test result means, what counts as normal, and when a result outside the reference range needs attention.',
     url: 'https://medyra.de/blog/what-is-tsh-and-why-does-it-matter',
   },
   keywords: [
@@ -49,7 +49,7 @@ export default function BlogPost() {
         <div className="prose prose-gray max-w-none text-gray-700 leading-relaxed space-y-6">
 
           <p className="text-lg text-gray-600 leading-relaxed">
-            TSH appears on almost every routine blood panel. It is easy to overlook — just another three-letter
+            TSH appears on almost every routine blood panel. It is easy to overlook, just another three-letter
             abbreviation in a sea of numbers. But TSH is actually one of the most informative single values in
             a blood test, because it reflects how your entire thyroid system is functioning.
           </p>
@@ -58,8 +58,8 @@ export default function BlogPost() {
 
           <p>
             TSH stands for <strong>thyroid-stimulating hormone</strong> (in German: <em>Thyreoidea-stimulierendes Hormon</em>
-            or <em>Thyrotropin</em>). It is a hormone produced by the pituitary gland — a small structure at the
-            base of your brain — whose job is to signal the thyroid gland in your neck to produce thyroid hormones
+            or <em>Thyrotropin</em>). It is a hormone produced by the pituitary gland, a small structure at the
+            base of your brain, whose job is to signal the thyroid gland in your neck to produce thyroid hormones
             (T3 and T4).
           </p>
           <p>
@@ -80,7 +80,7 @@ export default function BlogPost() {
             <p className="font-semibold text-gray-800 mb-2">Standard adult TSH reference range</p>
             <p className="text-gray-600"><strong>0.4 – 4.0 mIU/L</strong> (varies slightly by lab and age)</p>
             <p className="text-xs text-gray-400 mt-2">
-              Pregnant women have different reference ranges — typically lower — which is why pregnancy always
+              Pregnant women have different reference ranges, typically lower, which is why pregnancy always
               requires TSH monitoring.
             </p>
           </div>
@@ -95,7 +95,7 @@ export default function BlogPost() {
 
           <p>
             A TSH value <strong>above</strong> the reference range (typically above 4.0–4.5 mIU/L) usually
-            indicates that the pituitary is working hard to stimulate the thyroid — which means the thyroid
+            indicates that the pituitary is working hard to stimulate the thyroid, which means the thyroid
             is not producing enough hormone on its own. This is called <strong>hypothyroidism</strong> (an
             underactive thyroid).
           </p>
@@ -118,7 +118,7 @@ export default function BlogPost() {
 
           <p>
             A TSH value <strong>below</strong> the reference range (typically below 0.4 mIU/L) means the
-            pituitary is barely signalling the thyroid — because thyroid hormone levels are already too high.
+            pituitary is barely signalling the thyroid, because thyroid hormone levels are already too high.
             This is called <strong>hyperthyroidism</strong> (an overactive thyroid).
           </p>
           <p>Common symptoms of hyperthyroidism include:</p>
@@ -156,11 +156,11 @@ export default function BlogPost() {
             The unit will be mIU/L or µIU/mL. You may also see:
           </p>
           <ul className="list-disc pl-5 space-y-1 text-sm">
-            <li><strong>fT3</strong> — Freies Trijodthyronin (Free T3)</li>
-            <li><strong>fT4</strong> — Freies Thyroxin (Free T4)</li>
-            <li><strong>Anti-TPO</strong> — Thyreoperoxidase-Antikörper (TPO antibodies)</li>
-            <li><strong>TgAk</strong> — Thyreoglobulin-Antikörper (thyroglobulin antibodies)</li>
-            <li><strong>TRAK</strong> — TSH-Rezeptor-Antikörper (TSH receptor antibodies, tested for Graves&apos; disease)</li>
+            <li><strong>fT3</strong>, Freies Trijodthyronin (Free T3)</li>
+            <li><strong>fT4</strong>, Freies Thyroxin (Free T4)</li>
+            <li><strong>Anti-TPO</strong>, Thyreoperoxidase-Antikörper (TPO antibodies)</li>
+            <li><strong>TgAk</strong>, Thyreoglobulin-Antikörper (thyroglobulin antibodies)</li>
+            <li><strong>TRAK</strong>, TSH-Rezeptor-Antikörper (TSH receptor antibodies, tested for Graves&apos; disease)</li>
           </ul>
 
           <h2 className="text-xl font-bold text-gray-900 mt-8">Questions to ask your doctor</h2>
@@ -184,7 +184,7 @@ export default function BlogPost() {
           <p className="text-sm font-semibold text-emerald-800 mb-1">Get your full lab report explained</p>
           <p className="text-xs text-emerald-700 leading-relaxed mb-3">
             Have a blood test with TSH and other values? Upload your report and Medyra will explain every
-            value — including TSH, fT4, and more — in plain language. Free to start.
+            value, including TSH, fT4, and more, in plain language. Free to start.
           </p>
           <Link
             href="/upload"

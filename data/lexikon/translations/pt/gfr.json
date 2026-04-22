@@ -1,6 +1,6 @@
 {
   "shortAnswer": "TFGe (taxa de filtração glomerular estimada) estima quão bem seus rins estão filtrando o sangue. Valores acima de 90 são considerados normais. Valores mais baixos podem indicar função renal reduzida. As recomendações dependem do estágio. Discuta o valor com o seu médico.",
-  "metaDescription": "TFGe baixa? Valores normais, estágios da função renal e quando consultar o médico — explicado de forma simples.",
+  "metaDescription": "TFGe baixa? Valores normais, estágios da função renal e quando consultar o médico: explicado de forma simples.",
   "causesElevated": [],
   "causesLow": ["Doença renal crônica", "Diabetes", "Hipertensão arterial", "Infecções renais repetidas", "Certos medicamentos"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Comprometido (DRC)", "normal": "Normal (≥ 90)", "elevated": "Levemente reduzido", "high": "Comprometido (DRC)" },
   "categoryLabel": "Valores renais",
-  "pageTitle": "Valor TFGe — Taxa de Filtração Glomerular explicada | Medyra"
+  "pageTitle": "Valor TFGe: Taxa de Filtração Glomerular explicada | Medyra"
 }

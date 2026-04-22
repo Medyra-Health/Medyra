@@ -1,6 +1,6 @@
 {
   "shortAnswer": "CRP (C-reaktif protein), vücuttaki enfeksiyon veya inflamasyonlar sırasında yükselen bir iltihap belirtecidir. Normal değerler 5 mg/l'nin altındadır. Yüksek değerler enfeksiyon veya iltihabı gösterebilir. Değerler belirgin şekilde yüksekse doktorunuza başvurun.",
-  "metaDescription": "CRP yüksek mi? Normal değerler, yüksek C-reaktif proteinin nedenleri ve ne zaman doktora gidilmeli — basitçe açıklandı.",
+  "metaDescription": "CRP yüksek mi? Normal değerler, yüksek C-reaktif proteinin nedenleri ve ne zaman doktora gidilmeli: basitçe açıklandı.",
   "causesElevated": ["Akut bakteriyel enfeksiyon", "Kronik iltihap", "Doku iltihabı", "Otoimmün hastalıklar", "Ameliyat sonrası"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Hafif yüksek", "high": "Çok yüksek" },
   "categoryLabel": "İltihap Belirteçleri",
-  "pageTitle": "CRP değeri — C-Reaktif Protein açıklaması | Medyra"
+  "pageTitle": "CRP değeri: C-Reaktif Protein açıklaması | Medyra"
 }

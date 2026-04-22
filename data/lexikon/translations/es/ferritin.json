@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La ferritina muestra cuánto hierro está almacenado en el cuerpo. Un valor bajo indica reservas de hierro agotadas, a menudo mucho antes de que se desarrolle la anemia. Los valores elevados pueden indicar inflamación o sobrecarga de hierro. Consulte con su médico ante valores anormales.",
-  "metaDescription": "Ferritina baja o alta? Valores normales, diagnóstico de deficiencia de hierro y causas — explicado de forma sencilla.",
+  "metaDescription": "Ferritina baja o alta? Valores normales, diagnóstico de deficiencia de hierro y causas: explicado de forma sencilla.",
   "causesElevated": ["Enfermedad inflamatoria (fase aguda)", "Hemocromatosis", "Enfermedad hepática", "Transfusiones de sangre frecuentes"],
   "causesLow": ["Deficiencia de hierro", "Dieta vegana", "Menstruación abundante", "Malabsorción"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Deficiente (mujeres < 12, hombres < 30)", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
   "categoryLabel": "Valores de hierro",
-  "pageTitle": "Valor ferritina — Reservas de hierro explicadas | Medyra"
+  "pageTitle": "Valor ferritina: Reservas de hierro explicadas | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GPT/ALT는 주로 간세포에 존재하는 효소입니다. 상승은 간세포 손상을 나타내며, 지방간, 간염, 약물 유발 간 손상 등이 원인입니다.",
-  "metaDescription": "GPT/ALT가 높나요? 정상 범위, 간 손상 원인, 언제 의사를 만나야 하는지 — 쉽게 설명합니다.",
+  "metaDescription": "GPT/ALT가 높나요? 정상 범위, 간 손상 원인, 언제 의사를 만나야 하는지: 쉽게 설명합니다.",
   "causesElevated": ["지방간", "알코올성 간 질환", "바이러스성 간염", "약물 유발 간 손상", "간경변"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "경미한 상승", "high": "현저한 상승" },
   "categoryLabel": "간 기능 검사",
-  "pageTitle": "GPT/ALT 수치 — ALT(간 효소) 쉽게 알아보기 | Medyra"
+  "pageTitle": "GPT/ALT 수치: ALT(간 효소) 쉽게 알아보기 | Medyra"
 }

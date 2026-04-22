@@ -1,6 +1,6 @@
 {
   "shortAnswer": "적혈구(RBC)는 폐에서 신체 조직으로 산소를 운반합니다. 낮은 수치는 빈혈을, 높은 수치는 탈수를 나타낼 수 있습니다. 이상 수치는 의사와 상담하세요.",
-  "metaDescription": "적혈구/RBC가 낮거나 높나요? 정상 범위, 원인, 건강에 미치는 의미 — 쉽게 설명합니다.",
+  "metaDescription": "적혈구/RBC가 낮거나 높나요? 정상 범위, 원인, 건강에 미치는 의미: 쉽게 설명합니다.",
   "causesElevated": ["탈수", "고지대 거주", "흡연", "진성 적혈구 증가증"],
   "causesLow": ["철 결핍", "비타민 B12 결핍", "엽산 결핍", "만성 질환", "실혈성 빈혈"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "낮음", "normal": "정상(남성)", "elevated": "상승", "high": "현저한 상승" },
   "categoryLabel": "혈구 검사",
-  "pageTitle": "RBC 수치 — 적혈구 쉽게 알아보기 | Medyra"
+  "pageTitle": "RBC 수치: 적혈구 쉽게 알아보기 | Medyra"
 }

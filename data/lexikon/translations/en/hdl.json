@@ -1,6 +1,6 @@
 {
   "shortAnswer": "HDL is known as the \"good\" cholesterol because it transports excess cholesterol back to the liver. High HDL levels protect the heart. Low levels can increase cardiovascular risk. Discuss low HDL values with your doctor.",
-  "metaDescription": "HDL too low? Normal ranges, causes, and how to raise good cholesterol — explained simply.",
+  "metaDescription": "HDL too low? Normal ranges, causes, and how to raise good cholesterol: explained simply.",
   "causesElevated": ["Regular physical activity", "Moderate alcohol consumption"],
   "causesLow": ["Physical inactivity", "Obesity", "Smoking", "Diabetes", "Elevated triglycerides"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Too low (increased risk)", "normal": "Desirable (≥ 40)", "elevated": "Optimal (≥ 60)", "high": "Optimal (≥ 60)" },
   "categoryLabel": "Metabolism",
-  "pageTitle": "HDL value — Good Cholesterol explained | Medyra"
+  "pageTitle": "HDL value: Good Cholesterol explained | Medyra"
 }

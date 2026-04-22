@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La présence de globules rouges dans les urines (hématurie) signifie qu'il y a du sang dans les urines. Cela peut indiquer des infections urinaires, des calculs rénaux ou d'autres affections. Même sans symptômes, un résultat positif doit être discuté avec votre médecin.",
-  "metaDescription": "Sang dans les urines (hématurie) ? Globules rouges dans les urines : causes, signification et quand consulter — expliqués simplement.",
+  "metaDescription": "Sang dans les urines (hématurie) ? Globules rouges dans les urines : causes, signification et quand consulter: expliqués simplement.",
   "causesElevated": ["Infection urinaire", "Calculs rénaux", "Cystite", "Maladie rénale", "Traumatisme", "Certains médicaments"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
   "categoryLabel": "Valeurs urinaires",
-  "pageTitle": "GR dans les urines — Hématurie expliquée | Medyra"
+  "pageTitle": "GR dans les urines: Hématurie expliquée | Medyra"
 }

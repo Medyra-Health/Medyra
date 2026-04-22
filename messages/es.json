@@ -18,7 +18,7 @@
     "subtitle": "Por fin en lenguaje claro",
     "description": "Deja de buscar términos médicos en Google. Sube tus resultados y obtén una explicación clara y privada en menos de 60 segundos.",
     "cta": "Analizar mi primer informe gratis",
-    "disclaimer": "Solo información educativa — no sustituye al consejo médico.",
+    "disclaimer": "Solo información educativa: no sustituye al consejo médico.",
     "secondaryCta": "Ver precios"
   },
   "features": {
@@ -151,9 +151,9 @@
     "comingSoon": "Próximamente",
     "goToDashboard": "Ir al panel",
     "faqTitle": "Preguntas frecuentes",
-    "launchOfferBanner": "🔥 Oferta de lanzamiento — 50% de descuento en todos los planes de pago",
+    "launchOfferBanner": "🔥 Oferta de lanzamiento: 50% de descuento en todos los planes de pago",
     "limitedOffer": "Oferta de lanzamiento limitada",
-    "fiftyOff": "50% de descuento — mientras dure",
+    "fiftyOff": "50% de descuento: mientras dure",
     "applyCode": "Aplica el código al pagar. Válido en todos los planes de pago.",
     "copied": "¡Copiado!",
     "copyCode": "Copiar código",
@@ -257,7 +257,7 @@
     "allValuesNormal": "Todos los valores son normales",
     "keyTakeaways": "Puntos clave",
     "valuesNeedingAttention": "Valores que requieren su atención",
-    "greatResults": "Excelentes resultados — consulte con su médico",
+    "greatResults": "Excelentes resultados: consulte con su médico",
     "allReports": "Todos los informes",
     "saveAsPdf": "Guardar como PDF",
     "chatGreeting": "¡Hola! He leído su informe. Pregúnteme lo que quiera:",
@@ -348,7 +348,7 @@
     "howItWorks": {
       "badge": "Proceso sencillo",
       "step1Title": "Sube tu informe",
-      "step1Desc": "Arrastra cualquier PDF, JPG, PNG o TXT. Nuestra IA lee el texto — incluso de fotos escaneadas.",
+      "step1Desc": "Arrastra cualquier PDF, JPG, PNG o TXT. Nuestra IA lee el texto: incluso de fotos escaneadas.",
       "step1Detail": "Cifrado inmediato",
       "step2Title": "La IA analiza en ~30s",
       "step2Desc": "La IA Claude identifica cada valor, señala resultados anormales y escribe una explicación clara.",
@@ -356,26 +356,26 @@
       "step3Title": "Obtén tus respuestas",
       "step3Desc": "Lee tus resultados, chatea con la IA y exporta un PDF para tu próxima cita.",
       "step3Detail": "Comparte con tu médico",
-      "cta": "Empieza gratis — sin tarjeta"
+      "cta": "Empieza gratis: sin tarjeta"
     },
     "doctorVisit": {
       "badge": "Nueva función",
       "title1": "¿Vas al médico?",
       "title2": "Llega preparado.",
-      "description": "Describe cómo te sientes — en cualquier idioma. Medyra lo convierte en un resumen clínico alemán estructurado que tu médico puede leer en segundos.",
+      "description": "Describe cómo te sientes: en cualquier idioma. Medyra lo convierte en un resumen clínico alemán estructurado que tu médico puede leer en segundos.",
       "step1Title": "Describe en cualquier idioma",
-      "step1Desc": "Escribe libremente en español, árabe, hindi, turco — lo que te resulte natural.",
+      "step1Desc": "Escribe libremente en español, árabe, hindi, turco: lo que te resulte natural.",
       "step2Title": "La IA lo estructura al instante",
       "step2Desc": "Claude crea un resumen clínico alemán formal: quejas principales, cronología, historial y preguntas.",
       "step3Title": "Imprime y lleva a la cita",
-      "step3Desc": "Un clic imprime una hoja A4 limpia — entrégala a tu médico al inicio de la visita.",
+      "step3Desc": "Un clic imprime una hoja A4 limpia: entrégala a tu médico al inicio de la visita.",
       "cta": "Preparar mi cita",
       "freePlan": "Plan gratuito incluye 1 resumen por mes"
     },
     "languages": {
       "badge": "Alcance global",
       "title": "Disponible en 18 idiomas",
-      "subtitle": "De Alemania al mundo — entiende tu salud en tu propio idioma."
+      "subtitle": "De Alemania al mundo: entiende tu salud en tu propio idioma."
     },
     "newToGermany": {
       "badge": "Nuevo en Alemania",
@@ -392,7 +392,7 @@
     },
     "security": {
       "badge": "Cifrado bancario",
-      "title": "Tus datos están cifrados — incluso para nosotros",
+      "title": "Tus datos están cifrados: incluso para nosotros",
       "subtitle": "Cada informe, cada valor, cada explicación de IA se cifra con AES-256-GCM antes de tocar nuestra base de datos.",
       "yourReport": "Tu informe",
       "ourDatabase": "Nuestra base de datos",
@@ -401,7 +401,7 @@
       "feat2Title": "RGPD Art. 32",
       "feat2Desc": "Cifrado requerido para datos de salud personales",
       "feat3Title": "IV único por campo",
-      "feat3Desc": "No hay dos textos cifrados iguales — ni siquiera para valores idénticos",
+      "feat3Desc": "No hay dos textos cifrados iguales: ni siquiera para valores idénticos",
       "feat4Title": "Sin texto plano almacenado",
       "feat4Desc": "Una brecha en nuestra BD no revela nada legible",
       "deepDive": "¿Cómo funciona técnicamente? Lee el análisis detallado"
@@ -417,7 +417,7 @@
     }
   },
   "siteFooter": {
-    "tagline": "Entiende tus análisis — en tu idioma, en 60 segundos.",
+    "tagline": "Entiende tus análisis: en tu idioma, en 60 segundos.",
     "product": "Producto",
     "upload": "Subir informe",
     "prep": "Preparar visita médica",
@@ -512,7 +512,7 @@
       "cap3": "Exportaciones PDF",
       "cap3p": "50 / mes",
       "cap3f": "100 / mes",
-      "footnote": "Quien realmente alcanza estos límites recibe noticias nuestras directamente — sin actualización automática."
+      "footnote": "Quien realmente alcanza estos límites recibe noticias nuestras directamente: sin actualización automática."
     },
     "compare": {
       "title": "Comparar planes",
@@ -551,7 +551,7 @@
     "faq": {
       "title": "Preguntas frecuentes",
       "q1": "¿Puedo cancelar en cualquier momento?",
-      "a1": "Sí — cancela desde tu panel. El acceso continúa hasta el final del período de facturación.",
+      "a1": "Sí: cancela desde tu panel. El acceso continúa hasta el final del período de facturación.",
       "q2": "¿Mis datos están seguros?",
       "a2": "Todos los datos se cifran con AES-256-GCM. Cumplimos el RGPD y los documentos se eliminan tras 30 días.",
       "q3": "¿Qué significa \"Ilimitado*\"?",

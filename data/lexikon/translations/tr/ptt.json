@@ -1,6 +1,6 @@
 {
   "shortAnswer": "PTT (parsiyel tromboplastin zamanı), kanın iç pıhtılaşma yolu üzerinden ne kadar hızlı pıhtılaştığını ölçer. Uzamış değerler pıhtılaşma bozukluğuna veya heparin etkisine işaret edebilir. Test ameliyat öncesinde ve kanama eğilimlerinde kullanılır. Anormal değerleri doktorunuzla görüşün.",
-  "metaDescription": "PTT yüksek mi? Normal değerler, pıhtılaşma süresinin anlamı ve heparin tedavisindeki nedenleri — basitçe açıklandı.",
+  "metaDescription": "PTT yüksek mi? Normal değerler, pıhtılaşma süresinin anlamı ve heparin tedavisindeki nedenleri: basitçe açıklandı.",
   "causesElevated": ["Heparin tedavisi", "Hemofili", "Pıhtılaşma faktörü eksikliği", "von Willebrand hastalığı"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Uzamış", "high": "Çok uzamış" },
   "categoryLabel": "Pıhtılaşma",
-  "pageTitle": "PTT değeri — Parsiyel Tromboplastin Zamanı açıklaması | Medyra"
+  "pageTitle": "PTT değeri: Parsiyel Tromboplastin Zamanı açıklaması | Medyra"
 }

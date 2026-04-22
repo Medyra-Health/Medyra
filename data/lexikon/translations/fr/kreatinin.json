@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La créatinine est un déchet du métabolisme musculaire éliminé par les reins. Des valeurs élevées peuvent indiquer une réduction de la fonction rénale. La valeur dépend également de la masse musculaire et de l'apport hydrique. Discutez de toute valeur anormale avec votre médecin.",
-  "metaDescription": "Créatinine élevée ? Valeurs normales, causes et signification pour la fonction rénale — expliqués simplement.",
+  "metaDescription": "Créatinine élevée ? Valeurs normales, causes et signification pour la fonction rénale: expliqués simplement.",
   "causesElevated": ["Maladie rénale", "Déshydratation", "Masse musculaire élevée", "Certains médicaments", "Consommation excessive de viande"],
   "causesLow": ["Faible masse musculaire", "Malnutrition", "Grossesse"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Légèrement élevé", "high": "Très élevé" },
   "categoryLabel": "Bilan rénal",
-  "pageTitle": "Valeur créatinine — Fonction rénale expliquée | Medyra"
+  "pageTitle": "Valeur créatinine: Fonction rénale expliquée | Medyra"
 }

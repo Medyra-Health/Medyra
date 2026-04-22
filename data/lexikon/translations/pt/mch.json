@@ -1,6 +1,6 @@
 {
   "shortAnswer": "O MCH mede a quantidade média de hemoglobina em um único glóbulo vermelho. Valores baixos podem indicar deficiência de ferro, enquanto valores altos podem sugerir deficiência de vitamina B12. Discuta achados anormais com o seu médico.",
-  "metaDescription": "MCH baixo ou alto? Valores normais, significado e causas de conteúdo anormal de hemoglobina por célula — explicado de forma simples.",
+  "metaDescription": "MCH baixo ou alto? Valores normais, significado e causas de conteúdo anormal de hemoglobina por célula: explicado de forma simples.",
   "causesElevated": ["Deficiência de vitamina B12", "Deficiência de folato", "Consumo de álcool"],
   "causesLow": ["Deficiência de ferro", "Talassemia", "Doença crônica"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado", "high": "Muito elevado" },
   "categoryLabel": "Hemograma",
-  "pageTitle": "Valor MCH — Hemoglobina Corpuscular Média explicada | Medyra"
+  "pageTitle": "Valor MCH: Hemoglobina Corpuscular Média explicada | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Açlık kan şekeri, en az 8 saat aç kaldıktan sonra kandaki glikoz konsantrasyonunu ölçer. 126 mg/dl'nin üzerindeki değerler diyabete, 100–125 mg/dl arasındakiler prediyabete işaret edebilir. Yüksek değerleri doktorunuzla görüşün.",
-  "metaDescription": "Açlık kan şekeri yüksek mi? Normal değerler, diyabet riski ve değerin anlamı — basitçe açıklandı.",
+  "metaDescription": "Açlık kan şekeri yüksek mi? Normal değerler, diyabet riski ve değerin anlamı: basitçe açıklandı.",
   "causesElevated": ["Diabetes mellitus", "İnsülin direnci", "Stres tepkisi", "Bazı ilaçlar (örn. kortikosteroidler)"],
   "causesLow": ["Aşırı insülin", "Bazı ilaçlar", "Egzersiz sonrası açlık", "Nadir hastalıklar"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal (açlık)", "elevated": "Prediyabet aralığı", "high": "Diyabet aralığı" },
   "categoryLabel": "Metabolizma",
-  "pageTitle": "Kan şekeri değeri — Açlık kan şekeri açıklaması | Medyra"
+  "pageTitle": "Kan şekeri değeri: Açlık kan şekeri açıklaması | Medyra"
 }

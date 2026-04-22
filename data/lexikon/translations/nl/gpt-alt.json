@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GPT/ALT (alanineaminotransferase) is een leverenzym. Verhoogde waarden kunnen wijzen op leverontsteking of -schade, bijvoorbeeld door alcohol, medicijnen of leververvetting. Bespreek licht verhoogde resultaten met uw arts.",
-  "metaDescription": "GPT / ALT verhoogd? Normaalwaarden, oorzaken en wat hoge leverenzymwaarden betekenen — eenvoudig uitgelegd.",
+  "metaDescription": "GPT / ALT verhoogd? Normaalwaarden, oorzaken en wat hoge leverenzymwaarden betekenen: eenvoudig uitgelegd.",
   "causesElevated": ["Leververvetting", "Alcoholgebruik", "Virale hepatitis", "Bijwerkingen van medicijnen", "Hartziekte"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "Leverwaarden",
-  "pageTitle": "Waarde GPT/ALT — Alanineaminotransferase uitgelegd | Medyra"
+  "pageTitle": "Waarde GPT/ALT: Alanineaminotransferase uitgelegd | Medyra"
 }

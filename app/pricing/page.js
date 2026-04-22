@@ -11,6 +11,7 @@ import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 import { useTranslations } from 'next-intl'
 import MedyraLogo from '@/components/MedyraLogo'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
+import SiteFooter from '@/components/SiteFooter'
 import { Button } from '@/components/ui/button'
 import { toast } from 'sonner'
 
@@ -299,7 +300,7 @@ export default function PricingPage() {
           })}
         </div>
 
-        {/* ── Fair Use Policy — professional section ── */}
+        {/* ── Fair Use Policy, professional section ── */}
         <div className="scroll-reveal mb-16">
           <div className="relative rounded-2xl overflow-hidden border border-gray-200">
             {/* Top accent bar */}
@@ -427,14 +428,7 @@ export default function PricingPage() {
 
       </div>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 border-t border-gray-800 text-white py-8 mt-16">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center mb-3"><MedyraLogo size="sm" variant="dark" /></div>
-          <p className="text-gray-500 text-xs">© 2025 Medyra. All rights reserved.</p>
-          <p className="text-gray-600 text-xs mt-1">Educational tool — not a substitute for professional medical advice.</p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }

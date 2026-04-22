@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Red blood cells in urine (hematuria) means blood is present in the urine. This can indicate urinary tract infections, kidney stones, or other conditions. Even without symptoms, a positive finding should be discussed with your doctor.",
-  "metaDescription": "Blood in urine (hematuria)? Red blood cells in urine: causes, meaning, and when to see a doctor — explained simply.",
+  "metaDescription": "Blood in urine (hematuria)? Red blood cells in urine: causes, meaning, and when to see a doctor: explained simply.",
   "causesElevated": ["Urinary tract infection", "Kidney stones", "Cystitis", "Kidney disease", "Trauma", "Certain medications"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Urine Values",
-  "pageTitle": "RBC in urine — Hematuria explained | Medyra"
+  "pageTitle": "RBC in urine: Hematuria explained | Medyra"
 }

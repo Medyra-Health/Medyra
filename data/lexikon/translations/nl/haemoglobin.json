@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Hemoglobine (Hb) is het eiwit in rode bloedcellen dat zuurstof transporteert van de longen naar organen en weefsels. Normaalwaarden zijn 12–16 g/dl voor vrouwen en 13,5–17,5 g/dl voor mannen. Een laag niveau wijst op bloedarmoede en kan vermoeidheid veroorzaken. Bespreek abnormale resultaten met uw arts.",
-  "metaDescription": "Hemoglobine (Hb) te laag? Normaalwaarden voor mannen en vrouwen, oorzaken van bloedarmoede en wanneer de arts raadplegen — eenvoudig uitgelegd.",
+  "metaDescription": "Hemoglobine (Hb) te laag? Normaalwaarden voor mannen en vrouwen, oorzaken van bloedarmoede en wanneer de arts raadplegen: eenvoudig uitgelegd.",
   "causesElevated": ["Uitdroging", "Roken", "Grote hoogte", "Polycythemia vera"],
   "causesLow": ["IJzertekort", "Vitamine B12-tekort", "Chronische ziekte", "Bloedverlies", "Foliumzuurtekort"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "Bloedbeeld",
-  "pageTitle": "Waarde Hb — Hemoglobine uitgelegd | Medyra"
+  "pageTitle": "Waarde Hb: Hemoglobine uitgelegd | Medyra"
 }

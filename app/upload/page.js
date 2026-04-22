@@ -231,7 +231,7 @@ export default function UploadPage() {
           <p className="text-gray-500 text-sm">Get a plain language explanation in under 60 seconds</p>
         </div>
 
-        {/* How it works — 3 steps */}
+        {/* How it works, 3 steps */}
         <div className="flex items-center justify-center gap-0 mb-8">
           {STEPS.map((step, i) => (
             <div key={step.label} className="flex items-center">
@@ -256,10 +256,10 @@ export default function UploadPage() {
               <AlertCircle className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-red-700 text-sm mb-1">File too large (max 4 MB)</p>
-                <p className="text-xs text-red-600 mb-2">Please compress your PDF first — it takes a few seconds:</p>
+                <p className="text-xs text-red-600 mb-2">Please compress your PDF first, it takes a few seconds:</p>
                 <ul className="text-xs text-red-600 space-y-0.5">
-                  <li>• <strong>ilovepdf.com/compress_pdf</strong> — free, no sign up</li>
-                  <li>• <strong>smallpdf.com/compress-pdf</strong> — free online</li>
+                  <li>• <strong>ilovepdf.com/compress_pdf</strong>, free, no sign up</li>
+                  <li>• <strong>smallpdf.com/compress-pdf</strong>, free online</li>
                   <li>• Mac: Preview → Export as PDF → Reduce File Size</li>
                 </ul>
               </div>

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La bilirubina è un prodotto di degradazione dei globuli rossi. I livelli elevati possono indicare problemi epatici o ostruzione delle vie biliari e possono causare ittero. Livelli leggermente elevati si osservano anche nella sindrome di Gilbert, che è innocua.",
-  "metaDescription": "Bilirubina elevata? Valori normali, cause e quando indica ittero o malattia epatica — spiegato in modo semplice.",
+  "metaDescription": "Bilirubina elevata? Valori normali, cause e quando indica ittero o malattia epatica: spiegato in modo semplice.",
   "causesElevated": ["Malattia epatica", "Calcoli biliari", "Emolisi (degradazione dei globuli rossi)", "Sindrome di Gilbert", "Alcuni farmaci"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Leggermente elevato", "high": "Molto elevato (ittero possibile)" },
   "categoryLabel": "Valori epatici",
-  "pageTitle": "Valore bili — Bilirubina spiegata | Medyra"
+  "pageTitle": "Valore bili: Bilirubina spiegata | Medyra"
 }

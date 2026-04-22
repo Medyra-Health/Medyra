@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GGT (gama-glutamiltransferase) é uma enzima hepática particularmente sensível ao álcool e problemas das vias biliares. Níveis elevados podem indicar esteatose hepática, consumo de álcool ou doença da vesícula biliar. Níveis persistentemente altos devem ser discutidos com o seu médico.",
-  "metaDescription": "GGT elevado? Valores normais, causas e o que significa um alto nível de gama-GT — explicado de forma simples.",
+  "metaDescription": "GGT elevado? Valores normais, causas e o que significa um alto nível de gama-GT: explicado de forma simples.",
   "causesElevated": ["Consumo de álcool", "Esteatose hepática", "Doença da vesícula biliar", "Certos medicamentos", "Obesidade"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado", "high": "Muito elevado" },
   "categoryLabel": "Valores hepáticos",
-  "pageTitle": "Valor GGT — Gama-Glutamiltransferase explicada | Medyra"
+  "pageTitle": "Valor GGT: Gama-Glutamiltransferase explicada | Medyra"
 }

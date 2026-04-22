@@ -1,6 +1,6 @@
 {
   "shortAnswer": "저밀도 지단백(LDL)은 '나쁜 콜레스테롤'로 불리며, 높은 수치는 동맥경화와 심혈관 질환 위험을 높입니다. 목표 수치는 개인의 심혈관 위험에 따라 다릅니다.",
-  "metaDescription": "LDL이 높나요? 정상 범위, 심혈관 위험, 언제 약물 치료가 필요한지 — 쉽게 설명합니다.",
+  "metaDescription": "LDL이 높나요? 정상 범위, 심혈관 위험, 언제 약물 치료가 필요한지: 쉽게 설명합니다.",
   "causesElevated": ["포화지방이 많은 식이", "운동 부족", "비만", "가족성 고콜레스테롤혈증", "갑상선 기능 저하증"],
   "causesLow": ["채식 위주 식이", "스타틴 계열 약물 치료", "영양 부족"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "이상적", "normal": "정상", "elevated": "경계 높음", "high": "현저히 높음" },
   "categoryLabel": "대사 검사",
-  "pageTitle": "LDL 수치 — 나쁜 콜레스테롤 쉽게 알아보기 | Medyra"
+  "pageTitle": "LDL 수치: 나쁜 콜레스테롤 쉽게 알아보기 | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Urinezuur wordt geproduceerd wanneer purines uit voedsel worden afgebroken. Hoge waarden kunnen wijzen op jicht of het bevorderen van nierstenen. Voeding en alcohol spelen een belangrijke rol. Bespreek verhoogde waarden met uw arts, vooral als u gewrichtspijn heeft.",
-  "metaDescription": "Urinezuur verhoogd? Normaalwaarden, jichtrisico en wat u kunt doen bij hoog urinezuur — eenvoudig uitgelegd.",
+  "metaDescription": "Urinezuur verhoogd? Normaalwaarden, jichtrisico en wat u kunt doen bij hoog urinezuur: eenvoudig uitgelegd.",
   "causesElevated": ["Purinerijk dieet (vlees, orgaanvlees)", "Alcoholgebruik", "Nierziekte", "Bepaalde medicijnen", "Obesitas"],
   "causesLow": ["Bepaalde medicijnen", "Leverziekte"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd (hyperurikemie)", "high": "Sterk verhoogd" },
   "categoryLabel": "Nierwaarden",
-  "pageTitle": "Waarde urinezuur — Jichtrisico uitgelegd | Medyra"
+  "pageTitle": "Waarde urinezuur: Jichtrisico uitgelegd | Medyra"
 }

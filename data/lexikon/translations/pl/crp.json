@@ -1,6 +1,6 @@
 {
   "shortAnswer": "CRP (białko C-reaktywne) to marker zapalny rosnący podczas infekcji lub stanów zapalnych. Prawidłowe wartości są poniżej 5 mg/l. Podwyższone wartości mogą wskazywać na infekcję lub stan zapalny. Niezwłocznie skonsultuj się z lekarzem, jeśli wartości są znacznie podwyższone.",
-  "metaDescription": "CRP podwyższone? Wartości prawidłowe, przyczyny wysokiego białka C-reaktywnego i kiedy udać się do lekarza — wyjaśnione prosto.",
+  "metaDescription": "CRP podwyższone? Wartości prawidłowe, przyczyny wysokiego białka C-reaktywnego i kiedy udać się do lekarza: wyjaśnione prosto.",
   "causesElevated": ["Ostra infekcja bakteryjna", "Przewlekłe zapalenie", "Zapalenie tkanek", "Choroby autoimmunologiczne", "Po operacji"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Nieznacznie podwyższone", "high": "Znacznie podwyższone" },
   "categoryLabel": "Markery zapalne",
-  "pageTitle": "Wartość CRP — Białko C-reaktywne wyjaśnione | Medyra"
+  "pageTitle": "Wartość CRP: Białko C-reaktywne wyjaśnione | Medyra"
 }

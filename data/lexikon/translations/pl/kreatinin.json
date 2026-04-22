@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Kreatynina to produkt odpadowy metabolizmu mięśniowego filtrowany przez nerki. Podwyższone wartości mogą wskazywać na zmniejszoną funkcję nerek. Wartość zależy też od masy mięśniowej i spożycia płynów. Omów nieprawidłowe wartości z lekarzem.",
-  "metaDescription": "Kreatynina podwyższona? Wartości prawidłowe, przyczyny i co oznacza wysoka kreatynina dla czynności nerek — wyjaśnione prosto.",
+  "metaDescription": "Kreatynina podwyższona? Wartości prawidłowe, przyczyny i co oznacza wysoka kreatynina dla czynności nerek: wyjaśnione prosto.",
   "causesElevated": ["Choroba nerek", "Odwodnienie", "Duża masa mięśniowa", "Niektóre leki", "Nadmierne spożycie mięsa"],
   "causesLow": ["Mała masa mięśniowa", "Niedożywienie", "Ciąża"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Nieznacznie podwyższone", "high": "Znacznie podwyższone" },
   "categoryLabel": "Wskaźniki nerkowe",
-  "pageTitle": "Wartość kreatyniny — Czynność nerek wyjaśniona | Medyra"
+  "pageTitle": "Wartość kreatyniny: Czynność nerek wyjaśniona | Medyra"
 }

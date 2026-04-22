@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La vitamina B12 (cobalamina) es esencial para la formación sanguínea, el sistema nervioso y el metabolismo celular. La deficiencia se desarrolla lentamente y puede causar fatiga, hormigueo y problemas de memoria. Los veganos y las personas mayores tienen mayor riesgo. Consulte cualquier sospecha con su médico.",
-  "metaDescription": "Vitamina B12 demasiado baja? Valores normales, síntomas de deficiencia y tratamiento para veganos y personas mayores — explicado de forma sencilla.",
+  "metaDescription": "Vitamina B12 demasiado baja? Valores normales, síntomas de deficiencia y tratamiento para veganos y personas mayores: explicado de forma sencilla.",
   "causesElevated": ["Enfermedad hepática", "Ciertos trastornos sanguíneos", "Sobredosis de suplementos"],
   "causesLow": ["Dieta vegana/vegetariana", "Gastritis atrófica", "Mala absorción intestinal", "Uso prolongado de metformina o inhibidores de la bomba de protones"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Deficiente", "normal": "Suficiente", "elevated": "Elevado", "high": "Elevado" },
   "categoryLabel": "Vitaminas",
-  "pageTitle": "Valor vitamina B12 — Cobalamina explicada | Medyra"
+  "pageTitle": "Valor vitamina B12: Cobalamina explicada | Medyra"
 }

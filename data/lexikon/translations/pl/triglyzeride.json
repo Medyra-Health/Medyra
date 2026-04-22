@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Trójglicerydy to tłuszcze we krwi służące jako rezerwa energetyczna. Podwyższone wartości mogą zwiększać ryzyko chorób sercowo-naczyniowych i zapalenia trzustki. Alkohol, cukier i otyłość odgrywają ważną rolę. Omów podwyższone wartości z lekarzem.",
-  "metaDescription": "Trójglicerydy podwyższone? Wartości prawidłowe, przyczyny i co zrobić przy wysokich tłuszczach we krwi — wyjaśnione prosto.",
+  "metaDescription": "Trójglicerydy podwyższone? Wartości prawidłowe, przyczyny i co zrobić przy wysokich tłuszczach we krwi: wyjaśnione prosto.",
   "causesElevated": ["Dieta bogata w cukier", "Spożycie alkoholu", "Otyłość", "Cukrzyca", "Niedoczynność tarczycy"],
   "causesLow": ["Niedożywienie", "Zaburzenia wchłaniania", "Niektóre leki"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone (ryzyko zapalenia trzustki)" },
   "categoryLabel": "Metabolizm",
-  "pageTitle": "Wartość TG — Trójglicerydy wyjaśnione | Medyra"
+  "pageTitle": "Wartość TG: Trójglicerydy wyjaśnione | Medyra"
 }

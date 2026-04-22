@@ -18,7 +18,7 @@
     "subtitle": "Finalmente in linguaggio chiaro",
     "description": "Smetti di cercare termini medici su Google. Carica i tuoi risultati e ottieni una spiegazione chiara e privata in meno di 60 secondi.",
     "cta": "Analizza il primo referto gratis",
-    "disclaimer": "Solo informazioni educative — non sostituisce il consiglio medico.",
+    "disclaimer": "Solo informazioni educative: non sostituisce il consiglio medico.",
     "secondaryCta": "Vedi i prezzi"
   },
   "features": {
@@ -151,9 +151,9 @@
     "comingSoon": "Prossimamente",
     "goToDashboard": "Vai alla dashboard",
     "faqTitle": "Domande frequenti",
-    "launchOfferBanner": "🔥 Offerta di lancio — 50% di sconto su tutti i piani a pagamento",
+    "launchOfferBanner": "🔥 Offerta di lancio: 50% di sconto su tutti i piani a pagamento",
     "limitedOffer": "Offerta di lancio limitata",
-    "fiftyOff": "50% di sconto — finché dura",
+    "fiftyOff": "50% di sconto: finché dura",
     "applyCode": "Applica il codice al checkout. Valido su tutti i piani a pagamento.",
     "copied": "Copiato!",
     "copyCode": "Copia codice",
@@ -257,7 +257,7 @@
     "allValuesNormal": "Tutti i valori sono normali",
     "keyTakeaways": "Punti chiave",
     "valuesNeedingAttention": "Valori che richiedono la sua attenzione",
-    "greatResults": "Ottimi risultati — discuta con il suo medico",
+    "greatResults": "Ottimi risultati: discuta con il suo medico",
     "allReports": "Tutti i rapporti",
     "saveAsPdf": "Salva come PDF",
     "chatGreeting": "Ciao! Ho letto il tuo rapporto. Chiedimi qualsiasi cosa:",
@@ -348,7 +348,7 @@
     "howItWorks": {
       "badge": "Processo semplice",
       "step1Title": "Carica il tuo referto",
-      "step1Desc": "Carica qualsiasi PDF, JPG, PNG o TXT. La nostra IA legge il testo — anche da foto scansionate.",
+      "step1Desc": "Carica qualsiasi PDF, JPG, PNG o TXT. La nostra IA legge il testo: anche da foto scansionate.",
       "step1Detail": "Crittografato immediatamente",
       "step2Title": "L'IA analizza in ~30s",
       "step2Desc": "L'IA Claude identifica ogni valore, segnala i risultati anomali e scrive una spiegazione chiara.",
@@ -356,26 +356,26 @@
       "step3Title": "Ottieni le tue risposte",
       "step3Desc": "Leggi i risultati, chatta con l'IA ed esporta un PDF per il tuo prossimo appuntamento.",
       "step3Detail": "Condividi con il tuo medico",
-      "cta": "Inizia gratis — senza carta"
+      "cta": "Inizia gratis: senza carta"
     },
     "doctorVisit": {
       "badge": "Nuova funzione",
       "title1": "Vai dal medico?",
       "title2": "Arriva preparato.",
-      "description": "Descrivi come ti senti — in qualsiasi lingua. Medyra lo trasforma in un riassunto clinico tedesco strutturato che il tuo medico può leggere in secondi.",
+      "description": "Descrivi come ti senti: in qualsiasi lingua. Medyra lo trasforma in un riassunto clinico tedesco strutturato che il tuo medico può leggere in secondi.",
       "step1Title": "Descrivi in qualsiasi lingua",
-      "step1Desc": "Scrivi liberamente in italiano, arabo, hindi, turco — come ti viene naturale.",
+      "step1Desc": "Scrivi liberamente in italiano, arabo, hindi, turco: come ti viene naturale.",
       "step2Title": "L'IA struttura istantaneamente",
       "step2Desc": "Claude crea un riassunto clinico tedesco formale: disturbi principali, cronologia, anamnesi e domande.",
       "step3Title": "Stampa e porta all'appuntamento",
-      "step3Desc": "Un clic stampa un foglio A4 pulito — consegnalo al tuo medico all'inizio della visita.",
+      "step3Desc": "Un clic stampa un foglio A4 pulito: consegnalo al tuo medico all'inizio della visita.",
       "cta": "Prepara il mio appuntamento",
       "freePlan": "Piano gratuito include 1 documento al mese"
     },
     "languages": {
       "badge": "Portata globale",
       "title": "Disponibile in 18 lingue",
-      "subtitle": "Dalla Germania al mondo — capisci la tua salute nella tua lingua."
+      "subtitle": "Dalla Germania al mondo: capisci la tua salute nella tua lingua."
     },
     "newToGermany": {
       "badge": "Nuovo in Germania",
@@ -392,7 +392,7 @@
     },
     "security": {
       "badge": "Crittografia bancaria",
-      "title": "I tuoi dati sono crittografati — anche per noi",
+      "title": "I tuoi dati sono crittografati: anche per noi",
       "subtitle": "Ogni referto, ogni valore, ogni spiegazione IA è crittografato con AES-256-GCM prima di toccare il nostro database.",
       "yourReport": "Il tuo referto",
       "ourDatabase": "Il nostro database",
@@ -401,7 +401,7 @@
       "feat2Title": "GDPR Art. 32",
       "feat2Desc": "Crittografia richiesta per i dati sanitari personali",
       "feat3Title": "IV univoco per campo",
-      "feat3Desc": "Nessun testo cifrato è uguale — anche per valori identici",
+      "feat3Desc": "Nessun testo cifrato è uguale: anche per valori identici",
       "feat4Title": "Nessun testo in chiaro memorizzato",
       "feat4Desc": "Una violazione del nostro DB non rivela nulla di leggibile",
       "deepDive": "Come funziona tecnicamente? Leggi l'analisi approfondita"
@@ -417,7 +417,7 @@
     }
   },
   "siteFooter": {
-    "tagline": "Capisci i tuoi esami — nella tua lingua, in 60 secondi.",
+    "tagline": "Capisci i tuoi esami: nella tua lingua, in 60 secondi.",
     "product": "Prodotto",
     "upload": "Carica referto",
     "prep": "Prepara visita medica",
@@ -512,7 +512,7 @@
       "cap3": "Esportazioni PDF",
       "cap3p": "50 / mese",
       "cap3f": "100 / mese",
-      "footnote": "Chi raggiunge davvero questi limiti riceve nostre notizie direttamente — nessun aggiornamento automatico."
+      "footnote": "Chi raggiunge davvero questi limiti riceve nostre notizie direttamente: nessun aggiornamento automatico."
     },
     "compare": {
       "title": "Confronta i piani",
@@ -551,7 +551,7 @@
     "faq": {
       "title": "Domande frequenti",
       "q1": "Posso cancellare in qualsiasi momento?",
-      "a1": "Sì — cancella dalla dashboard. L'accesso continua fino alla fine del periodo di fatturazione.",
+      "a1": "Sì: cancella dalla dashboard. L'accesso continua fino alla fine del periodo di fatturazione.",
       "q2": "I miei dati sono al sicuro?",
       "a2": "Tutti i dati sono crittografati con AES-256-GCM. Conformi al GDPR, documenti eliminati dopo 30 giorni.",
       "q3": "Cosa significa \"Illimitato*\"?",

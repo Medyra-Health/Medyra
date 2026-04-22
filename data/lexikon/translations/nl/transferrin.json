@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Transferrine is het transporteiwit voor ijzer in het bloed. Bij ijzertekort stijgt transferrine omdat het lichaam meer transportcapaciteit biedt. Bij ontsteking of ijzerstapeling is de waarde meestal verlaagd. Bespreek deze waarde samen met ferritine en serumijzer met uw arts.",
-  "metaDescription": "Transferrine verhoogd of laag? Normaalwaarden, betekenis bij ijzertekort en oorzaken — eenvoudig uitgelegd.",
+  "metaDescription": "Transferrine verhoogd of laag? Normaalwaarden, betekenis bij ijzertekort en oorzaken: eenvoudig uitgelegd.",
   "causesElevated": ["IJzertekort", "Zwangerschap", "Oestrogeensupplementen"],
   "causesLow": ["Ontstekingsziekten", "Leverziekte", "IJzerstapeling (hemochromatose)", "Ondervoeding"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "IJzerwaarden",
-  "pageTitle": "Waarde transferrine — IJzertransporteiwit uitgelegd | Medyra"
+  "pageTitle": "Waarde transferrine: IJzertransporteiwit uitgelegd | Medyra"
 }

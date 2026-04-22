@@ -18,7 +18,7 @@
     "subtitle": "Enfin en langage clair",
     "description": "Arrêtez de chercher des termes médicaux sur Google. Téléchargez vos résultats et obtenez une explication claire et privée en moins de 60 secondes.",
     "cta": "Analyser mon premier rapport gratuitement",
-    "disclaimer": "Information éducative uniquement — pas un substitut à un avis médical.",
+    "disclaimer": "Information éducative uniquement: pas un substitut à un avis médical.",
     "secondaryCta": "Voir les tarifs"
   },
   "features": {
@@ -151,9 +151,9 @@
     "comingSoon": "Bientôt disponible",
     "goToDashboard": "Aller au tableau de bord",
     "faqTitle": "Questions fréquentes",
-    "launchOfferBanner": "🔥 Offre de lancement — 50% de réduction sur tous les plans payants",
+    "launchOfferBanner": "🔥 Offre de lancement: 50% de réduction sur tous les plans payants",
     "limitedOffer": "Offre de lancement limitée",
-    "fiftyOff": "50% de réduction — tant que ça dure",
+    "fiftyOff": "50% de réduction: tant que ça dure",
     "applyCode": "Appliquez le code à la caisse. Valable sur tous les plans payants.",
     "copied": "Copié!",
     "copyCode": "Copier le code",
@@ -257,7 +257,7 @@
     "allValuesNormal": "Toutes les valeurs sont normales",
     "keyTakeaways": "Points clés",
     "valuesNeedingAttention": "Valeurs nécessitant votre attention",
-    "greatResults": "Excellents résultats — discutez avec votre médecin",
+    "greatResults": "Excellents résultats: discutez avec votre médecin",
     "allReports": "Tous les rapports",
     "saveAsPdf": "Enregistrer en PDF",
     "chatGreeting": "Bonjour ! J'ai lu votre rapport. Posez-moi vos questions :",
@@ -348,7 +348,7 @@
     "howItWorks": {
       "badge": "Processus simple",
       "step1Title": "Téléchargez votre rapport",
-      "step1Desc": "Déposez un PDF, JPG, PNG ou TXT. Notre IA lit le texte — même depuis des photos scannées.",
+      "step1Desc": "Déposez un PDF, JPG, PNG ou TXT. Notre IA lit le texte: même depuis des photos scannées.",
       "step1Detail": "Chiffré immédiatement",
       "step2Title": "L'IA analyse en ~30s",
       "step2Desc": "L'IA Claude identifie chaque valeur, signale les résultats anormaux et rédige une explication claire.",
@@ -356,26 +356,26 @@
       "step3Title": "Obtenez vos réponses",
       "step3Desc": "Lisez vos résultats, discutez avec l'IA et exportez un PDF pour votre prochain rendez-vous.",
       "step3Detail": "Partagez avec votre médecin",
-      "cta": "Commencer gratuitement — sans carte"
+      "cta": "Commencer gratuitement: sans carte"
     },
     "doctorVisit": {
       "badge": "Nouvelle fonctionnalité",
       "title1": "Vous allez chez le médecin ?",
       "title2": "Arrivez préparé.",
-      "description": "Décrivez ce que vous ressentez — dans n'importe quelle langue. Medyra le transforme en résumé clinique allemand structuré que votre médecin peut lire en secondes.",
+      "description": "Décrivez ce que vous ressentez: dans n'importe quelle langue. Medyra le transforme en résumé clinique allemand structuré que votre médecin peut lire en secondes.",
       "step1Title": "Décrivez dans n'importe quelle langue",
-      "step1Desc": "Écrivez librement en français, arabe, hindi, turc — ce qui vous vient naturellement.",
+      "step1Desc": "Écrivez librement en français, arabe, hindi, turc: ce qui vous vient naturellement.",
       "step2Title": "L'IA structure instantanément",
       "step2Desc": "Claude crée un résumé clinique allemand formel : plaintes principales, chronologie, antécédents et questions.",
       "step3Title": "Imprimez et apportez au rendez-vous",
-      "step3Desc": "Un clic imprime une feuille A4 propre — remettez-la à votre médecin en début de consultation.",
+      "step3Desc": "Un clic imprime une feuille A4 propre: remettez-la à votre médecin en début de consultation.",
       "cta": "Préparer mon rendez-vous",
       "freePlan": "Plan gratuit : 1 résumé de visite par mois"
     },
     "languages": {
       "badge": "Portée mondiale",
       "title": "Disponible en 18 langues",
-      "subtitle": "De l'Allemagne au monde — comprenez votre santé dans votre langue."
+      "subtitle": "De l'Allemagne au monde: comprenez votre santé dans votre langue."
     },
     "newToGermany": {
       "badge": "Nouveau en Allemagne",
@@ -392,7 +392,7 @@
     },
     "security": {
       "badge": "Chiffrement bancaire",
-      "title": "Vos données sont chiffrées — même pour nous",
+      "title": "Vos données sont chiffrées: même pour nous",
       "subtitle": "Chaque rapport, chaque valeur, chaque explication IA est chiffré avec AES-256-GCM avant de toucher notre base de données.",
       "yourReport": "Votre rapport",
       "ourDatabase": "Notre base de données",
@@ -401,7 +401,7 @@
       "feat2Title": "RGPD Art. 32",
       "feat2Desc": "Chiffrement requis pour les données de santé personnelles",
       "feat3Title": "IV unique par champ",
-      "feat3Desc": "Aucun chiffré n'est identique — même pour des valeurs identiques",
+      "feat3Desc": "Aucun chiffré n'est identique: même pour des valeurs identiques",
       "feat4Title": "Aucun texte en clair stocké",
       "feat4Desc": "Une violation de notre BD ne révèle rien de lisible",
       "deepDive": "Comment ça marche techniquement ? Lire l'analyse approfondie"
@@ -417,7 +417,7 @@
     }
   },
   "siteFooter": {
-    "tagline": "Comprenez vos analyses — dans votre langue, en 60 secondes.",
+    "tagline": "Comprenez vos analyses: dans votre langue, en 60 secondes.",
     "product": "Produit",
     "upload": "Télécharger un rapport",
     "prep": "Préparer une consultation",
@@ -512,7 +512,7 @@
       "cap3": "Exports PDF",
       "cap3p": "50 / mois",
       "cap3f": "100 / mois",
-      "footnote": "Quiconque atteint vraiment ces limites nous entend directement — pas de mise à niveau automatique."
+      "footnote": "Quiconque atteint vraiment ces limites nous entend directement: pas de mise à niveau automatique."
     },
     "compare": {
       "title": "Comparer les plans",
@@ -551,7 +551,7 @@
     "faq": {
       "title": "Questions fréquentes",
       "q1": "Puis-je annuler à tout moment?",
-      "a1": "Oui — annulez depuis votre tableau de bord. L'accès continue jusqu'à la fin de la période de facturation.",
+      "a1": "Oui: annulez depuis votre tableau de bord. L'accès continue jusqu'à la fin de la période de facturation.",
       "q2": "Mes données sont-elles sécurisées?",
       "a2": "Toutes les données sont chiffrées AES-256-GCM. Conformes RGPD, documents supprimés après 30 jours.",
       "q3": "Que signifie \"Illimité*\"?",

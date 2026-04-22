@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Ferritin, vücuttaki demir depolarının ne kadar dolu olduğunu gösterir. Düşük değer, anemi gelişmeden çok önce demir depolarının boşaldığına işaret edebilir. Yüksek değerler iltihap veya demir yüklenimini gösterebilir. Anormal değerleri doktorunuzla görüşün.",
-  "metaDescription": "Ferritin düşük veya yüksek mi? Normal değerler, demir eksikliği tanısı ve nedenleri — basitçe açıklandı.",
+  "metaDescription": "Ferritin düşük veya yüksek mi? Normal değerler, demir eksikliği tanısı ve nedenleri: basitçe açıklandı.",
   "causesElevated": ["İnflamatuar hastalık (akut faz)", "Hemokromatoz", "Karaciğer hastalığı", "Sık kan transfüzyonu"],
   "causesLow": ["Demir eksikliği", "Vegan diyet", "Ağır menstrüasyon", "Malabsorpsiyon"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Eksik (kadınlar < 12, erkekler < 30)", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "Demir Değerleri",
-  "pageTitle": "Ferritin değeri — Demir depoları açıklaması | Medyra"
+  "pageTitle": "Ferritin değeri: Demir depoları açıklaması | Medyra"
 }

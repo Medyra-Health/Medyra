@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Cholesterol jest niezbędnym tłuszczem we krwi, ale wysokie wartości mogą zwiększać ryzyko sercowo-naczyniowe. Wartości powyżej 200 mg/dl są uznawane za graniczne. Najważniejszy jest stosunek LDL do HDL. Omów podwyższone wartości z lekarzem.",
-  "metaDescription": "Cholesterol podwyższony? Wartości prawidłowe, ryzyko sercowo-naczyniowe i przyczyny wysokiego cholesterolu całkowitego — wyjaśnione prosto.",
+  "metaDescription": "Cholesterol podwyższony? Wartości prawidłowe, ryzyko sercowo-naczyniowe i przyczyny wysokiego cholesterolu całkowitego: wyjaśnione prosto.",
   "causesElevated": ["Dieta bogata w tłuszcze", "Predyspozycje genetyczne", "Otyłość", "Niedoczynność tarczycy", "Cukrzyca"],
   "causesLow": ["Niedożywienie", "Choroba wątroby", "Zaburzenia wchłaniania"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Pożądane", "elevated": "Graniczne wysokie", "high": "Podwyższone" },
   "categoryLabel": "Metabolizm",
-  "pageTitle": "Wartość TC — Cholesterol całkowity wyjaśniony | Medyra"
+  "pageTitle": "Wartość TC: Cholesterol całkowity wyjaśniony | Medyra"
 }

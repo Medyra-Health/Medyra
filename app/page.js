@@ -69,7 +69,7 @@ function NewToGermanySection() {
     {
       id: 'prescription',
       pill: t('landing.newToGermany.pill3'),
-      heading: 'Kassenrezept — what do I do with this?',
+      heading: 'Kassenrezept, what do I do with this?',
       body: 'A German Kassenrezept has codes, LANR numbers, and abbreviations. Medyra translates it: what the medication is, how to take it, and how to pick it up from the pharmacy.',
       preview: [
         { label: 'Medication', value: 'Ibuprofen 400mg', ok: true },
@@ -130,7 +130,7 @@ function NewToGermanySection() {
           style={{ animation: 'ngFadeIn 0.3s ease both' }}
           className="grid md:grid-cols-2 gap-0 rounded-2xl border border-gray-200 overflow-hidden shadow-sm"
         >
-          {/* Left — explanation */}
+          {/* Left, explanation */}
           <div className="bg-gray-950 p-8 md:p-10 flex flex-col justify-center">
             <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-4">{doc.pill}</p>
             <h3 className="text-xl md:text-2xl font-bold text-white mb-4 leading-snug">
@@ -144,7 +144,7 @@ function NewToGermanySection() {
             </div>
           </div>
 
-          {/* Right — mock output */}
+          {/* Right, mock output */}
           <div className="bg-white p-8 md:p-10 flex flex-col justify-center border-l border-gray-200">
             <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-5">{t('landing.newToGermany.medyraExplains')}</p>
             <div className="space-y-3">
@@ -304,7 +304,7 @@ function CampaignSection() {
           style={{ animation: 'campFade 0.5s ease both' }}
           className={`grid lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-white/10`}
         >
-          {/* Left — text */}
+          {/* Left, text */}
           <div className={`bg-gradient-to-br ${c.gradient} p-8 md:p-12 flex flex-col justify-between min-h-[320px]`}>
             <div>
               <span className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border mb-6 ${a.tag}`}>
@@ -344,7 +344,7 @@ function CampaignSection() {
             </div>
           </div>
 
-          {/* Right — mock output */}
+          {/* Right, mock output */}
           <div className="bg-gray-900 p-8 md:p-12 flex flex-col justify-center border-l border-white/5">
             <div className="flex items-center gap-2 mb-6">
               <div className={`w-2 h-2 rounded-full ${a.dot} animate-pulse`} />
@@ -595,7 +595,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 max-w-6xl relative z-10 py-20 md:py-0">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-            {/* Left — text */}
+            {/* Left, text */}
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-wide mb-7">
                 <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
@@ -641,7 +641,7 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Right — floating report card */}
+            {/* Right, floating report card */}
             <div className="hidden lg:block">
               <div className="relative">
                 {/* Glow */}
@@ -943,7 +943,7 @@ export default function LandingPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">{t('landing.languages.title')}</h2>
           <p className="text-gray-400 text-base">{t('landing.languages.subtitle')}</p>
         </div>
-        {/* Row 1 — scroll left */}
+        {/* Row 1, scroll left */}
         <div className="ticker-wrap mb-3">
           <div className="ticker-l flex gap-3 w-max">
             {[...LANGUAGES, ...LANGUAGES].map(({ code, name }, i) => (
@@ -954,7 +954,7 @@ export default function LandingPage() {
             ))}
           </div>
         </div>
-        {/* Row 2 — scroll right (reversed) */}
+        {/* Row 2, scroll right (reversed) */}
         <div className="ticker-wrap">
           <div className="ticker-r flex gap-3 w-max">
             {[...LANGUAGES, ...LANGUAGES].reverse().map(({ code, name }, i) => (
@@ -1212,10 +1212,10 @@ export default function LandingPage() {
               <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" /> Kostenloses Lexikon
             </div>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3 leading-tight">
-              Laborwerte verstehen — ohne Medizinstudium
+              Laborwerte verstehen, ohne Medizinstudium
             </h2>
             <p className="text-gray-500 text-base max-w-xl mx-auto">
-              46 Blutwerte einfach erklärt: Normwerte, Ursachen, Fragen für Ihren Arzt — kostenlos, auf Deutsch, ohne Anmeldung.
+              46 Blutwerte einfach erklärt: Normwerte, Ursachen, Fragen für Ihren Arzt, kostenlos, auf Deutsch, ohne Anmeldung.
             </p>
           </div>
 
@@ -1265,7 +1265,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-3 gap-5">
             {[
               { href: '/blog/doctor-visit-prep-germany',           tag: 'Doctor Visit · New', accent: 'border-l-violet-500',  tagColor: 'text-violet-400',  title: "How to Prepare for a Doctor's Appointment in Germany",         desc: 'Describe symptoms in any language. Medyra generates a structured German summary for your doctor.', time: '6 min' },
-              { href: '/blog/arztbrief-verstehen-fur-senioren',    tag: 'Für Senioren · Neu', accent: 'border-l-blue-500',    tagColor: 'text-blue-400',    title: 'Ihren Arztbrief einfach verstehen — Medyra für Senioren',       desc: 'Befund erhalten und nicht verstanden? Medyra erklärt alles auf Deutsch — zum Lesen oder Vorlesen lassen.', time: '5 Min.' },
+              { href: '/blog/arztbrief-verstehen-fur-senioren',    tag: 'Für Senioren · Neu', accent: 'border-l-blue-500',    tagColor: 'text-blue-400',    title: 'Ihren Arztbrief einfach verstehen, Medyra für Senioren',       desc: 'Befund erhalten und nicht verstanden? Medyra erklärt alles auf Deutsch, zum Lesen oder Vorlesen lassen.', time: '5 Min.' },
               { href: '/blog/how-to-read-lab-results-germany-expat', tag: 'Germany · Expat',  accent: 'border-l-emerald-500', tagColor: 'text-emerald-400', title: 'How to Read Your Lab Results in Germany as an Expat',           desc: 'Decode your Laborbefund. Abbreviations, reference ranges, and what flagged values actually mean.', time: '7 min' },
             ].map((post, i) => (
               <Link key={post.href} href={post.href} className={`block group sr d${i+1}`}>

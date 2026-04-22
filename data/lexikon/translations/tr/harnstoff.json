@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Kan üre azotu (BUN), protein yıkımı sırasında oluşur ve böbrekler tarafından atılır. Yüksek değerler böbrek fonksiyon bozukluğunu veya yüksek proteinli diyeti gösterebilir. Anormal bulguları doktorunuzla görüşün.",
-  "metaDescription": "BUN / kan üre azotu yüksek mi? Normal değerler, nedenler ve böbrek sağlığı için anlamı — basitçe açıklandı.",
+  "metaDescription": "BUN / kan üre azotu yüksek mi? Normal değerler, nedenler ve böbrek sağlığı için anlamı: basitçe açıklandı.",
   "causesElevated": ["Böbrek hastalığı", "Dehidrasyon", "Yüksek proteinli diyet", "Gastrointestinal kanama"],
   "causesLow": ["Yetersiz beslenme", "Karaciğer hastalığı", "Aşırı sıvı alımı"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "Böbrek Değerleri",
-  "pageTitle": "BUN değeri — Kan Üre Azotu açıklaması | Medyra"
+  "pageTitle": "BUN değeri: Kan Üre Azotu açıklaması | Medyra"
 }

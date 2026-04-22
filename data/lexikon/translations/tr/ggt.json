@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GGT (gama-glutamiltransferaz), özellikle alkol ve safra kesesi sorunlarına karşı hassas olan bir karaciğer enzimidir. Yüksek değerler yağlı karaciğer, alkol kullanımı veya safra hastalığını gösterebilir. Sürekli yüksek değerleri doktorunuzla görüşün.",
-  "metaDescription": "GGT yüksek mi? Normal değerler, nedenler ve yüksek gama-GT değerinin anlamı — basitçe açıklandı.",
+  "metaDescription": "GGT yüksek mi? Normal değerler, nedenler ve yüksek gama-GT değerinin anlamı: basitçe açıklandı.",
   "causesElevated": ["Alkol kullanımı", "Yağlı karaciğer hastalığı", "Safra kesesi hastalığı", "Bazı ilaçlar", "Obezite"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "Karaciğer Değerleri",
-  "pageTitle": "GGT değeri — Gama-Glutamiltransferaz açıklaması | Medyra"
+  "pageTitle": "GGT değeri: Gama-Glutamiltransferaz açıklaması | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Ferrytyna pokazuje, ile żelaza jest zmagazynowane w organizmie. Niska wartość wskazuje na wyczerpanie zapasów żelaza, często na długo przed rozwojem anemii. Podwyższone wartości mogą wskazywać na stan zapalny lub przeciążenie żelazem. Omów nieprawidłowe wartości z lekarzem.",
-  "metaDescription": "Ferrytyna niska lub wysoka? Wartości prawidłowe, diagnoza niedoboru żelaza i przyczyny — wyjaśnione prosto.",
+  "metaDescription": "Ferrytyna niska lub wysoka? Wartości prawidłowe, diagnoza niedoboru żelaza i przyczyny: wyjaśnione prosto.",
   "causesElevated": ["Choroba zapalna (ostra faza)", "Hemochromatoza", "Choroba wątroby", "Częste transfuzje krwi"],
   "causesLow": ["Niedobór żelaza", "Dieta wegańska", "Obfite miesiączkowanie", "Zaburzenia wchłaniania"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niedobór (kobiety < 12, mężczyźni < 30)", "normal": "Normalne", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
   "categoryLabel": "Wskaźniki żelaza",
-  "pageTitle": "Wartość ferrytyny — Zapasy żelaza wyjaśnione | Medyra"
+  "pageTitle": "Wartość ferrytyny: Zapasy żelaza wyjaśnione | Medyra"
 }

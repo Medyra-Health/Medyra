@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Les triglycérides sont des graisses sanguines servant de réserve d'énergie. Des valeurs élevées peuvent augmenter le risque de maladies cardiovasculaires et de pancréatite. L'alcool, le sucre et l'obésité jouent un rôle majeur. Discutez des valeurs élevées avec votre médecin.",
-  "metaDescription": "Triglycérides élevés ? Valeurs normales, causes et ce que vous pouvez faire contre les graisses sanguines élevées — expliqués simplement.",
+  "metaDescription": "Triglycérides élevés ? Valeurs normales, causes et ce que vous pouvez faire contre les graisses sanguines élevées: expliqués simplement.",
   "causesElevated": ["Régime riche en sucre", "Consommation d'alcool", "Obésité", "Diabète", "Hypothyroïdie"],
   "causesLow": ["Malnutrition", "Malabsorption", "Certains médicaments"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé (risque de pancréatite)" },
   "categoryLabel": "Métabolisme",
-  "pageTitle": "Valeur TG — Triglycérides expliqués | Medyra"
+  "pageTitle": "Valeur TG: Triglycérides expliqués | Medyra"
 }

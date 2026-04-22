@@ -1,6 +1,6 @@
 {
   "shortAnswer": "PCT (procalcitonine) is een specifieke marker voor bacteriële infecties. Verhoogde waarden kunnen wijzen op een ernstige bacteriële infectie of sepsis. De test helpt artsen beslissen of antibiotica nodig zijn. Bespreek verhoogde waarden onmiddellijk met uw arts.",
-  "metaDescription": "Procalcitonine (PCT) verhoogd? Normaalwaarden, oorzaken en rol als sepsismarker — eenvoudig uitgelegd.",
+  "metaDescription": "Procalcitonine (PCT) verhoogd? Normaalwaarden, oorzaken en rol als sepsismarker: eenvoudig uitgelegd.",
   "causesElevated": ["Ernstige bacteriële infectie", "Sepsis", "Meervoudig orgaanfalen", "Ernstige brandwonden"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal / laag", "elevated": "Licht verhoogd", "high": "Sterk verhoogd (sepsis vermoed)" },
   "categoryLabel": "Ontstekingsmarkers",
-  "pageTitle": "Waarde PCT — Procalcitonine uitgelegd | Medyra"
+  "pageTitle": "Waarde PCT: Procalcitonine uitgelegd | Medyra"
 }
