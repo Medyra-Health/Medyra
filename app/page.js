@@ -3,7 +3,7 @@
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 import MedyraUserButton from '@/components/MedyraUserButton'
 import Link from 'next/link'
-import { Brain, Shield, Clock, ChevronRight, Menu, X, ArrowRight, AlertTriangle, CheckCircle, AlertCircle, Lock, Zap, FileText, MessageSquare, Download, ChevronLeft } from 'lucide-react'
+import { Brain, Shield, Clock, ChevronRight, Menu, X, ArrowRight, AlertTriangle, CheckCircle, AlertCircle, Lock, Zap, FileText, MessageSquare, Download, ChevronLeft, Volume2 } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
@@ -491,17 +491,10 @@ export default function LandingPage() {
             <Link href="/" className="flex-shrink-0"><MedyraLogo size="md" /></Link>
 
             {/* Desktop nav — all right-aligned */}
-            <div className="hidden md:flex items-center gap-1.5 ml-auto">
-              <NavLink href="/prep" className="text-violet-600 hover:text-violet-700 hover:bg-violet-50">{t('nav.doctorVisit')}</NavLink>
-              <NavLink href="/blog">{t('nav.blog')}</NavLink>
-              <NavLink href="/verstehen" className="text-teal-600 hover:text-teal-700 hover:bg-teal-50 text-xs">{t('nav.verstehen')}</NavLink>
-
-              <div className="w-px h-5 bg-gray-200 mx-1" />
+            <div className="hidden md:flex items-center gap-2 ml-auto">
               <LanguageSwitcher />
-              <div className="w-px h-5 bg-gray-200 mx-1" />
 
               <SignedOut>
-                <NavLink href="/pricing">{t('nav.pricing')}</NavLink>
                 <SignInButton mode="modal">
                   <button className="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-all duration-150">
                     {t('nav.signIn')}
@@ -525,7 +518,6 @@ export default function LandingPage() {
                     {t('nav.upload')}
                   </button>
                 </Link>
-                <NavLink href="/pricing" className="text-gray-500">{t('nav.pricing')}</NavLink>
                 <MedyraUserButton />
               </SignedIn>
             </div>
@@ -545,29 +537,6 @@ export default function LandingPage() {
           {/* Mobile menu */}
           {mobileMenuOpen && (
             <div className="md:hidden pt-3 pb-3 border-t border-gray-100 mt-3 space-y-0.5">
-              <SignedIn>
-                <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center px-3 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">
-                  {t('nav.dashboard')}
-                </Link>
-              </SignedIn>
-              <Link href="/prep" onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center px-3 py-2.5 text-sm font-medium text-violet-600 hover:bg-violet-50 rounded-lg transition-colors">
-                {t('nav.doctorVisit')}
-              </Link>
-              <Link href="/blog" onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
-                {t('nav.blog')}
-              </Link>
-              <Link href="/verstehen" onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center px-3 py-2.5 text-sm font-medium text-teal-600 hover:bg-teal-50 rounded-lg transition-colors">
-                {t('nav.verstehen')}
-              </Link>
-              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
-                {t('nav.pricing')}
-              </Link>
-              <div className="border-t border-gray-100 my-2" />
               <SignedOut>
                 <SignInButton mode="modal">
                   <button className="w-full text-left px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors" onClick={() => setMobileMenuOpen(false)}>
@@ -581,6 +550,10 @@ export default function LandingPage() {
                 </SignInButton>
               </SignedOut>
               <SignedIn>
+                <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}
+                  className="block w-full text-center py-3 text-sm font-semibold bg-gray-800 hover:bg-gray-900 text-white rounded-xl transition-colors">
+                  {t('nav.dashboard')}
+                </Link>
                 <Link href="/upload" onClick={() => setMobileMenuOpen(false)}
                   className="block w-full text-center py-3 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl transition-colors">
                   {t('nav.upload')}
@@ -1186,6 +1159,91 @@ export default function LandingPage() {
             <Link href="/blog/how-medyra-protects-your-medical-data" className="inline-flex items-center gap-1.5 text-sm text-emerald-400 hover:text-emerald-300 font-medium transition-colors">
               {t('landing.security.deepDive')} <ArrowRight className="h-3.5 w-3.5" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FÜR SENIOREN ── */}
+      <section className="py-20 md:py-28 bg-[#0a1628] relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-600/6 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-teal-500/6 rounded-full blur-3xl" />
+        </div>
+        <div className="container mx-auto px-4 max-w-6xl relative">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            {/* Left: text */}
+            <div className="sr">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-400/30 bg-blue-400/10 text-blue-300 text-xs font-bold tracking-widest uppercase mb-6">
+                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" />
+                {t('landing.senior.badge')}
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+                {t('landing.senior.headline1')}
+                <span className="block text-blue-300">{t('landing.senior.headline2')}</span>
+              </h2>
+              <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-lg">
+                {t('landing.senior.desc')}
+              </p>
+              <ul className="space-y-3 mb-10">
+                {[
+                  t('landing.senior.f1'),
+                  t('landing.senior.f2'),
+                  t('landing.senior.f3'),
+                  t('landing.senior.f4'),
+                ].map((f) => (
+                  <li key={f} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-300 text-sm leading-relaxed">{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/verstehen">
+                <button className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-400 active:scale-95 text-white font-semibold rounded-xl transition-all shadow-lg shadow-blue-900/40">
+                  {t('landing.senior.cta')} <ArrowRight className="h-4 w-4" />
+                </button>
+              </Link>
+            </div>
+
+            {/* Right: mock Arztbrief card */}
+            <div className="sr-right">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-blue-500/8 rounded-3xl blur-xl" />
+                <div className="relative bg-gray-900 rounded-2xl border border-blue-800/40 shadow-2xl overflow-hidden">
+                  {/* Header */}
+                  <div className="flex items-center justify-between px-5 py-4 border-b border-gray-800 bg-gray-900/80">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse" />
+                      <span className="text-white font-semibold text-sm">Arztbrief · Befund</span>
+                    </div>
+                    <span className="text-xs text-blue-300 bg-blue-400/10 px-2.5 py-1 rounded-full font-medium border border-blue-400/20">Erklärt</span>
+                  </div>
+                  {/* Content */}
+                  <div className="p-5 space-y-3">
+                    <div className="bg-gray-800/60 border border-gray-700/40 rounded-xl p-4">
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">Original</p>
+                      <p className="text-xs text-gray-400 leading-relaxed font-mono">"Ejektionsfraktion 45%, Sinusrhythmus, kein Anhalt für Perikarderguss."</p>
+                    </div>
+                    <div className="flex justify-center text-gray-600">
+                      <ArrowRight className="h-4 w-4 rotate-90" />
+                    </div>
+                    <div className="bg-blue-950/60 border border-blue-800/30 rounded-xl p-4">
+                      <p className="text-xs font-semibold text-blue-400 uppercase tracking-widest mb-2">Einfache Erklärung</p>
+                      <p className="text-xs text-gray-300 leading-relaxed">Ihr Herz pumpt das Blut gut, aber die Pumpleistung ist leicht eingeschränkt. Kein Flüssigkeitsansammlung um das Herz. Regelmäßiger Herzrhythmus.</p>
+                    </div>
+                    <div className="flex items-center gap-2 pt-1">
+                      <button className="flex-1 flex items-center gap-1.5 justify-center py-2 rounded-lg bg-blue-500/15 border border-blue-500/30 text-xs text-blue-300 font-medium">
+                        <Volume2 className="h-3.5 w-3.5" /> Vorlesen lassen
+                      </button>
+                      <button className="flex-1 flex items-center gap-1.5 justify-center py-2 rounded-lg bg-gray-800 border border-gray-700 text-xs text-gray-400">
+                        <Download className="h-3.5 w-3.5" /> PDF teilen
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
