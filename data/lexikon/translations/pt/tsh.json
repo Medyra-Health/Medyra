@@ -1,6 +1,6 @@
 {
   "shortAnswer": "TSH (hormônio estimulante da tireoide) é produzido pela hipófise e regula a tireoide. TSH alto pode indicar hipotireoidismo, enquanto TSH baixo pode indicar hipertireoidismo. Ambos podem causar sintomas como fadiga ou palpitações. Discuta valores anormais com o seu médico.",
-  "metaDescription": "TSH elevado ou baixo? Valores normais, causas e o que significam os níveis de hormônio tireoidiano — explicado de forma simples.",
+  "metaDescription": "TSH elevado ou baixo? Valores normais, causas e o que significam os níveis de hormônio tireoidiano: explicado de forma simples.",
   "causesElevated": ["Hipotireoidismo", "Tireoidite de Hashimoto", "Deficiência de iodo", "Certos medicamentos"],
   "causesLow": ["Hipertireoidismo", "Doença de Graves", "Dose excessiva de hormônio tireoidiano"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado (hipotireoidismo possível)", "high": "Muito elevado" },
   "categoryLabel": "Tireoide",
-  "pageTitle": "Valor TSH — Hormônio Estimulante da Tireoide explicado | Medyra"
+  "pageTitle": "Valor TSH: Hormônio Estimulante da Tireoide explicado | Medyra"
 }

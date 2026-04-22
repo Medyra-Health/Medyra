@@ -1,6 +1,6 @@
 {
   "shortAnswer": "I trigliceridi sono grassi del sangue che servono come riserva energetica. Livelli elevati possono aumentare il rischio di malattie cardiovascolari e pancreatite. Alcol, zucchero e obesità svolgono un ruolo importante. Discutete i valori elevati con il vostro medico.",
-  "metaDescription": "Trigliceridi elevati? Valori normali, cause e cosa fare con i grassi nel sangue alti — spiegato in modo semplice.",
+  "metaDescription": "Trigliceridi elevati? Valori normali, cause e cosa fare con i grassi nel sangue alti: spiegato in modo semplice.",
   "causesElevated": ["Dieta ricca di zuccheri", "Consumo di alcol", "Obesità", "Diabete", "Ipotiroidismo"],
   "causesLow": ["Malnutrizione", "Malassorbimento", "Alcuni farmaci"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato (rischio pancreatite)" },
   "categoryLabel": "Metabolismo",
-  "pageTitle": "Valore TG — Trigliceridi spiegati | Medyra"
+  "pageTitle": "Valore TG: Trigliceridi spiegati | Medyra"
 }

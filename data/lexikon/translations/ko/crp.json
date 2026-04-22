@@ -1,6 +1,6 @@
 {
   "shortAnswer": "C반응성 단백(CRP)은 염증 지표로, 감염이나 조직 손상 시 빠르게 상승합니다. 상승은 체내 염증을 나타내지만 원인 판단을 위해 증상과 함께 평가가 필요합니다.",
-  "metaDescription": "CRP가 높나요? 정상 범위, 감염·염증 원인, 언제 의사를 만나야 하는지 — 쉽게 설명합니다.",
+  "metaDescription": "CRP가 높나요? 정상 범위, 감염·염증 원인, 언제 의사를 만나야 하는지: 쉽게 설명합니다.",
   "causesElevated": ["세균 감염", "바이러스 감염", "자가면역 질환", "수술 후", "조직 손상", "암"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "정상", "normal": "경미한 상승", "elevated": "중등도 상승", "high": "현저한 상승" },
   "categoryLabel": "염증 지표",
-  "pageTitle": "CRP 수치 — C반응성 단백 쉽게 알아보기 | Medyra"
+  "pageTitle": "CRP 수치: C반응성 단백 쉽게 알아보기 | Medyra"
 }

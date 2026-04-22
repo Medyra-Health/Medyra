@@ -1,6 +1,6 @@
 {
   "shortAnswer": "혈구용적률(HCT)은 혈액에서 적혈구가 차지하는 비율입니다. 낮은 수치는 빈혈을, 높은 수치는 탈수나 적혈구 증가증을 나타낼 수 있습니다.",
-  "metaDescription": "혈구용적률이 낮거나 높나요? 정상 범위, 원인, 의미 — 쉽게 설명합니다.",
+  "metaDescription": "혈구용적률이 낮거나 높나요? 정상 범위, 원인, 의미: 쉽게 설명합니다.",
   "causesElevated": ["탈수", "고지대 거주", "흡연", "진성 적혈구 증가증"],
   "causesLow": ["빈혈", "실혈", "비타민 B12 결핍", "만성 질환"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "낮음", "normal": "정상(여성)", "elevated": "정상(남성)", "high": "상승" },
   "categoryLabel": "혈구 검사",
-  "pageTitle": "HCT 수치 — 혈구용적률 쉽게 알아보기 | Medyra"
+  "pageTitle": "HCT 수치: 혈구용적률 쉽게 알아보기 | Medyra"
 }

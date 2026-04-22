@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Sód (Na) jest niezbędnym elektrolitem regulującym gospodarkę wodną i ciśnienie krwi. Niskie wartości (hiponatremia) mogą powodować dezorientację i drgawki; wysokie (hipernatremia) sugerują odwodnienie. Omów odchylenia z lekarzem.",
-  "metaDescription": "Sód podwyższony lub niski? Wartości prawidłowe, przyczyny zaburzeń elektrolitowych i kiedy udać się do lekarza — wyjaśnione prosto.",
+  "metaDescription": "Sód podwyższony lub niski? Wartości prawidłowe, przyczyny zaburzeń elektrolitowych i kiedy udać się do lekarza: wyjaśnione prosto.",
   "causesElevated": ["Odwodnienie", "Zbyt duże spożycie soli", "Niektóre leki", "Moczówka prosta"],
   "causesLow": ["Nadmierne spożycie płynów", "Choroba nerek", "Niewydolność serca", "Niektóre leki (diuretyki)", "Wymioty / biegunka"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone (hipernatremia)", "high": "Znacznie podwyższone" },
   "categoryLabel": "Elektrolity",
-  "pageTitle": "Wartość Na — Sód wyjaśniony | Medyra"
+  "pageTitle": "Wartość Na: Sód wyjaśniony | Medyra"
 }

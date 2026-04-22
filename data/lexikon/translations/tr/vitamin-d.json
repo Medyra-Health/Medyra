@@ -1,6 +1,6 @@
 {
   "shortAnswer": "D vitamini, kemikler, bağışıklık sistemi ve kaslar için önemlidir. Özellikle kışın eksikliği çok yaygındır. Düşük değerler yorgunluğa ve kemik ağrısına neden olabilir. Takviye almadan önce eksikliği doktorunuzla görüşün.",
-  "metaDescription": "D vitamini çok düşük mü? Normal değerler, eksiklik belirtileri ve takviyenin ne zaman faydalı olduğu — basitçe açıklandı.",
+  "metaDescription": "D vitamini çok düşük mü? Normal değerler, eksiklik belirtileri ve takviyenin ne zaman faydalı olduğu: basitçe açıklandı.",
   "causesElevated": ["Besin takviyelerinin aşırı kullanımı"],
   "causesLow": ["Az güneş ışığına maruz kalma", "Koyu ten rengi", "İleri yaş", "Malabsorpsiyon", "Böbrek hastalığı"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Eksik", "normal": "Yeterli", "elevated": "Sınırda (yetersizlik)", "high": "Muhtemelen çok yüksek" },
   "categoryLabel": "Vitaminler",
-  "pageTitle": "D vitamini değeri — 25-OH D Vitamini açıklaması | Medyra"
+  "pageTitle": "D vitamini değeri: 25-OH D Vitamini açıklaması | Medyra"
 }

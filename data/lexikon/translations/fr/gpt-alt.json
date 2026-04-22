@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GPT/ALT (alanine aminotransférase) est une enzyme hépatique. Des valeurs élevées peuvent indiquer une inflammation ou une lésion du foie, par exemple due à l'alcool, aux médicaments ou à la stéatose hépatique. Discutez des résultats légèrement élevés avec votre médecin.",
-  "metaDescription": "GPT / ALT élevé ? Valeurs normales, causes et signification des enzymes hépatiques élevées — expliqués simplement.",
+  "metaDescription": "GPT / ALT élevé ? Valeurs normales, causes et signification des enzymes hépatiques élevées: expliqués simplement.",
   "causesElevated": ["Stéatose hépatique", "Consommation d'alcool", "Hépatite virale", "Effets secondaires de médicaments", "Maladie cardiaque"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
   "categoryLabel": "Bilan hépatique",
-  "pageTitle": "Valeur GPT/ALT — Alanine aminotransférase expliquée | Medyra"
+  "pageTitle": "Valeur GPT/ALT: Alanine aminotransférase expliquée | Medyra"
 }

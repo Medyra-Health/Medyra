@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Vitamin B12 (cobalamin) is essential for blood formation, the nervous system, and cell metabolism. Deficiency develops slowly and can cause fatigue, tingling, and memory issues. Vegans and older adults are at higher risk. Discuss any suspicion with your doctor.",
-  "metaDescription": "Vitamin B12 too low? Normal ranges, deficiency symptoms, and treatment for vegans and older adults — explained simply.",
+  "metaDescription": "Vitamin B12 too low? Normal ranges, deficiency symptoms, and treatment for vegans and older adults: explained simply.",
   "causesElevated": ["Liver disease", "Certain blood disorders", "Overdose of supplements"],
   "causesLow": ["Vegan/vegetarian diet", "Atrophic gastritis", "Poor intestinal absorption", "Long-term use of metformin or proton pump inhibitors"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Deficient", "normal": "Sufficient", "elevated": "Elevated", "high": "Elevated" },
   "categoryLabel": "Vitamins",
-  "pageTitle": "Vitamin B12 value — Cobalamin explained | Medyra"
+  "pageTitle": "Vitamin B12 value: Cobalamin explained | Medyra"
 }

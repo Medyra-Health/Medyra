@@ -1,6 +1,6 @@
 {
   "shortAnswer": "fT4 (tiroxina libera) è il principale ormone tiroideo e viene convertito nel fegato in fT3 attivo. I livelli elevati possono indicare ipertiroidismo; i livelli bassi possono indicare ipotiroidismo. Questo valore deve essere sempre valutato insieme a TSH.",
-  "metaDescription": "fT4 elevato o basso? Valori normali, significato della tiroxina libera e funzione tiroidea — spiegato in modo semplice.",
+  "metaDescription": "fT4 elevato o basso? Valori normali, significato della tiroxina libera e funzione tiroidea: spiegato in modo semplice.",
   "causesElevated": ["Ipertiroidismo", "Malattia di Graves", "Dose eccessiva di ormone tiroideo"],
   "causesLow": ["Ipotiroidismo", "Tiroidite di Hashimoto", "Malattia dell'ipofisi"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
   "categoryLabel": "Tiroide",
-  "pageTitle": "Valore fT4 — Tiroxina Libera spiegata | Medyra"
+  "pageTitle": "Valore fT4: Tiroxina Libera spiegata | Medyra"
 }

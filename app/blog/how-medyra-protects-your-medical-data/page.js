@@ -4,12 +4,12 @@ import MedyraLogo from '@/components/MedyraLogo'
 export const metadata = {
   title: 'How Medyra Protects Your Medical Data: AES-256-GCM Encryption Explained | Medyra',
   description:
-    'Your medical reports contain some of your most sensitive personal data. Here is exactly how Medyra encrypts every field before storing it — and why even we cannot read your data.',
+    'Your medical reports contain some of your most sensitive personal data. Here is exactly how Medyra encrypts every field before storing it, and why even we cannot read your data.',
   alternates: { canonical: 'https://medyra.de/blog/how-medyra-protects-your-medical-data' },
   openGraph: {
     title: 'How Medyra Protects Your Medical Data: AES-256-GCM Encryption Explained',
     description:
-      'AES-256-GCM field-level encryption, GDPR Art. 32, and BSI-compliant key management — a transparent look at how Medyra keeps your health data safe.',
+      'AES-256-GCM field-level encryption, GDPR Art. 32, and BSI-compliant key management, a transparent look at how Medyra keeps your health data safe.',
     url: 'https://medyra.de/blog/how-medyra-protects-your-medical-data',
   },
   keywords: [
@@ -95,7 +95,7 @@ function EncryptionDiagram() {
           <div><span className="text-slate-500">explanation:</span> <span className="text-amber-400">&quot;b29e4f11...8a3d:5c1a...9f04:7b3e...d214&quot;</span></div>
           <div><span className="text-slate-500">conversations[0].question:</span> <span className="text-amber-400">&quot;e10b3c...f7a9:...&quot;</span></div>
         </div>
-        <p className="text-xs text-slate-500 mt-3">Without the encryption key, this data is mathematically unreadable — by anyone.</p>
+        <p className="text-xs text-slate-500 mt-3">Without the encryption key, this data is mathematically unreadable, by anyone.</p>
       </div>
 
       {/* Key separation */}
@@ -147,25 +147,25 @@ export default function EncryptionBlogPost() {
         <div className="prose prose-gray max-w-none space-y-6 text-gray-700 leading-relaxed">
 
           <p className="text-lg text-gray-600 leading-relaxed font-light">
-            Your medical reports contain some of the most sensitive data that exists about you — diagnoses, medication history, hormone levels, genetic markers. When you upload a document to any digital service, you deserve to know exactly what happens to it. This article explains precisely how Medyra handles your data, what we encrypt, and why not even our own team can read it.
+            Your medical reports contain some of the most sensitive data that exists about you, diagnoses, medication history, hormone levels, genetic markers. When you upload a document to any digital service, you deserve to know exactly what happens to it. This article explains precisely how Medyra handles your data, what we encrypt, and why not even our own team can read it.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">The problem with storing medical data</h2>
           <p>
-            Most healthcare applications store patient data in a plain-text database. This means that anyone with database access — a developer, a hacker who breaches the server, or even a cloud provider employee — can read your records directly. For general data this is already bad. For medical data, it is unacceptable.
+            Most healthcare applications store patient data in a plain-text database. This means that anyone with database access, a developer, a hacker who breaches the server, or even a cloud provider employee, can read your records directly. For general data this is already bad. For medical data, it is unacceptable.
           </p>
           <p>
             German and EU law reflects this. Article 32 of the GDPR explicitly requires &ldquo;appropriate technical measures&rdquo; to protect sensitive personal data, including encryption. The German Federal Data Protection Act (BDSG, §64) sets an even higher bar for health data specifically. We built Medyra to exceed both standards.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">What we encrypt — and why those fields</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">What we encrypt, and why those fields</h2>
 
           <div className="grid sm:grid-cols-2 gap-3 not-prose">
             {[
-              { field: 'Extracted text', why: 'The raw OCR text from your lab report — contains every diagnosis, test name, and value.' },
+              { field: 'Extracted text', why: 'The raw OCR text from your lab report, contains every diagnosis, test name, and value.' },
               { field: 'AI explanation', why: 'The full analysis: flagged values, interpretations, and the summary your doctor would see.' },
-              { field: 'Chat conversations', why: 'Every question you asked and every answer — your private health dialogue with the AI.' },
-              { field: 'File name', why: 'Often contains your name, date of birth, or patient ID — directly identifying personal data.' },
+              { field: 'Chat conversations', why: 'Every question you asked and every answer, your private health dialogue with the AI.' },
+              { field: 'File name', why: 'Often contains your name, date of birth, or patient ID, directly identifying personal data.' },
             ].map(item => (
               <div key={item.field} className="rounded-xl border border-gray-200 p-4">
                 <p className="font-semibold text-gray-900 text-sm mb-1 flex items-center gap-2">
@@ -186,14 +186,14 @@ export default function EncryptionBlogPost() {
           <EncryptionDiagram />
 
           <p>
-            We use <strong>AES-256-GCM</strong> — the same encryption standard used by German banking systems, the BSI (Bundesamt für Sicherheit in der Informationstechnik), and NATO for classified communications. Here is what each part means:
+            We use <strong>AES-256-GCM</strong>, the same encryption standard used by German banking systems, the BSI (Bundesamt für Sicherheit in der Informationstechnik), and NATO for classified communications. Here is what each part means:
           </p>
 
           <ul className="space-y-3 list-none pl-0 not-prose">
             {[
-              { term: 'AES', def: 'Advanced Encryption Standard — the global standard for symmetric encryption, adopted by the US NIST and EU agencies.' },
-              { term: '256', def: '256-bit key length. There are 2²⁵⁶ possible keys — more than the number of atoms in the observable universe. Brute-force is mathematically impossible.' },
-              { term: 'GCM', def: 'Galois/Counter Mode. This is authenticated encryption — it not only encrypts the data but produces a cryptographic tag that detects any tampering. If someone modifies the ciphertext in the database, decryption fails loudly rather than returning corrupted data silently.' },
+              { term: 'AES', def: 'Advanced Encryption Standard, the global standard for symmetric encryption, adopted by the US NIST and EU agencies.' },
+              { term: '256', def: '256-bit key length. There are 2²⁵⁶ possible keys, more than the number of atoms in the observable universe. Brute-force is mathematically impossible.' },
+              { term: 'GCM', def: 'Galois/Counter Mode. This is authenticated encryption, it not only encrypts the data but produces a cryptographic tag that detects any tampering. If someone modifies the ciphertext in the database, decryption fails loudly rather than returning corrupted data silently.' },
             ].map(item => (
               <li key={item.term} className="flex gap-3 items-start p-4 rounded-xl bg-gray-50 border border-gray-200">
                 <span className="font-black text-emerald-600 text-sm font-mono flex-shrink-0 mt-0.5">{item.term}</span>
@@ -207,7 +207,7 @@ export default function EncryptionBlogPost() {
             A critical detail: we do not encrypt the entire database record with one key. We encrypt <strong>each field individually</strong>, and each encryption uses a freshly generated random value called an <em>initialisation vector</em> (IV).
           </p>
           <p>
-            This matters because it means that even if two users upload identical documents, the resulting ciphertext in the database is completely different — an attacker cannot detect patterns or correlations between records. Each encrypted value in MongoDB looks like:
+            This matters because it means that even if two users upload identical documents, the resulting ciphertext in the database is completely different, an attacker cannot detect patterns or correlations between records. Each encrypted value in MongoDB looks like:
           </p>
           <div className="rounded-xl bg-gray-900 p-4 font-mono text-xs text-amber-300 overflow-x-auto not-prose">
             <span className="text-slate-500">{/* Format: IV : ciphertext : auth_tag */}</span><br />
@@ -223,11 +223,11 @@ export default function EncryptionBlogPost() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Key management: where the key lives</h2>
           <p>
-            The encryption key is the only secret that makes decryption possible. We store it exclusively as a server-side environment variable on Vercel — never in the database, never in the source code, never logged. This means:
+            The encryption key is the only secret that makes decryption possible. We store it exclusively as a server-side environment variable on Vercel, never in the database, never in the source code, never logged. This means:
           </p>
           <ul className="space-y-2 not-prose">
             {[
-              'A MongoDB database breach exposes only ciphertext — mathematically useless without the key.',
+              'A MongoDB database breach exposes only ciphertext, mathematically useless without the key.',
               'A source code leak (e.g. a public GitHub repository) exposes no patient data.',
               'Medyra employees with database access cannot read patient records.',
               'Even Vercel (our hosting provider) cannot access the key in transit.',
@@ -250,16 +250,16 @@ export default function EncryptionBlogPost() {
             AES-256-GCM satisfies this requirement explicitly. The BSI Technical Guideline TR-02102-1 lists AES-256 as the recommended symmetric encryption algorithm through at least 2030. Our implementation also satisfies the BDSG requirement for health data (as a special category under GDPR Art. 9) to apply heightened technical protections.
           </p>
           <p>
-            Additionally, all data is automatically deleted after 30 days via a MongoDB TTL index — satisfying the GDPR data minimisation and storage limitation principles (Art. 5(1)(e)).
+            Additionally, all data is automatically deleted after 30 days via a MongoDB TTL index, satisfying the GDPR data minimisation and storage limitation principles (Art. 5(1)(e)).
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">What we do not store</h2>
           <ul className="space-y-2 not-prose">
             {[
-              'The original file — we extract the text and discard the binary immediately.',
-              'Any data beyond the 30-day window — a TTL index hard-deletes all records automatically.',
-              'Payment card details — handled entirely by Stripe, never touches our servers.',
-              'Biometric data or genetic sequences — we analyse the text values in lab reports, not raw biological data.',
+              'The original file, we extract the text and discard the binary immediately.',
+              'Any data beyond the 30-day window, a TTL index hard-deletes all records automatically.',
+              'Payment card details, handled entirely by Stripe, never touches our servers.',
+              'Biometric data or genetic sequences, we analyse the text values in lab reports, not raw biological data.',
             ].map((point, i) => (
               <li key={i} className="flex gap-2 items-start text-sm text-gray-700">
                 <span className="text-red-400 flex-shrink-0 mt-0.5 font-bold">✗</span>
@@ -270,10 +270,10 @@ export default function EncryptionBlogPost() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Our commitment to transparency</h2>
           <p>
-            We believe you should not have to trust us blindly. This is why we explain our encryption implementation in detail — the algorithm, the key management model, and the regulatory framework we comply with. If you have questions about our data handling practices, you can contact us at any time.
+            We believe you should not have to trust us blindly. This is why we explain our encryption implementation in detail, the algorithm, the key management model, and the regulatory framework we comply with. If you have questions about our data handling practices, you can contact us at any time.
           </p>
           <p>
-            Medical data deserves military-grade protection. We built Medyra with that principle from day one — not as an afterthought, and not just to tick a compliance checkbox.
+            Medical data deserves military-grade protection. We built Medyra with that principle from day one, not as an afterthought, and not just to tick a compliance checkbox.
           </p>
 
         </div>
@@ -288,7 +288,7 @@ export default function EncryptionBlogPost() {
             href="/upload"
             className="inline-flex items-center gap-1.5 bg-emerald-600 text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors"
           >
-            Analyse my report — it&apos;s free →
+            Analyse my report, it&apos;s free →
           </Link>
         </div>
 

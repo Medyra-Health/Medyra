@@ -8,7 +8,7 @@ import LexikonHero from './LexikonHero'
 const SUPPORTED_LANGS = ['en','tr','bn','fr','ar','es','it','pt','nl','pl','zh','ja','ko','hi','ur','ru']
 
 export const metadata = {
-  title: 'Medizinisches Lexikon — Laborwerte einfach erklärt | Medyra',
+  title: 'Medizinisches Lexikon, Laborwerte einfach erklärt | Medyra',
   description: 'Verstehen Sie Ihre Laborwerte: CRP, HbA1c, TSH, Cholesterin und 40+ weitere Blutwerte einfach erklärt auf Deutsch. Mit Normwerten, Ursachen und Fragen für Ihren Arzt.',
   alternates: {
     canonical: 'https://medyra.de/lexikon',
@@ -19,7 +19,7 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: 'Medizinisches Lexikon — Laborwerte einfach erklärt',
+    title: 'Medizinisches Lexikon, Laborwerte einfach erklärt',
     description: 'Verstehen Sie Ihre Laborwerte: CRP, HbA1c, TSH, Cholesterin und 40+ weitere Blutwerte einfach erklärt auf Deutsch.',
     url: 'https://medyra.de/lexikon',
   },
@@ -46,7 +46,7 @@ export default function LexikonPage() {
       </header>
 
       <main className="container mx-auto px-4 py-12 max-w-5xl">
-        {/* Hero — language-aware client component */}
+        {/* Hero, language-aware client component */}
         <LexikonHero totalCount={totalCount} />
 
         {/* Client searchable index */}

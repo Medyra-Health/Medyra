@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Folat (folik asit), hücre bölünmesi ve kan oluşumu için önemli bir B vitaminidir. Eksiklik anemiye yol açabilir ve özellikle gebelikte tehlikelidir. Birçok kişi diyetle yeterli folat alamaz. Eksikliği doktorunuzla görüşün.",
-  "metaDescription": "Folat çok düşük mü? Normal değerler, gebelik riskleri ve folik asit eksikliğinin nedenleri — basitçe açıklandı.",
+  "metaDescription": "Folat çok düşük mü? Normal değerler, gebelik riskleri ve folik asit eksikliğinin nedenleri: basitçe açıklandı.",
   "causesElevated": ["Folik asit takviyelerinin aşırı kullanımı"],
   "causesLow": ["Dengesiz beslenme", "Alkol kullanımı", "Malabsorpsiyon", "Bazı ilaçlar (örn. metotreksat)"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Eksik", "normal": "Yeterli", "elevated": "Yüksek", "high": "Yüksek" },
   "categoryLabel": "Vitaminler",
-  "pageTitle": "Folat değeri — Folik Asit açıklaması | Medyra"
+  "pageTitle": "Folat değeri: Folik Asit açıklaması | Medyra"
 }

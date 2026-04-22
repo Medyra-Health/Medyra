@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Hematocrit (Hkt) indicates the percentage of your blood made up of red blood cells. A low value may indicate anemia, while a high value can suggest dehydration or certain medical conditions. Discuss any abnormal values with your doctor.",
-  "metaDescription": "Hematocrit (Hkt) high or low? Normal ranges, causes, and when to see a doctor — explained clearly.",
+  "metaDescription": "Hematocrit (Hkt) high or low? Normal ranges, causes, and when to see a doctor: explained clearly.",
   "causesElevated": ["Dehydration", "Smoking", "Polycythemia vera", "High altitude"],
   "causesLow": ["Anemia", "Blood loss", "Iron deficiency", "Pregnancy"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Blood Count",
-  "pageTitle": "Hkt value — Hematocrit explained | Medyra"
+  "pageTitle": "Hkt value: Hematocrit explained | Medyra"
 }

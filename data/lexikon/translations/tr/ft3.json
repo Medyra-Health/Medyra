@@ -1,6 +1,6 @@
 {
   "shortAnswer": "fT3 (serbest triiyodotironin), metabolizmayı, kalp atış hızını ve birçok vücut fonksiyonunu etkileyen aktif tiroid hormonudur. Yüksek değerler hipertiroidizme, düşük değerler ise hipotiroidizme işaret edebilir. Anormallikleri doktorunuzla görüşün.",
-  "metaDescription": "fT3 yüksek veya düşük mü? Normal değerler, anlamı ve serbest triiyodotironin anomalilerinin nedenleri — basitçe açıklandı.",
+  "metaDescription": "fT3 yüksek veya düşük mü? Normal değerler, anlamı ve serbest triiyodotironin anomalilerinin nedenleri: basitçe açıklandı.",
   "causesElevated": ["Hipertiroidizm", "Graves hastalığı", "Tiroid iltihabı"],
   "causesLow": ["Hipotiroidizm", "Hashimoto tiroiditi", "İyot eksikliği", "Ağır sistemik hastalık"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "Tiroid",
-  "pageTitle": "fT3 değeri — Serbest Triiyodotironin açıklaması | Medyra"
+  "pageTitle": "fT3 değeri: Serbest Triiyodotironin açıklaması | Medyra"
 }

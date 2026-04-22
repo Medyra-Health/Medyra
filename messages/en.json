@@ -19,7 +19,7 @@
     "description": "Stop Googling medical terms at 2am. Upload your lab results and get a clear, private AI powered explanation in under 60 seconds.",
     "cta": "Analyze My First Report Free",
     "secondaryCta": "View Pricing",
-    "disclaimer": "Educational information only — not a substitute for medical advice."
+    "disclaimer": "Educational information only: not a substitute for medical advice."
   },
   "problem": {
     "heading": "Does this look familiar?",
@@ -69,7 +69,7 @@
   },
   "pricing": {
     "title": "Choose Your Plan",
-    "subtitle": "Launch offer active — 50% off all paid plans",
+    "subtitle": "Launch offer active: 50% off all paid plans",
     "mostPopular": "Most Popular",
     "launchBadge": "50% OFF",
     "launchNote": "Launch price with code LAUNCH50",
@@ -153,9 +153,9 @@
     "comingSoon": "Coming soon",
     "goToDashboard": "Go to Dashboard",
     "faqTitle": "Frequently Asked Questions",
-    "launchOfferBanner": "🔥 Launch offer — 50% off all paid plans",
+    "launchOfferBanner": "🔥 Launch offer: 50% off all paid plans",
     "limitedOffer": "Limited Launch Offer",
-    "fiftyOff": "50% off — while it lasts",
+    "fiftyOff": "50% off: while it lasts",
     "applyCode": "Apply code at checkout. Works on all paid plans.",
     "copied": "Copied!",
     "copyCode": "Copy code",
@@ -167,7 +167,7 @@
   },
   "legal": {
     "title": "Important Legal Notice",
-    "text": "Medyra is an educational tool that explains medical terminology — it does not provide medical advice, diagnoses, or treatment recommendations. Always consult your licensed physician before making any health decisions. Your data is handled in compliance with GDPR and automatically deleted after 30 days."
+    "text": "Medyra is an educational tool that explains medical terminology: it does not provide medical advice, diagnoses, or treatment recommendations. Always consult your licensed physician before making any health decisions. Your data is handled in compliance with GDPR and automatically deleted after 30 days."
   },
   "footer": {
     "tagline": "Understand Your Medical Reports in Plain Language",
@@ -553,11 +553,11 @@
     "faq": {
       "title": "Frequently asked questions",
       "q1": "Can I cancel anytime?",
-      "a1": "Yes — cancel from your dashboard at any time. No penalties, no questions asked. Access continues until the end of the billing period.",
+      "a1": "Yes: cancel from your dashboard at any time. No penalties, no questions asked. Access continues until the end of the billing period.",
       "q2": "Is my health data stored securely?",
       "a2": "All data is encrypted with AES-256-GCM before touching our database. We are fully GDPR compliant and documents are automatically deleted after 30 days.",
       "q3": "What does \"Unlimited*\" mean?",
-      "a3": "Paid plans have generous monthly soft limits. Personal: 200 chats, 30 preps, 50 PDFs. Family: 400 chats, 60 preps, 100 PDFs. If you hit a limit, you see a friendly message — no auto-upgrade.",
+      "a3": "Paid plans have generous monthly soft limits. Personal: 200 chats, 30 preps, 50 PDFs. Family: 400 chats, 60 preps, 100 PDFs. If you hit a limit, you see a friendly message: no auto-upgrade.",
       "q4": "What documents can I upload?",
       "a4": "PDF, JPG, PNG, and TXT files. Our AI can read text from scanned images and photos of lab reports, doctor letters, and prescriptions.",
       "q5": "How does the Family plan work?",

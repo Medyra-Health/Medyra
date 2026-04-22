@@ -1,6 +1,6 @@
 {
   "shortAnswer": "HDL é conhecido como o colesterol «bom» porque transporta o excesso de colesterol de volta ao fígado. Níveis altos de HDL protegem o coração. Níveis baixos podem aumentar o risco cardiovascular. Discuta valores baixos de HDL com o seu médico.",
-  "metaDescription": "HDL muito baixo? Valores normais, causas e como aumentar o colesterol bom — explicado de forma simples.",
+  "metaDescription": "HDL muito baixo? Valores normais, causas e como aumentar o colesterol bom: explicado de forma simples.",
   "causesElevated": ["Atividade física regular", "Consumo moderado de álcool"],
   "causesLow": ["Inatividade física", "Obesidade", "Tabagismo", "Diabetes", "Triglicerídeos elevados"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Muito baixo (risco aumentado)", "normal": "Desejável (≥ 40)", "elevated": "Ótimo (≥ 60)", "high": "Ótimo (≥ 60)" },
   "categoryLabel": "Metabolismo",
-  "pageTitle": "Valor HDL — Colesterol Bom explicado | Medyra"
+  "pageTitle": "Valor HDL: Colesterol Bom explicado | Medyra"
 }

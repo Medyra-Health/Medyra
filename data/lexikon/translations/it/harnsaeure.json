@@ -1,6 +1,6 @@
 {
   "shortAnswer": "L'acido urico si produce quando le purine degli alimenti vengono degradate. Livelli alti possono indicare gotta o favorire calcoli renali. La dieta e l'alcol svolgono un ruolo importante. Discutete livelli elevati con il vostro medico, specialmente se avete dolori articolari.",
-  "metaDescription": "Acido urico elevato? Valori normali, rischio di gotta e cosa fare con l'acido urico alto — spiegato in modo semplice.",
+  "metaDescription": "Acido urico elevato? Valori normali, rischio di gotta e cosa fare con l'acido urico alto: spiegato in modo semplice.",
   "causesElevated": ["Dieta ricca di purine (carne, frattaglie)", "Consumo di alcol", "Malattia renale", "Alcuni farmaci", "Obesità"],
   "causesLow": ["Alcuni farmaci", "Malattia epatica"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato (iperuricemia)", "high": "Molto elevato" },
   "categoryLabel": "Valori renali",
-  "pageTitle": "Valore acido urico — Rischio di gotta spiegato | Medyra"
+  "pageTitle": "Valore acido urico: Rischio di gotta spiegato | Medyra"
 }

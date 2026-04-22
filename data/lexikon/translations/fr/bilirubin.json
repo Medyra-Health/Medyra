@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La bilirubine est un produit de dégradation des globules rouges. Des valeurs élevées peuvent indiquer des problèmes hépatiques ou une obstruction biliaire et peuvent causer un ictère (jaunisse). Des valeurs légèrement élevées s'observent aussi dans la maladie de Gilbert, une affection bénigne.",
-  "metaDescription": "Bilirubine élevée ? Valeurs normales, causes et quand elle indique un ictère ou une maladie hépatique — expliqués simplement.",
+  "metaDescription": "Bilirubine élevée ? Valeurs normales, causes et quand elle indique un ictère ou une maladie hépatique: expliqués simplement.",
   "causesElevated": ["Maladie hépatique", "Calculs biliaires", "Hémolyse (destruction des globules rouges)", "Maladie de Gilbert", "Certains médicaments"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Légèrement élevé", "high": "Très élevé (ictère possible)" },
   "categoryLabel": "Bilan hépatique",
-  "pageTitle": "Valeur Bili — Bilirubine expliquée | Medyra"
+  "pageTitle": "Valeur Bili: Bilirubine expliquée | Medyra"
 }

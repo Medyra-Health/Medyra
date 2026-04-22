@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La vitamina D è essenziale per le ossa, il sistema immunitario e i muscoli. La carenza è molto comune, specialmente in inverno. I livelli bassi possono causare stanchezza e dolori ossei. Discutete qualsiasi carenza con il vostro medico prima di assumere integratori.",
-  "metaDescription": "Vitamina D troppo bassa? Valori normali, sintomi di carenza e quando la supplementazione ha senso — spiegato in modo semplice.",
+  "metaDescription": "Vitamina D troppo bassa? Valori normali, sintomi di carenza e quando la supplementazione ha senso: spiegato in modo semplice.",
   "causesElevated": ["Sovradosaggio di integratori alimentari"],
   "causesLow": ["Poca esposizione solare", "Carnagione scura", "Età avanzata", "Malassorbimento", "Malattia renale"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Carente", "normal": "Sufficiente", "elevated": "Borderline (insufficienza)", "high": "Possibilmente troppo alto" },
   "categoryLabel": "Vitamine",
-  "pageTitle": "Valore vitamina D — 25-OH Vitamina D spiegata | Medyra"
+  "pageTitle": "Valore vitamina D: 25-OH Vitamina D spiegata | Medyra"
 }

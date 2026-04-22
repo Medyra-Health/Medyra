@@ -37,7 +37,7 @@ export async function generateMetadata({ params }) {
   const entry = getEntry(slug)
   if (!entry) return {}
   return {
-    title: `${entry.acronym} Wert — ${entry.fullName} einfach erklärt | Medyra`,
+    title: `${entry.acronym} Wert, ${entry.fullName} einfach erklärt | Medyra`,
     description: entry.metaDescription,
     alternates: {
       canonical: `https://medyra.de/lexikon/${entry.slug}`,
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
       },
     },
     openGraph: {
-      title: `${entry.acronym} Wert — ${entry.fullName} einfach erklärt`,
+      title: `${entry.acronym} Wert, ${entry.fullName} einfach erklärt`,
       description: entry.metaDescription,
       url: `https://medyra.de/lexikon/${entry.slug}`,
     },

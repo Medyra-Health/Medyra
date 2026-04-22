@@ -1,6 +1,6 @@
 {
   "shortAnswer": "국제 표준화 비율(INR)은 혈액 응고 시간을 반영하며, 와파린 등 항응고제를 복용하는 환자는 정기적인 모니터링이 필요합니다. 높은 수치는 출혈 위험을, 낮은 수치는 혈전 위험을 나타냅니다.",
-  "metaDescription": "INR이 높거나 낮나요? 정상 범위, 항응고 치료 의미, 언제 의사를 만나야 하는지 — 쉽게 설명합니다.",
+  "metaDescription": "INR이 높거나 낮나요? 정상 범위, 항응고 치료 의미, 언제 의사를 만나야 하는지: 쉽게 설명합니다.",
   "causesElevated": ["와파린 과다", "비타민 K 결핍", "심한 간 질환", "파종성 혈관내 응고(DIC)"],
   "causesLow": ["와파린 용량 부족", "비타민 K 과다 섭취"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "낮음", "normal": "정상(치료 범위)", "elevated": "상승", "high": "현저한 상승" },
   "categoryLabel": "응고 검사",
-  "pageTitle": "INR 수치 — 국제 표준화 비율 쉽게 알아보기 | Medyra"
+  "pageTitle": "INR 수치: 국제 표준화 비율 쉽게 알아보기 | Medyra"
 }

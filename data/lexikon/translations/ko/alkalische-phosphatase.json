@@ -1,6 +1,6 @@
 {
   "shortAnswer": "알칼리 인산분해효소(ALP)는 간, 뼈, 담도에 존재합니다. 상승은 담도 질환, 뼈 질환, 간 문제를 나타낼 수 있습니다. 다른 간 기능 검사와 함께 판단합니다.",
-  "metaDescription": "ALP가 높나요? 정상 범위, 원인, 의미 — 쉽게 설명합니다.",
+  "metaDescription": "ALP가 높나요? 정상 범위, 원인, 의미: 쉽게 설명합니다.",
   "causesElevated": ["담도 폐색", "간염", "뼈 전이", "Paget 병", "성장기 어린이"],
   "causesLow": ["갑상선 기능 저하증", "빈혈", "아연 결핍"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "경미한 상승", "high": "현저한 상승" },
   "categoryLabel": "간 기능 검사",
-  "pageTitle": "ALP 수치 — 알칼리 인산분해효소 쉽게 알아보기 | Medyra"
+  "pageTitle": "ALP 수치: 알칼리 인산분해효소 쉽게 알아보기 | Medyra"
 }

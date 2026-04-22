@@ -1,6 +1,6 @@
 {
   "shortAnswer": "유리 타이록신(FT4)은 갑상선이 생산하는 주요 호르몬입니다. 높은 수치는 갑상선 기능 항진증을, 낮은 수치는 갑상선 기능 저하증을 나타냅니다. TSH·FT3와 함께 판단합니다.",
-  "metaDescription": "FT4가 높거나 낮나요? 정상 범위, 갑상선 기능 의미, 원인 — 쉽게 설명합니다.",
+  "metaDescription": "FT4가 높거나 낮나요? 정상 범위, 갑상선 기능 의미, 원인: 쉽게 설명합니다.",
   "causesElevated": ["갑상선 기능 항진증", "Graves 병", "갑상선염"],
   "causesLow": ["갑상선 기능 저하증", "뇌하수체 기능 저하증", "하시모토 갑상선염"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "상승" },
   "categoryLabel": "갑상선 검사",
-  "pageTitle": "FT4 수치 — 유리 타이록신 쉽게 알아보기 | Medyra"
+  "pageTitle": "FT4 수치: 유리 타이록신 쉽게 알아보기 | Medyra"
 }

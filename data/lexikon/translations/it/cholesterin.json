@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Il colesterolo è un grasso del sangue essenziale, ma livelli alti possono aumentare il rischio cardiovascolare. Valori superiori a 200 mg/dl sono considerati borderline. Ciò che conta di più è il rapporto LDL/HDL. Discutete i valori elevati con il vostro medico.",
-  "metaDescription": "Colesterolo elevato? Valori normali, rischio cardiovascolare e cause del colesterolo totale alto — spiegato in modo semplice.",
+  "metaDescription": "Colesterolo elevato? Valori normali, rischio cardiovascolare e cause del colesterolo totale alto: spiegato in modo semplice.",
   "causesElevated": ["Dieta ricca di grassi", "Predisposizione genetica", "Obesità", "Ipotiroidismo", "Diabete"],
   "causesLow": ["Malnutrizione", "Malattia epatica", "Malassorbimento"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Desiderabile", "elevated": "Borderline alto", "high": "Elevato" },
   "categoryLabel": "Metabolismo",
-  "pageTitle": "Valore CT — Colesterolo Totale spiegato | Medyra"
+  "pageTitle": "Valore CT: Colesterolo Totale spiegato | Medyra"
 }

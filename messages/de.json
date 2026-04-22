@@ -18,7 +18,7 @@
     "subtitle": "Endlich in verständlicher Sprache",
     "description": "Hören Sie auf, medizinische Begriffe zu googeln. Laden Sie Ihre Laborergebnisse hoch und erhalten Sie in unter 60 Sekunden eine klare, private KI-Erklärung.",
     "cta": "Ersten Bericht kostenlos analysieren",
-    "disclaimer": "Nur zu Bildungszwecken — kein Ersatz für medizinischen Rat.",
+    "disclaimer": "Nur zu Bildungszwecken: kein Ersatz für medizinischen Rat.",
     "secondaryCta": "Preise ansehen"
   },
   "features": {
@@ -151,9 +151,9 @@
     "comingSoon": "Demnächst",
     "goToDashboard": "Zum Dashboard",
     "faqTitle": "Häufig gestellte Fragen",
-    "launchOfferBanner": "🔥 Einführungsangebot — 50% Rabatt auf alle kostenpflichtigen Pläne",
+    "launchOfferBanner": "🔥 Einführungsangebot: 50% Rabatt auf alle kostenpflichtigen Pläne",
     "limitedOffer": "Begrenztes Einführungsangebot",
-    "fiftyOff": "50% Rabatt — solange der Vorrat reicht",
+    "fiftyOff": "50% Rabatt: solange der Vorrat reicht",
     "applyCode": "Code an der Kasse eingeben. Gilt für alle bezahlten Pläne.",
     "copied": "Kopiert!",
     "copyCode": "Code kopieren",
@@ -257,7 +257,7 @@
     "allValuesNormal": "Alle Werte normal",
     "keyTakeaways": "Wichtigste Erkenntnisse",
     "valuesNeedingAttention": "Werte, die Aufmerksamkeit benötigen",
-    "greatResults": "Gute Ergebnisse — mit Ihrem Arzt besprechen",
+    "greatResults": "Gute Ergebnisse: mit Ihrem Arzt besprechen",
     "allReports": "Alle Berichte",
     "saveAsPdf": "Als PDF speichern",
     "chatGreeting": "Hallo! Ich habe Ihren Bericht gelesen. Stellen Sie mir Ihre Fragen:",
@@ -348,7 +348,7 @@
     "howItWorks": {
       "badge": "Einfacher Ablauf",
       "step1Title": "Befund hochladen",
-      "step1Desc": "PDF, JPG, PNG oder TXT hochladen. Unsere KI liest den Text — auch aus gescannten Fotos.",
+      "step1Desc": "PDF, JPG, PNG oder TXT hochladen. Unsere KI liest den Text: auch aus gescannten Fotos.",
       "step1Detail": "Sofort verschlüsselt",
       "step2Title": "KI analysiert in ~30s",
       "step2Desc": "Claude AI erkennt alle Testwerte, markiert abnormale Ergebnisse und schreibt eine verständliche Erklärung.",
@@ -356,32 +356,32 @@
       "step3Title": "Ihre Antworten",
       "step3Desc": "Lesen Sie Ihre Ergebnisse, stellen Sie Nachfragen und exportieren Sie ein PDF für Ihren nächsten Termin.",
       "step3Detail": "Mit Ihrem Arzt teilen",
-      "cta": "Kostenlos starten — keine Kreditkarte"
+      "cta": "Kostenlos starten: keine Kreditkarte"
     },
     "doctorVisit": {
       "badge": "Neue Funktion",
       "title1": "Zum Arzt?",
       "title2": "Gut vorbereitet.",
-      "description": "Beschreiben Sie Ihre Beschwerden — in jeder Sprache. Medyra erstellt eine strukturierte, professionelle deutsche Zusammenfassung für Ihren Arzt.",
+      "description": "Beschreiben Sie Ihre Beschwerden: in jeder Sprache. Medyra erstellt eine strukturierte, professionelle deutsche Zusammenfassung für Ihren Arzt.",
       "step1Title": "In jeder Sprache beschreiben",
-      "step1Desc": "Schreiben Sie frei auf Englisch, Arabisch, Hindi oder Türkisch — ganz natürlich. Kein Fachwissen nötig.",
+      "step1Desc": "Schreiben Sie frei auf Englisch, Arabisch, Hindi oder Türkisch: ganz natürlich. Kein Fachwissen nötig.",
       "step2Title": "KI strukturiert sofort",
       "step2Desc": "Claude erstellt eine formelle klinische Zusammenfassung: Hauptbeschwerden, Zeitverlauf, Vorgeschichte und Fragen.",
       "step3Title": "Ausdrucken & mitbringen",
-      "step3Desc": "Ein Klick druckt ein sauberes A4-Blatt — übergeben Sie es Ihrem Arzt zu Beginn des Termins.",
+      "step3Desc": "Ein Klick druckt ein sauberes A4-Blatt: übergeben Sie es Ihrem Arzt zu Beginn des Termins.",
       "cta": "Auf den Termin vorbereiten",
       "freePlan": "Kostenloser Plan: 1 Zusammenfassung pro Monat"
     },
     "languages": {
       "badge": "Weltweite Reichweite",
       "title": "Verfügbar in 18 Sprachen",
-      "subtitle": "Von Deutschland in die Welt — verstehen Sie Ihre Gesundheit in Ihrer Sprache."
+      "subtitle": "Von Deutschland in die Welt: verstehen Sie Ihre Gesundheit in Ihrer Sprache."
     },
     "newToGermany": {
       "badge": "Neu in Deutschland",
       "title": "Neu in Deutschland?",
       "titleHighlight": "Wir helfen Ihnen.",
-      "subtitle": "Gesundheitsdokumente in Deutschland sind für Deutsche geschrieben. Medyra übersetzt bürokratische Dokumente in einfache Sprache — in Ihrer Sprache.",
+      "subtitle": "Gesundheitsdokumente in Deutschland sind für Deutsche geschrieben. Medyra übersetzt bürokratische Dokumente in einfache Sprache: in Ihrer Sprache.",
       "pill1": "Krankenkassenbrief",
       "pill2": "Laborbefund",
       "pill3": "Kassenrezept",
@@ -392,7 +392,7 @@
     },
     "security": {
       "badge": "Bankgrad-Verschlüsselung",
-      "title": "Ihre Daten sind verschlüsselt — selbst vor uns",
+      "title": "Ihre Daten sind verschlüsselt: selbst vor uns",
       "subtitle": "Jeder Bericht, jeder Wert, jede KI-Erklärung wird mit AES-256-GCM verschlüsselt, bevor sie unsere Datenbank berührt. Wir speichern nur Chiffretext. Nur Sie halten den Schlüssel.",
       "yourReport": "Ihr Befund",
       "ourDatabase": "Unsere Datenbank",
@@ -401,7 +401,7 @@
       "feat2Title": "DSGVO Art. 32",
       "feat2Desc": "Verschlüsselung für Gesundheitsdaten vorgeschrieben (§9 BDSG)",
       "feat3Title": "Einzigartiger IV pro Feld",
-      "feat3Desc": "Keine zwei Chiffretexte sind gleich — auch bei identischen Werten",
+      "feat3Desc": "Keine zwei Chiffretexte sind gleich: auch bei identischen Werten",
       "feat4Title": "Kein Klartext gespeichert",
       "feat4Desc": "Ein Datenbankeinbruch enthüllt nichts Lesbares",
       "deepDive": "Wie funktioniert es technisch? Zum Deep Dive"
@@ -417,7 +417,7 @@
     }
   },
   "siteFooter": {
-    "tagline": "Laborwerte verstehen — in Ihrer Sprache, in 60 Sekunden.",
+    "tagline": "Laborwerte verstehen: in Ihrer Sprache, in 60 Sekunden.",
     "product": "Produkt",
     "upload": "Befund hochladen",
     "prep": "Arzttermin vorbereiten",
@@ -512,7 +512,7 @@
       "cap3": "PDF-Exporte",
       "cap3p": "50 / Monat",
       "cap3f": "100 / Monat",
-      "footnote": "Wer diese Grenzen wirklich erreicht, hört persönlich von uns — kein Auto-Upgrade, nur ein Gespräch."
+      "footnote": "Wer diese Grenzen wirklich erreicht, hört persönlich von uns: kein Auto-Upgrade, nur ein Gespräch."
     },
     "compare": {
       "title": "Pläne vergleichen",
@@ -551,7 +551,7 @@
     "faq": {
       "title": "Häufig gestellte Fragen",
       "q1": "Kann ich jederzeit kündigen?",
-      "a1": "Ja — kündigen Sie jederzeit über Ihr Dashboard. Der Zugang läuft bis zum Ende des Abrechnungszeitraums weiter.",
+      "a1": "Ja: kündigen Sie jederzeit über Ihr Dashboard. Der Zugang läuft bis zum Ende des Abrechnungszeitraums weiter.",
       "q2": "Sind meine Gesundheitsdaten sicher?",
       "a2": "Alle Daten werden mit AES-256-GCM verschlüsselt. Wir sind DSGVO-konform und Dokumente werden nach 30 Tagen automatisch gelöscht.",
       "q3": "Was bedeutet \"Unbegrenzt*\"?",

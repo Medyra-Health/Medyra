@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Le chlore (Cl) est un électrolyte qui aide à réguler l'équilibre acido-basique et l'équilibre hydrique. Des déviations de la normale peuvent indiquer des problèmes rénaux ou métaboliques. Il est généralement évalué avec le sodium et le potassium. Discutez de toute valeur anormale avec votre médecin.",
-  "metaDescription": "Chlore élevé ou bas ? Valeurs normales, causes et signification de cet électrolyte — expliqués simplement.",
+  "metaDescription": "Chlore élevé ou bas ? Valeurs normales, causes et signification de cet électrolyte: expliqués simplement.",
   "causesElevated": ["Déshydratation", "Maladie rénale", "Diarrhée", "Certains médicaments"],
   "causesLow": ["Vomissements", "Diurétiques", "Insuffisance cardiaque", "Acidose métabolique"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé (hyperchlorémie)", "high": "Très élevé" },
   "categoryLabel": "Électrolytes",
-  "pageTitle": "Valeur Cl — Chlore expliqué | Medyra"
+  "pageTitle": "Valeur Cl: Chlore expliqué | Medyra"
 }

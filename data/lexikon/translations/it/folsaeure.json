@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Il folato (acido folico) è una vitamina B essenziale per la divisione cellulare e la formazione del sangue. La carenza può portare all'anemia ed è particolarmente pericolosa durante la gravidanza. Molte persone non assumono abbastanza folato solo con la dieta. Discutete qualsiasi carenza con il vostro medico.",
-  "metaDescription": "Folato troppo basso? Valori normali, rischi in gravidanza, cause della carenza di acido folico — spiegato in modo semplice.",
+  "metaDescription": "Folato troppo basso? Valori normali, rischi in gravidanza, cause della carenza di acido folico: spiegato in modo semplice.",
   "causesElevated": ["Sovradosaggio di integratori di acido folico"],
   "causesLow": ["Dieta sbilanciata", "Consumo di alcol", "Malassorbimento", "Alcuni farmaci (p.es. metotrexato)"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Carente", "normal": "Sufficiente", "elevated": "Elevato", "high": "Elevato" },
   "categoryLabel": "Vitamine",
-  "pageTitle": "Valore folato — Acido folico spiegato | Medyra"
+  "pageTitle": "Valore folato: Acido folico spiegato | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "L'HbA1c indique la glycémie moyenne des 2 à 3 derniers mois. Des valeurs supérieures à 6,5 % peuvent indiquer un diabète. Des valeurs entre 5,7 % et 6,4 % sont considérées comme un prédiabète. Discutez toujours des valeurs élevées avec votre médecin.",
-  "metaDescription": "HbA1c élevé ? Valeurs normales, risque de diabète et signification de la glycémie à long terme — expliqués simplement.",
+  "metaDescription": "HbA1c élevé ? Valeurs normales, risque de diabète et signification de la glycémie à long terme: expliqués simplement.",
   "causesElevated": ["Diabète de type 2", "Diabète de type 1", "Diabète mal contrôlé", "Résistance à l'insuline"],
   "causesLow": ["Hémolyse", "Anémie hémorragique", "Certaines variantes d'hémoglobine"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Prédiabète", "high": "Zone diabète" },
   "categoryLabel": "Métabolisme",
-  "pageTitle": "Valeur HbA1c — Glycémie à long terme expliquée | Medyra"
+  "pageTitle": "Valeur HbA1c: Glycémie à long terme expliquée | Medyra"
 }

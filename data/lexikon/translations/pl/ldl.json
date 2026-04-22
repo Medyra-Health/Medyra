@@ -1,6 +1,6 @@
 {
   "shortAnswer": "LDL to „zły" cholesterol, który może odkładać się w ścianach naczyń krwionośnych. Podwyższone wartości zwiększają ryzyko zawału serca i udaru. Wartości docelowe zależą od indywidualnego profilu ryzyka. Omów poziom LDL z lekarzem.",
-  "metaDescription": "LDL podwyższone? Wartości prawidłowe, ryzyko sercowe i możliwości leczenia wysokiego złego cholesterolu — wyjaśnione prosto.",
+  "metaDescription": "LDL podwyższone? Wartości prawidłowe, ryzyko sercowe i możliwości leczenia wysokiego złego cholesterolu: wyjaśnione prosto.",
   "causesElevated": ["Dieta bogata w tłuszcze", "Predyspozycje genetyczne (rodzinna hipercholesterolemia)", "Otyłość", "Niedoczynność tarczycy", "Cukrzyca"],
   "causesLow": ["Niedożywienie", "Choroba wątroby", "Statyny"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Niskie", "normal": "Normalne (niskie ryzyko)", "elevated": "Podwyższone", "high": "Znacznie podwyższone" },
   "categoryLabel": "Metabolizm",
-  "pageTitle": "Wartość LDL — Zły cholesterol wyjaśniony | Medyra"
+  "pageTitle": "Wartość LDL: Zły cholesterol wyjaśniony | Medyra"
 }

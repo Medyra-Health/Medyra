@@ -40,8 +40,8 @@ const CATEGORIES = [
     icon: FlaskConical,
     label: 'I have test results',
     labelDe: 'Ich habe Testergebnisse',
-    desc: 'Lab work, scans, or reports — understand what to ask',
-    descDe: 'Labor, Scans oder Berichte — verstehen Sie, was Sie fragen sollen',
+    desc: 'Lab work, scans, or reports, understand what to ask',
+    descDe: 'Labor, Scans oder Berichte, verstehen Sie, was Sie fragen sollen',
     color: 'violet',
   },
   {

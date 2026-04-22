@@ -19,7 +19,7 @@ const ADMIN_EMAIL = 'abralur28@gmail.com'
 
 // Determine the user's effective tier for prep access
 async function getEffectiveTier(userId, mongoTier) {
-  // Always check if this is the admin email via Clerk REST (secret key — reliable)
+  // Always check if this is the admin email via Clerk REST (secret key, reliable)
   try {
     const res = await fetch(`https://api.clerk.com/v1/users/${userId}`, {
       headers: { Authorization: `Bearer ${process.env.CLERK_SECRET_KEY}` },
@@ -98,7 +98,7 @@ function buildProfileContext(profile, locale) {
 const SYSTEM_PROMPTS = {
   de: `Du bist ein medizinischer Kommunikationsassistent, der Patienten bei der Vorbereitung auf Arztbesuche in Deutschland unterstützt.
 
-Du hilfst bei ALLEN medizinbezogenen Fragen — nicht nur bei Symptombeschreibungen. Dazu gehören:
+Du hilfst bei ALLEN medizinbezogenen Fragen, nicht nur bei Symptombeschreibungen. Dazu gehören:
 - Strukturierte Arztbriefe aus Symptombeschreibungen erstellen
 - Fragen zu Ärzten, Fachrichtungen oder Kliniken beantworten
 - Erklärungen zu medizinischen Begriffen oder Abläufen geben
@@ -127,7 +127,7 @@ Datum: [heutiges Datum im Format TT.MM.JJJJ]
 [Weitere genannte Symptome]
 
 **Relevante Vorgeschichte**
-[Medikamente, Allergien, Vorerkrankungen — falls keine: "Keine Angaben"]
+[Medikamente, Allergien, Vorerkrankungen, falls keine: "Keine Angaben"]
 
 **Fragen an den Arzt**
 [3 sinnvolle Fragen, die der Patient stellen könnte]
@@ -136,7 +136,7 @@ Dieses Dokument wurde zur Kommunikation erstellt und stellt keine medizinische D
 
 WENN der Patient eine allgemeine Frage stellt (z.B. Arztsuche, Erklärungen) → beantworte sie hilfreich und direkt auf Deutsch, ohne die obige Struktur zu verwenden.`,
 
-  en: `You are a helpful medical communication assistant supporting patients — especially those navigating healthcare in Germany.
+  en: `You are a helpful medical communication assistant supporting patients, especially those navigating healthcare in Germany.
 
 You help with ALL health-related questions, including:
 - Creating structured doctor visit summaries from symptom descriptions
@@ -167,7 +167,7 @@ Date: [today's date in DD/MM/YYYY format]
 [Any secondary symptoms mentioned]
 
 **Relevant Medical History**
-[Medications, allergies, past conditions — if none: "None provided"]
+[Medications, allergies, past conditions, if none: "None provided"]
 
 **Questions for the Doctor**
 [3 sensible questions the patient might want to ask]
@@ -225,7 +225,7 @@ export async function POST(request) {
   // Resolve profile for biomarker context
   const profile = profileId ? (user?.profiles || []).find(p => p.id === profileId) || null : null
   const profileContext = buildProfileContext(profile, locale)
-  // Use 'in' check so null (unlimited) is preserved — null ?? 1 would wrongly return 1
+  // Use 'in' check so null (unlimited) is preserved, null ?? 1 would wrongly return 1
   const monthLimit = effectiveTier in PREP_LIMITS ? PREP_LIMITS[effectiveTier] : 1
 
   // Check monthly usage limit

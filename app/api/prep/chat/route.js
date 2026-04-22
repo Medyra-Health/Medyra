@@ -56,14 +56,14 @@ CATEGORY CONTEXT:
 - symptoms: Ask about the main symptom, duration, severity (1-10), and any related symptoms
 - diagnosis: Ask about the diagnosis name, when diagnosed, current medications, and what they want to discuss
 - results: Ask what type of test/result they have, what values seem abnormal, and what concerns them
-- general: Understand what they need — finding a doctor, insurance questions, understanding a procedure, etc.
+- general: Understand what they need, finding a doctor, insurance questions, understanding a procedure, etc.
 
 CONVERSATION FLOW:
 1. Start with a warm, specific opening question based on the category
 2. Ask 2-4 follow-up questions to gather key details
 3. Once you have enough information (after 3-5 user responses), set readyToGenerate to true and let them know you have enough to create their summary
 
-RESPONSE FORMAT — always respond with valid JSON:
+RESPONSE FORMAT, always respond with valid JSON:
 {
   "message": "Your response text here",
   "suggestions": ["optional short chip 1", "optional short chip 2", "optional short chip 3"],
@@ -80,7 +80,7 @@ RULES:
 - Respond in the same language the user uses (German or English)
 - If user writes in German, respond in German
 - Keep suggestions very short (they appear as clickable chips)
-- Do NOT use markdown formatting in message text — plain text only`
+- Do NOT use markdown formatting in message text, plain text only`
 
 const CATEGORY_OPENERS = {
   symptoms: {
@@ -138,7 +138,7 @@ export async function POST(request) {
     } catch {}
   }
 
-  // First message (category opener) — return static opener instantly, no API call
+  // First message (category opener), return static opener instantly, no API call
   const userMessages = messages.filter(m => m.role === 'user')
   if (userMessages.length === 1 && userMessages[0].content?.startsWith('Category:')) {
     const lang = locale === 'de' ? 'de' : 'en'
@@ -149,7 +149,7 @@ export async function POST(request) {
     })
   }
 
-  // Build conversation for Claude — strip the category opener
+  // Build conversation for Claude, strip the category opener
   const conversationMessages = messages
     .filter(m => !(m.role === 'user' && m.content?.startsWith('Category:')))
     .map(m => ({

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La glucosa en ayunas mide la concentración de azúcar en sangre tras al menos 8 horas sin comer. Los valores superiores a 126 mg/dl pueden indicar diabetes; los valores entre 100 y 125 mg/dl sugieren prediabetes. Consulte con su médico ante valores elevados.",
-  "metaDescription": "Glucosa en ayunas elevada? Valores normales, riesgo de diabetes y qué significa el valor — explicado de forma sencilla.",
+  "metaDescription": "Glucosa en ayunas elevada? Valores normales, riesgo de diabetes y qué significa el valor: explicado de forma sencilla.",
   "causesElevated": ["Diabetes mellitus", "Resistencia a la insulina", "Respuesta al estrés", "Ciertos medicamentos (p. ej., corticosteroides)"],
   "causesLow": ["Demasiada insulina", "Ciertos medicamentos", "Ayuno tras ejercicio", "Condiciones raras"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bajo", "normal": "Normal (en ayunas)", "elevated": "Rango de prediabetes", "high": "Rango de diabetes" },
   "categoryLabel": "Metabolismo",
-  "pageTitle": "Valor glucosa — Glucemia en ayunas explicada | Medyra"
+  "pageTitle": "Valor glucosa: Glucemia en ayunas explicada | Medyra"
 }

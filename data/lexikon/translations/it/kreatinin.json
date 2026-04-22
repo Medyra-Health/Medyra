@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La creatinina è un prodotto di scarto del metabolismo muscolare filtrato dai reni. I livelli elevati possono indicare una ridotta funzionalità renale. Il valore dipende anche dalla massa muscolare e dall'assunzione di liquidi. Discutete i valori anomali con il vostro medico.",
-  "metaDescription": "Creatinina elevata? Valori normali, cause e cosa significa una creatinina alta per la funzionalità renale — spiegato in modo semplice.",
+  "metaDescription": "Creatinina elevata? Valori normali, cause e cosa significa una creatinina alta per la funzionalità renale: spiegato in modo semplice.",
   "causesElevated": ["Malattia renale", "Disidratazione", "Alta massa muscolare", "Alcuni farmaci", "Consumo eccessivo di carne"],
   "causesLow": ["Bassa massa muscolare", "Malnutrizione", "Gravidanza"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Leggermente elevato", "high": "Molto elevato" },
   "categoryLabel": "Valori renali",
-  "pageTitle": "Valore creatinina — Funzionalità renale spiegata | Medyra"
+  "pageTitle": "Valore creatinina: Funzionalità renale spiegata | Medyra"
 }

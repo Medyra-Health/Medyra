@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Los eritrocitos (glóbulos rojos) transportan oxígeno desde los pulmones a los tejidos del cuerpo. Un recuento bajo puede indicar anemia, mientras que uno alto puede sugerir deshidratación. Consulte con su médico ante cualquier resultado anormal.",
-  "metaDescription": "Eritrocitos / glóbulos rojos bajos o altos? Valores normales, causas y qué significa para su salud — explicado de forma sencilla.",
+  "metaDescription": "Eritrocitos / glóbulos rojos bajos o altos? Valores normales, causas y qué significa para su salud: explicado de forma sencilla.",
   "causesElevated": ["Deshidratación", "Altitud elevada", "Tabaquismo", "Policitemia vera"],
   "causesLow": ["Deficiencia de hierro", "Deficiencia de vitamina B12", "Deficiencia de folato", "Enfermedades crónicas", "Anemia por pérdida de sangre"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bajo", "normal": "Normal (hombres)", "elevated": "Elevado", "high": "Muy elevado" },
   "categoryLabel": "Hemograma",
-  "pageTitle": "Valor eritrocitos — Glóbulos rojos explicados | Medyra"
+  "pageTitle": "Valor eritrocitos: Glóbulos rojos explicados | Medyra"
 }

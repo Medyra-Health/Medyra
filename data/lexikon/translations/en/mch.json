@@ -1,6 +1,6 @@
 {
   "shortAnswer": "MCH measures the average amount of hemoglobin in a single red blood cell. Low values may indicate iron deficiency, while high values can suggest vitamin B12 deficiency. Discuss any abnormal findings with your doctor.",
-  "metaDescription": "MCH low or high? Normal ranges, meaning, and causes of abnormal hemoglobin content per cell — explained simply.",
+  "metaDescription": "MCH low or high? Normal ranges, meaning, and causes of abnormal hemoglobin content per cell: explained simply.",
   "causesElevated": ["Vitamin B12 deficiency", "Folate deficiency", "Alcohol use"],
   "causesLow": ["Iron deficiency", "Thalassemia", "Chronic disease"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Blood Count",
-  "pageTitle": "MCH value — Mean Corpuscular Hemoglobin explained | Medyra"
+  "pageTitle": "MCH value: Mean Corpuscular Hemoglobin explained | Medyra"
 }
