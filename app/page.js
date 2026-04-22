@@ -90,19 +90,19 @@ function NewToGermanySection() {
   }
 
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-20 md:py-28 bg-gray-950">
       <div className="container mx-auto px-4 max-w-5xl">
 
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
             {t('landing.newToGermany.badge')}
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {t('landing.newToGermany.title')}{' '}
-            <span className="text-emerald-600">{t('landing.newToGermany.titleHighlight')}</span>
+            <span className="text-emerald-400">{t('landing.newToGermany.titleHighlight')}</span>
           </h2>
-          <p className="text-gray-500 text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-gray-400 text-base max-w-xl mx-auto leading-relaxed">
             {t('landing.newToGermany.subtitle')}
           </p>
         </div>
@@ -115,8 +115,8 @@ function NewToGermanySection() {
               onClick={() => switchDoc(d.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 ${
                 active === d.id
-                  ? 'bg-emerald-500 border-emerald-500 text-white shadow-sm shadow-emerald-200'
-                  : 'bg-white border-gray-200 text-gray-600 hover:border-emerald-300 hover:text-emerald-700'
+                  ? 'bg-emerald-500 border-emerald-500 text-white shadow-sm shadow-emerald-900/40'
+                  : 'bg-gray-900 border-gray-700 text-gray-400 hover:border-emerald-500/50 hover:text-emerald-400'
               }`}
             >
               {d.pill}
@@ -128,10 +128,10 @@ function NewToGermanySection() {
         <div
           key={animKey}
           style={{ animation: 'ngFadeIn 0.3s ease both' }}
-          className="grid md:grid-cols-2 gap-0 rounded-2xl border border-gray-200 overflow-hidden shadow-sm"
+          className="grid md:grid-cols-2 gap-0 rounded-2xl border border-gray-800 overflow-hidden"
         >
           {/* Left, explanation */}
-          <div className="bg-gray-950 p-8 md:p-10 flex flex-col justify-center">
+          <div className="bg-[#0a0f1a] p-8 md:p-10 flex flex-col justify-center">
             <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-4">{doc.pill}</p>
             <h3 className="text-xl md:text-2xl font-bold text-white mb-4 leading-snug">
               {doc.heading}
@@ -145,23 +145,23 @@ function NewToGermanySection() {
           </div>
 
           {/* Right, mock output */}
-          <div className="bg-white p-8 md:p-10 flex flex-col justify-center border-l border-gray-200">
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-5">{t('landing.newToGermany.medyraExplains')}</p>
+          <div className="bg-gray-900 p-8 md:p-10 flex flex-col justify-center border-l border-gray-800">
+            <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-5">{t('landing.newToGermany.medyraExplains')}</p>
             <div className="space-y-3">
               {doc.preview.map((row, i) => (
-                <div key={i} className="flex items-center justify-between py-2.5 border-b border-gray-100 last:border-0">
-                  <span className="text-sm text-gray-500">{row.label}</span>
+                <div key={i} className="flex items-center justify-between py-2.5 border-b border-gray-800 last:border-0">
+                  <span className="text-sm text-gray-400">{row.label}</span>
                   <span className={`text-sm font-semibold flex items-center gap-1.5 ${
-                    row.ok === false ? 'text-amber-600' : row.ok === true ? 'text-gray-900' : 'text-emerald-600'
+                    row.ok === false ? 'text-amber-400' : row.ok === true ? 'text-gray-100' : 'text-emerald-400'
                   }`}>
-                    {row.ok === false && <span className="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0" />}
+                    {row.ok === false && <span className="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0" />}
                     {row.ok === true && <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0" />}
                     {row.value}
                   </span>
                 </div>
               ))}
             </div>
-            <div className="mt-6 pt-5 border-t border-gray-100">
+            <div className="mt-6 pt-5 border-t border-gray-800">
               <SignedOut>
                 <SignInButton mode="modal">
                   <button className="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm py-2.5 rounded-xl transition-colors cursor-pointer">
@@ -178,8 +178,7 @@ function NewToGermanySection() {
           </div>
         </div>
 
-        {/* Bottom trust line */}
-        <p className="text-center text-sm text-gray-400 mt-8">
+        <p className="text-center text-sm text-gray-500 mt-8">
           {t('landing.newToGermany.trustLine')}
         </p>
 
@@ -775,50 +774,52 @@ export default function LandingPage() {
       <CampaignSection />
 
       {/* ── HOW IT WORKS ── */}
-      <section id="how-it-works" className="py-20 md:py-28 relative overflow-hidden" style={{background:'linear-gradient(160deg,#0a0f1a 0%,#0d1a12 50%,#0a0f1a 100%)'}}>
+      <section id="how-it-works" className="py-20 md:py-28 bg-gray-950 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-emerald-500/6 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[250px] bg-emerald-500/5 rounded-full blur-3xl" />
         </div>
-        <div className="container mx-auto px-4 max-w-5xl relative">
+        <div className="container mx-auto px-4 max-w-4xl relative">
           <div className="text-center mb-16 sr">
             <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">{t('landing.howItWorks.badge')}</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white">{t('howItWorks.title')}</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 relative">
-            {/* Connecting line desktop */}
-            <div className="hidden md:block absolute top-10 left-[calc(16.67%+2rem)] right-[calc(16.67%+2rem)] h-px bg-gradient-to-r from-emerald-500/20 via-emerald-400/60 to-emerald-500/20" />
+          <div className="relative">
+            {/* Vertical connector on mobile, horizontal on desktop */}
+            <div className="hidden md:block absolute top-[52px] left-[calc(16.67%+40px)] right-[calc(16.67%+40px)] h-px bg-gradient-to-r from-transparent via-emerald-500/40 to-transparent" />
 
-            {[
-              { step: '01', icon: FileText,    title: t('landing.howItWorks.step1Title'), desc: t('landing.howItWorks.step1Desc'), detail: t('landing.howItWorks.step1Detail'), color: 'from-emerald-600 to-teal-600',    glow: 'shadow-emerald-500/30', delay: 'd1' },
-              { step: '02', icon: Brain,        title: t('landing.howItWorks.step2Title'), desc: t('landing.howItWorks.step2Desc'), detail: t('landing.howItWorks.step2Detail'), color: 'from-violet-600 to-indigo-600',   glow: 'shadow-violet-500/30',  delay: 'd2' },
-              { step: '03', icon: CheckCircle,  title: t('landing.howItWorks.step3Title'), desc: t('landing.howItWorks.step3Desc'), detail: t('landing.howItWorks.step3Detail'), color: 'from-blue-600 to-cyan-600',       glow: 'shadow-blue-500/30',    delay: 'd3' },
-            ].map(({ step, icon: Icon, title, desc, detail, color, glow, delay }) => (
-              <div key={step} className={`sr ${delay} glow-card group flex flex-col items-center text-center p-8 rounded-2xl border border-white/5 bg-white/3 hover:border-white/10 hover:bg-white/5`}>
-                <div className="relative mb-6">
-                  <div className={`w-[72px] h-[72px] bg-gradient-to-br ${color} text-white rounded-2xl flex items-center justify-center shadow-xl ${glow} group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon className="h-7 w-7" />
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { n: 1, icon: FileText,   title: t('landing.howItWorks.step1Title'), desc: t('landing.howItWorks.step1Desc'), tag: t('landing.howItWorks.step1Detail'), accent: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' },
+                { n: 2, icon: Brain,      title: t('landing.howItWorks.step2Title'), desc: t('landing.howItWorks.step2Desc'), tag: t('landing.howItWorks.step2Detail'), accent: 'text-violet-400 bg-violet-500/10 border-violet-500/20' },
+                { n: 3, icon: CheckCircle,title: t('landing.howItWorks.step3Title'), desc: t('landing.howItWorks.step3Desc'), tag: t('landing.howItWorks.step3Detail'), accent: 'text-blue-400 bg-blue-500/10 border-blue-500/20' },
+              ].map(({ n, icon: Icon, title, desc, tag, accent }) => (
+                <div key={n} className="sr flex flex-col items-center text-center">
+                  <div className="relative mb-5">
+                    <div className="w-[56px] h-[56px] rounded-full bg-gray-900 border border-gray-700 flex items-center justify-center">
+                      <Icon className="h-5 w-5 text-emerald-400" />
+                    </div>
+                    <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-emerald-500 text-white text-[10px] font-black rounded-full flex items-center justify-center">{n}</span>
                   </div>
-                  <span className="absolute -top-2 -right-2 w-6 h-6 bg-gray-950 border border-white/10 text-white text-xs font-bold rounded-full flex items-center justify-center">{step}</span>
+                  <h3 className="font-bold text-base text-white mb-2">{title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed mb-4">{desc}</p>
+                  <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${accent}`}>{tag}</span>
                 </div>
-                <h3 className="font-bold text-lg text-white mb-2">{title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed mb-4">{desc}</p>
-                <span className="text-xs text-emerald-400 font-semibold bg-emerald-400/10 border border-emerald-400/20 px-3 py-1 rounded-full">{detail}</span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          <div className="text-center mt-14 sr d4">
+          <div className="text-center mt-14 sr">
             <SignedOut>
               <SignInButton mode="modal">
-                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12 shadow-lg shadow-emerald-500/25">
+                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12 shadow-lg shadow-emerald-900/40">
                   {t('landing.howItWorks.cta')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </SignInButton>
             </SignedOut>
             <SignedIn>
               <Link href="/upload">
-                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12 shadow-lg shadow-emerald-500/25">
+                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12 shadow-lg shadow-emerald-900/40">
                   {t('landing.hero.ctaUpload')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -828,95 +829,90 @@ export default function LandingPage() {
       </section>
 
       {/* ── DOCTOR VISIT PREP ── */}
-      <section className="py-20 md:py-28 bg-[#040C08] relative overflow-hidden">
-        {/* Background glow */}
+      <section className="py-20 md:py-28 bg-[#050d0a] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-emerald-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-violet-600/5 rounded-full blur-3xl -translate-y-1/2" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[300px] bg-emerald-500/5 rounded-full blur-3xl" />
         </div>
-        <div className="container mx-auto px-4 max-w-5xl relative">
-          {/* Badge + heading */}
-          <div className="text-center mb-14 scroll-fade">
-            <span className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
-              <FileText className="h-3.5 w-3.5" /> {t('landing.doctorVisit.badge')}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-              {t('landing.doctorVisit.title1')}<br />
-              <span className="text-emerald-400">{t('landing.doctorVisit.title2')}</span>
-            </h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto leading-relaxed">
-              {t('landing.doctorVisit.description')}
-            </p>
-          </div>
+        <div className="container mx-auto px-4 max-w-6xl relative">
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-          {/* Three-column how it works */}
-          <div className="grid md:grid-cols-3 gap-6 mb-14">
-            {[
-              { step: '01', emoji: '🗣️', title: t('landing.doctorVisit.step1Title'), desc: t('landing.doctorVisit.step1Desc'), delay: 'd1' },
-              { step: '02', emoji: '⚡', title: t('landing.doctorVisit.step2Title'), desc: t('landing.doctorVisit.step2Desc'), delay: 'd2' },
-              { step: '03', emoji: '🏥', title: t('landing.doctorVisit.step3Title'), desc: t('landing.doctorVisit.step3Desc'), delay: 'd3' },
-            ].map(({ step, emoji, title, desc, delay }) => (
-              <div key={step} className={`sr ${delay} glow-card bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-emerald-500/40 hover:bg-emerald-500/5 hover:shadow-[0_8px_32px_rgba(16,185,129,0.08)]`}>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl">{emoji}</span>
-                  <span className="text-xs font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">{step}</span>
-                </div>
-                <h3 className="font-bold text-white text-base mb-2">{title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+            {/* Left: copy + steps */}
+            <div className="sr-left">
+              <div className="inline-flex items-center gap-2 bg-violet-500/10 border border-violet-500/25 text-violet-300 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+                <FileText className="h-3 w-3" /> {t('landing.doctorVisit.badge')}
               </div>
-            ))}
-          </div>
-
-          {/* Sample output preview */}
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 mb-12 max-w-2xl mx-auto scroll-fade delay-2">
-            <div className="flex items-center justify-between mb-5">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-emerald-500" />
-                <span className="text-xs font-semibold text-gray-300">Beispiel-Ausgabe</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+                {t('landing.doctorVisit.title1')}<br />
+                <span className="text-violet-400">{t('landing.doctorVisit.title2')}</span>
+              </h2>
+              <p className="text-gray-400 text-base leading-relaxed mb-8">
+                {t('landing.doctorVisit.description')}
+              </p>
+              <div className="space-y-4 mb-10">
+                {[
+                  { n: 1, title: t('landing.doctorVisit.step1Title'), desc: t('landing.doctorVisit.step1Desc') },
+                  { n: 2, title: t('landing.doctorVisit.step2Title'), desc: t('landing.doctorVisit.step2Desc') },
+                  { n: 3, title: t('landing.doctorVisit.step3Title'), desc: t('landing.doctorVisit.step3Desc') },
+                ].map(({ n, title, desc }) => (
+                  <div key={n} className="flex gap-4 items-start">
+                    <span className="w-7 h-7 rounded-full bg-violet-500/20 border border-violet-500/30 text-violet-300 text-xs font-black flex items-center justify-center flex-shrink-0 mt-0.5">{n}</span>
+                    <div>
+                      <p className="font-semibold text-white text-sm">{title}</p>
+                      <p className="text-gray-500 text-xs leading-relaxed mt-0.5">{desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <span className="text-xs text-gray-500 bg-white/5 border border-white/10 px-2 py-0.5 rounded-full">Deutsch</span>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <SignedIn>
+                  <Link href="/prep">
+                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-violet-600 hover:bg-violet-500 active:scale-95 text-white font-semibold rounded-xl transition-all text-sm shadow-lg shadow-violet-900/40">
+                      {t('landing.doctorVisit.cta')} <ArrowRight className="h-4 w-4" />
+                    </button>
+                  </Link>
+                </SignedIn>
+                <SignedOut>
+                  <SignInButton mode="modal">
+                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-violet-600 hover:bg-violet-500 active:scale-95 text-white font-semibold rounded-xl transition-all text-sm shadow-lg shadow-violet-900/40">
+                      {t('nav.tryFree')} <ArrowRight className="h-4 w-4" />
+                    </button>
+                  </SignInButton>
+                </SignedOut>
+              </div>
+              <p className="text-gray-600 text-xs mt-3">{t('landing.doctorVisit.freePlan')}</p>
             </div>
-            <div className="space-y-4 text-sm">
-              <div>
-                <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1.5">Hauptbeschwerden</p>
-                <div className="space-y-1">
-                  {['Der Patient berichtet über Kopfschmerzen seit 3 Tagen mit morgendlicher Verstärkung.', 'Schwindel beim Aufstehen aus liegender Position.'].map(t => (
-                    <div key={t} className="flex gap-2 text-gray-300"><span className="text-emerald-400 font-bold">·</span>{t}</div>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1.5">Relevante Vorgeschichte</p>
-                <p className="text-gray-300">Tägliche Einnahme von Metformin (Dosierung nicht angegeben).</p>
-              </div>
-              <div>
-                <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1.5">Fragen an den Arzt</p>
-                <div className="space-y-1">
-                  {['1. Könnte der Schwindel mit der Metformin-Einnahme in Zusammenhang stehen?', '2. Welche Untersuchungen sind bei diesen Beschwerden empfehlenswert?'].map(q => (
-                    <p key={q} className="text-gray-300">{q}</p>
-                  ))}
-                </div>
-              </div>
-              <p className="text-[10px] text-gray-600 italic border-t border-white/10 pt-3">Dieses Dokument wurde zur Kommunikation erstellt und stellt keine medizinische Diagnose dar.</p>
-            </div>
-          </div>
 
-          {/* CTA */}
-          <div className="text-center">
-            <SignedIn>
-              <Link href="/prep">
-                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12">
-                  {t('landing.doctorVisit.cta')} <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </SignedIn>
-            <SignedOut>
-              <SignInButton mode="modal">
-                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-10 rounded-xl h-12">
-                  {t('nav.tryFree')} <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </SignInButton>
-            </SignedOut>
-            <p className="text-gray-500 text-xs mt-3">{t('landing.doctorVisit.freePlan')}</p>
+            {/* Right: sample output card */}
+            <div className="sr-right">
+              <div className="bg-gray-900/80 border border-gray-700/60 rounded-2xl shadow-2xl overflow-hidden">
+                <div className="flex items-center justify-between px-5 py-3.5 border-b border-gray-800 bg-gray-900">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
+                    <span className="text-xs font-semibold text-gray-300">Beispiel-Ausgabe</span>
+                  </div>
+                  <span className="text-[10px] text-gray-500 bg-gray-800 border border-gray-700 px-2 py-0.5 rounded-full">Deutsch</span>
+                </div>
+                <div className="p-6 space-y-5">
+                  {[
+                    { label: 'Hauptbeschwerden', items: ['Kopfschmerzen seit 3 Tagen, morgendliche Verstärkung.', 'Schwindel beim Aufstehen aus liegender Position.'] },
+                    { label: 'Relevante Vorgeschichte', items: ['Tägliche Einnahme von Metformin (Dosierung nicht angegeben).'] },
+                    { label: 'Fragen an den Arzt', items: ['Könnte der Schwindel mit Metformin zusammenhängen?', 'Welche Untersuchungen sind empfehlenswert?'] },
+                  ].map(({ label, items }) => (
+                    <div key={label}>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-violet-400 mb-2">{label}</p>
+                      {items.map(item => (
+                        <div key={item} className="flex gap-2 text-gray-300 text-xs leading-relaxed mb-1">
+                          <span className="text-violet-400 font-bold flex-shrink-0">·</span>{item}
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                  <p className="text-[10px] text-gray-600 italic border-t border-gray-800 pt-3">Dieses Dokument stellt keine medizinische Diagnose dar.</p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -960,15 +956,15 @@ export default function LandingPage() {
 
           {/* Header */}
           <div className="text-center mb-14 scroll-fade">
-            <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
-              <span>🏛</span> New Feature
+            <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
+              <Shield className="h-3 w-3" /> Health Vault
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
-              Your Health Vault.<br />
-              <span className="text-emerald-400">Every trend. Every person.</span>
+              Your health history.<br />
+              <span className="text-emerald-400">Every person. Every trend.</span>
             </h2>
             <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              Create profiles for yourself, your partner, children, and parents. Medyra tracks biomarkers over time and automatically includes your history in every doctor summary.
+              One account for the whole family. Medyra tracks biomarkers across reports over time and surfaces trends before your next appointment.
             </p>
           </div>
 
@@ -1100,57 +1096,92 @@ export default function LandingPage() {
       <NewToGermanySection />
 
       {/* ── ENCRYPTION / SECURITY ── */}
-      <section className="py-20 md:py-28 bg-gray-950 overflow-hidden">
+      <section className="py-20 md:py-28 bg-[#030712] overflow-hidden">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-14 scroll-fade">
-            <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
-              <Shield className="h-3.5 w-3.5" /> {t('landing.security.badge')}
+            <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
+              <Lock className="h-3 w-3" /> {t('landing.security.badge')}
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('landing.security.title')}</h2>
-            <p className="text-gray-400 text-base max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-400 text-base max-w-xl mx-auto leading-relaxed">
               {t('landing.security.subtitle')}
             </p>
           </div>
 
-          {/* Encrypt flow */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 mb-14 scroll-fade delay-1">
+          {/* Data flow: clear step-by-step */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5 scroll-fade delay-1">
             {[
-              { icon: '📄', title: t('landing.security.yourReport'), sub: 'HbA1c: 6.1%\neGFR: 58 mL/min', highlight: false },
-              null,
-              { icon: '🔐', title: 'AES-256-GCM', sub: '256-bit key · random IV\ntamper-proof auth tag', highlight: true },
-              null,
-              { icon: '🗄️', title: t('landing.security.ourDatabase'), sub: 'a3f92b…:8d41c0…:\nff19e4…', highlight: false },
-            ].map((item, i) => {
-              if (item === null) return (
-                <div key={i} className="flex flex-col items-center px-4">
-                  <div className="hidden md:flex items-center gap-1">
-                    <div className="w-10 h-px bg-emerald-500/40" />
-                    <svg width="8" height="12" viewBox="0 0 8 12"><path d="M0 0 L8 6 L0 12" fill="none" stroke="#10b981" strokeWidth="1.5" strokeOpacity="0.6" /></svg>
-                  </div>
-                  <div className="md:hidden w-px h-6 bg-emerald-500/40" />
+              { step: 1, icon: FileText,  label: 'You upload', sub: 'PDF, image, or text', color: 'border-gray-700 bg-gray-900' },
+              { step: 2, icon: Lock,      label: 'Encrypted at rest', sub: 'AES-256-GCM, only ciphertext stored', color: 'border-emerald-500/40 bg-emerald-950/60', glow: true },
+              { step: 3, icon: Brain,     label: 'AI analysis', sub: 'Temp decrypted, sent to Claude, not stored', color: 'border-violet-500/30 bg-violet-950/40' },
+              { step: 4, icon: CheckCircle, label: 'Answer to you', sub: 'Plain language, on your screen', color: 'border-blue-500/30 bg-blue-950/40' },
+            ].map(({ step, icon: Icon, label, sub, color, glow }) => (
+              <div key={step} className={`rounded-2xl border p-4 text-center relative ${color}`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-3 ${glow ? 'bg-emerald-500/20' : 'bg-gray-800'}`}>
+                  <Icon className={`h-4 w-4 ${glow ? 'text-emerald-400' : 'text-gray-400'}`} />
                 </div>
-              )
-              return (
-                <div key={item.title} className={`w-44 rounded-2xl p-5 text-center ${item.highlight ? 'border border-emerald-500/40 bg-emerald-950/60 shadow-lg shadow-emerald-900/30' : 'border border-gray-700 bg-gray-900'}`}>
-                  <div className="text-2xl mb-2">{item.icon}</div>
-                  <p className={`text-xs font-bold mb-1 ${item.highlight ? 'text-emerald-400' : 'text-white'}`}>{item.title}</p>
-                  <p className={`text-xs whitespace-pre-line leading-relaxed ${item.highlight ? 'text-emerald-600/80' : 'text-gray-500'}`}>{item.sub}</p>
-                </div>
-              )
-            })}
+                <span className="absolute top-2 right-2 text-[10px] text-gray-600 font-bold">{step}</span>
+                <p className="text-xs font-bold text-white mb-1">{label}</p>
+                <p className="text-[10px] text-gray-500 leading-relaxed">{sub}</p>
+              </div>
+            ))}
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 scroll-fade delay-2">
+          {/* What's safe / what Claude sees */}
+          <div className="grid md:grid-cols-2 gap-4 mb-10 scroll-fade delay-2">
+            <div className="rounded-2xl border border-emerald-500/20 bg-emerald-950/30 p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="h-3.5 w-3.5 text-emerald-400" />
+                </div>
+                <p className="text-sm font-bold text-emerald-400">What's always protected</p>
+              </div>
+              <ul className="space-y-2">
+                {[
+                  'Your uploaded reports, encrypted with AES-256-GCM before storage',
+                  'We store only ciphertext — even we cannot read your data',
+                  'Each value encrypted with a unique random key (IV)',
+                  'Data auto-deleted after 30 days',
+                ].map(item => (
+                  <li key={item} className="flex gap-2 text-xs text-gray-300 leading-relaxed">
+                    <span className="text-emerald-500 flex-shrink-0 mt-0.5">·</span>{item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-violet-500/20 bg-violet-950/20 p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-6 h-6 rounded-full bg-violet-500/20 flex items-center justify-center flex-shrink-0">
+                  <Brain className="h-3.5 w-3.5 text-violet-400" />
+                </div>
+                <p className="text-sm font-bold text-violet-400">What Claude sees (temporarily)</p>
+              </div>
+              <ul className="space-y-2">
+                {[
+                  'Your report content during AI analysis — not logged or stored by Anthropic',
+                  'Your question — processed in-session only',
+                  'Never used to train AI models',
+                  'Connection is encrypted in transit (TLS)',
+                ].map(item => (
+                  <li key={item} className="flex gap-2 text-xs text-gray-300 leading-relaxed">
+                    <span className="text-violet-400 flex-shrink-0 mt-0.5">·</span>{item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10 scroll-fade delay-3">
             {[
               { icon: '🔑', title: t('landing.security.feat1Title'), desc: t('landing.security.feat1Desc') },
               { icon: '🇪🇺', title: t('landing.security.feat2Title'), desc: t('landing.security.feat2Desc') },
               { icon: '🎲', title: t('landing.security.feat3Title'), desc: t('landing.security.feat3Desc') },
               { icon: '🚫', title: t('landing.security.feat4Title'), desc: t('landing.security.feat4Desc') },
             ].map(({ icon, title, desc }) => (
-              <div key={title} className="rounded-xl border border-gray-800 bg-gray-900 p-4 hover:border-gray-700 transition-colors">
-                <div className="text-xl mb-2">{icon}</div>
+              <div key={title} className="rounded-xl border border-gray-800 bg-gray-900/60 p-4">
+                <div className="text-lg mb-2">{icon}</div>
                 <p className="text-xs font-bold text-white mb-1">{title}</p>
-                <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>
+                <p className="text-[11px] text-gray-500 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -1248,29 +1279,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── PRICING CTA ── */}
-      <section className="relative py-24 overflow-hidden" style={{background:'linear-gradient(135deg,#059669 0%,#10b981 40%,#0d9488 100%)'}}>
-        {/* Animated orbs */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-6 left-[10%] w-48 h-48 bg-white/10 rounded-full blur-2xl" style={{animation:'orbFloat 6s ease-in-out infinite'}} />
-          <div className="absolute bottom-4 right-[12%] w-64 h-64 bg-white/8 rounded-full blur-3xl" style={{animation:'orbFloat2 8s ease-in-out infinite'}} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-32 bg-white/5 rounded-full blur-3xl" />
-        </div>
-        <div className="container mx-auto px-4 text-center max-w-2xl relative sr">
-          <div className="inline-flex items-center gap-2 bg-white/15 border border-white/25 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-            <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" /> Free to start
-          </div>
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">{t('pricingCta.title')}</h2>
-          <p className="text-white/80 mb-8 text-lg">{t('pricingCta.subtitle')}</p>
-          <Link href="/pricing">
-            <Button size="lg" className="bg-white hover:bg-gray-50 text-emerald-700 font-bold px-12 rounded-xl h-14 text-base shadow-xl shadow-emerald-900/30 hover:shadow-2xl transition-shadow">
-              {t('pricingCta.cta')} <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
-          <p className="text-white/60 text-sm mt-5">{t('landing.pricingCta.note')}</p>
-        </div>
-      </section>
-
       {/* ── LEXIKON ── */}
       <section className="py-20 md:py-24 bg-white relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -1282,26 +1290,25 @@ export default function LandingPage() {
               <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" /> Kostenloses Lexikon
             </div>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3 leading-tight">
-              Laborwerte verstehen, ohne Medizinstudium
+              Laborwerte verstehen.<br className="hidden sm:block" /><span className="text-emerald-600">Ohne Medizinstudium.</span>
             </h2>
             <p className="text-gray-500 text-base max-w-xl mx-auto">
-              46 Blutwerte einfach erklärt: Normwerte, Ursachen, Fragen für Ihren Arzt, kostenlos, auf Deutsch, ohne Anmeldung.
+              46 Blutwerte einfach erklärt: Normwerte, Ursachen, wann zum Arzt. Kostenlos. Keine Anmeldung.
             </p>
           </div>
 
-          {/* Term preview cards */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mb-10">
             {[
-              { slug: 'crp',          acronym: 'CRP',    name: 'Entzündungs­wert',  color: 'bg-orange-50 border-orange-200 text-orange-700' },
-              { slug: 'hba1c',        acronym: 'HbA1c',  name: 'Langzeit­zucker',   color: 'bg-violet-50 border-violet-200 text-violet-700' },
-              { slug: 'tsh',          acronym: 'TSH',    name: 'Schilddrüse',        color: 'bg-teal-50 border-teal-200 text-teal-700' },
-              { slug: 'cholesterin',  acronym: 'TC',     name: 'Cholesterin',        color: 'bg-violet-50 border-violet-200 text-violet-700' },
-              { slug: 'haemoglobin',  acronym: 'Hb',     name: 'Hämoglobin',         color: 'bg-red-50 border-red-200 text-red-700' },
-              { slug: 'vitamin-d',    acronym: 'Vit.D',  name: 'Vitamin D',          color: 'bg-yellow-50 border-yellow-200 text-yellow-700' },
+              { slug: 'crp',         acronym: 'CRP',   name: 'Entzündungs­wert', color: 'bg-orange-50 border-orange-200 text-orange-700 hover:border-orange-400' },
+              { slug: 'hba1c',       acronym: 'HbA1c', name: 'Langzeit­zucker',  color: 'bg-violet-50 border-violet-200 text-violet-700 hover:border-violet-400' },
+              { slug: 'tsh',         acronym: 'TSH',   name: 'Schilddrüse',      color: 'bg-teal-50 border-teal-200 text-teal-700 hover:border-teal-400' },
+              { slug: 'cholesterin', acronym: 'TC',    name: 'Cholesterin',      color: 'bg-violet-50 border-violet-200 text-violet-700 hover:border-violet-400' },
+              { slug: 'haemoglobin', acronym: 'Hb',    name: 'Hämoglobin',       color: 'bg-red-50 border-red-200 text-red-700 hover:border-red-400' },
+              { slug: 'vitamin-d',   acronym: 'Vit.D', name: 'Vitamin D',        color: 'bg-yellow-50 border-yellow-200 text-yellow-700 hover:border-yellow-400' },
             ].map((term, i) => (
               <Link key={term.slug} href={`/lexikon/${term.slug}`}
-                className={`sr d${i + 1} group flex flex-col items-center text-center border rounded-2xl px-3 py-4 ${term.color} hover:shadow-md transition-all`}>
-                <span className="font-black text-lg leading-none mb-1">{term.acronym}</span>
+                className={`sr d${i + 1} group flex flex-col items-center text-center border-2 rounded-2xl px-3 py-5 transition-all hover:shadow-lg hover:-translate-y-0.5 ${term.color}`}>
+                <span className="font-black text-xl leading-none mb-1.5">{term.acronym}</span>
                 <span className="text-xs opacity-70 leading-tight">{term.name}</span>
               </Link>
             ))}
@@ -1309,10 +1316,47 @@ export default function LandingPage() {
 
           <div className="text-center sr">
             <Link href="/lexikon"
-              className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-colors shadow-sm shadow-emerald-200">
+              className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-colors shadow-sm">
               Alle 46 Laborwerte im Lexikon <ArrowRight className="h-4 w-4" />
             </Link>
-            <p className="text-gray-400 text-xs mt-3">Kostenlos · Keine Anmeldung erforderlich</p>
+            <p className="text-gray-400 text-xs mt-3">Kostenlos · Keine Anmeldung erforderlich · Auf Deutsch</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PRICING CTA ── */}
+      <section className="relative py-24 bg-gray-950 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0" style={{background:'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(16,185,129,0.12) 0%, transparent 70%)'}} />
+        </div>
+        <div className="container mx-auto px-4 max-w-4xl relative sr">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+              <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" /> Free to start
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">{t('pricingCta.title')}</h2>
+            <p className="text-gray-400 mb-10 text-lg max-w-xl mx-auto">{t('pricingCta.subtitle')}</p>
+          </div>
+          <div className="grid grid-cols-3 gap-4 mb-10 max-w-2xl mx-auto">
+            {[
+              { label: 'Free forever', sub: '3 reports/month', icon: CheckCircle, color: 'text-emerald-400' },
+              { label: 'No credit card', sub: 'Start instantly', icon: Shield, color: 'text-blue-400' },
+              { label: 'Cancel anytime', sub: 'No lock-in', icon: Lock, color: 'text-violet-400' },
+            ].map(({ label, sub, icon: Icon, color }) => (
+              <div key={label} className="text-center bg-white/3 border border-white/8 rounded-2xl p-4">
+                <Icon className={`h-5 w-5 mx-auto mb-2 ${color}`} />
+                <p className="text-sm font-bold text-white">{label}</p>
+                <p className="text-xs text-gray-500 mt-0.5">{sub}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link href="/pricing">
+              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-bold px-12 rounded-xl h-14 text-base shadow-xl shadow-emerald-900/40 transition-all">
+                {t('pricingCta.cta')} <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <p className="text-gray-600 text-sm mt-4">{t('landing.pricingCta.note')}</p>
           </div>
         </div>
       </section>
@@ -1359,11 +1403,17 @@ export default function LandingPage() {
       </section>
 
       {/* ── LEGAL NOTICE ── */}
-      <section className="bg-amber-50 border-t border-amber-200 py-10">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <Shield className="h-8 w-8 text-amber-600 mx-auto mb-3" />
-          <h3 className="text-lg font-bold mb-2 text-gray-900">{t('legal.title')}</h3>
-          <p className="text-gray-500 text-sm leading-relaxed">{t('legal.text')}</p>
+      <section className="bg-gray-950 border-t border-gray-800/60 py-8">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-gray-900/60 border border-gray-800 rounded-2xl px-6 py-5">
+            <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-gray-800 border border-gray-700 flex items-center justify-center">
+              <Shield className="h-4 w-4 text-gray-400" />
+            </div>
+            <div>
+              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{t('legal.title')}</p>
+              <p className="text-gray-500 text-xs leading-relaxed">{t('legal.text')}</p>
+            </div>
+          </div>
         </div>
       </section>
 
