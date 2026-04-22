@@ -11,7 +11,6 @@ import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 import { useTranslations } from 'next-intl'
 import MedyraLogo from '@/components/MedyraLogo'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
-import SiteFooter from '@/components/SiteFooter'
 import { Button } from '@/components/ui/button'
 import { toast } from 'sonner'
 
@@ -428,7 +427,6 @@ export default function PricingPage() {
 
       </div>
 
-      <SiteFooter />
     </div>
   )
 }
