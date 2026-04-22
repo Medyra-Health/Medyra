@@ -114,11 +114,11 @@ export default function LanguageSwitcher() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+        className="flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-lg border border-emerald-400/60 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:border-emerald-500 transition-all font-semibold"
         aria-label="Change language"
       >
-        <Globe className="w-4 h-4" />
-        <span className="font-medium">{currentLang.short}</span>
+        <Globe className="w-4 h-4 text-emerald-500" />
+        <span>{currentLang.short}</span>
       </button>
 
       {isOpen && (
