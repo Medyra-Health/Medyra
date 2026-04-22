@@ -395,23 +395,19 @@ function CampaignSection() {
   )
 }
 
-function NavLink({ href, children, color = '#10B981', className = '' }) {
+function NavLink({ href, children, className = '' }) {
   const pathname = usePathname()
-  const active = pathname === href
+  const active = pathname === href || (href !== '/' && pathname.startsWith(href))
   return (
     <Link
       href={href}
-      className={`relative px-3 py-2 text-sm font-medium transition-colors group ${
-        active ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
+      className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-150 ${
+        active
+          ? 'text-gray-900 bg-gray-100'
+          : 'text-gray-500 hover:text-gray-900 hover:bg-gray-100/70'
       } ${className}`}
     >
       {children}
-      <span
-        className={`absolute bottom-0 left-3 right-3 h-0.5 rounded-full transition-transform duration-200 origin-left ${
-          active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-        }`}
-        style={{ backgroundColor: color }}
-      />
     </Link>
   )
 }
@@ -489,59 +485,72 @@ export default function LandingPage() {
       <JsonLd />
 
       {/* ── NAVIGATION ── */}
-      <nav className="border-b border-gray-100 bg-white/95 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex justify-between items-center">
-            <Link href="/"><MedyraLogo size="md" /></Link>
+      <nav className="border-b border-gray-200/80 bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div className="container mx-auto px-4 py-2.5">
+          <div className="flex justify-between items-center gap-4">
+            <Link href="/" className="flex-shrink-0"><MedyraLogo size="md" /></Link>
 
-            <div className="hidden md:flex items-center gap-0.5">
-              <NavLink href="/pricing">{t('nav.pricing')}</NavLink>
-              <NavLink href="/prep" color="#7c3aed" className="text-violet-600 hover:text-violet-700">{t('nav.doctorVisit')}</NavLink>
+            {/* Desktop nav */}
+            <div className="hidden md:flex items-center gap-1 flex-1 justify-center">
+              <SignedIn>
+                <NavLink href="/dashboard">{t('nav.dashboard')}</NavLink>
+              </SignedIn>
+              <NavLink href="/prep" className="text-violet-600 hover:text-violet-700 hover:bg-violet-50">{t('nav.doctorVisit')}</NavLink>
               <NavLink href="/blog">{t('nav.blog')}</NavLink>
-              <NavLink href="/verstehen" color="#0d9488" className="text-xs">{t('nav.verstehen')}</NavLink>
-              <div className="w-px h-4 bg-gray-200 mx-2" />
+              <NavLink href="/verstehen" className="text-teal-600 hover:text-teal-700 hover:bg-teal-50 text-xs">{t('nav.verstehen')}</NavLink>
+              <SignedOut>
+                <NavLink href="/pricing">{t('nav.pricing')}</NavLink>
+              </SignedOut>
+            </div>
+
+            {/* Desktop right actions */}
+            <div className="hidden md:flex items-center gap-2 flex-shrink-0">
               <LanguageSwitcher />
+              <div className="w-px h-5 bg-gray-200 mx-1" />
               <SignedOut>
                 <SignInButton mode="modal">
-                  <button className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                  <button className="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-all duration-150">
                     {t('nav.signIn')}
                   </button>
                 </SignInButton>
                 <SignInButton mode="modal">
-                  <button className="ml-1 px-4 py-2 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-lg transition-all shadow-sm shadow-emerald-200">
-                    {t('nav.tryFree')}
+                  <button className="px-4 py-1.5 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-lg transition-all shadow-sm shadow-emerald-200">
+                    {t('nav.tryFree')} →
                   </button>
                 </SignInButton>
               </SignedOut>
               <SignedIn>
                 <Link href="/upload">
-                  <button className="ml-1 px-4 py-2 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-lg transition-all shadow-sm shadow-emerald-200">
+                  <button className="px-4 py-1.5 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-lg transition-all shadow-sm shadow-emerald-200">
                     {t('nav.upload')}
                   </button>
                 </Link>
-                <Link href="/dashboard">
-                  <button className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
-                    {t('nav.dashboard')}
-                  </button>
-                </Link>
+                <NavLink href="/pricing" className="text-gray-500">{t('nav.pricing')}</NavLink>
                 <MedyraUserButton />
               </SignedIn>
             </div>
 
-            <div className="flex md:hidden items-center space-x-2">
+            {/* Mobile toggle */}
+            <div className="flex md:hidden items-center gap-2">
               <LanguageSwitcher />
-              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2 rounded-md text-gray-700 hover:bg-gray-50">
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-all"
+              >
                 {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </button>
             </div>
           </div>
 
+          {/* Mobile menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden pt-3 pb-2 border-t border-gray-100 mt-3 space-y-0.5">
-              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
-                {t('nav.pricing')}
-              </Link>
+            <div className="md:hidden pt-3 pb-3 border-t border-gray-100 mt-3 space-y-0.5">
+              <SignedIn>
+                <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center px-3 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">
+                  {t('nav.dashboard')}
+                </Link>
+              </SignedIn>
               <Link href="/prep" onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center px-3 py-2.5 text-sm font-medium text-violet-600 hover:bg-violet-50 rounded-lg transition-colors">
                 {t('nav.doctorVisit')}
@@ -554,6 +563,10 @@ export default function LandingPage() {
                 className="flex items-center px-3 py-2.5 text-sm font-medium text-teal-600 hover:bg-teal-50 rounded-lg transition-colors">
                 {t('nav.verstehen')}
               </Link>
+              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                {t('nav.pricing')}
+              </Link>
               <div className="border-t border-gray-100 my-2" />
               <SignedOut>
                 <SignInButton mode="modal">
@@ -563,7 +576,7 @@ export default function LandingPage() {
                 </SignInButton>
                 <SignInButton mode="modal">
                   <button className="w-full mt-1 px-4 py-3 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl transition-colors" onClick={() => setMobileMenuOpen(false)}>
-                    {t('nav.tryFree')}
+                    {t('nav.tryFree')} →
                   </button>
                 </SignInButton>
               </SignedOut>
@@ -572,11 +585,10 @@ export default function LandingPage() {
                   className="block w-full text-center py-3 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl transition-colors">
                   {t('nav.upload')}
                 </Link>
-                <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
-                  {t('nav.dashboard')}
-                </Link>
-                <div className="px-2 py-1"><MedyraUserButton /></div>
+                <div className="flex items-center justify-between px-3 py-2">
+                  <span className="text-sm text-gray-500">Account</span>
+                  <MedyraUserButton />
+                </div>
               </SignedIn>
             </div>
           )}
