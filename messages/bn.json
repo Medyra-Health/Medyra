@@ -561,7 +561,9 @@
       "q5": "পারিবারিক পরিকল্পনা কীভাবে কাজ করে?",
       "a5": "একটি সাবস্ক্রিপশন সর্বোচ্চ ৫ সদস্যকে কভার করে। ৫০টি মাসিক রিপোর্ট ভাগ করা হয়।",
       "q6": "ডাক্তার ভিজিট প্রস্তুতি কী?",
-      "a6": "Medyra আপনার লক্ষণগুলির একটি কাঠামোগত সারসংক্ষেপ তৈরি করে যা ডাক্তারের সাথে ভাগ করা যায়।"
+      "a6": "Medyra আপনার লক্ষণগুলির একটি কাঠামোগত সারসংক্ষেপ তৈরি করে যা ডাক্তারের সাথে ভাগ করা যায়।",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }
