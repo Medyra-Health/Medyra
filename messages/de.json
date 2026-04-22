@@ -561,7 +561,9 @@
       "q5": "Wie funktioniert der Familienplan?",
       "a5": "Ein Abo deckt bis zu 5 Familienmitglieder ab, jedes mit eigenem Profil. Die 50 monatlichen Berichte werden geteilt.",
       "q6": "Was ist eine Arztbesuchsvorbereitung?",
-      "a6": "Medyra erstellt eine strukturierte Zusammenfassung Ihrer Symptome und Biomarkerwerte zum Teilen mit dem Arzt."
+      "a6": "Medyra erstellt eine strukturierte Zusammenfassung Ihrer Symptome und Biomarkerwerte zum Teilen mit dem Arzt.",
+      "q7": "Welches KI-Modell steckt hinter Medyra?",
+      "a7": "Medyra wird von Claude AI, entwickelt von Anthropic, betrieben. Claude verarbeitet Ihre hochgeladenen Dokumente und erstellt die verständlichen Erklärungen. Anthropic ist als Datenverarbeiter in unserer Datenschutzerklärung aufgeführt."
     }
   }
 }

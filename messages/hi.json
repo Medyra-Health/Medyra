@@ -561,7 +561,9 @@
       "q5": "पारिवारिक योजना कैसे काम करती है?",
       "a5": "एक सदस्यता 5 परिवार के सदस्यों को कवर करती है। 50 मासिक रिपोर्ट साझा की जाती हैं।",
       "q6": "डॉक्टर विजिट तैयारी क्या है?",
-      "a6": "Medyra आपके लक्षणों का एक संरचित सारांश तैयार करता है जिसे आप डॉक्टर के साथ साझा कर सकते हैं।"
+      "a6": "Medyra आपके लक्षणों का एक संरचित सारांश तैयार करता है जिसे आप डॉक्टर के साथ साझा कर सकते हैं।",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }

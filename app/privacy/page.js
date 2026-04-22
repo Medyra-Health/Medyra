@@ -64,7 +64,7 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-lg font-semibold text-gray-900 mb-3">5. Third-Party Data Processors</h2>
-            <p className="mb-3">We share your data with the following processors, each bound by GDPR-compliant data processing agreements:</p>
+            <p className="mb-3">We share your data with the following sub-processors under GDPR Art. 28. Each processor operates under their own standard data processing terms or SCCs for international transfers. Your medical documents are processed by Anthropic (Claude AI) solely to generate your explanation — Anthropic does not use this data to train its models.</p>
             <div className="overflow-x-auto">
               <table className="w-full border border-gray-200 rounded-lg text-xs">
                 <thead className="bg-gray-50">
@@ -77,14 +77,14 @@ export default function PrivacyPage() {
                 <tbody className="divide-y divide-gray-100">
                   <tr><td className="px-3 py-2 font-medium">Clerk</td><td className="px-3 py-2">User authentication</td><td className="px-3 py-2">USA (SCCs applied)</td></tr>
                   <tr><td className="px-3 py-2 font-medium">MongoDB Atlas</td><td className="px-3 py-2">Data storage</td><td className="px-3 py-2">EU (Frankfurt)</td></tr>
-                  <tr><td className="px-3 py-2 font-medium">Anthropic (Claude AI)</td><td className="px-3 py-2">AI report analysis</td><td className="px-3 py-2">USA (SCCs applied)</td></tr>
+                  <tr><td className="px-3 py-2 font-medium">Anthropic (Claude AI)</td><td className="px-3 py-2">AI report analysis — <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Privacy Policy</a></td><td className="px-3 py-2">USA (SCCs applied)</td></tr>
                   <tr><td className="px-3 py-2 font-medium">Stripe</td><td className="px-3 py-2">Payment processing</td><td className="px-3 py-2">USA/EU (SCCs applied)</td></tr>
                   <tr><td className="px-3 py-2 font-medium">Vercel</td><td className="px-3 py-2">Website hosting</td><td className="px-3 py-2">EU (Frankfurt)</td></tr>
                   <tr><td className="px-3 py-2 font-medium">Google Analytics</td><td className="px-3 py-2">Usage analytics (with consent)</td><td className="px-3 py-2">USA (SCCs applied)</td></tr>
                 </tbody>
               </table>
             </div>
-            <p className="mt-3 text-xs text-gray-500">SCCs = Standard Contractual Clauses, the approved EU mechanism for international data transfers.</p>
+            <p className="mt-3 text-xs text-gray-500">SCCs = Standard Contractual Clauses, the approved EU mechanism for international data transfers. All processors are bound by their respective GDPR-compliant data processing terms (Art. 28 GDPR).</p>
           </section>
 
           <section>
@@ -136,6 +136,7 @@ export default function PrivacyPage() {
           <div className="flex justify-center gap-6 mb-2">
             <Link href="/privacy" className="text-emerald-600">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-gray-600">Terms of Service</Link>
+            <Link href="/impressum" className="hover:text-gray-600">Impressum</Link>
             <Link href="/contact" className="hover:text-gray-600">Contact</Link>
           </div>
           © 2026 Medyra. Made with care in Germany.

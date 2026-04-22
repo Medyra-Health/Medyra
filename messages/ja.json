@@ -561,7 +561,9 @@
       "q5": "ファミリープランはどのように機能しますか？",
       "a5": "1つのサブスクリプションで最大5名の家族をカバー。月50件のレポートが共有されます。",
       "q6": "受診準備とは何ですか？",
-      "a6": "Medyraは症状とバイオマーカーの傾向の構造化されたサマリーを生成し、医師と共有できます。"
+      "a6": "Medyraは症状とバイオマーカーの傾向の構造化されたサマリーを生成し、医師と共有できます。",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }

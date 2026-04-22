@@ -561,7 +561,9 @@
       "q5": "Aile planı nasıl çalışır?",
       "a5": "Bir abonelik 5 aile üyesini kapsar. Aylık 50 rapor paylaşılır.",
       "q6": "Doktor ziyareti hazırlığı nedir?",
-      "a6": "Medyra, doktorunuzla paylaşabileceğiniz semptomlarınızın yapılandırılmış bir özetini oluşturur."
+      "a6": "Medyra, doktorunuzla paylaşabileceğiniz semptomlarınızın yapılandırılmış bir özetini oluşturur.",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }
