@@ -563,7 +563,9 @@
       "q5": "Hoe werkt het familieplan?",
       "a5": "Eén abonnement voor max. 5 familieleden. De 50 maandelijkse rapporten worden gedeeld.",
       "q6": "Wat is een artsbezoekvoorbereiding?",
-      "a6": "Medyra genereert een samenvatting van uw symptomen om te delen met uw arts."
+      "a6": "Medyra genereert een samenvatting van uw symptomen om te delen met uw arts.",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }

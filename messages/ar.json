@@ -561,7 +561,9 @@
       "q5": "كيف تعمل الخطة العائلية؟",
       "a5": "اشتراك واحد يغطي حتى 5 أفراد من العائلة. 50 تقرير شهري مشترك.",
       "q6": "ما هو تحضير زيارة الطبيب؟",
-      "a6": "تُولّد Medyra ملخصاً منظماً لأعراضك لمشاركته مع طبيبك."
+      "a6": "تُولّد Medyra ملخصاً منظماً لأعراضك لمشاركته مع طبيبك.",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }
