@@ -60,11 +60,7 @@ export default function SiteFooter() {
 
         <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-600 text-xs">{t('copyright')}</p>
-          <div className="flex flex-col sm:flex-row items-center gap-3">
-            <p className="text-gray-700 text-xs">{t('disclaimer')}</p>
-            <span className="hidden sm:block text-gray-700 text-xs">·</span>
-            <p className="text-gray-600 text-xs">Powered by <a href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-400 transition-colors">Claude AI</a></p>
-          </div>
+          <p className="text-gray-700 text-xs">{t('disclaimer')}</p>
         </div>
       </div>
     </footer>
