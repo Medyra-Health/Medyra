@@ -604,8 +604,8 @@ export default function LandingPage() {
           <div className="absolute inset-0" style={{backgroundImage:'radial-gradient(circle at 20% 50%, rgba(16,185,129,0.06) 0%, transparent 50%)'}} />
         </div>
 
-        <div className="container mx-auto px-4 max-w-6xl relative z-10 py-20 md:py-0">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="container mx-auto px-4 max-w-6xl relative z-10 py-12 md:py-16 lg:py-0">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
             {/* Left, text */}
             <div>
@@ -654,7 +654,7 @@ export default function LandingPage() {
             </div>
 
             {/* Right, floating report card */}
-            <div className="hidden lg:block">
+            <div className="block max-w-sm mx-auto w-full lg:max-w-none">
               <div className="relative">
                 {/* Glow */}
                 <div className="absolute -inset-4 bg-emerald-500/10 rounded-3xl blur-xl" />
