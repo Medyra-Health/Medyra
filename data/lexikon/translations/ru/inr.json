@@ -1,6 +1,6 @@
 {
   "shortAnswer": "MNO (mezhdunarodnoe normalizovannoe otnoshenie) otsenivaet svertyvaemost krovi. Norma: 0.8-1.2. Pri prieme antikoagulyantov tselevoe znachenie vyshe.",
-  "metaDescription": "MNO povysheno ili ponizheno? Norma svertyvayemosti krovi i antikoagulyantov — obyasnenie.",
+  "metaDescription": "MNO povysheno ili ponizheno? Norma svertyvayemosti krovi i antikoagulyantov: obyasnenie.",
   "causesElevated": [
     "Antikogulyvantnaya terapiya (varfarin)",
     "Defitsit vitamina K",
@@ -23,5 +23,5 @@
     "high": "Risk krovotecheniya"
   },
   "categoryLabel": "Koagulyatsiya",
-  "pageTitle": "MNO (INR) — Svertyvayemost krovi: norma | Medyra"
+  "pageTitle": "MNO (INR): Svertyvayemost krovi: norma | Medyra"
 }

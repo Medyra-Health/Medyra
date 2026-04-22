@@ -1,6 +1,6 @@
 {
   "shortAnswer": "O INR mede o tempo de coagulação do sangue e é principalmente usado para monitorar anticoagulantes (p.ex. varfarina). Valores acima de 1,2 podem indicar tempo de coagulação prolongado, aumentando o risco de sangramento. Discuta qualquer mudança com o seu médico.",
-  "metaDescription": "INR elevado? Valores normais, significado na terapia com varfarina e distúrbios de coagulação — explicado de forma simples.",
+  "metaDescription": "INR elevado? Valores normais, significado na terapia com varfarina e distúrbios de coagulação: explicado de forma simples.",
   "causesElevated": ["Varfarina / terapia anticoagulante", "Doença hepática", "Deficiência de vitamina K", "Distúrbios de coagulação"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Ligeiramente elevado", "high": "Elevado / terapêutico (anticoagulação)" },
   "categoryLabel": "Coagulação",
-  "pageTitle": "Valor INR — Razão Normalizada Internacional explicada | Medyra"
+  "pageTitle": "Valor INR: Razão Normalizada Internacional explicada | Medyra"
 }

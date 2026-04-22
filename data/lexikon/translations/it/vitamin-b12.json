@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La vitamina B12 (cobalamina) è essenziale per la formazione del sangue, il sistema nervoso e il metabolismo cellulare. La carenza si sviluppa lentamente e può causare stanchezza, formicolio e problemi di memoria. I vegani e gli anziani sono a maggior rischio. Discutete qualsiasi sospetto con il vostro medico.",
-  "metaDescription": "Vitamina B12 troppo bassa? Valori normali, sintomi di carenza e trattamento per vegani e anziani — spiegato in modo semplice.",
+  "metaDescription": "Vitamina B12 troppo bassa? Valori normali, sintomi di carenza e trattamento per vegani e anziani: spiegato in modo semplice.",
   "causesElevated": ["Malattia epatica", "Alcuni disturbi del sangue", "Sovradosaggio di integratori"],
   "causesLow": ["Dieta vegana/vegetariana", "Gastrite atrofica", "Scarso assorbimento intestinale", "Uso prolungato di metformina o inibitori della pompa protonica"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Carente", "normal": "Sufficiente", "elevated": "Elevato", "high": "Elevato" },
   "categoryLabel": "Vitamine",
-  "pageTitle": "Valore vitamina B12 — Cobalamina spiegata | Medyra"
+  "pageTitle": "Valore vitamina B12: Cobalamina spiegata | Medyra"
 }

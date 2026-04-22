@@ -18,7 +18,7 @@
     "subtitle": "Eindelijk in begrijpelijke taal",
     "description": "Stop met googelen op medische termen. Upload uw uitslagen en ontvang binnen 60 seconden een duidelijke, privéverklaring van onze AI.",
     "cta": "Analyseer mijn eerste rapport gratis",
-    "disclaimer": "Alleen educatieve informatie — geen vervanging voor medisch advies.",
+    "disclaimer": "Alleen educatieve informatie: geen vervanging voor medisch advies.",
     "secondaryCta": "Bekijk prijzen"
   },
   "features": {
@@ -69,7 +69,7 @@
   },
   "pricing": {
     "title": "Kies uw abonnement",
-    "subtitle": "Lanceringaanbieding actief — 50% korting op alle betaalde plannen",
+    "subtitle": "Lanceringaanbieding actief: 50% korting op alle betaalde plannen",
     "mostPopular": "Meest populair",
     "tiers": {
       "free": {
@@ -153,9 +153,9 @@
     "comingSoon": "Binnenkort",
     "goToDashboard": "Naar dashboard",
     "faqTitle": "Veelgestelde vragen",
-    "launchOfferBanner": "🔥 Lanceringaanbieding — 50% korting op alle betaalde plannen",
+    "launchOfferBanner": "🔥 Lanceringaanbieding: 50% korting op alle betaalde plannen",
     "limitedOffer": "Beperkte lanceringaanbieding",
-    "fiftyOff": "50% korting — zolang het duurt",
+    "fiftyOff": "50% korting: zolang het duurt",
     "applyCode": "Voer de code in bij het afrekenen. Geldig voor alle betaalde plannen.",
     "copied": "Gekopieerd!",
     "copyCode": "Code kopiëren",
@@ -259,7 +259,7 @@
     "allValuesNormal": "Alle waarden normaal",
     "keyTakeaways": "Kernpunten",
     "valuesNeedingAttention": "Waarden die uw aandacht vereisen",
-    "greatResults": "Geweldige resultaten — bespreek met uw arts",
+    "greatResults": "Geweldige resultaten: bespreek met uw arts",
     "allReports": "Alle rapporten",
     "saveAsPdf": "Opslaan als PDF",
     "chatGreeting": "Hallo! Ik heb uw rapport gelezen. Vraag me van alles:",
@@ -350,7 +350,7 @@
     "howItWorks": {
       "badge": "Eenvoudig proces",
       "step1Title": "Upload uw rapport",
-      "step1Desc": "Sleep een PDF, JPG, PNG of TXT. Onze AI leest de tekst — ook van gescande foto's.",
+      "step1Desc": "Sleep een PDF, JPG, PNG of TXT. Onze AI leest de tekst: ook van gescande foto's.",
       "step1Detail": "Direct versleuteld",
       "step2Title": "AI analyseert in ~30s",
       "step2Desc": "Claude AI identificeert elke waarde, markeert abnormale resultaten en schrijft een begrijpelijke uitleg.",
@@ -358,26 +358,26 @@
       "step3Title": "Ontvang uw antwoorden",
       "step3Desc": "Lees uw resultaten, stel vragen aan de AI en exporteer een PDF voor uw volgende afspraak.",
       "step3Detail": "Deel met uw arts",
-      "cta": "Gratis starten — geen creditcard"
+      "cta": "Gratis starten: geen creditcard"
     },
     "doctorVisit": {
       "badge": "Nieuwe functie",
       "title1": "Naar de dokter?",
       "title2": "Kom voorbereid.",
-      "description": "Beschrijf hoe u zich voelt — in elke taal. Medyra maakt er een gestructureerde Duitse samenvatting van die uw arts in seconden kan lezen.",
+      "description": "Beschrijf hoe u zich voelt: in elke taal. Medyra maakt er een gestructureerde Duitse samenvatting van die uw arts in seconden kan lezen.",
       "step1Title": "Beschrijf in elke taal",
-      "step1Desc": "Schrijf vrij in Nederlands, Arabisch, Hindi, Turks — wat voor u het meest natuurlijk aanvoelt.",
+      "step1Desc": "Schrijf vrij in Nederlands, Arabisch, Hindi, Turks: wat voor u het meest natuurlijk aanvoelt.",
       "step2Title": "AI structureert direct",
       "step2Desc": "Claude maakt een formele klinische samenvatting: hoofdklachten, tijdlijn, voorgeschiedenis en vragen.",
       "step3Title": "Afdrukken en meenemen",
-      "step3Desc": "Eén klik drukt een overzichtelijk A4-vel af — overhandig dit aan uw arts bij het begin van het bezoek.",
+      "step3Desc": "Eén klik drukt een overzichtelijk A4-vel af: overhandig dit aan uw arts bij het begin van het bezoek.",
       "cta": "Afspraak voorbereiden",
       "freePlan": "Gratis plan: 1 samenvatting per maand"
     },
     "languages": {
       "badge": "Wereldwijd bereik",
       "title": "Beschikbaar in 18 talen",
-      "subtitle": "Van Duitsland naar de wereld — begrijp uw gezondheid in uw eigen taal."
+      "subtitle": "Van Duitsland naar de wereld: begrijp uw gezondheid in uw eigen taal."
     },
     "newToGermany": {
       "badge": "Nieuw in Duitsland",
@@ -394,7 +394,7 @@
     },
     "security": {
       "badge": "Bankwaardige versleuteling",
-      "title": "Uw gegevens zijn versleuteld — ook voor ons",
+      "title": "Uw gegevens zijn versleuteld: ook voor ons",
       "subtitle": "Elk rapport, elke waarde, elke AI-uitleg wordt versleuteld met AES-256-GCM voordat het onze database raakt.",
       "yourReport": "Uw rapport",
       "ourDatabase": "Onze database",
@@ -403,7 +403,7 @@
       "feat2Title": "AVG Art. 32",
       "feat2Desc": "Versleuteling vereist voor persoonlijke gezondheidsgegevens",
       "feat3Title": "Unieke IV per veld",
-      "feat3Desc": "Geen twee versleutelde teksten zijn hetzelfde — zelfs niet voor identieke waarden",
+      "feat3Desc": "Geen twee versleutelde teksten zijn hetzelfde: zelfs niet voor identieke waarden",
       "feat4Title": "Geen leesbare tekst opgeslagen",
       "feat4Desc": "Een inbreuk op onze DB onthult niets leesbaars",
       "deepDive": "Hoe werkt het technisch? Lees de diepgaande analyse"
@@ -419,7 +419,7 @@
     }
   },
   "siteFooter": {
-    "tagline": "Begrijp uw bloedwaarden — in uw taal, in 60 seconden.",
+    "tagline": "Begrijp uw bloedwaarden: in uw taal, in 60 seconden.",
     "product": "Product",
     "upload": "Rapport uploaden",
     "prep": "Doktersbezoek voorbereiden",
@@ -514,7 +514,7 @@
       "cap3": "PDF-exports",
       "cap3p": "50 / maand",
       "cap3f": "100 / maand",
-      "footnote": "Wie deze limieten echt bereikt, hoort direct van ons — geen automatische upgrade."
+      "footnote": "Wie deze limieten echt bereikt, hoort direct van ons: geen automatische upgrade."
     },
     "compare": {
       "title": "Plannen vergelijken",
@@ -553,7 +553,7 @@
     "faq": {
       "title": "Veelgestelde vragen",
       "q1": "Kan ik op elk moment annuleren?",
-      "a1": "Ja — annuleer via uw dashboard. Toegang loopt door tot einde factureringsperiode.",
+      "a1": "Ja: annuleer via uw dashboard. Toegang loopt door tot einde factureringsperiode.",
       "q2": "Zijn mijn gezondheidsgegevens veilig?",
       "a2": "Alle gegevens worden versleuteld met AES-256-GCM. AVG-conform, documenten na 30 dagen verwijderd.",
       "q3": "Wat betekent \"Onbeperkt*\"?",

@@ -41,7 +41,7 @@ async function getEffectiveTier(userId) {
   return user?.subscription?.tier || 'free'
 }
 
-// GET /api/profiles — fetch all profiles for the user
+// GET /api/profiles, fetch all profiles for the user
 export async function GET() {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -49,7 +49,7 @@ export async function GET() {
   const db = await getDb()
   const user = await db.collection('users').findOne({ clerkId: userId })
   const tier = await getEffectiveTier(userId)
-  // Use 'in' check — null means unlimited; ?? 0 would wrongly convert null→0
+  // Use 'in' check, null means unlimited; ?? 0 would wrongly convert null→0
   const limit = tier in PROFILE_LIMITS ? PROFILE_LIMITS[tier] : 0
 
   return NextResponse.json({
@@ -61,7 +61,7 @@ export async function GET() {
   })
 }
 
-// POST /api/profiles — create a new profile
+// POST /api/profiles, create a new profile
 export async function POST(request) {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -105,7 +105,7 @@ export async function POST(request) {
   return NextResponse.json({ success: true, profile })
 }
 
-// PUT /api/profiles — update a profile or add biomarker entry
+// PUT /api/profiles, update a profile or add biomarker entry
 export async function PUT(request) {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -139,7 +139,7 @@ export async function PUT(request) {
   return NextResponse.json({ success: true })
 }
 
-// DELETE /api/profiles?id=xxx — remove a profile
+// DELETE /api/profiles?id=xxx, remove a profile
 export async function DELETE(request) {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })

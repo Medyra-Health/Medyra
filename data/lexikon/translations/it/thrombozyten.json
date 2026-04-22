@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Le piastrine (PLT) sono cellule del sangue responsabili della coagulazione. Un basso conteggio può aumentare il rischio di sanguinamento, mentre un conteggio alto può indicare infiammazione o altre condizioni. Discutete i risultati anomali con il vostro medico.",
-  "metaDescription": "Piastrine (PLT) alte o basse? Valori normali, cause e cosa significano conteggi anomali — spiegato in modo semplice.",
+  "metaDescription": "Piastrine (PLT) alte o basse? Valori normali, cause e cosa significano conteggi anomali: spiegato in modo semplice.",
   "causesElevated": ["Reazioni infiammatorie", "Carenza di ferro", "Dopo un intervento chirurgico", "Disturbi mieloproliferativi"],
   "causesLow": ["Infezioni virali", "Alcuni farmaci", "Malattie autoimmuni", "Malattia epatica"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Leggermente elevato", "high": "Molto elevato" },
   "categoryLabel": "Emocromo",
-  "pageTitle": "Valore PLT — Piastrine spiegate | Medyra"
+  "pageTitle": "Valore PLT: Piastrine spiegate | Medyra"
 }

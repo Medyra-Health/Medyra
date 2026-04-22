@@ -1,6 +1,6 @@
 {
   "shortAnswer": "El nitrógeno ureico en sangre (BUN) se produce cuando se metabolizan las proteínas y es excretado por los riñones. Los niveles elevados pueden indicar función renal reducida o una dieta rica en proteínas. Consulte con su médico ante hallazgos anormales.",
-  "metaDescription": "BUN / nitrógeno ureico en sangre elevado? Valores normales, causas y qué significa para la salud renal — explicado de forma sencilla.",
+  "metaDescription": "BUN / nitrógeno ureico en sangre elevado? Valores normales, causas y qué significa para la salud renal: explicado de forma sencilla.",
   "causesElevated": ["Enfermedad renal", "Deshidratación", "Dieta alta en proteínas", "Hemorragia gastrointestinal"],
   "causesLow": ["Desnutrición", "Enfermedad hepática", "Sobrehidratación"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado", "high": "Muy elevado" },
   "categoryLabel": "Valores renales",
-  "pageTitle": "Valor BUN — Nitrógeno Ureico en Sangre explicado | Medyra"
+  "pageTitle": "Valor BUN: Nitrógeno Ureico en Sangre explicado | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Hematokrit (Hkt), kanınızın yüzde kaçının kırmızı kan hücrelerinden oluştuğunu gösterir. Düşük değer anemi, yüksek değer dehidrasyon veya belirli hastalıklara işaret edebilir. Anormal değerleri doktorunuzla görüşün.",
-  "metaDescription": "Hematokrit (Hkt) yüksek veya düşük mü? Normal değerler, nedenler ve ne zaman doktora gidilmeli — açık şekilde anlatıldı.",
+  "metaDescription": "Hematokrit (Hkt) yüksek veya düşük mü? Normal değerler, nedenler ve ne zaman doktora gidilmeli: açık şekilde anlatıldı.",
   "causesElevated": ["Dehidrasyon", "Sigara içme", "Polisitemi vera", "Yüksek irtifa"],
   "causesLow": ["Anemi", "Kan kaybı", "Demir eksikliği", "Gebelik"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "Kan Sayımı",
-  "pageTitle": "Hkt değeri — Hematokrit açıklaması | Medyra"
+  "pageTitle": "Hkt değeri: Hematokrit açıklaması | Medyra"
 }

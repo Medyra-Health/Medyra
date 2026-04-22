@@ -1,6 +1,6 @@
 {
   "shortAnswer": "MCH misura la quantità media di emoglobina in un singolo globulo rosso. I valori bassi possono indicare carenza di ferro, mentre i valori alti possono suggerire carenza di vitamina B12. Discutete i risultati anomali con il vostro medico.",
-  "metaDescription": "MCH basso o alto? Valori normali, significato e cause di contenuto anomalo di emoglobina per cellula — spiegato in modo semplice.",
+  "metaDescription": "MCH basso o alto? Valori normali, significato e cause di contenuto anomalo di emoglobina per cellula: spiegato in modo semplice.",
   "causesElevated": ["Carenza di vitamina B12", "Carenza di folato", "Consumo di alcol"],
   "causesLow": ["Carenza di ferro", "Talassemia", "Malattia cronica"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
   "categoryLabel": "Emocromo",
-  "pageTitle": "Valore MCH — Emoglobina Corpuscolare Media spiegata | Medyra"
+  "pageTitle": "Valore MCH: Emoglobina Corpuscolare Media spiegata | Medyra"
 }

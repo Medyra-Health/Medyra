@@ -1,6 +1,6 @@
 {
   "shortAnswer": "LDL is the \"bad\" cholesterol that can build up in blood vessel walls. Elevated levels increase the risk of heart attack and stroke. Target values depend on your personal risk profile. Discuss your LDL level with your doctor.",
-  "metaDescription": "LDL elevated? Normal ranges, heart risk, and treatment options for high bad cholesterol — explained simply.",
+  "metaDescription": "LDL elevated? Normal ranges, heart risk, and treatment options for high bad cholesterol: explained simply.",
   "causesElevated": ["High-fat diet", "Genetic predisposition (familial hypercholesterolemia)", "Obesity", "Hypothyroidism", "Diabetes"],
   "causesLow": ["Malnutrition", "Liver disease", "Statins"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal (low risk)", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Metabolism",
-  "pageTitle": "LDL value — Bad Cholesterol explained | Medyra"
+  "pageTitle": "LDL value: Bad Cholesterol explained | Medyra"
 }

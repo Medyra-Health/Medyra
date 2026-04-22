@@ -1,6 +1,6 @@
 {
   "shortAnswer": "VHS (velocidade de hemossedimentação) mede quão rapidamente os glóbulos vermelhos se depositam em uma amostra de sangue. Um valor elevado pode indicar inflamação, infecção ou outras condições. A VHS é um marcador inespecífico e geralmente é avaliada junto com outros exames.",
-  "metaDescription": "VHS elevada? Valores normais, causas e significado da velocidade de hemossedimentação — explicado de forma simples.",
+  "metaDescription": "VHS elevada? Valores normais, causas e significado da velocidade de hemossedimentação: explicado de forma simples.",
   "causesElevated": ["Infecções", "Doenças inflamatórias", "Doenças autoimunes", "Anemia", "Câncer"],
   "causesLow": ["Policitemia", "Insuficiência cardíaca"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado", "high": "Muito elevado" },
   "categoryLabel": "Marcadores inflamatórios",
-  "pageTitle": "Valor VHS — Velocidade de Hemossedimentação explicada | Medyra"
+  "pageTitle": "Valor VHS: Velocidade de Hemossedimentação explicada | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "A glicemia em jejum mede a concentração de açúcar no sangue após pelo menos 8 horas sem comer. Valores acima de 126 mg/dl podem indicar diabetes; valores entre 100 e 125 mg/dl sugerem pré-diabetes. Discuta valores elevados com o seu médico.",
-  "metaDescription": "Glicemia em jejum elevada? Valores normais, risco de diabetes e o que significa o valor — explicado de forma simples.",
+  "metaDescription": "Glicemia em jejum elevada? Valores normais, risco de diabetes e o que significa o valor: explicado de forma simples.",
   "causesElevated": ["Diabetes mellitus", "Resistência à insulina", "Resposta ao estresse", "Certos medicamentos (p.ex. corticosteroides)"],
   "causesLow": ["Insulina em excesso", "Certos medicamentos", "Jejum após exercício", "Condições raras"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal (em jejum)", "elevated": "Faixa pré-diabética", "high": "Faixa diabética" },
   "categoryLabel": "Metabolismo",
-  "pageTitle": "Valor glicemia — Glicemia em jejum explicada | Medyra"
+  "pageTitle": "Valor glicemia: Glicemia em jejum explicada | Medyra"
 }

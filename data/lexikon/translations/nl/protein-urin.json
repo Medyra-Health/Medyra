@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Eiwit in de urine (proteïnurie) kan wijzen op nierschade, omdat gezonde nieren normaal eiwit vasthouden. Kleine hoeveelheden kunnen na inspanning of koorts verschijnen. Aanhoudende waarden moeten worden besproken met uw arts, omdat ze kunnen wijzen op nierziekte.",
-  "metaDescription": "Eiwit in urine (proteïnurie)? Oorzaken, risico op nierziekte en wat de bevinding betekent — eenvoudig uitgelegd.",
+  "metaDescription": "Eiwit in urine (proteïnurie)? Oorzaken, risico op nierziekte en wat de bevinding betekent: eenvoudig uitgelegd.",
   "causesElevated": ["Chronische nierziekte", "Diabetes (diabetische nefropathie)", "Hoge bloeddruk", "Intensieve lichaamsbeweging", "Nierontsteking"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "Urinewaarden",
-  "pageTitle": "Eiwit in urine — Proteïnurie uitgelegd | Medyra"
+  "pageTitle": "Eiwit in urine: Proteïnurie uitgelegd | Medyra"
 }

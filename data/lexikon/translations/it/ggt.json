@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GGT (gamma-glutamiltransferasi) è un enzima epatico particolarmente sensibile all'alcol e ai problemi delle vie biliari. I livelli elevati possono indicare steatosi epatica, consumo di alcol o malattia della colecisti. I livelli persistentemente alti dovrebbero essere discussi con il vostro medico.",
-  "metaDescription": "GGT elevato? Valori normali, cause e cosa significa un alto livello di gamma-GT — spiegato in modo semplice.",
+  "metaDescription": "GGT elevato? Valori normali, cause e cosa significa un alto livello di gamma-GT: spiegato in modo semplice.",
   "causesElevated": ["Consumo di alcol", "Steatosi epatica", "Malattia della colecisti", "Alcuni farmaci", "Obesità"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Basso", "normal": "Normale", "elevated": "Elevato", "high": "Molto elevato" },
   "categoryLabel": "Valori epatici",
-  "pageTitle": "Valore GGT — Gamma-Glutamiltransferasi spiegata | Medyra"
+  "pageTitle": "Valore GGT: Gamma-Glutamiltransferasi spiegata | Medyra"
 }

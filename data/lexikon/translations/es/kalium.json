@@ -1,6 +1,6 @@
 {
   "shortAnswer": "El potasio (K) es un electrolito que regula el ritmo cardíaco, los músculos y los nervios. Los niveles bajos pueden causar arritmias cardíacas y debilidad muscular; los niveles altos también son peligrosos. Las desviaciones significativas deben consultarse con su médico de inmediato.",
-  "metaDescription": "Potasio elevado o bajo? Valores normales, riesgo cardíaco y causas del desequilibrio de potasio — explicado de forma sencilla.",
+  "metaDescription": "Potasio elevado o bajo? Valores normales, riesgo cardíaco y causas del desequilibrio de potasio: explicado de forma sencilla.",
   "causesElevated": ["Enfermedad renal", "IECA o diuréticos ahorradores de potasio", "Ingesta excesiva de potasio", "Acidosis"],
   "causesLow": ["Vómitos / diarrea", "Diuréticos", "Deficiencia de magnesio", "Ingesta inadecuada"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado (hiperpotasemia)", "high": "Muy elevado (peligroso)" },
   "categoryLabel": "Electrolitos",
-  "pageTitle": "Valor K — Potasio explicado | Medyra"
+  "pageTitle": "Valor K: Potasio explicado | Medyra"
 }

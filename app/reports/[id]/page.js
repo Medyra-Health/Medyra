@@ -235,7 +235,7 @@ export default function ReportDetailPage({ params }) {
     { name: 'Critical', value: counts.critical, color: '#EF4444' },
   ].filter(d => d.value > 0)
 
-  // Key action items — abnormal tests sorted by severity
+  // Key action items, abnormal tests sorted by severity
   const severityOrder = { critical: 0, high: 1, low: 2, normal: 3 }
   const actionItems = tests
     .filter(t => t.flag !== 'normal')
@@ -336,7 +336,7 @@ export default function ReportDetailPage({ params }) {
       doc.setGState && doc.setGState(new doc.GState({ opacity: 1 }))
       doc.setFontSize(7)
       doc.setTextColor(209, 250, 229)
-      doc.text('Educational information only — not medical advice. Always consult a qualified healthcare professional.', W / 2, 36.5, { align: 'center' })
+      doc.text('Educational information only, not medical advice. Always consult a qualified healthcare professional.', W / 2, 36.5, { align: 'center' })
 
       y = 48
 

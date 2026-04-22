@@ -1,6 +1,6 @@
 {
   "shortAnswer": "MCHC measures the concentration of hemoglobin in red blood cells. Low values may indicate iron deficiency anemia or certain other types of anemia. Highly elevated values are rare. Discuss any abnormal results with your doctor.",
-  "metaDescription": "MCHC low or high? Normal ranges, meaning, and causes of abnormal hemoglobin concentration — explained simply.",
+  "metaDescription": "MCHC low or high? Normal ranges, meaning, and causes of abnormal hemoglobin concentration: explained simply.",
   "causesElevated": ["Hereditary spherocytosis", "Severe dehydration"],
   "causesLow": ["Iron deficiency anemia", "Thalassemia", "Blood loss anemia"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Mildly elevated", "high": "Elevated" },
   "categoryLabel": "Blood Count",
-  "pageTitle": "MCHC value — Mean Corpuscular Hemoglobin Concentration explained | Medyra"
+  "pageTitle": "MCHC value: Mean Corpuscular Hemoglobin Concentration explained | Medyra"
 }

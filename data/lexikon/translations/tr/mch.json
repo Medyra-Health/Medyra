@@ -1,6 +1,6 @@
 {
   "shortAnswer": "MCH, her kırmızı kan hücresinde ortalama ne kadar hemoglobin bulunduğunu gösterir. Düşük değerler demir eksikliğine, yüksek değerler ise B12 vitamini eksikliğine işaret edebilir. Anormal sonuçları doktorunuzla görüşün.",
-  "metaDescription": "MCH düşük veya yüksek mi? Normal değerler, anlamı ve hücre başına anormal hemoglobin içeriğinin nedenleri — basitçe açıklandı.",
+  "metaDescription": "MCH düşük veya yüksek mi? Normal değerler, anlamı ve hücre başına anormal hemoglobin içeriğinin nedenleri: basitçe açıklandı.",
   "causesElevated": ["B12 vitamini eksikliği", "Folat eksikliği", "Alkol kullanımı"],
   "causesLow": ["Demir eksikliği", "Talasemi", "Kronik hastalık"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "Kan Sayımı",
-  "pageTitle": "MCH değeri — Ortalama Korpüsküler Hemoglobin açıklaması | Medyra"
+  "pageTitle": "MCH değeri: Ortalama Korpüsküler Hemoglobin açıklaması | Medyra"
 }

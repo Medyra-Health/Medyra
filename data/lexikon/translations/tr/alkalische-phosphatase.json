@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Alkalen fosfataz (ALP), karaciğer, kemik ve safra kanallarında bulunan bir enzimdir. Yüksek değerler safra kesesi hastalığı, karaciğer sorunları veya kemik hastalıklarını gösterebilir. Sürekli yüksek değerleri doktorunuzla görüşün.",
-  "metaDescription": "Alkalen fosfataz (ALP) yüksek mi? Normal değerler, nedenler ve karaciğer ile kemik sağlığı için önemi — basitçe açıklandı.",
+  "metaDescription": "Alkalen fosfataz (ALP) yüksek mi? Normal değerler, nedenler ve karaciğer ile kemik sağlığı için önemi: basitçe açıklandı.",
   "causesElevated": ["Safra kesesi hastalığı", "Karaciğer hastalığı", "Kemik hastalığı (örn. Paget hastalığı)", "Gebelik", "Çocuklarda normal büyüme"],
   "causesLow": ["Hipotiroidizm", "B12 vitamini eksikliği", "Çinko eksikliği"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "Karaciğer Değerleri",
-  "pageTitle": "ALP değeri — Alkalen Fosfataz açıklaması | Medyra"
+  "pageTitle": "ALP değeri: Alkalen Fosfataz açıklaması | Medyra"
 }

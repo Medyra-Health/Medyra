@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Serumijzer meet de hoeveelheid ijzer in het bloed op het moment van de bloedafname. Lage waarden kunnen wijzen op ijzertekort; hoge waarden kunnen duiden op ijzerstapeling. Omdat de waarden sterk fluctueren, wordt serumijzer altijd beoordeeld samen met ferritine en transferrine.",
-  "metaDescription": "Serumijzer verhoogd of laag? Normaalwaarden, diagnose van ijzertekort en betekenis — eenvoudig uitgelegd.",
+  "metaDescription": "Serumijzer verhoogd of laag? Normaalwaarden, diagnose van ijzertekort en betekenis: eenvoudig uitgelegd.",
   "causesElevated": ["Hemochromatose", "Hemolyse", "Leverziekte", "Overdosering ijzersupplementen"],
   "causesLow": ["IJzertekort", "Chronische ontsteking", "Zware menstruatie", "Onvoldoende ijzerinname"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "IJzerwaarden",
-  "pageTitle": "Waarde Fe — Serumijzer uitgelegd | Medyra"
+  "pageTitle": "Waarde Fe: Serumijzer uitgelegd | Medyra"
 }

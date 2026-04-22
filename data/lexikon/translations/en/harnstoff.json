@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Blood urea nitrogen (BUN) is produced when protein is broken down and excreted by the kidneys. Elevated levels may indicate reduced kidney function or a high-protein diet. Discuss abnormal findings with your doctor.",
-  "metaDescription": "BUN / blood urea nitrogen elevated? Normal ranges, causes, and what it means for kidney health — explained simply.",
+  "metaDescription": "BUN / blood urea nitrogen elevated? Normal ranges, causes, and what it means for kidney health: explained simply.",
   "causesElevated": ["Kidney disease", "Dehydration", "High-protein diet", "Gastrointestinal bleeding"],
   "causesLow": ["Malnutrition", "Liver disease", "Overhydration"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Low", "normal": "Normal", "elevated": "Elevated", "high": "Highly elevated" },
   "categoryLabel": "Kidney Values",
-  "pageTitle": "BUN value — Blood Urea Nitrogen explained | Medyra"
+  "pageTitle": "BUN value: Blood Urea Nitrogen explained | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La vitamine B12 (cobalamine) est essentielle pour la formation du sang, le système nerveux et le métabolisme cellulaire. La carence se développe lentement et peut causer de la fatigue, des picotements et des troubles de la mémoire. Les végétaliens et les personnes âgées sont plus à risque. Discutez de tout soupçon avec votre médecin.",
-  "metaDescription": "Vitamine B12 trop basse ? Valeurs normales, symptômes de carence et traitement pour végétaliens et personnes âgées — expliqués simplement.",
+  "metaDescription": "Vitamine B12 trop basse ? Valeurs normales, symptômes de carence et traitement pour végétaliens et personnes âgées: expliqués simplement.",
   "causesElevated": ["Maladie hépatique", "Certaines maladies sanguines", "Surdosage de suppléments"],
   "causesLow": ["Alimentation végétalienne/végétarienne", "Gastrite atrophique", "Mauvaise absorption intestinale", "Utilisation à long terme de metformine ou d'inhibiteurs de la pompe à protons"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Carence", "normal": "Suffisant", "elevated": "Élevé", "high": "Élevé" },
   "categoryLabel": "Vitamines",
-  "pageTitle": "Valeur vitamine B12 — Cobalamine expliquée | Medyra"
+  "pageTitle": "Valeur vitamine B12: Cobalamine expliquée | Medyra"
 }

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Hemoglobin (Hb), kırmızı kan hücrelerindeki oksijeni akciğerlerden organlara taşıyan proteindir. Normal değerler kadınlarda 12–16 g/dl, erkeklerde 13,5–17,5 g/dl'dir. Düşük değer anemi belirtisi olabilir ve yorgunluğa neden olabilir. Anormal sonuçları doktorunuzla görüşün.",
-  "metaDescription": "Hemoglobin (Hb) düşük mü? Erkek ve kadınlar için normal değerler, anemi nedenleri ve ne zaman doktora gidilmeli — basitçe açıklandı.",
+  "metaDescription": "Hemoglobin (Hb) düşük mü? Erkek ve kadınlar için normal değerler, anemi nedenleri ve ne zaman doktora gidilmeli: basitçe açıklandı.",
   "causesElevated": ["Dehidrasyon", "Sigara içme", "Yüksek irtifa", "Polisitemi vera"],
   "causesLow": ["Demir eksikliği", "B12 vitamini eksikliği", "Kronik hastalık", "Kan kaybı", "Folat eksikliği"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek", "high": "Çok yüksek" },
   "categoryLabel": "Kan Sayımı",
-  "pageTitle": "Hb değeri — Hemoglobin açıklaması | Medyra"
+  "pageTitle": "Hb değeri: Hemoglobin açıklaması | Medyra"
 }

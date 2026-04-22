@@ -4,7 +4,7 @@ import MedyraLogo from '@/components/MedyraLogo'
 export const metadata = {
   title: 'How to Read Your Lab Results in Germany as an Expat | Medyra',
   description:
-    'A plain language guide for expats in Germany on how to understand their Laborbefund — from common abbreviations to knowing when a value outside the reference range actually matters.',
+    'A plain language guide for expats in Germany on how to understand their Laborbefund, from common abbreviations to knowing when a value outside the reference range actually matters.',
   alternates: { canonical: 'https://medyra.de/blog/how-to-read-lab-results-germany-expat' },
   openGraph: {
     title: 'How to Read Your Lab Results in Germany as an Expat',
@@ -50,7 +50,7 @@ export default function BlogPost() {
           <p className="text-lg text-gray-600 leading-relaxed">
             You have just received your <em>Laborbefund</em> from your German doctor. It is a page of numbers,
             abbreviations you have never seen, arrows pointing up or down, and reference ranges in units you
-            cannot immediately place. If German is not your first language, this can feel overwhelming — even
+            cannot immediately place. If German is not your first language, this can feel overwhelming, even
             if you are medically literate in your home country.
           </p>
 
@@ -78,13 +78,13 @@ export default function BlogPost() {
           <p>Most German lab reports contain the following sections:</p>
 
           <ul className="list-disc pl-5 space-y-2 text-sm">
-            <li><strong>Patient information</strong> — your name, date of birth, and the ordering doctor</li>
-            <li><strong>Auftragsdatum / Eingangsdatum</strong> — the date the sample was taken and received</li>
-            <li><strong>Analyseparameter</strong> — the list of tests performed</li>
-            <li><strong>Ergebnis</strong> — your result for each test</li>
-            <li><strong>Einheit</strong> — the unit (e.g. mmol/L, µg/L, %)</li>
-            <li><strong>Referenzbereich</strong> — the reference range (what is considered normal)</li>
-            <li><strong>Befundkommentar</strong> — optional doctor commentary on notable findings</li>
+            <li><strong>Patient information</strong>, your name, date of birth, and the ordering doctor</li>
+            <li><strong>Auftragsdatum / Eingangsdatum</strong>, the date the sample was taken and received</li>
+            <li><strong>Analyseparameter</strong>, the list of tests performed</li>
+            <li><strong>Ergebnis</strong>, your result for each test</li>
+            <li><strong>Einheit</strong>, the unit (e.g. mmol/L, µg/L, %)</li>
+            <li><strong>Referenzbereich</strong>, the reference range (what is considered normal)</li>
+            <li><strong>Befundkommentar</strong>, optional doctor commentary on notable findings</li>
           </ul>
 
           <p>
@@ -193,7 +193,7 @@ export default function BlogPost() {
           <ul className="list-disc pl-5 space-y-1.5 text-sm">
             <li>A Laborbefund lists your test results, units, and reference ranges</li>
             <li>Arrows (↑↓) or letters (H/L) flag values outside the reference range</li>
-            <li>Reference ranges on your report are specific to your age and sex — always compare against those, not generic online values</li>
+            <li>Reference ranges on your report are specific to your age and sex, always compare against those, not generic online values</li>
             <li>A single mildly out of range value in an otherwise healthy person is often not cause for alarm</li>
             <li>Use Medyra to get a plain language explanation of your report in your own language</li>
           </ul>
@@ -202,7 +202,7 @@ export default function BlogPost() {
         <div className="mt-12 p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
           <p className="text-sm font-semibold text-emerald-800 mb-1">Get your lab results explained instantly</p>
           <p className="text-xs text-emerald-700 leading-relaxed mb-3">
-            Upload your Laborbefund and Medyra will explain every value in plain language — in English, German,
+            Upload your Laborbefund and Medyra will explain every value in plain language, in English, German,
             or 14 other languages. GDPR compliant. Free to start.
           </p>
           <Link

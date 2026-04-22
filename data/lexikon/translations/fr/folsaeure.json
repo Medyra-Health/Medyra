@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Le folate (acide folique) est une vitamine B essentielle pour la division cellulaire et la formation du sang. Une carence peut entraîner une anémie et est particulièrement dangereuse pendant la grossesse. De nombreuses personnes n'obtiennent pas suffisamment de folate par l'alimentation seule. Discutez de toute carence avec votre médecin.",
-  "metaDescription": "Folate trop bas ? Valeurs normales, risques pendant la grossesse, causes de la carence en acide folique — expliqués simplement.",
+  "metaDescription": "Folate trop bas ? Valeurs normales, risques pendant la grossesse, causes de la carence en acide folique: expliqués simplement.",
   "causesElevated": ["Surdosage de suppléments d'acide folique"],
   "causesLow": ["Alimentation déséquilibrée", "Consommation d'alcool", "Malabsorption", "Certains médicaments (ex. méthotrexate)"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Carence", "normal": "Suffisant", "elevated": "Élevé", "high": "Élevé" },
   "categoryLabel": "Vitamines",
-  "pageTitle": "Valeur folate — Acide folique expliqué | Medyra"
+  "pageTitle": "Valeur folate: Acide folique expliqué | Medyra"
 }

@@ -56,9 +56,9 @@ function SuccessContent() {
             <div className="space-y-2.5">
               {[
                 { icon: FileText, text: 'Upload & analyse medical reports with AI' },
-                { icon: Shield,   text: 'AES-256 encrypted — GDPR compliant' },
+                { icon: Shield,   text: 'AES-256 encrypted, GDPR compliant' },
                 { icon: RefreshCw, text: 'Usage resets automatically every month' },
-                { icon: Mail,     text: 'Cancel anytime — no questions asked' },
+                { icon: Mail,     text: 'Cancel anytime, no questions asked' },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">

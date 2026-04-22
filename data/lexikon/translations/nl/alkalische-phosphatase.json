@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Alkalische fosfatase (ALP) is een enzym dat voorkomt in de lever, botten en galwegen. Verhoogde waarden kunnen wijzen op galwegziekte, leverproblemen of botaandoeningen. Bespreek aanhoudend verhoogde waarden met uw arts.",
-  "metaDescription": "Alkalische fosfatase (ALP) verhoogd? Normaalwaarden, oorzaken en betekenis voor lever- en botgezondheid — eenvoudig uitgelegd.",
+  "metaDescription": "Alkalische fosfatase (ALP) verhoogd? Normaalwaarden, oorzaken en betekenis voor lever- en botgezondheid: eenvoudig uitgelegd.",
   "causesElevated": ["Galwegziekte", "Leverziekte", "Botziekte (bijv. ziekte van Paget)", "Zwangerschap", "Normale groei bij kinderen"],
   "causesLow": ["Hypothyreoïdie", "Vitamine B12-tekort", "Zinktekort"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd", "high": "Sterk verhoogd" },
   "categoryLabel": "Leverwaarden",
-  "pageTitle": "Waarde AP — Alkalische Fosfatase uitgelegd | Medyra"
+  "pageTitle": "Waarde AP: Alkalische Fosfatase uitgelegd | Medyra"
 }

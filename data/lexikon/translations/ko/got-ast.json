@@ -1,6 +1,6 @@
 {
   "shortAnswer": "GOT/AST는 간, 심근, 근육에 존재하는 효소입니다. 상승은 간 손상, 심근 손상, 근육 질환을 나타낼 수 있습니다. 다른 검사와 함께 종합적으로 판단해야 합니다.",
-  "metaDescription": "GOT/AST가 높나요? 정상 범위, 원인, 언제 의사를 만나야 하는지 — 쉽게 설명합니다.",
+  "metaDescription": "GOT/AST가 높나요? 정상 범위, 원인, 언제 의사를 만나야 하는지: 쉽게 설명합니다.",
   "causesElevated": ["간염", "지방간", "심근경색", "근육 손상", "격렬한 운동"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "경미한 상승", "high": "현저한 상승" },
   "categoryLabel": "간 기능 검사",
-  "pageTitle": "GOT/AST 수치 — AST(간 효소) 쉽게 알아보기 | Medyra"
+  "pageTitle": "GOT/AST 수치: AST(간 효소) 쉽게 알아보기 | Medyra"
 }

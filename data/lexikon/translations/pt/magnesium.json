@@ -1,6 +1,6 @@
 {
   "shortAnswer": "O magnésio (Mg) está envolvido em mais de 300 reações enzimáticas e é essencial para músculos, nervos e ritmo cardíaco. Níveis baixos podem causar cãibras musculares e fadiga. Níveis elevados são raros. Discuta sintomas persistentes com o seu médico.",
-  "metaDescription": "Magnésio baixo? Valores normais, causas de deficiência e sintomas — explicado de forma simples.",
+  "metaDescription": "Magnésio baixo? Valores normais, causas de deficiência e sintomas: explicado de forma simples.",
   "causesElevated": ["Insuficiência renal", "Overdose de suplementos de magnésio"],
   "causesLow": ["Ingestão inadequada", "Consumo de álcool", "Diarréia / vômitos", "Diuréticos", "Diabetes"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Elevado", "high": "Muito elevado" },
   "categoryLabel": "Eletrólitos",
-  "pageTitle": "Valor Mg — Magnésio explicado | Medyra"
+  "pageTitle": "Valor Mg: Magnésio explicado | Medyra"
 }

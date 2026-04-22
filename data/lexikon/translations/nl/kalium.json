@@ -1,6 +1,6 @@
 {
   "shortAnswer": "Kalium (K) is een elektrolyt dat het hartritme, spieren en zenuwen reguleert. Lage waarden kunnen hartritmestoornissen en spierzwakte veroorzaken; hoge waarden zijn ook gevaarlijk. Significante afwijkingen moeten snel met uw arts worden besproken.",
-  "metaDescription": "Kalium verhoogd of laag? Normaalwaarden, hartrisico en oorzaken van kaliumonevenwicht — eenvoudig uitgelegd.",
+  "metaDescription": "Kalium verhoogd of laag? Normaalwaarden, hartrisico en oorzaken van kaliumonevenwicht: eenvoudig uitgelegd.",
   "causesElevated": ["Nierziekte", "ACE-remmers of kaliumsparende diuretica", "Overmatige kaliuminname", "Acidose"],
   "causesLow": ["Braken / diarree", "Diuretica", "Magnesiumtekort", "Onvoldoende inname"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag", "normal": "Normaal", "elevated": "Verhoogd (hyperkaliëmie)", "high": "Sterk verhoogd (gevaarlijk)" },
   "categoryLabel": "Elektrolyten",
-  "pageTitle": "Waarde K — Kalium uitgelegd | Medyra"
+  "pageTitle": "Waarde K: Kalium uitgelegd | Medyra"
 }

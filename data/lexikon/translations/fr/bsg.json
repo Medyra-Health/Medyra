@@ -1,6 +1,6 @@
 {
   "shortAnswer": "La VS (vitesse de sédimentation) mesure la rapidité avec laquelle les globules rouges se déposent dans un échantillon de sang. Une valeur élevée peut indiquer une inflammation, une infection ou d'autres affections. La VS est un marqueur non spécifique et est généralement évaluée avec d'autres tests.",
-  "metaDescription": "VS élevée ? Valeurs normales, causes et signification de la vitesse de sédimentation — expliquées simplement.",
+  "metaDescription": "VS élevée ? Valeurs normales, causes et signification de la vitesse de sédimentation: expliquées simplement.",
   "causesElevated": ["Infections", "Maladies inflammatoires", "Maladies auto-immunes", "Anémie", "Cancer"],
   "causesLow": ["Polyglobulie", "Insuffisance cardiaque"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé", "high": "Très élevé" },
   "categoryLabel": "Marqueurs inflammatoires",
-  "pageTitle": "Valeur VS — Vitesse de sédimentation expliquée | Medyra"
+  "pageTitle": "Valeur VS: Vitesse de sédimentation expliquée | Medyra"
 }

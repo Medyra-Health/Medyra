@@ -1,6 +1,6 @@
 {
   "shortAnswer": "De Quick-waarde (protrombinetijd) meet het bloedstollingsvermogen via de extrinsieke stollingscascade. Lage waarden wijzen op verlengde stollingstijd en verhoogd bloedingsrisico. De waarde is nauw verbonden met de leverfunctie en vitamine K. Bespreek abnormale waarden met uw arts.",
-  "metaDescription": "Quick-waarde / protrombinetijd laag? Normaalwaarden, bloedingsrisico en oorzaken — eenvoudig uitgelegd.",
+  "metaDescription": "Quick-waarde / protrombinetijd laag? Normaalwaarden, bloedingsrisico en oorzaken: eenvoudig uitgelegd.",
   "causesElevated": [],
   "causesLow": ["Warfarine / antistollingstherapie", "Leverziekte", "Vitamine K-tekort", "Stollingsstoornissen"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Laag (bloedingsrisico)", "normal": "Normaal", "elevated": "Verhoogd (zelden klinisch relevant)", "high": "Verhoogd" },
   "categoryLabel": "Stolling",
-  "pageTitle": "Waarde Quick — Protrombinetijd uitgelegd | Medyra"
+  "pageTitle": "Waarde Quick: Protrombinetijd uitgelegd | Medyra"
 }

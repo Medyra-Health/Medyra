@@ -2,14 +2,14 @@ import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
 
 export const metadata = {
-  title: 'Medyra Lexikon: How to Look Up Any Lab Value in Plain German — Complete Guide',
+  title: 'Medyra Lexikon: How to Look Up Any Lab Value in Plain German, Complete Guide',
   description:
-    'A step-by-step guide to using the Medyra Medical Lexikon — 46 German lab value pages that explain what each value means, what causes abnormal results, and what to ask your doctor.',
+    'A step-by-step guide to using the Medyra Medical Lexikon, 46 German lab value pages that explain what each value means, what causes abnormal results, and what to ask your doctor.',
   alternates: { canonical: 'https://medyra.de/blog/medizinisches-lexikon-guide' },
   openGraph: {
     title: 'Medyra Lexikon: How to Look Up Any Lab Value in Plain German',
     description:
-      'CRP too high? HbA1c elevated? Learn how to use the Medyra Lexikon to understand any lab result in seconds — with doctor questions included.',
+      'CRP too high? HbA1c elevated? Learn how to use the Medyra Lexikon to understand any lab result in seconds, with doctor questions included.',
     url: 'https://medyra.de/blog/medizinisches-lexikon-guide',
   },
   keywords: [
@@ -24,7 +24,7 @@ export const metadata = {
   ],
 }
 
-// The 46 lexikon entries grouped by category — for the reference table
+// The 46 lexikon entries grouped by category, for the reference table
 const LEXIKON_TERMS = [
   { cat: 'Blutbild', color: 'red', terms: [
     { slug: 'leukozyten', label: 'Leukozyten' },
@@ -130,7 +130,7 @@ export default function BlogPost() {
             ))}
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            Medyra Lexikon: Every Lab Value Explained — How to Use It
+            Medyra Lexikon: Every Lab Value Explained, How to Use It
           </h1>
           <p className="text-gray-500 text-sm">16 April 2026 · 7 min read · By Medyra</p>
         </div>
@@ -140,13 +140,13 @@ export default function BlogPost() {
           {/* Intro */}
           <p className="text-lg text-gray-600 leading-relaxed">
             You receive a blood test result. Somewhere on the page it says <strong>CRP: 18 mg/l</strong> and there is
-            a small <strong>H</strong> next to it — meaning high. The normal range is printed in tiny text. You have no idea
+            a small <strong>H</strong> next to it, meaning high. The normal range is printed in tiny text. You have no idea
             what CRP is, what causes it to rise, or whether 18 is a little high or a lot high.
           </p>
 
           <p>
             The Medyra Lexikon was built for exactly this moment. It is a free German medical dictionary covering
-            46 of the most common laboratory values — searchable, plain-language, and structured to give you the
+            46 of the most common laboratory values, searchable, plain-language, and structured to give you the
             answer you actually need: <em>what does this mean for me, and what should I ask my doctor?</em>
           </p>
 
@@ -162,10 +162,10 @@ export default function BlogPost() {
           <div className="not-prose space-y-3 my-6">
             {[
               { step: '①', title: 'Plain-language summary', desc: 'A 2–3 sentence explanation in simple German: what the value measures, what it means if it is high or low, and when to follow up with a doctor.' },
-              { step: '②', title: 'Reference range table', desc: 'A colour-coded table showing the normal range, the "mildly elevated" range, and the "significantly elevated" range — with the values in the same units your lab report uses.' },
+              { step: '②', title: 'Reference range table', desc: 'A colour-coded table showing the normal range, the "mildly elevated" range, and the "significantly elevated" range, with the values in the same units your lab report uses.' },
               { step: '③', title: 'Possible causes', desc: 'Two lists: what can cause the value to be too high, and what can cause it to be too low. These are possibilities, not diagnoses.' },
               { step: '④', title: 'Questions for your doctor', desc: 'Ready-to-use questions you can bring to your next appointment. You can print or screenshot the page and hand it directly to your doctor.' },
-              { step: '⑤', title: 'Related values', desc: 'Links to other lab values that are commonly measured alongside this one — so you can build a complete picture.' },
+              { step: '⑤', title: 'Related values', desc: 'Links to other lab values that are commonly measured alongside this one, so you can build a complete picture.' },
             ].map(item => (
               <div key={item.step} className="flex gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50">
                 <span className="text-2xl font-black text-emerald-500 flex-shrink-0 leading-none mt-0.5">{item.step}</span>
@@ -182,13 +182,13 @@ export default function BlogPost() {
 
           <p>There are three ways to find any term in the Lexikon:</p>
 
-          <h3 className="text-base font-bold text-gray-800 mt-6">Method 1 — Use the search bar</h3>
+          <h3 className="text-base font-bold text-gray-800 mt-6">Method 1, Use the search bar</h3>
           <p>
             At the top of <Link href="/lexikon" className="text-emerald-600 hover:underline">medyra.de/lexikon</Link> there
-            is a live search box. Start typing the abbreviation or the full name — results filter instantly as you type.
+            is a live search box. Start typing the abbreviation or the full name, results filter instantly as you type.
             You can search by acronym (<strong>CRP</strong>, <strong>TSH</strong>, <strong>GFR</strong>) or by full German
             name (<strong>Kreatinin</strong>, <strong>Hämoglobin</strong>, <strong>Cholesterin</strong>). No need to press
-            Enter — it updates immediately.
+            Enter, it updates immediately.
           </p>
 
           {/* Search demo box */}
@@ -210,17 +210,17 @@ export default function BlogPost() {
             </div>
           </div>
 
-          <h3 className="text-base font-bold text-gray-800 mt-6">Method 2 — Browse by category</h3>
+          <h3 className="text-base font-bold text-gray-800 mt-6">Method 2, Browse by category</h3>
           <p>
             The index page groups all 46 terms into 11 medical categories. If you know roughly what your result
-            relates to — liver, kidneys, thyroid, blood count — scroll to that section and scan the list. Each
+            relates to, liver, kidneys, thyroid, blood count, scroll to that section and scan the list. Each
             category has a colour so you can orient yourself at a glance.
           </p>
 
-          <h3 className="text-base font-bold text-gray-800 mt-6">Method 3 — Direct URL</h3>
+          <h3 className="text-base font-bold text-gray-800 mt-6">Method 3, Direct URL</h3>
           <p>
             Every term has a permanent URL in the format <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm text-emerald-700">medyra.de/lexikon/[term]</code>.
-            If you know the abbreviation, you can often navigate directly — for example:
+            If you know the abbreviation, you can often navigate directly, for example:
           </p>
 
           <div className="not-prose flex flex-wrap gap-2 my-4">
@@ -249,7 +249,7 @@ export default function BlogPost() {
               {
                 icon: '📄',
                 when: 'You just received a lab report',
-                how: 'Look up every value marked with H (high) or L (low) before your next appointment. The Lexikon tells you what it means and gives you ready-made questions to ask your doctor — so you do not forget them under pressure.',
+                how: 'Look up every value marked with H (high) or L (low) before your next appointment. The Lexikon tells you what it means and gives you ready-made questions to ask your doctor, so you do not forget them under pressure.',
               },
               {
                 icon: '🤔',
@@ -264,7 +264,7 @@ export default function BlogPost() {
               {
                 icon: '👴',
                 when: 'You are helping a family member understand their results',
-                how: 'The Lexikon uses B1-level German — short sentences, no jargon. It is designed to be readable by anyone, including elderly relatives or people who are not native German speakers.',
+                how: 'The Lexikon uses B1-level German, short sentences, no jargon. It is designed to be readable by anyone, including elderly relatives or people who are not native German speakers.',
               },
             ].map(item => (
               <div key={item.icon} className="flex gap-4 p-5 rounded-xl border border-gray-200 bg-white hover:border-emerald-200 transition-colors">
@@ -278,7 +278,7 @@ export default function BlogPost() {
           </div>
 
           {/* Full term reference */}
-          <h2 className="text-xl font-bold text-gray-900 mt-10">All 46 terms — quick reference</h2>
+          <h2 className="text-xl font-bold text-gray-900 mt-10">All 46 terms, quick reference</h2>
           <p>
             Here is every term currently in the Lexikon, grouped by category. Click any term to go directly to its page.
           </p>
@@ -309,7 +309,7 @@ export default function BlogPost() {
           <h2 className="text-xl font-bold text-gray-900 mt-10">How to read a Lexikon page</h2>
 
           <p>
-            Let us walk through a real example. Suppose you received a blood test and your CRP was 22 mg/l — marked high.
+            Let us walk through a real example. Suppose you received a blood test and your CRP was 22 mg/l, marked high.
             Here is how you would use the Lexikon page at{' '}
             <Link href="/lexikon/crp" className="text-emerald-600 hover:underline">medyra.de/lexikon/crp</Link>:
           </p>
@@ -353,7 +353,7 @@ export default function BlogPost() {
                         <span className="text-gray-500 ml-auto">über 50 mg/l</span>
                       </div>
                     </div>
-                    <p className="text-sm text-gray-600 leading-relaxed mt-3">Your value of 22 mg/l falls in the amber range — leicht erhöht (mildly elevated). This tells you it is not an emergency, but it is worth investigating.</p>
+                    <p className="text-sm text-gray-600 leading-relaxed mt-3">Your value of 22 mg/l falls in the amber range, leicht erhöht (mildly elevated). This tells you it is not an emergency, but it is worth investigating.</p>
                   </div>
                 </div>
               </div>
@@ -364,7 +364,7 @@ export default function BlogPost() {
                   <span className="w-6 h-6 rounded-full bg-emerald-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">C</span>
                   <div>
                     <p className="font-bold text-gray-900 text-sm mb-1">Review the possible causes</p>
-                    <p className="text-sm text-gray-600 leading-relaxed">The causes section lists conditions that can cause CRP to be elevated — things like bacterial infection, chronic inflammation, or autoimmune conditions. These are possibilities, not a diagnosis. Read them to understand the range of explanations, then discuss with your doctor which (if any) are relevant to you.</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">The causes section lists conditions that can cause CRP to be elevated, things like bacterial infection, chronic inflammation, or autoimmune conditions. These are possibilities, not a diagnosis. Read them to understand the range of explanations, then discuss with your doctor which (if any) are relevant to you.</p>
                   </div>
                 </div>
               </div>
@@ -396,10 +396,10 @@ export default function BlogPost() {
             <div className="relative pl-6 space-y-0">
               {[
                 { n: 1, title: 'Look up each abnormal value in the Lexikon', desc: 'Understand what it measures, where your result sits in the range, and what can cause it.' },
-                { n: 2, title: 'Note the doctor questions from each page', desc: 'Write them down or screenshot them — these form the basis of your appointment agenda.' },
+                { n: 2, title: 'Note the doctor questions from each page', desc: 'Write them down or screenshot them, these form the basis of your appointment agenda.' },
                 { n: 3, title: 'Open Doctor Visit at medyra.de/prep', desc: 'Choose "I have test results" as your category. Medyra will ask you follow-up questions.' },
-                { n: 4, title: 'Describe what you found', desc: 'Mention the abnormal values by name, using the terminology from the Lexikon pages. "My CRP was 22, which is leicht erhöht — I also have elevated LDL."' },
-                { n: 5, title: 'Generate your German summary', desc: 'Medyra creates a structured clinical document with your findings, history, and doctor questions — all in formal German, ready to hand to your GP or specialist.' },
+                { n: 4, title: 'Describe what you found', desc: 'Mention the abnormal values by name, using the terminology from the Lexikon pages. "My CRP was 22, which is leicht erhöht, I also have elevated LDL."' },
+                { n: 5, title: 'Generate your German summary', desc: 'Medyra creates a structured clinical document with your findings, history, and doctor questions, all in formal German, ready to hand to your GP or specialist.' },
               ].map((item, i, arr) => (
                 <div key={item.n} className="relative flex gap-4 pb-6">
                   {i < arr.length - 1 && (
@@ -423,15 +423,15 @@ export default function BlogPost() {
           </p>
 
           <ul className="list-disc pl-5 space-y-2 text-sm">
-            <li>Tell you what <em>your specific</em> abnormal result means for your health — only a doctor can do that</li>
+            <li>Tell you what <em>your specific</em> abnormal result means for your health, only a doctor can do that</li>
             <li>Recommend medication or treatment</li>
-            <li>Replace a consultation — if you are worried, call your doctor</li>
-            <li>Account for lab-to-lab variation — reference ranges can differ slightly between laboratories</li>
+            <li>Replace a consultation, if you are worried, call your doctor</li>
+            <li>Account for lab-to-lab variation, reference ranges can differ slightly between laboratories</li>
           </ul>
 
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 not-prose text-sm text-amber-800 my-4">
             <p className="font-semibold mb-1">⚠ Important</p>
-            <p>If you have a result that is significantly outside the normal range, especially for kidney function (GFR, Kreatinin), blood count (Hämoglobin, Thrombozyten), or liver values (GOT, GPT, GGT), contact your doctor promptly — do not wait for the next scheduled appointment.</p>
+            <p>If you have a result that is significantly outside the normal range, especially for kidney function (GFR, Kreatinin), blood count (Hämoglobin, Thrombozyten), or liver values (GOT, GPT, GGT), contact your doctor promptly, do not wait for the next scheduled appointment.</p>
           </div>
 
           {/* FAQ */}
@@ -448,8 +448,8 @@ export default function BlogPost() {
                 a: 'The reference ranges and educational content are based on standard German laboratory guidelines (Deutsche Gesellschaft für Klinische Chemie und Laboratoriumsmedizin). Each page shows a "last reviewed" date. The Lexikon is updated regularly.',
               },
               {
-                q: 'My lab uses different units — does the Lexikon still apply?',
-                a: 'Most German labs use the same units (mg/l, mmol/l, µg/l etc.). The unit is shown on each Lexikon page. If your lab uses different units, the reference range numbers may differ — check the unit shown on your own result.',
+                q: 'My lab uses different units, does the Lexikon still apply?',
+                a: 'Most German labs use the same units (mg/l, mmol/l, µg/l etc.). The unit is shown on each Lexikon page. If your lab uses different units, the reference range numbers may differ, check the unit shown on your own result.',
               },
               {
                 q: 'Can I use this for my family members\' results?',
@@ -457,7 +457,7 @@ export default function BlogPost() {
               },
               {
                 q: 'Will more terms be added?',
-                a: 'Yes. The current 46 terms cover the most commonly ordered lab tests in Germany. Additional terms — including hormone panels, cardiac markers, and autoimmune markers — will be added over time.',
+                a: 'Yes. The current 46 terms cover the most commonly ordered lab tests in Germany. Additional terms, including hormone panels, cardiac markers, and autoimmune markers, will be added over time.',
               },
             ].map(item => (
               <details key={item.q} className="group border border-gray-200 rounded-xl overflow-hidden">

@@ -1,6 +1,6 @@
 {
   "shortAnswer": "L'acide urique est produit lors de la dégradation des purines alimentaires. Des valeurs élevées peuvent indiquer la goutte ou favoriser les calculs rénaux. L'alimentation et l'alcool jouent un rôle majeur. Discutez des valeurs élevées avec votre médecin, surtout si vous avez des douleurs articulaires.",
-  "metaDescription": "Acide urique élevé ? Valeurs normales, risque de goutte et ce que vous pouvez faire — expliqués simplement.",
+  "metaDescription": "Acide urique élevé ? Valeurs normales, risque de goutte et ce que vous pouvez faire: expliqués simplement.",
   "causesElevated": ["Régime riche en purines (viande, abats)", "Consommation d'alcool", "Maladie rénale", "Certains médicaments", "Obésité"],
   "causesLow": ["Certains médicaments", "Maladie hépatique"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bas", "normal": "Normal", "elevated": "Élevé (hyperuricémie)", "high": "Très élevé" },
   "categoryLabel": "Bilan rénal",
-  "pageTitle": "Valeur acide urique — Risque de goutte expliqué | Medyra"
+  "pageTitle": "Valeur acide urique: Risque de goutte expliqué | Medyra"
 }

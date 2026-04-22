@@ -1,6 +1,6 @@
 {
   "shortAnswer": "El MCV mide el tamaño medio de los glóbulos rojos. Las células pequeñas pueden indicar deficiencia de hierro, mientras que las células grandes pueden sugerir deficiencia de vitamina B12 o folato. Consulte con su médico ante resultados anormales.",
-  "metaDescription": "MCV alto o bajo? Valores normales, causas de tamaño anormal de glóbulos rojos y qué significa — explicado de forma sencilla.",
+  "metaDescription": "MCV alto o bajo? Valores normales, causas de tamaño anormal de glóbulos rojos y qué significa: explicado de forma sencilla.",
   "causesElevated": ["Deficiencia de vitamina B12", "Deficiencia de folato", "Consumo de alcohol", "Hipotiroidismo"],
   "causesLow": ["Deficiencia de hierro", "Talasemia", "Enfermedades inflamatorias crónicas"],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Bajo", "normal": "Normal", "elevated": "Elevado (macrocitosis)", "high": "Muy elevado" },
   "categoryLabel": "Hemograma",
-  "pageTitle": "Valor MCV — Volumen Corpuscular Medio explicado | Medyra"
+  "pageTitle": "Valor MCV: Volumen Corpuscular Medio explicado | Medyra"
 }

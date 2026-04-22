@@ -1,6 +1,6 @@
 {
   "shortAnswer": "A bilirrubina é um produto de degradação dos glóbulos vermelhos. Níveis elevados podem indicar problemas hepáticos ou obstrução biliar e podem causar icterícia. Níveis levemente elevados também são vistos na síndrome de Gilbert, que é inofensiva.",
-  "metaDescription": "Bilirrubina elevada? Valores normais, causas e quando indica icterícia ou doença hepática — explicado de forma simples.",
+  "metaDescription": "Bilirrubina elevada? Valores normais, causas e quando indica icterícia ou doença hepática: explicado de forma simples.",
   "causesElevated": ["Doença hepática", "Cálculos biliares", "Hemólise (degradação de glóbulos vermelhos)", "Síndrome de Gilbert", "Certos medicamentos"],
   "causesLow": [],
   "doctorQuestions": [
@@ -10,5 +10,5 @@
   ],
   "rangeLabels": { "low": "Baixo", "normal": "Normal", "elevated": "Ligeiramente elevado", "high": "Muito elevado (icterícia possível)" },
   "categoryLabel": "Valores hepáticos",
-  "pageTitle": "Valor bili — Bilirrubina explicada | Medyra"
+  "pageTitle": "Valor bili: Bilirrubina explicada | Medyra"
 }

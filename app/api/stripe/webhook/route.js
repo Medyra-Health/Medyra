@@ -37,7 +37,7 @@ async function activateTier(db, { clerkUserId, tier, stripeCustomerId, stripeSub
         ...(stripeSubscriptionId && { stripeSubscriptionId }),
         updatedAt: new Date(),
       },
-      // Do NOT reset currentUsage — preserve existing report count
+      // Do NOT reset currentUsage, preserve existing report count
     },
     { upsert: true }
   )
