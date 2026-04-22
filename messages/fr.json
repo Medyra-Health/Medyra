@@ -414,6 +414,17 @@
     },
     "pricingCta": {
       "note": "2 rapports gratuits par mois · Sans carte bancaire · Résiliable à tout moment"
+    },
+    "senior": {
+      "badge": "For Seniors",
+      "headline1": "Doctor letters,",
+      "headline2": "finally easy to understand.",
+      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
+      "f1": "No technical knowledge needed: just upload",
+      "f2": "Text-to-speech: listen instead of read",
+      "f3": "Share with family with one-click PDF export",
+      "f4": "GDPR: your data is deleted after 30 days",
+      "cta": "Try Für Senioren"
     }
   },
   "siteFooter": {

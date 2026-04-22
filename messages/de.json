@@ -414,6 +414,17 @@
     },
     "pricingCta": {
       "note": "2 kostenlose Berichte jeden Monat · Keine Kreditkarte · Jederzeit kündbar"
+    },
+    "senior": {
+      "badge": "Für Senioren",
+      "headline1": "Arztbriefe,",
+      "headline2": "endlich verständlich erklärt.",
+      "desc": "Befund, Arztbrief oder Entlassungsbericht hochladen. Medyra erklärt alles in einfachem Deutsch: zum Lesen oder Vorlesen lassen. Keine technischen Kenntnisse nötig.",
+      "f1": "Kein technisches Wissen nötig: einfach hochladen",
+      "f2": "Vorlesen lassen: für Senioren mit Sehproblemen",
+      "f3": "Mit der Familie teilen: PDF-Export mit einem Klick",
+      "f4": "Datenschutz: Ihre Daten werden nach 30 Tagen gelöscht",
+      "cta": "Für Senioren ausprobieren"
     }
   },
   "siteFooter": {
