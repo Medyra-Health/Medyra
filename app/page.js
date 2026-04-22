@@ -490,24 +490,18 @@ export default function LandingPage() {
           <div className="flex justify-between items-center gap-4">
             <Link href="/" className="flex-shrink-0"><MedyraLogo size="md" /></Link>
 
-            {/* Desktop nav */}
-            <div className="hidden md:flex items-center gap-1 flex-1 justify-center">
-              <SignedIn>
-                <NavLink href="/dashboard">{t('nav.dashboard')}</NavLink>
-              </SignedIn>
+            {/* Desktop nav — all right-aligned */}
+            <div className="hidden md:flex items-center gap-1.5 ml-auto">
               <NavLink href="/prep" className="text-violet-600 hover:text-violet-700 hover:bg-violet-50">{t('nav.doctorVisit')}</NavLink>
               <NavLink href="/blog">{t('nav.blog')}</NavLink>
               <NavLink href="/verstehen" className="text-teal-600 hover:text-teal-700 hover:bg-teal-50 text-xs">{t('nav.verstehen')}</NavLink>
-              <SignedOut>
-                <NavLink href="/pricing">{t('nav.pricing')}</NavLink>
-              </SignedOut>
-            </div>
 
-            {/* Desktop right actions */}
-            <div className="hidden md:flex items-center gap-2 flex-shrink-0">
+              <div className="w-px h-5 bg-gray-200 mx-1" />
               <LanguageSwitcher />
               <div className="w-px h-5 bg-gray-200 mx-1" />
+
               <SignedOut>
+                <NavLink href="/pricing">{t('nav.pricing')}</NavLink>
                 <SignInButton mode="modal">
                   <button className="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-all duration-150">
                     {t('nav.signIn')}
@@ -519,7 +513,13 @@ export default function LandingPage() {
                   </button>
                 </SignInButton>
               </SignedOut>
+
               <SignedIn>
+                <Link href="/dashboard">
+                  <button className="px-4 py-1.5 text-sm font-semibold bg-gray-800 hover:bg-gray-900 active:scale-95 text-white rounded-lg transition-all shadow-sm">
+                    {t('nav.dashboard')}
+                  </button>
+                </Link>
                 <Link href="/upload">
                   <button className="px-4 py-1.5 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-lg transition-all shadow-sm shadow-emerald-200">
                     {t('nav.upload')}
