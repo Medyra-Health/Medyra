@@ -561,7 +561,9 @@
       "q5": "가족 플랜은 어떻게 작동하나요?",
       "a5": "하나의 구독으로 최대 5명의 가족을 포괄합니다. 월 50개의 보고서가 공유됩니다.",
       "q6": "진료 준비란 무엇인가요?",
-      "a6": "Medyra가 증상과 바이오마커 동향을 의사와 공유할 수 있는 구조화된 요약을 생성합니다."
+      "a6": "Medyra가 증상과 바이오마커 동향을 의사와 공유할 수 있는 구조화된 요약을 생성합니다.",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }

@@ -561,7 +561,9 @@
       "q5": "家庭计划如何运作？",
       "a5": "一个订阅最多涵盖5个家庭成员。50份月度报告在所有成员间共享。",
       "q6": "什么是就诊准备？",
-      "a6": "Medyra生成您症状和生物标志物趋势的结构化摘要，供您与医生分享。"
+      "a6": "Medyra生成您症状和生物标志物趋势的结构化摘要，供您与医生分享。",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }

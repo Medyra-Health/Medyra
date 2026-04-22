@@ -563,7 +563,9 @@
       "q5": "How does the Family plan work?",
       "a5": "One subscription covers up to 5 family members, each with their own secure profile. The 50 monthly reports are shared across all members.",
       "q6": "What is a doctor visit prep?",
-      "a6": "Medyra generates a structured summary of your symptoms and biomarker trends that you can share with your doctor before an appointment."
+      "a6": "Medyra generates a structured summary of your symptoms and biomarker trends that you can share with your doctor before an appointment.",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded medical documents and generates the plain-language explanations you receive. Anthropic is listed as a data processor in our Privacy Policy."
     }
   }
 }

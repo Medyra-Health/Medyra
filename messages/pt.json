@@ -561,7 +561,9 @@
       "q5": "Como funciona o plano Família?",
       "a5": "Uma assinatura cobre até 5 membros. Os 50 relatórios mensais são compartilhados.",
       "q6": "O que é uma preparação para consulta?",
-      "a6": "Medyra gera um resumo dos seus sintomas e biomarcadores para compartilhar com seu médico."
+      "a6": "Medyra gera um resumo dos seus sintomas e biomarcadores para compartilhar com seu médico.",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }

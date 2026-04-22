@@ -561,7 +561,9 @@
       "q5": "Jak działa plan Rodzinny?",
       "a5": "Jedno konto obejmuje do 5 członków rodziny. 50 miesięcznych raportów jest współdzielonych.",
       "q6": "Czym jest przygotowanie do wizyty?",
-      "a6": "Medyra generuje strukturalne podsumowanie objawów do udostępnienia lekarzowi."
+      "a6": "Medyra generuje strukturalne podsumowanie objawów do udostępnienia lekarzowi.",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }

@@ -561,7 +561,9 @@
       "q5": "Как работает семейный план?",
       "a5": "Одна подписка охватывает до 5 членов семьи. 50 ежемесячных отчётов делятся между всеми.",
       "q6": "Что такое подготовка к визиту?",
-      "a6": "Medyra создаёт структурированное резюме ваших симптомов для передачи врачу."
+      "a6": "Medyra создаёт структурированное резюме ваших симптомов для передачи врачу.",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }

@@ -563,7 +563,9 @@
       "q5": "خاندانی پلان کیسے کام کرتا ہے؟",
       "a5": "ایک سبسکرپشن 5 خاندانی ارکان کو کور کرتی ہے۔ 50 ماہانہ رپورٹس شیئر کی جاتی ہیں۔",
       "q6": "ڈاکٹر وزٹ تیاری کیا ہے؟",
-      "a6": "Medyra آپ کی علامات کا ایک منظم خلاصہ بناتا ہے جسے آپ ڈاکٹر کے ساتھ شیئر کر سکتے ہیں۔"
+      "a6": "Medyra آپ کی علامات کا ایک منظم خلاصہ بناتا ہے جسے آپ ڈاکٹر کے ساتھ شیئر کر سکتے ہیں۔",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }

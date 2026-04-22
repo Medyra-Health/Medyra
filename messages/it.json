@@ -561,7 +561,9 @@
       "q5": "Come funziona il piano Famiglia?",
       "a5": "Un abbonamento copre fino a 5 membri. I 50 referti mensili sono condivisi.",
       "q6": "Cos'è una preparazione alla visita?",
-      "a6": "Medyra genera un riepilogo dei tuoi sintomi e biomarcatori da condividere col medico."
+      "a6": "Medyra genera un riepilogo dei tuoi sintomi e biomarcatori da condividere col medico.",
+      "q7": "What AI model powers Medyra?",
+      "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   }
 }
