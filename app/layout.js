@@ -124,6 +124,7 @@ export default async function RootLayout({ children }) {
     <ClerkProvider>
       <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${inter.className} ${playfair.variable} ${dmSans.variable} scroll-smooth`}>
         <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#10B981" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -139,7 +140,7 @@ export default async function RootLayout({ children }) {
             gtag('config', 'G-Q8Y2GQCSSS');
           `}} />
         </head>
-        <body className="pb-16 md:pb-0">
+        <body className="md:pb-0" style={{ paddingBottom: 'calc(4rem + env(safe-area-inset-bottom, 0px))' }}>
           <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
             <SiteFooter />
