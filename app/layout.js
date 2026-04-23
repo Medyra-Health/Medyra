@@ -16,35 +16,39 @@ export const metadata = {
   metadataBase: new URL('https://medyra.de'),
 
   title: {
-    default: 'Medyra | Understand Your Medical Reports in Plain Language',
-    template: '%s | Medyra',
+    default: 'Medyra AI – Lab Results & Medical Reports Explained in Plain Language',
+    template: '%s | Medyra AI',
   },
   description:
-    'Upload your lab results and get AI powered explanations in plain language. Instantly understand your blood test, TSH, HbA1c, cholesterol, and more. GDPR compliant, 16 languages, results in 60 seconds. Made in Germany.',
+    'Medyra AI explains your lab results and medical reports in plain language in under 60 seconds. Understand TSH, HbA1c, CRP, cholesterol and 100+ values. GDPR compliant. 17 languages. Free to start. Made in Germany.',
 
   keywords: [
-    'medical report explanation',
-    'lab results AI',
-    'understand blood test results',
-    'lab report explainer',
-    'medical terminology explained',
-    'AI medical report',
-    'blood test explained',
-    'what does my lab report mean',
-    'TSH explanation',
-    'HbA1c meaning',
-    'cholesterol results explained',
-    'GDPR health AI',
+    'Medyra AI',
+    'medical report AI',
+    'lab results explainer',
+    'lab results Germany expat',
+    'understand lab results',
+    'blood test explained AI',
     'Laborbefund verstehen',
     'Blutbild erklären',
     'Befund erklären KI',
+    'Arztbrief verstehen',
     'medical AI Germany',
+    'AI Laborbefund',
+    'TSH Wert erklären',
+    'HbA1c meaning',
+    'CRP explained',
+    'cholesterol results explained',
+    'medical report explainer app',
+    'GDPR health AI',
+    'German lab results English',
+    'expat Germany doctor',
     'Medyra',
   ],
 
-  authors: [{ name: 'Medyra', url: 'https://medyra.de' }],
-  creator: 'Medyra',
-  publisher: 'Medyra',
+  authors: [{ name: 'Medyra AI', url: 'https://medyra.de' }],
+  creator: 'Medyra AI',
+  publisher: 'Medyra AI',
 
   robots: {
     index: true,
@@ -61,31 +65,50 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: 'https://medyra.de',
-    siteName: 'Medyra',
-    title: 'Medyra | Understand Your Medical Reports in Plain Language',
+    siteName: 'Medyra AI',
+    title: 'Medyra AI – Lab Results & Medical Reports Explained in Plain Language',
     description:
-      'Upload your lab results and get AI powered explanations in plain language. GDPR compliant, 16 languages, results in 60 seconds.',
+      'Upload your lab results or medical report and get a plain-language AI explanation in 60 seconds. GDPR compliant. 17 languages. Free to start.',
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Medyra | Medical Report Explainer',
+        alt: 'Medyra AI – Medical Report & Lab Results Explainer',
       },
     ],
     locale: 'en_US',
+    alternateLocale: ['de_DE', 'fr_FR', 'es_ES', 'it_IT', 'tr_TR', 'ar_AE', 'zh_CN', 'ja_JP', 'ko_KR', 'hi_IN', 'pt_BR', 'nl_NL', 'pl_PL'],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Medyra | Understand Your Medical Reports in Plain Language',
+    title: 'Medyra AI – Medical Report Explainer',
     description:
-      'Upload your lab results and get clear AI powered explanations. GDPR compliant. Made in Germany.',
+      'Get your lab results explained in plain language in 60 seconds. GDPR compliant. Made in Germany.',
     images: ['/opengraph-image'],
   },
 
   alternates: {
     canonical: 'https://medyra.de',
+    languages: {
+      'en': 'https://medyra.de',
+      'de': 'https://medyra.de',
+      'fr': 'https://medyra.de',
+      'es': 'https://medyra.de',
+      'it': 'https://medyra.de',
+      'pt': 'https://medyra.de',
+      'nl': 'https://medyra.de',
+      'pl': 'https://medyra.de',
+      'tr': 'https://medyra.de',
+      'ar': 'https://medyra.de',
+      'zh': 'https://medyra.de',
+      'ja': 'https://medyra.de',
+      'ko': 'https://medyra.de',
+      'hi': 'https://medyra.de',
+      'ru': 'https://medyra.de',
+      'x-default': 'https://medyra.de',
+    },
   },
 
   manifest: '/manifest.json',
@@ -94,7 +117,7 @@ export const metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Medyra',
+    title: 'Medyra AI',
   },
 
   category: 'health',
