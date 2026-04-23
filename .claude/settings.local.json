@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(timeout 25 npx next dev)",
-      "Bash(cp \"c:/Users/abral/Desktop/AI Agent/24.03.2026/Medyra/middleware.js\" \"c:/Users/abral/Desktop/AI Agent/24.03.2026/Medyra/proxy.js\")",
-      "Bash(rm \"c:/Users/abral/Desktop/AI Agent/24.03.2026/Medyra/middleware.js\")"
-    ]
-  }
-}
