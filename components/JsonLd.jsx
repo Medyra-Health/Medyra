@@ -5,7 +5,8 @@ export default function JsonLd() {
       {
         '@type': 'Organization',
         '@id': 'https://medyra.de/#organization',
-        name: 'Medyra',
+        name: 'Medyra AI',
+        alternateName: ['Medyra', 'Medyra AI App'],
         url: 'https://medyra.de',
         logo: {
           '@type': 'ImageObject',
@@ -14,7 +15,7 @@ export default function JsonLd() {
           height: 512,
         },
         description:
-          'AI powered medical lab report explanation platform. GDPR compliant. Made in Germany.',
+          'Medyra AI is a software platform that explains medical lab results and health reports in plain language using artificial intelligence. GDPR compliant. Made in Germany. Not a pharmaceutical company.',
         foundingLocation: {
           '@type': 'Place',
           name: 'Germany',
@@ -25,6 +26,24 @@ export default function JsonLd() {
           '@type': 'ContactPoint',
           contactType: 'customer support',
           url: 'https://medyra.de/contact',
+        },
+        sameAs: [
+          'https://medyra.de',
+        ],
+        foundingDate: '2024',
+        legalName: 'Medyra AI',
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://medyra.de/#searchbox',
+        url: 'https://medyra.de',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://medyra.de/lexikon?q={search_term_string}',
+          },
+          'query-input': 'required name=search_term_string',
         },
       },
       {
