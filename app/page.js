@@ -433,8 +433,10 @@ export default function LandingPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" style={{ WebkitOverflowScrolling: 'touch' }}>
       <style>{`
+        html { scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+
         /* ── Scroll reveal ── */
         .sr {
           opacity: 0;
@@ -485,7 +487,10 @@ export default function LandingPage() {
       <JsonLd />
 
       {/* ── NAVIGATION ── */}
-      <nav className="border-b border-gray-200/80 bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+      <nav
+        className="border-b border-gray-200/80 bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm"
+        style={{ transform: 'translateZ(0)', WebkitTransform: 'translateZ(0)' }}
+      >
         <div className="container mx-auto px-4 py-2.5">
           <div className="flex justify-between items-center gap-4">
             <Link href="/" className="flex-shrink-0"><MedyraLogo size="md" /></Link>
@@ -536,29 +541,33 @@ export default function LandingPage() {
 
           {/* Mobile menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden pt-3 pb-3 border-t border-gray-100 mt-3 space-y-0.5">
+            <div className="md:hidden pt-3 pb-3 border-t border-gray-100 mt-3">
               <SignedOut>
-                <SignInButton mode="modal">
-                  <button className="w-full text-left px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors" onClick={() => setMobileMenuOpen(false)}>
-                    {t('nav.signIn')}
-                  </button>
-                </SignInButton>
-                <SignInButton mode="modal">
-                  <button className="w-full mt-1 px-4 py-3 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl transition-colors" onClick={() => setMobileMenuOpen(false)}>
-                    {t('nav.tryFree')} →
-                  </button>
-                </SignInButton>
+                <div className="flex gap-2">
+                  <SignInButton mode="modal">
+                    <button className="flex-1 px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 border border-gray-200 rounded-xl transition-colors text-center" onClick={() => setMobileMenuOpen(false)}>
+                      {t('nav.signIn')}
+                    </button>
+                  </SignInButton>
+                  <SignInButton mode="modal">
+                    <button className="flex-1 px-4 py-2.5 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                      {t('nav.tryFree')} →
+                    </button>
+                  </SignInButton>
+                </div>
               </SignedOut>
               <SignedIn>
-                <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}
-                  className="block w-full text-center py-3 text-sm font-semibold bg-gray-800 hover:bg-gray-900 text-white rounded-xl transition-colors">
-                  {t('nav.dashboard')}
-                </Link>
-                <Link href="/upload" onClick={() => setMobileMenuOpen(false)}
-                  className="block w-full text-center py-3 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl transition-colors">
-                  {t('nav.upload')}
-                </Link>
-                <div className="flex items-center justify-between px-3 py-2">
+                <div className="flex gap-2 mb-2">
+                  <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}
+                    className="flex-1 text-center py-2.5 text-sm font-semibold bg-gray-800 hover:bg-gray-900 text-white rounded-xl transition-colors">
+                    {t('nav.dashboard')}
+                  </Link>
+                  <Link href="/upload" onClick={() => setMobileMenuOpen(false)}
+                    className="flex-1 text-center py-2.5 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl transition-colors">
+                    {t('nav.upload')}
+                  </Link>
+                </div>
+                <div className="flex items-center justify-between px-1 py-1.5">
                   <span className="text-sm text-gray-500">Account</span>
                   <MedyraUserButton />
                 </div>
