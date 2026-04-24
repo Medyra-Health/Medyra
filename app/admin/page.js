@@ -5,13 +5,19 @@ import { useRouter } from 'next/navigation'
 import { useEffect, useState, useCallback } from 'react'
 import {
   Users, FileText, TrendingUp, RefreshCw,
-  Crown, Shield, AlertCircle, MessageSquare, Zap, ExternalLink, Euro, Stethoscope, CreditCard, CheckCircle, Clock, XCircle
+  Crown, Shield, AlertCircle, MessageSquare, Zap, ExternalLink, Euro, Stethoscope, CreditCard, CheckCircle, Clock, XCircle,
+  Globe, MousePointerClick, MonitorSmartphone, BarChart2
 } from 'lucide-react'
 import dynamic from 'next/dynamic'
 
 const AdminChart = dynamic(() => import('@/components/AdminChart'), {
   ssr: false,
   loading: () => <div className="h-[220px] flex items-center justify-center text-gray-400 text-sm">Loading chart…</div>,
+})
+
+const GAChart = dynamic(() => import('@/components/GAChart'), {
+  ssr: false,
+  loading: () => <div className="h-[180px] flex items-center justify-center text-gray-400 text-sm">Loading chart…</div>,
 })
 
 const ADMIN_EMAIL = 'abralur28@gmail.com'
@@ -75,6 +81,8 @@ export default function AdminPage() {
   const [migrateResult, setMigrateResult] = useState(null)
   const [activating, setActivating] = useState(false)
   const [activateMsg, setActivateMsg] = useState(null)
+  const [gaData, setGaData] = useState(null)
+  const [gaLoading, setGaLoading] = useState(false)
 
   async function activateAdmin() {
     setActivating(true)
@@ -94,10 +102,22 @@ export default function AdminPage() {
     }
   }
 
+  const fetchGA = useCallback(async () => {
+    setGaLoading(true)
+    try {
+      const res = await fetch('/api/admin/analytics')
+      if (res.ok) setGaData(await res.json())
+    } catch { /* silently fail */ }
+    finally { setGaLoading(false) }
+  }, [])
+
   const fetchStats = useCallback(async () => {
     try {
       setError(null)
-      const res = await fetch('/api/admin/stats')
+      const [res] = await Promise.all([
+        fetch('/api/admin/stats'),
+        fetchGA(),
+      ])
       if (!res.ok) {
         const body = await res.json().catch(() => ({}))
         throw new Error(body.error || `HTTP ${res.status}`)
@@ -110,7 +130,7 @@ export default function AdminPage() {
     } finally {
       setLoading(false)
     }
-  }, [])
+  }, [fetchGA])
 
   // Auth guard
   useEffect(() => {
@@ -244,6 +264,163 @@ export default function AdminPage() {
             color="orange"
           />
         </div>
+
+        {/* ── GOOGLE ANALYTICS SECTION ── */}
+        {gaData && !gaData.configured && (
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-3">
+            <Globe className="h-5 w-5 text-amber-500 flex-shrink-0" />
+            <div className="flex-1">
+              <p className="text-sm font-semibold text-amber-800">Google Analytics not connected</p>
+              <p className="text-xs text-amber-700 mt-0.5">
+                Add <code className="bg-amber-100 px-1 rounded">GOOGLE_APPLICATION_CREDENTIALS_JSON</code> and <code className="bg-amber-100 px-1 rounded">GA4_PROPERTY_ID</code> to your Vercel environment variables to see live traffic analytics here.{' '}
+                <a href="https://developers.google.com/analytics/devguides/reporting/data/v1/quickstart-client-libraries" target="_blank" rel="noopener noreferrer" className="underline font-medium">Setup guide →</a>
+              </p>
+            </div>
+          </div>
+        )}
+
+        {gaData?.configured && gaData?.summary && (
+          <div className="space-y-4">
+            {/* GA header */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <BarChart2 className="h-5 w-5 text-blue-500" />
+                <h2 className="text-sm font-semibold text-gray-700">Website Traffic — Google Analytics</h2>
+                <span className="text-xs text-gray-400">last 30 days</span>
+              </div>
+              <a href="https://analytics.google.com" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-1 text-xs text-blue-500 hover:text-blue-700">
+                Open GA4 <ExternalLink className="h-3 w-3" />
+              </a>
+            </div>
+
+            {/* GA summary cards */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              {[
+                { label: 'Sessions', value: gaData.summary.last30.sessions.toLocaleString(), sub: `${gaData.summary.today.sessions} today`, color: 'blue' },
+                { label: 'Visitors', value: gaData.summary.last30.users.toLocaleString(), sub: `${gaData.summary.last7.users} this week`, color: 'indigo' },
+                { label: 'New Users', value: gaData.summary.last30.newUsers.toLocaleString(), sub: `${gaData.summary.last7.newUsers} this week`, color: 'emerald' },
+                { label: 'Page Views', value: gaData.summary.last30.pageViews.toLocaleString(), sub: '30 days', color: 'purple' },
+                { label: 'Avg Session', value: `${Math.floor(gaData.summary.last30.avgSessionDuration / 60)}m ${gaData.summary.last30.avgSessionDuration % 60}s`, sub: 'duration', color: 'orange' },
+                { label: 'Bounce Rate', value: `${gaData.summary.last30.bounceRate}%`, sub: '30 days', color: 'rose' },
+              ].map(c => (
+                <div key={c.label} className="bg-white rounded-xl border border-gray-200 p-3 shadow-sm text-center">
+                  <p className="text-xs text-gray-500 mb-1">{c.label}</p>
+                  <p className="text-xl font-bold text-gray-900">{c.value}</p>
+                  <p className="text-xs text-gray-400 mt-0.5">{c.sub}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* GA chart + sources + countries */}
+            <div className="grid lg:grid-cols-3 gap-4">
+              {/* Daily users chart */}
+              <div className="lg:col-span-2 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+                <p className="text-sm font-semibold text-gray-700 mb-4">Daily Visitors — Last 30 Days</p>
+                {gaData.dailyChart?.length > 0 ? (
+                  <GAChart data={gaData.dailyChart} />
+                ) : (
+                  <p className="text-sm text-gray-400">No data</p>
+                )}
+              </div>
+
+              {/* Traffic sources */}
+              <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+                <p className="text-sm font-semibold text-gray-700 mb-4">Traffic Sources</p>
+                <div className="space-y-2.5">
+                  {(gaData.trafficSources || []).map(s => (
+                    <div key={s.channel} className="flex items-center gap-2">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex justify-between items-center mb-0.5">
+                          <span className="text-xs text-gray-700 truncate">{s.channel}</span>
+                          <span className="text-xs font-semibold text-gray-800 ml-2">{s.sessions}</span>
+                        </div>
+                        <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-blue-400 rounded-full"
+                            style={{ width: `${Math.min(100, (s.sessions / (gaData.trafficSources[0]?.sessions || 1)) * 100)}%` }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Top pages + countries + devices */}
+            <div className="grid lg:grid-cols-3 gap-4">
+              {/* Top pages */}
+              <div className="lg:col-span-2 bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+                <div className="px-5 py-3 border-b border-gray-100">
+                  <p className="text-sm font-semibold text-gray-700">Top Pages</p>
+                </div>
+                <table className="w-full text-xs">
+                  <thead>
+                    <tr className="bg-gray-50 text-gray-500 uppercase tracking-wide">
+                      <th className="px-5 py-2 text-left">Page</th>
+                      <th className="px-5 py-2 text-right">Views</th>
+                      <th className="px-5 py-2 text-right">Users</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {(gaData.topPages || []).map(p => (
+                      <tr key={p.path} className="hover:bg-gray-50">
+                        <td className="px-5 py-2 text-gray-700 font-mono truncate max-w-[200px]">{p.path}</td>
+                        <td className="px-5 py-2 text-right text-gray-800 font-semibold">{p.views.toLocaleString()}</td>
+                        <td className="px-5 py-2 text-right text-gray-500">{p.users.toLocaleString()}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Countries + Devices */}
+              <div className="space-y-4">
+                {/* Countries */}
+                <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Globe className="h-4 w-4 text-emerald-500" />
+                    <p className="text-sm font-semibold text-gray-700">Top Countries</p>
+                  </div>
+                  <div className="space-y-2">
+                    {(gaData.countries || []).slice(0, 5).map(c => (
+                      <div key={c.country} className="flex items-center justify-between">
+                        <span className="text-xs text-gray-700">{c.country}</span>
+                        <span className="text-xs font-semibold text-gray-800">{c.users}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Devices */}
+                <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+                  <div className="flex items-center gap-2 mb-3">
+                    <MonitorSmartphone className="h-4 w-4 text-purple-500" />
+                    <p className="text-sm font-semibold text-gray-700">Devices</p>
+                  </div>
+                  <div className="space-y-2">
+                    {(gaData.devices || []).map(d => {
+                      const total = gaData.devices.reduce((s, x) => s + x.users, 0)
+                      const pct = total ? Math.round((d.users / total) * 100) : 0
+                      return (
+                        <div key={d.device}>
+                          <div className="flex justify-between text-xs mb-0.5">
+                            <span className="capitalize text-gray-700">{d.device}</span>
+                            <span className="text-gray-500">{pct}%</span>
+                          </div>
+                          <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                            <div className="h-full bg-purple-400 rounded-full" style={{ width: `${pct}%` }} />
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* AI Usage panel */}
         {chatStats && (
@@ -443,7 +620,10 @@ export default function AdminPage() {
               <tbody className="divide-y divide-gray-100">
                 {recentUsers.length > 0 ? recentUsers.map(u => (
                   <tr key={u.id} className="hover:bg-gray-50 transition-colors">
-                    <td className="px-5 py-3 text-gray-800 font-medium max-w-[200px] truncate">{u.email}</td>
+                    <td className="px-5 py-3 max-w-[220px]">
+                      {u.name && <p className="text-gray-800 font-medium truncate text-sm">{u.name}</p>}
+                      <p className="text-gray-400 truncate text-xs">{u.email}</p>
+                    </td>
                     <td className="px-5 py-3"><TierBadge tier={u.tier} /></td>
                     <td className="px-5 py-3 text-gray-600">{u.reportCount}</td>
                     <td className="px-5 py-3">
