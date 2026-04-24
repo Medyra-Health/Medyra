@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb'
 import { NextResponse } from 'next/server'
-import { currentUser } from '@clerk/nextjs/server'
+import { currentUser, clerkClient } from '@clerk/nextjs/server'
 
 const ADMIN_EMAIL = 'abralur28@gmail.com'
 
@@ -254,14 +254,35 @@ export async function GET() {
     const reportCountMap = {}
     reportCounts.forEach(r => { reportCountMap[r._id] = r.count })
 
-    // Enrich recent reports with user emails
+    // Fetch real names/emails from Clerk for recent users
+    const clerk = await clerkClient()
+    const clerkUserMap = {}
+    await Promise.all(
+      userClerkIds.map(async (clerkId) => {
+        try {
+          const cu = await clerk.users.getUser(clerkId)
+          const email = cu.emailAddresses?.[0]?.emailAddress || null
+          const name = [cu.firstName, cu.lastName].filter(Boolean).join(' ') || null
+          clerkUserMap[clerkId] = { email, name }
+        } catch { /* skip if not found */ }
+      })
+    )
+
+    // Enrich recent reports with user emails (from Clerk directly)
     const reportUserIds = recentReports.map(r => r.userId).filter(Boolean)
-    const reportUsers = await database.collection('users').find(
-      { clerkId: { $in: reportUserIds } },
-      { projection: { clerkId: 1, email: 1 } }
-    ).toArray()
     const reportUserMap = {}
-    reportUsers.forEach(u => { reportUserMap[u.clerkId] = u.email })
+    await Promise.all(
+      reportUserIds.map(async (clerkId) => {
+        if (clerkUserMap[clerkId]) {
+          reportUserMap[clerkId] = clerkUserMap[clerkId].email || '—'
+          return
+        }
+        try {
+          const cu = await clerk.users.getUser(clerkId)
+          reportUserMap[clerkId] = cu.emailAddresses?.[0]?.emailAddress || '—'
+        } catch { reportUserMap[clerkId] = '—' }
+      })
+    )
 
     // Active subscriptions (paid tiers)
     const paidTiers = ['personal', 'family', 'clinic', 'onetime']
@@ -297,7 +318,9 @@ export async function GET() {
       })),
       recentUsers: recentUsers.map(u => ({
         id: u._id?.toString(),
-        email: u.email || '—',
+        clerkId: u.clerkId,
+        email: clerkUserMap[u.clerkId]?.email || u.email || '—',
+        name: clerkUserMap[u.clerkId]?.name || null,
         tier: u.subscription?.tier || 'free',
         subscriptionStatus: u.subscription?.status || '—',
         createdAt: u.createdAt,
