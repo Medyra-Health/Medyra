@@ -1,272 +1,364 @@
-# Medyra — Medical Lab Report Explanation Platform
+# Medyra — AI Medical Report Explainer
 
-> AI-powered platform that helps patients understand their medical lab results in plain language. GDPR-compliant, fully internationalized, and production-ready.
+> **Live site:** [medyra.de](https://medyra.de)  
+> **Organization:** [github.com/Medyra-Health](https://github.com/Medyra-Health)
 
-**Live:** [medyra.de](https://medyra.de) &nbsp;·&nbsp; **Stack:** Next.js 15 · MongoDB · Claude AI · Stripe · Clerk
-
----
-
-## Overview
-
-Medyra bridges the gap between complex medical terminology and patient understanding. Users upload their lab reports (PDF, image, or text), and Claude AI generates plain-language explanations with contextual insights, flagged abnormal values, and suggested questions to ask their doctor.
+Medyra helps patients understand their medical lab results in plain language. Upload a report (PDF, image, or text), and Claude AI explains every value — flagging what's normal, low, high, or critical — in 18 languages. Built to be GDPR-compliant and deployed to the EU (Frankfurt, Vercel).
 
 ---
 
-## Features
+## Table of Contents
 
-### Core
-| Feature | Details |
-|---|---|
-| **Authentication** | Clerk — sign-up, sign-in, OAuth, webhooks |
-| **File Upload** | PDF, JPG, PNG, TXT via drag-and-drop or camera |
-| **OCR** | Google Cloud Vision API extracts text from scanned images |
-| **AI Analysis** | Claude (Anthropic) explains results in plain language |
-| **Abnormal Flagging** | Values marked as normal / low / high / critical |
-| **Follow-up Chat** | Ask follow-up questions about your specific results |
-| **Dashboard** | Usage tracking, subscription status, report history |
-| **Payments** | Stripe — 5 pricing tiers, webhooks, session management |
-| **GDPR** | Auto-deletion after 30 days, consent notices, data encryption |
-| **i18n** | 16 languages — cookie-based locale, server-side rendering |
-| **Responsive UI** | Mobile-first — optimized for phone, tablet, and desktop |
-
-### Pricing Tiers
-| Plan | Price | Limit |
-|---|---|---|
-| Free | €0/mo | 1 report/month |
-| One-Time | €4.99 | Per report |
-| Personal | €9/mo | Unlimited reports |
-| Family | €19/mo | 5 members |
-| Clinic | €199/mo | Unlimited patients, white-label |
-
-### Supported Languages
-English · German · French · Spanish · Italian · Portuguese · Dutch · Polish · Turkish · Arabic · Chinese · Japanese · Korean · Hindi · Bengali · Russian
+1. [Tech Stack](#tech-stack)
+2. [Project Structure](#project-structure)
+3. [Local Setup](#local-setup)
+4. [Environment Variables](#environment-variables)
+5. [Branch & Deployment Workflow](#branch--deployment-workflow)
+6. [Key Features](#key-features)
+7. [Database Schema](#database-schema)
+8. [API Routes](#api-routes)
+9. [Internationalization](#internationalization)
+10. [Payments (Stripe)](#payments-stripe)
+11. [Contributing](#contributing)
 
 ---
 
 ## Tech Stack
 
-**Frontend**
-- Next.js 15 (App Router, Server Components)
-- React 19
-- Tailwind CSS + shadcn/ui
-- next-intl v3 (i18n, cookie-based locale)
-- Lucide React
-
-**Backend**
-- Next.js API Routes
-- MongoDB Atlas
-- Anthropic Claude API
-- Google Cloud Vision API (OCR)
-- Stripe API + Webhooks
-- pdf-parse
-
-**Auth & Infra**
-- Clerk (authentication + user management)
-- Vercel (deployment, Frankfurt region)
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 15 (App Router, React 19) |
+| Styling | Tailwind CSS 3 + shadcn/ui |
+| Auth | Clerk (OAuth, webhooks) |
+| Database | MongoDB Atlas |
+| AI | Anthropic Claude API |
+| OCR | Google Cloud Vision |
+| Payments | Stripe |
+| i18n | next-intl (18 languages) |
+| Deployment | Vercel (Frankfurt, fra1) |
 
 ---
 
 ## Project Structure
 
 ```
-medyra/
-├── app/
-│   ├── page.js                  # Landing page
-│   ├── dashboard/page.js        # User dashboard
-│   ├── upload/page.js           # File upload
-│   ├── reports/[id]/page.js     # Report detail + chat
-│   ├── pricing/page.js          # Pricing plans
-│   ├── success/page.js          # Payment confirmation
-│   ├── sign-in/                 # Clerk sign-in
-│   └── sign-up/                 # Clerk sign-up
+Medyra/
+├── app/                    # Next.js App Router pages & API routes
+│   ├── api/                # Server-side API endpoints
+│   │   ├── [[...path]]/    # Main AI analysis handler
+│   │   ├── checkout/       # Stripe checkout session
+│   │   ├── billing-portal/ # Stripe customer portal
+│   │   ├── prep/           # Doctor visit prep (AI + chat)
+│   │   ├── profiles/       # Health profiles CRUD
+│   │   ├── stripe/webhook/ # Stripe webhook handler
+│   │   └── admin/          # Admin-only endpoints
+│   ├── dashboard/          # User dashboard
+│   ├── upload/             # File upload page
+│   ├── reports/            # Report history & detail views
+│   ├── profiles/           # Health profiles (Health Vault)
+│   ├── blog/               # 9 SEO blog articles
+│   ├── lexikon/            # Medical terms encyclopedia
+│   ├── pricing/            # Pricing page
+│   ├── sign-in/ sign-up/   # Clerk auth pages
+│   ├── admin/              # Admin dashboard
+│   ├── layout.js           # Root layout (fonts, providers)
+│   ├── page.js             # Landing page
+│   ├── robots.js           # Dynamic robots.txt
+│   └── sitemap.js          # Dynamic sitemap
 ├── components/
-│   ├── LanguageSwitcher.jsx     # Cookie-based locale switcher
-│   ├── MobileNav.jsx            # Bottom nav for mobile
-│   └── ui/                      # shadcn/ui components
-├── messages/                    # i18n translation files (16 languages)
-│   ├── en.json                  # English (source of truth)
-│   ├── de.json                  # German
-│   └── ...                      # 14 more languages
+│   ├── ui/                 # 40+ shadcn/ui base components
+│   ├── lexikon/            # Lexikon-specific components
+│   ├── MobileNav.jsx       # Mobile bottom navigation
+│   ├── ConsentModal.jsx    # GDPR consent modal
+│   ├── CookieBanner.jsx    # Cookie notice
+│   ├── LanguageSwitcher.jsx
+│   ├── JsonLd.jsx          # Schema.org structured data
+│   └── SiteFooter.js
 ├── lib/
-│   └── mongodb.js               # MongoDB connection
-├── app/api/
-│   ├── reports/analyze/         # Upload + AI analysis
-│   ├── reports/[id]/chat/       # Follow-up questions
-│   ├── subscription/            # User plan info
-│   ├── checkout/                # Stripe session
-│   └── webhook/                 # Stripe + Clerk webhooks
-└── i18n.js                      # next-intl config
+│   ├── mongodb.js          # MongoDB connection helper
+│   ├── lexikon.js          # Lexikon data helpers
+│   └── utils.js            # Shared utilities
+├── messages/               # i18n translation files (18 languages)
+├── data/lexikon/           # 45+ medical term JSON definitions
+├── hooks/                  # use-mobile, use-toast
+├── public/                 # Static assets (logos, manifest)
+├── scripts/                # Translation generation scripts
+├── middleware.js           # Clerk auth middleware (public routes)
+├── i18n.js                 # next-intl config
+├── next.config.js
+├── tailwind.config.js
+└── .env.example            # Environment variable template
 ```
 
 ---
 
-## API Reference
-
-```
-GET  /api/                        Health check
-POST /api/reports/analyze         Upload and analyze a report
-GET  /api/reports                 List user's reports
-GET  /api/reports/:id             Get a specific report
-POST /api/reports/:id/chat        Ask a follow-up question
-GET  /api/subscription            Get user's subscription + usage
-POST /api/checkout                Create a Stripe checkout session
-POST /api/webhook/stripe          Stripe webhook handler
-POST /api/webhook/clerk           Clerk webhook handler
-```
-
----
-
-## Getting Started
+## Local Setup
 
 ### Prerequisites
-- Node.js 18+
-- MongoDB Atlas account
-- Clerk account
-- Anthropic API key
-- Stripe account
-- Google Cloud Vision credentials (optional — for image OCR)
 
-### Installation
+- **Node.js** 18 or later
+- **Yarn** 1.x — install with `npm install -g yarn`
+- **Git**
+- Accounts needed: MongoDB Atlas, Clerk, Stripe, Anthropic (see [Environment Variables](#environment-variables))
+
+### Steps
 
 ```bash
-git clone https://github.com/abralurrahman/Medyra.git
+# 1. Clone the repository
+git clone https://github.com/Medyra-Health/Medyra.git
 cd Medyra
-npm install --legacy-peer-deps
+
+# 2. Install dependencies
+yarn install
+
+# 3. Set up environment variables
+cp .env.example .env.local
+# Open .env.local and fill in all values (see the table below)
+
+# 4. Start the development server
+yarn dev
 ```
 
-### Environment Variables
+The app runs at **http://localhost:3000**.
 
-Create `.env.local`:
+---
+
+## Environment Variables
+
+Copy `.env.example` to `.env.local` and fill in every value. **Never commit `.env.local` to git.**
+
+| Variable | Where to get it | Notes |
+|---|---|---|
+| `MONGO_URL` | MongoDB Atlas → Clusters → Connect | Use a separate DB for staging |
+| `DB_NAME` | Your choice | e.g. `medyra` (prod) / `medyra-staging` (staging) |
+| `ANTHROPIC_API_KEY` | console.anthropic.com | Powers AI report analysis |
+| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | Clerk Dashboard → API Keys | Frontend-safe key |
+| `CLERK_SECRET_KEY` | Clerk Dashboard → API Keys | Server-only, never expose |
+| `STRIPE_SECRET_KEY` | Stripe Dashboard → API Keys | Use `sk_test_` for staging |
+| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Stripe Dashboard → API Keys | Frontend-safe key |
+| `STRIPE_WEBHOOK_SECRET` | Stripe Dashboard → Webhooks | Different per environment |
+| `ENCRYPTION_KEY` | Generate locally (see below) | 64-char hex, 32 bytes |
+| `GOOGLE_CREDENTIALS_BASE64` | GCP Service Account JSON | Optional — only needed for OCR |
+
+**Generate an encryption key:**
+```bash
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+```
+
+> **Staging tip:** Use Stripe test mode keys (`sk_test_`, `pk_test_`) and a separate MongoDB database (`DB_NAME=medyra-staging`) so you never touch real production data while testing.
+
+---
+
+## Branch & Deployment Workflow
+
+We use a **three-tier model** so no untested code ever reaches the live site.
+
+```
+feature/my-feature  →  staging  →  main
+                                     │
+                                 medyra.de (production)
+```
+
+### Branch roles
+
+| Branch | Purpose | Deploys to |
+|---|---|---|
+| `main` | Production-ready code only | medyra.de (live) |
+| `staging` | Integration testing before going live | Vercel preview URL |
+| `feature/*` | Individual features or fixes | Local dev / personal preview |
+
+### Day-to-day workflow
 
 ```bash
-# Database
-MONGO_URL=mongodb+srv://<user>:<password>@cluster.mongodb.net/
-DB_NAME=medyra
+# 1. Always branch off staging — not main
+git checkout staging
+git pull origin staging
+git checkout -b feature/your-feature-name
 
-# AI
-ANTHROPIC_API_KEY=sk-ant-api03-...
+# 2. Build your feature, commit often
+git add <specific-files>
+git commit -m "feat: short description of what you did"
 
-# Authentication
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
-CLERK_SECRET_KEY=sk_test_...
+# 3. Push and open a PR targeting staging
+git push origin feature/your-feature-name
+# On GitHub: open PR from feature/your-feature-name → staging
 
-# Payments
-STRIPE_SECRET_KEY=sk_test_...
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
+# 4. Vercel auto-deploys the branch — test on the preview URL
 
-# Optional: Google Vision OCR
-GOOGLE_CREDENTIALS_BASE64=<base64-encoded-service-account-json>
+# 5. Once staging looks good, open a PR: staging → main
+#    Both founders review and approve before merging
 ```
 
-### Run locally
+### Rules
 
-```bash
-npm run dev
-```
+- **Never push directly to `main`.** Always go through staging first.
+- **Both founders must approve** a `staging → main` PR before it merges.
+- Test on the Vercel staging preview URL before touching production.
+- Keep staging env vars pointing at test/staging credentials only.
+
+### Setting up Vercel for staging (one-time)
+
+1. Go to your Vercel project → **Settings → Git**
+2. Confirm "Production Branch" is set to `main`
+3. Vercel automatically creates preview deployments for every other branch (including `staging`)
+4. Go to **Settings → Environment Variables**, add your staging credentials and scope them to **"Preview"** only (not Production)
+
+---
+
+## Key Features
+
+### 1. File Upload & OCR
+- Drag-and-drop or camera capture (`app/upload/`)
+- Accepts PDF, JPG, PNG, TXT
+- PDFs parsed with `pdf-parse`; images processed with Google Cloud Vision (OCR)
+
+### 2. AI Analysis
+- Claude API reads extracted text and returns plain-language explanations
+- Every value is flagged: normal / low / high / critical
+- Follow-up chat lets users ask questions about their specific results
+
+### 3. Doctor Visit Prep (`/prep`)
+- AI generates a list of questions to bring to the next appointment
+- Chat interface for refining the prep notes
+
+### 4. Health Profiles — Health Vault (`/profiles`)
+- Users store personal health data (allergies, conditions, medications)
+- Linked to reports so the AI has context for analysis
+
+### 5. Medical Lexikon (`/lexikon`)
+- Encyclopedia of 45+ medical terms with normal ranges
+- SEO-optimized with Schema.org structured data, available in 18 languages
+
+### 6. Dashboard (`/dashboard`)
+- Usage counter, subscription tier, report history
+- Subscription management via Stripe Billing Portal
+
+### 7. Internationalization
+- 18 languages: EN, DE, FR, ES, IT, PT, NL, PL, TR, AR, ZH, JA, KO, HI, BN, RU, UR
+- Cookie-based locale detection with server-side rendering
+- All UI strings live in `messages/<locale>.json`
+
+### 8. GDPR Compliance
+- Reports auto-expire after 30 days (`expiresAt` field in MongoDB)
+- Health data encrypted with AES-256-GCM (`ENCRYPTION_KEY`)
+- GDPR consent modal and cookie banner included
+- Deployed to Vercel Frankfurt region (fra1) for EU data residency
 
 ---
 
 ## Database Schema
 
+Three MongoDB collections:
+
 ### `users`
-```json
-{
-  "clerkId": "string",
-  "email": "string",
-  "tier": "free | onetime | personal | family | clinic",
-  "usageLimit": 1,
-  "currentUsage": 0,
-  "stripeCustomerId": "string",
-  "createdAt": "Date"
-}
-```
+| Field | Type | Description |
+|---|---|---|
+| `clerkId` | String | Clerk user ID (used as primary key) |
+| `email` | String | User email |
+| `tier` | String | `free`, `one-time`, `personal`, `family`, `clinic` |
+| `usageLimit` | Number | Max reports allowed for this tier |
+| `currentUsage` | Number | Reports used this period |
+| `stripeCustomerId` | String | Stripe customer ID |
+| `createdAt` | Date | Account creation timestamp |
 
 ### `reports`
-```json
-{
-  "userId": "string",
-  "fileName": "string",
-  "extractedText": "string",
-  "explanation": {
-    "summary": "string",
-    "tests": [{ "name": "...", "value": "...", "flag": "normal|low|high|critical", "normalRange": "...", "explanation": "...", "interpretation": "..." }],
-    "questionsForDoctor": ["string"],
-    "disclaimer": "string"
-  },
-  "conversations": [{ "question": "string", "answer": "string", "timestamp": "Date" }],
-  "createdAt": "Date",
-  "expiresAt": "Date"
-}
-```
+| Field | Type | Description |
+|---|---|---|
+| `userId` | String | Clerk user ID |
+| `fileName` | String | Original file name |
+| `extractedText` | String | Raw text from OCR or PDF parsing |
+| `explanation` | Object | AI-generated explanation with value flags |
+| `conversations` | Array | Chat history (follow-up questions) |
+| `createdAt` | Date | Upload timestamp |
+| `expiresAt` | Date | Auto-delete date (30 days after upload) |
 
 ### `payments`
-```json
-{
-  "userId": "string",
-  "stripeSessionId": "string",
-  "tier": "string",
-  "amount": 499,
-  "status": "pending | completed | failed",
-  "createdAt": "Date"
-}
-```
+| Field | Type | Description |
+|---|---|---|
+| `userId` | String | Clerk user ID |
+| `stripeSessionId` | String | Stripe checkout session ID |
+| `tier` | String | Tier purchased |
+| `amount` | Number | Amount charged (in cents) |
+| `status` | String | `pending`, `complete`, `failed` |
+| `createdAt` | Date | Payment timestamp |
+
+---
+
+## API Routes
+
+| Method | Route | Auth | Description |
+|---|---|---|---|
+| `POST` | `/api/[[...path]]` | Required | Main AI analysis (upload + explain) |
+| `POST` | `/api/checkout` | Required | Create Stripe checkout session |
+| `GET` | `/api/billing-portal` | Required | Redirect to Stripe customer portal |
+| `POST` | `/api/stripe/webhook` | Stripe sig | Handle Stripe payment events |
+| `GET/POST` | `/api/prep` | Required | Generate doctor visit prep notes |
+| `POST` | `/api/prep/chat` | Required | Follow-up chat for prep notes |
+| `GET/POST/DELETE` | `/api/profiles` | Required | Health profiles CRUD |
+| `GET` | `/api/admin/stats` | Admin only | Platform usage stats |
+| `POST` | `/api/admin/activate` | Admin only | Manual user tier activation |
 
 ---
 
 ## Internationalization
 
-Locale is detected from a `locale` cookie, set by the `LanguageSwitcher` component. The root layout reads it server-side and loads the correct message file via `next-intl`.
+All UI strings are in `messages/<locale>.json`. English (`en.json`) is the source of truth.
 
-```
-User selects language
-  → LanguageSwitcher sets cookie
-    → RootLayout reads cookie on next request
-      → Loads messages/[locale].json
-        → NextIntlClientProvider wraps the app
-```
+**Adding a new string:**
+1. Add the key/value to `messages/en.json`
+2. Add the translation to the other locale files (or run the relevant script in `scripts/`)
+3. Use in a component via `useTranslations()` from `lib/useTranslations.js`
 
-All 16 message files are fully translated including nav, hero, features, pricing, upload, dashboard, and report sections.
+**Adding a new language:**
+1. Create `messages/<locale>.json` (copy from `en.json` and translate)
+2. Add the locale to `i18n.js`
+3. Add a flag + label to `components/LanguageSwitcher.jsx`
 
 ---
 
-## Deployment
+## Payments (Stripe)
 
-The app is deployed on Vercel with the Frankfurt (`fra1`) region for GDPR-optimal data locality.
+**Pricing tiers:**
 
+| Plan | Price | Report limit |
+|---|---|---|
+| Free | €0 | 2 reports |
+| One-Time | €4.99 | 10 reports |
+| Personal | €9 / month | 30 reports/month |
+| Family | €19 / month | 100 reports/month |
+| Clinic | €199 / month | Unlimited |
+
+**Payment flow:**
+1. User clicks "Upgrade" → `POST /api/checkout` creates a Stripe Checkout Session
+2. User pays on Stripe's hosted page
+3. Stripe fires `checkout.session.completed` webhook → `POST /api/stripe/webhook`
+4. Webhook updates `users.tier` and `users.usageLimit` in MongoDB
+
+**Testing webhooks locally:**
 ```bash
-# vercel.json already configured
-vercel --prod
+# Install Stripe CLI, then:
+stripe listen --forward-to localhost:3000/api/stripe/webhook
 ```
-
-Required env vars must be added in the Vercel dashboard. For the custom domain `medyra.de`, set DNS:
-- `A` record `@` → `76.76.21.21`
-- `CNAME` `www` → `cname.vercel-dns.com`
-
----
-
-## Legal & Compliance
-
-- **Medical disclaimer** visible on every page and every report result
-- **GDPR**: data auto-expires after 30 days, no data sold or shared
-- **Education only**: Medyra explains terminology — it does not provide medical advice, diagnoses, or treatment recommendations
-
----
-
-## Roadmap
-
-- [ ] Email notifications (SendGrid / Resend)
-- [ ] PDF export of AI explanations
-- [ ] Webhook signature verification (production secrets)
-- [ ] Family member sub-accounts
-- [ ] Clinic EHR integration (HL7/FHIR)
-- [ ] iOS / Android native app (Capacitor)
 
 ---
 
 ## Contributing
 
-Pull requests are welcome. For major changes, open an issue first to discuss what you'd like to change.
+1. Clone the repo and set up your local environment (see [Local Setup](#local-setup))
+2. Create a feature branch off `staging` — **not** `main`
+3. Make your changes and push
+4. Open a PR targeting `staging` and request a review
+5. Test on the Vercel staging preview URL
+6. Once approved and tested, open a `staging → main` PR — both founders must approve
+
+**Commit message convention:**
+```
+feat: add new feature
+fix: resolve a bug
+chore: dependency or config update
+docs: documentation change
+```
 
 ---
 
-**Built with care in Germany**
+*Questions? Open an issue or reach out via [medyra.de/contact](https://medyra.de/contact).*
