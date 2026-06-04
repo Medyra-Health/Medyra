@@ -13,7 +13,7 @@ const PROFILE_LIMITS = {
   admin:    null,
 }
 
-const ADMIN_EMAIL = 'abralur28@gmail.com'
+const ADMIN_EMAILS = ['abralur28@gmail.com', 'philipp.mattar@googlemail.com']
 
 let _client = null, _db = null
 async function getDb() {
@@ -33,7 +33,7 @@ async function getEffectiveTier(userId) {
     if (res.ok) {
       const u = await res.json()
       const email = u.email_addresses?.[0]?.email_address
-      if (email === ADMIN_EMAIL) return 'admin'
+      if (ADMIN_EMAILS.includes(email)) return 'admin'
     }
   } catch {}
   const db = await getDb()

@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb'
 import { NextResponse } from 'next/server'
 import { currentUser, clerkClient } from '@clerk/nextjs/server'
 
-const ADMIN_EMAIL = 'abralur28@gmail.com'
+const ADMIN_EMAILS = ['abralur28@gmail.com', 'philipp.mattar@googlemail.com']
 
 let mongoClient = null
 let db = null
@@ -48,7 +48,7 @@ export async function GET() {
     }
 
     const email = user.emailAddresses?.[0]?.emailAddress
-    if (email !== ADMIN_EMAIL) {
+    if (!ADMIN_EMAILS.includes(email)) {
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
     }
 

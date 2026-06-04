@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { MongoClient } from 'mongodb'
 
-const ADMIN_EMAIL = 'abralur28@gmail.com'
+const ADMIN_EMAILS = ['abralur28@gmail.com', 'philipp.mattar@googlemail.com']
 
 let _client = null
 let _db = null
@@ -27,8 +27,8 @@ export async function POST() {
   }
   const clerkUser = await clerkRes.json()
   const email = clerkUser.email_addresses?.[0]?.email_address
-  if (email !== ADMIN_EMAIL) {
-    return NextResponse.json({ error: `Forbidden, ${email} is not the admin account` }, { status: 403 })
+  if (!ADMIN_EMAILS.includes(email)) {
+    return NextResponse.json({ error: `Forbidden, ${email} is not an admin account` }, { status: 403 })
   }
 
   const db = await getDb()
@@ -36,7 +36,7 @@ export async function POST() {
     { clerkId: userId },
     {
       $set: {
-        email: ADMIN_EMAIL,
+        email,
         'subscription.tier': 'admin',
         'subscription.status': 'active',
         'subscription.usageLimit': 999999,

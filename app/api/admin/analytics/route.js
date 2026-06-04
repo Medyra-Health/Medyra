@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { currentUser } from '@clerk/nextjs/server'
 import { BetaAnalyticsDataClient } from '@google-analytics/data'
 
-const ADMIN_EMAIL = 'abralur28@gmail.com'
+const ADMIN_EMAILS = ['abralur28@gmail.com', 'philipp.mattar@googlemail.com']
 
 function getAnalyticsClient() {
   const credsJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
@@ -27,7 +27,7 @@ export async function GET() {
     const user = await currentUser()
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     const email = user.emailAddresses?.[0]?.emailAddress
-    if (email !== ADMIN_EMAIL) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    if (!ADMIN_EMAILS.includes(email)) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
 
     const ga = getAnalyticsClient()
     if (!ga) {

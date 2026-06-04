@@ -2,7 +2,7 @@ import { currentUser } from '@clerk/nextjs/server'
 import { MongoClient } from 'mongodb'
 import { createCipheriv, createDecipheriv, randomBytes } from 'crypto'
 
-const ADMIN_EMAIL = 'abralur28@gmail.com'
+const ADMIN_EMAILS = ['abralur28@gmail.com', 'philipp.mattar@googlemail.com']
 const ENC_ALGO = 'aes-256-gcm'
 
 function getEncKey() {
@@ -32,7 +32,7 @@ function encrypt(plaintext) {
 export async function POST() {
   const user = await currentUser()
   const email = user?.emailAddresses?.[0]?.emailAddress
-  if (!email || email !== ADMIN_EMAIL) {
+  if (!email || !ADMIN_EMAILS.includes(email)) {
     return Response.json({ error: 'Forbidden' }, { status: 403 })
   }
 
