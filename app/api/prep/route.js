@@ -15,7 +15,7 @@ const PREP_LIMITS = {
 
 const FAIR_USE_MSG = "You've reached your fair use limit for this month. Contact us if you need more."
 
-const ADMIN_EMAIL = 'abralur28@gmail.com'
+const ADMIN_EMAILS = ['abralur28@gmail.com', 'philipp.mattar@googlemail.com']
 
 // Determine the user's effective tier for prep access
 async function getEffectiveTier(userId, mongoTier) {
@@ -28,7 +28,7 @@ async function getEffectiveTier(userId, mongoTier) {
     if (res.ok) {
       const u = await res.json()
       const email = u.email_addresses?.[0]?.email_address
-      if (email === ADMIN_EMAIL) return 'admin'
+      if (ADMIN_EMAILS.includes(email)) return 'admin'
     }
   } catch {}
   return mongoTier || 'free'

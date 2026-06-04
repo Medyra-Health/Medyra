@@ -1,7 +1,7 @@
 import { currentUser } from '@clerk/nextjs/server'
 import { MongoClient } from 'mongodb'
 
-const ADMIN_EMAIL = 'abralur28@gmail.com'
+const ADMIN_EMAILS = ['abralur28@gmail.com', 'philipp.mattar@googlemail.com']
 
 function looksEncrypted(value) {
   if (typeof value !== 'string') return false
@@ -17,7 +17,7 @@ function redact(value) {
 export async function GET() {
   const user = await currentUser()
   const email = user?.emailAddresses?.[0]?.emailAddress
-  if (!email || email !== ADMIN_EMAIL) {
+  if (!email || !ADMIN_EMAILS.includes(email)) {
     return Response.json({ error: 'Forbidden' }, { status: 403 })
   }
 

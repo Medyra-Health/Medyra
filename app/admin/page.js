@@ -20,7 +20,7 @@ const GAChart = dynamic(() => import('@/components/GAChart'), {
   loading: () => <div className="h-[180px] flex items-center justify-center text-gray-400 text-sm">Loading chart…</div>,
 })
 
-const ADMIN_EMAIL = 'abralur28@gmail.com'
+const ADMIN_EMAILS = ['abralur28@gmail.com', 'philipp.mattar@googlemail.com']
 const REFRESH_INTERVAL = 5 * 60 * 1000 // 5 minutes
 
 const TIER_COLORS = {
@@ -137,7 +137,7 @@ export default function AdminPage() {
     if (!isLoaded) return
     if (!user) { router.replace('/'); return }
     const email = user.emailAddresses?.[0]?.emailAddress
-    if (email !== ADMIN_EMAIL) { router.replace('/'); return }
+    if (!ADMIN_EMAILS.includes(email)) { router.replace('/'); return }
     fetchStats()
   }, [isLoaded, user, router, fetchStats])
 
