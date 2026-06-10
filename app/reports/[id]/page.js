@@ -96,6 +96,62 @@ function inlineMarkdown(text) {
   })
 }
 
+// Parses a numeric value out of strings like "14.5 g/dL" or German "14,8 g/dL"
+function parseValue(valStr) {
+  const m = String(valStr || '').replace(/,/g, '.').match(/\d+(?:\.\d+)?/)
+  return m ? parseFloat(m[0]) : null
+}
+
+// Parses reference ranges like "13.5–17.5 g/dL", "13,5 - 17,5", "<130", "> 40"
+function parseRange(rangeStr) {
+  if (!rangeStr) return null
+  const s = String(rangeStr).replace(/,/g, '.')
+  const nums = (s.match(/\d+(?:\.\d+)?/g) || []).map(Number)
+  if (/[<≤]/.test(s) && nums.length >= 1) return { lo: null, hi: nums[0] }
+  if (/[>≥]/.test(s) && nums.length >= 1) return { lo: nums[0], hi: null }
+  if (nums.length >= 2 && nums[1] > nums[0]) return { lo: nums[0], hi: nums[1] }
+  return null
+}
+
+// Shows where the patient's value sits relative to the reference range:
+// green band = normal zone, dot = the value. Falls back to nothing if unparsable.
+function RangeBar({ value, normalRange, flag }) {
+  const v = parseValue(value)
+  const r = parseRange(normalRange)
+  if (v === null || !r) return null
+
+  let band = [20, 80]
+  let pos
+  if (r.lo !== null && r.hi !== null) {
+    pos = 20 + ((v - r.lo) / (r.hi - r.lo)) * 60
+  } else if (r.hi !== null) {
+    band = [0, 70] // "below X" target: the normal zone is everything left of X
+    pos = (v / r.hi) * 70
+  } else {
+    band = [30, 100] // "above X" target: the normal zone is everything right of X
+    pos = (v / r.lo) * 30
+  }
+  pos = Math.max(2, Math.min(98, pos))
+
+  const dotColor =
+    flag === 'critical' ? 'bg-red-500' :
+    flag === 'high' ? 'bg-orange-500' :
+    flag === 'low' ? 'bg-yellow-500' : 'bg-emerald-500'
+
+  return (
+    <div className="relative h-1.5 bg-gray-100 rounded-full mt-1.5 mb-1">
+      <div
+        className="absolute top-0 bottom-0 bg-emerald-100 rounded-full"
+        style={{ left: `${band[0]}%`, width: `${band[1] - band[0]}%` }}
+      />
+      <div
+        className={`absolute top-1/2 w-3 h-3 rounded-full border-2 border-white shadow ${dotColor}`}
+        style={{ left: `${pos}%`, transform: 'translate(-50%,-50%)' }}
+      />
+    </div>
+  )
+}
+
 export default function ReportDetailPage({ params }) {
   const unwrappedParams = use(params)
   const reportId = unwrappedParams.id
@@ -261,24 +317,6 @@ export default function ReportDetailPage({ params }) {
       default: return 'border-l-gray-300'
     }
   }
-  const getBarColor = (flag) => {
-    switch (flag) {
-      case 'critical': return 'bg-red-500'
-      case 'high': return 'bg-orange-500'
-      case 'low': return 'bg-yellow-500'
-      case 'normal': return 'bg-emerald-500'
-      default: return 'bg-gray-400'
-    }
-  }
-  const getBarWidth = (flag) => {
-    switch (flag) {
-      case 'critical': return 'w-11/12'
-      case 'high': return 'w-4/5'
-      case 'low': return 'w-1/5'
-      case 'normal': return 'w-1/2'
-      default: return 'w-1/2'
-    }
-  }
   const getFlagLabel = (flag) => {
     switch (flag) {
       case 'critical': return t('report.critical')
@@ -358,6 +396,19 @@ export default function ReportDetailPage({ params }) {
         doc.text(s.label, sx + statW / 2 - 0.5, y + 18.5, { align: 'center' })
       })
       y += 26
+
+      // ── IN SHORT ──
+      if (explanation.inShort) {
+        check(16)
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(17, 24, 39)
+        doc.text('IN SHORT', M, y)
+        doc.setDrawColor(209, 213, 219); doc.line(M + 25, y - 0.5, W - M, y - 0.5)
+        y += 5
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); doc.setTextColor(6, 78, 59)
+        const shortLines = doc.splitTextToSize(explanation.inShort, CW)
+        shortLines.forEach(line => { check(5); doc.text(line, M, y); y += 4.8 })
+        y += 5
+      }
 
       // ── SUMMARY ──
       if (explanation.summary) {
@@ -456,6 +507,28 @@ export default function ReportDetailPage({ params }) {
           doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(55, 65, 81)
           qLines.forEach((l, li) => { doc.text(l, M + 9, y + 2.5 + li * 4); })
           y += qLines.length * 4 + 4
+        })
+      }
+
+      // ── SUGGESTED NEXT STEPS ──
+      if (explanation.nextSteps?.length > 0) {
+        y += 2; check(16)
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(17, 24, 39)
+        doc.text('SUGGESTED NEXT STEPS', M, y)
+        doc.setDrawColor(209, 213, 219); doc.line(M + 58, y - 0.5, W - M, y - 0.5)
+        y += 6
+
+        explanation.nextSteps.forEach((s, i) => {
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5)
+          const sLines = doc.splitTextToSize(s, CW - 10)
+          check(sLines.length * 4 + 4)
+          doc.setFillColor(16, 185, 129)
+          doc.circle(M + 3, y + 0.5, 3, 'F')
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(6.5); doc.setTextColor(255, 255, 255)
+          doc.text(String(i + 1), M + 3, y + 2.3, { align: 'center' })
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(55, 65, 81)
+          sLines.forEach((l, li) => { doc.text(l, M + 9, y + 2.5 + li * 4); })
+          y += sLines.length * 4 + 4
         })
       }
 
@@ -586,6 +659,44 @@ export default function ReportDetailPage({ params }) {
           </div>
         )}
 
+        {/* ── MEDYRA BRIEF: the short version ── */}
+        {(explanation.inShort || explanation.summary) && (
+          <div className="rounded-2xl overflow-hidden border border-emerald-100 shadow-sm mb-5 bg-white">
+            <div className="bg-gradient-to-r from-emerald-900 to-emerald-700 px-4 sm:px-5 py-2.5 flex items-center justify-between">
+              <p className="text-xs font-bold tracking-widest text-emerald-200 uppercase">The short version</p>
+              <p className="text-xs text-emerald-300/80 font-medium">Medyra Brief</p>
+            </div>
+            <div className="px-4 sm:px-5 py-4">
+              <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-medium">
+                {explanation.inShort || explanation.summary}
+              </p>
+              {abnormal > 0 && (
+                <div className="flex flex-wrap gap-1.5 mt-3">
+                  {tests.filter(tt => tt.flag !== 'normal').map((tt, i) => (
+                    <span key={i} className={`inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full border ${getFlagColor(tt.flag)}`}>
+                      {getFlagIcon(tt.flag)}
+                      {tt.name}: {tt.value}
+                    </span>
+                  ))}
+                </div>
+              )}
+              {explanation.nextSteps?.length > 0 && (
+                <div className="mt-4 border-t border-gray-100 pt-3">
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">Suggested next steps</p>
+                  <ul className="space-y-1.5">
+                    {explanation.nextSteps.map((s, i) => (
+                      <li key={i} className="flex gap-2.5 text-sm text-gray-700">
+                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
+                        <span className="leading-relaxed">{s}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* ── HEALTH OVERVIEW ── */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
           {[
@@ -682,44 +793,68 @@ export default function ReportDetailPage({ params }) {
           </Card>
         )}
 
-        {/* ── TEST RESULTS ── */}
+        {/* ── TEST RESULTS (grouped by category when available) ── */}
         {tests.length > 0 && (
           <div className="space-y-3 mb-5">
             <h2 className="text-base font-bold text-gray-900">{t('report.testResults')}</h2>
-            {tests.map((test, index) => (
-              <Card key={index} className={`border-l-4 ${getFlagBorderColor(test.flag)}`}>
-                <CardHeader className="pb-2">
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="flex items-center gap-2 min-w-0">
-                      {getFlagIcon(test.flag)}
-                      <CardTitle className="text-sm truncate">{test.name}</CardTitle>
-                    </div>
-                    <Badge variant={test.flag === 'normal' ? 'default' : 'destructive'} className="flex-shrink-0 text-xs">
-                      {getFlagLabel(test.flag)}
-                    </Badge>
+            {(() => {
+              const hasCategories = tests.some(tt => tt.category)
+              const groups = hasCategories
+                ? Object.entries(tests.reduce((acc, tt) => {
+                    const c = tt.category || 'Other'
+                    if (!acc[c]) acc[c] = []
+                    acc[c].push(tt)
+                    return acc
+                  }, {}))
+                : [[null, tests]]
+              return groups.map(([cat, list]) => {
+                const flagged = list.filter(tt => tt.flag !== 'normal').length
+                return (
+                  <div key={cat || 'all'} className="space-y-3">
+                    {cat && (
+                      <div className="flex items-center justify-between pt-1">
+                        <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">{cat}</p>
+                        <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${flagged > 0 ? 'bg-orange-100 text-orange-600' : 'bg-emerald-100 text-emerald-600'}`}>
+                          {flagged > 0 ? `${flagged} flagged` : 'All normal'}
+                        </span>
+                      </div>
+                    )}
+                    {list.map((test, index) => (
+                      <Card key={index} className={`border-l-4 ${getFlagBorderColor(test.flag)}`}>
+                        <CardHeader className="pb-2">
+                          <div className="flex items-start justify-between gap-2">
+                            <div className="flex items-center gap-2 min-w-0">
+                              {getFlagIcon(test.flag)}
+                              <CardTitle className="text-sm truncate">{test.name}</CardTitle>
+                            </div>
+                            <Badge variant={test.flag === 'normal' ? 'default' : 'destructive'} className="flex-shrink-0 text-xs">
+                              {getFlagLabel(test.flag)}
+                            </Badge>
+                          </div>
+                          {/* Value + where it sits in the reference range */}
+                          <div className="mt-2 space-y-1">
+                            <div className="flex justify-between text-xs text-gray-500">
+                              <span><span className="font-semibold text-gray-800">{test.value}</span>{test.normalRange && <span className="ml-1 opacity-70">· normal: {test.normalRange}</span>}</span>
+                            </div>
+                            <RangeBar value={test.value} normalRange={test.normalRange} flag={test.flag} />
+                          </div>
+                        </CardHeader>
+                        <CardContent className="pt-0 space-y-2">
+                          <div>
+                            <p className="text-xs font-semibold text-gray-400 mb-0.5">{t('report.whatThisTests')}</p>
+                            <p className="text-xs text-gray-700">{test.explanation}</p>
+                          </div>
+                          <div>
+                            <p className="text-xs font-semibold text-gray-400 mb-0.5">{t('report.whatThisMeans')}</p>
+                            <p className="text-xs text-gray-700">{test.interpretation}</p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
                   </div>
-                  {/* Value + visual bar */}
-                  <div className="mt-2 space-y-1">
-                    <div className="flex justify-between text-xs text-gray-500">
-                      <span><span className="font-semibold text-gray-800">{test.value}</span>{test.normalRange && <span className="ml-1 opacity-70">· normal: {test.normalRange}</span>}</span>
-                    </div>
-                    <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
-                      <div className={`h-full rounded-full transition-all ${getBarColor(test.flag)} ${getBarWidth(test.flag)}`} />
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-0 space-y-2">
-                  <div>
-                    <p className="text-xs font-semibold text-gray-400 mb-0.5">{t('report.whatThisTests')}</p>
-                    <p className="text-xs text-gray-700">{test.explanation}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-gray-400 mb-0.5">{t('report.whatThisMeans')}</p>
-                    <p className="text-xs text-gray-700">{test.interpretation}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                )
+              })
+            })()}
           </div>
         )}
 

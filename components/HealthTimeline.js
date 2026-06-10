@@ -7,16 +7,25 @@ import {
 import { useState } from 'react'
 import { TrendingUp, TrendingDown, Minus, AlertCircle } from 'lucide-react'
 
-// Common biomarkers to track with their normal ranges and units
+// Common biomarkers to track with their normal ranges and units.
+// Ranges are broad adult reference ranges (gender-neutral) — the AI report itself shows the lab's own range.
 export const TRACKED_BIOMARKERS = [
-  { key: 'hemoglobin',   label: 'Hemoglobin',  unit: 'g/dL',    normalMin: 12,  normalMax: 17.5, color: '#ef4444' },
-  { key: 'ferritin',     label: 'Ferritin',    unit: 'µg/L',    normalMin: 15,  normalMax: 150,  color: '#f97316' },
-  { key: 'tsh',          label: 'TSH',         unit: 'mIU/L',   normalMin: 0.4, normalMax: 4.0,  color: '#8b5cf6' },
-  { key: 'hba1c',        label: 'HbA1c',       unit: '%',       normalMin: 0,   normalMax: 5.6,  color: '#3b82f6' },
-  { key: 'cholesterol',  label: 'Cholesterol', unit: 'mg/dL',   normalMin: 0,   normalMax: 200,  color: '#14b8a6' },
-  { key: 'vitaminD',     label: 'Vitamin D',   unit: 'nmol/L',  normalMin: 50,  normalMax: 200,  color: '#eab308' },
-  { key: 'crp',          label: 'CRP',         unit: 'mg/L',    normalMin: 0,   normalMax: 5,    color: '#ec4899' },
-  { key: 'egfr',         label: 'eGFR',        unit: 'mL/min',  normalMin: 60,  normalMax: 120,  color: '#22c55e' },
+  { key: 'hemoglobin',    label: 'Hemoglobin',    unit: 'g/dL',   normalMin: 12,  normalMax: 17.5, color: '#ef4444' },
+  { key: 'leukocytes',    label: 'Leukocytes',    unit: 'G/L',    normalMin: 4,   normalMax: 10,   color: '#f43f5e' },
+  { key: 'platelets',     label: 'Platelets',     unit: 'G/L',    normalMin: 150, normalMax: 400,  color: '#a855f7' },
+  { key: 'ferritin',      label: 'Ferritin',      unit: 'µg/L',   normalMin: 15,  normalMax: 300,  color: '#f97316' },
+  { key: 'tsh',           label: 'TSH',           unit: 'mIU/L',  normalMin: 0.4, normalMax: 4.0,  color: '#8b5cf6' },
+  { key: 'hba1c',         label: 'HbA1c',         unit: '%',      normalMin: 4,   normalMax: 5.6,  color: '#3b82f6' },
+  { key: 'glucose',       label: 'Glucose',       unit: 'mg/dL',  normalMin: 70,  normalMax: 99,   color: '#0ea5e9' },
+  { key: 'cholesterol',   label: 'Cholesterol',   unit: 'mg/dL',  normalMin: 0,   normalMax: 200,  color: '#14b8a6' },
+  { key: 'ldl',           label: 'LDL',           unit: 'mg/dL',  normalMin: 0,   normalMax: 130,  color: '#f59e0b' },
+  { key: 'hdl',           label: 'HDL',           unit: 'mg/dL',  normalMin: 40,  normalMax: 100,  color: '#10b981' },
+  { key: 'triglycerides', label: 'Triglycerides', unit: 'mg/dL',  normalMin: 0,   normalMax: 150,  color: '#d946ef' },
+  { key: 'creatinine',    label: 'Creatinine',    unit: 'mg/dL',  normalMin: 0.6, normalMax: 1.2,  color: '#64748b' },
+  { key: 'vitaminD',      label: 'Vitamin D',     unit: 'nmol/L', normalMin: 50,  normalMax: 200,  color: '#eab308' },
+  { key: 'vitaminB12',    label: 'Vitamin B12',   unit: 'pg/mL',  normalMin: 200, normalMax: 900,  color: '#84cc16' },
+  { key: 'crp',           label: 'CRP',           unit: 'mg/L',   normalMin: 0,   normalMax: 5,    color: '#ec4899' },
+  { key: 'egfr',          label: 'eGFR',          unit: 'mL/min', normalMin: 60,  normalMax: 120,  color: '#22c55e' },
 ]
 
 function DeltaBadge({ delta }) {
@@ -53,17 +62,33 @@ const CustomTooltip = ({ active, payload, label }) => {
 }
 
 export default function HealthTimeline({ profile, reports = [] }) {
-  const [activeBiomarker, setActiveBiomarker] = useState(TRACKED_BIOMARKERS[0].key)
+  // Which biomarkers actually have recorded data for this profile
+  const dataKeys = new Set()
+  for (const entry of (profile?.biomarkers || [])) {
+    for (const v of (entry.values || [])) {
+      if (v.key) dataKeys.add(v.key)
+    }
+  }
+
+  const [activeBiomarker, setActiveBiomarker] = useState(
+    () => TRACKED_BIOMARKERS.find(b => dataKeys.has(b.key))?.key || TRACKED_BIOMARKERS[0].key
+  )
 
   const bm = TRACKED_BIOMARKERS.find(b => b.key === activeBiomarker) || TRACKED_BIOMARKERS[0]
 
-  // Build chart data from profile biomarker history
+  // Markers with data first, so the useful pills are always visible up front
+  const pills = [...TRACKED_BIOMARKERS].sort(
+    (a, b) => (dataKeys.has(b.key) ? 1 : 0) - (dataKeys.has(a.key) ? 1 : 0)
+  )
+
+  // Build chart data from profile biomarker history, in chronological order
   const chartData = (profile?.biomarkers || [])
-    .filter(entry => entry.values?.some(v => v.name?.toLowerCase().includes(activeBiomarker.toLowerCase()) || v.key === activeBiomarker))
+    .filter(entry => entry.values?.some(v => v.key === activeBiomarker || v.name?.toLowerCase() === activeBiomarker.toLowerCase()))
+    .sort((a, b) => new Date(a.recordedAt || a.date) - new Date(b.recordedAt || b.date))
     .map(entry => {
-      const match = entry.values?.find(v => v.name?.toLowerCase().includes(activeBiomarker.toLowerCase()) || v.key === activeBiomarker)
+      const match = entry.values?.find(v => v.key === activeBiomarker || v.name?.toLowerCase() === activeBiomarker.toLowerCase())
       return {
-        date: new Date(entry.recordedAt || entry.date).toLocaleDateString('en-GB', { month: 'short', year: '2-digit' }),
+        date: new Date(entry.recordedAt || entry.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: '2-digit' }),
         value: parseFloat(match?.value) || null,
         status: match?.status,
       }
@@ -88,20 +113,25 @@ export default function HealthTimeline({ profile, reports = [] }) {
 
   return (
     <div className="space-y-4">
-      {/* Biomarker selector pills */}
+      {/* Biomarker selector pills — markers with recorded data come first, empty ones are dimmed */}
       <div className="flex flex-wrap gap-2">
-        {TRACKED_BIOMARKERS.map(b => (
+        {pills.map(b => (
           <button
             key={b.key}
             onClick={() => setActiveBiomarker(b.key)}
             className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-all ${
               activeBiomarker === b.key
                 ? 'text-white border-transparent shadow-sm'
-                : 'bg-white border-gray-200 text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                : dataKeys.has(b.key)
+                  ? 'bg-white border-gray-200 text-gray-600 hover:border-gray-300 hover:text-gray-800'
+                  : 'bg-white border-gray-100 text-gray-300 hover:border-gray-200 hover:text-gray-500'
             }`}
             style={activeBiomarker === b.key ? { backgroundColor: b.color, borderColor: b.color } : {}}
           >
             {b.label}
+            {dataKeys.has(b.key) && activeBiomarker !== b.key && (
+              <span className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full align-middle" style={{ backgroundColor: b.color }} />
+            )}
           </button>
         ))}
       </div>

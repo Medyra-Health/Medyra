@@ -193,6 +193,7 @@ CRITICAL RULES:
 You MUST respond with VALID JSON only (no markdown, no code blocks):
 {
   "disclaimer": "This is educational information, not medical advice. Consult your doctor for personalized medical guidance.",
+  "inShort": "One plain-language sentence with the single most important takeaway of this report",
   "summary": "Brief 2-3 sentence overview",
   "tests": [
     {
@@ -201,12 +202,17 @@ You MUST respond with VALID JSON only (no markdown, no code blocks):
       "normalRange": "Normal range with units",
       "explanation": "What this test measures",
       "interpretation": "What the result means in plain language",
-      "flag": "normal"
+      "flag": "normal",
+      "category": "Blood count"
     }
   ],
-  "questionsForDoctor": ["Question 1", "Question 2", "Question 3"]
+  "questionsForDoctor": ["Question 1", "Question 2", "Question 3"],
+  "nextSteps": ["Concrete, calm suggested next step", "Another next step"]
 }
 flag must be: "normal", "high", "low", or "critical"
+category must be one of: "Blood count", "Metabolism & lipids", "Kidney & liver", "Thyroid & hormones", "Vitamins & minerals", "Inflammation & immunity", "Other"
+nextSteps: 2-4 short, actionable, non-alarming steps (e.g. discuss a value at the next routine visit, recheck in 3 months). Only suggest urgency if a value is critical.
+The report may be in German or English. Always answer in English, but keep the original test names recognizable (e.g. "Hämoglobin (Hemoglobin)").
 Return ONLY valid JSON. No other text.`
 
 const CHAT_PROMPT = `You are Medyra AI, a friendly, empathetic health assistant that helps patients understand their medical reports. Medyra AI is powered by Claude, made by Anthropic.
@@ -347,6 +353,7 @@ async function getAIExplanation(extractedText) {
     if (!parsed.summary) parsed.summary = 'Report analyzed.'
     if (!Array.isArray(parsed.tests)) parsed.tests = []
     if (!Array.isArray(parsed.questionsForDoctor)) parsed.questionsForDoctor = []
+    if (!Array.isArray(parsed.nextSteps)) parsed.nextSteps = []
     return parsed
   } catch {
     // Last resort: return structured error so the page still renders cleanly
@@ -500,6 +507,8 @@ async function handleAnalyzeReport(request) {
   }
 
   const reportId = uuidv4()
+  const profileId = formData.get('profileId') ? String(formData.get('profileId')) : null
+  const createdAt = new Date()
   await database.collection('reports').insertOne(encryptReport({
     id: reportId,
     userId,
@@ -508,10 +517,21 @@ async function handleAnalyzeReport(request) {
     extractedText: extractedText.substring(0, 50000),
     explanation,
     conversations: [],
-    createdAt: new Date(),
+    ...(profileId ? { profileId } : {}),
+    createdAt,
     expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
     status: 'completed'
   }))
+
+  // If the user picked a profile at upload time, record biomarkers for trends right away
+  let biomarkersExtracted = 0
+  if (profileId) {
+    try {
+      biomarkersExtracted = await recordBiomarkersToProfile(database, userId, profileId, reportId, explanation, createdAt)
+    } catch (err) {
+      console.warn('Biomarker recording failed:', err.message)
+    }
+  }
 
   await incrementUsage(userId, database)
 
@@ -519,6 +539,7 @@ async function handleAnalyzeReport(request) {
     success: true,
     reportId,
     explanation,
+    biomarkersExtracted,
     usage: { current: usageCheck.used + 1, limit: usageCheck.limit, tier: usageCheck.tier }
   }))
 }
@@ -551,16 +572,25 @@ async function handleGetReport(reportId) {
   return handleCORS(NextResponse.json({ success: true, report }))
 }
 
-// Biomarker keyword matcher, maps test name patterns to tracked keys
+// Biomarker keyword matcher, maps test name patterns (English + German) to tracked keys.
+// Order matters: specific markers (HbA1c, LDL/HDL) must come before generic ones (glucose, cholesterol).
 const BIOMARKER_PATTERNS = [
-  { key: 'hemoglobin', patterns: [/hemoglobin/i, /\bhgb\b/i, /\bhb\b/i] },
-  { key: 'ferritin',   patterns: [/ferritin/i] },
-  { key: 'tsh',        patterns: [/\btsh\b/i, /thyroid.stimulating/i] },
-  { key: 'hba1c',      patterns: [/hba1c/i, /hb\s?a1c/i, /glycat/i, /glycosylated/i] },
-  { key: 'cholesterol',patterns: [/total\s*cholesterol/i, /cholesterol/i] },
-  { key: 'vitaminD',   patterns: [/vitamin\s*d/i, /25.oh/i, /calcifediol/i] },
-  { key: 'crp',        patterns: [/\bcrp\b/i, /c.reactive/i] },
-  { key: 'egfr',       patterns: [/\begfr\b/i, /glomerular\s*filtration/i] },
+  { key: 'hba1c',         patterns: [/hba1c/i, /hb\s?a1c/i, /glycat/i, /glycosylated/i, /langzeitzucker/i] },
+  { key: 'ldl',           patterns: [/\bldl\b/i] },
+  { key: 'hdl',           patterns: [/\bhdl\b/i] },
+  { key: 'triglycerides', patterns: [/triglycerid/i, /triglyzerid/i] },
+  { key: 'cholesterol',   patterns: [/cholesterol/i, /cholesterin/i] },
+  { key: 'hemoglobin',    patterns: [/hemoglobin/i, /haemoglobin/i, /hämoglobin/i, /\bhgb\b/i, /\bhb\b/i] },
+  { key: 'ferritin',      patterns: [/ferritin/i] },
+  { key: 'tsh',           patterns: [/\btsh\b/i, /thyroid.stimulating/i, /thyreoidea.stimulierend/i] },
+  { key: 'glucose',       patterns: [/glucose/i, /glukose/i, /blutzucker/i, /nüchternzucker/i] },
+  { key: 'vitaminD',      patterns: [/vitamin\s*d3?\b/i, /25.oh/i, /calcifediol/i] },
+  { key: 'vitaminB12',    patterns: [/b\s?12/i, /cobalamin/i] },
+  { key: 'crp',           patterns: [/\bcrp\b/i, /c.reactive/i, /c.reaktiv/i] },
+  { key: 'creatinine',    patterns: [/creatinin/i, /kreatinin/i] },
+  { key: 'egfr',          patterns: [/\begfr\b/i, /\bgfr\b/i, /glomerular\s*filtration/i, /glomerulär/i] },
+  { key: 'leukocytes',    patterns: [/leukocyte/i, /leukozyt/i, /\bwbc\b/i, /white\s*blood/i] },
+  { key: 'platelets',     patterns: [/platelet/i, /thrombozyt/i, /\bplt\b/i] },
 ]
 
 function extractBiomarkersFromTests(tests, reportDate) {
@@ -568,8 +598,8 @@ function extractBiomarkersFromTests(tests, reportDate) {
   for (const test of (tests || [])) {
     const name = test.name || ''
     const raw = test.value || ''
-    // Parse numeric value from strings like "14.5 g/dL" or "143 mg/dL"
-    const numMatch = String(raw).match(/[\d.]+/)
+    // Parse numeric value from strings like "14.5 g/dL", "143 mg/dL" or German "14,8 g/dL"
+    const numMatch = String(raw).replace(/,/g, '.').match(/\d+(?:\.\d+)?/)
     if (!numMatch) continue
     const value = parseFloat(numMatch[0])
     if (isNaN(value)) continue
@@ -581,6 +611,39 @@ function extractBiomarkersFromTests(tests, reportDate) {
     }
   }
   return entries
+}
+
+// Extracts biomarkers from a report's tests and stores them on the given profile.
+// Always clears previous entries for this report first, so re-assigning never duplicates history.
+async function recordBiomarkersToProfile(database, userId, profileId, reportId, explanation, recordedAt) {
+  let tests = []
+  try {
+    const exp = typeof explanation === 'string' ? JSON.parse(explanation) : explanation
+    tests = exp?.tests || []
+  } catch {}
+
+  const flat = extractBiomarkersFromTests(tests, recordedAt)
+
+  await database.collection('users').updateOne(
+    { clerkId: userId },
+    { $pull: { 'profiles.$[].biomarkers': { reportId } } }
+  )
+
+  if (flat.length === 0) return 0
+
+  const biomarkerEntry = {
+    reportId,
+    recordedAt,
+    values: flat.map(e => ({ key: e.key, name: e.key, value: e.value, flag: e.flag })),
+  }
+  await database.collection('users').updateOne(
+    { clerkId: userId, 'profiles.id': profileId },
+    {
+      $push: { 'profiles.$.biomarkers': biomarkerEntry },
+      $set: { 'profiles.$.updatedAt': new Date() },
+    }
+  )
+  return flat.length
 }
 
 async function handleAssignReportToProfile(request, reportId) {
@@ -600,32 +663,13 @@ async function handleAssignReportToProfile(request, reportId) {
     { $set: { profileId, updatedAt: new Date() } }
   )
 
-  // Extract biomarkers and push to profile
+  // Extract biomarkers and push to profile (clears old entries for this report first)
   const report = decryptReport(raw)
-  let tests = []
-  try {
-    const exp = typeof report.explanation === 'string' ? JSON.parse(report.explanation) : report.explanation
-    tests = exp?.tests || []
-  } catch {}
+  const extracted = await recordBiomarkersToProfile(
+    database, userId, profileId, reportId, report.explanation, report.createdAt || new Date()
+  )
 
-  const flat = extractBiomarkersFromTests(tests, report.createdAt || new Date())
-  if (flat.length > 0) {
-    // Store as one grouped entry per report (format HealthTimeline expects)
-    const biomarkerEntry = {
-      reportId,
-      recordedAt: report.createdAt || new Date(),
-      values: flat.map(e => ({ key: e.key, name: e.key, value: e.value, flag: e.flag })),
-    }
-    await database.collection('users').updateOne(
-      { clerkId: userId, 'profiles.id': profileId },
-      {
-        $push: { 'profiles.$.biomarkers': biomarkerEntry },
-        $set: { 'profiles.$.updatedAt': new Date() },
-      }
-    )
-  }
-
-  return handleCORS(NextResponse.json({ success: true, biomarkersExtracted: flat.length }))
+  return handleCORS(NextResponse.json({ success: true, biomarkersExtracted: extracted }))
 }
 
 async function handleChat(request, reportId) {

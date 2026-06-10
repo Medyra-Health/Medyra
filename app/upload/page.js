@@ -80,6 +80,8 @@ export default function UploadPage() {
   const [consentStatus, setConsentStatus] = useState('loading')
   const [pendingFile, setPendingFile] = useState(null)
   const [isDragOver, setIsDragOver] = useState(false)
+  const [profiles, setProfiles] = useState([])
+  const [selectedProfile, setSelectedProfile] = useState(null)
 
   useEffect(() => {
     if (!isLoaded) return
@@ -87,6 +89,15 @@ export default function UploadPage() {
       .then(r => r.json())
       .then(d => setConsentStatus(d.consented ? 'consented' : 'needed'))
       .catch(() => setConsentStatus('needed'))
+    // Load health profiles so the report can be assigned at upload time
+    fetch('/api/profiles')
+      .then(r => r.json())
+      .then(d => {
+        const list = d.profiles || []
+        setProfiles(list)
+        if (list.length > 0) setSelectedProfile(list[0].id)
+      })
+      .catch(() => {})
   }, [isLoaded])
 
   // Animate progress steps while uploading
@@ -114,6 +125,7 @@ export default function UploadPage() {
 
       const formData = new FormData()
       formData.append('file', file)
+      if (selectedProfile) formData.append('profileId', selectedProfile)
       const response = await fetch('/api/reports/analyze', { method: 'POST', body: formData })
 
       if (!response.ok) {
@@ -131,7 +143,11 @@ export default function UploadPage() {
       }
 
       const data = await response.json()
-      toast.success('Analysis complete!')
+      toast.success(
+        data.biomarkersExtracted > 0
+          ? `Analysis complete — ${data.biomarkersExtracted} values added to health trends`
+          : 'Analysis complete!'
+      )
       router.push(`/reports/${data.reportId}`)
     } catch (error) {
       if (error.message !== 'FILE_TOO_LARGE') {
@@ -151,7 +167,7 @@ export default function UploadPage() {
       setPendingFile(file)
       setConsentStatus('needed')
     }
-  }, [consentStatus])
+  }, [consentStatus, selectedProfile])
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
@@ -263,6 +279,50 @@ export default function UploadPage() {
                   <li>• Mac: Preview → Export as PDF → Reduce File Size</li>
                 </ul>
               </div>
+            </div>
+          </div>
+        )}
+
+        {/* Profile selector — values flow into this profile's health trends automatically */}
+        {profiles.length > 0 && (
+          <div className="bg-white border border-gray-200 rounded-2xl p-4 mb-5 shadow-sm">
+            <p className="text-xs font-semibold text-gray-500 mb-2.5">
+              Save to health profile <span className="font-normal text-gray-400">· lab values are added to their trends automatically</span>
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {profiles.map(p => {
+                const dotColor = {
+                  emerald: 'bg-emerald-500', blue: 'bg-blue-500', violet: 'bg-violet-500',
+                  rose: 'bg-rose-500', amber: 'bg-amber-500', teal: 'bg-teal-500',
+                }[p.color] || 'bg-emerald-500'
+                const active = selectedProfile === p.id
+                return (
+                  <button
+                    key={p.id}
+                    type="button"
+                    onClick={() => setSelectedProfile(p.id)}
+                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border text-xs font-semibold transition-all ${
+                      active
+                        ? 'bg-emerald-500 border-emerald-500 text-white shadow-sm'
+                        : 'bg-gray-50 border-gray-200 text-gray-600 hover:border-emerald-300 hover:text-emerald-700'
+                    }`}
+                  >
+                    <span className={`w-2 h-2 rounded-full ${active ? 'bg-white' : dotColor}`} />
+                    {p.name}
+                  </button>
+                )
+              })}
+              <button
+                type="button"
+                onClick={() => setSelectedProfile(null)}
+                className={`px-3.5 py-1.5 rounded-full border text-xs font-semibold transition-all ${
+                  selectedProfile === null
+                    ? 'bg-gray-700 border-gray-700 text-white'
+                    : 'bg-gray-50 border-gray-200 text-gray-400 hover:text-gray-600'
+                }`}
+              >
+                No profile
+              </button>
             </div>
           </div>
         )}
