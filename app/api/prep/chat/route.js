@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import Anthropic from '@anthropic-ai/sdk'
 import { MongoClient } from 'mongodb'
+import { decryptProfile } from '@/lib/encryption'
 
 let _client = null, _db = null
 async function getDb() {
@@ -133,8 +134,9 @@ export async function POST(request) {
     try {
       const db = await getDb()
       const user = await db.collection('users').findOne({ clerkId: userId })
-      const profile = (user?.profiles || []).find(p => p.id === profileId)
-      if (profile) profileContext = buildBriefProfileContext(profile)
+      const rawProfile = (user?.profiles || []).find(p => p.id === profileId)
+      // C3: Decrypt PII fields before passing to AI context builder
+      if (rawProfile) profileContext = buildBriefProfileContext(decryptProfile(rawProfile))
     } catch {}
   }
 

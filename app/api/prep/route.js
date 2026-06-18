@@ -2,13 +2,13 @@ import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import Anthropic from '@anthropic-ai/sdk'
 import { MongoClient } from 'mongodb'
+import { encrypt, decrypt, decryptProfile } from '@/lib/encryption'
 
 // Monthly prep limits. null = truly unlimited (clinic/admin).
-// Personal/Family are shown as "unlimited" in UI but have a silent fair-use cap.
 const PREP_LIMITS = {
-  free:     1,   // 1 session per month
-  personal: 30,  // fair-use cap (shown as unlimited)
-  family:   60,  // fair-use cap (shown as unlimited)
+  free:     1,
+  personal: 30,
+  family:   60,
   clinic:   null,
   admin:    null,
 }
@@ -17,9 +17,10 @@ const FAIR_USE_MSG = "You've reached your fair use limit for this month. Contact
 
 const ADMIN_EMAILS = ['abralur28@gmail.com', 'philipp.mattar@googlemail.com']
 
-// Determine the user's effective tier for prep access
+const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000
+
+// M4: Resolve the primary verified email — not just email_addresses[0]
 async function getEffectiveTier(userId, mongoTier) {
-  // Always check if this is the admin email via Clerk REST (secret key, reliable)
   try {
     const res = await fetch(`https://api.clerk.com/v1/users/${userId}`, {
       headers: { Authorization: `Bearer ${process.env.CLERK_SECRET_KEY}` },
@@ -27,17 +28,18 @@ async function getEffectiveTier(userId, mongoTier) {
     })
     if (res.ok) {
       const u = await res.json()
-      const email = u.email_addresses?.[0]?.email_address
-      if (ADMIN_EMAILS.includes(email)) return 'admin'
+      const primaryId = u.primary_email_address_id
+      const primaryEmailObj = u.email_addresses?.find(
+        e => e.id === primaryId && e.verification?.status === 'verified'
+      )
+      if (primaryEmailObj && ADMIN_EMAILS.includes(primaryEmailObj.email_address)) return 'admin'
     }
   } catch {}
   return mongoTier || 'free'
 }
 
-// ── Anthropic ──────────────────────────────────────────────────────────────
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
-// ── Biomarker metadata (mirrors HealthTimeline.js) ─────────────────────────
 const BIOMARKER_META = {
   hemoglobin:  { label: 'Hemoglobin',  unit: 'g/dL',   normalMin: 12,  normalMax: 17.5 },
   ferritin:    { label: 'Ferritin',    unit: 'µg/L',   normalMin: 15,  normalMax: 150  },
@@ -51,6 +53,7 @@ const BIOMARKER_META = {
 
 function buildProfileContext(profile, locale) {
   if (!profile) return ''
+  // C3: profile fields are decrypted before reaching here via decryptProfile()
   const isDE = locale === 'de'
   const name = profile.name || 'Patient'
   const gender = profile.gender && profile.gender !== 'prefer_not' ? profile.gender : null
@@ -179,11 +182,9 @@ IF the patient asks a general question (e.g. finding a doctor, understanding a t
 
 function getSystemPrompt(locale) {
   if (locale === 'de') return SYSTEM_PROMPTS.de
-  // Default: English for all other locales (patient can always manually switch to DE)
   return SYSTEM_PROMPTS.en
 }
 
-// ── MongoDB ────────────────────────────────────────────────────────────────
 let _client = null
 let _db = null
 async function getDb() {
@@ -219,13 +220,19 @@ export async function POST(request) {
 
   const db = await getDb()
   const user = await db.collection('users').findOne({ clerkId: userId })
+
+  // C6: Server-side consent check (GDPR Art. 9)
+  if (!user?.consentGiven) {
+    return NextResponse.json({ error: 'consent_required', message: 'Please provide consent before processing health data' }, { status: 403 })
+  }
+
   const mongoTier = user?.subscription?.tier || 'free'
   const effectiveTier = await getEffectiveTier(userId, mongoTier)
 
-  // Resolve profile for biomarker context
-  const profile = profileId ? (user?.profiles || []).find(p => p.id === profileId) || null : null
+  // C3: Decrypt profile PII before passing to AI context builder
+  const rawProfile = profileId ? (user?.profiles || []).find(p => p.id === profileId) || null : null
+  const profile = rawProfile ? decryptProfile(rawProfile) : null
   const profileContext = buildProfileContext(profile, locale)
-  // Use 'in' check so null (unlimited) is preserved, null ?? 1 would wrongly return 1
   const monthLimit = effectiveTier in PREP_LIMITS ? PREP_LIMITS[effectiveTier] : 1
 
   // Check monthly usage limit
@@ -265,7 +272,14 @@ export async function POST(request) {
     return NextResponse.json({ error: 'AI service unavailable. Please try again.' }, { status: 502 })
   }
 
-  // Save to history
+  // C5: Prune prepDocs older than 30 days (must be separate from $push — MongoDB rejects both on same field)
+  const cutoff = new Date(Date.now() - THIRTY_DAYS_MS)
+  await db.collection('users').updateOne(
+    { clerkId: userId },
+    { $pull: { prepDocs: { createdAt: { $lt: cutoff } } } }
+  )
+
+  // C3: Encrypt input and output before storing
   await db.collection('users').updateOne(
     { clerkId: userId },
     {
@@ -273,12 +287,12 @@ export async function POST(request) {
         prepDocs: {
           id: Date.now().toString(),
           createdAt: new Date(),
-          input: cappedInput,
+          input: encrypt(cappedInput),
           inputLength: cappedInput.length,
-          output,
+          output: encrypt(output),
           locale,
           profileId: profileId || null,
-          profileName: profile?.name || null,
+          profileName: profile?.name ? encrypt(profile.name) : null,
         },
       },
       $set: { updatedAt: new Date() },
@@ -304,6 +318,7 @@ export async function GET() {
     d => new Date(d.createdAt) >= startOfMonth()
   ).length
 
+  // C3: Decrypt input, output, profileName when returning history
   const history = (user?.prepDocs || [])
     .filter(d => d.output)
     .slice(-20)
@@ -311,9 +326,9 @@ export async function GET() {
     .map(d => ({
       id: d.id || String(d.createdAt),
       createdAt: d.createdAt,
-      input: d.input || '',
-      output: d.output,
-      profileName: d.profileName || null,
+      input: decrypt(d.input || ''),
+      output: decrypt(d.output),
+      profileName: d.profileName ? decrypt(d.profileName) : null,
     }))
 
   return NextResponse.json({

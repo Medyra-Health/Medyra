@@ -154,11 +154,19 @@ export default async function RootLayout({ children }) {
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
           <meta name="apple-mobile-web-app-title" content="Medyra" />
           <link rel="apple-touch-icon" href="/icon-192.png" />
-          {/* Google Analytics */}
+          {/* Google Analytics — Consent Mode v2 (TTDSG §25 / GDPR ePrivacy compliant) */}
+          {/* analytics_storage is denied by default; CookieBanner grants it on explicit opt-in */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8Y2GQCSSS" />
           <script dangerouslySetInnerHTML={{ __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              'analytics_storage': 'denied',
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'wait_for_update': 500
+            });
             gtag('js', new Date());
             gtag('config', 'G-Q8Y2GQCSSS');
           `}} />

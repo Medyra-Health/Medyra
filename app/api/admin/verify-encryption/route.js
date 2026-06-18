@@ -9,15 +9,14 @@ function looksEncrypted(value) {
   return parts.length === 3 && parts[0].length === 32 && parts[2].length === 32
 }
 
-function redact(value) {
-  if (typeof value !== 'string') return value
-  return value.slice(0, 12) + '…' + value.slice(-8) + ` (${value.length} chars)`
-}
-
 export async function GET() {
   const user = await currentUser()
-  const email = user?.emailAddresses?.[0]?.emailAddress
-  if (!email || !ADMIN_EMAILS.includes(email)) {
+  // M4: Use primary verified email for admin check
+  const primaryId = user?.primaryEmailAddressId
+  const primaryEmailObj = user?.emailAddresses?.find(
+    e => e.id === primaryId && e.verification?.status === 'verified'
+  )
+  if (!primaryEmailObj || !ADMIN_EMAILS.includes(primaryEmailObj.emailAddress)) {
     return Response.json({ error: 'Forbidden' }, { status: 403 })
   }
 
@@ -34,21 +33,22 @@ export async function GET() {
 
     const encryptionKeySet = !!(process.env.ENCRYPTION_KEY && process.env.ENCRYPTION_KEY.length === 64)
 
+    // M7: Return only encrypted status + field lengths — never raw plaintext content
     const results = raw.map(doc => ({
       id: doc._id.toString(),
       createdAt: doc.createdAt,
       fields: {
         fileName: {
           encrypted: looksEncrypted(doc.fileName),
-          raw: looksEncrypted(doc.fileName) ? redact(doc.fileName) : doc.fileName,
+          length: typeof doc.fileName === 'string' ? doc.fileName.length : 0,
         },
         extractedText: {
           encrypted: looksEncrypted(doc.extractedText),
-          raw: looksEncrypted(doc.extractedText) ? redact(doc.extractedText) : String(doc.extractedText || '').slice(0, 60) + '…',
+          length: typeof doc.extractedText === 'string' ? doc.extractedText.length : 0,
         },
         explanation: {
           encrypted: looksEncrypted(doc.explanation),
-          raw: looksEncrypted(doc.explanation) ? redact(doc.explanation) : String(doc.explanation || '').slice(0, 60) + '…',
+          length: typeof doc.explanation === 'string' ? doc.explanation.length : 0,
         },
       },
     }))
