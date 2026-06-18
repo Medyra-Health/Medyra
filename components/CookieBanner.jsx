@@ -3,23 +3,52 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
+const GA_CONSENT_GRANTED = {
+  analytics_storage: 'granted',
+  ad_storage: 'granted',
+  ad_user_data: 'granted',
+  ad_personalization: 'granted',
+}
+
+const GA_CONSENT_DENIED = {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+}
+
+function updateGAConsent(update) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', update)
+  }
+}
+
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const consent = localStorage.getItem('cookie_consent')
-    if (!consent) setVisible(true)
+    if (consent === 'accepted') {
+      // C4: Restore previously granted consent on every page load
+      updateGAConsent(GA_CONSENT_GRANTED)
+      setVisible(false)
+    } else if (consent === 'declined') {
+      setVisible(false)
+    } else {
+      setVisible(true)
+    }
   }, [])
 
   function accept() {
     localStorage.setItem('cookie_consent', 'accepted')
+    // C4: Only grant analytics_storage after explicit opt-in (TTDSG §25 compliant)
+    updateGAConsent(GA_CONSENT_GRANTED)
     setVisible(false)
   }
 
   function decline() {
     localStorage.setItem('cookie_consent', 'declined')
-    // Disable GA if declined
-    window['ga-disable-G-Q8Y2GQCSSS'] = true
+    updateGAConsent(GA_CONSENT_DENIED)
     setVisible(false)
   }
 

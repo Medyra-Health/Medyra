@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { MongoClient } from 'mongodb'
 import { v4 as uuidv4 } from 'uuid'
+import { encrypt, decrypt, decryptProfile } from '@/lib/encryption'
 
 // Profile limits per tier
 const PROFILE_LIMITS = {
@@ -24,6 +25,7 @@ async function getDb() {
   return _db
 }
 
+// M4: Resolve the primary verified email — not just email_addresses[0]
 async function getEffectiveTier(userId) {
   try {
     const res = await fetch(`https://api.clerk.com/v1/users/${userId}`, {
@@ -32,8 +34,11 @@ async function getEffectiveTier(userId) {
     })
     if (res.ok) {
       const u = await res.json()
-      const email = u.email_addresses?.[0]?.email_address
-      if (ADMIN_EMAILS.includes(email)) return 'admin'
+      const primaryId = u.primary_email_address_id
+      const primaryEmailObj = u.email_addresses?.find(
+        e => e.id === primaryId && e.verification?.status === 'verified'
+      )
+      if (primaryEmailObj && ADMIN_EMAILS.includes(primaryEmailObj.email_address)) return 'admin'
     }
   } catch {}
   const db = await getDb()
@@ -41,7 +46,7 @@ async function getEffectiveTier(userId) {
   return user?.subscription?.tier || 'free'
 }
 
-// GET /api/profiles, fetch all profiles for the user
+// GET /api/profiles — fetch all profiles for the user
 export async function GET() {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -49,19 +54,21 @@ export async function GET() {
   const db = await getDb()
   const user = await db.collection('users').findOne({ clerkId: userId })
   const tier = await getEffectiveTier(userId)
-  // Use 'in' check, null means unlimited; ?? 0 would wrongly convert null→0
   const limit = tier in PROFILE_LIMITS ? PROFILE_LIMITS[tier] : 0
 
+  // C3: Decrypt PII fields before returning to client
+  const profiles = (user?.profiles || []).map(decryptProfile)
+
   return NextResponse.json({
-    profiles: user?.profiles || [],
+    profiles,
     tier,
     limit,
     unlimited: limit === null,
-    canCreate: limit === null || (user?.profiles || []).length < limit,
+    canCreate: limit === null || profiles.length < limit,
   })
 }
 
-// POST /api/profiles, create a new profile
+// POST /api/profiles — create a new profile
 export async function POST(request) {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -84,12 +91,13 @@ export async function POST(request) {
     }, { status: 403 })
   }
 
+  // C3: Encrypt PII fields at rest
   const profile = {
     id: uuidv4(),
-    name: name.trim(),
-    dob: dob || null,
+    name: encrypt(name.trim()),
+    dob: dob ? encrypt(dob) : null,
     relationship: relationship || 'self',
-    gender: gender || 'prefer_not',
+    gender: encrypt(gender || 'prefer_not'),
     color: color || 'emerald',
     biomarkers: [],
     createdAt: new Date(),
@@ -102,33 +110,54 @@ export async function POST(request) {
     { upsert: true }
   )
 
-  return NextResponse.json({ success: true, profile })
+  // Return decrypted profile to client
+  return NextResponse.json({ success: true, profile: decryptProfile(profile) })
 }
 
-// PUT /api/profiles, update a profile or add biomarker entry
+// PUT /api/profiles — update a profile or add biomarker entry
 export async function PUT(request) {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const body = await request.json()
   const { profileId, updates, biomarkerEntry } = body
-  if (!profileId) return NextResponse.json({ error: 'profileId required' }, { status: 400 })
+
+  // M3: Validate profileId is a plain string (prevent NoSQL operator injection)
+  if (!profileId || typeof profileId !== 'string') {
+    return NextResponse.json({ error: 'profileId must be a non-empty string' }, { status: 400 })
+  }
 
   const db = await getDb()
 
   if (biomarkerEntry) {
-    // Add a biomarker snapshot to a profile
+    // M3: Whitelist biomarkerEntry fields — never spread arbitrary user input into $push
+    const safeEntry = {
+      reportId: typeof biomarkerEntry.reportId === 'string' ? biomarkerEntry.reportId : undefined,
+      recordedAt: new Date(),
+      values: Array.isArray(biomarkerEntry.values)
+        ? biomarkerEntry.values.map(v => ({
+            key: typeof v.key === 'string' ? v.key : '',
+            name: typeof v.name === 'string' ? v.name : '',
+            value: typeof v.value === 'number' ? v.value : parseFloat(v.value) || 0,
+            flag: ['normal', 'high', 'low', 'critical'].includes(v.flag) ? v.flag : 'normal',
+          }))
+        : [],
+    }
     await db.collection('users').updateOne(
       { clerkId: userId, 'profiles.id': profileId },
       {
-        $push: { 'profiles.$.biomarkers': { ...biomarkerEntry, recordedAt: new Date() } },
+        $push: { 'profiles.$.biomarkers': safeEntry },
         $set: { 'profiles.$.updatedAt': new Date() },
       }
     )
   } else if (updates) {
     const setFields = {}
-    const allowed = ['name', 'dob', 'relationship', 'gender', 'color']
-    allowed.forEach(k => { if (updates[k] !== undefined) setFields[`profiles.$.${k}`] = updates[k] })
+    // C3: Encrypt updated PII fields; whitelist allowed keys
+    if (updates.name !== undefined) setFields['profiles.$.name'] = encrypt(String(updates.name))
+    if (updates.dob !== undefined) setFields['profiles.$.dob'] = updates.dob ? encrypt(String(updates.dob)) : null
+    if (updates.gender !== undefined) setFields['profiles.$.gender'] = encrypt(String(updates.gender))
+    if (updates.relationship !== undefined) setFields['profiles.$.relationship'] = String(updates.relationship)
+    if (updates.color !== undefined) setFields['profiles.$.color'] = String(updates.color)
     setFields['profiles.$.updatedAt'] = new Date()
     await db.collection('users').updateOne(
       { clerkId: userId, 'profiles.id': profileId },
@@ -139,14 +168,16 @@ export async function PUT(request) {
   return NextResponse.json({ success: true })
 }
 
-// DELETE /api/profiles?id=xxx, remove a profile
+// DELETE /api/profiles?id=xxx — remove a profile
 export async function DELETE(request) {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const { searchParams } = new URL(request.url)
   const profileId = searchParams.get('id')
-  if (!profileId) return NextResponse.json({ error: 'id required' }, { status: 400 })
+  if (!profileId || typeof profileId !== 'string') {
+    return NextResponse.json({ error: 'id required' }, { status: 400 })
+  }
 
   const db = await getDb()
   await db.collection('users').updateOne(

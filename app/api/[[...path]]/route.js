@@ -5,64 +5,8 @@ import { auth, currentUser } from '@clerk/nextjs/server'
 import Anthropic from '@anthropic-ai/sdk'
 import pdfParse from 'pdf-parse'
 import Stripe from 'stripe'
-import { createCipheriv, createDecipheriv, randomBytes } from 'crypto'
-
-// ============================================================================
-// ENCRYPTION, AES-256-GCM field-level encryption (GDPR Art. 32 / BDSG §64)
-// All medical report data is encrypted before storage in MongoDB.
-// The ENCRYPTION_KEY env var must be a 64-character hex string (32 bytes).
-// Without the key, no stored ciphertext can be decrypted, not even by us.
-// ============================================================================
-
-const ENC_ALGO = 'aes-256-gcm'
-
-function getEncKey() {
-  const hex = process.env.ENCRYPTION_KEY
-  if (!hex || hex.length !== 64) {
-    if (process.env.NODE_ENV !== 'test') {
-      console.warn('[Medyra] ENCRYPTION_KEY not set or invalid, data stored unencrypted')
-    }
-    return null
-  }
-  return Buffer.from(hex, 'hex')
-}
-
-function encrypt(plaintext) {
-  const key = getEncKey()
-  if (!key || plaintext == null) return plaintext
-  try {
-    const iv = randomBytes(16)
-    const cipher = createCipheriv(ENC_ALGO, key, iv)
-    let enc = cipher.update(String(plaintext), 'utf8', 'hex')
-    enc += cipher.final('hex')
-    const tag = cipher.getAuthTag()
-    // Format: {iv_hex}:{ciphertext_hex}:{auth_tag_hex}
-    return `${iv.toString('hex')}:${enc}:${tag.toString('hex')}`
-  } catch (e) {
-    console.error('[Medyra] Encryption failed:', e.message)
-    return plaintext
-  }
-}
-
-function decrypt(value) {
-  const key = getEncKey()
-  if (!key || !value || typeof value !== 'string') return value
-  // Detect our format: {32-hex}:{any-hex}:{32-hex}
-  const parts = value.split(':')
-  if (parts.length !== 3 || parts[0].length !== 32 || parts[2].length !== 32) return value
-  try {
-    const iv = Buffer.from(parts[0], 'hex')
-    const tag = Buffer.from(parts[2], 'hex')
-    const decipher = createDecipheriv(ENC_ALGO, key, iv)
-    decipher.setAuthTag(tag)
-    let dec = decipher.update(parts[1], 'hex', 'utf8')
-    dec += decipher.final('utf8')
-    return dec
-  } catch {
-    // Decryption failed, return raw value (backwards compat with old unencrypted data)
-    return value
-  }
-}
+import { Webhook } from 'svix'
+import { encrypt, decrypt } from '@/lib/encryption'
 
 function encryptReport(doc) {
   return {
@@ -106,23 +50,6 @@ let isConnecting = false
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
-let visionClient = null
-async function getVisionClient() {
-  if (visionClient) return visionClient
-  if (!process.env.GOOGLE_CREDENTIALS_BASE64) return null
-  try {
-    const vision = await import('@google-cloud/vision')
-    const credentials = JSON.parse(
-      Buffer.from(process.env.GOOGLE_CREDENTIALS_BASE64, 'base64').toString()
-    )
-    visionClient = new vision.default.ImageAnnotatorClient({ credentials })
-    return visionClient
-  } catch (err) {
-    console.warn('Google Vision skipped:', err.message)
-    return null
-  }
-}
-
 const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY)
   : null
@@ -155,6 +82,8 @@ async function connectToMongo() {
     await mongoClient.connect()
     db = mongoClient.db(process.env.DB_NAME || 'medyra')
     console.log('✅ MongoDB connected')
+    // C5: Enforce 30-day retention on reports (matches stated privacy policy)
+    db.collection('reports').createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0, background: true }).catch(() => {})
     return db
   } catch (error) {
     throw new Error(`Database connection failed: ${error.message}`)
@@ -167,10 +96,13 @@ async function connectToMongo() {
 // CORS
 // ============================================================================
 
+const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || 'https://medyra.de'
+
 function handleCORS(response) {
-  response.headers.set('Access-Control-Allow-Origin', '*')
-  response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+  response.headers.set('Access-Control-Allow-Origin', ALLOWED_ORIGIN)
+  response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH')
   response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+  response.headers.set('Vary', 'Origin')
   return response
 }
 
@@ -454,6 +386,13 @@ async function handleAnalyzeReport(request) {
   }
 
   const database = await connectToMongo()
+
+  // C6: Server-side consent gate (GDPR Art. 9) — modal alone is not sufficient
+  const userDoc = await database.collection('users').findOne({ clerkId: userId })
+  if (!userDoc?.consentGiven) {
+    return handleCORS(NextResponse.json({ error: 'consent_required', message: 'Please provide consent before processing health data' }, { status: 403 }))
+  }
+
   const [usageCheck, admin] = await Promise.all([
     ensureUserExists(userId, database),
     isAdminUser()
@@ -474,7 +413,14 @@ async function handleAnalyzeReport(request) {
     return handleCORS(NextResponse.json({ error: 'No file uploaded' }, { status: 400 }))
   }
 
-  console.log(`📎 File: ${file.name} (${file.type}, ${file.size} bytes)`)
+  // M1: Reject files over 10MB before buffering into memory
+  const MAX_FILE_SIZE = 10 * 1024 * 1024
+  if (file.size > MAX_FILE_SIZE) {
+    return handleCORS(NextResponse.json({ error: 'File too large. Maximum size is 10MB.' }, { status: 400 }))
+  }
+
+  // H5: Log only non-identifying metadata, never filename (may contain patient name)
+  console.log(`📎 File received: type=${file.type}, size=${file.size} bytes`)
   const buffer = Buffer.from(await file.arrayBuffer())
   const fileType = file.type || ''
 
@@ -503,7 +449,8 @@ async function handleAnalyzeReport(request) {
   try {
     explanation = await getAIExplanation(extractedText)
   } catch (err) {
-    return handleCORS(NextResponse.json({ error: 'AI analysis failed', message: err.message }, { status: 500 }))
+    console.error('[AI analysis failed]', err.message)
+    return handleCORS(NextResponse.json({ error: 'AI analysis failed. Please try again.' }, { status: 500 }))
   }
 
   const reportId = uuidv4()
@@ -880,8 +827,33 @@ async function handleStripeWebhook(request) {
 }
 
 async function handleClerkWebhook(request) {
+  // C1: Verify Svix signature before trusting any payload (mirrors Stripe pattern)
+  const webhookSecret = process.env.CLERK_WEBHOOK_SIGNING_SECRET
+  if (!webhookSecret) {
+    console.error('[Clerk webhook] CLERK_WEBHOOK_SIGNING_SECRET not configured')
+    return handleCORS(NextResponse.json({ error: 'Webhook secret not configured' }, { status: 500 }))
+  }
+
+  const body = await request.text()
+  const svixId = request.headers.get('svix-id')
+  const svixTimestamp = request.headers.get('svix-timestamp')
+  const svixSignature = request.headers.get('svix-signature')
+
+  if (!svixId || !svixTimestamp || !svixSignature) {
+    return handleCORS(NextResponse.json({ error: 'Missing webhook signature headers' }, { status: 400 }))
+  }
+
+  let event
+  try {
+    const wh = new Webhook(webhookSecret)
+    event = wh.verify(body, { 'svix-id': svixId, 'svix-timestamp': svixTimestamp, 'svix-signature': svixSignature })
+  } catch (err) {
+    console.error('[Clerk webhook] Signature verification failed:', err.message)
+    return handleCORS(NextResponse.json({ error: 'Webhook verification failed' }, { status: 400 }))
+  }
+
+  const { type, data } = event
   const database = await connectToMongo()
-  const { type, data } = await request.json()
 
   if (type === 'user.created') {
     await database.collection('users').insertOne({
@@ -1001,11 +973,9 @@ async function handleRoute(request) {
     }, { status: 404 }))
 
   } catch (error) {
+    // H4: Log full detail server-side only; never expose internal error messages to clients
     console.error('❌ Error:', error)
-    return handleCORS(NextResponse.json({
-      error: 'Internal server error',
-      message: error.message
-    }, { status: 500 }))
+    return handleCORS(NextResponse.json({ error: 'Internal server error' }, { status: 500 }))
   }
 }
 
