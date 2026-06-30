@@ -7,6 +7,7 @@ import { Toaster } from 'sonner'
 import MobileNav from '@/components/MobileNav'
 import CookieBanner from '@/components/CookieBanner'
 import SiteFooter from '@/components/SiteFooter'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Inter({ subsets: ['latin'] })
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-playfair' })
@@ -179,6 +180,7 @@ export default async function RootLayout({ children }) {
             <CookieBanner />
           </NextIntlClientProvider>
           <Toaster position="top-center" richColors />
+          <SpeedInsights />
         </body>
       </html>
     </ClerkProvider>
