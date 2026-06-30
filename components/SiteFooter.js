@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import MedyraLogo from '@/components/MedyraLogo'
 import { useTranslations } from 'next-intl'
 
@@ -58,7 +59,27 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        {/* Partner */}
+        <div className="border-t border-gray-800 pt-8 mb-2 flex flex-col items-center gap-3 text-center">
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">{t('partner')}</p>
+          <a
+            href="https://www.potsdam-transfer.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex bg-white rounded-lg px-5 py-3 transition-transform hover:scale-[1.02]"
+            aria-label="Potsdam Transfer – Startup Service (Universität Potsdam)"
+          >
+            <Image
+              src="/partners/potsdam-transfer.png"
+              alt="Potsdam Transfer – Startup Service, Universität Potsdam"
+              width={1258}
+              height={429}
+              className="h-12 w-auto"
+            />
+          </a>
+        </div>
+
+        <div className="border-t border-gray-800 pt-6 mt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-600 text-xs">{t('copyright')}</p>
           <p className="text-gray-700 text-xs">{t('disclaimer')}</p>
         </div>
