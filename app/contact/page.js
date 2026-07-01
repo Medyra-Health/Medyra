@@ -17,12 +17,12 @@ const founders = [
     email: 'abralur28@gmail.com',
   },
   {
-    name: 'Phillip Mattar',
+    name: 'Philipp Mattar',
     role: 'Co-Founder & CMO · Chief Medical Officer',
     photo: '/team/phillip-mattar.jpg',
     icon: Stethoscope,
-    bio: 'Leads the medical side of Medyra — clinical accuracy, health content, and making sure every explanation is safe and trustworthy.',
-    email: null,
+    bio: 'Drives product, partnerships, and strategy together with Akash — and leads the medical side, making sure every explanation is clinically accurate and trustworthy.',
+    email: 'Philipp.Mattar@student.hpi.uni-potsdam.de',
   },
 ]
 
@@ -88,8 +88,8 @@ export default function ContactPage() {
                     href={`mailto:${founder.email}`}
                     className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors w-full justify-center"
                   >
-                    <Mail className="h-4 w-4" />
-                    {founder.email}
+                    <Mail className="h-4 w-4 shrink-0" />
+                    <span className="truncate">{founder.email}</span>
                   </a>
                 ) : (
                   <div className="inline-flex items-center gap-2 bg-gray-100 text-gray-400 font-semibold text-sm px-4 py-2.5 rounded-xl w-full justify-center select-none">
