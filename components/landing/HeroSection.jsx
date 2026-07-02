@@ -193,6 +193,9 @@ export default function HeroSection() {
           ))}
         </motion.div>
       </motion.div>
+
+      {/* Soft handoff into the light content below */}
+      <div aria-hidden="true" className="absolute bottom-0 inset-x-0 h-24 md:h-32 bg-gradient-to-b from-transparent to-white pointer-events-none" />
     </section>
   )
 }
