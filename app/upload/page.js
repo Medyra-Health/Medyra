@@ -184,7 +184,9 @@ export default function UploadPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#F3FAF6] to-white relative" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+      <style>{`.font-display { font-family: var(--font-playfair), Georgia, serif; }`}</style>
+      <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-emerald-100/60 rounded-full blur-3xl pointer-events-none" />
       {consentStatus === 'needed' && pendingFile && (
         <ConsentModal
           onAccept={() => {
@@ -243,7 +245,7 @@ export default function UploadPage() {
 
         {/* Title */}
         <div className="text-center mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Upload your medical report</h1>
+          <h1 className="font-display text-2xl md:text-3xl font-bold text-[#0B1F17] mb-2">Upload your medical report</h1>
           <p className="text-gray-500 text-sm">Get a plain language explanation in under 60 seconds</p>
         </div>
 

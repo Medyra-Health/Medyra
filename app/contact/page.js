@@ -44,7 +44,7 @@ export default function ContactPage() {
           <div className="w-14 h-14 bg-emerald-50 border border-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
             <MessageSquare className="h-6 w-6 text-emerald-600" />
           </div>
-          <h1 className="text-4xl font-black text-gray-900 mb-3">Get in Touch</h1>
+          <h1 className="text-4xl font-black text-[#0B1F17] mb-3" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>Get in Touch</h1>
           <p className="text-gray-500 text-lg leading-relaxed max-w-md mx-auto">
             No ticket systems, no chatbots. Write to us directly. We read every message and reply personally.
           </p>

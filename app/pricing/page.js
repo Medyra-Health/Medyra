@@ -178,12 +178,15 @@ export default function PricingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
       <style>{`
         @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
         .card-in { animation: fadeUp 0.45s ease both; }
         .scroll-reveal { opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease }
         .scroll-reveal.in-view { opacity:1;transform:translateY(0) }
+        .font-display { font-family: var(--font-playfair), Georgia, serif; }
+        .tier-card { transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+        .tier-card:hover { transform: translateY(-4px); }
       `}</style>
 
       {/* Header */}
@@ -201,18 +204,20 @@ export default function PricingPage() {
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-12 md:py-16 max-w-6xl">
+      <div className="container mx-auto px-4 py-12 md:py-16 max-w-6xl relative">
+        {/* Ambient glow */}
+        <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[320px] bg-emerald-100/60 rounded-full blur-3xl pointer-events-none" />
 
         {/* Hero */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 relative">
           <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
             <Sparkles className="h-3.5 w-3.5" /> {t('badge')}
           </div>
-          <h1 className="text-3xl md:text-5xl font-black text-gray-900 mb-3 tracking-tight">
+          <h1 className="font-display text-3xl md:text-5xl font-black text-[#0B1F17] mb-3 tracking-tight">
             {t('heroLine1')}<br className="hidden md:block" />
-            <span className="text-emerald-600"> {t('heroLine2')}</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#059669] to-[#10B981]"> {t('heroLine2')}</span>
           </h1>
-          <p className="text-gray-400 text-sm md:text-base max-w-lg mx-auto">{t('subtitle')}</p>
+          <p className="text-gray-500 text-sm md:text-base max-w-lg mx-auto">{t('subtitle')}</p>
         </div>
 
         {/* Pricing cards */}
@@ -223,10 +228,10 @@ export default function PricingPage() {
             return (
               <div
                 key={tier.id}
-                className={`relative flex flex-col rounded-2xl border p-5 card-in transition-all duration-200 ${
+                className={`tier-card relative flex flex-col rounded-2xl border p-5 card-in ${
                   tier.highlighted
-                    ? `ring-2 ${c.ring} shadow-xl bg-white`
-                    : `border-gray-200 bg-white hover:border-gray-300 hover:shadow-md`
+                    ? `ring-2 ${c.ring} shadow-xl shadow-emerald-100 bg-white`
+                    : `border-gray-200 bg-white hover:border-gray-300 hover:shadow-lg`
                 }`}
                 style={{ animationDelay: `${idx * 70}ms` }}
               >
@@ -313,7 +318,7 @@ export default function PricingPage() {
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-xs font-black uppercase tracking-widest text-gray-400">{t('fairUse.label')}</span>
                   </div>
-                  <h3 className="text-lg font-black text-gray-900 mb-2">{t('fairUse.title')}</h3>
+                  <h3 className="font-display text-lg font-black text-[#0B1F17] mb-2">{t('fairUse.title')}</h3>
                   <p className="text-[13px] text-gray-500 leading-relaxed">{t('fairUse.body')}</p>
                 </div>
 
@@ -359,7 +364,7 @@ export default function PricingPage() {
 
         {/* Compare table */}
         <div className="scroll-reveal mb-16 overflow-x-auto">
-          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">{t('compare.title')}</h2>
+          <h2 className="font-display text-xl md:text-2xl font-bold text-[#0B1F17] mb-6 text-center">{t('compare.title')}</h2>
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-gray-200">
@@ -406,7 +411,7 @@ export default function PricingPage() {
 
         {/* Languages */}
         <section className="scroll-reveal text-center mb-16">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">{t('languages.title')}</h2>
+          <h2 className="font-display text-xl md:text-2xl font-bold text-[#0B1F17] mb-2">{t('languages.title')}</h2>
           <p className="text-gray-400 text-sm mb-6 max-w-md mx-auto">{t('languages.subtitle')}</p>
           <div className="flex flex-wrap justify-center gap-2">
             {LANGUAGES_18.map(lang => (
@@ -419,7 +424,7 @@ export default function PricingPage() {
 
         {/* FAQ */}
         <div className="scroll-reveal max-w-2xl mx-auto">
-          <h2 className="text-xl font-bold text-center text-gray-900 mb-6">{t('faq.title')}</h2>
+          <h2 className="font-display text-xl md:text-2xl font-bold text-center text-[#0B1F17] mb-6">{t('faq.title')}</h2>
           <div className="space-y-2">
             {FAQ_ITEMS.map((item, i) => <FAQItem key={i} q={item.q} a={item.a} />)}
           </div>

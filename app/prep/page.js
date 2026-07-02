@@ -460,9 +460,11 @@ export default function PrepPage() {
   return (
     <>
       <style>{PRINT_STYLES}</style>
+      <style>{`.font-display { font-family: var(--font-playfair), Georgia, serif; }`}</style>
       {(printDoc || output) && <PrintArea text={printDoc || output} />}
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-[#FAF9FD] relative" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+        <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-violet-100/60 rounded-full blur-3xl pointer-events-none print:hidden" />
         {/* Header */}
         <header className="bg-white border-b-2 border-violet-100 sticky top-0 z-40 print:hidden">
           <div className="container mx-auto px-4 py-3">
@@ -488,10 +490,10 @@ export default function PrepPage() {
           {/* Hero */}
           <div className="mb-6">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-xl bg-emerald-100 flex items-center justify-center">
-                <FileText className="h-4 w-4 text-emerald-600" />
+              <div className="w-8 h-8 rounded-xl bg-violet-100 flex items-center justify-center">
+                <FileText className="h-4 w-4 text-violet-600" />
               </div>
-              <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-semibold">
+              <Badge className="bg-violet-50 text-violet-700 border border-violet-200 text-xs font-semibold">
                 {t('prep.sectionLabel')}
               </Badge>
               {step !== 'category' && (
@@ -500,7 +502,7 @@ export default function PrepPage() {
                 </button>
               )}
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-[#040C08] mb-1">{t('prep.title')}</h1>
+            <h1 className="font-display text-2xl sm:text-3xl font-bold text-[#0B1F17] mb-1">{t('prep.title')}</h1>
             <p className="text-gray-500 text-sm leading-relaxed">{t('prep.description')}</p>
           </div>
 
@@ -712,7 +714,7 @@ export default function PrepPage() {
                       className="flex-1 text-sm rounded-xl border border-gray-200 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-400 disabled:opacity-50"
                     />
                     <Button type="submit" disabled={!chatInput.trim() || chatLoading}
-                      className="bg-[#10B981] hover:bg-emerald-600 text-white h-10 w-10 p-0 rounded-xl flex-shrink-0">
+                      className="bg-gradient-to-r from-violet-500 to-violet-600 hover:shadow-[0_0_20px_-4px_rgba(139,92,246,0.5)] text-white h-10 w-10 p-0 rounded-xl flex-shrink-0 transition-shadow">
                       <Send className="h-4 w-4" />
                     </Button>
                   </form>

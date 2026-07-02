@@ -83,9 +83,10 @@ export default function ReportsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#F7FBF9]" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+      <style>{`.font-display { font-family: var(--font-playfair), Georgia, serif; }`}</style>
       {/* Header */}
-      <header className="bg-white border-b-2 border-blue-100 sticky top-0 z-40">
+      <header className="bg-white/90 backdrop-blur-md border-b-2 border-emerald-100 sticky top-0 z-40">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <Link href="/dashboard"><MedyraLogo size="md" /></Link>
           <div className="flex items-center gap-2">
@@ -108,12 +109,12 @@ export default function ReportsPage() {
         <div className="flex items-start justify-between mb-8 gap-4">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-9 h-9 rounded-xl bg-blue-100 flex items-center justify-center">
-                <FileText className="h-5 w-5 text-blue-600" />
+              <div className="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center">
+                <FileText className="h-5 w-5 text-emerald-600" />
               </div>
-              <h1 className="text-2xl font-bold text-gray-900">My Reports</h1>
+              <h1 className="font-display text-2xl font-bold text-[#0B1F17]">My Reports</h1>
               {reports.length > 0 && (
-                <span className="text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-100 px-2 py-0.5 rounded-full">{reports.length}</span>
+                <span className="text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100 px-2 py-0.5 rounded-full">{reports.length}</span>
               )}
             </div>
             <p className="text-sm text-gray-500">All your uploaded medical reports and their AI explanations</p>

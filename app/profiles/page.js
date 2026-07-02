@@ -532,9 +532,11 @@ export default function ProfilesPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#F7FBFA] relative" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+      <style>{`.font-display { font-family: var(--font-playfair), Georgia, serif; }`}</style>
+      <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-teal-100/60 rounded-full blur-3xl pointer-events-none" />
       {/* Header */}
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-10">
+      <header className="bg-white/90 backdrop-blur-md border-b-2 border-teal-100 sticky top-0 z-10">
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link href="/dashboard" className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-800 transition-colors">
@@ -554,7 +556,7 @@ export default function ProfilesPage() {
         {/* Page header */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-2xl md:text-3xl font-black text-gray-900 mb-1">Health Profiles</h1>
+            <h1 className="font-display text-2xl md:text-3xl font-black text-[#0B1F17] mb-1">Health Profiles</h1>
             <p className="text-sm text-gray-500">
               {isPaid
                 ? `Tracking health data for ${profiles.length}${limit ? ` of ${limit}` : ''} profile${profiles.length !== 1 ? 's' : ''}`
@@ -563,7 +565,7 @@ export default function ProfilesPage() {
           </div>
           {canCreate && (
             <button onClick={() => setShowCreate(true)}
-              className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-sm shadow-emerald-200 text-sm">
+              className="flex items-center gap-2 bg-gradient-to-r from-teal-500 to-teal-600 hover:shadow-[0_0_20px_-4px_rgba(20,184,166,0.5)] text-white font-semibold px-4 py-2.5 rounded-xl transition-shadow shadow-sm shadow-teal-200 text-sm">
               <Plus className="h-4 w-4" /> New Profile
             </button>
           )}
@@ -571,11 +573,11 @@ export default function ProfilesPage() {
 
         {/* Upgrade gate for free/onetime */}
         {!isPaid && (
-          <div className="bg-gradient-to-br from-gray-900 to-slate-800 rounded-2xl p-8 text-center mb-8">
-            <div className="w-14 h-14 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Shield className="h-7 w-7 text-emerald-400" />
+          <div className="bg-[#08130D] border border-teal-900/60 rounded-2xl p-8 text-center mb-8 shadow-2xl shadow-teal-900/20">
+            <div className="w-14 h-14 bg-teal-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Shield className="h-7 w-7 text-teal-300" />
             </div>
-            <h2 className="text-xl font-bold text-white mb-2">Your Health Vault</h2>
+            <h2 className="font-display text-xl font-bold text-white mb-2">Your Health Vault</h2>
             <p className="text-gray-400 text-sm mb-6 max-w-md mx-auto">
               Personal plans include 2 health profiles with longitudinal tracking, biomarker timelines, and AI-powered doctor summaries that pull from your medical history.
             </p>
@@ -586,13 +588,13 @@ export default function ProfilesPage() {
                 { icon: Users,      label: 'Family profiles'    },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
-                  <Icon className="h-5 w-5 text-emerald-400 mx-auto mb-1.5" />
+                  <Icon className="h-5 w-5 text-teal-300 mx-auto mb-1.5" />
                   <p className="text-xs text-gray-300 font-medium">{label}</p>
                 </div>
               ))}
             </div>
             <Link href="/pricing">
-              <button className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-3 rounded-xl transition-colors">
+              <button className="bg-gradient-to-r from-teal-500 to-teal-600 hover:shadow-[0_0_24px_-4px_rgba(20,184,166,0.6)] text-white font-bold px-8 py-3 rounded-xl transition-shadow">
                 Upgrade to Personal, €4.99/mo
               </button>
             </Link>

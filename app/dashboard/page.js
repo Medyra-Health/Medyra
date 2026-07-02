@@ -289,9 +289,10 @@ export default function DashboardPage() {
   })
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#F7FBF9]" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+      <style>{`.font-display { font-family: var(--font-playfair), Georgia, serif; }`}</style>
       {/* Header */}
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-30">
+      <header className="bg-white/90 backdrop-blur-md border-b-2 border-emerald-100 sticky top-0 z-30">
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
             <Link href="/"><MedyraLogo size="md" /></Link>
@@ -311,7 +312,7 @@ export default function DashboardPage() {
         {/* Welcome + plan bar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div>
-            <h1 className="text-xl font-black text-gray-900">
+            <h1 className="font-display text-xl md:text-2xl font-black text-[#0B1F17]">
               {t('dashboard.welcome')}, {user?.firstName || 'there'} 👋
             </h1>
             <p className="text-sm text-gray-500 mt-0.5">Here's your health overview</p>

@@ -198,12 +198,13 @@ export default function VerstehensPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#F8FAFD]" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
       <style>{`
         @media print {
           .no-print { display: none !important; }
           .print-large { font-size: 14pt; line-height: 1.7; }
         }
+        .font-display { font-family: var(--font-playfair), Georgia, serif; }
       `}</style>
 
       {consentStatus === 'needed' && pendingFile && (
@@ -222,7 +223,7 @@ export default function VerstehensPage() {
       )}
 
       {/* ── Header ── */}
-      <header className="no-print bg-white border-b-2 border-teal-100 py-4 px-6 flex items-center justify-between sticky top-0 z-40">
+      <header className="no-print bg-white/90 backdrop-blur-md border-b-2 border-blue-100 py-4 px-6 flex items-center justify-between sticky top-0 z-40">
         <Link href="/"><MedyraLogo size="md" /></Link>
         <Link href="/" className="text-base text-gray-400 hover:text-gray-600 transition-colors">
           Zurück zur Startseite
@@ -237,9 +238,9 @@ export default function VerstehensPage() {
           <div className="w-full max-w-lg text-center">
 
             {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-5">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-[#0B1F17] leading-[1.12] mb-5">
               Ihr Arztbrief,<br />
-              <span className="text-emerald-600">einfach erklärt.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">einfach erklärt.</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 leading-relaxed mb-12 max-w-md mx-auto">
               Laden Sie Ihren Befund hoch, wir erklären alles auf Deutsch, ohne Fachbegriffe.
@@ -267,7 +268,7 @@ export default function VerstehensPage() {
                   melden Sie sich kurz an.
                 </p>
                 <SignInButton mode="modal">
-                  <button className="bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-bold text-xl px-10 py-5 rounded-2xl transition-all shadow-lg shadow-emerald-200 cursor-pointer">
+                  <button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:shadow-[0_0_28px_-4px_rgba(59,130,246,0.5)] active:scale-95 text-white font-bold text-xl px-10 py-5 rounded-2xl transition-all shadow-lg shadow-blue-200 cursor-pointer">
                     Anmelden und Dokument hochladen
                   </button>
                 </SignInButton>
@@ -280,8 +281,8 @@ export default function VerstehensPage() {
                 {...getRootProps()}
                 className={`border-4 border-dashed rounded-3xl p-12 md:p-16 cursor-pointer transition-all duration-200 ${
                   isDragActive
-                    ? 'border-emerald-500 bg-emerald-50 scale-[1.02]'
-                    : 'border-gray-200 bg-gray-50 hover:border-emerald-400 hover:bg-emerald-50/40'
+                    ? 'border-blue-500 bg-blue-50 scale-[1.02]'
+                    : 'border-gray-200 bg-white hover:border-blue-400 hover:bg-blue-50/40'
                 }`}
               >
                 <input {...getInputProps()} />
@@ -303,7 +304,7 @@ export default function VerstehensPage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <button
                         type="button"
-                        className="bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-bold text-xl px-10 py-5 rounded-2xl transition-all shadow-lg shadow-emerald-200"
+                        className="bg-gradient-to-r from-blue-500 to-blue-600 hover:shadow-[0_0_28px_-4px_rgba(59,130,246,0.5)] active:scale-95 text-white font-bold text-xl px-10 py-5 rounded-2xl transition-all shadow-lg shadow-blue-200"
                       >
                         Datei auswählen
                       </button>
@@ -377,11 +378,11 @@ export default function VerstehensPage() {
           <div className="w-32 h-32 rounded-full bg-emerald-100 flex items-center justify-center mb-8">
             <Loader2 className="h-16 w-16 text-emerald-500 animate-spin" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0B1F17] mb-4">
             Wir lesen Ihr Dokument …
           </h2>
           <p className="text-xl text-gray-500 max-w-sm leading-relaxed mb-12">
-            Das dauert etwa 30 Sekunden.<br />Bitte warten Sie kurz.
+            Das dauert weniger als 60 Sekunden.<br />Bitte warten Sie kurz.
           </p>
           <div className="space-y-5 text-left max-w-xs w-full">
             {[
@@ -412,7 +413,7 @@ export default function VerstehensPage() {
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-emerald-100 mb-6">
               <CheckCircle className="h-10 w-10 text-emerald-600" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0B1F17] mb-3">
               Ihr Dokument wurde erklärt
             </h2>
             <p className="text-xl text-gray-500">Hier ist alles in einfacher Sprache</p>

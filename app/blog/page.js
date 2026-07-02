@@ -94,8 +94,9 @@ const POSTS = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <header className="border-b border-gray-100 bg-white sticky top-0 z-50">
+    <div className="min-h-screen bg-[#FDFBF7] relative" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+      <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-amber-100/50 rounded-full blur-3xl pointer-events-none" />
+      <header className="border-b-2 border-amber-100 bg-white/90 backdrop-blur-md sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <Link href="/"><MedyraLogo size="md" /></Link>
           <Link href="/" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">← Back to Medyra</Link>
@@ -103,9 +104,9 @@ export default function BlogPage() {
       </header>
 
       <main className="container mx-auto px-4 py-14 max-w-2xl">
-        <div className="mb-10">
-          <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-2">Medyra Blog</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Health & Lab Results</h1>
+        <div className="mb-10 relative">
+          <p className="text-xs font-semibold text-amber-600 uppercase tracking-widest mb-2">Medyra Blog</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#0B1F17] mb-3" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>Health & Lab Results</h1>
           <p className="text-gray-500 text-base leading-relaxed">
             Plain language guides for understanding your medical reports. No jargon, just clear explanations written for patients.
           </p>
@@ -114,20 +115,20 @@ export default function BlogPage() {
         <div className="space-y-6">
           {POSTS.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
-              <article className={`rounded-2xl p-6 transition-all duration-200 ${
+              <article className={`rounded-2xl p-6 bg-white transition-all duration-200 hover:-translate-y-0.5 ${
                 post.highlight
-                  ? 'border-2 border-emerald-200 bg-emerald-50/40 hover:border-emerald-400 hover:shadow-sm'
-                  : 'border border-gray-200 hover:border-emerald-300 hover:shadow-sm'
+                  ? 'border-2 border-amber-200 hover:border-amber-400 hover:shadow-lg hover:shadow-amber-100'
+                  : 'border border-gray-200 hover:border-amber-300 hover:shadow-lg hover:shadow-amber-50'
               }`}>
                 <div className="flex flex-wrap gap-2 mb-3">
                   {post.highlight && (
-                    <span className="text-xs bg-emerald-500 text-white px-2 py-0.5 rounded-full font-semibold">New</span>
+                    <span className="text-xs bg-amber-500 text-white px-2 py-0.5 rounded-full font-semibold">New</span>
                   )}
                   {post.tags.map((tag) => (
-                    <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full font-medium">{tag}</span>
+                    <span key={tag} className="text-xs bg-amber-50 text-amber-700 border border-amber-100 px-2 py-0.5 rounded-full font-medium">{tag}</span>
                   ))}
                 </div>
-                <h2 className="text-lg font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-2 leading-snug">{post.title}</h2>
+                <h2 className="text-lg font-bold text-[#0B1F17] group-hover:text-amber-700 transition-colors mb-2 leading-snug">{post.title}</h2>
                 <p className="text-gray-500 text-sm leading-relaxed mb-3">{post.description}</p>
                 <div className="flex items-center gap-3 text-xs text-gray-400">
                   <span>{post.date}</span>
