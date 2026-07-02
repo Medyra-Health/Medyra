@@ -91,19 +91,19 @@ function NewToGermanySection() {
   }
 
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-20 md:py-28 bg-[#040C08]">
       <div className="container mx-auto px-4 max-w-5xl">
 
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
             {t('landing.newToGermany.badge')}
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-[#E8F5F0] mb-4">
             {t('landing.newToGermany.title')}{' '}
-            <span className="text-emerald-600">{t('landing.newToGermany.titleHighlight')}</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B981] to-[#34D399]">{t('landing.newToGermany.titleHighlight')}</span>
           </h2>
-          <p className="text-gray-600 text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-[#E8F5F0]/60 text-base max-w-xl mx-auto leading-relaxed">
             {t('landing.newToGermany.subtitle')}
           </p>
         </div>
@@ -117,7 +117,7 @@ function NewToGermanySection() {
               className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 ${
                 active === d.id
                   ? 'bg-emerald-500 border-emerald-500 text-white shadow-sm shadow-emerald-500/25'
-                  : 'bg-white border-gray-200 text-gray-600 hover:border-emerald-400 hover:text-emerald-600'
+                  : 'bg-white/5 border-white/10 text-[#E8F5F0]/60 hover:border-emerald-400/60 hover:text-emerald-300'
               }`}
             >
               {d.pill}
@@ -129,31 +129,31 @@ function NewToGermanySection() {
         <div
           key={animKey}
           style={{ animation: 'ngFadeIn 0.3s ease both' }}
-          className="grid md:grid-cols-2 gap-0 rounded-2xl border border-gray-200 overflow-hidden shadow-xl"
+          className="grid md:grid-cols-2 gap-0 rounded-2xl border border-white/10 overflow-hidden shadow-xl"
         >
           {/* Left, explanation */}
-          <div className="bg-gray-50 p-8 md:p-10 flex flex-col justify-center">
-            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-4">{doc.pill}</p>
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 leading-snug">
+          <div className="bg-white/[0.03] p-8 md:p-10 flex flex-col justify-center">
+            <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-4">{doc.pill}</p>
+            <h3 className="font-display text-xl md:text-2xl font-bold text-[#E8F5F0] mb-4 leading-snug">
               {doc.heading}
             </h3>
-            <p className="text-gray-600 text-sm leading-relaxed mb-6">
+            <p className="text-[#E8F5F0]/60 text-sm leading-relaxed mb-6">
               {doc.body}
             </p>
-            <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold px-3 py-1.5 rounded-full w-fit">
+            <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-xs font-semibold px-3 py-1.5 rounded-full w-fit">
               {doc.badge}
             </div>
           </div>
 
           {/* Right, mock output */}
-          <div className="bg-white p-8 md:p-10 flex flex-col justify-center border-l border-gray-200">
-            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-5">{t('landing.newToGermany.medyraExplains')}</p>
+          <div className="bg-[#06120D] p-8 md:p-10 flex flex-col justify-center border-l border-white/10">
+            <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-5">{t('landing.newToGermany.medyraExplains')}</p>
             <div className="space-y-3">
               {doc.preview.map((row, i) => (
-                <div key={i} className="flex items-center justify-between py-2.5 border-b border-gray-100 last:border-0">
-                  <span className="text-sm text-gray-600">{row.label}</span>
+                <div key={i} className="flex items-center justify-between py-2.5 border-b border-white/5 last:border-0">
+                  <span className="text-sm text-[#E8F5F0]/60">{row.label}</span>
                   <span className={`text-sm font-semibold flex items-center gap-1.5 ${
-                    row.ok === false ? 'text-amber-500' : row.ok === true ? 'text-gray-900' : 'text-emerald-600'
+                    row.ok === false ? 'text-amber-400' : row.ok === true ? 'text-[#E8F5F0]' : 'text-emerald-400'
                   }`}>
                     {row.ok === false && <span className="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0" />}
                     {row.ok === true && <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0" />}
@@ -162,7 +162,7 @@ function NewToGermanySection() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 pt-5 border-t border-gray-100">
+            <div className="mt-6 pt-5 border-t border-white/10">
               <SignedOut>
                 <SignInButton mode="modal">
                   <button className="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm py-2.5 rounded-xl transition-colors cursor-pointer">
@@ -197,7 +197,7 @@ const CAMPAIGNS = [
     title: 'German lab results, translated instantly.',
     body: 'Eliminating the double barrier of language and medical terminology for international residents navigating the German healthcare system.',
     visual: '🧪',
-    gradient: 'from-slate-900 via-slate-800 to-gray-900',
+    gradient: 'from-[#0B241A] via-[#07170F] to-[#040C08]',
     accent: 'emerald',
   },
   {
@@ -205,16 +205,16 @@ const CAMPAIGNS = [
     title: 'Clear results, calm mind.',
     body: 'Addressing the "jargon anxiety" that occurs when patients receive complex medical results they cannot interpret. Clarity is a vital part of mental well-being.',
     visual: '🧠',
-    gradient: 'from-violet-950 via-slate-900 to-gray-900',
-    accent: 'violet',
+    gradient: 'from-[#07170F] via-[#0B241A] to-[#040C08]',
+    accent: 'emerald',
   },
   {
     tag: 'European Patients\' Rights Day',
     title: 'Your health data, finally clear.',
     body: 'Empowering patients to advocate for themselves by reclaiming their right to understand their own medical data. Knowledge is the foundation of care.',
     visual: '🇪🇺',
-    gradient: 'from-blue-950 via-slate-900 to-gray-900',
-    accent: 'blue',
+    gradient: 'from-[#040C08] via-[#0B241A] to-[#07170F]',
+    accent: 'emerald',
   },
 ]
 
@@ -240,20 +240,18 @@ function CampaignSection() {
   const c = CAMPAIGNS[active]
   const accentMap = {
     emerald: { dot: 'bg-emerald-400', text: 'text-emerald-400', ring: 'ring-emerald-400', bar: 'bg-emerald-400', tag: 'bg-emerald-400/10 border-emerald-400/30 text-emerald-400' },
-    violet:  { dot: 'bg-violet-400',  text: 'text-violet-400',  ring: 'ring-violet-400',  bar: 'bg-violet-400',  tag: 'bg-violet-400/10 border-violet-400/30 text-violet-400'  },
-    blue:    { dot: 'bg-blue-400',    text: 'text-blue-400',    ring: 'ring-blue-400',    bar: 'bg-blue-400',    tag: 'bg-blue-400/10 border-blue-400/30 text-blue-400'    },
   }
   const a = accentMap[c.accent]
 
   return (
-    <section className="py-20 bg-gray-950 overflow-hidden">
+    <section className="py-20 bg-[#06120D] overflow-hidden">
       <div className="container mx-auto px-4 max-w-6xl">
 
         {/* Section header */}
         <div className="flex items-center justify-between mb-10">
           <div>
-            <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Why it matters</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Health clarity for everyone</h2>
+            <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-1">Why it matters</p>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-[#E8F5F0]">Health clarity for everyone</h2>
           </div>
           {/* Dot nav + pause */}
           <div className="flex items-center gap-3">
@@ -262,13 +260,13 @@ function CampaignSection() {
                 key={i}
                 onClick={() => go(i)}
                 className={`transition-all duration-300 rounded-full ${
-                  i === active ? `w-6 h-2 ${a.dot}` : 'w-2 h-2 bg-gray-700 hover:bg-gray-500'
+                  i === active ? `w-6 h-2 ${a.dot}` : 'w-2 h-2 bg-white/15 hover:bg-white/30'
                 }`}
               />
             ))}
             <button
               onClick={() => setPaused(p => !p)}
-              className="ml-1 w-7 h-7 rounded-full bg-gray-800 border border-gray-700 hover:border-gray-500 flex items-center justify-center transition-colors"
+              className="ml-1 w-7 h-7 rounded-full bg-white/5 border border-white/15 hover:border-white/30 flex items-center justify-center transition-colors"
               title={paused ? 'Resume' : 'Pause'}
             >
               {paused
@@ -292,10 +290,10 @@ function CampaignSection() {
                 <span className={`w-1.5 h-1.5 rounded-full ${a.dot}`} />
                 {c.tag}
               </span>
-              <h3 className="text-2xl md:text-3xl font-black text-white mb-4 leading-tight">
+              <h3 className="font-display text-2xl md:text-3xl font-black text-[#E8F5F0] mb-4 leading-tight">
                 {c.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm">
+              <p className="text-[#E8F5F0]/60 text-sm leading-relaxed mb-8 max-w-sm">
                 {c.body}
               </p>
             </div>
@@ -350,8 +348,8 @@ function NavLink({ href, children, className = '' }) {
       href={href}
       className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-150 ${
         active
-          ? 'text-gray-900 bg-gray-100'
-          : 'text-gray-500 hover:text-gray-900 hover:bg-gray-100/70'
+          ? 'text-[#E8F5F0] bg-white/10'
+          : 'text-[#E8F5F0]/60 hover:text-[#E8F5F0] hover:bg-white/5'
       } ${className}`}
     >
       {children}
@@ -380,9 +378,11 @@ export default function LandingPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white" style={{ WebkitOverflowScrolling: 'touch' }}>
+    <div className="min-h-screen bg-[#040C08]" style={{ WebkitOverflowScrolling: 'touch', fontFamily: 'var(--font-dm-sans), sans-serif' }}>
       <style>{`
         html { scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+
+        .font-display { font-family: var(--font-playfair), Georgia, serif; }
 
         /* ── Scroll reveal ── */
         .sr {
@@ -435,12 +435,12 @@ export default function LandingPage() {
 
       {/* ── NAVIGATION ── */}
       <nav
-        className="border-b border-gray-200/80 bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm"
+        className="border-b border-white/5 bg-[#040C08]/85 backdrop-blur-md sticky top-0 z-50"
         style={{ transform: 'translateZ(0)', WebkitTransform: 'translateZ(0)' }}
       >
         <div className="container mx-auto px-4 py-2.5">
           <div className="flex justify-between items-center gap-4">
-            <Link href="/" className="flex-shrink-0"><MedyraLogo size="md" /></Link>
+            <Link href="/" className="flex-shrink-0"><MedyraLogo size="md" variant="dark" /></Link>
 
             {/* Desktop nav, all right-aligned */}
             <div className="hidden md:flex items-center gap-2 ml-auto">
@@ -448,12 +448,12 @@ export default function LandingPage() {
 
               <SignedOut>
                 <SignInButton mode="modal">
-                  <button className="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-all duration-150">
+                  <button className="px-3 py-1.5 text-sm font-medium text-[#E8F5F0]/70 hover:text-[#E8F5F0] hover:bg-white/10 rounded-md transition-all duration-150">
                     {t('nav.signIn')}
                   </button>
                 </SignInButton>
                 <SignInButton mode="modal">
-                  <button className="px-4 py-1.5 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-lg transition-all shadow-sm shadow-emerald-200">
+                  <button className="px-4 py-1.5 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white rounded-lg transition-all shadow-sm shadow-emerald-900/40">
                     {t('nav.tryFree')} →
                   </button>
                 </SignInButton>
@@ -461,7 +461,7 @@ export default function LandingPage() {
 
               <SignedIn>
                 <Link href="/dashboard">
-                  <button className="px-4 py-1.5 text-sm font-semibold bg-gray-800 hover:bg-gray-900 active:scale-95 text-white rounded-lg transition-all shadow-sm">
+                  <button className="px-4 py-1.5 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10 active:scale-95 text-[#E8F5F0] rounded-lg transition-all">
                     {t('nav.dashboard')}
                   </button>
                 </Link>
@@ -479,7 +479,7 @@ export default function LandingPage() {
               <LanguageSwitcher />
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-all"
+                className="p-2 rounded-lg text-[#E8F5F0]/70 hover:text-[#E8F5F0] hover:bg-white/10 transition-all"
               >
                 {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </button>
@@ -488,11 +488,11 @@ export default function LandingPage() {
 
           {/* Mobile menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden pt-3 pb-3 border-t border-gray-100 mt-3">
+            <div className="md:hidden pt-3 pb-3 border-t border-white/10 mt-3">
               <SignedOut>
                 <div className="flex gap-2">
                   <SignInButton mode="modal">
-                    <button className="flex-1 px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 border border-gray-200 rounded-xl transition-colors text-center" onClick={() => setMobileMenuOpen(false)}>
+                    <button className="flex-1 px-3 py-2.5 text-sm font-medium text-[#E8F5F0]/80 hover:bg-white/5 border border-white/15 rounded-xl transition-colors text-center" onClick={() => setMobileMenuOpen(false)}>
                       {t('nav.signIn')}
                     </button>
                   </SignInButton>
@@ -506,7 +506,7 @@ export default function LandingPage() {
               <SignedIn>
                 <div className="flex gap-2 mb-2">
                   <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}
-                    className="flex-1 text-center py-2.5 text-sm font-semibold bg-gray-800 hover:bg-gray-900 text-white rounded-xl transition-colors">
+                    className="flex-1 text-center py-2.5 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10 text-[#E8F5F0] rounded-xl transition-colors">
                     {t('nav.dashboard')}
                   </Link>
                   <Link href="/upload" onClick={() => setMobileMenuOpen(false)}
@@ -515,7 +515,7 @@ export default function LandingPage() {
                   </Link>
                 </div>
                 <div className="flex items-center justify-between px-1 py-1.5">
-                  <span className="text-sm text-gray-500">Account</span>
+                  <span className="text-sm text-[#E8F5F0]/50">Account</span>
                   <MedyraUserButton />
                 </div>
               </SignedIn>
@@ -528,7 +528,7 @@ export default function LandingPage() {
       <HeroSection />
 
       {/* ── BEFORE / AFTER ── */}
-      <section className="py-16 md:py-24 bg-gray-950 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-[#040C08] relative overflow-hidden">
         {/* subtle bg orbs */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-0 w-80 h-80 bg-red-600/5 rounded-full blur-3xl" />
@@ -537,8 +537,8 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 max-w-4xl relative">
           <div className="text-center mb-10 sr">
             <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">{t('problem.badge')}</p>
-            <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">{t('problem.heading')}</h2>
-            <p className="text-gray-500 text-sm max-w-lg mx-auto">{t('problem.subheading')}</p>
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-[#E8F5F0] mb-3">{t('problem.heading')}</h2>
+            <p className="text-[#E8F5F0]/50 text-sm max-w-lg mx-auto">{t('problem.subheading')}</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-5 items-stretch">
@@ -588,14 +588,14 @@ export default function LandingPage() {
       <CampaignSection />
 
       {/* ── HOW IT WORKS ── */}
-      <section id="how-it-works" className="py-20 md:py-28 bg-white relative overflow-hidden">
+      <section id="how-it-works" className="py-20 md:py-28 bg-[#040C08] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[250px] bg-emerald-500/8 rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-4 max-w-4xl relative">
           <div className="text-center mb-16 sr">
-            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">{t('landing.howItWorks.badge')}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t('howItWorks.title')}</h2>
+            <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">{t('landing.howItWorks.badge')}</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-[#E8F5F0]">{t('howItWorks.title')}</h2>
           </div>
 
           <div className="relative">
@@ -604,19 +604,19 @@ export default function LandingPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { n: 1, icon: FileText,   title: t('landing.howItWorks.step1Title'), desc: t('landing.howItWorks.step1Desc'), tag: t('landing.howItWorks.step1Detail'), accent: 'text-emerald-700 bg-emerald-50 border-emerald-200' },
-                { n: 2, icon: Brain,      title: t('landing.howItWorks.step2Title'), desc: t('landing.howItWorks.step2Desc'), tag: t('landing.howItWorks.step2Detail'), accent: 'text-violet-700 bg-violet-50 border-violet-200' },
-                { n: 3, icon: CheckCircle,title: t('landing.howItWorks.step3Title'), desc: t('landing.howItWorks.step3Desc'), tag: t('landing.howItWorks.step3Detail'), accent: 'text-blue-700 bg-blue-50 border-blue-200' },
+                { n: 1, icon: FileText,   title: t('landing.howItWorks.step1Title'), desc: t('landing.howItWorks.step1Desc'), tag: t('landing.howItWorks.step1Detail'), accent: 'text-emerald-300 bg-emerald-500/10 border-emerald-500/25' },
+                { n: 2, icon: Brain,      title: t('landing.howItWorks.step2Title'), desc: t('landing.howItWorks.step2Desc'), tag: t('landing.howItWorks.step2Detail'), accent: 'text-emerald-300 bg-emerald-500/10 border-emerald-500/25' },
+                { n: 3, icon: CheckCircle,title: t('landing.howItWorks.step3Title'), desc: t('landing.howItWorks.step3Desc'), tag: t('landing.howItWorks.step3Detail'), accent: 'text-emerald-300 bg-emerald-500/10 border-emerald-500/25' },
               ].map(({ n, icon: Icon, title, desc, tag, accent }) => (
                 <div key={n} className="sr flex flex-col items-center text-center">
                   <div className="relative mb-5">
-                    <div className="w-[56px] h-[56px] rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center">
-                      <Icon className="h-5 w-5 text-emerald-600" />
+                    <div className="w-[56px] h-[56px] rounded-full bg-white/5 border border-emerald-500/25 shadow-[0_0_24px_-8px_rgba(16,185,129,0.4)] flex items-center justify-center">
+                      <Icon className="h-5 w-5 text-emerald-400" />
                     </div>
                     <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-emerald-500 text-white text-[10px] font-black rounded-full flex items-center justify-center">{n}</span>
                   </div>
-                  <h3 className="font-bold text-base text-gray-900 mb-2">{title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">{desc}</p>
+                  <h3 className="font-bold text-base text-[#E8F5F0] mb-2">{title}</h3>
+                  <p className="text-sm text-[#E8F5F0]/60 leading-relaxed mb-4">{desc}</p>
                   <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${accent}`}>{tag}</span>
                 </div>
               ))}
@@ -643,9 +643,9 @@ export default function LandingPage() {
       </section>
 
       {/* ── DOCTOR VISIT PREP ── */}
-      <section className="py-20 md:py-28 bg-[#050d0a] relative overflow-hidden">
+      <section className="py-20 md:py-28 bg-[#06120D] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-violet-600/5 rounded-full blur-3xl -translate-y-1/2" />
+          <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-emerald-600/5 rounded-full blur-3xl -translate-y-1/2" />
           <div className="absolute bottom-0 left-0 w-[400px] h-[300px] bg-emerald-500/5 rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-4 max-w-6xl relative">
@@ -653,14 +653,14 @@ export default function LandingPage() {
 
             {/* Left: copy + steps */}
             <div className="sr-left">
-              <div className="inline-flex items-center gap-2 bg-violet-500/10 border border-violet-500/25 text-violet-300 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+              <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
                 <FileText className="h-3 w-3" /> {t('landing.doctorVisit.badge')}
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-[#E8F5F0] mb-4 leading-tight">
                 {t('landing.doctorVisit.title1')}<br />
-                <span className="text-violet-400">{t('landing.doctorVisit.title2')}</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B981] to-[#34D399]">{t('landing.doctorVisit.title2')}</span>
               </h2>
-              <p className="text-gray-400 text-base leading-relaxed mb-8">
+              <p className="text-[#E8F5F0]/60 text-base leading-relaxed mb-8">
                 {t('landing.doctorVisit.description')}
               </p>
               <div className="space-y-4 mb-10">
@@ -670,10 +670,10 @@ export default function LandingPage() {
                   { n: 3, title: t('landing.doctorVisit.step3Title'), desc: t('landing.doctorVisit.step3Desc') },
                 ].map(({ n, title, desc }) => (
                   <div key={n} className="flex gap-4 items-start">
-                    <span className="w-7 h-7 rounded-full bg-violet-500/20 border border-violet-500/30 text-violet-300 text-xs font-black flex items-center justify-center flex-shrink-0 mt-0.5">{n}</span>
+                    <span className="w-7 h-7 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-black flex items-center justify-center flex-shrink-0 mt-0.5">{n}</span>
                     <div>
-                      <p className="font-semibold text-white text-sm">{title}</p>
-                      <p className="text-gray-500 text-xs leading-relaxed mt-0.5">{desc}</p>
+                      <p className="font-semibold text-[#E8F5F0] text-sm">{title}</p>
+                      <p className="text-[#E8F5F0]/50 text-xs leading-relaxed mt-0.5">{desc}</p>
                     </div>
                   </div>
                 ))}
@@ -681,31 +681,31 @@ export default function LandingPage() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <SignedIn>
                   <Link href="/prep">
-                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-violet-600 hover:bg-violet-500 active:scale-95 text-white font-semibold rounded-xl transition-all text-sm shadow-lg shadow-violet-900/40">
+                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#10B981] to-[#059669] hover:shadow-[0_0_32px_-6px_rgba(16,185,129,0.6)] active:scale-95 text-white font-semibold rounded-xl transition-all text-sm shadow-lg shadow-emerald-900/40">
                       {t('landing.doctorVisit.cta')} <ArrowRight className="h-4 w-4" />
                     </button>
                   </Link>
                 </SignedIn>
                 <SignedOut>
                   <SignInButton mode="modal">
-                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-violet-600 hover:bg-violet-500 active:scale-95 text-white font-semibold rounded-xl transition-all text-sm shadow-lg shadow-violet-900/40">
+                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#10B981] to-[#059669] hover:shadow-[0_0_32px_-6px_rgba(16,185,129,0.6)] active:scale-95 text-white font-semibold rounded-xl transition-all text-sm shadow-lg shadow-emerald-900/40">
                       {t('nav.tryFree')} <ArrowRight className="h-4 w-4" />
                     </button>
                   </SignInButton>
                 </SignedOut>
               </div>
-              <p className="text-gray-600 text-xs mt-3">{t('landing.doctorVisit.freePlan')}</p>
+              <p className="text-[#E8F5F0]/40 text-xs mt-3">{t('landing.doctorVisit.freePlan')}</p>
             </div>
 
             {/* Right: sample output card */}
             <div className="sr-right">
-              <div className="bg-gray-900/80 border border-gray-700/60 rounded-2xl shadow-2xl overflow-hidden">
-                <div className="flex items-center justify-between px-5 py-3.5 border-b border-gray-800 bg-gray-900">
+              <div className="bg-white/[0.03] border border-emerald-500/15 rounded-2xl shadow-[0_0_50px_-15px_rgba(16,185,129,0.3)] overflow-hidden">
+                <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/5">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
-                    <span className="text-xs font-semibold text-gray-300">Beispiel-Ausgabe</span>
+                    <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="text-xs font-semibold text-[#E8F5F0]/80">Beispiel-Ausgabe</span>
                   </div>
-                  <span className="text-[10px] text-gray-500 bg-gray-800 border border-gray-700 px-2 py-0.5 rounded-full">Deutsch</span>
+                  <span className="text-[10px] text-[#E8F5F0]/50 bg-white/5 border border-white/15 px-2 py-0.5 rounded-full">Deutsch</span>
                 </div>
                 <div className="p-6 space-y-5">
                   {[
@@ -714,15 +714,15 @@ export default function LandingPage() {
                     { label: 'Fragen an den Arzt', items: ['Könnte der Schwindel mit Metformin zusammenhängen?', 'Welche Untersuchungen sind empfehlenswert?'] },
                   ].map(({ label, items }) => (
                     <div key={label}>
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-violet-400 mb-2">{label}</p>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-2">{label}</p>
                       {items.map(item => (
-                        <div key={item} className="flex gap-2 text-gray-300 text-xs leading-relaxed mb-1">
-                          <span className="text-violet-400 font-bold flex-shrink-0">·</span>{item}
+                        <div key={item} className="flex gap-2 text-[#E8F5F0]/70 text-xs leading-relaxed mb-1">
+                          <span className="text-emerald-400 font-bold flex-shrink-0">·</span>{item}
                         </div>
                       ))}
                     </div>
                   ))}
-                  <p className="text-[10px] text-gray-600 italic border-t border-gray-800 pt-3">Dieses Dokument stellt keine medizinische Diagnose dar.</p>
+                  <p className="text-[10px] text-[#E8F5F0]/40 italic border-t border-white/10 pt-3">Dieses Dokument stellt keine medizinische Diagnose dar.</p>
                 </div>
               </div>
             </div>
@@ -732,18 +732,18 @@ export default function LandingPage() {
       </section>
 
       {/* ── LANGUAGES ── */}
-      <section className="py-16 bg-gray-50 overflow-hidden">
+      <section className="py-16 bg-[#06120D] overflow-hidden">
         <div className="text-center mb-10 px-4">
-          <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">{t('landing.languages.badge')}</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">{t('landing.languages.title')}</h2>
-          <p className="text-gray-600 text-base">{t('landing.languages.subtitle')}</p>
+          <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">{t('landing.languages.badge')}</p>
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-[#E8F5F0] mb-3">{t('landing.languages.title')}</h2>
+          <p className="text-[#E8F5F0]/60 text-base">{t('landing.languages.subtitle')}</p>
         </div>
         {/* Row 1, scroll left */}
         <div className="ticker-wrap mb-3">
           <div className="ticker-l flex gap-3 w-max">
             {[...LANGUAGES, ...LANGUAGES].map(({ code, name }, i) => (
-              <span key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm text-sm text-gray-700 whitespace-nowrap flex-shrink-0">
-                <span className="text-[10px] font-bold text-emerald-600 tracking-widest">{code}</span>
+              <span key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-[#E8F5F0]/80 whitespace-nowrap flex-shrink-0">
+                <span className="text-[10px] font-bold text-emerald-400 tracking-widest">{code}</span>
                 <span>{name}</span>
               </span>
             ))}
@@ -753,8 +753,8 @@ export default function LandingPage() {
         <div className="ticker-wrap">
           <div className="ticker-r flex gap-3 w-max">
             {[...LANGUAGES, ...LANGUAGES].reverse().map(({ code, name }, i) => (
-              <span key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-gray-200/80 text-sm text-gray-500 whitespace-nowrap flex-shrink-0">
-                <span className="text-[10px] font-bold text-gray-400 tracking-widest">{code}</span>
+              <span key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/5 text-sm text-[#E8F5F0]/50 whitespace-nowrap flex-shrink-0">
+                <span className="text-[10px] font-bold text-[#E8F5F0]/30 tracking-widest">{code}</span>
                 <span>{name}</span>
               </span>
             ))}
@@ -763,7 +763,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── HEALTH VAULT ── */}
-      <section className="py-20 md:py-28 relative overflow-hidden" style={{background:'linear-gradient(160deg,#0a0f1a 0%,#071610 50%,#0a0f1a 100%)'}}>
+      <section className="py-20 md:py-28 relative overflow-hidden" style={{background:'linear-gradient(160deg,#040C08 0%,#08160F 50%,#040C08 100%)'}}>
         {/* Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-emerald-500/8 blur-3xl rounded-full pointer-events-none" />
         <div className="container mx-auto px-4 max-w-6xl relative">
@@ -773,11 +773,11 @@ export default function LandingPage() {
             <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
               <Shield className="h-3 w-3" /> Health Vault
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-[#E8F5F0] mb-4 leading-tight">
               Your health history.<br />
-              <span className="text-emerald-400">Every person. Every trend.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B981] to-[#34D399]">Every person. Every trend.</span>
             </h2>
-            <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-[#E8F5F0]/60 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
               One account for the whole family. Medyra tracks biomarkers across reports over time and surfaces trends before your next appointment.
             </p>
           </div>
@@ -786,13 +786,13 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
 
             {/* Left: Mock timeline chart */}
-            <div className="sr-left bg-gray-900/80 border border-gray-700/60 rounded-2xl p-6 space-y-5 shadow-2xl">
+            <div className="sr-left bg-white/[0.03] border border-emerald-500/15 rounded-2xl p-6 space-y-5 shadow-[0_0_50px_-15px_rgba(16,185,129,0.3)]">
               {/* Profile picker mockup */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="flex gap-1.5">
-                    {[{c:'bg-emerald-500',n:'Emma'},{c:'bg-blue-500',n:'Luis'},{c:'bg-violet-500',n:'Oma'},{active:'Emma'}].filter(p=>p.n).map(p=>(
-                      <div key={p.n} className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-semibold ${p.n==='Emma' ? 'border-emerald-500/50 bg-emerald-900/40 text-emerald-300' : 'border-gray-700 bg-gray-800 text-gray-500'}`}>
+                    {[{c:'bg-emerald-500',n:'Emma'},{c:'bg-teal-400',n:'Luis'},{c:'bg-emerald-300',n:'Oma'},{active:'Emma'}].filter(p=>p.n).map(p=>(
+                      <div key={p.n} className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-semibold ${p.n==='Emma' ? 'border-emerald-500/50 bg-emerald-900/40 text-emerald-300' : 'border-white/10 bg-white/5 text-[#E8F5F0]/50'}`}>
                         <span className={`w-1.5 h-1.5 rounded-full ${p.c}`} /> {p.n}
                       </div>
                     ))}
@@ -804,7 +804,7 @@ export default function LandingPage() {
               {/* Biomarker tabs */}
               <div className="flex gap-2 flex-wrap">
                 {['Hemoglobin','Ferritin','TSH','HbA1c'].map((b,i)=>(
-                  <span key={b} className={`px-2.5 py-1 rounded-full text-xs font-semibold border ${i===0 ? 'bg-red-900/40 border-red-500/40 text-red-300' : 'bg-gray-800 border-gray-700 text-gray-500'}`}>{b}</span>
+                  <span key={b} className={`px-2.5 py-1 rounded-full text-xs font-semibold border ${i===0 ? 'bg-red-900/40 border-red-500/40 text-red-300' : 'bg-white/5 border-white/10 text-[#E8F5F0]/50'}`}>{b}</span>
                 ))}
               </div>
 
@@ -815,7 +815,7 @@ export default function LandingPage() {
                     <div key={i} className="flex-1 rounded-t-sm transition-all" style={{height:`${h}%`,background:`linear-gradient(to top, #10b981, #10b98150)`}} />
                   ))}
                 </div>
-                <div className="flex justify-between text-[10px] text-gray-600 mt-1 px-0.5">
+                <div className="flex justify-between text-[10px] text-[#E8F5F0]/40 mt-1 px-0.5">
                   <span>Jan</span><span>Apr</span><span>Jul</span><span>Oct</span><span>Apr</span>
                 </div>
               </div>
@@ -827,10 +827,10 @@ export default function LandingPage() {
                   {label:'Normal range',value:'12–17.5',unit:'g/dL',ok:true},
                   {label:'Change',value:'+7.2%',unit:'since Jan',ok:true},
                 ].map(s=>(
-                  <div key={s.label} className="bg-gray-800/60 rounded-xl p-2.5 text-center">
-                    <p className="text-[10px] text-gray-500 mb-1">{s.label}</p>
+                  <div key={s.label} className="bg-white/5 rounded-xl p-2.5 text-center">
+                    <p className="text-[10px] text-[#E8F5F0]/50 mb-1">{s.label}</p>
                     <p className={`text-sm font-black ${s.ok ? 'text-emerald-400' : 'text-red-400'}`}>{s.value}</p>
-                    <p className="text-[10px] text-gray-600">{s.unit}</p>
+                    <p className="text-[10px] text-[#E8F5F0]/40">{s.unit}</p>
                   </div>
                 ))}
               </div>
@@ -843,32 +843,32 @@ export default function LandingPage() {
                   icon: '👨‍👩‍👧‍👦',
                   title: 'One account, whole family',
                   desc: 'Create separate profiles for each family member, including partner, children, and elderly parents. Each has their own private health timeline.',
-                  color: 'text-emerald-400',
+                  color: 'text-emerald-300',
                 },
                 {
                   icon: '📈',
                   title: 'Automatic biomarker tracking',
                   desc: 'Hemoglobin, ferritin, TSH, HbA1c, cholesterol, vitamin D, CRP, eGFR. Medyra reads them from every uploaded report and plots them automatically.',
-                  color: 'text-blue-400',
+                  color: 'text-emerald-300',
                 },
                 {
                   icon: '⚠️',
                   title: 'Trend alerts that matter',
                   desc: 'If a value changes by more than 10% since your first reading, Medyra flags it. A single value means nothing. The trend tells the story.',
-                  color: 'text-amber-400',
+                  color: 'text-emerald-300',
                 },
                 {
                   icon: '🩺',
                   title: 'Doctor prep with full history',
                   desc: 'When you generate a doctor summary, select a profile. Your lab history is automatically pulled in. No typing, no forgetting, no gaps.',
-                  color: 'text-violet-400',
+                  color: 'text-emerald-300',
                 },
               ].map((f, i) => (
-                <div key={i} className={`flex gap-4 p-4 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-gray-700 transition-all glow-card d${i+1}`}>
+                <div key={i} className={`flex gap-4 p-4 rounded-xl border border-white/10 bg-white/[0.03] hover:border-emerald-500/30 transition-all glow-card d${i+1}`}>
                   <span className="text-2xl flex-shrink-0 mt-0.5">{f.icon}</span>
                   <div>
                     <p className={`font-bold text-sm mb-1 ${f.color}`}>{f.title}</p>
-                    <p className="text-xs text-gray-400 leading-relaxed">{f.desc}</p>
+                    <p className="text-xs text-[#E8F5F0]/60 leading-relaxed">{f.desc}</p>
                   </div>
                 </div>
               ))}
@@ -878,28 +878,28 @@ export default function LandingPage() {
           {/* Profile limit cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 scroll-fade">
             {[
-              { plan: 'Free', profiles: '0', desc: 'Stateless analysis', color: 'border-gray-700 bg-gray-900', badge: '' },
+              { plan: 'Free', profiles: '0', desc: 'Stateless analysis', color: 'border-white/10 bg-white/[0.03]', badge: '' },
               { plan: 'Personal', profiles: '2', desc: 'You + partner', color: 'border-emerald-500/30 bg-emerald-950/40', badge: 'Most Popular' },
-              { plan: 'Family', profiles: '5', desc: 'Whole household', color: 'border-violet-500/30 bg-violet-950/40', badge: '' },
-              { plan: 'Clinic', profiles: '∞', desc: 'Unlimited profiles', color: 'border-blue-500/30 bg-blue-950/40', badge: '' },
+              { plan: 'Family', profiles: '5', desc: 'Whole household', color: 'border-white/10 bg-white/[0.03]', badge: '' },
+              { plan: 'Clinic', profiles: '∞', desc: 'Unlimited profiles', color: 'border-white/10 bg-white/[0.03]', badge: '' },
             ].map(p => (
               <div key={p.plan} className={`relative rounded-2xl border p-5 text-center ${p.color}`}>
                 {p.badge && (
                   <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 text-[10px] font-bold bg-emerald-500 text-white px-2.5 py-0.5 rounded-full whitespace-nowrap">{p.badge}</span>
                 )}
-                <p className="text-3xl font-black text-white mb-1">{p.profiles}</p>
-                <p className="text-xs font-bold text-gray-300 mb-0.5">{p.plan}</p>
-                <p className="text-[11px] text-gray-500">{p.desc}</p>
+                <p className="text-3xl font-black text-[#E8F5F0] mb-1">{p.profiles}</p>
+                <p className="text-xs font-bold text-[#E8F5F0]/80 mb-0.5">{p.plan}</p>
+                <p className="text-[11px] text-[#E8F5F0]/50">{p.desc}</p>
               </div>
             ))}
           </div>
 
           {/* CTA */}
           <div className="text-center scroll-fade">
-            <Link href="/profiles" className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl transition-colors text-sm shadow-lg shadow-emerald-900/40 mr-3">
+            <Link href="/profiles" className="inline-flex items-center gap-2 bg-gradient-to-r from-[#10B981] to-[#059669] hover:shadow-[0_0_32px_-6px_rgba(16,185,129,0.6)] text-white font-bold px-8 py-4 rounded-xl transition-all text-sm shadow-lg shadow-emerald-900/40 mr-3">
               Open Health Vault <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link href="/blog/health-vault-profiles-guide" className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-semibold px-6 py-4 rounded-xl transition-colors text-sm">
+            <Link href="/blog/health-vault-profiles-guide" className="inline-flex items-center gap-2 border border-emerald-500/40 hover:border-emerald-400 text-[#E8F5F0]/70 hover:text-[#E8F5F0] font-semibold px-6 py-4 rounded-xl transition-colors text-sm">
               Learn more
             </Link>
           </div>
@@ -910,14 +910,14 @@ export default function LandingPage() {
       <NewToGermanySection />
 
       {/* ── ENCRYPTION / SECURITY ── */}
-      <section className="py-20 md:py-28 bg-[#030712] overflow-hidden">
+      <section className="py-20 md:py-28 bg-[#06120D] overflow-hidden">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-14 scroll-fade">
             <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
               <Lock className="h-3 w-3" /> {t('landing.security.badge')}
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('landing.security.title')}</h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto leading-relaxed">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-[#E8F5F0] mb-4">{t('landing.security.title')}</h2>
+            <p className="text-[#E8F5F0]/60 text-base max-w-xl mx-auto leading-relaxed">
               {t('landing.security.subtitle')}
             </p>
           </div>
@@ -925,18 +925,18 @@ export default function LandingPage() {
           {/* Data flow: clear step-by-step */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5 scroll-fade delay-1">
             {[
-              { step: 1, icon: FileText,  label: 'You upload', sub: 'PDF, image, or text', color: 'border-gray-700 bg-gray-900' },
+              { step: 1, icon: FileText,  label: 'You upload', sub: 'PDF, image, or text', color: 'border-white/10 bg-white/[0.03]' },
               { step: 2, icon: Lock,      label: 'Encrypted at rest', sub: 'AES-256-GCM, only ciphertext stored', color: 'border-emerald-500/40 bg-emerald-950/60', glow: true },
-              { step: 3, icon: Brain,     label: 'AI analysis', sub: 'Temp decrypted, sent to Claude, not stored', color: 'border-violet-500/30 bg-violet-950/40' },
-              { step: 4, icon: CheckCircle, label: 'Answer to you', sub: 'Plain language, on your screen', color: 'border-blue-500/30 bg-blue-950/40' },
+              { step: 3, icon: Brain,     label: 'AI analysis', sub: 'Temp decrypted, sent to Claude, not stored', color: 'border-white/10 bg-white/[0.03]' },
+              { step: 4, icon: CheckCircle, label: 'Answer to you', sub: 'Plain language, on your screen', color: 'border-white/10 bg-white/[0.03]' },
             ].map(({ step, icon: Icon, label, sub, color, glow }) => (
               <div key={step} className={`rounded-2xl border p-4 text-center relative ${color}`}>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-3 ${glow ? 'bg-emerald-500/20' : 'bg-gray-800'}`}>
-                  <Icon className={`h-4 w-4 ${glow ? 'text-emerald-400' : 'text-gray-400'}`} />
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-3 ${glow ? 'bg-emerald-500/20' : 'bg-white/5'}`}>
+                  <Icon className={`h-4 w-4 ${glow ? 'text-emerald-400' : 'text-[#E8F5F0]/50'}`} />
                 </div>
-                <span className="absolute top-2 right-2 text-[10px] text-gray-600 font-bold">{step}</span>
-                <p className="text-xs font-bold text-white mb-1">{label}</p>
-                <p className="text-[10px] text-gray-500 leading-relaxed">{sub}</p>
+                <span className="absolute top-2 right-2 text-[10px] text-[#E8F5F0]/30 font-bold">{step}</span>
+                <p className="text-xs font-bold text-[#E8F5F0] mb-1">{label}</p>
+                <p className="text-[10px] text-[#E8F5F0]/50 leading-relaxed">{sub}</p>
               </div>
             ))}
           </div>
@@ -957,18 +957,18 @@ export default function LandingPage() {
                   'Each value encrypted with a unique random key (IV)',
                   'Data auto-deleted after 30 days',
                 ].map(item => (
-                  <li key={item} className="flex gap-2 text-xs text-gray-300 leading-relaxed">
+                  <li key={item} className="flex gap-2 text-xs text-[#E8F5F0]/70 leading-relaxed">
                     <span className="text-emerald-500 flex-shrink-0 mt-0.5">·</span>{item}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl border border-violet-500/20 bg-violet-950/20 p-6">
+            <div className="rounded-2xl border border-teal-500/20 bg-teal-950/20 p-6">
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-6 h-6 rounded-full bg-violet-500/20 flex items-center justify-center flex-shrink-0">
-                  <Brain className="h-3.5 w-3.5 text-violet-400" />
+                <div className="w-6 h-6 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
+                  <Brain className="h-3.5 w-3.5 text-teal-300" />
                 </div>
-                <p className="text-sm font-bold text-violet-400">What Claude sees (temporarily)</p>
+                <p className="text-sm font-bold text-teal-300">What Claude sees (temporarily)</p>
               </div>
               <ul className="space-y-2">
                 {[
@@ -977,8 +977,8 @@ export default function LandingPage() {
                   'Never used to train AI models',
                   'Connection is encrypted in transit (TLS)',
                 ].map(item => (
-                  <li key={item} className="flex gap-2 text-xs text-gray-300 leading-relaxed">
-                    <span className="text-violet-400 flex-shrink-0 mt-0.5">·</span>{item}
+                  <li key={item} className="flex gap-2 text-xs text-[#E8F5F0]/70 leading-relaxed">
+                    <span className="text-teal-300 flex-shrink-0 mt-0.5">·</span>{item}
                   </li>
                 ))}
               </ul>
@@ -992,10 +992,10 @@ export default function LandingPage() {
               { icon: '🎲', title: t('landing.security.feat3Title'), desc: t('landing.security.feat3Desc') },
               { icon: '🚫', title: t('landing.security.feat4Title'), desc: t('landing.security.feat4Desc') },
             ].map(({ icon, title, desc }) => (
-              <div key={title} className="rounded-xl border border-gray-800 bg-gray-900/60 p-4">
+              <div key={title} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
                 <div className="text-lg mb-2">{icon}</div>
-                <p className="text-xs font-bold text-white mb-1">{title}</p>
-                <p className="text-[11px] text-gray-500 leading-relaxed">{desc}</p>
+                <p className="text-xs font-bold text-[#E8F5F0] mb-1">{title}</p>
+                <p className="text-[11px] text-[#E8F5F0]/50 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -1009,9 +1009,9 @@ export default function LandingPage() {
       </section>
 
       {/* ── FÜR SENIOREN ── */}
-      <section className="py-20 md:py-28 bg-[#0a1628] relative overflow-hidden">
+      <section className="py-20 md:py-28 bg-[#040C08] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-600/6 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-emerald-600/6 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-teal-500/6 rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-4 max-w-6xl relative">
@@ -1019,15 +1019,15 @@ export default function LandingPage() {
 
             {/* Left: text */}
             <div className="sr">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-400/30 bg-blue-400/10 text-blue-300 text-xs font-bold tracking-widest uppercase mb-6">
-                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 text-xs font-bold tracking-widest uppercase mb-6">
+                <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
                 {t('landing.senior.badge')}
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#E8F5F0] leading-tight mb-4">
                 {t('landing.senior.headline1')}
-                <span className="block text-blue-300">{t('landing.senior.headline2')}</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#10B981] to-[#34D399]">{t('landing.senior.headline2')}</span>
               </h2>
-              <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-lg">
+              <p className="text-[#E8F5F0]/60 text-lg leading-relaxed mb-8 max-w-lg">
                 {t('landing.senior.desc')}
               </p>
               <ul className="space-y-3 mb-10">
@@ -1038,13 +1038,13 @@ export default function LandingPage() {
                   t('landing.senior.f4'),
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-300 text-sm leading-relaxed">{f}</span>
+                    <CheckCircle className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-[#E8F5F0]/70 text-sm leading-relaxed">{f}</span>
                   </li>
                 ))}
               </ul>
               <Link href="/verstehen">
-                <button className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-400 active:scale-95 text-white font-semibold rounded-xl transition-all shadow-lg shadow-blue-900/40">
+                <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#10B981] to-[#059669] hover:shadow-[0_0_32px_-6px_rgba(16,185,129,0.6)] active:scale-95 text-white font-semibold rounded-xl transition-all shadow-lg shadow-emerald-900/40">
                   {t('landing.senior.cta')} <ArrowRight className="h-4 w-4" />
                 </button>
               </Link>
@@ -1053,34 +1053,34 @@ export default function LandingPage() {
             {/* Right: mock Arztbrief card */}
             <div className="sr-right">
               <div className="relative">
-                <div className="absolute -inset-4 bg-blue-500/8 rounded-3xl blur-xl" />
-                <div className="relative bg-gray-900 rounded-2xl border border-blue-800/40 shadow-2xl overflow-hidden">
+                <div className="absolute -inset-4 bg-emerald-500/8 rounded-3xl blur-xl" />
+                <div className="relative bg-white/[0.03] rounded-2xl border border-emerald-500/20 shadow-2xl overflow-hidden">
                   {/* Header */}
-                  <div className="flex items-center justify-between px-5 py-4 border-b border-gray-800 bg-gray-900/80">
+                  <div className="flex items-center justify-between px-5 py-4 border-b border-white/5">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse" />
-                      <span className="text-white font-semibold text-sm">Arztbrief · Befund</span>
+                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                      <span className="text-[#E8F5F0] font-semibold text-sm">Arztbrief · Befund</span>
                     </div>
-                    <span className="text-xs text-blue-300 bg-blue-400/10 px-2.5 py-1 rounded-full font-medium border border-blue-400/20">Erklärt</span>
+                    <span className="text-xs text-emerald-300 bg-emerald-400/10 px-2.5 py-1 rounded-full font-medium border border-emerald-400/20">Erklärt</span>
                   </div>
                   {/* Content */}
                   <div className="p-5 space-y-3">
-                    <div className="bg-gray-800/60 border border-gray-700/40 rounded-xl p-4">
-                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">Original</p>
-                      <p className="text-xs text-gray-400 leading-relaxed font-mono">"Ejektionsfraktion 45%, Sinusrhythmus, kein Anhalt für Perikarderguss."</p>
+                    <div className="bg-white/[0.04] border border-white/10 rounded-xl p-4">
+                      <p className="text-xs font-semibold text-[#E8F5F0]/50 uppercase tracking-widest mb-1">Original</p>
+                      <p className="text-xs text-[#E8F5F0]/60 leading-relaxed font-mono">"Ejektionsfraktion 45%, Sinusrhythmus, kein Anhalt für Perikarderguss."</p>
                     </div>
-                    <div className="flex justify-center text-gray-600">
+                    <div className="flex justify-center text-[#E8F5F0]/40">
                       <ArrowRight className="h-4 w-4 rotate-90" />
                     </div>
-                    <div className="bg-blue-950/60 border border-blue-800/30 rounded-xl p-4">
-                      <p className="text-xs font-semibold text-blue-400 uppercase tracking-widest mb-2">Einfache Erklärung</p>
-                      <p className="text-xs text-gray-300 leading-relaxed">Ihr Herz pumpt das Blut gut, aber die Pumpleistung ist leicht eingeschränkt. Kein Flüssigkeitsansammlung um das Herz. Regelmäßiger Herzrhythmus.</p>
+                    <div className="bg-emerald-950/50 border border-emerald-500/15 rounded-xl p-4">
+                      <p className="text-xs font-semibold text-emerald-400 uppercase tracking-widest mb-2">Einfache Erklärung</p>
+                      <p className="text-xs text-[#E8F5F0]/70 leading-relaxed">Ihr Herz pumpt das Blut gut, aber die Pumpleistung ist leicht eingeschränkt. Kein Flüssigkeitsansammlung um das Herz. Regelmäßiger Herzrhythmus.</p>
                     </div>
                     <div className="flex items-center gap-2 pt-1">
-                      <button className="flex-1 flex items-center gap-1.5 justify-center py-2 rounded-lg bg-blue-500/15 border border-blue-500/30 text-xs text-blue-300 font-medium">
+                      <button className="flex-1 flex items-center gap-1.5 justify-center py-2 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-xs text-emerald-300 font-medium">
                         <Volume2 className="h-3.5 w-3.5" /> Vorlesen lassen
                       </button>
-                      <button className="flex-1 flex items-center gap-1.5 justify-center py-2 rounded-lg bg-gray-800 border border-gray-700 text-xs text-gray-400">
+                      <button className="flex-1 flex items-center gap-1.5 justify-center py-2 rounded-lg bg-white/5 border border-white/15 text-xs text-[#E8F5F0]/60">
                         <Download className="h-3.5 w-3.5" /> PDF teilen
                       </button>
                     </div>
@@ -1094,52 +1094,52 @@ export default function LandingPage() {
       </section>
 
       {/* ── LEXIKON ── */}
-      <section className="py-20 md:py-24 bg-white relative overflow-hidden">
+      <section className="py-20 md:py-24 bg-[#06120D] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-50 rounded-full blur-3xl opacity-60" />
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-4 max-w-5xl relative">
           <div className="sr text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-              <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" /> Kostenloses Lexikon
+            <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" /> Kostenloses Lexikon
             </div>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3 leading-tight">
-              Laborwerte verstehen.<br className="hidden sm:block" /><span className="text-emerald-600">Ohne Medizinstudium.</span>
+            <h2 className="font-display text-3xl md:text-4xl font-black text-[#E8F5F0] mb-3 leading-tight">
+              Laborwerte verstehen.<br className="hidden sm:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B981] to-[#34D399]">Ohne Medizinstudium.</span>
             </h2>
-            <p className="text-gray-500 text-base max-w-xl mx-auto">
+            <p className="text-[#E8F5F0]/50 text-base max-w-xl mx-auto">
               46 Blutwerte einfach erklärt: Normwerte, Ursachen, wann zum Arzt. Kostenlos. Keine Anmeldung.
             </p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mb-10">
             {[
-              { slug: 'crp',         acronym: 'CRP',   name: 'Entzündungs­wert', color: 'bg-orange-50 border-orange-200 text-orange-700 hover:border-orange-400' },
-              { slug: 'hba1c',       acronym: 'HbA1c', name: 'Langzeit­zucker',  color: 'bg-violet-50 border-violet-200 text-violet-700 hover:border-violet-400' },
-              { slug: 'tsh',         acronym: 'TSH',   name: 'Schilddrüse',      color: 'bg-teal-50 border-teal-200 text-teal-700 hover:border-teal-400' },
-              { slug: 'cholesterin', acronym: 'TC',    name: 'Cholesterin',      color: 'bg-violet-50 border-violet-200 text-violet-700 hover:border-violet-400' },
-              { slug: 'haemoglobin', acronym: 'Hb',    name: 'Hämoglobin',       color: 'bg-red-50 border-red-200 text-red-700 hover:border-red-400' },
-              { slug: 'vitamin-d',   acronym: 'Vit.D', name: 'Vitamin D',        color: 'bg-yellow-50 border-yellow-200 text-yellow-700 hover:border-yellow-400' },
+              { slug: 'crp',         acronym: 'CRP',   name: 'Entzündungs­wert', color: 'bg-white/[0.03] border-white/10 text-[#E8F5F0] hover:border-emerald-400/60' },
+              { slug: 'hba1c',       acronym: 'HbA1c', name: 'Langzeit­zucker',  color: 'bg-white/[0.03] border-white/10 text-[#E8F5F0] hover:border-emerald-400/60' },
+              { slug: 'tsh',         acronym: 'TSH',   name: 'Schilddrüse',      color: 'bg-white/[0.03] border-white/10 text-[#E8F5F0] hover:border-emerald-400/60' },
+              { slug: 'cholesterin', acronym: 'TC',    name: 'Cholesterin',      color: 'bg-white/[0.03] border-white/10 text-[#E8F5F0] hover:border-emerald-400/60' },
+              { slug: 'haemoglobin', acronym: 'Hb',    name: 'Hämoglobin',       color: 'bg-white/[0.03] border-white/10 text-[#E8F5F0] hover:border-emerald-400/60' },
+              { slug: 'vitamin-d',   acronym: 'Vit.D', name: 'Vitamin D',        color: 'bg-white/[0.03] border-white/10 text-[#E8F5F0] hover:border-emerald-400/60' },
             ].map((term, i) => (
               <Link key={term.slug} href={`/lexikon/${term.slug}`}
-                className={`sr d${i + 1} group flex flex-col items-center text-center border-2 rounded-2xl px-3 py-5 transition-all hover:shadow-lg hover:-translate-y-0.5 ${term.color}`}>
-                <span className="font-black text-xl leading-none mb-1.5">{term.acronym}</span>
-                <span className="text-xs opacity-70 leading-tight">{term.name}</span>
+                className={`sr d${i + 1} group flex flex-col items-center text-center border rounded-2xl px-3 py-5 transition-all hover:shadow-[0_0_24px_-8px_rgba(16,185,129,0.4)] hover:-translate-y-0.5 ${term.color}`}>
+                <span className="font-black text-xl leading-none mb-1.5 text-emerald-300">{term.acronym}</span>
+                <span className="text-xs opacity-60 leading-tight">{term.name}</span>
               </Link>
             ))}
           </div>
 
           <div className="text-center sr">
             <Link href="/lexikon"
-              className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-colors shadow-sm">
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#10B981] to-[#059669] hover:shadow-[0_0_32px_-6px_rgba(16,185,129,0.6)] text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-emerald-900/40">
               Alle 46 Laborwerte im Lexikon <ArrowRight className="h-4 w-4" />
             </Link>
-            <p className="text-gray-400 text-xs mt-3">Kostenlos · Keine Anmeldung erforderlich · Auf Deutsch</p>
+            <p className="text-[#E8F5F0]/40 text-xs mt-3">Kostenlos · Keine Anmeldung erforderlich · Auf Deutsch</p>
           </div>
         </div>
       </section>
 
       {/* ── PRICING CTA ── */}
-      <section className="relative py-24 bg-gray-950 overflow-hidden">
+      <section className="relative py-24 bg-[#040C08] overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0" style={{background:'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(16,185,129,0.12) 0%, transparent 70%)'}} />
         </div>
@@ -1148,43 +1148,43 @@ export default function LandingPage() {
             <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
               <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" /> Free to start
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">{t('pricingCta.title')}</h2>
-            <p className="text-gray-400 mb-10 text-lg max-w-xl mx-auto">{t('pricingCta.subtitle')}</p>
+            <h2 className="font-display text-3xl md:text-5xl font-black text-[#E8F5F0] mb-4 leading-tight">{t('pricingCta.title')}</h2>
+            <p className="text-[#E8F5F0]/60 mb-10 text-lg max-w-xl mx-auto">{t('pricingCta.subtitle')}</p>
           </div>
           <div className="grid grid-cols-3 gap-4 mb-10 max-w-2xl mx-auto">
             {[
               { label: 'Free forever', sub: '3 reports/month', icon: CheckCircle, color: 'text-emerald-400' },
-              { label: 'No credit card', sub: 'Start instantly', icon: Shield, color: 'text-blue-400' },
-              { label: 'Cancel anytime', sub: 'No lock-in', icon: Lock, color: 'text-violet-400' },
+              { label: 'No credit card', sub: 'Start instantly', icon: Shield, color: 'text-emerald-400' },
+              { label: 'Cancel anytime', sub: 'No lock-in', icon: Lock, color: 'text-emerald-400' },
             ].map(({ label, sub, icon: Icon, color }) => (
-              <div key={label} className="text-center bg-white/3 border border-white/8 rounded-2xl p-4">
+              <div key={label} className="text-center bg-white/[0.03] border border-white/10 rounded-2xl p-4">
                 <Icon className={`h-5 w-5 mx-auto mb-2 ${color}`} />
-                <p className="text-sm font-bold text-white">{label}</p>
-                <p className="text-xs text-gray-500 mt-0.5">{sub}</p>
+                <p className="text-sm font-bold text-[#E8F5F0]">{label}</p>
+                <p className="text-xs text-[#E8F5F0]/50 mt-0.5">{sub}</p>
               </div>
             ))}
           </div>
           <div className="text-center">
             <Link href="/pricing">
-              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-bold px-12 rounded-xl h-14 text-base shadow-xl shadow-emerald-900/40 transition-all">
+              <Button size="lg" className="bg-gradient-to-r from-[#10B981] to-[#059669] hover:shadow-[0_0_36px_-6px_rgba(16,185,129,0.65)] active:scale-95 text-white font-bold px-12 rounded-xl h-14 text-base shadow-xl shadow-emerald-900/40 transition-all">
                 {t('pricingCta.cta')} <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <p className="text-gray-600 text-sm mt-4">{t('landing.pricingCta.note')}</p>
+            <p className="text-[#E8F5F0]/40 text-sm mt-4">{t('landing.pricingCta.note')}</p>
           </div>
         </div>
       </section>
 
       {/* ── BLOG ── */}
-      <section className="py-20 md:py-24 bg-gray-950 relative overflow-hidden">
+      <section className="py-20 md:py-24 bg-[#06120D] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-violet-600/4 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-emerald-600/4 rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-4 max-w-5xl relative">
           <div className="flex items-center justify-between mb-10 sr">
             <div>
               <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-1">{t('landing.blog.badge')}</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-white">{t('landing.blog.title')}</h2>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-[#E8F5F0]">{t('landing.blog.title')}</h2>
             </div>
             <Link href="/blog" className="hidden sm:flex items-center gap-1 text-sm text-emerald-400 hover:text-emerald-300 font-semibold transition-colors">
               {t('landing.blog.allArticles')} <ArrowRight className="h-4 w-4" />
@@ -1192,16 +1192,16 @@ export default function LandingPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {[
-              { href: '/blog/doctor-visit-prep-germany',           tag: 'Doctor Visit · New', accent: 'border-l-violet-500',  tagColor: 'text-violet-400',  title: "How to Prepare for a Doctor's Appointment in Germany",         desc: 'Describe symptoms in any language. Medyra generates a structured German summary for your doctor.', time: '6 min' },
-              { href: '/blog/arztbrief-verstehen-fur-senioren',    tag: 'Für Senioren · Neu', accent: 'border-l-blue-500',    tagColor: 'text-blue-400',    title: 'Ihren Arztbrief einfach verstehen, Medyra für Senioren',       desc: 'Befund erhalten und nicht verstanden? Medyra erklärt alles auf Deutsch, zum Lesen oder Vorlesen lassen.', time: '5 Min.' },
+              { href: '/blog/doctor-visit-prep-germany',           tag: 'Doctor Visit · New', accent: 'border-l-emerald-500', tagColor: 'text-emerald-400', title: "How to Prepare for a Doctor's Appointment in Germany",         desc: 'Describe symptoms in any language. Medyra generates a structured German summary for your doctor.', time: '6 min' },
+              { href: '/blog/arztbrief-verstehen-fur-senioren',    tag: 'Für Senioren · Neu', accent: 'border-l-emerald-500', tagColor: 'text-emerald-400', title: 'Ihren Arztbrief einfach verstehen, Medyra für Senioren',       desc: 'Befund erhalten und nicht verstanden? Medyra erklärt alles auf Deutsch, zum Lesen oder Vorlesen lassen.', time: '5 Min.' },
               { href: '/blog/how-to-read-lab-results-germany-expat', tag: 'Germany · Expat',  accent: 'border-l-emerald-500', tagColor: 'text-emerald-400', title: 'How to Read Your Lab Results in Germany as an Expat',           desc: 'Decode your Laborbefund. Abbreviations, reference ranges, and what flagged values actually mean.', time: '7 min' },
             ].map((post, i) => (
               <Link key={post.href} href={post.href} className={`block group sr d${i+1}`}>
-                <div className={`bg-gray-900 rounded-2xl border border-white/5 border-l-2 ${post.accent} p-5 h-full glow-card hover:border-l-2 hover:bg-gray-800/60 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]`}>
+                <div className={`bg-white/[0.03] rounded-2xl border border-white/5 border-l-2 ${post.accent} p-5 h-full glow-card hover:border-l-2 hover:bg-white/[0.06] hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]`}>
                   <p className={`text-xs font-bold uppercase tracking-wide mb-3 ${post.tagColor}`}>{post.tag}</p>
-                  <h3 className="font-bold text-white text-sm leading-snug mb-2 group-hover:text-emerald-300 transition-colors">{post.title}</h3>
-                  <p className="text-xs text-gray-500 leading-relaxed mb-4">{post.desc}</p>
-                  <p className="text-xs text-gray-600 flex items-center gap-1">
+                  <h3 className="font-bold text-[#E8F5F0] text-sm leading-snug mb-2 group-hover:text-emerald-300 transition-colors">{post.title}</h3>
+                  <p className="text-xs text-[#E8F5F0]/50 leading-relaxed mb-4">{post.desc}</p>
+                  <p className="text-xs text-[#E8F5F0]/40 flex items-center gap-1">
                     <Clock className="h-3 w-3" /> {post.time} {t('landing.blog.minRead')}
                   </p>
                 </div>
@@ -1217,15 +1217,15 @@ export default function LandingPage() {
       </section>
 
       {/* ── LEGAL NOTICE ── */}
-      <section className="bg-gray-50 border-t border-gray-200/80 py-8">
+      <section className="bg-[#040C08] border-t border-white/5 py-8">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5">
-            <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center">
-              <Shield className="h-4 w-4 text-gray-500" />
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-5">
+            <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+              <Shield className="h-4 w-4 text-emerald-400/70" />
             </div>
             <div>
-              <p className="text-xs font-bold text-gray-700 uppercase tracking-widest mb-1">{t('legal.title')}</p>
-              <p className="text-gray-500 text-xs leading-relaxed">{t('legal.text')}</p>
+              <p className="text-xs font-bold text-[#E8F5F0]/80 uppercase tracking-widest mb-1">{t('legal.title')}</p>
+              <p className="text-[#E8F5F0]/50 text-xs leading-relaxed">{t('legal.text')}</p>
             </div>
           </div>
         </div>

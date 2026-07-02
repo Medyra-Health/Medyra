@@ -13,7 +13,7 @@ const founders = [
     role: 'Co-Founder & CEO',
     photo: '/team/akash-rahman.jpg',
     icon: Rocket,
-    bio: 'Product, technology, and partnerships. Your direct line for anything Medyra — questions, ideas, or collaboration.',
+    bio: 'Product, technology, and partnerships. Your direct line for anything Medyra: questions, ideas, or collaboration.',
     email: 'abralur28@gmail.com',
   },
   {
@@ -21,7 +21,7 @@ const founders = [
     role: 'Co-Founder & CMO · Chief Medical Officer',
     photo: '/team/phillip-mattar.jpg',
     icon: Stethoscope,
-    bio: 'Drives product, partnerships, and strategy together with Akash — and leads the medical side, making sure every explanation is clinically accurate and trustworthy.',
+    bio: 'Drives product, partnerships, and strategy together with Akash, and leads the medical side, making sure every explanation is clinically accurate and trustworthy.',
     email: 'Philipp.Mattar@student.hpi.uni-potsdam.de',
   },
 ]
@@ -46,7 +46,7 @@ export default function ContactPage() {
           </div>
           <h1 className="text-4xl font-black text-gray-900 mb-3">Get in Touch</h1>
           <p className="text-gray-500 text-lg leading-relaxed max-w-md mx-auto">
-            No ticket systems, no chatbots. Write to us directly — we read every message and reply personally.
+            No ticket systems, no chatbots. Write to us directly. We read every message and reply personally.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export default function ContactPage() {
               <div className="relative aspect-[4/5] overflow-hidden bg-gray-100">
                 <Image
                   src={founder.photo}
-                  alt={`${founder.name} — ${founder.role}`}
+                  alt={`${founder.name}, ${founder.role}`}
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-500"
