@@ -341,7 +341,7 @@
     },
     "trust": {
       "stat1Label": "Bezpłatne raporty miesięcznie",
-      "stat2Label": "Średni czas analizy",
+      "stat2Label": "Wyniki w mniej niż 60 sekund",
       "stat3Label": "Obsługiwane języki",
       "stat4Label": "Szyfrowanie AES"
     },
@@ -350,7 +350,7 @@
       "step1Title": "Prześlij raport",
       "step1Desc": "Przeciągnij PDF, JPG, PNG lub TXT. Nasza AI odczytuje tekst: nawet ze skanowanych zdjęć.",
       "step1Detail": "Natychmiastowe szyfrowanie",
-      "step2Title": "AI analizuje w ~30s",
+      "step2Title": "AI analizuje w mniej niż 60 sekund",
       "step2Desc": "Claude AI identyfikuje każdą wartość, oznacza nieprawidłowe wyniki i pisze jasne wyjaśnienie.",
       "step2Detail": "Bez żargonu medycznego",
       "step3Title": "Uzyskaj odpowiedzi",

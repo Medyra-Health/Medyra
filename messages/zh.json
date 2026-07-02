@@ -341,7 +341,7 @@
     },
     "trust": {
       "stat1Label": "每月免费报告",
-      "stat2Label": "平均分析时间",
+      "stat2Label": "60秒内出结果",
       "stat3Label": "支持语言数量",
       "stat4Label": "AES加密"
     },
@@ -350,7 +350,7 @@
       "step1Title": "上传报告",
       "step1Desc": "拖放PDF、JPG、PNG或TXT。我们的AI读取文字——即使是扫描照片。",
       "step1Detail": "即时加密",
-      "step2Title": "AI约30秒分析",
+      "step2Title": "AI在60秒内分析",
       "step2Desc": "Claude AI识别每个检验值，标记异常结果，并用通俗语言撰写解释。",
       "step2Detail": "无医学术语",
       "step3Title": "获取答案",

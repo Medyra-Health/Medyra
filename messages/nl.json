@@ -343,7 +343,7 @@
     },
     "trust": {
       "stat1Label": "Gratis rapporten per maand",
-      "stat2Label": "Gemiddelde analysetijd",
+      "stat2Label": "Resultaten in minder dan 60 seconden",
       "stat3Label": "Ondersteunde talen",
       "stat4Label": "AES-versleuteling"
     },
@@ -352,7 +352,7 @@
       "step1Title": "Upload uw rapport",
       "step1Desc": "Sleep een PDF, JPG, PNG of TXT. Onze AI leest de tekst: ook van gescande foto's.",
       "step1Detail": "Direct versleuteld",
-      "step2Title": "AI analyseert in ~30s",
+      "step2Title": "AI analyseert in minder dan 60 seconden",
       "step2Desc": "Claude AI identificeert elke waarde, markeert abnormale resultaten en schrijft een begrijpelijke uitleg.",
       "step2Detail": "Geen medisch jargon",
       "step3Title": "Ontvang uw antwoorden",

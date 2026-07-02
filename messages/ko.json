@@ -341,7 +341,7 @@
     },
     "trust": {
       "stat1Label": "월 무료 리포트",
-      "stat2Label": "평균 분석 시간",
+      "stat2Label": "60초 이내 결과",
       "stat3Label": "지원 언어 수",
       "stat4Label": "AES 암호화"
     },
@@ -350,7 +350,7 @@
       "step1Title": "보고서 업로드",
       "step1Desc": "PDF, JPG, PNG 또는 TXT를 드래그하세요. AI가 스캔 사진에서도 텍스트를 읽습니다.",
       "step1Detail": "즉시 암호화",
-      "step2Title": "AI가 ~30초 분석",
+      "step2Title": "AI가 60초 이내 분석",
       "step2Desc": "Claude AI가 모든 검사 값을 파악하고 비정상 결과를 표시하며 이해하기 쉬운 설명을 작성합니다.",
       "step2Detail": "의학 전문 용어 없음",
       "step3Title": "답변 받기",

@@ -341,7 +341,7 @@
     },
     "trust": {
       "stat1Label": "Aylık ücretsiz rapor",
-      "stat2Label": "Ortalama analiz süresi",
+      "stat2Label": "60 saniyede sonuç",
       "stat3Label": "Desteklenen diller",
       "stat4Label": "AES şifreleme"
     },
@@ -350,7 +350,7 @@
       "step1Title": "Raporunuzu yükleyin",
       "step1Desc": "Herhangi bir PDF, JPG, PNG veya TXT bırakın. Yapay zekamız metni okur: taranan fotoğraflardan bile.",
       "step1Detail": "Anında şifrelenir",
-      "step2Title": "Yapay zeka ~30s'de analiz eder",
+      "step2Title": "Yapay zeka 60 saniyede analiz eder",
       "step2Desc": "Claude AI her test değerini tanımlar, anormal sonuçları işaretler ve sade dilde açıklama yazar.",
       "step2Detail": "Tıbbi jargon yok",
       "step3Title": "Yanıtlarınızı alın",

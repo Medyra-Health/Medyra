@@ -341,7 +341,7 @@
     },
     "trust": {
       "stat1Label": "Informes gratuitos por mes",
-      "stat2Label": "Tiempo de análisis promedio",
+      "stat2Label": "Resultados en menos de 60 segundos",
       "stat3Label": "Idiomas admitidos",
       "stat4Label": "Cifrado AES"
     },
@@ -350,7 +350,7 @@
       "step1Title": "Sube tu informe",
       "step1Desc": "Arrastra cualquier PDF, JPG, PNG o TXT. Nuestra IA lee el texto: incluso de fotos escaneadas.",
       "step1Detail": "Cifrado inmediato",
-      "step2Title": "La IA analiza en ~30s",
+      "step2Title": "La IA analiza en menos de 60 segundos",
       "step2Desc": "La IA Claude identifica cada valor, señala resultados anormales y escribe una explicación clara.",
       "step2Detail": "Sin jerga médica",
       "step3Title": "Obtén tus respuestas",

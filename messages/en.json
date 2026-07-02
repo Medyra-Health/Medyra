@@ -343,7 +343,7 @@
     },
     "trust": {
       "stat1Label": "Free reports per month",
-      "stat2Label": "Average analysis time",
+      "stat2Label": "Results in under 60 seconds",
       "stat3Label": "Languages supported",
       "stat4Label": "AES encryption"
     },
@@ -352,7 +352,7 @@
       "step1Title": "Upload your report",
       "step1Desc": "Drop any PDF, JPG, PNG or TXT. Our AI reads the text, even from scanned photos.",
       "step1Detail": "Encrypted immediately",
-      "step2Title": "AI analyses in ~30s",
+      "step2Title": "AI analyses in under 60 seconds",
       "step2Desc": "Claude AI identifies every test value, flags abnormal results, and writes a plain-language explanation.",
       "step2Detail": "No medical jargon",
       "step3Title": "Get your answers",

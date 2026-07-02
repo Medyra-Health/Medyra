@@ -341,7 +341,7 @@
     },
     "trust": {
       "stat1Label": "Kostenlose Berichte pro Monat",
-      "stat2Label": "Durchschnittliche Analysezeit",
+      "stat2Label": "Ergebnis in unter 60 Sekunden",
       "stat3Label": "Unterstützte Sprachen",
       "stat4Label": "AES-Verschlüsselung"
     },
@@ -350,7 +350,7 @@
       "step1Title": "Befund hochladen",
       "step1Desc": "PDF, JPG, PNG oder TXT hochladen. Unsere KI liest den Text: auch aus gescannten Fotos.",
       "step1Detail": "Sofort verschlüsselt",
-      "step2Title": "KI analysiert in ~30s",
+      "step2Title": "KI analysiert in unter 60 Sekunden",
       "step2Desc": "Claude AI erkennt alle Testwerte, markiert abnormale Ergebnisse und schreibt eine verständliche Erklärung.",
       "step2Detail": "Kein Fachjargon",
       "step3Title": "Ihre Antworten",

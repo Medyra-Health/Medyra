@@ -341,7 +341,7 @@
     },
     "trust": {
       "stat1Label": "Rapports gratuits par mois",
-      "stat2Label": "Temps d'analyse moyen",
+      "stat2Label": "Résultats en moins de 60 secondes",
       "stat3Label": "Langues prises en charge",
       "stat4Label": "Chiffrement AES"
     },
@@ -350,7 +350,7 @@
       "step1Title": "Téléchargez votre rapport",
       "step1Desc": "Déposez un PDF, JPG, PNG ou TXT. Notre IA lit le texte: même depuis des photos scannées.",
       "step1Detail": "Chiffré immédiatement",
-      "step2Title": "L'IA analyse en ~30s",
+      "step2Title": "L'IA analyse en moins de 60 secondes",
       "step2Desc": "L'IA Claude identifie chaque valeur, signale les résultats anormaux et rédige une explication claire.",
       "step2Detail": "Sans jargon médical",
       "step3Title": "Obtenez vos réponses",

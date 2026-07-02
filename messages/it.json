@@ -341,7 +341,7 @@
     },
     "trust": {
       "stat1Label": "Referti gratuiti al mese",
-      "stat2Label": "Tempo medio di analisi",
+      "stat2Label": "Risultati in meno di 60 secondi",
       "stat3Label": "Lingue supportate",
       "stat4Label": "Crittografia AES"
     },
@@ -350,7 +350,7 @@
       "step1Title": "Carica il tuo referto",
       "step1Desc": "Carica qualsiasi PDF, JPG, PNG o TXT. La nostra IA legge il testo: anche da foto scansionate.",
       "step1Detail": "Crittografato immediatamente",
-      "step2Title": "L'IA analizza in ~30s",
+      "step2Title": "L'IA analizza in meno di 60 secondi",
       "step2Desc": "L'IA Claude identifica ogni valore, segnala i risultati anomali e scrive una spiegazione chiara.",
       "step2Detail": "Senza gergo medico",
       "step3Title": "Ottieni le tue risposte",

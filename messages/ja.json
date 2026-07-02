@@ -341,7 +341,7 @@
     },
     "trust": {
       "stat1Label": "毎月の無料レポート",
-      "stat2Label": "平均分析時間",
+      "stat2Label": "60秒以内に結果",
       "stat3Label": "対応言語数",
       "stat4Label": "AES暗号化"
     },
@@ -350,7 +350,7 @@
       "step1Title": "レポートをアップロード",
       "step1Desc": "PDF、JPG、PNG、TXTをドロップ。AIはスキャン画像からもテキストを読み取ります。",
       "step1Detail": "即時暗号化",
-      "step2Title": "AIが約30秒で分析",
+      "step2Title": "AIが60秒以内に分析",
       "step2Desc": "Claude AIがすべての検査値を特定し、異常値をフラグし、分かりやすい説明を書きます。",
       "step2Detail": "専門用語なし",
       "step3Title": "回答を受け取る",

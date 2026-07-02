@@ -3,7 +3,7 @@
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 import MedyraUserButton from '@/components/MedyraUserButton'
 import Link from 'next/link'
-import { Brain, Shield, Clock, ChevronRight, Menu, X, ArrowRight, AlertTriangle, CheckCircle, AlertCircle, Lock, Zap, FileText, MessageSquare, Download, ChevronLeft, Volume2 } from 'lucide-react'
+import { Brain, Shield, Clock, ChevronRight, Menu, X, ArrowRight, AlertTriangle, CheckCircle, AlertCircle, Lock, FileText, Download, ChevronLeft, Volume2 } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
@@ -11,6 +11,7 @@ import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import JsonLd from '@/components/JsonLd'
 import MedyraLogo from '@/components/MedyraLogo'
+import HeroSection from '@/components/landing/HeroSection'
 
 const LANGUAGES = [
   { code: 'DE', name: 'Deutsch' },
@@ -178,11 +179,6 @@ function NewToGermanySection() {
           </div>
         </div>
 
-        <p className="text-center text-sm text-gray-500 mt-8">
-          {t('landing.newToGermany.trustLine')}
-        </p>
-
-
       </div>
       <style>{`
         @keyframes ngFadeIn {
@@ -203,11 +199,6 @@ const CAMPAIGNS = [
     visual: '🧪',
     gradient: 'from-slate-900 via-slate-800 to-gray-900',
     accent: 'emerald',
-    mockLines: [
-      { label: 'Hämoglobin', raw: '11.8 g/dL ↓', plain: 'Slightly low, may cause fatigue', flag: 'warn' },
-      { label: 'Leukozyten', raw: '8.4 G/L', plain: 'Normal range, no concern', flag: 'ok' },
-      { label: 'Ferritin', raw: '8 µg/L ↓', plain: 'Low iron stores. Discuss supplements.', flag: 'warn' },
-    ],
   },
   {
     tag: 'Mental Health Awareness',
@@ -216,11 +207,6 @@ const CAMPAIGNS = [
     visual: '🧠',
     gradient: 'from-violet-950 via-slate-900 to-gray-900',
     accent: 'violet',
-    mockLines: [
-      { label: 'Diagnosis letter', raw: '3 pages of German medical text', plain: 'You have mild hypertension. Your doctor recommends...', flag: 'ok' },
-      { label: 'Jargon removed', raw: '24 medical terms', plain: 'All explained in plain language', flag: 'ok' },
-      { label: 'Clarity score', raw: 'N/A', plain: 'Fully understood ✓', flag: 'ok' },
-    ],
   },
   {
     tag: 'European Patients\' Rights Day',
@@ -229,11 +215,6 @@ const CAMPAIGNS = [
     visual: '🇪🇺',
     gradient: 'from-blue-950 via-slate-900 to-gray-900',
     accent: 'blue',
-    mockLines: [
-      { label: 'Your right (EU)', raw: 'Art. 15 GDPR', plain: 'Access and understand your health data', flag: 'ok' },
-      { label: 'Blood panel', raw: '18 values', plain: 'Every result explained in your language', flag: 'ok' },
-      { label: 'Report language', raw: 'German', plain: 'Translated to English, Arabic, Hindi...', flag: 'ok' },
-    ],
   },
 ]
 
@@ -258,9 +239,9 @@ function CampaignSection() {
 
   const c = CAMPAIGNS[active]
   const accentMap = {
-    emerald: { dot: 'bg-emerald-400', text: 'text-emerald-400', ring: 'ring-emerald-400', bar: 'bg-emerald-400', tag: 'bg-emerald-400/10 border-emerald-400/30 text-emerald-400', btn: 'bg-emerald-500 hover:bg-emerald-600' },
-    violet:  { dot: 'bg-violet-400',  text: 'text-violet-400',  ring: 'ring-violet-400',  bar: 'bg-violet-400',  tag: 'bg-violet-400/10 border-violet-400/30 text-violet-400',  btn: 'bg-violet-500 hover:bg-violet-600'  },
-    blue:    { dot: 'bg-blue-400',    text: 'text-blue-400',    ring: 'ring-blue-400',    bar: 'bg-blue-400',    tag: 'bg-blue-400/10 border-blue-400/30 text-blue-400',    btn: 'bg-blue-500 hover:bg-blue-600'    },
+    emerald: { dot: 'bg-emerald-400', text: 'text-emerald-400', ring: 'ring-emerald-400', bar: 'bg-emerald-400', tag: 'bg-emerald-400/10 border-emerald-400/30 text-emerald-400' },
+    violet:  { dot: 'bg-violet-400',  text: 'text-violet-400',  ring: 'ring-violet-400',  bar: 'bg-violet-400',  tag: 'bg-violet-400/10 border-violet-400/30 text-violet-400'  },
+    blue:    { dot: 'bg-blue-400',    text: 'text-blue-400',    ring: 'ring-blue-400',    bar: 'bg-blue-400',    tag: 'bg-blue-400/10 border-blue-400/30 text-blue-400'    },
   }
   const a = accentMap[c.accent]
 
@@ -302,7 +283,7 @@ function CampaignSection() {
         <div
           key={animKey}
           style={{ animation: 'campFade 0.5s ease both' }}
-          className={`grid lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-white/10`}
+          className="rounded-2xl overflow-hidden border border-white/10"
         >
           {/* Left, text */}
           <div className={`bg-gradient-to-br ${c.gradient} p-8 md:p-12 flex flex-col justify-between min-h-[320px]`}>
@@ -344,40 +325,6 @@ function CampaignSection() {
             </div>
           </div>
 
-          {/* Right, mock output */}
-          <div className="bg-gray-900 p-8 md:p-12 flex flex-col justify-center border-l border-white/5">
-            <div className="flex items-center gap-2 mb-6">
-              <div className={`w-2 h-2 rounded-full ${a.dot} animate-pulse`} />
-              <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Medyra AI Output</span>
-            </div>
-            <div className="space-y-4">
-              {c.mockLines.map((line, i) => (
-                <div key={i} className="rounded-xl bg-white/5 border border-white/8 p-4">
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-xs font-bold text-gray-500">{line.label}</span>
-                    <span className={`text-xs font-mono ${line.flag === 'warn' ? 'text-amber-400' : 'text-gray-500'}`}>{line.raw}</span>
-                  </div>
-                  <p className={`text-sm font-medium ${line.flag === 'warn' ? 'text-amber-300' : a.text}`}>
-                    {line.plain}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 pt-5 border-t border-white/10">
-              <SignedOut>
-                <SignInButton mode="modal">
-                  <button className={`w-full py-2.5 rounded-xl text-sm font-bold text-white transition-colors ${a.btn}`}>
-                    Try it free, 3 reports per month
-                  </button>
-                </SignInButton>
-              </SignedOut>
-              <SignedIn>
-                <Link href="/upload" className={`block w-full py-2.5 rounded-xl text-sm font-bold text-white text-center transition-colors ${a.btn}`}>
-                  Upload a report →
-                </Link>
-              </SignedIn>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -577,151 +524,8 @@ export default function LandingPage() {
         </div>
       </nav>
 
-      {/* ── HERO ── */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gray-950">
-        {/* Background gradients */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-emerald-500/8 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-600/5 rounded-full blur-3xl" />
-          <div className="absolute inset-0" style={{backgroundImage:'radial-gradient(circle at 20% 50%, rgba(16,185,129,0.06) 0%, transparent 50%)'}} />
-        </div>
-
-        <div className="container mx-auto px-4 max-w-6xl relative z-10 py-12 md:py-16 lg:py-0">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-
-            {/* Left, text */}
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-wide mb-7">
-                <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                {t('landing.hero.badge')}
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
-                {t('landing.hero.title1')}<br />
-                <span className="text-emerald-400">{t('landing.hero.title2')}</span>
-              </h1>
-
-              <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-lg">
-                {t('landing.hero.description')}
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-3 mb-10">
-                <SignedOut>
-                  <SignInButton mode="modal">
-                    <Button size="lg" className="text-base px-8 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl h-12 w-full sm:w-auto">
-                      {t('landing.hero.ctaAnalyse')} <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </SignInButton>
-                  <a href="#how-it-works">
-                    <Button size="lg" variant="outline" className="text-base h-12 border-gray-700 text-gray-300 hover:bg-gray-800 hover:border-gray-600 hover:text-white rounded-xl w-full sm:w-auto">
-                      {t('landing.hero.ctaHowItWorks')}
-                    </Button>
-                  </a>
-                </SignedOut>
-                <SignedIn>
-                  <Link href="/upload" className="w-full sm:w-auto">
-                    <Button size="lg" className="text-base px-8 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl h-12">
-                      {t('landing.hero.ctaUpload')} <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </SignedIn>
-              </div>
-
-              <div className="flex flex-wrap gap-5 text-sm text-gray-500">
-                <span className="flex items-center gap-1.5"><CheckCircle className="h-4 w-4 text-emerald-500" /> {t('landing.hero.tag1')}</span>
-                <span className="flex items-center gap-1.5"><Shield className="h-4 w-4 text-emerald-500" /> {t('landing.hero.tag2')}</span>
-                <span className="flex items-center gap-1.5"><Zap className="h-4 w-4 text-emerald-500" /> {t('landing.hero.tag3')}</span>
-                <span className="flex items-center gap-1.5"><FileText className="h-4 w-4 text-emerald-500" /> {t('landing.hero.tag4')}</span>
-              </div>
-            </div>
-
-            {/* Right, floating report card */}
-            <div className="block max-w-sm mx-auto w-full lg:max-w-none">
-              <div className="relative">
-                {/* Glow */}
-                <div className="absolute -inset-4 bg-emerald-500/10 rounded-3xl blur-xl" />
-                {/* Card */}
-                <div className="relative bg-gray-900 rounded-2xl border border-gray-700/60 shadow-2xl overflow-hidden">
-                  {/* Card header */}
-                  <div className="flex items-center justify-between px-5 py-4 border-b border-gray-800">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                      <span className="text-white font-semibold text-sm">Medyra AI Report</span>
-                    </div>
-                    <span className="text-xs text-emerald-400 bg-emerald-400/10 px-2.5 py-1 rounded-full font-medium border border-emerald-400/20">Complete</span>
-                  </div>
-
-                  {/* Results */}
-                  <div className="p-5 space-y-2.5">
-                    {[
-                      { name: 'TSH', value: '4.2 mIU/L', status: 'Normal', bar: 'bg-emerald-500', badge: 'bg-emerald-500/15 text-emerald-400' },
-                      { name: 'HbA1c', value: '6.1% ↑', status: 'Elevated', bar: 'bg-orange-500', badge: 'bg-orange-500/15 text-orange-400' },
-                      { name: 'eGFR', value: '58 mL/min ↓', status: 'Low', bar: 'bg-orange-500', badge: 'bg-orange-500/15 text-orange-400' },
-                      { name: 'CRP', value: '12.4 mg/L', status: 'Critical', bar: 'bg-red-500', badge: 'bg-red-500/15 text-red-400' },
-                    ].map((r) => (
-                      <div key={r.name} className="flex items-center gap-3 p-3 rounded-xl bg-gray-800/50 border border-gray-700/40 hover:border-gray-600/60 transition-colors">
-                        <div className={`w-1 h-8 rounded-full flex-shrink-0 ${r.bar}`} />
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-semibold text-white">{r.name}</p>
-                          <p className="text-xs text-gray-400 font-mono">{r.value}</p>
-                        </div>
-                        <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${r.badge}`}>{r.status}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* AI summary */}
-                  <div className="px-5 pb-4">
-                    <div className="bg-emerald-950/60 border border-emerald-800/30 rounded-xl p-4">
-                      <p className="text-xs font-semibold text-emerald-400 mb-1.5 flex items-center gap-1.5">
-                        <Brain className="h-3 w-3" /> AI Summary
-                      </p>
-                      <p className="text-xs text-gray-300 leading-relaxed">
-                        Your thyroid (TSH) is healthy. Blood sugar and inflammation markers need attention. Book a follow-up with your doctor.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Actions */}
-                  <div className="flex gap-2 px-5 pb-5">
-                    <div className="flex-1 flex items-center gap-1.5 justify-center py-2 rounded-lg bg-gray-800 border border-gray-700 text-xs text-gray-400">
-                      <MessageSquare className="h-3.5 w-3.5" /> Ask AI
-                    </div>
-                    <div className="flex-1 flex items-center gap-1.5 justify-center py-2 rounded-lg bg-gray-800 border border-gray-700 text-xs text-gray-400">
-                      <Download className="h-3.5 w-3.5" /> Save PDF
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600 animate-bounce">
-          <ChevronRight className="h-5 w-5 rotate-90" />
-        </div>
-      </section>
-
-      {/* ── TRUST STRIP ── */}
-      <section className="bg-gray-950 border-b border-white/5 py-8">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sr">
-            {[
-              { value: '3/mo', labelKey: 'landing.trust.stat1Label', color: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20' },
-              { value: '~30s', labelKey: 'landing.trust.stat2Label', color: 'text-blue-400',    bg: 'bg-blue-500/10',    border: 'border-blue-500/20'    },
-              { value: '18',   labelKey: 'landing.trust.stat3Label', color: 'text-violet-400',  bg: 'bg-violet-500/10',  border: 'border-violet-500/20'  },
-              { value: '256',  labelKey: 'landing.trust.stat4Label', color: 'text-amber-400',   bg: 'bg-amber-500/10',   border: 'border-amber-500/20'   },
-            ].map(({ value, labelKey, color, bg, border }, i) => (
-              <div key={labelKey} className={`sr d${i + 1} flex flex-col items-center text-center p-4 rounded-2xl border ${bg} ${border}`}>
-                <p className={`text-3xl font-black ${color} mb-1`}>{value}</p>
-                <p className="text-xs text-gray-500">{t(labelKey)}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── HERO (incl. stats row) ── */}
+      <HeroSection />
 
       {/* ── BEFORE / AFTER ── */}
       <section className="py-16 md:py-24 bg-gray-950 relative overflow-hidden">
