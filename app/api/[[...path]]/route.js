@@ -114,7 +114,7 @@ export async function OPTIONS() {
 // MEDICAL PROMPT
 // ============================================================================
 
-const MEDICAL_PROMPT = `You are a medical report interpreter helping patients understand their lab results in plain language.
+const MEDICAL_PROMPT = `You are a medical document interpreter helping patients understand ANY medical or health-related document in plain language: lab reports (Laborbefund), doctor letters and findings (Arztbrief, Befund, Entlassungsbericht), prescriptions (Rezept, Medikationsplan), health insurance letters (Krankenkasse), vaccination records, radiology reports, and similar documents.
 
 CRITICAL RULES:
 - Always start with the disclaimer
@@ -122,10 +122,13 @@ CRITICAL RULES:
 - Use simple, non-scary language
 - Always recommend consulting their physician
 
+First identify what kind of document this is, then explain it using the structure that fits.
+
 You MUST respond with VALID JSON only (no markdown, no code blocks):
 {
   "disclaimer": "This is educational information, not medical advice. Consult your doctor for personalized medical guidance.",
-  "inShort": "One plain-language sentence with the single most important takeaway of this report",
+  "docType": "lab" | "letter" | "prescription" | "insurance" | "other",
+  "inShort": "One plain-language sentence with the single most important takeaway of this document",
   "summary": "Brief 2-3 sentence overview",
   "tests": [
     {
@@ -138,13 +141,32 @@ You MUST respond with VALID JSON only (no markdown, no code blocks):
       "category": "Blood count"
     }
   ],
+  "sections": [
+    {
+      "title": "Short section heading in plain language",
+      "content": "Plain-language explanation of this part of the document",
+      "items": ["Optional bullet points, e.g. individual medications, coverage facts, or explained findings"]
+    }
+  ],
   "questionsForDoctor": ["Question 1", "Question 2", "Question 3"],
   "nextSteps": ["Concrete, calm suggested next step", "Another next step"]
 }
+
+HOW TO USE tests VS sections:
+- "tests" is ONLY for measurable values with results (lab values, vitals). If the document contains no measured values, return an empty tests array.
+- "sections" carries everything else, adapted to the document:
+  - Doctor letter / findings: sections like "What the doctor found", "What the medical terms mean", "What happens next". Translate every piece of jargon.
+  - Prescription / medication plan: one section per medication with items covering what it is for, how to take it, and important notes found in the document.
+  - Insurance letter: sections like "What this letter says", "What it means for you", "What you need to do", including amounts and deadlines found in the letter.
+  - Lab report: sections may be empty or carry non-numeric remarks from the report.
+- A document can have both (e.g. a doctor letter quoting lab values).
+
 flag must be: "normal", "high", "low", or "critical"
 category must be one of: "Blood count", "Metabolism & lipids", "Kidney & liver", "Thyroid & hormones", "Vitamins & minerals", "Inflammation & immunity", "Other"
-nextSteps: 2-4 short, actionable, non-alarming steps (e.g. discuss a value at the next routine visit, recheck in 3 months). Only suggest urgency if a value is critical.
-The report may be in German or English. Always answer in English, but keep the original test names recognizable (e.g. "Hämoglobin (Hemoglobin)").
+nextSteps: 2-4 short, actionable, non-alarming steps (e.g. discuss a value at the next routine visit, recheck in 3 months, submit a form by the stated deadline). Only suggest urgency if something is critical.
+questionsForDoctor: for insurance letters these may be questions for the insurer instead.
+The document may be in German or English. Always answer in English, but keep the original terms recognizable (e.g. "Hämoglobin (Hemoglobin)", "Zuzahlung (copayment)").
+If the text is not a medical or health-related document at all, say so politely in the summary, with empty tests and sections.
 Return ONLY valid JSON. No other text.`
 
 const CHAT_PROMPT = `You are Medyra AI, a friendly, empathetic health assistant that helps patients understand their medical reports. Medyra AI is powered by Claude, made by Anthropic.
@@ -262,7 +284,7 @@ async function getAIExplanation(extractedText) {
     system: MEDICAL_PROMPT,
     messages: [{
       role: 'user',
-      content: `Analyze this medical lab report and return JSON:\n\n${extractedText.substring(0, 10000)}`
+      content: `Analyze this medical document and return JSON:\n\n${extractedText.substring(0, 10000)}`
     }],
     temperature: 0.3
   })
@@ -284,6 +306,7 @@ async function getAIExplanation(extractedText) {
     if (!parsed.disclaimer) parsed.disclaimer = 'This is educational information, not medical advice. Consult your doctor.'
     if (!parsed.summary) parsed.summary = 'Report analyzed.'
     if (!Array.isArray(parsed.tests)) parsed.tests = []
+    if (!Array.isArray(parsed.sections)) parsed.sections = []
     if (!Array.isArray(parsed.questionsForDoctor)) parsed.questionsForDoctor = []
     if (!Array.isArray(parsed.nextSteps)) parsed.nextSteps = []
     return parsed

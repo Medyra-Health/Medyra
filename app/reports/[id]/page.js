@@ -793,6 +793,34 @@ export default function ReportDetailPage({ params }) {
           </Card>
         )}
 
+        {/* ── DOCUMENT SECTIONS (doctor letters, prescriptions, insurance letters) ── */}
+        {Array.isArray(explanation.sections) && explanation.sections.length > 0 && (
+          <div className="space-y-3 mb-5">
+            {explanation.sections.map((section, i) => (
+              <Card key={i} className="border-l-4 border-l-emerald-400">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-sm">{section.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0 space-y-2">
+                  {section.content && (
+                    <p className="text-sm text-gray-700 leading-relaxed">{section.content}</p>
+                  )}
+                  {Array.isArray(section.items) && section.items.length > 0 && (
+                    <ul className="space-y-1.5">
+                      {section.items.map((item, j) => (
+                        <li key={j} className="flex gap-2 text-sm text-gray-700 leading-relaxed">
+                          <span className="text-emerald-500 flex-shrink-0 mt-0.5">·</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
+
         {/* ── TEST RESULTS (grouped by category when available) ── */}
         {tests.length > 0 && (
           <div className="space-y-3 mb-5">
