@@ -444,7 +444,8 @@
     "contact": "Kontakt",
     "disclaimer": "Kein Ersatz für ärztliche Beratung · DSGVO-konform",
     "copyright": "© 2026 Medyra. Alle Rechte vorbehalten. Made in Germany.",
-    "partner": "Partner"
+    "partner": "Partner",
+    "app": "Mobile App"
   },
   "pricingPage": {
     "badge": "Einfache, transparente Preise",
@@ -577,5 +578,24 @@
       "q7": "Welches KI-Modell steckt hinter Medyra?",
       "a7": "Medyra wird von Claude AI, entwickelt von Anthropic, betrieben. Claude verarbeitet Ihre hochgeladenen Dokumente und erstellt die verständlichen Erklärungen. Anthropic ist als Datenverarbeiter in unserer Datenschutzerklärung aufgeführt."
     }
+  },
+  "appPage": {
+    "badge": "Medyra App",
+    "title": "Holen Sie sich die Medyra App",
+    "subtitle": "Medizinische Dokumente auf dem Handy verstehen. Kostenlos starten, ein Konto für Web und App.",
+    "androidTitle": "Android",
+    "androidDesc": "Laden Sie die App direkt bei uns herunter. Ihr Handy fragt eventuell, ob Installationen aus dem Browser erlaubt sind. Das ist bei Apps außerhalb des Play Store normal und nur ein Fingertipp.",
+    "androidButton": "Für Android herunterladen",
+    "androidStep1": "Auf den Download Button tippen",
+    "androidStep2": "Die heruntergeladene Datei öffnen und die Installation erlauben",
+    "androidStep3": "Medyra öffnen und anmelden",
+    "androidNote": "Die App ist von uns signiert, kommuniziert nur mit medyra.de und wird über diese Seite aktualisiert.",
+    "iosTitle": "iPhone",
+    "iosDesc": "Auf dem iPhone installieren Sie Medyra direkt aus Safari als Web App. Sie bekommt ein eigenes Symbol auf dem Homescreen und funktioniert wie eine normale App.",
+    "iosStep1": "medyra.de in Safari öffnen",
+    "iosStep2": "Auf Teilen tippen",
+    "iosStep3": "Zum Home Bildschirm wählen",
+    "iosNote": "Gleiches Konto, gleiche Berichte, alle Funktionen.",
+    "storesNote": "Medyra kommt in den App Store und zu Google Play. Bis dahin ist diese Seite der offizielle Weg zur App."
   }
 }

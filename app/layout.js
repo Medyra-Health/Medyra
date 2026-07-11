@@ -153,7 +153,7 @@ export default async function RootLayout({ children }) {
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
           <meta name="apple-mobile-web-app-title" content="Medyra" />
-          <link rel="apple-touch-icon" href="/icon-192.png" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           {/* Google Analytics — Consent Mode v2 (TTDSG §25 / GDPR ePrivacy compliant) */}
           {/* analytics_storage is denied by default; CookieBanner grants it on explicit opt-in */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8Y2GQCSSS" />

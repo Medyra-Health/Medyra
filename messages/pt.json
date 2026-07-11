@@ -444,7 +444,8 @@
     "contact": "Contato",
     "disclaimer": "Não substitui aconselhamento médico · Conforme ao GDPR",
     "copyright": "© 2026 Medyra. Todos os direitos reservados. Feito na Alemanha.",
-    "partner": "Parceiro"
+    "partner": "Parceiro",
+    "app": "App móvel"
   },
   "pricingPage": {
     "badge": "Preços simples e transparentes",
@@ -577,5 +578,24 @@
       "q7": "What AI model powers Medyra?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
+  },
+  "appPage": {
+    "badge": "Medyra App",
+    "title": "Baixe o app Medyra",
+    "subtitle": "Entenda documentos médicos no seu celular. Comece grátis, uma conta para web e celular.",
+    "androidTitle": "Android",
+    "androidDesc": "Baixe o app diretamente conosco. Seu celular pode pedir permissão para instalar a partir do navegador. Isso é normal para apps fora da Play Store e leva um toque.",
+    "androidButton": "Baixar para Android",
+    "androidStep1": "Toque no botão de download",
+    "androidStep2": "Abra o arquivo baixado e permita a instalação",
+    "androidStep3": "Abra o Medyra e faça login",
+    "androidNote": "O app é assinado por nós, se comunica apenas com medyra.de e é atualizado por esta página.",
+    "iosTitle": "iPhone",
+    "iosDesc": "No iPhone, o Medyra é instalado direto do Safari como web app. Ele ganha um ícone próprio na tela de início e funciona como um app normal.",
+    "iosStep1": "Abra medyra.de no Safari",
+    "iosStep2": "Toque no botão Compartilhar",
+    "iosStep3": "Escolha Adicionar à Tela de Início",
+    "iosNote": "Mesma conta, mesmos relatórios, todos os recursos.",
+    "storesNote": "O Medyra chegará à App Store e ao Google Play. Até lá, esta página é o caminho oficial para obter o app."
   }
 }

@@ -444,7 +444,8 @@
     "contact": "İletişim",
     "disclaimer": "Tıbbi tavsiyenin yerini tutmaz · GDPR uyumlu",
     "copyright": "© 2026 Medyra. Tüm hakları saklıdır. Almanyada üretilmiştir.",
-    "partner": "Ortak"
+    "partner": "Ortak",
+    "app": "Mobil uygulama"
   },
   "pricingPage": {
     "badge": "Basit ve şeffaf fiyatlandırma",
@@ -577,5 +578,24 @@
       "q7": "What AI model powers Medyra?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
+  },
+  "appPage": {
+    "badge": "Medyra App",
+    "title": "Medyra uygulamasını indirin",
+    "subtitle": "Tıbbi belgeleri telefonunuzda anlayın. Ücretsiz başlayın, web ve mobil için tek hesap.",
+    "androidTitle": "Android",
+    "androidDesc": "Uygulamayı doğrudan bizden indirin. Telefonunuz tarayıcıdan yüklemeye izin vermenizi isteyebilir. Bu, Play Store dışındaki uygulamalar için normaldir ve tek dokunuş sürer.",
+    "androidButton": "Android için indir",
+    "androidStep1": "İndirme düğmesine dokunun",
+    "androidStep2": "İndirilen dosyayı açın ve yüklemeye izin verin",
+    "androidStep3": "Medyra'yı açın ve giriş yapın",
+    "androidNote": "Uygulama bizim tarafımızdan imzalanmıştır, yalnızca medyra.de ile iletişim kurar ve bu sayfa üzerinden güncellenir.",
+    "iosTitle": "iPhone",
+    "iosDesc": "iPhone'da Medyra, Safari'den web uygulaması olarak doğrudan yüklenir. Ana ekranda kendi simgesi olur ve normal bir uygulama gibi çalışır.",
+    "iosStep1": "Safari'de medyra.de adresini açın",
+    "iosStep2": "Paylaş düğmesine dokunun",
+    "iosStep3": "Ana Ekrana Ekle'yi seçin",
+    "iosNote": "Aynı hesap, aynı raporlar, tüm özellikler.",
+    "storesNote": "Medyra yakında App Store ve Google Play'de. O zamana kadar uygulamayı edinmenin resmi yolu bu sayfadır."
   }
 }

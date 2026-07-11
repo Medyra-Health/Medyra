@@ -446,7 +446,8 @@
     "contact": "رابطہ",
     "disclaimer": "طبی مشورے کا متبادل نہیں · GDPR کے مطابق",
     "copyright": "© 2026 Medyra. جملہ حقوق محفوظ ہیں۔ جرمنی میں بنایا گیا۔",
-    "partner": "شراکت دار"
+    "partner": "شراکت دار",
+    "app": "موبائل ایپ"
   },
   "pricingPage": {
     "badge": "سادہ اور شفاف قیمتیں",
@@ -579,5 +580,24 @@
       "q7": "What AI model powers Medyra?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
+  },
+  "appPage": {
+    "badge": "Medyra ایپ",
+    "title": "Medyra ایپ حاصل کریں",
+    "subtitle": "اپنے فون پر طبی دستاویزات سمجھیں۔ مفت شروع کریں، ویب اور موبائل کے لیے ایک اکاؤنٹ۔",
+    "androidTitle": "Android",
+    "androidDesc": "ایپ براہ راست ہم سے ڈاؤن لوڈ کریں۔ آپ کا فون براؤزر سے انسٹال کی اجازت مانگ سکتا ہے۔ Play Store سے باہر کی ایپس کے لیے یہ معمول کی بات ہے اور ایک ٹیپ میں ہو جاتی ہے۔",
+    "androidButton": "Android کے لیے ڈاؤن لوڈ کریں",
+    "androidStep1": "ڈاؤن لوڈ بٹن پر ٹیپ کریں",
+    "androidStep2": "ڈاؤن لوڈ شدہ فائل کھولیں اور انسٹال کی اجازت دیں",
+    "androidStep3": "Medyra کھولیں اور سائن ان کریں",
+    "androidNote": "ایپ ہماری طرف سے دستخط شدہ ہے، صرف medyra.de سے رابطہ کرتی ہے اور اسی صفحے سے اپڈیٹ ہوتی ہے۔",
+    "iosTitle": "iPhone",
+    "iosDesc": "iPhone پر Medyra براہ راست Safari سے ویب ایپ کے طور پر انسٹال ہوتی ہے۔ ہوم اسکرین پر اپنا آئیکن ملتا ہے اور عام ایپ کی طرح کام کرتی ہے۔",
+    "iosStep1": "Safari میں medyra.de کھولیں",
+    "iosStep2": "شیئر بٹن پر ٹیپ کریں",
+    "iosStep3": "ہوم اسکرین میں شامل کریں منتخب کریں",
+    "iosNote": "وہی اکاؤنٹ، وہی رپورٹس، تمام خصوصیات۔",
+    "storesNote": "Medyra جلد App Store اور Google Play پر آ رہی ہے۔ تب تک ایپ حاصل کرنے کا سرکاری طریقہ یہی صفحہ ہے۔"
   }
 }

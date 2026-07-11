@@ -444,7 +444,8 @@
     "contact": "联系我们",
     "disclaimer": "不能替代医疗建议 · 符合GDPR",
     "copyright": "© 2026 Medyra. 保留所有权利。德国制造。",
-    "partner": "合作伙伴"
+    "partner": "合作伙伴",
+    "app": "手机应用"
   },
   "pricingPage": {
     "badge": "简单透明的定价",
@@ -577,5 +578,24 @@
       "q7": "What AI model powers Medyra?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
+  },
+  "appPage": {
+    "badge": "Medyra 应用",
+    "title": "获取 Medyra 应用",
+    "subtitle": "在手机上看懂医疗文件。免费开始，网页与手机共用一个账户。",
+    "androidTitle": "Android",
+    "androidDesc": "直接从我们这里下载应用。手机可能会请求允许从浏览器安装，这对 Play 商店以外的应用是正常的，只需轻点一下。",
+    "androidButton": "下载 Android 版",
+    "androidStep1": "点击下载按钮",
+    "androidStep2": "打开下载的文件并允许安装",
+    "androidStep3": "打开 Medyra 并登录",
+    "androidNote": "应用由我们签名，仅与 medyra.de 通信，并通过本页面更新。",
+    "iosTitle": "iPhone",
+    "iosDesc": "在 iPhone 上，Medyra 可直接从 Safari 安装为网页应用。它会在主屏幕上获得自己的图标，使用起来和普通应用一样。",
+    "iosStep1": "在 Safari 中打开 medyra.de",
+    "iosStep2": "点击分享按钮",
+    "iosStep3": "选择添加到主屏幕",
+    "iosNote": "同一账户，同样的报告，全部功能。",
+    "storesNote": "Medyra 即将上架 App Store 和 Google Play。在此之前，本页面是获取应用的官方途径。"
   }
 }

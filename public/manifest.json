@@ -1,11 +1,11 @@
 {
-  "name": "Medyra - Medical Report Explainer",
+  "name": "Medyra",
   "short_name": "Medyra",
-  "description": "Understand your medical reports in plain language",
+  "description": "Medical documents explained in plain language, in under 60 seconds.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2563eb",
+  "background_color": "#F7FBF9",
+  "theme_color": "#10B981",
   "orientation": "portrait",
   "icons": [
     {
