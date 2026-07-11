@@ -10,6 +10,7 @@ import {
   FileText, Upload, Share2, Printer, ChevronDown,
 } from 'lucide-react'
 import MedyraLogo from '@/components/MedyraLogo'
+import AppHeader from '@/components/AppHeader'
 import ConsentModal from '@/components/ConsentModal'
 
 const MAX_BYTES = 4 * 1024 * 1024
@@ -223,12 +224,7 @@ export default function VerstehensPage() {
       )}
 
       {/* ── Header ── */}
-      <header className="no-print bg-white/90 backdrop-blur-md border-b-2 border-blue-100 py-4 px-6 flex items-center justify-between sticky top-0 z-40">
-        <Link href="/"><MedyraLogo size="md" /></Link>
-        <Link href="/" className="text-base text-gray-400 hover:text-gray-600 transition-colors">
-          Zurück zur Startseite
-        </Link>
-      </header>
+      <AppHeader back={{ href: '/', label: 'Zurück zur Startseite' }} tone="blue" />
 
       {/* ══════════════════════════════════════════════════
           UPLOAD / ERROR STAGE

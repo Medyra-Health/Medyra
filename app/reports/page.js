@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import MedyraLogo from '@/components/MedyraLogo'
+import AppHeader from '@/components/AppHeader'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations } from 'next-intl'
 
@@ -86,22 +87,7 @@ export default function ReportsPage() {
     <div className="min-h-screen bg-[#F7FBF9]" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
       <style>{`.font-display { font-family: var(--font-playfair), Georgia, serif; }`}</style>
       {/* Header */}
-      <header className="bg-white/90 backdrop-blur-md border-b-2 border-emerald-100 sticky top-0 z-40">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/dashboard"><MedyraLogo size="md" /></Link>
-          <div className="flex items-center gap-2">
-            <LanguageSwitcher />
-            <Link href="/dashboard">
-              <Button variant="ghost" size="sm" className="hidden sm:flex text-gray-700 hover:bg-gray-50">
-                <ArrowLeft className="h-4 w-4 mr-1" /> Dashboard
-              </Button>
-              <Button variant="ghost" size="sm" className="flex sm:hidden">
-                <ArrowLeft className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <AppHeader back={{ href: '/dashboard', label: 'Dashboard' }} title="Reports" tone="emerald" />
 
       <div className="container mx-auto px-4 py-8 max-w-3xl">
 

@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { toast } from 'sonner'
 import MedyraLogo from '@/components/MedyraLogo'
+import AppHeader from '@/components/AppHeader'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations, useLocale } from 'next-intl'
 
@@ -466,24 +467,7 @@ export default function PrepPage() {
       <div className="min-h-screen bg-[#FAF9FD] relative" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
         <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-violet-100/60 rounded-full blur-3xl pointer-events-none print:hidden" />
         {/* Header */}
-        <header className="bg-white border-b-2 border-violet-100 sticky top-0 z-40 print:hidden">
-          <div className="container mx-auto px-4 py-3">
-            <div className="flex justify-between items-center">
-              <Link href="/dashboard"><MedyraLogo size="md" /></Link>
-              <div className="flex items-center gap-2">
-                <LanguageSwitcher />
-                <Link href="/dashboard">
-                  <Button variant="ghost" size="sm" className="hidden sm:flex text-gray-700 hover:bg-gray-50">
-                    <ArrowLeft className="h-4 w-4 mr-1" /> Dashboard
-                  </Button>
-                  <Button variant="ghost" size="sm" className="flex sm:hidden">
-                    <ArrowLeft className="h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </header>
+        <AppHeader back={{ href: '/dashboard', label: 'Dashboard' }} title="Doctor Visit" tone="violet" />
 
         <div className="container mx-auto px-4 py-8 max-w-2xl">
 

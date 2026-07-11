@@ -11,6 +11,7 @@ import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { toast } from 'sonner'
 import MedyraLogo from '@/components/MedyraLogo'
+import AppHeader from '@/components/AppHeader'
 import ConsentModal from '@/components/ConsentModal'
 
 const MAX_BYTES = 4 * 1024 * 1024
@@ -227,22 +228,7 @@ export default function UploadPage() {
         </div>
       )}
 
-      <header className="bg-white border-b-2 border-emerald-100">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/dashboard"><MedyraLogo size="md" /></Link>
-          <div className="flex items-center gap-2">
-            <LanguageSwitcher />
-            <Link href="/dashboard">
-              <Button variant="ghost" size="sm" className="hidden sm:flex text-gray-600 hover:text-gray-900 hover:bg-gray-50 gap-1.5">
-                <ArrowLeft className="h-4 w-4" /> {t('upload.backToDashboard')}
-              </Button>
-              <Button variant="ghost" size="sm" className="flex sm:hidden text-gray-600 hover:bg-gray-50">
-                <ArrowLeft className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <AppHeader back={{ href: '/dashboard', label: t('upload.backToDashboard') }} title="Upload" tone="emerald" />
 
       <div className="container mx-auto px-4 py-10 max-w-xl">
 

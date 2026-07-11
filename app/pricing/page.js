@@ -10,6 +10,7 @@ import {
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 import { useTranslations } from 'next-intl'
 import MedyraLogo from '@/components/MedyraLogo'
+import AppHeader from '@/components/AppHeader'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { Button } from '@/components/ui/button'
 import { toast } from 'sonner'
@@ -190,19 +191,7 @@ export default function PricingPage() {
       `}</style>
 
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/"><MedyraLogo size="md" /></Link>
-          <div className="flex items-center gap-2">
-            <LanguageSwitcher />
-            <Link href="/">
-              <Button variant="ghost" size="sm" className="text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-                <ArrowLeft className="h-4 w-4 mr-1" /> {t('back')}
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <AppHeader back={{ href: '/', label: t('back') }} title="Pricing" tone="emerald" />
 
       <div className="container mx-auto px-4 py-12 md:py-16 max-w-6xl relative">
         {/* Ambient glow */}
