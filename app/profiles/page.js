@@ -10,6 +10,7 @@ import {
   AlertTriangle, CheckCircle, Minus, FileText, ExternalLink
 } from 'lucide-react'
 import MedyraLogo from '@/components/MedyraLogo'
+import { collectMarkers, latestValue, markerMeta } from '@/components/HealthTimeline'
 
 const RELATIONSHIPS = [
   { value: 'self',    label: 'Myself',  icon: User,   color: 'emerald' },
@@ -216,32 +217,26 @@ function CreateModal({ onClose, onCreated }) {
   )
 }
 
-const BIOMARKER_LABELS = {
-  hemoglobin: 'Hemoglobin', ferritin: 'Ferritin', tsh: 'TSH', hba1c: 'HbA1c',
-  cholesterol: 'Cholesterol', vitaminD: 'Vitamin D', crp: 'CRP', egfr: 'eGFR',
-}
-const BIOMARKER_UNITS = {
-  hemoglobin: 'g/dL', ferritin: 'µg/L', tsh: 'mIU/L', hba1c: '%',
-  cholesterol: 'mg/dL', vitaminD: 'nmol/L', crp: 'mg/L', egfr: 'mL/min',
-}
-const BIOMARKER_RANGES = {
-  hemoglobin: [12, 17.5], ferritin: [15, 150], tsh: [0.4, 4.0], hba1c: [0, 5.6],
-  cholesterol: [0, 200], vitaminD: [50, 200], crp: [0, 5], egfr: [60, 120],
-}
-
-function getBioFlag(key, value) {
-  const r = BIOMARKER_RANGES[key]
-  if (!r || value == null) return 'none'
-  if (value < r[0]) return 'low'
-  if (value > r[1]) return 'high'
+// Flag a value against a marker's reference range (curated or the lab's own).
+function flagValue(meta, sample) {
+  if (sample?.flag && sample.flag !== 'normal') return sample.flag
+  const v = sample ? parseFloat(sample.value) : null
+  if (v == null || isNaN(v)) return 'none'
+  const min = meta.normalMin, max = meta.normalMax
+  if (min != null && v < min) return 'low'
+  if (max != null && v > max) return 'high'
   return 'normal'
 }
 
-function getLatestBiomarker(profile, key) {
-  const entries = (profile.biomarkers || []).filter(b => b.key === key || b.marker === key)
-  if (!entries.length) return null
-  entries.sort((a, b) => new Date(b.date || b.createdAt || 0) - new Date(a.date || a.createdAt || 0))
-  return entries[0].value ?? entries[0].val ?? null
+// All markers present across a set of profiles, deduped, known ones first.
+function unionMarkers(profiles) {
+  const map = new Map()
+  for (const p of profiles) {
+    for (const m of collectMarkers(p)) {
+      if (!map.has(m.key)) map.set(m.key, m)
+    }
+  }
+  return [...map.values()]
 }
 
 function CompareSection({ profiles }) {
@@ -250,15 +245,16 @@ function CompareSection({ profiles }) {
 
   const pA = profiles.find(p => p.id === selA)
   const pB = profiles.find(p => p.id === selB)
-  const bioKeys = Object.keys(BIOMARKER_LABELS)
 
-  const rows = bioKeys.map(key => {
-    const vA = pA ? getLatestBiomarker(pA, key) : null
-    const vB = pB ? getLatestBiomarker(pB, key) : null
-    const fA = getBioFlag(key, vA)
-    const fB = getBioFlag(key, vB)
+  const rows = unionMarkers([pA, pB].filter(Boolean)).map(meta => {
+    const sA = pA ? latestValue(pA, meta.key) : null
+    const sB = pB ? latestValue(pB, meta.key) : null
+    const vA = sA ? parseFloat(sA.value) : null
+    const vB = sB ? parseFloat(sB.value) : null
+    const fA = flagValue(meta, sA)
+    const fB = flagValue(meta, sB)
     const diff = vA != null && vB != null ? +(vB - vA).toFixed(2) : null
-    return { key, label: BIOMARKER_LABELS[key], unit: BIOMARKER_UNITS[key], vA, vB, fA, fB, diff }
+    return { key: meta.key, label: meta.label, unit: meta.unit, vA, vB, fA, fB, diff }
   }).filter(r => r.vA != null || r.vB != null)
 
   const flagColor = f => f === 'high' ? 'text-orange-600' : f === 'low' ? 'text-yellow-600' : f === 'normal' ? 'text-emerald-600' : 'text-gray-400'
@@ -352,17 +348,18 @@ function CompareSection({ profiles }) {
 }
 
 function OverviewSection({ profiles }) {
-  const bioKeys = Object.keys(BIOMARKER_LABELS)
-
   const data = profiles.map(p => ({
     profile: p,
-    markers: bioKeys.map(key => ({
-      key,
-      label: BIOMARKER_LABELS[key],
-      unit: BIOMARKER_UNITS[key],
-      value: getLatestBiomarker(p, key),
-      flag: getBioFlag(key, getLatestBiomarker(p, key)),
-    })).filter(m => m.value != null),
+    markers: collectMarkers(p).map(meta => {
+      const sample = latestValue(p, meta.key)
+      return {
+        key: meta.key,
+        label: meta.label,
+        unit: meta.unit,
+        value: sample ? parseFloat(sample.value) : null,
+        flag: flagValue(meta, sample),
+      }
+    }).filter(m => m.value != null),
   })).filter(d => d.markers.length > 0)
 
   if (data.length === 0) return null
@@ -519,7 +516,8 @@ export default function ProfilesPage() {
 
   const profiles = data?.profiles || []
   const tier = data?.tier || 'free'
-  const limit = data?.limit ?? 0
+  // limit is null for unlimited tiers (clinic/admin); keep it null, do not coerce to 0
+  const limit = data?.limit === undefined ? 0 : data.limit
   const canCreate = data?.canCreate ?? false
   const isPaid = tier !== 'free'
 
@@ -632,7 +630,7 @@ export default function ProfilesPage() {
                       <Plus className="h-5 w-5 text-gray-400 group-hover:text-emerald-600 transition-colors" />
                     </div>
                     <p className="text-sm font-semibold text-gray-500 group-hover:text-emerald-700 transition-colors">Add Profile</p>
-                    {limit && <p className="text-xs text-gray-400">{profiles.length}/{limit} used</p>}
+                    {limit ? <p className="text-xs text-gray-400">{profiles.length}/{limit} used</p> : null}
                   </button>
                 )}
 

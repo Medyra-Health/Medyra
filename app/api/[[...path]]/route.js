@@ -563,22 +563,75 @@ const BIOMARKER_PATTERNS = [
   { key: 'platelets',     patterns: [/platelet/i, /thrombozyt/i, /\bplt\b/i] },
 ]
 
+// Turn any test name into a stable-ish tracking key so unmatched markers are
+// tracked too. Known markers keep their canonical key (hba1c, ldl, ...); the
+// rest get an "x_" slug derived from the name.
+function slugifyMarker(name) {
+  const slug = String(name)
+    .toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '') // strip accents
+    .replace(/\([^)]*\)/g, ' ')                        // drop parentheticals
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+    .slice(0, 40)
+  return slug ? `x_${slug}` : null
+}
+
+// Parse a lab reference range string into { low, high }.
+// Handles "12-17.5", "3,5 – 5,0", "< 200", "> 40", "bis 5", "150 - 400".
+function parseRefRange(str) {
+  if (!str) return { low: null, high: null }
+  const s = String(str).replace(/,/g, '.')
+  const nums = (s.match(/-?\d+(?:\.\d+)?/g) || []).map(parseFloat)
+  if (!nums.length) return { low: null, high: null }
+  if (/[<≤]/.test(s) || /\bbis\b/i.test(s)) return { low: null, high: nums[nums.length - 1] }
+  if (/[>≥]/.test(s)) return { low: nums[0], high: null }
+  if (nums.length >= 2) return { low: Math.min(nums[0], nums[1]), high: Math.max(nums[0], nums[1]) }
+  return { low: null, high: null }
+}
+
+// Pull the unit out of a value string like "14.5 g/dL" -> "g/dL".
+function parseUnit(valueStr) {
+  const m = String(valueStr).match(/[\d.,]+\s*([%°]|[a-zA-Zµμ]+(?:\/[a-zA-Zµμ0-9]+)?)/)
+  return m ? m[1] : ''
+}
+
+// Extract EVERY numeric value from a report, not just a fixed shortlist.
+// Known markers keep their canonical key so charts get proper reference bands;
+// every other numeric value is tracked under a slug key with the lab's own
+// unit and reference range carried through.
 function extractBiomarkersFromTests(tests, reportDate) {
   const entries = []
+  const seen = new Set()
   for (const test of (tests || [])) {
     const name = test.name || ''
-    const raw = test.value || ''
+    const raw = test.value ?? ''
     // Parse numeric value from strings like "14.5 g/dL", "143 mg/dL" or German "14,8 g/dL"
-    const numMatch = String(raw).replace(/,/g, '.').match(/\d+(?:\.\d+)?/)
+    const numMatch = String(raw).replace(/,/g, '.').match(/-?\d+(?:\.\d+)?/)
     if (!numMatch) continue
     const value = parseFloat(numMatch[0])
     if (isNaN(value)) continue
-    for (const { key, patterns } of BIOMARKER_PATTERNS) {
-      if (patterns.some(p => p.test(name))) {
-        entries.push({ key, value, date: reportDate, flag: test.flag || 'normal' })
-        break
-      }
+
+    let key = null
+    for (const { key: k, patterns } of BIOMARKER_PATTERNS) {
+      if (patterns.some(p => p.test(name))) { key = k; break }
     }
+    if (!key) key = slugifyMarker(name)
+    if (!key || seen.has(key)) continue // one value per marker per report
+    seen.add(key)
+
+    const { low, high } = parseRefRange(test.normalRange)
+    entries.push({
+      key,
+      name: name || key,
+      value,
+      unit: parseUnit(raw) || '',
+      refLow: low,
+      refHigh: high,
+      category: test.category || 'Other',
+      date: reportDate,
+      flag: test.flag || 'normal',
+    })
   }
   return entries
 }
@@ -604,7 +657,16 @@ async function recordBiomarkersToProfile(database, userId, profileId, reportId, 
   const biomarkerEntry = {
     reportId,
     recordedAt,
-    values: flat.map(e => ({ key: e.key, name: e.key, value: e.value, flag: e.flag })),
+    values: flat.map(e => ({
+      key: e.key,
+      name: e.name || e.key,
+      value: e.value,
+      unit: e.unit || '',
+      refLow: e.refLow ?? null,
+      refHigh: e.refHigh ?? null,
+      category: e.category || 'Other',
+      flag: e.flag || 'normal',
+    })),
   }
   await database.collection('users').updateOne(
     { clerkId: userId, 'profiles.id': profileId },
@@ -640,6 +702,36 @@ async function handleAssignReportToProfile(request, reportId) {
   )
 
   return handleCORS(NextResponse.json({ success: true, biomarkersExtracted: extracted }))
+}
+
+// Re-extract biomarkers for every report already assigned to a profile.
+// Lets existing users backfill the richer value history (units, reference
+// ranges, all markers) without re-uploading anything.
+async function handleResyncProfile(request) {
+  const { userId } = await auth()
+  if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  const { profileId } = await request.json()
+  if (!profileId || typeof profileId !== 'string') {
+    return handleCORS(NextResponse.json({ error: 'profileId required' }, { status: 400 }))
+  }
+  const database = await connectToMongo()
+  const rawReports = await database.collection('reports')
+    .find({ userId, profileId })
+    .sort({ createdAt: 1 })
+    .toArray()
+
+  let total = 0
+  for (const raw of rawReports) {
+    const report = decryptReport(raw)
+    try {
+      total += await recordBiomarkersToProfile(
+        database, userId, profileId, report.id, report.explanation, report.createdAt || new Date()
+      )
+    } catch (err) {
+      console.warn('Resync failed for report', report.id, err.message)
+    }
+  }
+  return handleCORS(NextResponse.json({ success: true, reportsProcessed: rawReports.length, biomarkersExtracted: total }))
 }
 
 async function handleChat(request, reportId) {
@@ -940,6 +1032,11 @@ async function handleRoute(request) {
     const assignMatch = route.match(/^\/reports\/([^/]+)\/assign$/)
     if (assignMatch && method === 'PATCH') {
       return handleAssignReportToProfile(request, assignMatch[1])
+    }
+
+    // Re-extract biomarkers for all reports in a profile
+    if (route === '/profiles/resync' && method === 'POST') {
+      return handleResyncProfile(request)
     }
 
     // Get specific report
