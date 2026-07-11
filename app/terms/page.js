@@ -114,7 +114,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-lg font-semibold text-gray-900 mb-3">11. Contact</h2>
-            <p>For questions about these terms: <a href="mailto:contact@medyra.de" className="text-emerald-600 hover:underline">contact@medyra.de</a></p>
+            <p>For questions about these terms: <a href="mailto:hello@medyra.de" className="text-emerald-600 hover:underline">hello@medyra.de</a></p>
           </section>
         </div>
       </main>

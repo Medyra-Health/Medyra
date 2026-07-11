@@ -91,8 +91,8 @@ function SuccessContent() {
         {/* Footer note */}
         <p className="text-center text-xs text-gray-400 mt-6">
           Questions? Email us at{' '}
-          <a href="mailto:abralur28@gmail.com" className="text-emerald-600 hover:underline font-medium">
-            abralur28@gmail.com
+          <a href="mailto:hello@medyra.de" className="text-emerald-600 hover:underline font-medium">
+            hello@medyra.de
           </a>
           {' '}— we reply within one business day.
         </p>
