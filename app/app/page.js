@@ -5,7 +5,9 @@ import { useTranslations } from 'next-intl'
 import { Download, ShieldCheck, Smartphone, Apple, Share, SquarePlus, Globe } from 'lucide-react'
 import MedyraLogo from '@/components/MedyraLogo'
 
-const APK_URL = 'https://github.com/Medyra-Health/medyra-mobile/releases/latest/download/medyra.apk'
+// Hosted on the public website repo so anonymous visitors can download it.
+// The medyra-mobile repo is private; its releases are not publicly reachable.
+const APK_URL = 'https://github.com/Medyra-Health/Medyra/releases/latest/download/medyra.apk'
 
 function Steps({ items }) {
   return (
