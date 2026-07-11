@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
+import AppHeader from '@/components/AppHeader'
 
 export const metadata = {
   title: 'Health & Lab Results Blog, Medyra',
@@ -96,12 +97,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-[#FDFBF7] relative" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
       <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-amber-100/50 rounded-full blur-3xl pointer-events-none" />
-      <header className="border-b-2 border-amber-100 bg-white/90 backdrop-blur-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/"><MedyraLogo size="md" /></Link>
-          <Link href="/" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">← Back to Medyra</Link>
-        </div>
-      </header>
+      <AppHeader back={{ href: '/', label: 'Back to Medyra' }} title="Blog" tone="amber" />
 
       <main className="container mx-auto px-4 py-14 max-w-2xl">
         <div className="mb-10 relative">

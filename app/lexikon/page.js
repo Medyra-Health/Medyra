@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
+import AppHeader, { HeaderButton } from '@/components/AppHeader'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { getEntriesByCategory } from '@/lib/lexikon'
 import LexikonIndex from './LexikonIndex'
@@ -33,18 +34,9 @@ export default function LexikonPage() {
     <div className="min-h-screen bg-[#F7FBFC] relative" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
       <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-cyan-100/50 rounded-full blur-3xl pointer-events-none" />
       {/* Header */}
-      <header className="bg-white/90 backdrop-blur-md border-b-2 border-cyan-100 sticky top-0 z-50 shadow-sm">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/"><MedyraLogo size="md" /></Link>
-          <nav className="flex items-center gap-3">
-            <Link href="/" className="text-sm text-gray-500 hover:text-gray-800 transition-colors hidden sm:block">← Startseite</Link>
-            <LanguageSwitcher />
-            <Link href="/upload" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-1.5 rounded-lg text-xs transition-colors">
-              Befund hochladen
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <AppHeader back={{ href: '/', label: 'Startseite' }} title="Laborwerte Lexikon" tone="teal">
+        <HeaderButton href="/upload" tone="teal">Befund hochladen</HeaderButton>
+      </AppHeader>
 
       <main className="container mx-auto px-4 py-12 max-w-5xl">
         {/* Hero, language-aware client component */}

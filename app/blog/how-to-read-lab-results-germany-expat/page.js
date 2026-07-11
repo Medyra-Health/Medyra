@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
+import AppHeader from '@/components/AppHeader'
 
 export const metadata = {
   title: 'How to Read Your Lab Results in Germany as an Expat | Medyra',
@@ -25,12 +26,7 @@ export const metadata = {
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-white">
-      <header className="border-b border-gray-100 bg-white sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/"><MedyraLogo size="md" /></Link>
-          <Link href="/blog" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">← All articles</Link>
-        </div>
-      </header>
+      <AppHeader back={{ href: '/blog', label: 'All articles' }} title="Blog" tone="amber" />
 
       <main className="container mx-auto px-4 py-12 max-w-2xl">
         <div className="mb-8">

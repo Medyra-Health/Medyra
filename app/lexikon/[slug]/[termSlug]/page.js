@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
+import AppHeader, { HeaderButton } from '@/components/AppHeader'
 import { getAllSlugs, getEntryTranslated, getRelatedEntries, SUPPORTED_LANGS } from '@/lib/lexikon'
 import { getLexikonUI, TERM_NAMES_EN, CATEGORY_NAMES_EN } from '@/lib/lexikonUI'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
@@ -114,21 +115,9 @@ export default async function LexikonTranslatedPage({ params }) {
     <div className="min-h-screen bg-gray-50" dir={langMeta.rtl ? 'rtl' : 'ltr'}>
       <JsonLd entry={entry} />
 
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/"><MedyraLogo size="md" /></Link>
-          <nav className="flex items-center gap-3">
-            <Link href="/lexikon" className="text-sm text-gray-500 hover:text-gray-800 transition-colors hidden sm:block">
-              ← Lexikon (DE)
-            </Link>
-            <LanguageSwitcher />
-            <Link href={`/upload?source=lexikon&term=${termSlug}`}
-              className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-1.5 rounded-lg text-xs transition-colors">
-              Upload Report
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <AppHeader back={{ href: '/lexikon', label: 'Lexikon' }} title="Laborwerte Lexikon" tone="teal">
+        <HeaderButton href={`/upload?source=lexikon&term=${termSlug}`} tone="teal">Upload Report</HeaderButton>
+      </AppHeader>
 
       <main className="container mx-auto px-4 py-10 max-w-2xl">
         <div className="flex items-center justify-between mb-5 flex-wrap gap-2">
