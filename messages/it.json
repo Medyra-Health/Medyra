@@ -486,7 +486,14 @@
     "disclaimer": "Non sostituisce il parere medico · Conforme al GDPR",
     "copyright": "© 2026 Medyra. Tutti i diritti riservati. Prodotto in Germania.",
     "partner": "Partner",
-    "app": "App mobile"
+    "app": "App mobile",
+    "understand": "Capire finalmente",
+    "understandCheck": "Controlla i valori all’istante",
+    "understandArztbrief": "Decifra le lettere del medico",
+    "understandHospital": "Capisci i referti ospedalieri",
+    "understandMedication": "Farmaci spiegati chiaramente",
+    "understandInsurance": "Lettere assicurative senza gergo",
+    "understandLanguages": "Spiegato in 17 lingue"
   },
   "pricingPage": {
     "badge": "Prezzi semplici e trasparenti",

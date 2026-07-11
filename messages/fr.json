@@ -486,7 +486,14 @@
     "disclaimer": "Ne remplace pas un avis médical · Conforme RGPD",
     "copyright": "© 2026 Medyra. Tous droits réservés. Fabriqué en Allemagne.",
     "partner": "Partenaire",
-    "app": "Application mobile"
+    "app": "Application mobile",
+    "understand": "Enfin comprendre",
+    "understandCheck": "Vérifiez vos valeurs en un instant",
+    "understandArztbrief": "Décodez les courriers médicaux",
+    "understandHospital": "Comprenez les rapports d’hôpital",
+    "understandMedication": "Médicaments expliqués clairement",
+    "understandInsurance": "Courriers d’assurance sans jargon",
+    "understandLanguages": "Expliqué en 17 langues"
   },
   "pricingPage": {
     "badge": "Tarification simple et transparente",

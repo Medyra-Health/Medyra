@@ -486,7 +486,14 @@
     "disclaimer": "चिकित्सा सलाह का विकल्प नहीं · GDPR अनुपालक",
     "copyright": "© 2026 Medyra. सर्वाधिकार सुरक्षित। जर्मनी में निर्मित।",
     "partner": "साझेदार",
-    "app": "मोबाइल ऐप"
+    "app": "मोबाइल ऐप",
+    "understand": "आख़िरकार समझ आया",
+    "understandCheck": "लैब वैल्यू तुरंत जांचें",
+    "understandArztbrief": "डॉक्टर के पत्र समझें",
+    "understandHospital": "अस्पताल की रिपोर्ट समझें",
+    "understandMedication": "दवाएं साफ़ शब्दों में",
+    "understandInsurance": "बीमा पत्र, बिना जटिल भाषा",
+    "understandLanguages": "17 भाषाओं में समझाया गया"
   },
   "pricingPage": {
     "badge": "सरल और पारदर्शी मूल्य निर्धारण",

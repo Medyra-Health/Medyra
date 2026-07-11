@@ -486,7 +486,14 @@
     "disclaimer": "Nie zastępuje porady lekarskiej · Zgodny z RODO",
     "copyright": "© 2026 Medyra. Wszelkie prawa zastrzeżone. Wyprodukowano w Niemczech.",
     "partner": "Partner",
-    "app": "Aplikacja mobilna"
+    "app": "Aplikacja mobilna",
+    "understand": "Wreszcie zrozumieć",
+    "understandCheck": "Sprawdź wynik od razu",
+    "understandArztbrief": "Rozszyfruj list lekarski",
+    "understandHospital": "Zrozum wypis ze szpitala",
+    "understandMedication": "Leki jasno wyjaśnione",
+    "understandInsurance": "Pisma z kasy bez urzędniczego języka",
+    "understandLanguages": "Wyjaśnienia w 17 językach"
   },
   "pricingPage": {
     "badge": "Proste i przejrzyste ceny",

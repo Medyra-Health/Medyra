@@ -486,7 +486,14 @@
     "disclaimer": "Tıbbi tavsiyenin yerini tutmaz · GDPR uyumlu",
     "copyright": "© 2026 Medyra. Tüm hakları saklıdır. Almanyada üretilmiştir.",
     "partner": "Ortak",
-    "app": "Mobil uygulama"
+    "app": "Mobil uygulama",
+    "understand": "Sonunda anlayın",
+    "understandCheck": "Tahlil değerini anında kontrol et",
+    "understandArztbrief": "Doktor mektuplarını çözün",
+    "understandHospital": "Hastane raporlarını anlayın",
+    "understandMedication": "İlaçlar net anlatılır",
+    "understandInsurance": "Sigorta yazıları, bürokrasisiz",
+    "understandLanguages": "17 dilde açıklama"
   },
   "pricingPage": {
     "badge": "Basit ve şeffaf fiyatlandırma",

@@ -486,7 +486,14 @@
     "disclaimer": "Kein Ersatz für ärztliche Beratung · DSGVO-konform",
     "copyright": "© 2026 Medyra. Alle Rechte vorbehalten. Made in Germany.",
     "partner": "Partner",
-    "app": "Mobile App"
+    "app": "Mobile App",
+    "understand": "Endlich verstehen",
+    "understandCheck": "Laborwerte sofort checken",
+    "understandArztbrief": "Arztbriefe entschlüsseln",
+    "understandHospital": "Krankenhausberichte verstehen",
+    "understandMedication": "Medikamente klar erklärt",
+    "understandInsurance": "Kassenbriefe ohne Amtsdeutsch",
+    "understandLanguages": "Erklärt in 17 Sprachen"
   },
   "pricingPage": {
     "badge": "Einfache, transparente Preise",

@@ -11,7 +11,7 @@ export default function SiteFooter() {
   return (
     <footer className="bg-gray-900 border-t border-gray-800 text-white">
       <div className="container mx-auto px-4 py-12 max-w-6xl">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-10">
 
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
@@ -30,6 +30,19 @@ export default function SiteFooter() {
               <li><Link href="/dashboard" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('healthVault')}</Link></li>
               <li><Link href="/pricing" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('pricing')}</Link></li>
               <li><Link href="/app" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('app')}</Link></li>
+            </ul>
+          </div>
+
+          {/* Understand: one catchy line per document type */}
+          <div>
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">{t('understand')}</p>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/check" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('understandCheck')}</Link></li>
+              <li><Link href="/arztbrief" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('understandArztbrief')}</Link></li>
+              <li><Link href="/entlassungsbericht" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('understandHospital')}</Link></li>
+              <li><Link href="/medikamente" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('understandMedication')}</Link></li>
+              <li><Link href="/krankenkasse" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('understandInsurance')}</Link></li>
+              <li><Link href="/sprachen" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('understandLanguages')}</Link></li>
             </ul>
           </div>
 

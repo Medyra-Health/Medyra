@@ -486,7 +486,14 @@
     "disclaimer": "医療アドバイスの代わりにはなりません · GDPR準拠",
     "copyright": "© 2026 Medyra. 全著作権所有。ドイツ製。",
     "partner": "パートナー",
-    "app": "モバイルアプリ"
+    "app": "モバイルアプリ",
+    "understand": "やっとわかる",
+    "understandCheck": "検査値をすぐチェック",
+    "understandArztbrief": "医師の手紙を読み解く",
+    "understandHospital": "退院報告書がわかる",
+    "understandMedication": "薬をわかりやすく",
+    "understandInsurance": "保険の書類も難解語なし",
+    "understandLanguages": "17言語で解説"
   },
   "pricingPage": {
     "badge": "シンプルで透明な料金",

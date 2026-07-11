@@ -16,6 +16,8 @@ const isPublicRoute = createRouteMatcher([
   '/verstehen(.*)',
   '/check(.*)',
   '/arztbrief(.*)',
+  '/entlassungsbericht(.*)',
+  '/krankenkasse(.*)',
   '/medikamente(.*)',
   '/sprachen(.*)',
   '/share(.*)',

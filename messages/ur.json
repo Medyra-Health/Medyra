@@ -488,7 +488,14 @@
     "disclaimer": "طبی مشورے کا متبادل نہیں · GDPR کے مطابق",
     "copyright": "© 2026 Medyra. جملہ حقوق محفوظ ہیں۔ جرمنی میں بنایا گیا۔",
     "partner": "شراکت دار",
-    "app": "موبائل ایپ"
+    "app": "موبائل ایپ",
+    "understand": "آخرکار سمجھ آ گیا",
+    "understandCheck": "لیب ویلیو فوراً جانچیں",
+    "understandArztbrief": "ڈاکٹر کے خطوط سمجھیں",
+    "understandHospital": "ہسپتال کی رپورٹ سمجھیں",
+    "understandMedication": "ادویات آسان الفاظ میں",
+    "understandInsurance": "انشورنس خطوط، بغیر مشکل زبان",
+    "understandLanguages": "17 زبانوں میں وضاحت"
   },
   "pricingPage": {
     "badge": "سادہ اور شفاف قیمتیں",

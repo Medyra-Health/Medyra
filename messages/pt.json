@@ -486,7 +486,14 @@
     "disclaimer": "Não substitui aconselhamento médico · Conforme ao GDPR",
     "copyright": "© 2026 Medyra. Todos os direitos reservados. Feito na Alemanha.",
     "partner": "Parceiro",
-    "app": "App móvel"
+    "app": "App móvel",
+    "understand": "Entender finalmente",
+    "understandCheck": "Verifique valores num instante",
+    "understandArztbrief": "Decifre cartas médicas",
+    "understandHospital": "Entenda relatórios hospitalares",
+    "understandMedication": "Medicamentos explicados com clareza",
+    "understandInsurance": "Cartas do seguro sem burocratês",
+    "understandLanguages": "Explicado em 17 idiomas"
   },
   "pricingPage": {
     "badge": "Preços simples e transparentes",

@@ -488,7 +488,14 @@
     "disclaimer": "Geen vervanging voor medisch advies · AVG-conform",
     "copyright": "© 2026 Medyra. Alle rechten voorbehouden. Gemaakt in Duitsland.",
     "partner": "Partner",
-    "app": "Mobiele app"
+    "app": "Mobiele app",
+    "understand": "Eindelijk begrijpen",
+    "understandCheck": "Check labwaarden direct",
+    "understandArztbrief": "Ontcijfer artsenbrieven",
+    "understandHospital": "Begrijp ziekenhuisverslagen",
+    "understandMedication": "Medicijnen helder uitgelegd",
+    "understandInsurance": "Verzekeringsbrieven zonder jargon",
+    "understandLanguages": "Uitgelegd in 17 talen"
   },
   "pricingPage": {
     "badge": "Eenvoudige, transparante prijzen",

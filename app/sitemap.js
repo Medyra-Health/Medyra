@@ -103,6 +103,18 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/entlassungsbericht`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/krankenkasse`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/sprachen`,
       lastModified: now,
       changeFrequency: 'monthly',
