@@ -13,6 +13,8 @@ import { Input } from '@/components/ui/input'
 import { toast } from 'sonner'
 import MedyraLogo from '@/components/MedyraLogo'
 import AppHeader, { HeaderButton } from '@/components/AppHeader'
+import ShareReportButton from '@/components/report/ShareReportButton'
+import RecheckReminderCard from '@/components/report/RecheckReminderCard'
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts'
 
 // Renders AI markdown to JSX: **bold**, *italic*, numbered lists, bullet points, ⚠️ warnings
@@ -562,6 +564,7 @@ export default function ReportDetailPage({ params }) {
 
       {/* Header */}
       <AppHeader back={{ href: '/dashboard', label: t('report.backToDashboard') }} tone="emerald">
+        <ShareReportButton reportId={reportId} />
         <HeaderButton
           variant="soft"
           onClick={handleExportPDF}
@@ -679,6 +682,9 @@ export default function ReportDetailPage({ params }) {
             </div>
           </div>
         )}
+
+        {/* ── RECHECK REMINDER ── */}
+        <RecheckReminderCard reportId={reportId} fileName={report.fileName} />
 
         {/* ── HEALTH OVERVIEW ── */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">

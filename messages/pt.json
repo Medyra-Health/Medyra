@@ -204,7 +204,13 @@
     "progressExtract": "Lendo seu relatório…",
     "progressAi": "IA a analisar…",
     "progressDone": "Quase pronto…",
-    "progressDuration": "Normalmente leva 20 a 40 segundos"
+    "progressDuration": "Normalmente leva 20 a 40 segundos",
+    "docTypeLabel": "O que está a carregar? (opcional, ajuda a IA)",
+    "docTypeAuto": "Detetar automaticamente",
+    "docTypeLab": "Relatório de laboratório",
+    "docTypeLetter": "Carta médica",
+    "docTypeMedication": "Plano de medicação",
+    "docTypeInsurance": "Carta do seguro"
   },
   "dashboard": {
     "welcome": "Bem-vindo",
@@ -223,7 +229,15 @@
     "approachingLimit": "Aproximando-se do limite",
     "upgradePlan": "Atualizar plano",
     "remaining": "Restantes",
-    "prepButton": "Preparar consulta"
+    "prepButton": "Preparar consulta",
+    "referral": {
+      "title": "Convide amigos",
+      "description": "Partilhe o seu link. Você e o seu amigo recebem 1 relatório grátis extra por mês.",
+      "copy": "Copiar",
+      "copied": "Copiado",
+      "stats": "{count} convidados, +{bonus} relatórios bónus",
+      "shareText": "A Medyra explica relatórios médicos em linguagem simples. Com o meu link, ambos recebemos um relatório grátis extra:"
+    }
   },
   "report": {
     "disclaimer": "Aviso médico",
@@ -269,7 +283,34 @@
     "chatLimitReached": "Limite de perguntas atingido para este relatório",
     "chatLimitInfo": "Grátis: 5 perguntas/relatório · Única: 15 · Personal/Family: ilimitado",
     "chatUpgrade": "Atualizar para chat ilimitado",
-    "chatPlaceholder": "Pergunte sobre os seus resultados…"
+    "chatPlaceholder": "Pergunte sobre os seus resultados…",
+    "share": {
+      "button": "Partilhar",
+      "title": "Partilhar esta explicação",
+      "description": "Link só de leitura para família, cuidadores ou o seu médico.",
+      "point1": "Mostra apenas a explicação, nunca o seu ficheiro ou chat",
+      "point2": "Expira automaticamente após 7 dias",
+      "point3": "Pode revogar o link a qualquer momento",
+      "create": "Criar link de partilha",
+      "copy": "Copiar",
+      "copied": "Copiado",
+      "expires": "Válido até {date}",
+      "privacyNote": "Qualquer pessoa com este link pode ver a explicação. Partilhe apenas com pessoas de confiança.",
+      "revoke": "Revogar link",
+      "revoked": "Link revogado"
+    },
+    "reminder": {
+      "title": "Definir lembrete de controlo",
+      "description": "Enviamos um e-mail quando for altura de repetir as análises, para comparar valores antigos e novos.",
+      "in4w": "Em 4 semanas",
+      "in3m": "Em 3 meses",
+      "in6m": "Em 6 meses",
+      "created": "Lembrete definido",
+      "activeTitle": "Lembrete ativo",
+      "activeDesc": "Escrevemos-lhe a {date}.",
+      "cancel": "Cancelar lembrete",
+      "cancelled": "Lembrete cancelado"
+    }
   },
   "common": {
     "loading": "Carregando...",
@@ -597,5 +638,38 @@
     "iosStep3": "Escolha Adicionar à Tela de Início",
     "iosNote": "Mesma conta, mesmos relatórios, todos os recursos.",
     "storesNote": "O Medyra chegará à App Store e ao Google Play. Até lá, esta página é o caminho oficial para obter o app."
+  },
+  "valueChecker": {
+    "badge": "Verificação instantânea grátis",
+    "title": "O seu valor de laboratório está",
+    "titleHighlight": "normal?",
+    "subtitle": "Escolha um valor, digite o número e veja de imediato como se compara com o intervalo de referência. Grátis, sem registo.",
+    "cardLabel": "Verificação ao vivo",
+    "noSignup": "Sem registo",
+    "fullToolLink": "Abrir o verificador completo de valores",
+    "searchPlaceholder": "Procurar valor, ex. TSH, Ferritin",
+    "valuePlaceholder": "O seu valor, ex. 5,2",
+    "noResults": "Nenhum valor encontrado",
+    "popular": "Populares:",
+    "status": {
+      "low": "Abaixo do intervalo normal",
+      "normal": "Dentro do intervalo normal",
+      "elevated": "Acima do intervalo normal",
+      "high": "Muito acima do intervalo normal"
+    },
+    "normalRange": "Intervalo normal",
+    "causesElevated": "Causas frequentes de valores altos",
+    "causesLow": "Causas frequentes de valores baixos",
+    "learnMore": "Mais sobre {value}",
+    "uploadCta": "Explicar o meu relatório completo",
+    "enterValue": "Introduza o seu valor de {value} em {unit} para ver o resultado.",
+    "disclaimer": "Informação geral baseada em intervalos de referência padrão para adultos. O seu laboratório pode usar intervalos diferentes; vale o intervalo do seu relatório. Não é aconselhamento médico."
+  },
+  "languagesSection": {
+    "badge": "17 idiomas",
+    "title": "O seu relatório alemão,",
+    "titleHighlight": "no seu idioma",
+    "subtitle": "A Medyra explica documentos médicos alemães em 17 idiomas, incluindo o chat de perguntas.",
+    "cta": "Ver todos os idiomas"
   }
 }

@@ -14,6 +14,7 @@ const TONES = {
   violet:  { grad: 'from-violet-500 to-fuchsia-500', ring: 'focus-visible:ring-violet-400/50', soft: 'text-violet-700 bg-violet-50 hover:bg-violet-100 border-violet-200', line: '#8b5cf6,#d946ef' },
   blue:    { grad: 'from-blue-500 to-indigo-500',  ring: 'focus-visible:ring-blue-400/50',    soft: 'text-blue-700 bg-blue-50 hover:bg-blue-100 border-blue-200',       line: '#3b82f6,#6366f1' },
   amber:   { grad: 'from-amber-500 to-orange-500', ring: 'focus-visible:ring-amber-400/50',   soft: 'text-amber-700 bg-amber-50 hover:bg-amber-100 border-amber-200',   line: '#f59e0b,#f97316' },
+  indigo:  { grad: 'from-indigo-500 to-violet-500', ring: 'focus-visible:ring-indigo-400/50', soft: 'text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border-indigo-200', line: '#6366f1,#8b5cf6' },
 }
 
 /**

@@ -7,6 +7,7 @@ import pdfParse from 'pdf-parse'
 import Stripe from 'stripe'
 import { Webhook } from 'svix'
 import { encrypt, decrypt } from '@/lib/encryption'
+import { getCheckerEntries } from '@/lib/werte'
 
 function encryptReport(doc) {
   return {
@@ -165,9 +166,27 @@ flag must be: "normal", "high", "low", or "critical"
 category must be one of: "Blood count", "Metabolism & lipids", "Kidney & liver", "Thyroid & hormones", "Vitamins & minerals", "Inflammation & immunity", "Other"
 nextSteps: 2-4 short, actionable, non-alarming steps (e.g. discuss a value at the next routine visit, recheck in 3 months, submit a form by the stated deadline). Only suggest urgency if something is critical.
 questionsForDoctor: for insurance letters these may be questions for the insurer instead.
-The document may be in German or English. Always answer in English, but keep the original terms recognizable (e.g. "Hämoglobin (Hemoglobin)", "Zuzahlung (copayment)").
+The document may be in German or English. Keep the original terms recognizable (e.g. "Hämoglobin (Hemoglobin)", "Zuzahlung (copayment)").
 If the text is not a medical or health-related document at all, say so politely in the summary, with empty tests and sections.
 Return ONLY valid JSON. No other text.`
+
+// Locale code -> language the explanation should be written in.
+// Falls back to English for unknown locales.
+const EXPLANATION_LANGUAGES = {
+  en: 'English', de: 'German', tr: 'Turkish', ar: 'Arabic', fr: 'French',
+  es: 'Spanish', it: 'Italian', pt: 'Portuguese', nl: 'Dutch', pl: 'Polish',
+  ru: 'Russian', zh: 'Simplified Chinese', ja: 'Japanese', ko: 'Korean',
+  hi: 'Hindi', ur: 'Urdu', bn: 'Bengali',
+}
+
+// User-selected document type on the upload page. Passed to the model as a
+// hint so classification never fights the user's intent.
+const DOC_TYPE_HINTS = {
+  lab: 'The user says this is a lab report (Laborbefund / Blutbild).',
+  letter: 'The user says this is a doctor letter, discharge summary, or radiology/pathology report (Arztbrief, Entlassungsbericht, Befund). Focus on translating every finding and medical term into plain language.',
+  medication: 'The user says this is a medication plan or prescription (Medikationsplan, Rezept). Create one section per medication: what it is for, how to take it, and important notes from the document.',
+  insurance: 'The user says this is a health insurance letter (Krankenkasse). Explain what it says, what it means for them, and what they need to do.',
+}
 
 const CHAT_PROMPT = `You are Medyra AI, a friendly, empathetic health assistant that helps patients understand their medical reports. Medyra AI is powered by Claude, made by Anthropic.
 
@@ -181,6 +200,7 @@ RULES:
 - Keep answers concise but complete (2-5 sentences unless a longer explanation is truly needed)
 - End every response with a gentle reminder to discuss findings with their doctor if the topic is clinical
 - NEVER respond with JSON, always respond in natural conversational text
+- Respond in the same language the patient writes in (German question -> German answer, Turkish question -> Turkish answer)
 - If a user sincerely asks what AI model or technology powers this assistant, be transparent: this assistant is powered by Claude AI, made by Anthropic`
 
 // Monthly chat fair-use limits (hard cap, silently blocked, no auto-upgrade)
@@ -277,11 +297,16 @@ async function extractTextFromImage(buffer, mimeType) {
 // AI
 // ============================================================================
 
-async function getAIExplanation(extractedText) {
+async function getAIExplanation(extractedText, { docType, language } = {}) {
+  const languageName = EXPLANATION_LANGUAGES[language] || 'English'
+  const docHint = DOC_TYPE_HINTS[docType]
+  const system = MEDICAL_PROMPT
+    + `\n\nWrite ALL explanation text (summary, interpretations, sections, questions, next steps) in ${languageName}. Keep the JSON keys and flag/docType/category enum values in English exactly as specified.`
+    + (docHint ? `\n\n${docHint}` : '')
   const response = await anthropic.messages.create({
     model: 'claude-sonnet-4-6',
     max_tokens: 4096,
-    system: MEDICAL_PROMPT,
+    system,
     messages: [{
       role: 'user',
       content: `Analyze this medical document and return JSON:\n\n${extractedText.substring(0, 10000)}`
@@ -360,16 +385,18 @@ async function ensureUserExists(userId, database) {
   const isFree = !sub.tier || sub.tier === 'free'
 
   if (isFree) {
-    // Free tier: count reports uploaded this calendar month (resets every month)
+    // Free tier: count reports uploaded this calendar month (resets every month).
+    // Referral rewards raise the monthly ceiling (+1 per successful invite).
+    const freeLimit = FREE_REPORT_LIMIT + (user.bonusReports || 0)
     const monthlyUsed = await database.collection('reports').countDocuments({
       userId,
       createdAt: { $gte: startOfCurrentMonth() },
     })
     return {
       tier: 'free',
-      limit: FREE_REPORT_LIMIT,
+      limit: freeLimit,
       used: monthlyUsed,
-      allowed: monthlyUsed < FREE_REPORT_LIMIT,
+      allowed: monthlyUsed < freeLimit,
     }
   }
 
@@ -468,9 +495,12 @@ async function handleAnalyzeReport(request) {
     return handleCORS(NextResponse.json({ error: 'Could not extract text from file' }, { status: 400 }))
   }
 
+  const docTypeHint = formData.get('docType') ? String(formData.get('docType')) : null
+  const language = formData.get('language') ? String(formData.get('language')) : null
+
   let explanation
   try {
-    explanation = await getAIExplanation(extractedText)
+    explanation = await getAIExplanation(extractedText, { docType: docTypeHint, language })
   } catch (err) {
     console.error('[AI analysis failed]', err.message)
     return handleCORS(NextResponse.json({ error: 'AI analysis failed. Please try again.' }, { status: 500 }))
@@ -1049,6 +1079,325 @@ async function handleClerkWebhook(request) {
 }
 
 // ============================================================================
+// SHARE LINKS - read-only, expiring, revocable
+// ============================================================================
+
+const SHARE_TTL_DAYS = 7
+
+// Create (or rotate) a share link for one of the user's reports.
+async function handleCreateShare(request, reportId) {
+  const { userId } = await auth()
+  if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  const database = await connectToMongo()
+
+  const report = await database.collection('reports').findOne(
+    { id: reportId, userId },
+    { projection: { id: 1 } }
+  )
+  if (!report) return handleCORS(NextResponse.json({ error: 'Report not found' }, { status: 404 }))
+
+  // One active link per report: revoke previous tokens, then mint a new one.
+  await database.collection('shares').updateMany(
+    { reportId, userId, revoked: false },
+    { $set: { revoked: true, revokedAt: new Date() } }
+  )
+
+  const token = uuidv4().replace(/-/g, '')
+  const expiresAt = new Date(Date.now() + SHARE_TTL_DAYS * 24 * 60 * 60 * 1000)
+  await database.collection('shares').insertOne({
+    token, reportId, userId, revoked: false, views: 0,
+    createdAt: new Date(), expiresAt,
+  })
+
+  return handleCORS(NextResponse.json({ success: true, token, expiresAt }))
+}
+
+// Revoke all active share links for a report.
+async function handleRevokeShare(reportId) {
+  const { userId } = await auth()
+  if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  const database = await connectToMongo()
+  await database.collection('shares').updateMany(
+    { reportId, userId, revoked: false },
+    { $set: { revoked: true, revokedAt: new Date() } }
+  )
+  return handleCORS(NextResponse.json({ success: true }))
+}
+
+// Current active share link for a report (so the UI can show state on load).
+async function handleGetShareStatus(reportId) {
+  const { userId } = await auth()
+  if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  const database = await connectToMongo()
+  const share = await database.collection('shares').findOne(
+    { reportId, userId, revoked: false, expiresAt: { $gt: new Date() } },
+    { projection: { token: 1, expiresAt: 1, views: 1 } }
+  )
+  return handleCORS(NextResponse.json({
+    success: true,
+    share: share ? { token: share.token, expiresAt: share.expiresAt, views: share.views || 0 } : null,
+  }))
+}
+
+// PUBLIC: resolve a share token into a sanitized, read-only explanation.
+// Never exposes fileName, extractedText, conversations, or any user identity.
+async function handleGetSharedReport(token) {
+  if (!/^[a-f0-9]{32}$/.test(token)) {
+    return handleCORS(NextResponse.json({ error: 'Invalid link' }, { status: 400 }))
+  }
+  const database = await connectToMongo()
+  const share = await database.collection('shares').findOne({ token })
+  if (!share || share.revoked || share.expiresAt < new Date()) {
+    return handleCORS(NextResponse.json({ error: 'This link has expired or was revoked' }, { status: 404 }))
+  }
+  const raw = await database.collection('reports').findOne({ id: share.reportId })
+  if (!raw) return handleCORS(NextResponse.json({ error: 'This link has expired or was revoked' }, { status: 404 }))
+
+  const report = decryptReport(raw)
+  // Owner's referral code powers the "understand your own report" CTA (viral loop)
+  const owner = await database.collection('users').findOne(
+    { clerkId: share.userId },
+    { projection: { 'referral.code': 1 } }
+  )
+  await database.collection('shares').updateOne({ token }, { $inc: { views: 1 } })
+
+  return handleCORS(NextResponse.json({
+    success: true,
+    shared: {
+      explanation: report.explanation,
+      createdAt: report.createdAt,
+      expiresAt: share.expiresAt,
+      refCode: owner?.referral?.code || null,
+    },
+  }))
+}
+
+// ============================================================================
+// REFERRALS - invite a friend, both get a free report
+// ============================================================================
+
+const REFERRAL_MAX_CREDITS = 10
+
+async function handleGetReferral() {
+  const { userId } = await auth()
+  if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  const database = await connectToMongo()
+  let user = await database.collection('users').findOne({ clerkId: userId })
+  if (!user) {
+    await ensureUserExists(userId, database)
+    user = await database.collection('users').findOne({ clerkId: userId })
+  }
+
+  let code = user?.referral?.code
+  if (!code) {
+    code = uuidv4().replace(/-/g, '').slice(0, 8)
+    await database.collection('users').updateOne(
+      { clerkId: userId },
+      { $set: { 'referral.code': code, 'referral.createdAt': new Date() } }
+    )
+  }
+
+  return handleCORS(NextResponse.json({
+    success: true,
+    code,
+    referredCount: user?.referral?.count || 0,
+    bonusReports: user?.bonusReports || 0,
+    maxCredits: REFERRAL_MAX_CREDITS,
+  }))
+}
+
+// Called on first consent: if the visitor arrived through a referral link
+// (medyra_ref cookie), credit both sides with one extra free report per month.
+async function claimReferralIfPresent(request, userId, database) {
+  try {
+    const cookieHeader = request.headers.get('cookie') || ''
+    const match = cookieHeader.match(/(?:^|;\s*)medyra_ref=([a-f0-9]{8})/)
+    if (!match) return
+    const code = match[1]
+
+    const me = await database.collection('users').findOne({ clerkId: userId })
+    if (!me || me.referredBy || me.referral?.code === code) return
+
+    const referrer = await database.collection('users').findOne({ 'referral.code': code })
+    if (!referrer || referrer.clerkId === userId) return
+
+    await database.collection('users').updateOne(
+      { clerkId: userId },
+      { $set: { referredBy: code }, $inc: { bonusReports: 1 } }
+    )
+    if ((referrer.referral?.count || 0) < REFERRAL_MAX_CREDITS) {
+      await database.collection('users').updateOne(
+        { clerkId: referrer.clerkId },
+        { $inc: { bonusReports: 1, 'referral.count': 1 } }
+      )
+    } else {
+      await database.collection('users').updateOne(
+        { clerkId: referrer.clerkId },
+        { $inc: { 'referral.count': 1 } }
+      )
+    }
+    console.log('🎁 Referral claimed')
+  } catch (err) {
+    console.warn('Referral claim failed:', err.message)
+  }
+}
+
+// ============================================================================
+// RECHECK REMINDERS - "kontrollieren in 3 Monaten" -> email nudge
+// ============================================================================
+
+const REMINDER_PRESETS = { '4w': 28, '3m': 90, '6m': 180 }
+const REMINDER_MAX_ACTIVE = 10
+
+async function sendEmail({ to, subject, html }) {
+  const key = process.env.RESEND_API_KEY
+  if (!key) throw new Error('RESEND_API_KEY not configured')
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from: process.env.EMAIL_FROM || 'Medyra <hello@medyra.de>',
+      to, subject, html,
+    }),
+  })
+  if (!res.ok) {
+    const body = await res.text().catch(() => '')
+    throw new Error(`Email send failed (${res.status}): ${body.slice(0, 200)}`)
+  }
+  return res.json()
+}
+
+function reminderEmailHtml({ label, locale }) {
+  const de = locale === 'de'
+  const title = de ? 'Zeit für Ihre Kontrolluntersuchung' : 'Time for your follow-up check'
+  const body = de
+    ? 'Sie haben sich bei Medyra eine Erinnerung gesetzt. Vereinbaren Sie einen Termin bei Ihrer Ärztin oder Ihrem Arzt und laden Sie den neuen Befund danach einfach wieder hoch, um Ihre Werte zu vergleichen.'
+    : 'You set yourself a reminder on Medyra. Book an appointment with your doctor, and upload the new report afterwards to compare your values over time.'
+  const cta = de ? 'Neuen Befund hochladen' : 'Upload your new report'
+  return `<!doctype html><html><body style="margin:0;padding:0;background:#F3FAF6;font-family:Arial,Helvetica,sans-serif;">
+  <div style="max-width:520px;margin:0 auto;padding:32px 20px;">
+    <div style="background:#040C08;border-radius:16px 16px 0 0;padding:24px 28px;">
+      <span style="color:#10B981;font-size:20px;font-weight:800;">Medyra</span>
+    </div>
+    <div style="background:#ffffff;border-radius:0 0 16px 16px;padding:28px;border:1px solid #E5E7EB;border-top:none;">
+      <h1 style="font-size:19px;color:#0B1F17;margin:0 0 8px;">${title}</h1>
+      ${label ? `<p style="display:inline-block;background:#ECFDF5;color:#047857;border:1px solid #A7F3D0;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:bold;margin:0 0 14px;">${label}</p>` : ''}
+      <p style="font-size:14px;line-height:1.6;color:#4B5563;margin:0 0 22px;">${body}</p>
+      <a href="https://medyra.de/upload" style="display:inline-block;background:#10B981;color:#ffffff;text-decoration:none;font-weight:bold;font-size:14px;padding:12px 24px;border-radius:12px;">${cta}</a>
+      <p style="font-size:11px;color:#9CA3AF;margin:24px 0 0;line-height:1.5;">${de
+        ? 'Diese Erinnerung ist keine medizinische Beratung. Medyra GmbH, medyra.de'
+        : 'This reminder is not medical advice. Medyra, medyra.de'}</p>
+    </div>
+  </div>
+</body></html>`
+}
+
+async function handleCreateReminder(request) {
+  const { userId } = await auth()
+  if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  const body = await request.json()
+  const { preset, reportId, label, locale } = body
+
+  const days = REMINDER_PRESETS[preset]
+  if (!days) return handleCORS(NextResponse.json({ error: 'Invalid reminder preset' }, { status: 400 }))
+
+  const user = await currentUser()
+  const email = user?.emailAddresses?.[0]?.emailAddress
+  if (!email) return handleCORS(NextResponse.json({ error: 'No email address on account' }, { status: 400 }))
+
+  const database = await connectToMongo()
+  const activeCount = await database.collection('reminders').countDocuments({ userId, status: 'scheduled' })
+  if (activeCount >= REMINDER_MAX_ACTIVE) {
+    return handleCORS(NextResponse.json({ error: 'Too many active reminders' }, { status: 429 }))
+  }
+
+  const dueAt = new Date(Date.now() + days * 24 * 60 * 60 * 1000)
+  const reminder = {
+    id: uuidv4(),
+    userId,
+    email,
+    reportId: reportId || null,
+    label: typeof label === 'string' ? label.slice(0, 120) : null,
+    locale: locale === 'de' ? 'de' : 'en',
+    dueAt,
+    status: 'scheduled',
+    createdAt: new Date(),
+  }
+  await database.collection('reminders').insertOne(reminder)
+  return handleCORS(NextResponse.json({ success: true, reminder: { id: reminder.id, dueAt, label: reminder.label } }))
+}
+
+async function handleGetReminders(request) {
+  const { userId } = await auth()
+  if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  const url = new URL(request.url)
+  const reportId = url.searchParams.get('reportId')
+  const query = { userId, status: 'scheduled' }
+  if (reportId) query.reportId = reportId
+  const database = await connectToMongo()
+  const reminders = await database.collection('reminders')
+    .find(query)
+    .project({ _id: 0, id: 1, reportId: 1, label: 1, dueAt: 1 })
+    .sort({ dueAt: 1 })
+    .limit(20)
+    .toArray()
+  return handleCORS(NextResponse.json({ success: true, reminders }))
+}
+
+async function handleDeleteReminder(reminderId) {
+  const { userId } = await auth()
+  if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  const database = await connectToMongo()
+  await database.collection('reminders').updateOne(
+    { id: reminderId, userId },
+    { $set: { status: 'cancelled', cancelledAt: new Date() } }
+  )
+  return handleCORS(NextResponse.json({ success: true }))
+}
+
+// Vercel Cron (daily): send all due reminder emails. Protected by CRON_SECRET.
+async function handleReminderCron(request) {
+  const secret = process.env.CRON_SECRET
+  const authHeader = request.headers.get('authorization')
+  if (!secret || authHeader !== `Bearer ${secret}`) {
+    return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  }
+  const database = await connectToMongo()
+  const due = await database.collection('reminders')
+    .find({ status: 'scheduled', dueAt: { $lte: new Date() } })
+    .limit(100)
+    .toArray()
+
+  let sent = 0, failed = 0
+  for (const r of due) {
+    try {
+      await sendEmail({
+        to: r.email,
+        subject: r.locale === 'de' ? 'Medyra Erinnerung: Kontrolluntersuchung' : 'Medyra reminder: follow-up check',
+        html: reminderEmailHtml({ label: r.label, locale: r.locale }),
+      })
+      await database.collection('reminders').updateOne(
+        { id: r.id },
+        { $set: { status: 'sent', sentAt: new Date() } }
+      )
+      sent++
+    } catch (err) {
+      failed++
+      console.error('Reminder send failed:', r.id, err.message)
+      await database.collection('reminders').updateOne(
+        { id: r.id },
+        { $inc: { attempts: 1 }, $set: { lastError: err.message } }
+      )
+      // After 3 failed daily attempts, stop retrying
+      if ((r.attempts || 0) >= 2) {
+        await database.collection('reminders').updateOne({ id: r.id }, { $set: { status: 'failed' } })
+      }
+    }
+  }
+  return handleCORS(NextResponse.json({ success: true, due: due.length, sent, failed }))
+}
+
+// ============================================================================
 // MAIN ROUTER - uses URL pathname directly, not params
 // ============================================================================
 
@@ -1086,6 +1435,41 @@ async function handleRoute(request) {
     const assignMatch = route.match(/^\/reports\/([^/]+)\/assign$/)
     if (assignMatch && method === 'PATCH') {
       return handleAssignReportToProfile(request, assignMatch[1])
+    }
+
+    // Share links (create / status / revoke) for a report
+    const shareMatch = route.match(/^\/reports\/([^/]+)\/share$/)
+    if (shareMatch && method === 'POST') return handleCreateShare(request, shareMatch[1])
+    if (shareMatch && method === 'GET') return handleGetShareStatus(shareMatch[1])
+    if (shareMatch && method === 'DELETE') return handleRevokeShare(shareMatch[1])
+
+    // PUBLIC: resolve a share token
+    const sharedMatch = route.match(/^\/share\/([^/]+)$/)
+    if (sharedMatch && method === 'GET') {
+      return handleGetSharedReport(sharedMatch[1])
+    }
+
+    // PUBLIC: compact lab-value dataset for the interactive checker
+    if (route === '/werte' && method === 'GET') {
+      const res = NextResponse.json({ success: true, entries: getCheckerEntries() })
+      res.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400')
+      return handleCORS(res)
+    }
+
+    // Referral program
+    if (route === '/referral' && method === 'GET') {
+      return handleGetReferral()
+    }
+
+    // Recheck reminders
+    if (route === '/reminders' && method === 'POST') return handleCreateReminder(request)
+    if (route === '/reminders' && method === 'GET') return handleGetReminders(request)
+    const reminderMatch = route.match(/^\/reminders\/([^/]+)$/)
+    if (reminderMatch && method === 'DELETE') return handleDeleteReminder(reminderMatch[1])
+
+    // Cron: due reminder emails (Vercel Cron, CRON_SECRET protected)
+    if (route === '/cron/reminders' && method === 'GET') {
+      return handleReminderCron(request)
     }
 
     // Re-extract biomarkers for all reports in a profile
@@ -1140,11 +1524,16 @@ async function handleRoute(request) {
       if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
       const body = await request.json()
       const database = await connectToMongo()
+      const existing = await database.collection('users').findOne({ clerkId: userId }, { projection: { consentGiven: 1 } })
       await database.collection('users').updateOne(
         { clerkId: userId },
         { $set: { consentGiven: true, consentDate: new Date(), consentVersion: body.version || '1.0', updatedAt: new Date() } },
         { upsert: true }
       )
+      // First consent = account activation: settle any pending referral
+      if (!existing?.consentGiven) {
+        await claimReferralIfPresent(request, userId, database)
+      }
       return handleCORS(NextResponse.json({ success: true }))
     }
 

@@ -204,7 +204,13 @@
     "progressExtract": "Odczytywanie raportu…",
     "progressAi": "AI analizuje…",
     "progressDone": "Prawie gotowe…",
-    "progressDuration": "Zwykle trwa to 20–40 sekund"
+    "progressDuration": "Zwykle trwa to 20–40 sekund",
+    "docTypeLabel": "Co przesyłasz? (opcjonalnie, pomaga AI)",
+    "docTypeAuto": "Wykryj automatycznie",
+    "docTypeLab": "Wynik laboratoryjny",
+    "docTypeLetter": "List lekarski",
+    "docTypeMedication": "Plan leków",
+    "docTypeInsurance": "List z ubezpieczalni"
   },
   "dashboard": {
     "welcome": "Witaj",
@@ -223,7 +229,15 @@
     "approachingLimit": "Zbliżanie się do limitu",
     "upgradePlan": "Uaktualnij plan",
     "remaining": "Pozostałe",
-    "prepButton": "Przygotuj wizytę lekarską"
+    "prepButton": "Przygotuj wizytę lekarską",
+    "referral": {
+      "title": "Zaproś znajomych",
+      "description": "Udostępnij swój link. Ty i Twój znajomy otrzymacie po 1 dodatkowym darmowym raporcie miesięcznie.",
+      "copy": "Kopiuj",
+      "copied": "Skopiowano",
+      "stats": "Zaproszono: {count}, +{bonus} dodatkowych raportów",
+      "shareText": "Medyra wyjaśnia dokumenty medyczne prostym językiem. Z moim linkiem oboje dostaniemy dodatkowy darmowy raport:"
+    }
   },
   "report": {
     "disclaimer": "Zastrzeżenie medyczne",
@@ -269,7 +283,34 @@
     "chatLimitReached": "Limit pytań dla tego raportu osiągnięty",
     "chatLimitInfo": "Darmowy: 5 pytań/raport · Jednorazowy: 15 · Personal/Family: nieograniczony",
     "chatUpgrade": "Uaktualnij dla nieograniczonego czatu",
-    "chatPlaceholder": "Zadaj pytanie o swoje wyniki…"
+    "chatPlaceholder": "Zadaj pytanie o swoje wyniki…",
+    "share": {
+      "button": "Udostępnij",
+      "title": "Udostępnij to wyjaśnienie",
+      "description": "Link tylko do odczytu dla rodziny, opiekunów lub lekarza.",
+      "point1": "Pokazuje tylko wyjaśnienie, nigdy Twój plik ani czat",
+      "point2": "Wygasa automatycznie po 7 dniach",
+      "point3": "Link możesz odwołać w każdej chwili",
+      "create": "Utwórz link",
+      "copy": "Kopiuj",
+      "copied": "Skopiowano",
+      "expires": "Ważny do {date}",
+      "privacyNote": "Każdy, kto ma ten link, może zobaczyć wyjaśnienie. Udostępniaj go tylko zaufanym osobom.",
+      "revoke": "Odwołaj link",
+      "revoked": "Link odwołany"
+    },
+    "reminder": {
+      "title": "Ustaw przypomnienie o kontroli",
+      "description": "Wyślemy Ci e-mail, gdy przyjdzie czas na ponowne badanie, abyś mógł porównać stare i nowe wartości.",
+      "in4w": "Za 4 tygodnie",
+      "in3m": "Za 3 miesiące",
+      "in6m": "Za 6 miesięcy",
+      "created": "Przypomnienie ustawione",
+      "activeTitle": "Przypomnienie aktywne",
+      "activeDesc": "Napiszemy do Ciebie {date}.",
+      "cancel": "Anuluj przypomnienie",
+      "cancelled": "Przypomnienie anulowane"
+    }
   },
   "common": {
     "loading": "Ładowanie...",
@@ -597,5 +638,38 @@
     "iosStep3": "Wybierz Do ekranu początkowego",
     "iosNote": "To samo konto, te same raporty, wszystkie funkcje.",
     "storesNote": "Medyra pojawi się w App Store i Google Play. Do tego czasu ta strona jest oficjalnym sposobem na pobranie aplikacji."
+  },
+  "valueChecker": {
+    "badge": "Darmowe natychmiastowe sprawdzenie",
+    "title": "Czy Twój wynik jest",
+    "titleHighlight": "w normie?",
+    "subtitle": "Wybierz parametr, wpisz liczbę i od razu zobacz, jak wypada na tle zakresu referencyjnego. Za darmo, bez rejestracji.",
+    "cardLabel": "Sprawdzanie wyniku na żywo",
+    "noSignup": "Bez rejestracji",
+    "fullToolLink": "Otwórz pełne narzędzie sprawdzania wyników",
+    "searchPlaceholder": "Szukaj parametru, np. TSH, Ferritin",
+    "valuePlaceholder": "Twoja wartość, np. 5,2",
+    "noResults": "Nie znaleziono parametru",
+    "popular": "Popularne:",
+    "status": {
+      "low": "Poniżej normy",
+      "normal": "W normie",
+      "elevated": "Powyżej normy",
+      "high": "Znacznie powyżej normy"
+    },
+    "normalRange": "Zakres normy",
+    "causesElevated": "Częste przyczyny podwyższonych wartości",
+    "causesLow": "Częste przyczyny obniżonych wartości",
+    "learnMore": "Więcej o {value}",
+    "uploadCta": "Wyjaśnij cały mój wynik",
+    "enterValue": "Wpisz swoją wartość {value} w {unit}, aby zobaczyć wynik.",
+    "disclaimer": "Informacje ogólne oparte na standardowych zakresach referencyjnych dla dorosłych. Twoje laboratorium może stosować inne zakresy; obowiązuje zakres z Twojego wyniku. To nie jest porada medyczna."
+  },
+  "languagesSection": {
+    "badge": "17 języków",
+    "title": "Twój niemiecki wynik,",
+    "titleHighlight": "w Twoim języku",
+    "subtitle": "Medyra wyjaśnia niemieckie dokumenty medyczne w 17 językach, łącznie z czatem.",
+    "cta": "Zobacz wszystkie języki"
   }
 }

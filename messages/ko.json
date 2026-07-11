@@ -204,7 +204,13 @@
     "progressExtract": "보고서 읽는 중…",
     "progressAi": "AI 분석 중…",
     "progressDone": "거의 완료…",
-    "progressDuration": "보통 20~40초가 소요됩니다"
+    "progressDuration": "보통 20~40초가 소요됩니다",
+    "docTypeLabel": "무엇을 업로드하시나요? (선택, AI 정확도 향상)",
+    "docTypeAuto": "자동 인식",
+    "docTypeLab": "검사 결과지",
+    "docTypeLetter": "의사 소견서",
+    "docTypeMedication": "복약 계획",
+    "docTypeInsurance": "보험 서류"
   },
   "dashboard": {
     "welcome": "환영합니다",
@@ -223,7 +229,15 @@
     "approachingLimit": "한도에 접근 중",
     "upgradePlan": "플랜 업그레이드",
     "remaining": "남은",
-    "prepButton": "의사 방문 준비"
+    "prepButton": "의사 방문 준비",
+    "referral": {
+      "title": "친구 초대",
+      "description": "링크를 공유하세요. 나와 친구 모두 매달 무료 분석 1회를 추가로 받습니다.",
+      "copy": "복사",
+      "copied": "복사됨",
+      "stats": "{count}명 초대, +{bonus} 보너스 분석",
+      "shareText": "Medyra는 의료 문서를 쉬운 말로 설명해 줍니다. 제 링크로 가입하면 둘 다 무료 분석을 하나 더 받아요:"
+    }
   },
   "report": {
     "disclaimer": "의료 면책 조항",
@@ -269,7 +283,34 @@
     "chatLimitReached": "이 보고서의 질문 한도에 도달했습니다",
     "chatLimitInfo": "무료: 보고서당 5문항 · 1회용: 15문항 · Personal/Family: 무제한",
     "chatUpgrade": "무제한 채팅으로 업그레이드",
-    "chatPlaceholder": "결과에 대해 질문하세요…"
+    "chatPlaceholder": "결과에 대해 질문하세요…",
+    "share": {
+      "button": "공유",
+      "title": "이 설명 공유하기",
+      "description": "가족, 보호자 또는 담당 의사를 위한 읽기 전용 링크입니다.",
+      "point1": "설명만 표시되며 파일이나 채팅은 절대 표시되지 않습니다",
+      "point2": "7일 후 자동으로 만료됩니다",
+      "point3": "언제든지 링크를 취소할 수 있습니다",
+      "create": "공유 링크 만들기",
+      "copy": "복사",
+      "copied": "복사됨",
+      "expires": "{date}까지 유효",
+      "privacyNote": "이 링크가 있는 누구나 설명을 볼 수 있습니다. 신뢰하는 사람에게만 공유하세요.",
+      "revoke": "링크 취소",
+      "revoked": "링크가 취소되었습니다"
+    },
+    "reminder": {
+      "title": "재검사 알림 설정",
+      "description": "재검사 시기가 되면 이메일로 알려드립니다. 이전 수치와 새 수치를 비교해 보세요.",
+      "in4w": "4주 후",
+      "in3m": "3개월 후",
+      "in6m": "6개월 후",
+      "created": "알림이 설정되었습니다",
+      "activeTitle": "재검사 알림 활성화됨",
+      "activeDesc": "{date}에 이메일을 보내드립니다.",
+      "cancel": "알림 취소",
+      "cancelled": "알림이 취소되었습니다"
+    }
   },
   "common": {
     "loading": "로딩 중...",
@@ -597,5 +638,38 @@
     "iosStep3": "홈 화면에 추가 선택",
     "iosNote": "같은 계정, 같은 리포트, 모든 기능.",
     "storesNote": "Medyra는 곧 App Store와 Google Play에 출시됩니다. 그때까지 이 페이지가 앱을 받는 공식 경로입니다."
+  },
+  "valueChecker": {
+    "badge": "무료 즉시 확인",
+    "title": "내 검사 수치는",
+    "titleHighlight": "정상일까요?",
+    "subtitle": "항목을 선택하고 숫자를 입력하면 참고 범위와의 비교 결과를 바로 확인할 수 있습니다. 무료, 가입 불필요.",
+    "cardLabel": "실시간 수치 확인",
+    "noSignup": "가입 불필요",
+    "fullToolLink": "전체 검사 수치 확인 도구 열기",
+    "searchPlaceholder": "항목 검색 (예: TSH, Ferritin)",
+    "valuePlaceholder": "내 수치 (예: 5.2)",
+    "noResults": "일치하는 항목이 없습니다",
+    "popular": "인기:",
+    "status": {
+      "low": "정상 범위보다 낮음",
+      "normal": "정상 범위 내",
+      "elevated": "정상 범위보다 높음",
+      "high": "정상 범위를 크게 초과"
+    },
+    "normalRange": "정상 범위",
+    "causesElevated": "수치가 높은 흔한 원인",
+    "causesLow": "수치가 낮은 흔한 원인",
+    "learnMore": "{value} 더 알아보기",
+    "uploadCta": "전체 검사 결과 해석 받기",
+    "enterValue": "{value} 수치를 {unit} 단위로 입력하면 결과가 표시됩니다.",
+    "disclaimer": "성인 표준 참고 범위에 기반한 일반 정보입니다. 검사 기관마다 범위가 다를 수 있으며, 결과지에 표시된 범위가 우선합니다. 의료 조언이 아닙니다."
+  },
+  "languagesSection": {
+    "badge": "17개 언어",
+    "title": "독일 검사 결과를,",
+    "titleHighlight": "내 언어로",
+    "subtitle": "Medyra는 질문 채팅을 포함해 독일 의료 문서를 17개 언어로 설명합니다.",
+    "cta": "모든 언어 보기"
   }
 }

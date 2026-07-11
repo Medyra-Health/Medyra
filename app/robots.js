@@ -8,6 +8,7 @@ export default function robots() {
           '/dashboard',
           '/upload',
           '/reports/',
+          '/share/',
           '/api/',
           '/success',
           '/admin',

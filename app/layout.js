@@ -7,6 +7,7 @@ import { Toaster } from 'sonner'
 import MobileNav from '@/components/MobileNav'
 import CookieBanner from '@/components/CookieBanner'
 import SiteFooter from '@/components/SiteFooter'
+import ReferralCapture from '@/components/ReferralCapture'
 
 const inter = Inter({ subsets: ['latin'] })
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-playfair' })
@@ -173,6 +174,7 @@ export default async function RootLayout({ children }) {
         </head>
         <body className="md:pb-0" style={{ paddingBottom: 'calc(4rem + env(safe-area-inset-bottom, 0px))' }}>
           <NextIntlClientProvider locale={locale} messages={messages}>
+            <ReferralCapture />
             {children}
             <SiteFooter />
             <MobileNav />

@@ -204,7 +204,13 @@
     "progressExtract": "正在读取报告…",
     "progressAi": "AI 分析中…",
     "progressDone": "即将完成…",
-    "progressDuration": "通常需要 20 至 40 秒"
+    "progressDuration": "通常需要 20 至 40 秒",
+    "docTypeLabel": "您上传的是什么？（可选，帮助 AI 更准确）",
+    "docTypeAuto": "自动识别",
+    "docTypeLab": "化验报告",
+    "docTypeLetter": "医生信函",
+    "docTypeMedication": "用药计划",
+    "docTypeInsurance": "保险信函"
   },
   "dashboard": {
     "welcome": "欢迎",
@@ -223,7 +229,15 @@
     "approachingLimit": "接近限制",
     "upgradePlan": "升级计划",
     "remaining": "剩余",
-    "prepButton": "准备就医"
+    "prepButton": "准备就医",
+    "referral": {
+      "title": "邀请朋友",
+      "description": "分享您的链接。您和朋友每月各获得 1 份额外免费报告。",
+      "copy": "复制",
+      "copied": "已复制",
+      "stats": "已邀请 {count} 人，+{bonus} 份奖励报告",
+      "shareText": "Medyra 用通俗语言解读医疗报告。通过我的链接，我们都能获得一份额外免费报告："
+    }
   },
   "report": {
     "disclaimer": "医疗免责声明",
@@ -269,7 +283,34 @@
     "chatLimitReached": "此报告的提问限额已达上限",
     "chatLimitInfo": "免费：5个问题/报告 · 一次性：15个 · Personal/Family：无限",
     "chatUpgrade": "升级以获得无限聊天",
-    "chatPlaceholder": "询问您的结果…"
+    "chatPlaceholder": "询问您的结果…",
+    "share": {
+      "button": "分享",
+      "title": "分享此解读",
+      "description": "供家人、照护者或医生查看的只读链接。",
+      "point1": "仅显示解读内容，绝不显示您的文件或聊天记录",
+      "point2": "7 天后自动失效",
+      "point3": "您可以随时撤销链接",
+      "create": "创建分享链接",
+      "copy": "复制",
+      "copied": "已复制",
+      "expires": "有效期至 {date}",
+      "privacyNote": "任何拥有此链接的人都能查看解读内容。请只分享给您信任的人。",
+      "revoke": "撤销链接",
+      "revoked": "链接已撤销"
+    },
+    "reminder": {
+      "title": "设置复查提醒",
+      "description": "到了复查时间我们会发邮件提醒您，方便您对比新旧数值。",
+      "in4w": "4 周后",
+      "in3m": "3 个月后",
+      "in6m": "6 个月后",
+      "created": "提醒已设置",
+      "activeTitle": "复查提醒已开启",
+      "activeDesc": "我们将在 {date} 给您发邮件。",
+      "cancel": "取消提醒",
+      "cancelled": "提醒已取消"
+    }
   },
   "common": {
     "loading": "加载中...",
@@ -597,5 +638,38 @@
     "iosStep3": "选择添加到主屏幕",
     "iosNote": "同一账户，同样的报告，全部功能。",
     "storesNote": "Medyra 即将上架 App Store 和 Google Play。在此之前，本页面是获取应用的官方途径。"
+  },
+  "valueChecker": {
+    "badge": "免费即时检查",
+    "title": "您的化验值",
+    "titleHighlight": "正常吗？",
+    "subtitle": "选择指标，输入数值，立即查看它与参考范围的对比。免费，无需注册。",
+    "cardLabel": "实时数值检查",
+    "noSignup": "无需注册",
+    "fullToolLink": "打开完整的化验值检查工具",
+    "searchPlaceholder": "搜索指标，如 TSH、Ferritin",
+    "valuePlaceholder": "您的数值，如 5.2",
+    "noResults": "未找到匹配的指标",
+    "popular": "热门：",
+    "status": {
+      "low": "低于正常范围",
+      "normal": "在正常范围内",
+      "elevated": "高于正常范围",
+      "high": "远高于正常范围"
+    },
+    "normalRange": "正常范围",
+    "causesElevated": "数值偏高的常见原因",
+    "causesLow": "数值偏低的常见原因",
+    "learnMore": "了解更多关于 {value}",
+    "uploadCta": "解读我的完整报告",
+    "enterValue": "输入您的 {value} 数值（单位 {unit}）查看结果。",
+    "disclaimer": "基于成人标准参考范围的一般信息。您的实验室可能使用不同范围，以您报告上的范围为准。这不是医疗建议。"
+  },
+  "languagesSection": {
+    "badge": "17 种语言",
+    "title": "您的德国报告，",
+    "titleHighlight": "用您的语言解读",
+    "subtitle": "Medyra 用 17 种语言解读德国医疗文件，包括问答聊天。",
+    "cta": "查看所有语言"
   }
 }

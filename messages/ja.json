@@ -204,7 +204,13 @@
     "progressExtract": "レポートを読み取り中…",
     "progressAi": "AI が解析中…",
     "progressDone": "もうすぐ完了…",
-    "progressDuration": "通常 20〜40 秒かかります"
+    "progressDuration": "通常 20〜40 秒かかります",
+    "docTypeLabel": "何をアップロードしますか？（任意・AIの精度が上がります）",
+    "docTypeAuto": "自動判別",
+    "docTypeLab": "検査報告書",
+    "docTypeLetter": "医師の手紙",
+    "docTypeMedication": "服薬計画",
+    "docTypeInsurance": "保険の書類"
   },
   "dashboard": {
     "welcome": "ようこそ",
@@ -223,7 +229,15 @@
     "approachingLimit": "制限に近づいています",
     "upgradePlan": "プランをアップグレード",
     "remaining": "残り",
-    "prepButton": "診察の準備"
+    "prepButton": "診察の準備",
+    "referral": {
+      "title": "友達を招待",
+      "description": "リンクを共有すると、あなたと友達それぞれに毎月1件の無料解析が追加されます。",
+      "copy": "コピー",
+      "copied": "コピーしました",
+      "stats": "{count} 人を招待、+{bonus} 件のボーナス",
+      "shareText": "Medyraは医療文書を分かりやすい言葉で解説します。私のリンクから登録すると、2人とも無料解析が1件増えます："
+    }
   },
   "report": {
     "disclaimer": "医療免責事項",
@@ -269,7 +283,34 @@
     "chatLimitReached": "このレポートの質問上限に達しました",
     "chatLimitInfo": "無料：5問/レポート · 単回：15問 · Personal/Family：無制限",
     "chatUpgrade": "無制限チャットにアップグレード",
-    "chatPlaceholder": "結果について質問してください…"
+    "chatPlaceholder": "結果について質問してください…",
+    "share": {
+      "button": "共有",
+      "title": "この解説を共有",
+      "description": "家族・介護者・主治医向けの閲覧専用リンクです。",
+      "point1": "解説のみを表示し、ファイルやチャットは表示されません",
+      "point2": "7日後に自動的に無効になります",
+      "point3": "リンクはいつでも取り消せます",
+      "create": "共有リンクを作成",
+      "copy": "コピー",
+      "copied": "コピーしました",
+      "expires": "{date} まで有効",
+      "privacyNote": "このリンクを知っている人は誰でも解説を閲覧できます。信頼できる人にのみ共有してください。",
+      "revoke": "リンクを取り消す",
+      "revoked": "リンクを取り消しました"
+    },
+    "reminder": {
+      "title": "再検査リマインダーを設定",
+      "description": "再検査の時期になったらメールでお知らせします。新旧の数値を比較できます。",
+      "in4w": "4週間後",
+      "in3m": "3か月後",
+      "in6m": "6か月後",
+      "created": "リマインダーを設定しました",
+      "activeTitle": "再検査リマインダー設定中",
+      "activeDesc": "{date} にメールでお知らせします。",
+      "cancel": "リマインダーを解除",
+      "cancelled": "リマインダーを解除しました"
+    }
   },
   "common": {
     "loading": "読み込み中...",
@@ -597,5 +638,38 @@
     "iosStep3": "ホーム画面に追加を選択",
     "iosNote": "同じアカウント、同じレポート、すべての機能。",
     "storesNote": "MedyraはApp StoreとGoogle Playに近日登場予定です。それまでは、このページがアプリを入手する公式の方法です。"
+  },
+  "valueChecker": {
+    "badge": "無料で今すぐチェック",
+    "title": "あなたの検査値は",
+    "titleHighlight": "正常ですか？",
+    "subtitle": "項目を選んで数値を入力するだけで、基準範囲との比較がすぐに分かります。無料・登録不要。",
+    "cardLabel": "ライブ数値チェック",
+    "noSignup": "登録不要",
+    "fullToolLink": "検査値チェッカーの完全版を開く",
+    "searchPlaceholder": "項目を検索（例: TSH、Ferritin）",
+    "valuePlaceholder": "あなたの数値（例: 5.2）",
+    "noResults": "該当する項目が見つかりません",
+    "popular": "人気:",
+    "status": {
+      "low": "基準範囲より低い",
+      "normal": "基準範囲内",
+      "elevated": "基準範囲より高い",
+      "high": "基準範囲を大きく超えている"
+    },
+    "normalRange": "基準範囲",
+    "causesElevated": "高値のよくある原因",
+    "causesLow": "低値のよくある原因",
+    "learnMore": "{value} について詳しく",
+    "uploadCta": "検査結果全体を解説してもらう",
+    "enterValue": "{value} の数値を {unit} で入力すると結果が表示されます。",
+    "disclaimer": "成人の標準基準範囲に基づく一般情報です。検査機関により範囲が異なる場合があり、お手元の結果票の範囲が優先されます。医療アドバイスではありません。"
+  },
+  "languagesSection": {
+    "badge": "17言語",
+    "title": "ドイツの検査結果を、",
+    "titleHighlight": "あなたの言語で",
+    "subtitle": "Medyraはドイツの医療文書を質問チャットも含めて17言語で解説します。",
+    "cta": "すべての言語を見る"
   }
 }

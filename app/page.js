@@ -12,6 +12,8 @@ import { usePathname } from 'next/navigation'
 import JsonLd from '@/components/JsonLd'
 import MedyraLogo from '@/components/MedyraLogo'
 import HeroSection from '@/components/landing/HeroSection'
+import ValueCheckerSection from '@/components/landing/ValueCheckerSection'
+import LanguagesSection from '@/components/landing/LanguagesSection'
 
 const LANGUAGES = [
   { code: 'DE', name: 'Deutsch' },
@@ -584,6 +586,9 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ── LIVE VALUE CHECKER ── */}
+      <ValueCheckerSection />
+
       {/* ── CAMPAIGNS ── */}
       <CampaignSection />
 
@@ -908,6 +913,9 @@ export default function LandingPage() {
 
       {/* ── NEW TO GERMANY ── */}
       <NewToGermanySection />
+
+      {/* ── 17+ LANGUAGES ── */}
+      <LanguagesSection />
 
       {/* ── ENCRYPTION / SECURITY ── */}
       <section className="py-20 md:py-28 bg-[#F3FAF6] overflow-hidden">

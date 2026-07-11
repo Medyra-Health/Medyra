@@ -204,7 +204,13 @@
     "progressExtract": "Raporunuz okunuyor…",
     "progressAi": "YZ analiz ediyor…",
     "progressDone": "Neredeyse hazır…",
-    "progressDuration": "Bu genellikle 20-40 saniye sürer"
+    "progressDuration": "Bu genellikle 20-40 saniye sürer",
+    "docTypeLabel": "Ne yüklüyorsunuz? (isteğe bağlı, yapay zekaya yardımcı olur)",
+    "docTypeAuto": "Otomatik algıla",
+    "docTypeLab": "Laboratuvar raporu",
+    "docTypeLetter": "Doktor mektubu",
+    "docTypeMedication": "İlaç planı",
+    "docTypeInsurance": "Sigorta mektubu"
   },
   "dashboard": {
     "welcome": "Hoş geldiniz",
@@ -223,7 +229,15 @@
     "approachingLimit": "Limite yaklaşıyor",
     "upgradePlan": "Planı yükselt",
     "remaining": "Kalan",
-    "prepButton": "Doktor ziyaretini hazırla"
+    "prepButton": "Doktor ziyaretini hazırla",
+    "referral": {
+      "title": "Arkadaşlarınızı davet edin",
+      "description": "Bağlantınızı paylaşın. Siz ve arkadaşınız ayda 1 ek ücretsiz rapor kazanırsınız.",
+      "copy": "Kopyala",
+      "copied": "Kopyalandı",
+      "stats": "{count} davet edildi, +{bonus} bonus rapor",
+      "shareText": "Medyra tıbbi raporları anlaşılır bir dille açıklıyor. Bağlantımla ikimiz de ekstra ücretsiz rapor kazanırız:"
+    }
   },
   "report": {
     "disclaimer": "Tıbbi sorumluluk reddi",
@@ -269,7 +283,34 @@
     "chatLimitReached": "Bu rapor için soru limiti doldu",
     "chatLimitInfo": "Ücretsiz: 5 soru/rapor · Tek seferlik: 15 · Personal/Family: sınırsız",
     "chatUpgrade": "Sınırsız sohbet için yükseltin",
-    "chatPlaceholder": "Sonuçlarınız hakkında soru sorun…"
+    "chatPlaceholder": "Sonuçlarınız hakkında soru sorun…",
+    "share": {
+      "button": "Paylaş",
+      "title": "Bu açıklamayı paylaş",
+      "description": "Aile, bakıcılar veya doktorunuz için salt okunur bağlantı.",
+      "point1": "Yalnızca açıklamayı gösterir, dosyanızı veya sohbetinizi asla göstermez",
+      "point2": "7 gün sonra otomatik olarak sona erer",
+      "point3": "Bağlantıyı istediğiniz zaman iptal edebilirsiniz",
+      "create": "Paylaşım bağlantısı oluştur",
+      "copy": "Kopyala",
+      "copied": "Kopyalandı",
+      "expires": "{date} tarihine kadar geçerli",
+      "privacyNote": "Bu bağlantıya sahip herkes açıklamayı görebilir. Yalnızca güvendiğiniz kişilerle paylaşın.",
+      "revoke": "Bağlantıyı iptal et",
+      "revoked": "Bağlantı iptal edildi"
+    },
+    "reminder": {
+      "title": "Kontrol hatırlatıcısı kur",
+      "description": "Değerlerinizi tekrar kontrol etme zamanı geldiğinde size e-posta göndeririz; eski ve yeni değerleri karşılaştırabilirsiniz.",
+      "in4w": "4 hafta sonra",
+      "in3m": "3 ay sonra",
+      "in6m": "6 ay sonra",
+      "created": "Hatırlatıcı kuruldu",
+      "activeTitle": "Kontrol hatırlatıcısı aktif",
+      "activeDesc": "{date} tarihinde size e-posta göndereceğiz.",
+      "cancel": "Hatırlatıcıyı iptal et",
+      "cancelled": "Hatırlatıcı iptal edildi"
+    }
   },
   "common": {
     "loading": "Yükleniyor...",
@@ -597,5 +638,38 @@
     "iosStep3": "Ana Ekrana Ekle'yi seçin",
     "iosNote": "Aynı hesap, aynı raporlar, tüm özellikler.",
     "storesNote": "Medyra yakında App Store ve Google Play'de. O zamana kadar uygulamayı edinmenin resmi yolu bu sayfadır."
+  },
+  "valueChecker": {
+    "badge": "Ücretsiz anında kontrol",
+    "title": "Laboratuvar değeriniz",
+    "titleHighlight": "normal mi?",
+    "subtitle": "Bir değer seçin, sayınızı yazın ve referans aralığına göre durumunu anında görün. Ücretsiz, kayıt gerekmez.",
+    "cardLabel": "Canlı değer kontrolü",
+    "noSignup": "Kayıt gerekmez",
+    "fullToolLink": "Tam laboratuvar değeri kontrolünü aç",
+    "searchPlaceholder": "Değer arayın, örn. TSH, Ferritin",
+    "valuePlaceholder": "Değeriniz, örn. 5,2",
+    "noResults": "Eşleşen değer bulunamadı",
+    "popular": "Popüler:",
+    "status": {
+      "low": "Normal aralığın altında",
+      "normal": "Normal aralıkta",
+      "elevated": "Normal aralığın üzerinde",
+      "high": "Normal aralığın çok üzerinde"
+    },
+    "normalRange": "Normal aralık",
+    "causesElevated": "Yüksek değerlerin yaygın nedenleri",
+    "causesLow": "Düşük değerlerin yaygın nedenleri",
+    "learnMore": "{value} hakkında daha fazla",
+    "uploadCta": "Tüm raporumu açıkla",
+    "enterValue": "{value} değerinizi {unit} olarak girin ve durumunu görün.",
+    "disclaimer": "Yetişkinler için standart referans aralıklarına dayalı genel bilgidir. Laboratuvarınız farklı aralıklar kullanabilir; raporunuzdaki aralık geçerlidir. Tıbbi tavsiye değildir."
+  },
+  "languagesSection": {
+    "badge": "17 dil",
+    "title": "Almanca raporunuz,",
+    "titleHighlight": "kendi dilinizde",
+    "subtitle": "Medyra, Almanca tıbbi belgeleri soru-cevap sohbeti dahil 17 dilde açıklar.",
+    "cta": "Tüm dilleri gör"
   }
 }

@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { useDropzone } from 'react-dropzone'
 import { FileText, Image, File, AlertCircle, CheckCircle, Loader2, ArrowLeft, Shield, Clock, Lock, ChevronRight } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { toast } from 'sonner'
 import MedyraLogo from '@/components/MedyraLogo'
@@ -71,10 +71,20 @@ const PROGRESS_STEPS = [
   { key: 'done', tKey: 'upload.progressDone' },
 ]
 
+const DOC_TYPES = [
+  { id: 'auto', icon: '✨', tKey: 'upload.docTypeAuto' },
+  { id: 'lab', icon: '🧪', tKey: 'upload.docTypeLab' },
+  { id: 'letter', icon: '📋', tKey: 'upload.docTypeLetter' },
+  { id: 'medication', icon: '💊', tKey: 'upload.docTypeMedication' },
+  { id: 'insurance', icon: '🏥', tKey: 'upload.docTypeInsurance' },
+]
+
 export default function UploadPage() {
   const { isLoaded } = useUser()
   const router = useRouter()
   const t = useTranslations()
+  const locale = useLocale()
+  const [docType, setDocType] = useState('auto')
   const [uploading, setUploading] = useState(false)
   const [progressStep, setProgressStep] = useState(0)
   const [sizeError, setSizeError] = useState(false)
@@ -83,6 +93,12 @@ export default function UploadPage() {
   const [isDragOver, setIsDragOver] = useState(false)
   const [profiles, setProfiles] = useState([])
   const [selectedProfile, setSelectedProfile] = useState(null)
+
+  useEffect(() => {
+    // Preselect document type when arriving from a feature page (?type=letter|medication|lab|insurance)
+    const wanted = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('type') : null
+    if (wanted && DOC_TYPES.some(d => d.id === wanted)) setDocType(wanted)
+  }, [])
 
   useEffect(() => {
     if (!isLoaded) return
@@ -130,6 +146,8 @@ export default function UploadPage() {
       const formData = new FormData()
       formData.append('file', file)
       if (selectedProfile) formData.append('profileId', selectedProfile)
+      if (docType !== 'auto') formData.append('docType', docType)
+      formData.append('language', locale)
       const response = await fetch('/api/reports/analyze', { method: 'POST', body: formData })
 
       if (!response.ok) {
@@ -171,7 +189,7 @@ export default function UploadPage() {
       setPendingFile(file)
       setConsentStatus('needed')
     }
-  }, [consentStatus, selectedProfile])
+  }, [consentStatus, selectedProfile, docType])
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
@@ -273,6 +291,31 @@ export default function UploadPage() {
             </div>
           </div>
         )}
+
+        {/* Document type — hint for the AI so classification matches intent */}
+        <div className="bg-white border border-gray-200 rounded-2xl p-4 mb-5 shadow-sm">
+          <p className="text-xs font-semibold text-gray-500 mb-2.5">{t('upload.docTypeLabel')}</p>
+          <div className="flex flex-wrap gap-2">
+            {DOC_TYPES.map(d => {
+              const active = docType === d.id
+              return (
+                <button
+                  key={d.id}
+                  type="button"
+                  onClick={() => setDocType(d.id)}
+                  className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border text-xs font-semibold transition-all ${
+                    active
+                      ? 'bg-emerald-500 border-emerald-500 text-white shadow-sm'
+                      : 'bg-gray-50 border-gray-200 text-gray-600 hover:border-emerald-300 hover:text-emerald-700'
+                  }`}
+                >
+                  <span>{d.icon}</span>
+                  {t(d.tKey)}
+                </button>
+              )
+            })}
+          </div>
+        </div>
 
         {/* Profile selector — values flow into this profile's health trends automatically */}
         {profiles.length > 0 && (

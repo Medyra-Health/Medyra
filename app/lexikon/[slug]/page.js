@@ -12,6 +12,8 @@ import RelatedValues from '@/components/lexikon/RelatedValues'
 import JsonLd from '@/components/lexikon/JsonLd'
 import MedicalDisclaimer from '@/components/lexikon/MedicalDisclaimer'
 import LexikonAutoRedirect from '@/components/lexikon/LexikonAutoRedirect'
+import ValueChecker from '@/components/werte/ValueChecker'
+import { toCompactEntry } from '@/lib/werte'
 
 // Per-category accent colours (light theme)
 const CATEGORY_COLORS = {
@@ -103,6 +105,17 @@ export default async function LexikonEntryPage({ params }) {
 
         <FeaturedSnippet text={entry.shortAnswer} accent={cat.accent} lang="de" />
         {entry.ranges && <RangeTable ranges={entry.ranges} unit={entry.unit} lang="de" />}
+
+        {/* Interactive: check your own value against the reference ranges */}
+        {entry.ranges?.normal && (
+          <div className="my-8">
+            <h2 className="text-lg font-bold text-gray-900 mb-1 flex items-center gap-2">
+              <span className="text-xl">🧮</span> Eigenen {entry.acronym}-Wert prüfen
+            </h2>
+            <p className="text-xs text-gray-400 mb-4">Direkt im Browser, ohne Anmeldung, nichts wird gespeichert.</p>
+            <ValueChecker entries={[toCompactEntry(entry)].filter(Boolean)} preselect={entry.slug} tone="light" compact />
+          </div>
+        )}
         <CausesSection causesElevated={entry.causesElevated} causesLow={entry.causesLow} lang="de" />
 
         {entry.doctorQuestions?.length > 0 && (

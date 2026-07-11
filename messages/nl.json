@@ -206,7 +206,13 @@
     "progressExtract": "Rapport lezen…",
     "progressAi": "AI analyseert…",
     "progressDone": "Bijna klaar…",
-    "progressDuration": "Dit duurt gewoonlijk 20 tot 40 seconden"
+    "progressDuration": "Dit duurt gewoonlijk 20 tot 40 seconden",
+    "docTypeLabel": "Wat uploadt u? (optioneel, helpt de AI)",
+    "docTypeAuto": "Automatisch herkennen",
+    "docTypeLab": "Labuitslag",
+    "docTypeLetter": "Artsenbrief",
+    "docTypeMedication": "Medicatieplan",
+    "docTypeInsurance": "Verzekeringsbrief"
   },
   "dashboard": {
     "welcome": "Welkom",
@@ -225,7 +231,15 @@
     "approachingLimit": "Nadert limiet",
     "upgradePlan": "Abonnement upgraden",
     "remaining": "Resterend",
-    "prepButton": "Doktersbezoek voorbereiden"
+    "prepButton": "Doktersbezoek voorbereiden",
+    "referral": {
+      "title": "Vrienden uitnodigen",
+      "description": "Deel uw link. U en uw vriend krijgen elk 1 extra gratis rapport per maand.",
+      "copy": "Kopiëren",
+      "copied": "Gekopieerd",
+      "stats": "{count} uitgenodigd, +{bonus} bonusrapporten",
+      "shareText": "Medyra legt medische uitslagen uit in gewone taal. Met mijn link krijgen we allebei een extra gratis rapport:"
+    }
   },
   "report": {
     "disclaimer": "Medische disclaimer",
@@ -271,7 +285,34 @@
     "chatLimitReached": "Vraaglimiet bereikt voor dit rapport",
     "chatLimitInfo": "Gratis: 5 vragen/rapport · Eenmalig: 15 · Personal/Family: onbeperkt",
     "chatUpgrade": "Upgraden voor onbeperkte chat",
-    "chatPlaceholder": "Stel een vraag over uw resultaten…"
+    "chatPlaceholder": "Stel een vraag over uw resultaten…",
+    "share": {
+      "button": "Delen",
+      "title": "Deze uitleg delen",
+      "description": "Alleen-lezen link voor familie, mantelzorgers of uw arts.",
+      "point1": "Toont alleen de uitleg, nooit uw bestand of chat",
+      "point2": "Verloopt automatisch na 7 dagen",
+      "point3": "U kunt de link op elk moment intrekken",
+      "create": "Deellink maken",
+      "copy": "Kopiëren",
+      "copied": "Gekopieerd",
+      "expires": "Geldig tot {date}",
+      "privacyNote": "Iedereen met deze link kan de uitleg bekijken. Deel hem alleen met mensen die u vertrouwt.",
+      "revoke": "Link intrekken",
+      "revoked": "Link ingetrokken"
+    },
+    "reminder": {
+      "title": "Controleherinnering instellen",
+      "description": "We mailen u wanneer het tijd is om uw waarden opnieuw te laten controleren, zodat u oud en nieuw kunt vergelijken.",
+      "in4w": "Over 4 weken",
+      "in3m": "Over 3 maanden",
+      "in6m": "Over 6 maanden",
+      "created": "Herinnering ingesteld",
+      "activeTitle": "Controleherinnering actief",
+      "activeDesc": "We mailen u op {date}.",
+      "cancel": "Herinnering annuleren",
+      "cancelled": "Herinnering geannuleerd"
+    }
   },
   "common": {
     "loading": "Laden...",
@@ -599,5 +640,38 @@
     "iosStep3": "Kies Zet op beginscherm",
     "iosNote": "Zelfde account, zelfde rapporten, alle functies.",
     "storesNote": "Medyra komt naar de App Store en Google Play. Tot die tijd is deze pagina de officiële manier om de app te krijgen."
+  },
+  "valueChecker": {
+    "badge": "Gratis directe check",
+    "title": "Is uw labwaarde",
+    "titleHighlight": "normaal?",
+    "subtitle": "Kies een waarde, typ uw getal en zie direct hoe deze zich verhoudt tot het referentiebereik. Gratis, zonder registratie.",
+    "cardLabel": "Live waardecheck",
+    "noSignup": "Zonder registratie",
+    "fullToolLink": "Open de volledige labwaarde-checker",
+    "searchPlaceholder": "Zoek waarde, bijv. TSH, Ferritin",
+    "valuePlaceholder": "Uw waarde, bijv. 5,2",
+    "noResults": "Geen waarde gevonden",
+    "popular": "Populair:",
+    "status": {
+      "low": "Onder het normale bereik",
+      "normal": "Binnen het normale bereik",
+      "elevated": "Boven het normale bereik",
+      "high": "Ver boven het normale bereik"
+    },
+    "normalRange": "Normaal bereik",
+    "causesElevated": "Veelvoorkomende oorzaken van hoge waarden",
+    "causesLow": "Veelvoorkomende oorzaken van lage waarden",
+    "learnMore": "Meer over {value}",
+    "uploadCta": "Mijn volledige uitslag uitleggen",
+    "enterValue": "Voer uw {value}-waarde in {unit} in om het resultaat te zien.",
+    "disclaimer": "Algemene informatie op basis van standaard referentiewaarden voor volwassenen. Uw lab kan andere waarden hanteren; het bereik op uw uitslag geldt. Geen medisch advies."
+  },
+  "languagesSection": {
+    "badge": "17 talen",
+    "title": "Uw Duitse uitslag,",
+    "titleHighlight": "in uw taal",
+    "subtitle": "Medyra legt Duitse medische documenten uit in 17 talen, inclusief de vragenchat.",
+    "cta": "Alle talen bekijken"
   }
 }

@@ -17,6 +17,7 @@ import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import MedyraLogo, { MedyraIcon } from '@/components/MedyraLogo'
 import AppHeader, { HeaderButton } from '@/components/AppHeader'
+import ReferralCard from '@/components/dashboard/ReferralCard'
 
 // Lazy-load recharts to avoid SSR issues
 const HealthTimeline = dynamic(() => import('@/components/HealthTimeline'), {
@@ -397,6 +398,9 @@ export default function DashboardPage() {
                 </Link>
               </div>
             </div>
+
+            {/* Invite friends, earn free reports */}
+            <ReferralCard />
 
             {/* Recent reports */}
             <div className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm">

@@ -4,6 +4,11 @@ const withNextIntl = createNextIntlPlugin('./i18n.js')
 const nextConfig = {
   images: { unoptimized: true },
   serverExternalPackages: ['mongodb'],
+  // The catch-all API route serves lexikon data via fs; make sure the JSON
+  // files are traced into the serverless bundle on Vercel.
+  outputFileTracingIncludes: {
+    '/api/[[...path]]': ['./data/lexikon/**/*'],
+  },
   turbopack: {
     root: __dirname,
   },

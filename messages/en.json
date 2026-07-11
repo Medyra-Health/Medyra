@@ -206,7 +206,13 @@
     "progressExtract": "Reading your report…",
     "progressAi": "AI is analysing…",
     "progressDone": "Almost ready…",
-    "progressDuration": "This usually takes 20 to 40 seconds"
+    "progressDuration": "This usually takes 20 to 40 seconds",
+    "docTypeLabel": "What are you uploading? (optional, helps the AI)",
+    "docTypeAuto": "Detect automatically",
+    "docTypeLab": "Lab report",
+    "docTypeLetter": "Doctor letter",
+    "docTypeMedication": "Medication plan",
+    "docTypeInsurance": "Insurance letter"
   },
   "dashboard": {
     "welcome": "Welcome",
@@ -225,7 +231,15 @@
     "approachingLimit": "Approaching usage limit",
     "upgradePlan": "Upgrade Plan",
     "remaining": "Remaining",
-    "prepButton": "Doctor Visit Prep"
+    "prepButton": "Doctor Visit Prep",
+    "referral": {
+      "title": "Invite friends",
+      "description": "Share your link. You and your friend each get 1 extra free report per month.",
+      "copy": "Copy",
+      "copied": "Copied",
+      "stats": "{count} invited, +{bonus} bonus reports",
+      "shareText": "Medyra explains medical reports in plain language. With my link we both get an extra free report:"
+    }
   },
   "report": {
     "disclaimer": "Medical Disclaimer",
@@ -271,7 +285,34 @@
     "chatLimitReached": "Question limit reached for this report",
     "chatLimitInfo": "Free: 5 questions/report · One-Time: 15 · Personal/Family: unlimited",
     "chatUpgrade": "Upgrade for unlimited chat",
-    "chatPlaceholder": "Ask about your results…"
+    "chatPlaceholder": "Ask about your results…",
+    "share": {
+      "button": "Share",
+      "title": "Share this explanation",
+      "description": "Read-only link for family, caregivers or your doctor.",
+      "point1": "Shows only the explanation, never your file or chat",
+      "point2": "Expires automatically after 7 days",
+      "point3": "You can revoke the link at any time",
+      "create": "Create share link",
+      "copy": "Copy",
+      "copied": "Copied",
+      "expires": "Valid until {date}",
+      "privacyNote": "Anyone with this link can view the explanation. Share it only with people you trust.",
+      "revoke": "Revoke link",
+      "revoked": "Link revoked"
+    },
+    "reminder": {
+      "title": "Set a recheck reminder",
+      "description": "We email you when it is time to recheck your values, so you can compare old and new.",
+      "in4w": "In 4 weeks",
+      "in3m": "In 3 months",
+      "in6m": "In 6 months",
+      "created": "Reminder set",
+      "activeTitle": "Recheck reminder active",
+      "activeDesc": "We will email you on {date}.",
+      "cancel": "Cancel reminder",
+      "cancelled": "Reminder cancelled"
+    }
   },
   "common": {
     "loading": "Loading...",
@@ -599,5 +640,38 @@
     "iosStep3": "Choose Add to Home Screen",
     "iosNote": "Same account, same reports, all features.",
     "storesNote": "Medyra is coming to the App Store and Google Play. Until then, this page is the official way to get the app."
+  },
+  "valueChecker": {
+    "badge": "Free instant check",
+    "title": "Is your lab value",
+    "titleHighlight": "normal?",
+    "subtitle": "Pick a value, type your number, and see instantly how it compares to the reference range. Free, no signup.",
+    "cardLabel": "Live value check",
+    "noSignup": "No signup needed",
+    "fullToolLink": "Open the full lab value checker",
+    "searchPlaceholder": "Search value, e.g. TSH, Ferritin",
+    "valuePlaceholder": "Your value, e.g. 5.2",
+    "noResults": "No matching value found",
+    "popular": "Popular:",
+    "status": {
+      "low": "Below normal range",
+      "normal": "Within normal range",
+      "elevated": "Above normal range",
+      "high": "Well above normal range"
+    },
+    "normalRange": "Normal range",
+    "causesElevated": "Common causes of high values",
+    "causesLow": "Common causes of low values",
+    "learnMore": "More about {value}",
+    "uploadCta": "Explain my full report",
+    "enterValue": "Enter your {value} value in {unit} to see how it compares.",
+    "disclaimer": "General information based on standard adult reference ranges. Your lab may use different ranges; the range on your report applies. Not medical advice."
+  },
+  "languagesSection": {
+    "badge": "17 languages",
+    "title": "Your German report,",
+    "titleHighlight": "in your language",
+    "subtitle": "Medyra explains German medical documents in 17 languages, including the follow-up chat.",
+    "cta": "See all languages"
   }
 }

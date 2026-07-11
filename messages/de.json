@@ -204,7 +204,13 @@
     "progressExtract": "Bericht wird gelesen…",
     "progressAi": "KI analysiert…",
     "progressDone": "Fast fertig…",
-    "progressDuration": "Dies dauert in der Regel 20 bis 40 Sekunden"
+    "progressDuration": "Dies dauert in der Regel 20 bis 40 Sekunden",
+    "docTypeLabel": "Was laden Sie hoch? (optional, hilft der KI)",
+    "docTypeAuto": "Automatisch erkennen",
+    "docTypeLab": "Laborbefund",
+    "docTypeLetter": "Arztbrief",
+    "docTypeMedication": "Medikationsplan",
+    "docTypeInsurance": "Krankenkassen-Brief"
   },
   "dashboard": {
     "welcome": "Willkommen zurueck",
@@ -223,7 +229,15 @@
     "approachingLimit": "Sie naehern sich Ihrem Limit",
     "upgradePlan": "Plan upgraden",
     "remaining": "Verbleibend",
-    "prepButton": "Arztbesuch vorbereiten"
+    "prepButton": "Arztbesuch vorbereiten",
+    "referral": {
+      "title": "Freunde einladen",
+      "description": "Teilen Sie Ihren Link. Sie und Ihre Freunde erhalten je 1 zusätzlichen Gratis-Befund pro Monat.",
+      "copy": "Kopieren",
+      "copied": "Kopiert",
+      "stats": "{count} eingeladen, +{bonus} Bonus-Befunde",
+      "shareText": "Medyra erklärt medizinische Befunde in verständlicher Sprache. Mit meinem Link bekommen wir beide einen zusätzlichen Gratis-Befund:"
+    }
   },
   "report": {
     "disclaimer": "Haftungsausschluss",
@@ -269,7 +283,34 @@
     "chatLimitReached": "Fragenlimit für diesen Bericht erreicht",
     "chatLimitInfo": "Gratis: 5 Fragen/Bericht · Einmalig: 15 · Personal/Family: unbegrenzt",
     "chatUpgrade": "Für unbegrenzte Fragen upgraden",
-    "chatPlaceholder": "Fragen Sie zu Ihren Ergebnissen…"
+    "chatPlaceholder": "Fragen Sie zu Ihren Ergebnissen…",
+    "share": {
+      "button": "Teilen",
+      "title": "Erklärung teilen",
+      "description": "Schreibgeschützter Link für Familie, Angehörige oder Ihre Ärztin.",
+      "point1": "Zeigt nur die Erklärung, nie Ihre Datei oder Ihren Chat",
+      "point2": "Läuft nach 7 Tagen automatisch ab",
+      "point3": "Jederzeit widerrufbar",
+      "create": "Link erstellen",
+      "copy": "Kopieren",
+      "copied": "Kopiert",
+      "expires": "Gültig bis {date}",
+      "privacyNote": "Jeder mit diesem Link kann die Erklärung sehen. Teilen Sie ihn nur mit Personen, denen Sie vertrauen.",
+      "revoke": "Link widerrufen",
+      "revoked": "Link widerrufen"
+    },
+    "reminder": {
+      "title": "Kontroll-Erinnerung einrichten",
+      "description": "Wir erinnern Sie per E-Mail, wenn es Zeit für die Kontrolle ist. Danach können Sie alte und neue Werte vergleichen.",
+      "in4w": "In 4 Wochen",
+      "in3m": "In 3 Monaten",
+      "in6m": "In 6 Monaten",
+      "created": "Erinnerung eingerichtet",
+      "activeTitle": "Kontroll-Erinnerung aktiv",
+      "activeDesc": "Wir erinnern Sie am {date} per E-Mail.",
+      "cancel": "Erinnerung löschen",
+      "cancelled": "Erinnerung gelöscht"
+    }
   },
   "common": {
     "loading": "Wird geladen...",
@@ -597,5 +638,38 @@
     "iosStep3": "Zum Home Bildschirm wählen",
     "iosNote": "Gleiches Konto, gleiche Berichte, alle Funktionen.",
     "storesNote": "Medyra kommt in den App Store und zu Google Play. Bis dahin ist diese Seite der offizielle Weg zur App."
+  },
+  "valueChecker": {
+    "badge": "Kostenlos testen",
+    "title": "Ist Ihr Laborwert",
+    "titleHighlight": "normal?",
+    "subtitle": "Wert auswählen, Zahl eintippen und sofort sehen, wie er im Referenzbereich liegt. Kostenlos, ohne Anmeldung.",
+    "cardLabel": "Live Wert-Check",
+    "noSignup": "Ohne Anmeldung",
+    "fullToolLink": "Zum vollständigen Laborwert-Checker",
+    "searchPlaceholder": "Wert suchen, z. B. TSH, Ferritin",
+    "valuePlaceholder": "Ihr Wert, z. B. 5,2",
+    "noResults": "Kein passender Wert gefunden",
+    "popular": "Beliebt:",
+    "status": {
+      "low": "Unter dem Normalbereich",
+      "normal": "Im Normalbereich",
+      "elevated": "Über dem Normalbereich",
+      "high": "Deutlich über dem Normalbereich"
+    },
+    "normalRange": "Normalbereich",
+    "causesElevated": "Häufige Ursachen erhöhter Werte",
+    "causesLow": "Häufige Ursachen niedriger Werte",
+    "learnMore": "Mehr über {value}",
+    "uploadCta": "Ganzen Befund erklären lassen",
+    "enterValue": "Geben Sie Ihren {value}-Wert in {unit} ein, um ihn einzuordnen.",
+    "disclaimer": "Allgemeine Information auf Basis üblicher Referenzbereiche für Erwachsene. Ihr Labor kann abweichen; maßgeblich ist der Bereich auf Ihrem Befund. Keine medizinische Beratung."
+  },
+  "languagesSection": {
+    "badge": "17 Sprachen",
+    "title": "Ihr deutscher Befund,",
+    "titleHighlight": "in Ihrer Sprache",
+    "subtitle": "Medyra erklärt deutsche medizinische Dokumente in 17 Sprachen, inklusive Rückfragen-Chat.",
+    "cta": "Alle Sprachen ansehen"
   }
 }
