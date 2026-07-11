@@ -14,10 +14,10 @@ const founders = [
     photo: '/team/akash-rahman.jpg',
     icon: Rocket,
     bio: 'Product, technology, and partnerships. Your direct line for anything Medyra: questions, ideas, or collaboration.',
-    email: 'abralur28@gmail.com',
+    email: 'akash@medyra.de',
   },
   {
-    name: 'Philipp Mattar',
+    name: 'Dr. med. Philipp Mattar',
     role: 'Co-Founder & CMO · Chief Medical Officer',
     photo: '/team/phillip-mattar.jpg',
     icon: Stethoscope,
@@ -117,11 +117,13 @@ export default function ContactPage() {
             <p className="text-sm text-gray-600 mb-4 leading-relaxed">
               For billing, data privacy, GDPR requests, or press enquiries.
             </p>
-            <div className="inline-flex items-center gap-2 bg-gray-200 text-gray-500 font-semibold text-sm px-4 py-2.5 rounded-xl w-full justify-center cursor-not-allowed select-none">
+            <a
+              href="mailto:hello@medyra.de"
+              className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm px-4 py-2.5 rounded-xl w-full justify-center transition-colors"
+            >
               <Mail className="h-4 w-4" />
-              contact@medyra.de
-              <span className="text-[10px] bg-gray-300 text-gray-500 px-1.5 py-0.5 rounded-full font-bold ml-1">SOON</span>
-            </div>
+              hello@medyra.de
+            </a>
           </div>
 
           <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6">
