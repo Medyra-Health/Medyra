@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import AppHeader from '@/components/AppHeader'
 
 export const metadata = {
   title: 'Privacy Policy',
@@ -8,13 +9,7 @@ export const metadata = {
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-white">
-      <header className="border-b bg-white sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center gap-4">
-          <Link href="/" className="text-emerald-600 hover:text-emerald-700 text-sm">← Back to Medyra</Link>
-          <span className="text-gray-300">|</span>
-          <span className="text-gray-600 text-sm font-medium">Privacy Policy</span>
-        </div>
-      </header>
+      <AppHeader back={{ href: '/', label: 'Back to Medyra' }} title="Privacy Policy" tone="emerald" />
 
       <main className="container mx-auto px-4 py-12 max-w-3xl">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Privacy Policy</h1>

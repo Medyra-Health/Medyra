@@ -10,6 +10,7 @@ import {
   AlertTriangle, CheckCircle, Minus, FileText, ExternalLink
 } from 'lucide-react'
 import MedyraLogo from '@/components/MedyraLogo'
+import AppHeader, { HeaderButton } from '@/components/AppHeader'
 import { collectMarkers, latestValue, markerMeta } from '@/components/HealthTimeline'
 
 const RELATIONSHIPS = [
@@ -722,20 +723,11 @@ export default function ProfilesPage() {
       <style>{`.font-display { font-family: var(--font-playfair), Georgia, serif; }`}</style>
       <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-teal-100/60 rounded-full blur-3xl pointer-events-none" />
       {/* Header */}
-      <header className="bg-white/90 backdrop-blur-md border-b-2 border-teal-100 sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Link href="/dashboard" className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-800 transition-colors">
-              <ArrowLeft className="h-4 w-4" /> Dashboard
-            </Link>
-            <div className="w-px h-4 bg-gray-200" />
-            <MedyraLogo size="sm" />
-          </div>
-          <Link href="/pricing" className="text-xs text-emerald-600 font-semibold hover:text-emerald-700">
-            {TIER_LABELS[tier]} plan
-          </Link>
-        </div>
-      </header>
+      <AppHeader back={{ href: '/dashboard', label: 'Dashboard' }} title="Health Profiles" tone="teal" user>
+        <HeaderButton href="/pricing" variant="soft" tone="teal" className="hidden sm:inline-flex">
+          {TIER_LABELS[tier]} plan
+        </HeaderButton>
+      </AppHeader>
 
       <main className="max-w-5xl mx-auto px-4 py-8">
 

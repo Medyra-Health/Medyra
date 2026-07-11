@@ -10,6 +10,7 @@ import {
   Calendar, Loader2, RefreshCw, Minus, Pill, Mail, ShieldCheck, Stethoscope, Sparkles,
 } from 'lucide-react'
 import MedyraLogo from '@/components/MedyraLogo'
+import AppHeader, { HeaderButton } from '@/components/AppHeader'
 import { collectMarkers, latestValue, markerMeta } from '@/components/HealthTimeline'
 
 // Document types the analysis backend classifies, with icons + labels for filtering.
@@ -156,28 +157,13 @@ export default function ProfileDetailPage({ params }) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Link href="/profiles" className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-800">
-              <ArrowLeft className="h-4 w-4" /> Profiles
-            </Link>
-            <div className="w-px h-4 bg-gray-200" />
-            <MedyraLogo size="sm" />
-          </div>
-          <div className="flex items-center gap-2">
-            <Link
-              href={`/upload?profile=${profileId}`}
-              className="flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-semibold px-3 py-2 rounded-xl transition-colors"
-            >
-              <Sparkles className="h-3.5 w-3.5" /> Upload &amp; analyze
-            </Link>
-            <button onClick={load} className="text-gray-400 hover:text-gray-600 p-1" title="Refresh">
-              <RefreshCw className="h-4 w-4" />
-            </button>
-          </div>
-        </div>
-      </header>
+      <AppHeader back={{ href: '/profiles', label: 'Profiles' }} title={profile.name} tone="teal" user>
+        <HeaderButton href={`/upload?profile=${profileId}`} tone="teal" icon={<Sparkles className="h-4 w-4" />}>
+          <span className="hidden sm:inline">Upload &amp; analyze</span>
+          <span className="sm:hidden">Upload</span>
+        </HeaderButton>
+        <HeaderButton variant="ghost" onClick={load} icon={<RefreshCw className="h-4 w-4" />} aria-label="Refresh" />
+      </AppHeader>
 
       <main className="max-w-4xl mx-auto px-4 py-6 space-y-5">
 

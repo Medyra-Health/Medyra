@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Mail, MessageSquare, Clock, Building2, MapPin, Stethoscope, Rocket } from 'lucide-react'
+import AppHeader from '@/components/AppHeader'
 
 export const metadata = {
   title: 'Contact, Medyra',
@@ -29,13 +30,7 @@ const founders = [
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
-      <header className="border-b bg-white sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center gap-4">
-          <Link href="/" className="text-emerald-600 hover:text-emerald-700 text-sm font-medium">← Back to Medyra</Link>
-          <span className="text-gray-300">|</span>
-          <span className="text-gray-600 text-sm">Contact</span>
-        </div>
-      </header>
+      <AppHeader back={{ href: '/', label: 'Back to Medyra' }} title="Contact" tone="emerald" />
 
       <main className="container mx-auto px-4 py-20 max-w-4xl">
 

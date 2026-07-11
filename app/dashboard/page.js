@@ -16,6 +16,7 @@ import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import MedyraLogo, { MedyraIcon } from '@/components/MedyraLogo'
+import AppHeader, { HeaderButton } from '@/components/AppHeader'
 
 // Lazy-load recharts to avoid SSR issues
 const HealthTimeline = dynamic(() => import('@/components/HealthTimeline'), {
@@ -292,20 +293,11 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-[#F7FBF9]" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
       <style>{`.font-display { font-family: var(--font-playfair), Georgia, serif; }`}</style>
       {/* Header */}
-      <header className="bg-white/90 backdrop-blur-md border-b-2 border-emerald-100 sticky top-0 z-30">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex justify-between items-center">
-            <Link href="/"><MedyraLogo size="md" /></Link>
-            <div className="flex items-center gap-3">
-              <Link href="/profiles" className="hidden sm:flex items-center gap-1.5 text-sm text-gray-500 hover:text-emerald-600 transition-colors font-medium">
-                <Users className="h-4 w-4" /> Profiles
-              </Link>
-              <LanguageSwitcher />
-              <MedyraUserButton />
-            </div>
-          </div>
-        </div>
-      </header>
+      <AppHeader user tone="emerald" homeHref="/">
+        <HeaderButton href="/profiles" variant="soft" icon={<Users className="h-4 w-4" />} className="hidden sm:inline-flex">
+          Profiles
+        </HeaderButton>
+      </AppHeader>
 
       <div className="container mx-auto px-4 py-6 max-w-6xl">
 

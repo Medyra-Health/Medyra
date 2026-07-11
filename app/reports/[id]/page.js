@@ -12,6 +12,7 @@ import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
 import { toast } from 'sonner'
 import MedyraLogo from '@/components/MedyraLogo'
+import AppHeader, { HeaderButton } from '@/components/AppHeader'
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts'
 
 // Renders AI markdown to JSX: **bold**, *italic*, numbered lists, bullet points, ⚠️ warnings
@@ -560,35 +561,17 @@ export default function ReportDetailPage({ params }) {
     <div className="min-h-screen bg-gray-50">
 
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-40 no-print">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex justify-between items-center">
-            <Link href="/dashboard"><MedyraLogo size="md" /></Link>
-            <div className="flex items-center space-x-2">
-              <LanguageSwitcher />
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleExportPDF}
-                disabled={exporting}
-                className="flex text-gray-700 hover:text-gray-900 gap-1.5"
-              >
-                <Download className="h-3.5 w-3.5" />
-                <span className="hidden xs:inline sm:inline">{exporting ? t('common.loading') : t('report.saveAsPdf')}</span>
-                <span className="sm:hidden">{exporting ? '...' : 'PDF'}</span>
-              </Button>
-              <Link href="/dashboard">
-                <Button variant="ghost" size="sm" className="hidden sm:flex text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-                  {t('report.backToDashboard')}
-                </Button>
-                <Button variant="ghost" size="sm" className="flex sm:hidden text-gray-700 hover:bg-gray-50">
-                  <ArrowLeft className="h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </header>
+      <AppHeader back={{ href: '/dashboard', label: t('report.backToDashboard') }} tone="emerald">
+        <HeaderButton
+          variant="soft"
+          onClick={handleExportPDF}
+          disabled={exporting}
+          icon={<Download className="h-4 w-4" />}
+        >
+          <span className="hidden xs:inline">{exporting ? t('common.loading') : t('report.saveAsPdf')}</span>
+          <span className="xs:hidden">{exporting ? '...' : 'PDF'}</span>
+        </HeaderButton>
+      </AppHeader>
 
       <div className="container mx-auto px-3 sm:px-4 py-5 sm:py-6 max-w-4xl pb-8">
 
