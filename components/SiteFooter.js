@@ -37,12 +37,7 @@ export default function SiteFooter() {
           <div>
             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">{t('learn')}</p>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/lexikon" className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0" />
-                  {t('lexikon')}
-                </Link>
-              </li>
+              <li><Link href="/lexikon" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('lexikon')}</Link></li>
               <li><Link href="/blog" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('blog')}</Link></li>
               <li><Link href="/verstehen" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('verstehen')}</Link></li>
             </ul>

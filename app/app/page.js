@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { Download, ShieldCheck, Smartphone, Apple, Share, SquarePlus, Globe } from 'lucide-react'
 import MedyraLogo from '@/components/MedyraLogo'
-import SiteFooter from '@/components/SiteFooter'
 
 const APK_URL = 'https://github.com/Medyra-Health/medyra-mobile/releases/latest/download/medyra.apk'
 
@@ -120,8 +119,6 @@ export default function AppDownloadPage() {
           </p>
         </div>
       </section>
-
-      <SiteFooter />
     </div>
   )
 }
