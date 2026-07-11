@@ -165,9 +165,17 @@ export default function ProfileDetailPage({ params }) {
             <div className="w-px h-4 bg-gray-200" />
             <MedyraLogo size="sm" />
           </div>
-          <button onClick={load} className="text-gray-400 hover:text-gray-600 p-1" title="Refresh">
-            <RefreshCw className="h-4 w-4" />
-          </button>
+          <div className="flex items-center gap-2">
+            <Link
+              href={`/upload?profile=${profileId}`}
+              className="flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-semibold px-3 py-2 rounded-xl transition-colors"
+            >
+              <Sparkles className="h-3.5 w-3.5" /> Upload &amp; analyze
+            </Link>
+            <button onClick={load} className="text-gray-400 hover:text-gray-600 p-1" title="Refresh">
+              <RefreshCw className="h-4 w-4" />
+            </button>
+          </div>
         </div>
       </header>
 

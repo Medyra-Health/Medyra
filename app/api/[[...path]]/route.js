@@ -479,6 +479,10 @@ async function handleAnalyzeReport(request) {
   const reportId = uuidv4()
   const profileId = formData.get('profileId') ? String(formData.get('profileId')) : null
   const createdAt = new Date()
+  // Data retention is the user's choice. 'keep' stores the report indefinitely
+  // as an encrypted backup (no expiresAt, so the TTL index never removes it);
+  // default 'auto30' keeps the GDPR 30-day auto-deletion.
+  const keepForever = userDoc?.dataRetention === 'keep'
   await database.collection('reports').insertOne(encryptReport({
     id: reportId,
     userId,
@@ -489,7 +493,7 @@ async function handleAnalyzeReport(request) {
     conversations: [],
     ...(profileId ? { profileId } : {}),
     createdAt,
-    expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+    ...(keepForever ? {} : { expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000) }),
     status: 'completed'
   }))
 
@@ -732,6 +736,56 @@ async function handleResyncProfile(request) {
     }
   }
   return handleCORS(NextResponse.json({ success: true, reportsProcessed: rawReports.length, biomarkersExtracted: total }))
+}
+
+// Return the user's data & privacy settings.
+async function handleGetSettings() {
+  const { userId } = await auth()
+  if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  const database = await connectToMongo()
+  const user = await database.collection('users').findOne({ clerkId: userId })
+  const retention = user?.dataRetention === 'keep' ? 'keep' : 'auto30'
+  const totalReports = await database.collection('reports').countDocuments({ userId })
+  return handleCORS(NextResponse.json({ dataRetention: retention, totalReports }))
+}
+
+// Change the retention policy and reconcile existing reports.
+// 'keep'   -> remove expiresAt so nothing is auto-deleted (encrypted backup).
+// 'auto30' -> set expiresAt to createdAt + 30 days on every report.
+async function handleUpdateSettings(request) {
+  const { userId } = await auth()
+  if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
+  const body = await request.json()
+  const retention = body.dataRetention === 'keep' ? 'keep' : 'auto30'
+  const database = await connectToMongo()
+
+  await database.collection('users').updateOne(
+    { clerkId: userId },
+    { $set: { dataRetention: retention, updatedAt: new Date() } },
+    { upsert: true }
+  )
+
+  if (retention === 'keep') {
+    await database.collection('reports').updateMany(
+      { userId },
+      { $unset: { expiresAt: '' } }
+    )
+  } else {
+    // Re-arm the 30-day window from each report's own creation date.
+    const reports = await database.collection('reports')
+      .find({ userId }, { projection: { id: 1, createdAt: 1 } })
+      .toArray()
+    const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000
+    for (const r of reports) {
+      const base = r.createdAt ? new Date(r.createdAt).getTime() : Date.now()
+      await database.collection('reports').updateOne(
+        { userId, id: r.id },
+        { $set: { expiresAt: new Date(base + THIRTY_DAYS) } }
+      )
+    }
+  }
+
+  return handleCORS(NextResponse.json({ success: true, dataRetention: retention }))
 }
 
 async function handleChat(request, reportId) {
@@ -1037,6 +1091,14 @@ async function handleRoute(request) {
     // Re-extract biomarkers for all reports in a profile
     if (route === '/profiles/resync' && method === 'POST') {
       return handleResyncProfile(request)
+    }
+
+    // Data & privacy settings (retention policy)
+    if (route === '/settings' && method === 'GET') {
+      return handleGetSettings()
+    }
+    if (route === '/settings' && method === 'POST') {
+      return handleUpdateSettings(request)
     }
 
     // Get specific report

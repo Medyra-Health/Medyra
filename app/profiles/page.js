@@ -217,6 +217,194 @@ function CreateModal({ onClose, onCreated }) {
   )
 }
 
+function EditModal({ profile, onClose, onSaved }) {
+  const [name, setName] = useState(profile.name || '')
+  const [dob, setDob] = useState(profile.dob ? String(profile.dob).slice(0, 10) : '')
+  const [relationship, setRelationship] = useState(profile.relationship || 'self')
+  const [gender, setGender] = useState(profile.gender || 'prefer_not')
+  const [color, setColor] = useState(profile.color || 'emerald')
+  const [saving, setSaving] = useState(false)
+  const [error, setError] = useState(null)
+
+  async function submit() {
+    if (!name.trim()) return setError('Name is required')
+    setSaving(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/profiles', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ profileId: profile.id, updates: { name, dob, relationship, gender, color } }),
+      })
+      const data = await res.json()
+      if (!res.ok) { setError(data.message || data.error); return }
+      onSaved({ ...profile, name: name.trim(), dob, relationship, gender, color })
+    } catch { setError('Something went wrong') }
+    finally { setSaving(false) }
+  }
+
+  return (
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md">
+        <div className="flex items-center justify-between p-6 border-b border-gray-100">
+          <h2 className="text-lg font-bold text-gray-900">Edit Health Profile</h2>
+          <button onClick={onClose} className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors">
+            <X className="h-4 w-4 text-gray-600" />
+          </button>
+        </div>
+        <div className="p-6 space-y-5">
+          <div>
+            <label className="block text-xs font-semibold text-gray-700 mb-1.5">Full Name *</label>
+            <input
+              value={name} onChange={e => setName(e.target.value)}
+              className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-semibold text-gray-700 mb-1.5">Date of Birth</label>
+            <input
+              type="date" value={dob} onChange={e => setDob(e.target.value)}
+              className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-semibold text-gray-700 mb-1.5">Relationship</label>
+            <div className="grid grid-cols-2 gap-2">
+              {RELATIONSHIPS.map(r => {
+                const Icon = r.icon
+                return (
+                  <button key={r.value} onClick={() => setRelationship(r.value)}
+                    className={`flex items-center gap-2 px-3 py-2.5 rounded-xl border-2 text-sm font-medium transition-all ${relationship === r.value ? 'border-emerald-400 bg-emerald-50 text-emerald-700' : 'border-gray-200 text-gray-600 hover:border-gray-300'}`}>
+                    <Icon className="h-4 w-4" /> {r.label}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+          <div>
+            <label className="block text-xs font-semibold text-gray-700 mb-1.5">Gender</label>
+            <select value={gender} onChange={e => setGender(e.target.value)}
+              className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400">
+              {GENDERS.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
+            </select>
+          </div>
+          <div>
+            <label className="block text-xs font-semibold text-gray-700 mb-2">Profile Color</label>
+            <div className="flex gap-2">
+              {COLORS.map(c => (
+                <button key={c.value} onClick={() => setColor(c.value)}
+                  className={`w-8 h-8 rounded-full ${c.cls} transition-all ${color === c.value ? 'ring-2 ring-offset-2 ring-gray-400 scale-110' : 'opacity-70 hover:opacity-100'}`} />
+              ))}
+            </div>
+          </div>
+          {error && <p className="text-xs text-red-500 bg-red-50 border border-red-200 rounded-lg px-3 py-2">{error}</p>}
+        </div>
+        <div className="flex gap-3 p-6 pt-0">
+          <button onClick={onClose} className="flex-1 border border-gray-200 text-gray-600 font-semibold py-2.5 rounded-xl hover:bg-gray-50 transition-colors text-sm">
+            Cancel
+          </button>
+          <button onClick={submit} disabled={saving || !name.trim()}
+            className="flex-1 bg-emerald-500 hover:bg-emerald-600 disabled:opacity-50 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+            {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Check className="h-4 w-4" />}
+            {saving ? 'Saving…' : 'Save changes'}
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Account-wide data retention + privacy control.
+function DataPrivacyCard() {
+  const [retention, setRetention] = useState(null)
+  const [totalReports, setTotalReports] = useState(0)
+  const [saving, setSaving] = useState(false)
+
+  useEffect(() => {
+    fetch('/api/settings').then(r => r.json()).then(d => {
+      setRetention(d.dataRetention || 'auto30')
+      setTotalReports(d.totalReports || 0)
+    }).catch(() => setRetention('auto30'))
+  }, [])
+
+  async function choose(value) {
+    if (value === retention || saving) return
+    setSaving(true)
+    const prev = retention
+    setRetention(value)
+    try {
+      const res = await fetch('/api/settings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ dataRetention: value }),
+      })
+      if (!res.ok) setRetention(prev)
+    } catch { setRetention(prev) }
+    finally { setSaving(false) }
+  }
+
+  const options = [
+    {
+      value: 'keep',
+      icon: Shield,
+      title: 'Keep my data (encrypted backup)',
+      desc: 'Your documents and lab history stay available any time, as your personal health archive. Everything is encrypted at rest. You can delete any document, or switch back, whenever you want.',
+    },
+    {
+      value: 'auto30',
+      icon: Trash2,
+      title: 'Auto-delete after 30 days (GDPR)',
+      desc: 'Every document is permanently deleted 30 days after upload. Maximum privacy, nothing kept longer than needed.',
+    },
+  ]
+
+  return (
+    <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden mt-6">
+      <div className="flex items-center gap-2 px-5 py-4 border-b border-gray-100">
+        <Shield className="h-4 w-4 text-emerald-600" />
+        <h3 className="text-sm font-bold text-gray-800">Data & Privacy</h3>
+        {retention && <span className="text-xs text-gray-400 ml-1">{totalReports} document{totalReports === 1 ? '' : 's'} stored</span>}
+        {saving && <Loader2 className="h-3.5 w-3.5 animate-spin text-gray-400 ml-auto" />}
+      </div>
+      <div className="p-5 space-y-3">
+        {retention === null ? (
+          <div className="flex justify-center py-4"><Loader2 className="h-5 w-5 animate-spin text-gray-300" /></div>
+        ) : (
+          <>
+            {options.map(o => {
+              const Icon = o.icon
+              const active = retention === o.value
+              return (
+                <button
+                  key={o.value}
+                  onClick={() => choose(o.value)}
+                  className={`w-full text-left flex items-start gap-3 p-4 rounded-xl border-2 transition-all ${active ? 'border-emerald-400 bg-emerald-50' : 'border-gray-200 hover:border-gray-300'}`}
+                >
+                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${active ? 'bg-emerald-100 text-emerald-600' : 'bg-gray-100 text-gray-500'}`}>
+                    <Icon className="h-4.5 w-4.5" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <p className={`text-sm font-semibold ${active ? 'text-emerald-800' : 'text-gray-800'}`}>{o.title}</p>
+                      {active && <Check className="h-4 w-4 text-emerald-600 flex-shrink-0" />}
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">{o.desc}</p>
+                  </div>
+                </button>
+              )
+            })}
+            <p className="text-xs text-gray-400 leading-relaxed pt-1">
+              Your health data is encrypted with AES 256 before it is stored, so it is unreadable in the
+              database. You can export or permanently delete everything at any time under GDPR. Changing
+              this setting applies to all your existing documents immediately.
+            </p>
+          </>
+        )}
+      </div>
+    </div>
+  )
+}
+
 // Flag a value against a marker's reference range (curated or the lab's own).
 function flagValue(meta, sample) {
   if (sample?.flag && sample.flag !== 'normal') return sample.flag
@@ -673,6 +861,9 @@ export default function ProfilesPage() {
             {profiles.length >= 2 && <CompareSection profiles={profiles} />}
           </>
         )}
+
+        {/* Data & privacy — retention control, all users */}
+        <DataPrivacyCard />
       </main>
 
       {showCreate && (
@@ -685,6 +876,20 @@ export default function ProfilesPage() {
               canCreate: prev.limit === null || [...(prev.profiles || []), profile].length < prev.limit,
             }))
             setShowCreate(false)
+          }}
+        />
+      )}
+
+      {editProfile && (
+        <EditModal
+          profile={editProfile}
+          onClose={() => setEditProfile(null)}
+          onSaved={updated => {
+            setData(prev => ({
+              ...prev,
+              profiles: (prev.profiles || []).map(p => (p.id === updated.id ? updated : p)),
+            }))
+            setEditProfile(null)
           }}
         />
       )}

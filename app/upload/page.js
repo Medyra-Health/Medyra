@@ -95,7 +95,10 @@ export default function UploadPage() {
       .then(d => {
         const list = d.profiles || []
         setProfiles(list)
-        if (list.length > 0) setSelectedProfile(list[0].id)
+        // Preselect a profile when arriving from a profile page (?profile=<id>)
+        const wanted = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('profile') : null
+        if (wanted && list.some(p => p.id === wanted)) setSelectedProfile(wanted)
+        else if (list.length > 0) setSelectedProfile(list[0].id)
       })
       .catch(() => {})
   }, [isLoaded])
