@@ -415,7 +415,7 @@
     },
     "languages": {
       "badge": "Portata globale",
-      "title": "Disponibile in 18 lingue",
+      "title": "Disponibile in 17 lingue",
       "subtitle": "Dalla Germania al mondo: capisci la tua salute nella tua lingua."
     },
     "newToGermany": {
@@ -511,7 +511,7 @@
       "f2": "1 preparazione visita / mese",
       "f3": "4 messaggi IA / mese",
       "f4": "1 profilo (tu stesso)",
-      "f5": "18 lingue",
+      "f5": "17 lingue",
       "f6": "PDF con filigrana",
       "f7": "Nessuna cronologia salute"
     },
@@ -524,7 +524,7 @@
       "f2": "Preparazioni illimitate*",
       "f3": "Chat IA illimitata*",
       "f4": "2 profili salute",
-      "f5": "18 lingue",
+      "f5": "17 lingue",
       "f6": "PDF completo",
       "f7": "Cronologia salute"
     },
@@ -537,7 +537,7 @@
       "f2": "Preparazioni illimitate*",
       "f3": "Chat IA illimitata*",
       "f4": "Fino a 5 profili",
-      "f5": "18 lingue",
+      "f5": "17 lingue",
       "f6": "PDF completo",
       "f7": "Cronologia salute familiare condivisa",
       "f8": "Supporto prioritario"
@@ -552,7 +552,7 @@
       "f2": "Preparazioni illimitate",
       "f3": "Chat IA illimitata",
       "f4": "Account multi-utente",
-      "f5": "18 lingue",
+      "f5": "17 lingue",
       "f6": "PDF completo",
       "f7": "Supporto dedicato"
     },
@@ -603,10 +603,10 @@
     "trust": {
       "gdpr": "Conforme GDPR",
       "ai": "Alimentato da Claude AI",
-      "languages": "18 lingue"
+      "languages": "17 lingue"
     },
     "languages": {
-      "title": "Disponibile in 18 lingue",
+      "title": "Disponibile in 17 lingue",
       "subtitle": "Comprendi i tuoi referti nella tua lingua"
     },
     "faq": {
@@ -678,5 +678,18 @@
     "titleHighlight": "nella tua lingua",
     "subtitle": "Medyra spiega i documenti medici tedeschi in 17 lingue, chat di domande inclusa.",
     "cta": "Vedi tutte le lingue"
+  },
+  "featureShow": {
+    "badge": "Una piattaforma, ogni documento",
+    "title": "Qualunque cosa mandi il medico,",
+    "titleHighlight": "Medyra la spiega",
+    "subtitle": "Referti di laboratorio, lettere mediche, referti ospedalieri, piani terapeutici e lettere assicurative, più un check dei valori gratuito.",
+    "more": "Scopri di più",
+    "descLab": "Controlla un valore gratis o carica il referto completo per una spiegazione totale.",
+    "descLetter": "Ogni termine medico e abbreviazione tradotti in linguaggio semplice.",
+    "descHospital": "Cosa è successo, cosa è cambiato e cosa fare dopo l’ospedale.",
+    "descMeds": "A cosa serve ogni farmaco e come assumerlo, con chiarezza.",
+    "descInsurance": "Decisioni, costi e scadenze senza gergo burocratico.",
+    "descLanguages": "La spiegazione completa arriva nella tua lingua, chat inclusa."
   }
 }

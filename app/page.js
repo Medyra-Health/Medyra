@@ -13,7 +13,7 @@ import JsonLd from '@/components/JsonLd'
 import MedyraLogo from '@/components/MedyraLogo'
 import HeroSection from '@/components/landing/HeroSection'
 import ValueCheckerSection from '@/components/landing/ValueCheckerSection'
-import LanguagesSection from '@/components/landing/LanguagesSection'
+import FeatureShowcase from '@/components/landing/FeatureShowcase'
 import ScrollToTop from '@/components/ScrollToTop'
 
 const LANGUAGES = [
@@ -34,314 +34,7 @@ const LANGUAGES = [
   { code: 'NL', name: 'Dutch' },
   { code: 'PL', name: 'Polski' },
   { code: 'KR', name: '한국어' },
-  { code: 'SE', name: 'Svenska' },
 ]
-
-// ── New to Germany section ─────────────────────────────────────────────────
-function NewToGermanySection() {
-  const t = useTranslations()
-  const [active, setActive] = useState('insurance')
-  const [animKey, setAnimKey] = useState(0)
-
-  const DOCUMENT_TYPES = [
-    {
-      id: 'insurance',
-      pill: t('landing.newToGermany.pill1'),
-      heading: 'What does this letter even mean?',
-      body: 'Krankenkasse letters are dense German bureaucracy. Medyra reads it and tells you exactly what you owe, what you\'re covered for, and what to do next in plain English.',
-      preview: [
-        { label: 'Coverage start', value: '01.04.2024', ok: true },
-        { label: 'Monthly premium', value: '€ 109,19', ok: true },
-        { label: 'Coverage type', value: 'Gesetzlich (GKV)', ok: true },
-        { label: 'Action needed', value: 'Submit to university', ok: null },
-      ],
-      badge: 'You\'re covered ✅',
-    },
-    {
-      id: 'lab',
-      pill: t('landing.newToGermany.pill2'),
-      heading: 'Your Blutbild decoded.',
-      body: 'German lab reports list 20+ values with no explanation. Medyra flags what\'s outside normal range, explains what each marker means, and tells you what to ask your doctor.',
-      preview: [
-        { label: 'Hämoglobin', value: '11.8 g/dL ↓', ok: false },
-        { label: 'Ferritin', value: '8 µg/L ↓', ok: false },
-        { label: 'TSH', value: '2.1 mIU/L', ok: true },
-        { label: 'Cholesterin', value: '195 mg/dL', ok: true },
-      ],
-      badge: 'Iron levels low. Ask about supplements 💡',
-    },
-    {
-      id: 'prescription',
-      pill: t('landing.newToGermany.pill3'),
-      heading: 'Kassenrezept, what do I do with this?',
-      body: 'A German Kassenrezept has codes, LANR numbers, and abbreviations. Medyra translates it: what the medication is, how to take it, and how to pick it up from the pharmacy.',
-      preview: [
-        { label: 'Medication', value: 'Ibuprofen 400mg', ok: true },
-        { label: 'Dosage', value: '3× daily with food', ok: true },
-        { label: 'Stomach protection', value: 'Omeprazol 20mg', ok: true },
-        { label: 'Pharmacy', value: 'Any Apotheke (free)', ok: true },
-      ],
-      badge: 'Take to any Apotheke 🏥',
-    },
-  ]
-
-  const doc = DOCUMENT_TYPES.find(d => d.id === active)
-
-  function switchDoc(id) {
-    if (id === active) return
-    setActive(id)
-    setAnimKey(k => k + 1)
-  }
-
-  return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="container mx-auto px-4 max-w-5xl">
-
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
-            {t('landing.newToGermany.badge')}
-          </div>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0B1F17] mb-4">
-            {t('landing.newToGermany.title')}{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#059669] to-[#10B981]">{t('landing.newToGermany.titleHighlight')}</span>
-          </h2>
-          <p className="text-gray-600 text-base max-w-xl mx-auto leading-relaxed">
-            {t('landing.newToGermany.subtitle')}
-          </p>
-        </div>
-
-        {/* Pill selector */}
-        <div className="flex justify-center gap-2 flex-wrap mb-10">
-          {DOCUMENT_TYPES.map(d => (
-            <button
-              key={d.id}
-              onClick={() => switchDoc(d.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 ${
-                active === d.id
-                  ? 'bg-emerald-500 border-emerald-500 text-white shadow-sm shadow-emerald-500/25'
-                  : 'bg-white border-gray-200 text-gray-600 hover:border-emerald-400 hover:text-emerald-600'
-              }`}
-            >
-              {d.pill}
-            </button>
-          ))}
-        </div>
-
-        {/* Content card */}
-        <div
-          key={animKey}
-          style={{ animation: 'ngFadeIn 0.3s ease both' }}
-          className="grid md:grid-cols-2 gap-0 rounded-2xl border border-gray-200 overflow-hidden shadow-xl shadow-emerald-900/5"
-        >
-          {/* Left, explanation */}
-          <div className="bg-[#F3FAF6] p-8 md:p-10 flex flex-col justify-center">
-            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-4">{doc.pill}</p>
-            <h3 className="font-display text-xl md:text-2xl font-bold text-[#0B1F17] mb-4 leading-snug">
-              {doc.heading}
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed mb-6">
-              {doc.body}
-            </p>
-            <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold px-3 py-1.5 rounded-full w-fit">
-              {doc.badge}
-            </div>
-          </div>
-
-          {/* Right, mock output */}
-          <div className="bg-[#08130D] p-8 md:p-10 flex flex-col justify-center">
-            <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-5">{t('landing.newToGermany.medyraExplains')}</p>
-            <div className="space-y-3">
-              {doc.preview.map((row, i) => (
-                <div key={i} className="flex items-center justify-between py-2.5 border-b border-white/5 last:border-0">
-                  <span className="text-sm text-[#E8F5F0]/60">{row.label}</span>
-                  <span className={`text-sm font-semibold flex items-center gap-1.5 ${
-                    row.ok === false ? 'text-amber-400' : row.ok === true ? 'text-[#E8F5F0]' : 'text-emerald-400'
-                  }`}>
-                    {row.ok === false && <span className="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0" />}
-                    {row.ok === true && <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0" />}
-                    {row.value}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 pt-5 border-t border-white/10">
-              <SignedOut>
-                <SignInButton mode="modal">
-                  <button className="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm py-2.5 rounded-xl transition-colors cursor-pointer">
-                    {t('landing.newToGermany.ctaUnsigned')}
-                  </button>
-                </SignInButton>
-              </SignedOut>
-              <SignedIn>
-                <Link href="/upload" className="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm py-2.5 rounded-xl transition-colors">
-                  {t('landing.newToGermany.ctaSigned')}
-                </Link>
-              </SignedIn>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <style>{`
-        @keyframes ngFadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
-    </section>
-  )
-}
-
-// ── Campaign carousel ──────────────────────────────────────────────────────
-const CAMPAIGNS = [
-  {
-    tag: 'Language & Healthcare',
-    title: 'German lab results, translated instantly.',
-    body: 'Eliminating the double barrier of language and medical terminology for international residents navigating the German healthcare system.',
-    visual: '🧪',
-    gradient: 'from-[#0B241A] via-[#07170F] to-[#040C08]',
-    accent: 'emerald',
-  },
-  {
-    tag: 'Mental Health Awareness',
-    title: 'Clear results, calm mind.',
-    body: 'Addressing the "jargon anxiety" that occurs when patients receive complex medical results they cannot interpret. Clarity is a vital part of mental well-being.',
-    visual: '🧠',
-    gradient: 'from-[#07170F] via-[#0B241A] to-[#040C08]',
-    accent: 'emerald',
-  },
-  {
-    tag: 'European Patients\' Rights Day',
-    title: 'Your health data, finally clear.',
-    body: 'Empowering patients to advocate for themselves by reclaiming their right to understand their own medical data. Knowledge is the foundation of care.',
-    visual: '🇪🇺',
-    gradient: 'from-[#040C08] via-[#0B241A] to-[#07170F]',
-    accent: 'emerald',
-  },
-]
-
-function CampaignSection() {
-  const [active, setActive] = useState(0)
-  const [animKey, setAnimKey] = useState(0)
-  const [paused, setPaused] = useState(false)
-
-  useEffect(() => {
-    if (paused) return
-    const timer = setInterval(() => {
-      setActive(prev => (prev + 1) % CAMPAIGNS.length)
-      setAnimKey(k => k + 1)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [paused])
-
-  function go(idx) {
-    setActive(idx)
-    setAnimKey(k => k + 1)
-  }
-
-  const c = CAMPAIGNS[active]
-  const accentMap = {
-    emerald: { dot: 'bg-emerald-400', text: 'text-emerald-400', ring: 'ring-emerald-400', bar: 'bg-emerald-400', tag: 'bg-emerald-400/10 border-emerald-400/30 text-emerald-400' },
-  }
-  const a = accentMap[c.accent]
-
-  return (
-    <section className="py-20 bg-[#F3FAF6] overflow-hidden">
-      <div className="container mx-auto px-4 max-w-6xl">
-
-        {/* Section header */}
-        <div className="flex items-center justify-between mb-10">
-          <div>
-            <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-1">Why it matters</p>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-[#0B1F17]">Health clarity for everyone</h2>
-          </div>
-          {/* Dot nav + pause */}
-          <div className="flex items-center gap-3">
-            {CAMPAIGNS.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => go(i)}
-                className={`transition-all duration-300 rounded-full ${
-                  i === active ? `w-6 h-2 ${a.dot}` : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
-                }`}
-              />
-            ))}
-            <button
-              onClick={() => setPaused(p => !p)}
-              className="ml-1 w-7 h-7 rounded-full bg-white border border-gray-200 hover:border-gray-300 flex items-center justify-center transition-colors"
-              title={paused ? 'Resume' : 'Pause'}
-            >
-              {paused
-                ? <span className="w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[8px] border-l-gray-300 ml-0.5" />
-                : <span className="flex gap-0.5"><span className="w-[3px] h-3 bg-gray-400 rounded-sm" /><span className="w-[3px] h-3 bg-gray-400 rounded-sm" /></span>
-              }
-            </button>
-          </div>
-        </div>
-
-        {/* Campaign card */}
-        <div
-          key={animKey}
-          style={{ animation: 'campFade 0.5s ease both' }}
-          className="rounded-2xl overflow-hidden shadow-2xl shadow-emerald-900/10"
-        >
-          {/* Left, text */}
-          <div className={`bg-gradient-to-br ${c.gradient} p-8 md:p-12 flex flex-col justify-between min-h-[320px]`}>
-            <div>
-              <span className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border mb-6 ${a.tag}`}>
-                <span className={`w-1.5 h-1.5 rounded-full ${a.dot}`} />
-                {c.tag}
-              </span>
-              <h3 className="font-display text-2xl md:text-3xl font-black text-[#E8F5F0] mb-4 leading-tight">
-                {c.title}
-              </h3>
-              <p className="text-[#E8F5F0]/60 text-sm leading-relaxed mb-8 max-w-sm">
-                {c.body}
-              </p>
-            </div>
-            {/* Progress bar */}
-            <div className="space-y-2">
-              <div className="flex gap-1.5">
-                {CAMPAIGNS.map((_, i) => (
-                  <div key={i} className="h-0.5 flex-1 rounded-full bg-white/10 overflow-hidden">
-                    <div
-                      className={`h-full ${a.bar} ${i === active ? 'animate-[progressBar_5s_linear_both]' : i < active ? 'w-full' : 'w-0'}`}
-                      style={i === active ? { animation: 'progressBar 5s linear both' } : undefined}
-                    />
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center justify-between">
-                <span className={`text-xs font-semibold ${a.text}`}>{active + 1} / {CAMPAIGNS.length}</span>
-                <div className="flex gap-2">
-                  <button onClick={() => go((active - 1 + CAMPAIGNS.length) % CAMPAIGNS.length)} className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-                    <ChevronLeft className="h-3.5 w-3.5 text-white" />
-                  </button>
-                  <button onClick={() => go((active + 1) % CAMPAIGNS.length)} className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-                    <ChevronRight className="h-3.5 w-3.5 text-white" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <style>{`
-        @keyframes campFade {
-          from { opacity: 0; transform: translateY(12px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes progressBar {
-          from { width: 0%; }
-          to   { width: 100%; }
-        }
-      `}</style>
-    </section>
-  )
-}
 
 function NavLink({ href, children, className = '' }) {
   const pathname = usePathname()
@@ -429,6 +122,17 @@ export default function LandingPage() {
         .ticker-wrap { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
         .ticker-wrap:hover .ticker-l,
         .ticker-wrap:hover .ticker-r { animation-play-state: paused; }
+
+        /* ── Vault chart bars: grow from the baseline on reveal ── */
+        .vault-bars .vault-bar {
+          transform: scaleY(0);
+          transform-origin: bottom;
+          transition: transform 0.7s cubic-bezier(0.16,1,0.3,1);
+        }
+        .vault-bars.in-view .vault-bar { transform: scaleY(1); }
+        @media (prefers-reduced-motion: reduce) {
+          .vault-bars .vault-bar { transform: none; transition: none; }
+        }
 
         /* ── Floating orbs ── */
         @keyframes orbFloat { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-18px) scale(1.04); } }
@@ -590,8 +294,8 @@ export default function LandingPage() {
       {/* ── LIVE VALUE CHECKER ── */}
       <ValueCheckerSection />
 
-      {/* ── CAMPAIGNS ── */}
-      <CampaignSection />
+      {/* ── WHAT MEDYRA EXPLAINS ── */}
+      <FeatureShowcase />
 
       {/* ── HOW IT WORKS ── */}
       <section id="how-it-works" className="py-20 md:py-28 bg-white relative overflow-hidden">
@@ -814,11 +518,11 @@ export default function LandingPage() {
                 ))}
               </div>
 
-              {/* Fake chart bars */}
-              <div>
+              {/* Chart bars: grow up one after another when scrolled into view */}
+              <div className="sr vault-bars">
                 <div className="flex items-end gap-2 h-24">
                   {[65,72,68,78,74,82,88,76,91,85,94,88].map((h,i)=>(
-                    <div key={i} className="flex-1 rounded-t-sm transition-all" style={{height:`${h}%`,background:`linear-gradient(to top, #10b981, #10b98150)`}} />
+                    <div key={i} className="vault-bar flex-1 rounded-t-sm" style={{height:`${h}%`,background:`linear-gradient(to top, #10b981, #10b98150)`,transitionDelay:`${i*60}ms`}} />
                   ))}
                 </div>
                 <div className="flex justify-between text-[10px] text-[#E8F5F0]/40 mt-1 px-0.5">
@@ -911,12 +615,6 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
-      {/* ── NEW TO GERMANY ── */}
-      <NewToGermanySection />
-
-      {/* ── 17+ LANGUAGES ── */}
-      <LanguagesSection />
 
       {/* Floating back-to-top with scroll progress */}
       <ScrollToTop />

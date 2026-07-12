@@ -415,7 +415,7 @@
     },
     "languages": {
       "badge": "Globalny zasięg",
-      "title": "Dostępny w 18 językach",
+      "title": "Dostępny w 17 językach",
       "subtitle": "Z Niemiec do świata: rozumiej swoje zdrowie we własnym języku."
     },
     "newToGermany": {
@@ -511,7 +511,7 @@
       "f2": "1 przygotowanie do wizyty / miesiąc",
       "f3": "4 wiadomości AI / miesiąc",
       "f4": "1 profil (ty sam)",
-      "f5": "18 języków",
+      "f5": "17 języków",
       "f6": "PDF ze znakiem wodnym",
       "f7": "Brak historii zdrowia"
     },
@@ -524,7 +524,7 @@
       "f2": "Nieograniczone przygotowania*",
       "f3": "Nieograniczony czat AI*",
       "f4": "2 profile zdrowotne",
-      "f5": "18 języków",
+      "f5": "17 języków",
       "f6": "Pełny PDF",
       "f7": "Historia zdrowia"
     },
@@ -537,7 +537,7 @@
       "f2": "Nieograniczone przygotowania*",
       "f3": "Nieograniczony czat AI*",
       "f4": "Do 5 profili członków",
-      "f5": "18 języków",
+      "f5": "17 języków",
       "f6": "Pełny PDF",
       "f7": "Wspólna historia zdrowia rodziny",
       "f8": "Wsparcie priorytetowe"
@@ -552,7 +552,7 @@
       "f2": "Nieograniczone przygotowania",
       "f3": "Nieograniczony czat AI",
       "f4": "Konta wieloużytkownikowe",
-      "f5": "18 języków",
+      "f5": "17 języków",
       "f6": "Pełny PDF",
       "f7": "Dedykowane wsparcie"
     },
@@ -603,10 +603,10 @@
     "trust": {
       "gdpr": "Zgodny z RODO",
       "ai": "Napędzany przez Claude AI",
-      "languages": "18 języków"
+      "languages": "17 języków"
     },
     "languages": {
-      "title": "Dostępny w 18 językach",
+      "title": "Dostępny w 17 językach",
       "subtitle": "Zrozum swoje raporty zdrowotne w swoim własnym języku"
     },
     "faq": {
@@ -678,5 +678,18 @@
     "titleHighlight": "w Twoim języku",
     "subtitle": "Medyra wyjaśnia niemieckie dokumenty medyczne w 17 językach, łącznie z czatem.",
     "cta": "Zobacz wszystkie języki"
+  },
+  "featureShow": {
+    "badge": "Jedna platforma, każdy dokument",
+    "title": "Cokolwiek przyśle lekarz,",
+    "titleHighlight": "Medyra to wyjaśni",
+    "subtitle": "Wyniki laboratoryjne, listy lekarskie, wypisy ze szpitala, plany leków i pisma z ubezpieczalni, plus darmowy sprawdzacz wyników.",
+    "more": "Dowiedz się więcej",
+    "descLab": "Sprawdź pojedynczy wynik za darmo lub prześlij cały dokument po pełne wyjaśnienie.",
+    "descLetter": "Każdy termin medyczny i skrót przetłumaczony na prosty język.",
+    "descHospital": "Co się stało, co się zmieniło i co robić po szpitalu.",
+    "descMeds": "Do czego służy każdy lek i jak go przyjmować, jasno wyjaśnione.",
+    "descInsurance": "Decyzje, koszty i terminy bez urzędniczego języka.",
+    "descLanguages": "Pełne wyjaśnienie przychodzi w Twoim języku, razem z czatem."
   }
 }

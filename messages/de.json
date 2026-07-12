@@ -415,7 +415,7 @@
     },
     "languages": {
       "badge": "Weltweite Reichweite",
-      "title": "Verfügbar in 18 Sprachen",
+      "title": "Verfügbar in 17 Sprachen",
       "subtitle": "Von Deutschland in die Welt: verstehen Sie Ihre Gesundheit in Ihrer Sprache."
     },
     "newToGermany": {
@@ -511,7 +511,7 @@
       "f2": "1 Arztbesuchsvorbereitung / Monat",
       "f3": "4 KI-Chat-Nachrichten / Monat",
       "f4": "1 Profil (Sie selbst)",
-      "f5": "Alle 18 Sprachen",
+      "f5": "Alle 17 Sprachen",
       "f6": "PDF mit Wasserzeichen",
       "f7": "Kein Gesundheitsverlauf"
     },
@@ -524,7 +524,7 @@
       "f2": "Unbegrenzte Arztbesuche*",
       "f3": "Unbegrenzter KI-Chat*",
       "f4": "2 Gesundheitsprofile",
-      "f5": "Alle 18 Sprachen",
+      "f5": "Alle 17 Sprachen",
       "f6": "Vollständiger PDF-Export",
       "f7": "Gesundheitsverlauf"
     },
@@ -537,7 +537,7 @@
       "f2": "Unbegrenzte Arztbesuche*",
       "f3": "Unbegrenzter KI-Chat*",
       "f4": "Bis zu 5 Mitgliedsprofile",
-      "f5": "Alle 18 Sprachen",
+      "f5": "Alle 17 Sprachen",
       "f6": "Vollständiger PDF-Export",
       "f7": "Geteilter Familiengesundheitsverlauf",
       "f8": "Prioritäts-Support"
@@ -552,7 +552,7 @@
       "f2": "Unbegrenzte Vorbereitungen",
       "f3": "Unbegrenzter KI-Chat",
       "f4": "Mehrbenutzer-Konten",
-      "f5": "Alle 18 Sprachen",
+      "f5": "Alle 17 Sprachen",
       "f6": "Vollständiger PDF-Export",
       "f7": "Dedizierter Support"
     },
@@ -603,10 +603,10 @@
     "trust": {
       "gdpr": "Konform",
       "ai": "Betrieben von Claude AI",
-      "languages": "18 Sprachen"
+      "languages": "17 Sprachen"
     },
     "languages": {
-      "title": "Verfügbar in 18 Sprachen",
+      "title": "Verfügbar in 17 Sprachen",
       "subtitle": "Verstehen Sie Ihre Gesundheitsberichte in Ihrer eigenen Sprache"
     },
     "faq": {
@@ -678,5 +678,18 @@
     "titleHighlight": "in Ihrer Sprache",
     "subtitle": "Medyra erklärt deutsche medizinische Dokumente in 17 Sprachen, inklusive Rückfragen-Chat.",
     "cta": "Alle Sprachen ansehen"
+  },
+  "featureShow": {
+    "badge": "Eine Plattform, jedes Dokument",
+    "title": "Was auch immer die Praxis schickt,",
+    "titleHighlight": "Medyra erklärt es",
+    "subtitle": "Laborbefunde, Arztbriefe, Krankenhausberichte, Medikationspläne und Kassenbriefe, plus ein kostenloser Wert-Check.",
+    "more": "Mehr erfahren",
+    "descLab": "Einzelnen Wert kostenlos prüfen oder den ganzen Befund hochladen und komplett erklären lassen.",
+    "descLetter": "Jeder Fachbegriff und jede Abkürzung in klare Sprache übersetzt.",
+    "descHospital": "Was passiert ist, was sich geändert hat und was nach dem Krankenhaus zu tun ist.",
+    "descMeds": "Wofür jedes Medikament ist und wie Sie es einnehmen, klar erklärt.",
+    "descInsurance": "Bescheide, Kosten und Fristen ohne Amtsdeutsch.",
+    "descLanguages": "Die komplette Erklärung kommt in Ihrer Sprache, Chat inklusive."
   }
 }

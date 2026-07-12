@@ -415,7 +415,7 @@
     },
     "languages": {
       "badge": "Alcance global",
-      "title": "Disponível em 18 idiomas",
+      "title": "Disponível em 17 idiomas",
       "subtitle": "Da Alemanha para o mundo: entenda sua saúde no seu próprio idioma."
     },
     "newToGermany": {
@@ -511,7 +511,7 @@
       "f2": "1 preparação consulta / mês",
       "f3": "4 mensagens IA / mês",
       "f4": "1 perfil (você mesmo)",
-      "f5": "18 idiomas",
+      "f5": "17 idiomas",
       "f6": "PDF com marca d'água",
       "f7": "Sem histórico de saúde"
     },
@@ -524,7 +524,7 @@
       "f2": "Preparações ilimitadas*",
       "f3": "Chat IA ilimitado*",
       "f4": "2 perfis de saúde",
-      "f5": "18 idiomas",
+      "f5": "17 idiomas",
       "f6": "PDF completo",
       "f7": "Histórico de saúde"
     },
@@ -537,7 +537,7 @@
       "f2": "Preparações ilimitadas*",
       "f3": "Chat IA ilimitado*",
       "f4": "Até 5 perfis de membros",
-      "f5": "18 idiomas",
+      "f5": "17 idiomas",
       "f6": "PDF completo",
       "f7": "Histórico familiar compartilhado",
       "f8": "Suporte prioritário"
@@ -552,7 +552,7 @@
       "f2": "Preparações ilimitadas",
       "f3": "Chat IA ilimitado",
       "f4": "Contas multi-usuário",
-      "f5": "18 idiomas",
+      "f5": "17 idiomas",
       "f6": "PDF completo",
       "f7": "Suporte dedicado"
     },
@@ -603,10 +603,10 @@
     "trust": {
       "gdpr": "Conforme LGPD/GDPR",
       "ai": "Desenvolvido com Claude AI",
-      "languages": "18 idiomas"
+      "languages": "17 idiomas"
     },
     "languages": {
-      "title": "Disponível em 18 idiomas",
+      "title": "Disponível em 17 idiomas",
       "subtitle": "Entenda seus relatórios de saúde no seu próprio idioma"
     },
     "faq": {
@@ -678,5 +678,18 @@
     "titleHighlight": "no seu idioma",
     "subtitle": "A Medyra explica documentos médicos alemães em 17 idiomas, incluindo o chat de perguntas.",
     "cta": "Ver todos os idiomas"
+  },
+  "featureShow": {
+    "badge": "Uma plataforma, cada documento",
+    "title": "Seja o que for que o médico envie,",
+    "titleHighlight": "a Medyra explica",
+    "subtitle": "Relatórios de laboratório, cartas médicas, relatórios hospitalares, planos de medicação e cartas do seguro, mais um verificador de valores grátis.",
+    "more": "Saber mais",
+    "descLab": "Verifique um valor grátis ou carregue o relatório completo para uma explicação total.",
+    "descLetter": "Cada termo médico e abreviatura traduzidos para linguagem simples.",
+    "descHospital": "O que aconteceu, o que mudou e o que fazer depois do hospital.",
+    "descMeds": "Para que serve cada medicamento e como tomar, com clareza.",
+    "descInsurance": "Decisões, custos e prazos sem linguagem burocrática.",
+    "descLanguages": "A explicação completa chega no seu idioma, chat incluído."
   }
 }

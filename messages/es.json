@@ -415,7 +415,7 @@
     },
     "languages": {
       "badge": "Alcance global",
-      "title": "Disponible en 18 idiomas",
+      "title": "Disponible en 17 idiomas",
       "subtitle": "De Alemania al mundo: entiende tu salud en tu propio idioma."
     },
     "newToGermany": {
@@ -511,7 +511,7 @@
       "f2": "1 preparación visita / mes",
       "f3": "4 mensajes IA / mes",
       "f4": "1 perfil (tú mismo)",
-      "f5": "18 idiomas",
+      "f5": "17 idiomas",
       "f6": "PDF con marca de agua",
       "f7": "Sin historial de salud"
     },
@@ -524,7 +524,7 @@
       "f2": "Preparaciones ilimitadas*",
       "f3": "Chat IA ilimitado*",
       "f4": "2 perfiles de salud",
-      "f5": "18 idiomas",
+      "f5": "17 idiomas",
       "f6": "PDF completo",
       "f7": "Historial de salud"
     },
@@ -537,7 +537,7 @@
       "f2": "Preparaciones ilimitadas*",
       "f3": "Chat IA ilimitado*",
       "f4": "Hasta 5 perfiles",
-      "f5": "18 idiomas",
+      "f5": "17 idiomas",
       "f6": "PDF completo",
       "f7": "Historial familiar compartido",
       "f8": "Soporte prioritario"
@@ -552,7 +552,7 @@
       "f2": "Preparaciones ilimitadas",
       "f3": "Chat IA ilimitado",
       "f4": "Cuentas multiusuario",
-      "f5": "18 idiomas",
+      "f5": "17 idiomas",
       "f6": "PDF completo",
       "f7": "Soporte dedicado"
     },
@@ -603,10 +603,10 @@
     "trust": {
       "gdpr": "Cumple RGPD",
       "ai": "Impulsado por Claude AI",
-      "languages": "18 idiomas"
+      "languages": "17 idiomas"
     },
     "languages": {
-      "title": "Disponible en 18 idiomas",
+      "title": "Disponible en 17 idiomas",
       "subtitle": "Entiende tus informes de salud en tu propio idioma"
     },
     "faq": {
@@ -678,5 +678,18 @@
     "titleHighlight": "en tu idioma",
     "subtitle": "Medyra explica documentos médicos alemanes en 17 idiomas, incluido el chat de preguntas.",
     "cta": "Ver todos los idiomas"
+  },
+  "featureShow": {
+    "badge": "Una plataforma, cada documento",
+    "title": "Envíe lo que envíe el médico,",
+    "titleHighlight": "Medyra lo explica",
+    "subtitle": "Informes de laboratorio, cartas médicas, informes de hospital, planes de medicación y cartas del seguro, más un chequeo de valores gratis.",
+    "more": "Saber más",
+    "descLab": "Comprueba un valor gratis o sube el informe completo para una explicación total.",
+    "descLetter": "Cada término médico y abreviatura traducidos a lenguaje sencillo.",
+    "descHospital": "Qué pasó, qué cambió y qué hacer después del hospital.",
+    "descMeds": "Para qué sirve cada medicamento y cómo tomarlo, con claridad.",
+    "descInsurance": "Decisiones, costes y plazos sin jerga burocrática.",
+    "descLanguages": "La explicación completa llega en tu idioma, chat incluido."
   }
 }

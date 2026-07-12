@@ -417,7 +417,7 @@
     },
     "languages": {
       "badge": "Wereldwijd bereik",
-      "title": "Beschikbaar in 18 talen",
+      "title": "Beschikbaar in 17 talen",
       "subtitle": "Van Duitsland naar de wereld: begrijp uw gezondheid in uw eigen taal."
     },
     "newToGermany": {
@@ -513,7 +513,7 @@
       "f2": "1 artsbezoekvoorbereiding / maand",
       "f3": "4 AI-chatberichten / maand",
       "f4": "1 profiel (uzelf)",
-      "f5": "18 talen",
+      "f5": "17 talen",
       "f6": "PDF met watermerk",
       "f7": "Geen gezondheidsgeschiedenis"
     },
@@ -526,7 +526,7 @@
       "f2": "Onbeperkte artsbezoeken*",
       "f3": "Onbeperkte AI-chat*",
       "f4": "2 gezondheidsprofielen",
-      "f5": "18 talen",
+      "f5": "17 talen",
       "f6": "Volledige PDF",
       "f7": "Gezondheidsgeschiedenis"
     },
@@ -539,7 +539,7 @@
       "f2": "Onbeperkte artsbezoeken*",
       "f3": "Onbeperkte AI-chat*",
       "f4": "Tot 5 ledenprofielen",
-      "f5": "18 talen",
+      "f5": "17 talen",
       "f6": "Volledige PDF",
       "f7": "Gedeelde familiegeschiedenis",
       "f8": "Prioriteitsondersteuning"
@@ -554,7 +554,7 @@
       "f2": "Onbeperkte voorbereidingen",
       "f3": "Onbeperkte AI-chat",
       "f4": "Multi-gebruikersaccounts",
-      "f5": "18 talen",
+      "f5": "17 talen",
       "f6": "Volledige PDF",
       "f7": "Toegewijde ondersteuning"
     },
@@ -605,10 +605,10 @@
     "trust": {
       "gdpr": "AVG-conform",
       "ai": "Aangedreven door Claude AI",
-      "languages": "18 talen"
+      "languages": "17 talen"
     },
     "languages": {
-      "title": "Beschikbaar in 18 talen",
+      "title": "Beschikbaar in 17 talen",
       "subtitle": "Begrijp uw gezondheidsrapporten in uw eigen taal"
     },
     "faq": {
@@ -680,5 +680,18 @@
     "titleHighlight": "in uw taal",
     "subtitle": "Medyra legt Duitse medische documenten uit in 17 talen, inclusief de vragenchat.",
     "cta": "Alle talen bekijken"
+  },
+  "featureShow": {
+    "badge": "Eén platform, elk document",
+    "title": "Wat de arts ook stuurt,",
+    "titleHighlight": "Medyra legt het uit",
+    "subtitle": "Labuitslagen, artsenbrieven, ziekenhuisverslagen, medicatieplannen en verzekeringsbrieven, plus een gratis waardecheck.",
+    "more": "Meer weten",
+    "descLab": "Check één waarde gratis of upload het hele verslag voor een volledige uitleg.",
+    "descLetter": "Elke medische term en afkorting vertaald naar gewone taal.",
+    "descHospital": "Wat er gebeurd is, wat er veranderd is en wat te doen na het ziekenhuis.",
+    "descMeds": "Waar elk medicijn voor is en hoe u het inneemt, helder uitgelegd.",
+    "descInsurance": "Besluiten, kosten en termijnen zonder ambtelijk jargon.",
+    "descLanguages": "De volledige uitleg komt in uw taal, chat inbegrepen."
   }
 }

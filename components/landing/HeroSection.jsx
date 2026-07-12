@@ -15,7 +15,7 @@ const ECG_MOBILE = 'M0 80 H80 L98 90 L118 24 L138 132 L158 80 H360'
 
 const STATS = [
   { value: '3/mo', labelKey: 'landing.trust.stat1Label' },
-  { value: '18', labelKey: 'landing.trust.stat3Label' },
+  { value: '17', labelKey: 'landing.trust.stat3Label' },
   { value: '<60s', labelKey: 'landing.trust.stat2Label' },
 ]
 

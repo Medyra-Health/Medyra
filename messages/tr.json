@@ -415,7 +415,7 @@
     },
     "languages": {
       "badge": "Küresel erişim",
-      "title": "18 dilde mevcut",
+      "title": "17 dilde mevcut",
       "subtitle": "Almanya'dan dünyaya: sağlığınızı kendi dilinizde anlayın."
     },
     "newToGermany": {
@@ -511,7 +511,7 @@
       "f2": "1 doktor ziyareti hazırlığı / ay",
       "f3": "4 AI sohbet mesajı / ay",
       "f4": "1 profil (kendiniz)",
-      "f5": "18 dil",
+      "f5": "17 dil",
       "f6": "Filigranli PDF",
       "f7": "Sağlık geçmişi yok"
     },
@@ -524,7 +524,7 @@
       "f2": "Sınırsız doktor ziyareti*",
       "f3": "Sınırsız AI sohbeti*",
       "f4": "2 sağlık profili",
-      "f5": "18 dil",
+      "f5": "17 dil",
       "f6": "Tam PDF",
       "f7": "Sağlık geçmişi"
     },
@@ -537,7 +537,7 @@
       "f2": "Sınırsız doktor ziyareti*",
       "f3": "Sınırsız AI sohbeti*",
       "f4": "5 üyeye kadar profil",
-      "f5": "18 dil",
+      "f5": "17 dil",
       "f6": "Tam PDF",
       "f7": "Paylaşılan aile sağlık geçmişi",
       "f8": "Öncelikli destek"
@@ -552,7 +552,7 @@
       "f2": "Sınırsız hazırlık",
       "f3": "Sınırsız AI sohbeti",
       "f4": "Çok kullanıcılı hesaplar",
-      "f5": "18 dil",
+      "f5": "17 dil",
       "f6": "Tam PDF",
       "f7": "Özel destek"
     },
@@ -603,10 +603,10 @@
     "trust": {
       "gdpr": "GDPR uyumlu",
       "ai": "Claude AI ile destekleniyor",
-      "languages": "18 dil"
+      "languages": "17 dil"
     },
     "languages": {
-      "title": "18 dilde mevcut",
+      "title": "17 dilde mevcut",
       "subtitle": "Sağlık raporlarınızı kendi dilinizde anlayın"
     },
     "faq": {
@@ -678,5 +678,18 @@
     "titleHighlight": "kendi dilinizde",
     "subtitle": "Medyra, Almanca tıbbi belgeleri soru-cevap sohbeti dahil 17 dilde açıklar.",
     "cta": "Tüm dilleri gör"
+  },
+  "featureShow": {
+    "badge": "Tek platform, her belge",
+    "title": "Doktor ne gönderirse göndersin,",
+    "titleHighlight": "Medyra açıklar",
+    "subtitle": "Tahlil raporları, doktor mektupları, hastane raporları, ilaç planları ve sigorta yazıları; ayrıca ücretsiz anında değer kontrolü.",
+    "more": "Daha fazla",
+    "descLab": "Tek değeri ücretsiz kontrol edin veya tüm raporu yükleyip eksiksiz açıklama alın.",
+    "descLetter": "Her tıbbi terim ve kısaltma anlaşılır dile çevrilir.",
+    "descHospital": "Ne oldu, ne değişti ve hastaneden sonra ne yapmalı.",
+    "descMeds": "Her ilacın ne için olduğu ve nasıl alınacağı, net şekilde.",
+    "descInsurance": "Kararlar, masraflar ve süreler; bürokrasi Almancası olmadan.",
+    "descLanguages": "Eksiksiz açıklama sizin dilinizde gelir, sohbet dahil."
   }
 }
