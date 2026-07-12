@@ -113,7 +113,7 @@ export default async function LexikonTranslatedPage({ params }) {
 
   return (
     <div className="min-h-screen bg-gray-50" dir={langMeta.rtl ? 'rtl' : 'ltr'}>
-      <JsonLd entry={entry} />
+      <JsonLd entry={entry} lang={lang} />
 
       <AppHeader back={{ href: '/lexikon', label: 'Lexikon' }} title="Laborwerte Lexikon" tone="teal">
         <HeaderButton href={`/upload?source=lexikon&term=${termSlug}`} tone="teal">Upload Report</HeaderButton>

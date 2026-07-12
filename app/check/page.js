@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import AppHeader, { HeaderButton } from '@/components/AppHeader'
+import FeatureCluster from '@/components/FeatureCluster'
 import ValueChecker from '@/components/werte/ValueChecker'
 import { getCheckerEntries } from '@/lib/werte'
 
@@ -176,6 +177,8 @@ export default function CheckPage() {
           <p className="text-xs text-gray-400 mt-4">3 Befunde pro Monat kostenlos · DSGVO-konform · Daten automatisch gelöscht</p>
         </div>
       </section>
+
+      <FeatureCluster current="/check" pageName="Laborwert Checker" />
 
       {/* FAQ */}
       <section className="py-16 md:py-20 bg-white">

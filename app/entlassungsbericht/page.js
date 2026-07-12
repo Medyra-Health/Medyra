@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import AppHeader, { HeaderButton } from '@/components/AppHeader'
+import FeatureCluster from '@/components/FeatureCluster'
 
 export const metadata = {
   title: 'Entlassungsbericht verstehen: Krankenhausbericht einfach erklärt | Medyra',
@@ -197,6 +198,8 @@ export default function EntlassungsberichtPage() {
           </div>
         </div>
       </section>
+
+      <FeatureCluster current="/entlassungsbericht" pageName="Entlassungsbericht verstehen" />
 
       {/* CTA band */}
       <section className="py-16 md:py-20 bg-[#040C08]">

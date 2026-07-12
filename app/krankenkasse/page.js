@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import AppHeader, { HeaderButton } from '@/components/AppHeader'
+import FeatureCluster from '@/components/FeatureCluster'
 
 export const metadata = {
   title: 'Krankenkassen-Brief verstehen: Bescheide einfach erklärt | Medyra',
@@ -197,6 +198,8 @@ export default function KrankenkassePage() {
           </div>
         </div>
       </section>
+
+      <FeatureCluster current="/krankenkasse" pageName="Krankenkasse verstehen" />
 
       {/* CTA band */}
       <section className="py-16 md:py-20 bg-[#040C08]">

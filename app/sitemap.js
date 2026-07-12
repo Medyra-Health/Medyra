@@ -1,9 +1,18 @@
-import { getAllSlugs } from '@/lib/lexikon'
+import { getAllSlugs, SUPPORTED_LANGS } from '@/lib/lexikon'
 
 export default function sitemap() {
   const baseUrl = 'https://medyra.de'
   const now = new Date()
   const lexikonSlugs = getAllSlugs()
+
+  // hreflang set for one lexikon term: German base URL + every translation.
+  // Google uses these to rank the right language version in each country
+  // (the Korean and English lexikon pages are the site's top non-brand pages).
+  const lexikonLanguages = slug => ({
+    de: `${baseUrl}/lexikon/${slug}`,
+    'x-default': `${baseUrl}/lexikon/${slug}`,
+    ...Object.fromEntries(SUPPORTED_LANGS.map(l => [l, `${baseUrl}/lexikon/${l}/${slug}`])),
+  })
 
   return [
     {
@@ -168,11 +177,24 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    // German base lexikon pages (44 terms) with hreflang alternates
     ...lexikonSlugs.map(slug => ({
       url: `${baseUrl}/lexikon/${slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
+      alternates: { languages: lexikonLanguages(slug) },
     })),
+    // Translated lexikon pages (16 languages x 44 terms). These are the
+    // site's strongest organic performers; every one belongs in the sitemap.
+    ...SUPPORTED_LANGS.flatMap(lang =>
+      lexikonSlugs.map(slug => ({
+        url: `${baseUrl}/lexikon/${lang}/${slug}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.7,
+        alternates: { languages: lexikonLanguages(slug) },
+      }))
+    ),
   ]
 }

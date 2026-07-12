@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import AppHeader, { HeaderButton } from '@/components/AppHeader'
+import FeatureCluster from '@/components/FeatureCluster'
 
 export const metadata = {
   title: 'Deutscher Befund, erklärt in Ihrer Sprache: 17 Sprachen | Medyra',
@@ -131,6 +132,8 @@ export default function SprachenPage() {
           </p>
         </div>
       </section>
+
+      <FeatureCluster current="/sprachen" pageName="17 Sprachen" />
 
       {/* CTA band */}
       <section className="py-16 md:py-20 bg-[#040C08]">

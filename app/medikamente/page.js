@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import AppHeader, { HeaderButton } from '@/components/AppHeader'
+import FeatureCluster from '@/components/FeatureCluster'
 
 export const metadata = {
   title: 'Medikationsplan verstehen: Medikamente einfach erklärt | Medyra',
@@ -179,6 +180,8 @@ export default function MedikamentePage() {
           </div>
         </div>
       </section>
+
+      <FeatureCluster current="/medikamente" pageName="Medikamente verstehen" />
 
       {/* CTA band */}
       <section className="py-16 md:py-20 bg-[#040C08]">

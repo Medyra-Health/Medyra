@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import AppHeader, { HeaderButton } from '@/components/AppHeader'
+import FeatureCluster from '@/components/FeatureCluster'
 
 export const metadata = {
   title: 'Arztbrief verstehen: Befund einfach erklärt in 60 Sekunden | Medyra',
@@ -204,6 +205,8 @@ export default function ArztbriefPage() {
           </div>
         </div>
       </section>
+
+      <FeatureCluster current="/arztbrief" pageName="Arztbrief verstehen" />
 
       {/* CTA band */}
       <section className="py-16 md:py-20 bg-[#040C08]">

@@ -32,6 +32,12 @@ export default function JsonLd() {
         ],
         foundingDate: '2024',
         legalName: 'Medyra AI',
+        knowsAbout: [
+          'medical lab results', 'blood test values', 'doctor letters', 'hospital discharge reports',
+          'medication plans', 'prescriptions', 'health insurance letters', 'digital health',
+          'artificial intelligence in healthcare', 'health literacy', 'Laborwerte', 'Arztbriefe',
+          'Medikationsplan', 'Krankenkasse',
+        ],
       },
       {
         '@type': 'WebSite',
@@ -87,12 +93,19 @@ export default function JsonLd() {
         ],
         featureList: [
           'AI-powered medical report explanation',
+          'Free instant lab value checker',
+          'Doctor letter and radiology report explanation',
+          'Hospital discharge report explanation',
+          'Medication plan and prescription explanation',
+          'Health insurance letter explanation',
+          'Explanations written in 17 languages',
           'OCR for scanned lab reports',
           'Abnormal value flagging',
           'Follow-up chat with AI',
+          'Secure expiring share links',
+          'Recheck email reminders',
           'GDPR compliant data handling',
           'Auto-deletion after 30 days',
-          '16 language support',
           'PDF, JPG, PNG, TXT file support',
         ],
         screenshot: 'https://medyra.de/opengraph-image',
@@ -156,7 +169,15 @@ export default function JsonLd() {
             name: 'Which languages does Medyra support?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Medyra is available in 16 languages: English, German, French, Spanish, Italian, Portuguese, Dutch, Polish, Turkish, Arabic, Chinese, Japanese, Korean, Hindi, Bengali, and Russian.',
+              text: 'Medyra is available in 17 languages: English, German, French, Spanish, Italian, Portuguese, Dutch, Polish, Turkish, Arabic, Chinese, Japanese, Korean, Hindi, Bengali, Urdu, and Russian. The AI explanation itself is written in your chosen language.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What documents can Medyra explain?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Medyra explains lab results (Laborbefund), doctor letters (Arztbrief), hospital discharge reports (Entlassungsbericht), radiology reports, medication plans and prescriptions (Medikationsplan, Rezept), and health insurance letters (Krankenkasse). There is also a free instant lab value checker at medyra.de/check.',
             },
           },
           {
