@@ -400,7 +400,7 @@
       "cta": "Kostenlos starten: keine Kreditkarte"
     },
     "doctorVisit": {
-      "badge": "Neue Funktion",
+      "badge": "Beliebteste Funktion",
       "title1": "Zum Arzt?",
       "title2": "Gut vorbereitet.",
       "description": "Beschreiben Sie Ihre Beschwerden: in jeder Sprache. Medyra erstellt eine strukturierte, professionelle deutsche Zusammenfassung für Ihren Arzt.",
@@ -434,7 +434,7 @@
     "security": {
       "badge": "Bankgrad-Verschlüsselung",
       "title": "Ihre Daten sind verschlüsselt: selbst vor uns",
-      "subtitle": "Jeder Bericht, jeder Wert, jede KI-Erklärung wird mit AES-256-GCM verschlüsselt, bevor sie unsere Datenbank berührt. Wir speichern nur Chiffretext. Nur Sie halten den Schlüssel.",
+      "subtitle": "Verschlüsselt, bevor es gespeichert wird. Gelöscht, wenn Sie es sagen. So einfach.",
       "yourReport": "Ihr Befund",
       "ourDatabase": "Unsere Datenbank",
       "feat1Title": "AES-256-GCM",

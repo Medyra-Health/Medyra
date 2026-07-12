@@ -400,7 +400,7 @@
       "cta": "免费开始——无需信用卡"
     },
     "doctorVisit": {
-      "badge": "新功能",
+      "badge": "最受喜爱的功能",
       "title1": "要去看医生？",
       "title2": "做好准备再去。",
       "description": "用任何语言描述您的感受——Medyra将其转化为结构化的德文临床摘要，医生几秒内即可阅读。",
@@ -434,7 +434,7 @@
     "security": {
       "badge": "银行级加密",
       "title": "您的数据已加密——连我们也看不到",
-      "subtitle": "每份报告、每个数值、每条AI解释在接触我们数据库之前都用AES-256-GCM加密。",
+      "subtitle": "存储前先加密。您说删除就删除。就这么简单。",
       "yourReport": "您的报告",
       "ourDatabase": "我们的数据库",
       "feat1Title": "AES-256-GCM",

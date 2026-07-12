@@ -400,7 +400,7 @@
       "cta": "Commencer gratuitement: sans carte"
     },
     "doctorVisit": {
-      "badge": "Nouvelle fonctionnalité",
+      "badge": "Préférée des patients",
       "title1": "Vous allez chez le médecin ?",
       "title2": "Arrivez préparé.",
       "description": "Décrivez ce que vous ressentez: dans n'importe quelle langue. Medyra le transforme en résumé clinique allemand structuré que votre médecin peut lire en secondes.",
@@ -434,7 +434,7 @@
     "security": {
       "badge": "Chiffrement bancaire",
       "title": "Vos données sont chiffrées: même pour nous",
-      "subtitle": "Chaque rapport, chaque valeur, chaque explication IA est chiffré avec AES-256-GCM avant de toucher notre base de données.",
+      "subtitle": "Chiffré avant d’être stocké. Supprimé quand vous le décidez. Aussi simple que ça.",
       "yourReport": "Votre rapport",
       "ourDatabase": "Notre base de données",
       "feat1Title": "AES-256-GCM",

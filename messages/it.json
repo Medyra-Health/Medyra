@@ -400,7 +400,7 @@
       "cta": "Inizia gratis: senza carta"
     },
     "doctorVisit": {
-      "badge": "Nuova funzione",
+      "badge": "La preferita dei pazienti",
       "title1": "Vai dal medico?",
       "title2": "Arriva preparato.",
       "description": "Descrivi come ti senti: in qualsiasi lingua. Medyra lo trasforma in un riassunto clinico tedesco strutturato che il tuo medico può leggere in secondi.",
@@ -434,7 +434,7 @@
     "security": {
       "badge": "Crittografia bancaria",
       "title": "I tuoi dati sono crittografati: anche per noi",
-      "subtitle": "Ogni referto, ogni valore, ogni spiegazione IA è crittografato con AES-256-GCM prima di toccare il nostro database.",
+      "subtitle": "Cifrato prima di essere salvato. Cancellato quando lo decidi tu. Semplice.",
       "yourReport": "Il tuo referto",
       "ourDatabase": "Il nostro database",
       "feat1Title": "AES-256-GCM",

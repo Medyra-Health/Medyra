@@ -123,6 +123,16 @@ export default function LandingPage() {
         .ticker-wrap:hover .ticker-l,
         .ticker-wrap:hover .ticker-r { animation-play-state: paused; }
 
+        /* ── Vault biomarker chips: the highlight walks through the markers ── */
+        @keyframes vaultChip {
+          0%, 20%  { background: rgba(16,185,129,0.18); border-color: rgba(16,185,129,0.5); color: #6EE7B7; }
+          25%, 100% { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: rgba(232,245,240,0.5); }
+        }
+        .vault-chip { animation: vaultChip 8s ease-in-out infinite; }
+        @media (prefers-reduced-motion: reduce) {
+          .vault-chip { animation: none; }
+        }
+
         /* ── Vault chart bars: grow from the baseline on reveal ── */
         .vault-bars .vault-bar {
           transform: scaleY(0);
@@ -511,10 +521,10 @@ export default function LandingPage() {
                 <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-widest">Health Vault</span>
               </div>
 
-              {/* Biomarker tabs */}
+              {/* Biomarker tabs: highlight cycles through the markers */}
               <div className="flex gap-2 flex-wrap">
                 {['Hemoglobin','Ferritin','TSH','HbA1c'].map((b,i)=>(
-                  <span key={b} className={`px-2.5 py-1 rounded-full text-xs font-semibold border ${i===0 ? 'bg-red-900/40 border-red-500/40 text-red-300' : 'bg-white/5 border-white/10 text-[#E8F5F0]/50'}`}>{b}</span>
+                  <span key={b} className="vault-chip px-2.5 py-1 rounded-full text-xs font-semibold border bg-white/5 border-white/10 text-[#E8F5F0]/50" style={{animationDelay:`${i*2}s`}}>{b}</span>
                 ))}
               </div>
 
@@ -530,14 +540,14 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              {/* Stats row */}
+              {/* Stats row: pops in after the bars grow */}
               <div className="grid grid-cols-3 gap-3">
                 {[
                   {label:'Latest',value:'13.8',unit:'g/dL',ok:true},
                   {label:'Normal range',value:'12–17.5',unit:'g/dL',ok:true},
                   {label:'Change',value:'+7.2%',unit:'since Jan',ok:true},
-                ].map(s=>(
-                  <div key={s.label} className="bg-white/5 rounded-xl p-2.5 text-center">
+                ].map((s,i)=>(
+                  <div key={s.label} className={`sr-pop d${i+2} bg-white/5 rounded-xl p-2.5 text-center`}>
                     <p className="text-[10px] text-[#E8F5F0]/50 mb-1">{s.label}</p>
                     <p className={`text-sm font-black ${s.ok ? 'text-emerald-400' : 'text-red-400'}`}>{s.value}</p>
                     <p className="text-[10px] text-[#E8F5F0]/40">{s.unit}</p>
@@ -562,9 +572,9 @@ export default function LandingPage() {
                   color: 'text-emerald-700',
                 },
                 {
-                  icon: '⚠️',
-                  title: 'Trend alerts that matter',
-                  desc: 'If a value changes by more than 10% since your first reading, Medyra flags it. A single value means nothing. The trend tells the story.',
+                  icon: '🧾',
+                  title: 'Every value, not just the famous ones',
+                  desc: 'Medyra tracks every numeric value from your reports, with your lab\'s own units and reference ranges. Nothing gets lost between appointments.',
                   color: 'text-emerald-700',
                 },
                 {
@@ -651,61 +661,32 @@ export default function LandingPage() {
             ))}
           </div>
 
-          {/* What's safe / what Claude sees */}
-          <div className="grid md:grid-cols-2 gap-4 mb-10 scroll-fade delay-2">
-            <div className="rounded-2xl border border-emerald-200 bg-emerald-50/70 p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle className="h-3.5 w-3.5 text-emerald-600" />
-                </div>
-                <p className="text-sm font-bold text-emerald-700">What's always protected</p>
-              </div>
-              <ul className="space-y-2">
-                {[
-                  'Your uploaded reports, encrypted with AES-256-GCM before storage',
-                  'We store only ciphertext: even we cannot read your data',
-                  'Each value encrypted with a unique random key (IV)',
-                  'Data auto-deleted after 30 days',
-                ].map(item => (
-                  <li key={item} className="flex gap-2 text-xs text-gray-700 leading-relaxed">
-                    <span className="text-emerald-500 flex-shrink-0 mt-0.5">·</span>{item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-teal-200 bg-teal-50/70 p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                  <Brain className="h-3.5 w-3.5 text-teal-600" />
-                </div>
-                <p className="text-sm font-bold text-teal-700">What Claude sees (temporarily)</p>
-              </div>
-              <ul className="space-y-2">
-                {[
-                  'Your report content during AI analysis: not logged or stored by Anthropic',
-                  'Your question: processed in-session only',
-                  'Never used to train AI models',
-                  'Connection is encrypted in transit (TLS)',
-                ].map(item => (
-                  <li key={item} className="flex gap-2 text-xs text-gray-700 leading-relaxed">
-                    <span className="text-teal-500 flex-shrink-0 mt-0.5">·</span>{item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10 scroll-fade delay-3">
+          {/* Three plain promises anyone can understand */}
+          <div className="grid md:grid-cols-3 gap-4 mb-10 scroll-fade delay-2">
             {[
-              { icon: '🔑', title: t('landing.security.feat1Title'), desc: t('landing.security.feat1Desc') },
-              { icon: '🇪🇺', title: t('landing.security.feat2Title'), desc: t('landing.security.feat2Desc') },
-              { icon: '🎲', title: t('landing.security.feat3Title'), desc: t('landing.security.feat3Desc') },
-              { icon: '🚫', title: t('landing.security.feat4Title'), desc: t('landing.security.feat4Desc') },
-            ].map(({ icon, title, desc }) => (
-              <div key={title} className="rounded-xl border border-gray-200 bg-white p-4">
-                <div className="text-lg mb-2">{icon}</div>
-                <p className="text-xs font-bold text-[#0B1F17] mb-1">{title}</p>
-                <p className="text-[11px] text-gray-500 leading-relaxed">{desc}</p>
+              {
+                icon: '🔒',
+                title: 'We cannot read your data',
+                desc: 'Everything is locked with bank grade encryption before it touches our database. Only your account can unlock it, not even we can.',
+                accent: 'border-emerald-200 bg-emerald-50/60',
+              },
+              {
+                icon: '🗑️',
+                title: 'You decide how long we keep it',
+                desc: 'By default everything is deleted automatically after 30 days. Want to track trends? Choose to keep your history. Changed your mind? Delete everything instantly. Always your choice.',
+                accent: 'border-teal-200 bg-teal-50/60',
+              },
+              {
+                icon: '🚫',
+                title: 'Never used to train AI',
+                desc: 'Your report is analyzed once and the answer comes back to you. It is not stored by the AI provider and never used for training.',
+                accent: 'border-emerald-200 bg-emerald-50/60',
+              },
+            ].map(({ icon, title, desc, accent }, i) => (
+              <div key={title} className={`sr-pop d${i+1} rounded-2xl border p-6 ${accent}`}>
+                <div className="text-2xl mb-3">{icon}</div>
+                <p className="text-sm font-bold text-[#0B1F17] mb-2">{title}</p>
+                <p className="text-xs text-gray-600 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>

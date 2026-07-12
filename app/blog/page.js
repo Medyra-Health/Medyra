@@ -16,6 +16,34 @@ export const metadata = {
 
 const POSTS = [
   {
+    slug: 'medyra-summer-2026-update',
+    title: 'Everything New at Medyra: Value Checker, 17 Languages, Share Links & More',
+    description:
+      'Our biggest update since launch: a free instant lab value checker, explanations for doctor letters, hospital reports, medication plans and insurance letters, AI explanations written in your language, secure share links, recheck reminders and a referral program.',
+    date: '12 July 2026',
+    readTime: '4 min read',
+    tags: ['Product update', 'New features'],
+    highlight: true,
+  },
+  {
+    slug: 'meet-the-founders',
+    title: 'Meet the Founders: Why We Built Medyra',
+    description:
+      'A builder and a physician walk into a Befund. The team and the mission behind Medyra: nobody should leave a doctor visit more confused than they arrived.',
+    date: '12 July 2026',
+    readTime: '3 min read',
+    tags: ['Team', 'Mission'],
+  },
+  {
+    slug: 'medyra-potsdam-transfer',
+    title: 'Medyra × Potsdam Transfer: Backed by the University of Potsdam Startup Service',
+    description:
+      'Medyra is supported by Potsdam Transfer, the central startup service of the University of Potsdam. Why university backing matters for a health platform, and what stays the same.',
+    date: '12 July 2026',
+    readTime: '2 min read',
+    tags: ['Announcement', 'Partnership'],
+  },
+  {
     slug: 'medizinisches-lexikon-guide',
     title: 'Medyra Lexikon: How to Look Up Any Lab Value, Complete Guide',
     description:
@@ -23,7 +51,6 @@ const POSTS = [
     date: '16 April 2026',
     readTime: '7 min read',
     tags: ['Lexikon', 'Laborwerte', 'Guide'],
-    highlight: true,
   },
   {
     slug: 'health-vault-profiles-guide',

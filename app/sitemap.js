@@ -40,6 +40,24 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/medyra-summer-2026-update`,
+      lastModified: new Date('2026-07-12'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/meet-the-founders`,
+      lastModified: new Date('2026-07-12'),
+      changeFrequency: 'yearly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/medyra-potsdam-transfer`,
+      lastModified: new Date('2026-07-12'),
+      changeFrequency: 'yearly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/medizinisches-lexikon-guide`,
       lastModified: new Date('2026-04-16'),
       changeFrequency: 'monthly',

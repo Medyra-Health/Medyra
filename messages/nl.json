@@ -402,7 +402,7 @@
       "cta": "Gratis starten: geen creditcard"
     },
     "doctorVisit": {
-      "badge": "Nieuwe functie",
+      "badge": "Favoriet bij patiënten",
       "title1": "Naar de dokter?",
       "title2": "Kom voorbereid.",
       "description": "Beschrijf hoe u zich voelt: in elke taal. Medyra maakt er een gestructureerde Duitse samenvatting van die uw arts in seconden kan lezen.",
@@ -436,7 +436,7 @@
     "security": {
       "badge": "Bankwaardige versleuteling",
       "title": "Uw gegevens zijn versleuteld: ook voor ons",
-      "subtitle": "Elk rapport, elke waarde, elke AI-uitleg wordt versleuteld met AES-256-GCM voordat het onze database raakt.",
+      "subtitle": "Versleuteld voordat het wordt opgeslagen. Verwijderd wanneer u dat zegt. Zo simpel.",
       "yourReport": "Uw rapport",
       "ourDatabase": "Onze database",
       "feat1Title": "AES-256-GCM",

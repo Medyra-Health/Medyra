@@ -402,7 +402,7 @@
       "cta": "Start free, no credit card needed"
     },
     "doctorVisit": {
-      "badge": "New feature",
+      "badge": "Patient favorite",
       "title1": "Going to the doctor?",
       "title2": "Arrive prepared.",
       "description": "Describe how you feel in any language. Medyra turns it into a structured, professional German summary your doctor can read in seconds.",
@@ -436,7 +436,7 @@
     "security": {
       "badge": "Bank-grade encryption",
       "title": "Your data is encrypted, safe even from us",
-      "subtitle": "Every report, every value, every AI explanation is encrypted with AES-256-GCM before it touches our database. We store ciphertext. Only you hold the key, through your account.",
+      "subtitle": "Encrypted before it is stored. Deleted when you say so. That simple.",
       "yourReport": "Your report",
       "ourDatabase": "Our database",
       "feat1Title": "AES-256-GCM",

@@ -400,7 +400,7 @@
       "cta": "Ücretsiz başla: kart gerekmez"
     },
     "doctorVisit": {
-      "badge": "Yeni özellik",
+      "badge": "En sevilen özellik",
       "title1": "Doktora mı gidiyorsunuz?",
       "title2": "Hazırlıklı gelin.",
       "description": "Nasıl hissettiğinizi herhangi bir dilde anlatın. Medyra bunu doktorunuzun saniyeler içinde okuyabileceği yapılandırılmış Almanca özete dönüştürür.",
@@ -434,7 +434,7 @@
     "security": {
       "badge": "Banka düzeyinde şifreleme",
       "title": "Verileriniz şifrelendi: bizden bile",
-      "subtitle": "Her rapor, her değer, her yapay zeka açıklaması veritabanımıza dokunmadan önce AES-256-GCM ile şifrelenir.",
+      "subtitle": "Kaydedilmeden önce şifrelenir. Siz isteyince silinir. Bu kadar basit.",
       "yourReport": "Raporunuz",
       "ourDatabase": "Veritabanımız",
       "feat1Title": "AES-256-GCM",
