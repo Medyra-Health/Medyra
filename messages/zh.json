@@ -487,13 +487,13 @@
     "copyright": "© 2026 Medyra. 保留所有权利。德国制造。",
     "partner": "合作伙伴",
     "app": "手机应用",
-    "understand": "终于看得懂",
-    "understandCheck": "即时检查化验值",
-    "understandArztbrief": "解读医生信函",
-    "understandHospital": "看懂出院报告",
-    "understandMedication": "用药一目了然",
-    "understandInsurance": "保险信函不再晦涩",
-    "understandLanguages": "17 种语言解读"
+    "understand": "看得懂",
+    "understandCheck": "数值速查",
+    "understandArztbrief": "医生信函",
+    "understandHospital": "出院报告",
+    "understandMedication": "用药说明",
+    "understandInsurance": "保险信函",
+    "understandLanguages": "17 种语言"
   },
   "pricingPage": {
     "badge": "简单透明的定价",

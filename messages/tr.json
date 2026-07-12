@@ -487,13 +487,13 @@
     "copyright": "© 2026 Medyra. Tüm hakları saklıdır. Almanyada üretilmiştir.",
     "partner": "Ortak",
     "app": "Mobil uygulama",
-    "understand": "Sonunda anlayın",
-    "understandCheck": "Tahlil değerini anında kontrol et",
-    "understandArztbrief": "Doktor mektuplarını çözün",
-    "understandHospital": "Hastane raporlarını anlayın",
-    "understandMedication": "İlaçlar net anlatılır",
-    "understandInsurance": "Sigorta yazıları, bürokrasisiz",
-    "understandLanguages": "17 dilde açıklama"
+    "understand": "Anlayın",
+    "understandCheck": "Değer Kontrolü",
+    "understandArztbrief": "Doktor Mektupları",
+    "understandHospital": "Hastane Raporları",
+    "understandMedication": "İlaçlar",
+    "understandInsurance": "Sigorta Yazıları",
+    "understandLanguages": "17 Dil"
   },
   "pricingPage": {
     "badge": "Basit ve şeffaf fiyatlandırma",

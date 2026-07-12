@@ -192,6 +192,33 @@ export default function HeroSection() {
             </div>
           ))}
         </motion.div>
+
+        {/* Scroll-down invitation: animated mouse indicator, smooth scrolls to content */}
+        <motion.div variants={item} className="flex justify-center mt-10 md:mt-12">
+          <a
+            href="#explore"
+            aria-label="Scroll down"
+            className="hero-scroll-hint group flex flex-col items-center gap-2"
+          >
+            <span className="w-6 h-10 rounded-full border-2 border-emerald-500/40 flex justify-center pt-1.5 transition-colors group-hover:border-emerald-400">
+              <span className="hero-scroll-dot w-1 h-2 rounded-full bg-emerald-400" />
+            </span>
+            <svg className="w-4 h-4 text-emerald-500/50 transition-all group-hover:text-emerald-400 group-hover:translate-y-0.5" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 6l5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
+        </motion.div>
+        <style>{`
+          @keyframes heroScrollDot {
+            0%   { transform: translateY(0);   opacity: 1; }
+            70%  { transform: translateY(14px); opacity: 0; }
+            100% { transform: translateY(0);   opacity: 0; }
+          }
+          .hero-scroll-dot { animation: heroScrollDot 1.8s ease-in-out infinite; }
+          @media (prefers-reduced-motion: reduce) {
+            .hero-scroll-dot { animation: none; }
+          }
+        `}</style>
       </motion.div>
 
       {/* Soft handoff into the light content below */}

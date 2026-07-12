@@ -487,13 +487,13 @@
     "copyright": "© 2026 Medyra. Wszelkie prawa zastrzeżone. Wyprodukowano w Niemczech.",
     "partner": "Partner",
     "app": "Aplikacja mobilna",
-    "understand": "Wreszcie zrozumieć",
-    "understandCheck": "Sprawdź wynik od razu",
-    "understandArztbrief": "Rozszyfruj list lekarski",
-    "understandHospital": "Zrozum wypis ze szpitala",
-    "understandMedication": "Leki jasno wyjaśnione",
-    "understandInsurance": "Pisma z kasy bez urzędniczego języka",
-    "understandLanguages": "Wyjaśnienia w 17 językach"
+    "understand": "Zrozum",
+    "understandCheck": "Sprawdź wynik",
+    "understandArztbrief": "Listy lekarskie",
+    "understandHospital": "Wypisy",
+    "understandMedication": "Leki",
+    "understandInsurance": "Pisma z kasy",
+    "understandLanguages": "17 języków"
   },
   "pricingPage": {
     "badge": "Proste i przejrzyste ceny",

@@ -487,13 +487,13 @@
     "copyright": "© 2026 Medyra. Все права защищены. Сделано в Германии.",
     "partner": "Партнёр",
     "app": "Мобильное приложение",
-    "understand": "Наконец понятно",
-    "understandCheck": "Проверить показатель за секунду",
-    "understandArztbrief": "Расшифровать врачебное письмо",
-    "understandHospital": "Понять больничную выписку",
-    "understandMedication": "Лекарства простыми словами",
-    "understandInsurance": "Письма страховой без канцелярита",
-    "understandLanguages": "Объяснение на 17 языках"
+    "understand": "Понять",
+    "understandCheck": "Проверка значений",
+    "understandArztbrief": "Письма врача",
+    "understandHospital": "Выписки",
+    "understandMedication": "Лекарства",
+    "understandInsurance": "Письма страховой",
+    "understandLanguages": "17 языков"
   },
   "pricingPage": {
     "badge": "Простые и прозрачные цены",

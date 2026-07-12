@@ -490,12 +490,12 @@
     "partner": "Partner",
     "app": "Mobile app",
     "understand": "Understand",
-    "understandCheck": "Check lab values instantly",
-    "understandArztbrief": "Decode doctor letters",
-    "understandHospital": "Understand hospital reports",
-    "understandMedication": "Medications made clear",
-    "understandInsurance": "Insurance letters, no jargon",
-    "understandLanguages": "Explained in 17 languages"
+    "understandCheck": "Value Check",
+    "understandArztbrief": "Doctor Letters",
+    "understandHospital": "Hospital Reports",
+    "understandMedication": "Medications",
+    "understandInsurance": "Insurance Letters",
+    "understandLanguages": "17 Languages"
   },
   "pricingPage": {
     "badge": "Simple, transparent pricing",

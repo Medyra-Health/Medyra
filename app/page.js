@@ -14,6 +14,7 @@ import MedyraLogo from '@/components/MedyraLogo'
 import HeroSection from '@/components/landing/HeroSection'
 import ValueCheckerSection from '@/components/landing/ValueCheckerSection'
 import LanguagesSection from '@/components/landing/LanguagesSection'
+import ScrollToTop from '@/components/ScrollToTop'
 
 const LANGUAGES = [
   { code: 'DE', name: 'Deutsch' },
@@ -530,7 +531,7 @@ export default function LandingPage() {
       <HeroSection />
 
       {/* ── BEFORE / AFTER ── */}
-      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+      <section id="explore" className="py-16 md:py-24 bg-white relative overflow-hidden scroll-mt-16">
         {/* subtle bg orbs */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-0 w-80 h-80 bg-red-100/50 rounded-full blur-3xl" />
@@ -916,6 +917,9 @@ export default function LandingPage() {
 
       {/* ── 17+ LANGUAGES ── */}
       <LanguagesSection />
+
+      {/* Floating back-to-top with scroll progress */}
+      <ScrollToTop />
 
       {/* ── ENCRYPTION / SECURITY ── */}
       <section className="py-20 md:py-28 bg-[#F3FAF6] overflow-hidden">

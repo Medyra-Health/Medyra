@@ -487,13 +487,13 @@
     "copyright": "© 2026 Medyra. جميع الحقوق محفوظة. صنع في ألمانيا.",
     "partner": "شريك",
     "app": "تطبيق الجوال",
-    "understand": "افهم أخيراً",
-    "understandCheck": "افحص قيم التحاليل فوراً",
-    "understandArztbrief": "فُك رموز خطابات الأطباء",
-    "understandHospital": "افهم تقارير المستشفى",
-    "understandMedication": "أدويتك بوضوح",
-    "understandInsurance": "خطابات التأمين بلا تعقيد",
-    "understandLanguages": "الشرح بـ 17 لغة"
+    "understand": "افهم",
+    "understandCheck": "فحص القيم",
+    "understandArztbrief": "خطابات الأطباء",
+    "understandHospital": "تقارير المستشفى",
+    "understandMedication": "الأدوية",
+    "understandInsurance": "خطابات التأمين",
+    "understandLanguages": "17 لغة"
   },
   "pricingPage": {
     "badge": "أسعار بسيطة وشفافة",

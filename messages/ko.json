@@ -487,13 +487,13 @@
     "copyright": "© 2026 Medyra. 모든 권리 보유. 독일 제조.",
     "partner": "파트너",
     "app": "모바일 앱",
-    "understand": "드디어 이해되는",
-    "understandCheck": "검사 수치 즉시 확인",
-    "understandArztbrief": "의사 소견서 해독",
-    "understandHospital": "퇴원 보고서 이해하기",
-    "understandMedication": "약을 쉽게 설명",
-    "understandInsurance": "보험 서류, 어려운 말 없이",
-    "understandLanguages": "17개 언어로 설명"
+    "understand": "이해하기",
+    "understandCheck": "수치 확인",
+    "understandArztbrief": "의사 소견서",
+    "understandHospital": "퇴원 보고서",
+    "understandMedication": "복용약",
+    "understandInsurance": "보험 서류",
+    "understandLanguages": "17개 언어"
   },
   "pricingPage": {
     "badge": "심플하고 투명한 가격",

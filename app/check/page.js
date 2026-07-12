@@ -3,6 +3,8 @@ import AppHeader, { HeaderButton } from '@/components/AppHeader'
 import FeatureCluster from '@/components/FeatureCluster'
 import ValueChecker from '@/components/werte/ValueChecker'
 import { getCheckerEntries } from '@/lib/werte'
+import { getPageLocale, pickContent } from '@/lib/pageLocale'
+import { CONTENT } from './content'
 
 export const metadata = {
   title: 'Laborwert-Checker: Blutwerte sofort einordnen | Medyra',
@@ -16,25 +18,6 @@ export const metadata = {
     url: 'https://medyra.de/check',
   },
 }
-
-const FAQ = [
-  {
-    q: 'Ist der Laborwert-Checker kostenlos?',
-    a: 'Ja. Der Checker ist komplett kostenlos und ohne Anmeldung nutzbar. Ihre Eingaben werden nicht gespeichert.',
-  },
-  {
-    q: 'Welche Blutwerte kann ich prüfen?',
-    a: 'Über 40 gängige Laborwerte: Blutbild (Hämoglobin, Leukozyten, Thrombozyten), Schilddrüse (TSH, FT3, FT4), Stoffwechsel (HbA1c, Cholesterin, LDL, HDL), Entzündung (CRP, BSG), Eisen (Ferritin, Transferrin), Leber, Niere, Elektrolyte und mehr.',
-  },
-  {
-    q: 'Woher stammen die Referenzwerte?',
-    a: 'Die Referenzbereiche entsprechen gängigen Laborstandards für Erwachsene. Ihr Labor kann leicht abweichende Bereiche verwenden. Maßgeblich ist immer der Referenzbereich auf Ihrem Befund.',
-  },
-  {
-    q: 'Ersetzt der Checker einen Arztbesuch?',
-    a: 'Nein. Der Checker ordnet Werte nur allgemein ein und ist keine medizinische Beratung. Besprechen Sie auffällige Werte immer mit Ihrer Ärztin oder Ihrem Arzt.',
-  },
-]
 
 // Same accents the lexikon uses per category
 const CATEGORY_COLORS = {
@@ -51,8 +34,10 @@ const CATEGORY_COLORS = {
   'Urinwerte': 'text-emerald-700 bg-emerald-50 border-emerald-200',
 }
 
-export default function CheckPage() {
+export default async function CheckPage() {
   const entries = getCheckerEntries()
+  const locale = await getPageLocale()
+  const c = pickContent(CONTENT, locale)
 
   const byCategory = entries.reduce((acc, e) => {
     ;(acc[e.category] = acc[e.category] || []).push(e)
@@ -73,7 +58,7 @@ export default function CheckPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      mainEntity: FAQ.map(f => ({
+      mainEntity: c.faq.map(f => ({
         '@type': 'Question',
         name: f.q,
         acceptedAnswer: { '@type': 'Answer', text: f.a },
@@ -86,8 +71,8 @@ export default function CheckPage() {
       <style>{`.font-display { font-family: var(--font-playfair), Georgia, serif; }`}</style>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <AppHeader back={{ href: '/', label: 'Start' }} title="Laborwert-Checker" tone="teal">
-        <HeaderButton href="/upload" tone="teal">Befund hochladen</HeaderButton>
+      <AppHeader back={{ href: '/', label: c.back }} title={c.headerTitle} tone="teal">
+        <HeaderButton href="/upload" tone="teal">{c.headerCta}</HeaderButton>
       </AppHeader>
 
       {/* Dark hero with the live tool */}
@@ -103,14 +88,14 @@ export default function CheckPage() {
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-teal-400/30 bg-teal-400/10 text-teal-300 text-xs font-semibold tracking-wide mb-6">
               <span className="w-1.5 h-1.5 bg-teal-300 rounded-full animate-pulse" />
-              Kostenlos · Ohne Anmeldung
+              {c.badge}
             </div>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-[#E8F5F0] leading-[1.15] mb-4">
-              Ist Ihr Laborwert{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#14B8A6] to-[#34D399]">normal?</span>
+              {c.h1a}{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#14B8A6] to-[#34D399]">{c.h1b}</span>
             </h1>
             <p className="text-[#E8F5F0]/60 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
-              Wert auswählen, Zahl eintippen, sofort sehen, ob er im Referenzbereich liegt. Mit verständlicher Erklärung und möglichen Ursachen.
+              {c.sub}
             </p>
           </div>
 
@@ -118,9 +103,7 @@ export default function CheckPage() {
             <ValueChecker entries={entries} tone="dark" />
           </div>
 
-          <p className="text-center text-xs text-[#E8F5F0]/30 mt-5">
-            Ihre Eingaben werden nicht gespeichert und nicht übertragen. Die Prüfung läuft direkt in Ihrem Browser.
-          </p>
+          <p className="text-center text-xs text-[#E8F5F0]/30 mt-5">{c.privacy}</p>
         </div>
 
         <div aria-hidden="true" className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-b from-transparent to-white pointer-events-none" />
@@ -130,9 +113,9 @@ export default function CheckPage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
-            <p className="text-xs font-bold text-teal-600 uppercase tracking-widest mb-3">Alle Werte</p>
+            <p className="text-xs font-bold text-teal-600 uppercase tracking-widest mb-3">{c.valuesLabel}</p>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-[#0B1F17]">
-              {entries.length}+ Laborwerte, einfach erklärt
+              {entries.length}+ {c.valuesTitle}
             </h2>
           </div>
 
@@ -162,41 +145,33 @@ export default function CheckPage() {
       {/* Upsell: full report */}
       <section className="py-16 md:py-20 bg-[#F3FAF6]">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-[#0B1F17] mb-4">
-            Ein Wert ist nur die halbe Wahrheit
-          </h2>
-          <p className="text-gray-600 text-base leading-relaxed max-w-xl mx-auto mb-8">
-            Laborwerte hängen zusammen: Ein niedriges Ferritin erklärt oft ein niedriges Hämoglobin. Laden Sie Ihren kompletten Befund hoch und Medyra erklärt alle Werte im Zusammenhang, in unter 60 Sekunden.
-          </p>
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-[#0B1F17] mb-4">{c.upsellTitle}</h2>
+          <p className="text-gray-600 text-base leading-relaxed max-w-xl mx-auto mb-8">{c.upsellText}</p>
           <Link
             href="/upload"
             className="inline-flex items-center gap-2 px-8 h-12 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-bold shadow-lg shadow-emerald-500/25 transition-colors"
           >
-            Ganzen Befund erklären lassen
+            {c.upsellCta}
           </Link>
-          <p className="text-xs text-gray-400 mt-4">3 Befunde pro Monat kostenlos · DSGVO-konform · Daten automatisch gelöscht</p>
+          <p className="text-xs text-gray-400 mt-4">{c.upsellNote}</p>
         </div>
       </section>
 
-      <FeatureCluster current="/check" pageName="Laborwert Checker" />
+      <FeatureCluster current="/check" pageName="Laborwert Checker" locale={locale} />
 
       {/* FAQ */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 max-w-2xl">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-[#0B1F17] text-center mb-10">
-            Häufige Fragen
-          </h2>
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-[#0B1F17] text-center mb-10">{c.faqTitle}</h2>
           <div className="space-y-4">
-            {FAQ.map((f, i) => (
+            {c.faq.map((f, i) => (
               <div key={i} className="rounded-2xl border border-gray-200 bg-white p-6">
                 <h3 className="font-bold text-gray-900 text-sm mb-2">{f.q}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-400 text-center mt-8 leading-relaxed">
-            Der Laborwert-Checker dient ausschließlich der allgemeinen Information und ersetzt keine ärztliche Beratung, Diagnose oder Behandlung.
-          </p>
+          <p className="text-xs text-gray-400 text-center mt-8 leading-relaxed">{c.disclaimer}</p>
         </div>
       </section>
     </div>

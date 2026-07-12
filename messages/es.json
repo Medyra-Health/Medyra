@@ -487,13 +487,13 @@
     "copyright": "© 2026 Medyra. Todos los derechos reservados. Hecho en Alemania.",
     "partner": "Socio",
     "app": "App móvil",
-    "understand": "Entender por fin",
-    "understandCheck": "Comprueba tus valores al instante",
-    "understandArztbrief": "Descifra cartas médicas",
-    "understandHospital": "Entiende informes de hospital",
-    "understandMedication": "Medicamentos explicados claro",
-    "understandInsurance": "Cartas del seguro sin jerga",
-    "understandLanguages": "Explicado en 17 idiomas"
+    "understand": "Entiende",
+    "understandCheck": "Chequeo de valores",
+    "understandArztbrief": "Cartas médicas",
+    "understandHospital": "Informes clínicos",
+    "understandMedication": "Medicamentos",
+    "understandInsurance": "Cartas del seguro",
+    "understandLanguages": "17 idiomas"
   },
   "pricingPage": {
     "badge": "Precios simples y transparentes",

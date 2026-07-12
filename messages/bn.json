@@ -487,13 +487,13 @@
     "copyright": "© 2026 Medyra. সর্বস্বত্ব সংরক্ষিত। জার্মানিতে তৈরি।",
     "partner": "অংশীদার",
     "app": "মোবাইল অ্যাপ",
-    "understand": "অবশেষে বোঝা গেল",
-    "understandCheck": "ল্যাব মান সঙ্গে সঙ্গে যাচাই করুন",
-    "understandArztbrief": "ডাক্তারের চিঠির মানে বুঝুন",
-    "understandHospital": "হাসপাতালের রিপোর্ট বুঝুন",
-    "understandMedication": "ওষুধ সহজ ভাষায়",
-    "understandInsurance": "বীমার চিঠি, জটিল ভাষা ছাড়া",
-    "understandLanguages": "১৭টি ভাষায় ব্যাখ্যা"
+    "understand": "বুঝুন",
+    "understandCheck": "মান যাচাই",
+    "understandArztbrief": "ডাক্তারের চিঠি",
+    "understandHospital": "হাসপাতাল রিপোর্ট",
+    "understandMedication": "ওষুধ",
+    "understandInsurance": "বীমার চিঠি",
+    "understandLanguages": "১৭টি ভাষা"
   },
   "pricingPage": {
     "badge": "সহজ, স্বচ্ছ মূল্য নির্ধারণ",
