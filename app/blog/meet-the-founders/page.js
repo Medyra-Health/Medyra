@@ -45,6 +45,19 @@ export default function BlogPost() {
             <strong>Dr. med. Philipp Mattar</strong>, a builder and a physician.
           </p>
           <p>
+            Akash is a software engineer with a Master's in Digital Health from the University of Potsdam
+            and Hasso Plattner Institute. Before Medyra, he built data systems and dashboards for Berlin's
+            State Office for Health and Social Affairs (LAGeSo) and worked as a software engineer at HPI.
+            Medyra is the first product he's designed, built, and shipped end to end, from architecture and
+            data modeling to billing, auth, and day to day operations.
+          </p>
+          <p>
+            Philipp is a board certified Internist who has spent over five years in clinical practice at
+            Berlin hospitals. That time at the bedside is exactly where the idea for Medyra came from,
+            watching patients leave appointments holding documents they couldn't make sense of. He brings a
+            deep fascination with Digital Health, AI, and healthcare transformation to the team.
+          </p>
+          <p>
             That combination is deliberate. Everything Medyra explains has to be two things at once:
             genuinely understandable for a person with no medical background, and medically careful enough
             that a doctor would nod along. The engineering side makes the first part possible. The medical

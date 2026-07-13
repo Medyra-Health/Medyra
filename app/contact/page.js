@@ -14,7 +14,7 @@ const founders = [
     role: 'Co-Founder & CEO',
     photo: '/team/akash-rahman.jpg',
     icon: Rocket,
-    bio: 'Product, technology, and partnerships. Your direct line for anything Medyra: questions, ideas, or collaboration.',
+    bio: 'Software engineer with a Master’s in Digital Health from the University of Potsdam and Hasso Plattner Institute. Before Medyra, he built data systems and dashboards for Berlin’s State Office for Health and Social Affairs (LAGeSo) and worked as a software engineer at HPI. Medyra is the first product he’s built and shipped end to end, architecture, backend, frontend, and operations.',
     email: 'akash@medyra.de',
   },
   {
@@ -22,8 +22,8 @@ const founders = [
     role: 'Co-Founder & CMO · Chief Medical Officer',
     photo: '/team/phillip-mattar.jpg',
     icon: Stethoscope,
-    bio: 'Drives product, partnerships, and strategy together with Akash, and leads the medical side, making sure every explanation is clinically accurate and trustworthy.',
-    email: 'Philipp.Mattar@student.hpi.uni-potsdam.de',
+    bio: 'Board certified Internist, 34, with over five years of clinical experience in Berlin hospitals. Brings a deep fascination with Digital Health, AI, and healthcare transformation, and makes sure every explanation Medyra gives is clinically accurate and trustworthy.',
+    email: 'philipp@medyra.de',
   },
 ]
 
