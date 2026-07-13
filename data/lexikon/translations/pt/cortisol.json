@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "O cortisol é o hormônio do estresse mais importante da glândula adrenal e segue um ritmo diário com os valores mais altos pela manhã. Valores persistentemente elevados podem indicar estresse crônico.",
+  "metaDescription": "Cortisol muito alto ou baixo? Significado, valores normais e causas explicados de forma simples.",
+  "causesElevated": [
+    "Estresse crônico",
+    "Síndrome de Cushing",
+    "Tratamento com corticoides"
+  ],
+  "causesLow": [
+    "Insuficiência adrenal (doença de Addison)",
+    "Doença da hipófise",
+    "Suspensão repentina de tratamento com corticoides"
+  ],
+  "doctorQuestions": [
+    "Meu cortisol corresponde ao horário da coleta de sangue?",
+    "O ACTH também deve ser medido?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo (manhã)",
+    "normal": "Normal (manhã)",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hormônios",
+  "pageTitle": "Cortisol explicado | Medyra"
+}

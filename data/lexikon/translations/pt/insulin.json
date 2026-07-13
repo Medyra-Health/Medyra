@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "A insulina é o hormônio que faz o açúcar no sangue entrar nas células. Valores elevados de insulina em jejum podem indicar resistência à insulina inicial, frequentemente antes que a glicemia esteja elevada.",
+  "metaDescription": "Insulina elevada ou baixa? Significado, valores normais e causas explicados de forma simples.",
+  "causesElevated": [
+    "Resistência à insulina",
+    "Síndrome do ovário policístico (SOP)",
+    "Diabetes tipo 2 inicial",
+    "Sobrepeso"
+  ],
+  "causesLow": [
+    "Diabetes tipo 1",
+    "Diabetes tipo 2 avançado"
+  ],
+  "doctorQuestions": [
+    "Meu valor de insulina indica resistência à insulina?",
+    "O índice HOMA deve ser calculado?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Insulina (em jejum) explicada | Medyra"
+}

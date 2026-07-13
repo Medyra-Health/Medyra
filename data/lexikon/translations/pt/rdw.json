@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "O RDW mede o quanto o tamanho dos glóbulos vermelhos varia. Um valor elevado pode indicar uma deficiência inicial de ferro, vitamina B12 ou ácido fólico, especialmente combinado com um VCM anormal. Converse com seu médico sobre um RDW elevado.",
+  "metaDescription": "RDW elevado? Significado da amplitude de distribuição dos glóbulos vermelhos, valores normais e possíveis causas explicados de forma simples.",
+  "causesElevated": [
+    "Deficiência de ferro",
+    "Deficiência de vitamina B12 ou ácido fólico",
+    "Anemia mista",
+    "Após transfusão de sangue"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "O que significa meu RDW elevado junto com meu VCM?",
+    "Meus níveis de ferro e vitaminas devem ser verificados?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "RDW: amplitude de distribuição dos glóbulos vermelhos explicada | Medyra"
+}

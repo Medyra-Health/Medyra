@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "A bilirrubina direta é a forma de bilirrubina já processada pelo fígado. Um valor elevado geralmente indica estase biliar ou uma doença do fígado ou das vias biliares.",
+  "metaDescription": "Bilirrubina direta elevada? Significado, valores normais e causas explicados de forma simples.",
+  "causesElevated": [
+    "Estase biliar (ex.: cálculos biliares)",
+    "Doença hepática",
+    "Inflamação das vias biliares"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Meu valor indica estase biliar?",
+    "Uma ultrassonografia das vias biliares é útil?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores hepáticos",
+  "pageTitle": "Bilirrubina direta explicada | Medyra"
+}

@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Os anticorpos anti-dsDNA são muito mais específicos para lúpus eritematoso sistêmico do que ANA e são frequentemente usados para confirmar e monitorar a atividade da doença.",
+  "metaDescription": "Anticorpos anti-dsDNA elevados? Significado para lúpus eritematoso sistêmico explicado.",
+  "causesElevated": [
+    "Lúpus eritematoso sistêmico",
+    "Fase ativa da doença com lúpus conhecido"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Este valor confirma um lúpus eritematoso sistêmico?",
+    "O valor indica uma fase ativa atual da doença?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Sistema imunológico",
+  "pageTitle": "Anticorpos anti-dsDNA explicados | Medyra"
+}

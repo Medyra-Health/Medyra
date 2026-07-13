@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "A albumina é a proteína mais importante do sangue e é produzida pelo fígado. Valores baixos podem indicar doença hepática, desnutrição ou perda de proteínas pelos rins.",
+  "metaDescription": "Albumina muito baixa? Significado, valores normais e possíveis causas explicados de forma simples.",
+  "causesElevated": [
+    "Falta de líquidos (desidratação)"
+  ],
+  "causesLow": [
+    "Doença hepática",
+    "Desnutrição",
+    "Doença renal com perda de proteínas",
+    "Inflamação crônica"
+  ],
+  "doctorQuestions": [
+    "O que poderia explicar minha albumina baixa?",
+    "Minha função hepática ou renal deve ser investigada mais?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado (geralmente desidratação)"
+  },
+  "categoryLabel": "Valores hepáticos",
+  "pageTitle": "Albumina explicada | Medyra"
+}

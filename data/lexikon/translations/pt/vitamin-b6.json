@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "A vitamina B6 participa de numerosos processos metabólicos, incluindo o metabolismo nervoso e proteico. Uma deficiência pode causar fadiga, problemas nervosos ou alterações cutâneas.",
+  "metaDescription": "Vitamina B6 muito baixa? Significado, valores normais e causas de deficiência explicados de forma simples.",
+  "causesElevated": [],
+  "causesLow": [
+    "Dieta desequilibrada",
+    "Alcoolismo",
+    "Certos medicamentos (ex.: anti-hipertensivos, antituberculosos)"
+  ],
+  "doctorQuestions": [
+    "Minha deficiência de vitamina B6 poderia explicar meus sintomas?",
+    "Devo suplementar vitamina B6?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal"
+  },
+  "categoryLabel": "Vitaminas",
+  "pageTitle": "Vitamina B6 explicada | Medyra"
+}

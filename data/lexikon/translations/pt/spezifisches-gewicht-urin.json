@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "A densidade específica indica o quão concentrada está a urina e dá pistas sobre o equilíbrio hídrico e a capacidade de concentração dos rins. Valores baixos podem indicar alta ingestão de líquidos.",
+  "metaDescription": "Densidade urinária elevada ou baixa? Significado explicado de forma simples.",
+  "causesElevated": [
+    "Falta de líquidos (desidratação)",
+    "Urina matinal concentrada"
+  ],
+  "causesLow": [
+    "Alta ingestão de líquidos",
+    "Capacidade de concentração renal reduzida",
+    "Diabetes insípido (raro)"
+  ],
+  "doctorQuestions": [
+    "Este valor reflete meu equilíbrio hídrico ou uma doença renal?",
+    "Minha ingestão de líquidos deve ser ajustada?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Valores urinários",
+  "pageTitle": "Densidade urinária explicada | Medyra"
+}

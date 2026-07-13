@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "A amônia é produzida durante a degradação de proteínas e normalmente é tornada inofensiva pelo fígado. Valores elevados podem indicar função hepática reduzida e, em casos acentuados, afetar a função cerebral.",
+  "metaDescription": "Amônia elevada? Significado, valores normais e causas explicados de forma simples.",
+  "causesElevated": [
+    "Doença hepática avançada (cirrose)",
+    "Insuficiência hepática",
+    "Certos distúrbios metabólicos"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Com que urgência minha amônia elevada deve ser tratada?",
+    "Qual é a causa subjacente no meu caso?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores hepáticos",
+  "pageTitle": "Amônia explicada | Medyra"
+}

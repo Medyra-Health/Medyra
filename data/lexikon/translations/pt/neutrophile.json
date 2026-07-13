@@ -1,0 +1,27 @@
+{
+  "shortAnswer": "Os neutrófilos são o tipo mais comum de glóbulos brancos e combatem principalmente infecções bacterianas. Valores elevados costumam indicar uma infecção ou inflamação aguda, valores baixos podem aumentar o risco de infecção.",
+  "metaDescription": "Neutrófilos elevados ou baixos? Significado e causas explicados de forma simples.",
+  "causesElevated": [
+    "Infecção bacteriana",
+    "Inflamação aguda",
+    "Estresse físico intenso",
+    "Tratamento com corticoides"
+  ],
+  "causesLow": [
+    "Infecção viral",
+    "Doença da medula óssea",
+    "Quimioterapia",
+    "Certos medicamentos"
+  ],
+  "doctorQuestions": [
+    "Minha contagem de neutrófilos indica uma infecção bacteriana?",
+    "Meu risco de infecção está atualmente elevado?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Neutrófilos explicados | Medyra"
+}

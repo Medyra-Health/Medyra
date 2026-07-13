@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "Os linfócitos são glóbulos brancos que desempenham um papel central na defesa contra vírus. Valores elevados costumam aparecer com infecções virais, valores baixos podem indicar uma defesa imunológica enfraquecida.",
+  "metaDescription": "Linfócitos elevados ou baixos? Significado, valores normais e causas explicados de forma simples.",
+  "causesElevated": [
+    "Infecção viral",
+    "Infecção crônica",
+    "Certas doenças do sangue"
+  ],
+  "causesLow": [
+    "Imunodeficiência",
+    "Estresse intenso",
+    "Tratamento com corticoides",
+    "Após quimioterapia"
+  ],
+  "doctorQuestions": [
+    "O que poderia explicar minha contagem baixa ou alta de linfócitos?",
+    "Minha defesa imunológica está atualmente enfraquecida?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Linfócitos explicados | Medyra"
+}

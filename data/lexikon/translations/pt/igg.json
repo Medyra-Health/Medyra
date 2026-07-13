@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "A IgG é a classe de anticorpo mais comum e fornece proteção a longo prazo após infecções ou vacinações. Valores baixos podem indicar imunodeficiência, valores elevados infecções crônicas ou inflamação.",
+  "metaDescription": "IgG elevada ou baixa? Significado para o sistema imunológico explicado de forma simples.",
+  "causesElevated": [
+    "Infecção crônica",
+    "Doença autoimune",
+    "Certas doenças do sangue"
+  ],
+  "causesLow": [
+    "Imunodeficiência congênita ou adquirida",
+    "Perda de proteínas pelo rim ou intestino"
+  ],
+  "doctorQuestions": [
+    "Minha IgG indica uma imunodeficiência?",
+    "Outras imunoglobulinas devem ser medidas?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Sistema imunológico",
+  "pageTitle": "IgG explicada | Medyra"
+}

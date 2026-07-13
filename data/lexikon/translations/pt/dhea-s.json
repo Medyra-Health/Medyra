@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "O DHEA-S é produzido quase exclusivamente na glândula adrenal e serve como precursor dos hormônios sexuais. Valores elevados podem indicar maior produção hormonal adrenal.",
+  "metaDescription": "DHEA-S elevado ou baixo? Significado para a função adrenal explicado de forma simples.",
+  "causesElevated": [
+    "Maior atividade adrenal",
+    "Síndrome do ovário policístico",
+    "Tumores adrenais raros"
+  ],
+  "causesLow": [
+    "Declínio relacionado à idade",
+    "Insuficiência adrenal"
+  ],
+  "doctorQuestions": [
+    "Meu DHEA-S poderia estar relacionado a maior pelos corporais ou distúrbios do ciclo?",
+    "Uma imagem adrenal é útil?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (depende da idade)"
+  },
+  "categoryLabel": "Hormônios",
+  "pageTitle": "DHEA-S explicado | Medyra"
+}

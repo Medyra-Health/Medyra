@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "O peptídeo C é produzido durante a produção própria de insulina e mostra quanta insulina o pâncreas ainda está produzindo. Valores baixos sugerem deficiência de insulina como no diabetes tipo 1.",
+  "metaDescription": "Peptídeo C elevado ou baixo? Significado para a produção própria de insulina explicado.",
+  "causesElevated": [
+    "Resistência à insulina",
+    "Diabetes tipo 2 inicial",
+    "Insulinoma (raro)"
+  ],
+  "causesLow": [
+    "Diabetes tipo 1",
+    "Deficiência avançada de insulina"
+  ],
+  "doctorQuestions": [
+    "Meu pâncreas ainda produz insulina suficiente?",
+    "Qual tipo de diabetes eu poderia ter?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Peptídeo C explicado | Medyra"
+}

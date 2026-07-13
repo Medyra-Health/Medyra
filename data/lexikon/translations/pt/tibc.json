@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "A CTLF mede quanto ferro o sangue poderia transportar no total como máximo, refletindo indiretamente a quantidade de transferrina. Valores elevados aparecem tipicamente com deficiência de ferro.",
+  "metaDescription": "CTLF elevada ou baixa? Significado para a deficiência de ferro explicado.",
+  "causesElevated": [
+    "Deficiência de ferro"
+  ],
+  "causesLow": [
+    "Sobrecarga de ferro (hemocromatose)",
+    "Inflamação crônica",
+    "Doença hepática"
+  ],
+  "doctorQuestions": [
+    "Este valor confirma uma deficiência de ferro?",
+    "Outros valores de ferro devem ser medidos?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores do ferro",
+  "pageTitle": "CTLF: capacidade total de ligação do ferro explicada | Medyra"
+}

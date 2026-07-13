@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Os eosinófilos são glóbulos brancos especialmente aumentados em alergias e infestações parasitárias. Um valor elevado pode indicar asma, febre do feno, alergias de pele ou uma infestação parasitária.",
+  "metaDescription": "Eosinófilos elevados? Significado, valores normais e causas como alergias explicados de forma simples.",
+  "causesElevated": [
+    "Alergias (ex.: febre do feno, asma)",
+    "Infestação parasitária",
+    "Doenças de pele como eczema",
+    "Certas reações a medicamentos"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Uma alergia ou infestação parasitária poderia explicar meu valor?",
+    "Um teste de alergia deve ser feito?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Eosinófilos explicados | Medyra"
+}

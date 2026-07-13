@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "A IgE total é um anticorpo elevado em alergias e às vezes em infestações parasitárias. Um valor elevado confirma uma tendência geral a alergias, mas não indica contra qual substância.",
+  "metaDescription": "IgE elevada? Significado para alergias e possíveis causas explicado de forma simples.",
+  "causesElevated": [
+    "Doenças alérgicas (ex.: febre do feno, asma, eczema)",
+    "Infestação parasitária",
+    "Certos distúrbios imunológicos"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Um teste de alergia específico deve ser feito?",
+    "Quais alergias poderiam se aplicar ao meu caso?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Sistema imunológico",
+  "pageTitle": "IgE explicada | Medyra"
+}

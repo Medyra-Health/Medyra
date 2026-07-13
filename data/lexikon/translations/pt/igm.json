@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "A IgM é a primeira classe de anticorpo formada em caso de nova infecção, indicando geralmente uma infecção aguda ou recente. O valor é frequentemente avaliado junto com IgG.",
+  "metaDescription": "IgM elevada ou baixa? Significado para infecções agudas explicado de forma simples.",
+  "causesElevated": [
+    "Infecção aguda",
+    "Certas doenças autoimunes",
+    "Certas doenças do sangue (ex.: macroglobulinemia de Waldenström)"
+  ],
+  "causesLow": [
+    "Imunodeficiência congênita ou adquirida"
+  ],
+  "doctorQuestions": [
+    "Minha IgM indica uma infecção aguda?",
+    "A IgG também deve ser medida?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Sistema imunológico",
+  "pageTitle": "IgM explicada | Medyra"
+}

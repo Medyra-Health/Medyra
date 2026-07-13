@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "A IgA protege principalmente as mucosas das vias respiratórias e do intestino contra patógenos. A deficiência de IgA é a imunodeficiência congênita mais comum e frequentemente ocorre sem sintomas.",
+  "metaDescription": "IgA elevada ou baixa? Significado para o sistema imunológico explicado de forma simples.",
+  "causesElevated": [
+    "Inflamações crônicas das mucosas",
+    "Doença hepática",
+    "Doenças autoimunes"
+  ],
+  "causesLow": [
+    "Deficiência congênita de IgA (frequentemente sem sintomas)",
+    "Certas doenças intestinais"
+  ],
+  "doctorQuestions": [
+    "Minha deficiência de IgA é clinicamente significativa?",
+    "Isso deve ser considerado para futuras transfusões de sangue?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Sistema imunológico",
+  "pageTitle": "IgA explicada | Medyra"
+}

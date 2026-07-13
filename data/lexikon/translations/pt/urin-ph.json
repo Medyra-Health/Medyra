@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "O pH da urina mostra se ela é mais ácida ou básica, sendo influenciado pela dieta, metabolismo e certas doenças. Também desempenha um papel na formação de certos tipos de cálculos renais.",
+  "metaDescription": "pH urinário elevado ou baixo? Significado e causas explicados de forma simples.",
+  "causesElevated": [
+    "Dieta vegetariana/alcalinizante",
+    "Infecção urinária",
+    "Distúrbio da função renal"
+  ],
+  "causesLow": [
+    "Dieta rica em proteínas",
+    "Descompensação metabólica (ex.: cetoacidose)"
+  ],
+  "doctorQuestions": [
+    "Meu pH urinário influencia a formação de cálculos renais?",
+    "Minha dieta deve ser ajustada?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Valores urinários",
+  "pageTitle": "pH urinário explicado | Medyra"
+}

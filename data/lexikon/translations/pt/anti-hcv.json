@@ -1,0 +1,15 @@
+{
+  "shortAnswer": "Os anticorpos anti-HCV indicam que o corpo teve contato com o vírus da hepatite C em algum momento. Um teste positivo não significa automaticamente uma infecção ativa, devendo ser confirmado por um teste adicional (PCR).",
+  "metaDescription": "Anti-HCV positivo? Significado para uma infecção por hepatite C explicado de forma simples.",
+  "causesElevated": [
+    "Infecção atual por hepatite C",
+    "Infecção por hepatite C resolvida e curada"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Um teste PCR adicional é necessário para confirmação?",
+    "Tenho uma infecção ativa ou resolvida?"
+  ],
+  "categoryLabel": "Marcadores de infecção",
+  "pageTitle": "Anti-HCV explicado | Medyra"
+}

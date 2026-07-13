@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "A colinesterase é produzida pelo fígado e mostra o quão bem o fígado está produzindo proteínas atualmente. Valores baixos podem indicar função hepática reduzida ou intoxicação, valores elevados aparecem com fígado gorduroso ou diabetes.",
+  "metaDescription": "Colinesterase muito baixa ou alta? Significado e causas explicados de forma simples.",
+  "causesElevated": [
+    "Fígado gorduroso",
+    "Diabetes mellitus",
+    "Sobrepeso"
+  ],
+  "causesLow": [
+    "Doença hepática avançada",
+    "Intoxicação (ex.: pesticidas)",
+    "Desnutrição"
+  ],
+  "doctorQuestions": [
+    "Meu valor de colinesterase indica função hepática reduzida?",
+    "Outros valores hepáticos devem ser verificados?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores hepáticos",
+  "pageTitle": "Colinesterase explicada | Medyra"
+}

@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "O zinco participa de muitas reações enzimáticas, cicatrização de feridas e sistema imunológico. Uma deficiência pode se manifestar como queda de cabelo, problemas de cicatrização ou maior suscetibilidade a infecções.",
+  "metaDescription": "Zinco muito baixo ou alto? Significado, valores normais e causas explicados de forma simples.",
+  "causesElevated": [
+    "Overdose por suplementos alimentares"
+  ],
+  "causesLow": [
+    "Dieta desequilibrada",
+    "Doenças intestinais crônicas",
+    "Maior demanda (ex.: gravidez)"
+  ],
+  "doctorQuestions": [
+    "Uma deficiência de zinco poderia explicar meus sintomas?",
+    "Devo suplementar zinco?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Oligoelementos",
+  "pageTitle": "Zinco explicado | Medyra"
+}

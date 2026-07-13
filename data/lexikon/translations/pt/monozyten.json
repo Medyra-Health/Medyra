@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Os monócitos são glóbulos brancos que absorvem e eliminam patógenos e regulam processos inflamatórios. Valores elevados costumam aparecer com inflamações crônicas ou durante a fase de recuperação após uma infecção.",
+  "metaDescription": "Monócitos elevados? Significado, valores normais e possíveis causas explicados de forma simples.",
+  "causesElevated": [
+    "Inflamação crônica",
+    "Fase de recuperação após infecção",
+    "Certas doenças do sangue",
+    "Doenças autoimunes"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "O que poderia explicar minha contagem elevada de monócitos?",
+    "Exames adicionais são necessários?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Monócitos explicados | Medyra"
+}

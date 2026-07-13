@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Os TRAb são anticorpos que ativam o receptor de TSH da tireoide e podem, assim, desencadear hiperatividade. Um valor elevado é típico da doença de Graves.",
+  "metaDescription": "TRAb elevados? Significado para a doença de Graves e hiperatividade da tireoide explicado.",
+  "causesElevated": [
+    "Doença de Graves",
+    "Hiperatividade tireoidiana autoimune"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Este valor confirma a doença de Graves?",
+    "Como será tratada minha hiperatividade da tireoide?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Tireoide",
+  "pageTitle": "TRAb explicados | Medyra"
+}

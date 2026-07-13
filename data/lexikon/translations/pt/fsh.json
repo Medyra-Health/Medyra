@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "O FSH controla a maturação dos óvulos nas mulheres e a produção de espermatozoides nos homens. Nas mulheres, o valor aumenta significativamente durante a menopausa.",
+  "metaDescription": "FSH elevado ou baixo? Significado para a menopausa e a fertilidade explicado.",
+  "causesElevated": [
+    "Menopausa",
+    "Função ovariana ou testicular reduzida"
+  ],
+  "causesLow": [
+    "Doença da hipófise",
+    "Perda de peso significativa ou esporte competitivo"
+  ],
+  "doctorQuestions": [
+    "Meu FSH indica o início da menopausa?",
+    "O que este valor significa para minha fertilidade?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (depende do ciclo em mulheres)",
+    "elevated": "Elevado (ex.: menopausa)"
+  },
+  "categoryLabel": "Hormônios",
+  "pageTitle": "FSH explicado | Medyra"
+}

@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "A apolipoproteína B faz parte das partículas de colesterol \"ruim\" (incluindo LDL) e é considerada um marcador preciso do risco cardiovascular, pois reflete o número total dessas partículas.",
+  "metaDescription": "Apolipoproteína B (ApoB) elevada? Significado para o risco cardiovascular explicado.",
+  "causesElevated": [
+    "Colesterol LDL elevado",
+    "Risco cardiovascular aumentado",
+    "Dieta desfavorável",
+    "Distúrbios metabólicos"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Qual a importância da ApoB comparada ao meu valor de LDL?",
+    "Meu tratamento para colesterol deve ser ajustado?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Apolipoproteína B (ApoB) explicada | Medyra"
+}

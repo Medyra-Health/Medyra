@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "O ACTH é produzido pela hipófise e controla a produção de cortisol da glândula adrenal. O valor é sempre avaliado junto com o cortisol para distinguir uma doença adrenal de uma doença da hipófise.",
+  "metaDescription": "ACTH elevado ou baixo? Significado junto com o cortisol explicado de forma simples.",
+  "causesElevated": [
+    "Insuficiência adrenal (doença de Addison)",
+    "Tumor produtor de ACTH (raro)"
+  ],
+  "causesLow": [
+    "Doença da hipófise",
+    "Síndrome de Cushing por tumor adrenal"
+  ],
+  "doctorQuestions": [
+    "O que a relação entre ACTH e meu cortisol mostra?",
+    "Uma avaliação adicional da hipófise é necessária?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Hormônios",
+  "pageTitle": "ACTH explicado | Medyra"
+}

@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "A homocisteína é um produto intermediário do metabolismo proteico, degradado com a ajuda de vitamina B12, ácido fólico e vitamina B6. Valores elevados costumam resultar de uma deficiência dessas vitaminas.",
+  "metaDescription": "Homocisteína elevada? Significado, valores normais e causas como deficiência vitamínica explicados.",
+  "causesElevated": [
+    "Deficiência de vitamina B12",
+    "Deficiência de ácido fólico",
+    "Deficiência de vitamina B6",
+    "Doença renal"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Tenho uma deficiência vitamínica como causa?",
+    "Devo suplementar vitamina B12 ou ácido fólico?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Homocisteína explicada | Medyra"
+}

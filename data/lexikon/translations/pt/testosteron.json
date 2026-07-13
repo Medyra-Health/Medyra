@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "A testosterona é o hormônio sexual masculino mais importante, mas também está presente em menor quantidade nas mulheres. Valores baixos em homens podem se manifestar como fadiga ou diminuição da libido.",
+  "metaDescription": "Testosterona muito baixa ou alta? Significado, valores normais e causas explicados de forma simples.",
+  "causesElevated": [
+    "Síndrome do ovário policístico (em mulheres)",
+    "Certos distúrbios adrenais",
+    "Uso de esteroides anabolizantes"
+  ],
+  "causesLow": [
+    "Deficiência de testosterona relacionada à idade",
+    "Disfunção testicular",
+    "Doenças da hipófise",
+    "Estresse crônico"
+  ],
+  "doctorQuestions": [
+    "Meu valor de testosterona explica sintomas como fadiga?",
+    "A terapia de reposição hormonal deve ser considerada?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo (Homem)",
+    "normal": "Normal (Homem)",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hormônios",
+  "pageTitle": "Testosterona explicada | Medyra"
+}

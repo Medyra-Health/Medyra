@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "A vitamina K é necessária para a coagulação do sangue e o metabolismo ósseo. Uma deficiência pode causar maior tendência a sangramento e ocorre com distúrbios de absorção de gorduras ou antibioticoterapia prolongada.",
+  "metaDescription": "Vitamina K muito baixa? Significado para a coagulação, valores normais e causas explicados.",
+  "causesElevated": [],
+  "causesLow": [
+    "Distúrbio de absorção de gorduras",
+    "Antibioticoterapia prolongada",
+    "Desnutrição",
+    "Doença hepática"
+  ],
+  "doctorQuestions": [
+    "Uma deficiência de vitamina K explica minha maior tendência a sangramento?",
+    "Devo suplementar vitamina K?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal"
+  },
+  "categoryLabel": "Vitaminas",
+  "pageTitle": "Vitamina K explicada | Medyra"
+}

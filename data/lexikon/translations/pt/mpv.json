@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "O VPM indica o tamanho médio das plaquetas. Plaquetas maiores costumam ser recém-formadas e sugerem maior renovação, enquanto plaquetas menores sugerem produção reduzida na medula óssea.",
+  "metaDescription": "VPM muito alto ou baixo? Significado do volume plaquetário médio explicado de forma simples.",
+  "causesElevated": [
+    "Aumento da produção de plaquetas",
+    "Trombocitopenia imune (PTI)",
+    "Após perda de sangue"
+  ],
+  "causesLow": [
+    "Distúrbios da medula óssea",
+    "Produção reduzida de plaquetas"
+  ],
+  "doctorQuestions": [
+    "Meu VPM corresponde à minha contagem de plaquetas?",
+    "Um exame de medula óssea é necessário?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "VPM: volume plaquetário médio explicado | Medyra"
+}

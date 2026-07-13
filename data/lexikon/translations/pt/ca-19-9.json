@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "O CA 19-9 é medido principalmente em relação ao pâncreas e vias biliares, mas também pode aumentar com estase biliar, inflamação ou outras condições benignas.",
+  "metaDescription": "CA 19-9 elevado? Significado do marcador tumoral e possíveis causas explicados.",
+  "causesElevated": [
+    "Estase biliar",
+    "Pancreatite",
+    "Doença hepática",
+    "Câncer de pâncreas (uma das possíveis causas)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Qual causa é mais provável para meu valor elevado?",
+    "Uma imagem do pâncreas é útil?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Marcadores tumorais",
+  "pageTitle": "CA 19-9 explicado | Medyra"
+}

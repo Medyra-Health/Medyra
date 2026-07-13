@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "A microalbumina mede quantidades muito pequenas de proteína na urina que uma fita de urina normal não detecta. Um valor elevado costuma ser um sinal precoce de dano renal inicial, especialmente com diabetes ou hipertensão.",
+  "metaDescription": "Microalbumina na urina elevada? Significado, valores normais e causas explicados de forma simples.",
+  "causesElevated": [
+    "Dano renal diabético inicial",
+    "Pressão arterial alta",
+    "Inflamação renal"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Este é um sinal precoce de dano renal?",
+    "Minha pressão arterial ou glicemia devem ser melhor controladas?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores renais",
+  "pageTitle": "Microalbumina na urina explicada | Medyra"
+}

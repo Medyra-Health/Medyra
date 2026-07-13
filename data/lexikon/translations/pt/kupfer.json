@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "O cobre participa da formação sanguínea, tecido conjuntivo e sistema nervoso. Uma deficiência é rara e ocorre principalmente após cirurgia gástrica, valores elevados podem resultar de influências hormonais.",
+  "metaDescription": "Cobre muito baixo ou alto? Significado, valores normais e causas explicados de forma simples.",
+  "causesElevated": [
+    "Influências hormonais (pílula anticoncepcional, gravidez)",
+    "Doenças inflamatórias"
+  ],
+  "causesLow": [
+    "Estado após cirurgia gástrica",
+    "Desnutrição",
+    "Doenças genéticas raras (doença de Wilson)"
+  ],
+  "doctorQuestions": [
+    "O que poderia explicar meu valor anormal de cobre?",
+    "Exames adicionais são necessários?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Oligoelementos",
+  "pageTitle": "Cobre explicado | Medyra"
+}

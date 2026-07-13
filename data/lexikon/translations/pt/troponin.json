@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "A troponina é um marcador altamente específico de dano ao músculo cardíaco e o valor laboratorial mais importante em caso de suspeita de infarto. Mesmo valores levemente elevados são levados a sério.",
+  "metaDescription": "Troponina elevada? Significado para infarto e dano cardíaco explicado.",
+  "causesElevated": [
+    "Infarto do miocárdio",
+    "Miocardite",
+    "Esforço físico intenso",
+    "Função renal reduzida"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Com que urgência minha troponina elevada deve ser avaliada?",
+    "Uma segunda medição está planejada?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Marcadores cardíacos",
+  "pageTitle": "Troponina explicada | Medyra"
+}

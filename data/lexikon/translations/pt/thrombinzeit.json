@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "O tempo de trombina testa a última etapa da coagulação do sangue, a conversão do fibrinogênio em fibrina. Um valor prolongado costuma ocorrer com terapia com heparina.",
+  "metaDescription": "Tempo de trombina prolongado? Significado para a coagulação do sangue explicado de forma simples.",
+  "causesElevated": [
+    "Terapia com heparina",
+    "Deficiência de fibrinogênio",
+    "Doença hepática"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Meu tempo de trombina prolongado está relacionado a um medicamento que estou tomando?",
+    "Meu fibrinogênio deve ser verificado também?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Prolongado"
+  },
+  "categoryLabel": "Coagulação",
+  "pageTitle": "Tempo de trombina explicado | Medyra"
+}

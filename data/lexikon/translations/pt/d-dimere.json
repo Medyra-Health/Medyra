@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Os D-dímeros se formam durante a degradação de coágulos sanguíneos e são um elemento importante na avaliação de uma possível trombose ou embolia pulmonar. Um valor normal torna uma trombose aguda menos provável.",
+  "metaDescription": "D-dímeros elevados? Significado para trombose e embolia pulmonar explicado de forma simples.",
+  "causesElevated": [
+    "Trombose",
+    "Embolia pulmonar",
+    "Após cirurgia",
+    "Gravidez",
+    "Inflamação ou infecção aguda"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Uma trombose ou embolia pulmonar deve ser descartada no meu caso?",
+    "Exames adicionais como imagem são necessários?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Coagulação",
+  "pageTitle": "D-dímeros explicados | Medyra"
+}

@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "O fator do complemento C4, assim como o C3, pertence ao sistema complemento da defesa imunológica. Valores baixos são frequentemente medidos junto com C3 em caso de suspeita de doenças autoimunes como lúpus.",
+  "metaDescription": "Fator do complemento C4 elevado ou baixo? Significado para doenças autoimunes explicado.",
+  "causesElevated": [
+    "Inflamação ou infecção aguda"
+  ],
+  "causesLow": [
+    "Doenças autoimunes (ex.: lúpus eritematoso sistêmico)",
+    "Deficiência congênita do complemento"
+  ],
+  "doctorQuestions": [
+    "O que meu C4 significa junto com meu C3 e meus sintomas?",
+    "Um reumatologista deve ser consultado?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Sistema imunológico",
+  "pageTitle": "Complemento C4 explicado | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Os basófilos são o tipo mais raro de glóbulos brancos e desempenham um papel em reações alérgicas e inflamação crônica. Valores ligeiramente elevados costumam ser inofensivos, valores claramente elevados devem ser avaliados por um médico.",
+  "metaDescription": "Basófilos elevados? Significado e possíveis causas explicados de forma simples.",
+  "causesElevated": [
+    "Reações alérgicas",
+    "Inflamação crônica",
+    "Certas doenças do sangue"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Minha contagem elevada de basófilos é clinicamente relevante?",
+    "Exames adicionais são necessários?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Basófilos explicados | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "A amilase é uma enzima digestiva produzida principalmente no pâncreas e nas glândulas salivares. Valores muito elevados costumam aparecer com pancreatite aguda.",
+  "metaDescription": "Amilase elevada? Significado para o pâncreas explicado de forma simples.",
+  "causesElevated": [
+    "Pancreatite aguda",
+    "Inflamação das glândulas salivares",
+    "Cálculos biliares"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Minha amilase elevada indica uma pancreatite?",
+    "A lipase também deve ser medida?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores pancreáticos",
+  "pageTitle": "Amilase explicada | Medyra"
+}

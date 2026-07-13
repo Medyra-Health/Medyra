@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "O paratormônio é produzido pelas glândulas paratireoides e regula o equilíbrio de cálcio junto com a vitamina D. Valores elevados podem indicar hiperfunção das paratireoides ou deficiência de vitamina D.",
+  "metaDescription": "Paratormônio (PTH) elevado ou baixo? Significado para o equilíbrio de cálcio explicado.",
+  "causesElevated": [
+    "Hiperfunção das paratireoides",
+    "Deficiência de vitamina D",
+    "Doença renal crônica"
+  ],
+  "causesLow": [
+    "Hipoparatireoidismo",
+    "Após cirurgia de tireoide"
+  ],
+  "doctorQuestions": [
+    "Meu PTH está relacionado ao meu nível de cálcio ou vitamina D?",
+    "Um distúrbio paratireoidiano deve ser investigado?"
+  ],
+  "rangeLabels": {
+    "low": "Baixo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hormônios",
+  "pageTitle": "Paratormônio (PTH) explicado | Medyra"
+}

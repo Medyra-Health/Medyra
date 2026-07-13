@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "O IGF-1 reflete a atividade do hormônio do crescimento e é usado para avaliar distúrbios de crescimento em crianças, bem como suspeita de disfunção hipofisária em adultos.",
+  "metaDescription": "IGF-1 elevado ou baixo? Significado para a função do hormônio do crescimento explicado.",
+  "causesElevated": [
+    "Superprodução de hormônio do crescimento (acromegalia)"
+  ],
+  "causesLow": [
+    "Deficiência de hormônio do crescimento",
+    "Desnutrição",
+    "Doenças crônicas"
+  ],
+  "doctorQuestions": [
+    "O que meu IGF-1 significa para minha função de hormônio do crescimento?",
+    "Exames hormonais adicionais são úteis?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (fortemente dependente da idade)"
+  },
+  "categoryLabel": "Hormônios",
+  "pageTitle": "IGF-1 explicado | Medyra"
+}

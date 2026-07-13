@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "A lipase é uma enzima digestiva do pâncreas e é considerada um marcador mais específico de pancreatite do que a amilase. Valores claramente elevados, geralmente com forte dor abdominal, devem ser avaliados rapidamente.",
+  "metaDescription": "Lipase elevada? Significado para a pancreatite explicado de forma simples.",
+  "causesElevated": [
+    "Pancreatite aguda",
+    "Cálculos biliares",
+    "Função renal reduzida"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Com que urgência minha lipase elevada deve ser avaliada?",
+    "Uma imagem do pâncreas é necessária?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores pancreáticos",
+  "pageTitle": "Lipase explicada | Medyra"
+}

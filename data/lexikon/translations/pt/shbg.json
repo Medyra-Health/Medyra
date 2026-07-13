@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "A SHBG liga os hormônios sexuais no sangue e afeta quanto está disponível e ativo livremente. O valor é frequentemente medido junto com testosterona para estimar melhor a fração hormonal realmente ativa.",
+  "metaDescription": "SHBG elevada ou baixa? Significado para os valores hormonais explicado de forma simples.",
+  "causesElevated": [
+    "Hipertireoidismo",
+    "Gravidez",
+    "Terapia com estrogênio"
+  ],
+  "causesLow": [
+    "Sobrepeso",
+    "Resistência à insulina",
+    "Hipotireoidismo"
+  ],
+  "doctorQuestions": [
+    "Como minha SHBG influencia a interpretação da minha testosterona?",
+    "A testosterona livre deve ser calculada?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Hormônios",
+  "pageTitle": "SHBG explicada | Medyra"
+}
