@@ -1,4 +1,8 @@
 import { ClerkProvider } from '@clerk/nextjs'
+import {
+  enUS, deDE, bnIN, frFR, esES, itIT, ptPT, nlNL, plPL,
+  trTR, arSA, zhCN, jaJP, koKR, hiIN, ruRU,
+} from '@clerk/localizations'
 import { NextIntlClientProvider } from 'next-intl'
 import { Inter, Playfair_Display, DM_Sans } from 'next/font/google'
 import { cookies } from 'next/headers'
@@ -150,6 +154,13 @@ export const metadata = {
 
 const SUPPORTED_LOCALES = ['en','de','bn','fr','es','it','pt','nl','pl','tr','ar','zh','ja','ko','hi','ur','ru']
 
+// Clerk ships no Urdu pack; sign-in/sign-up fall back to English for that locale.
+const CLERK_LOCALIZATIONS = {
+  en: enUS, de: deDE, bn: bnIN, fr: frFR, es: esES, it: itIT, pt: ptPT,
+  nl: nlNL, pl: plPL, tr: trTR, ar: arSA, zh: zhCN, ja: jaJP, ko: koKR,
+  hi: hiIN, ru: ruRU,
+}
+
 export default async function RootLayout({ children }) {
   const cookieStore = await cookies()
   const rawLocale = cookieStore.get('locale')?.value || 'en'
@@ -163,7 +174,7 @@ export default async function RootLayout({ children }) {
   }
 
   return (
-    <ClerkProvider>
+    <ClerkProvider localization={CLERK_LOCALIZATIONS[locale] || enUS}>
       <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${inter.className} ${playfair.variable} ${dmSans.variable} scroll-smooth`}>
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />

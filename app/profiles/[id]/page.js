@@ -4,6 +4,7 @@ import { use, useEffect, useState } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { useUser } from '@clerk/nextjs'
+import { useTranslations } from 'next-intl'
 import {
   ArrowLeft, FileText, ExternalLink, TrendingUp, TrendingDown,
   AlertTriangle, CheckCircle, Activity, User, Baby, Heart, Users,
@@ -13,13 +14,13 @@ import MedyraLogo from '@/components/MedyraLogo'
 import AppHeader, { HeaderButton } from '@/components/AppHeader'
 import { collectMarkers, latestValue, markerMeta } from '@/components/HealthTimeline'
 
-// Document types the analysis backend classifies, with icons + labels for filtering.
+// Document types the analysis backend classifies, with icons + i18n label keys for filtering.
 const DOC_TYPES = {
-  lab:          { label: 'Lab reports',    icon: Activity,     color: 'text-emerald-600 bg-emerald-50 border-emerald-200' },
-  letter:       { label: 'Doctor letters', icon: Stethoscope,  color: 'text-blue-600 bg-blue-50 border-blue-200' },
-  prescription: { label: 'Prescriptions',  icon: Pill,         color: 'text-violet-600 bg-violet-50 border-violet-200' },
-  insurance:    { label: 'Insurance',      icon: ShieldCheck,  color: 'text-amber-600 bg-amber-50 border-amber-200' },
-  other:        { label: 'Other',          icon: Mail,         color: 'text-gray-600 bg-gray-50 border-gray-200' },
+  lab:          { labelKey: 'labLabel',          icon: Activity,     color: 'text-emerald-600 bg-emerald-50 border-emerald-200' },
+  letter:       { labelKey: 'letterLabel',       icon: Stethoscope,  color: 'text-blue-600 bg-blue-50 border-blue-200' },
+  prescription: { labelKey: 'prescriptionLabel', icon: Pill,         color: 'text-violet-600 bg-violet-50 border-violet-200' },
+  insurance:    { labelKey: 'insuranceLabel',    icon: ShieldCheck,  color: 'text-amber-600 bg-amber-50 border-amber-200' },
+  other:        { labelKey: 'otherLabel',        icon: Mail,         color: 'text-gray-600 bg-gray-50 border-gray-200' },
 }
 function reportDocType(r) {
   try {
@@ -34,9 +35,12 @@ function reportInShort(r) {
   } catch { return '' }
 }
 
+const REL_LABEL_KEYS = { self: 'relSelf', partner: 'relPartner', child: 'relChild', parent: 'relParent' }
+const GENDER_LABEL_KEYS = { male: 'genderMale', female: 'genderFemale', other: 'genderOther', prefer_not: 'genderPreferNot' }
+
 const HealthTimeline = dynamic(() => import('@/components/HealthTimeline'), {
   ssr: false,
-  loading: () => <div className="h-48 flex items-center justify-center text-sm text-gray-400">Loading chart…</div>,
+  loading: () => <div className="h-48 flex items-center justify-center"><Loader2 className="h-6 w-6 text-gray-300 animate-spin" /></div>,
 })
 
 const COLOR_THEME = {
@@ -57,6 +61,9 @@ function getFlagColor(flag) {
 }
 
 export default function ProfileDetailPage({ params }) {
+  const t = useTranslations('profileDetail')
+  const tShared = useTranslations('profiles')
+
   const { id: profileId } = use(params)
   const { user, isLoaded } = useUser()
 
@@ -112,8 +119,8 @@ export default function ProfileDetailPage({ params }) {
   if (!profile) {
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center gap-3">
-        <p className="text-gray-500">Profile not found.</p>
-        <Link href="/profiles" className="text-emerald-600 text-sm font-semibold hover:underline">← Back to profiles</Link>
+        <p className="text-gray-500">{t('profileNotFound')}</p>
+        <Link href="/profiles" className="text-emerald-600 text-sm font-semibold hover:underline">← {t('backToProfiles')}</Link>
       </div>
     )
   }
@@ -157,12 +164,12 @@ export default function ProfileDetailPage({ params }) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <AppHeader back={{ href: '/profiles', label: 'Profiles' }} title={profile.name} tone="teal" user>
+      <AppHeader back={{ href: '/profiles', label: t('backToProfiles') }} title={profile.name} tone="teal" user>
         <HeaderButton href={`/upload?profile=${profileId}`} tone="teal" icon={<Sparkles className="h-4 w-4" />}>
-          <span className="hidden sm:inline">Upload &amp; analyze</span>
-          <span className="sm:hidden">Upload</span>
+          <span className="hidden sm:inline">{t('uploadAnalyze')}</span>
+          <span className="sm:hidden">{t('uploadShort')}</span>
         </HeaderButton>
-        <HeaderButton variant="ghost" onClick={load} icon={<RefreshCw className="h-4 w-4" />} aria-label="Refresh" />
+        <HeaderButton variant="ghost" onClick={load} icon={<RefreshCw className="h-4 w-4" />} aria-label={t('refreshLabel')} />
       </AppHeader>
 
       <main className="max-w-4xl mx-auto px-4 py-6 space-y-5">
@@ -175,20 +182,23 @@ export default function ProfileDetailPage({ params }) {
             </div>
             <div className="flex-1 min-w-0">
               <h1 className={`text-xl font-black ${theme.text}`}>{profile.name}</h1>
-              <p className="text-sm text-gray-500 capitalize">{profile.relationship} · {profile.gender?.replace('_', ' ')}</p>
+              <p className="text-sm text-gray-500 capitalize">
+                {tShared(REL_LABEL_KEYS[profile.relationship] || 'relSelf')}
+                {profile.gender ? ` · ${tShared(GENDER_LABEL_KEYS[profile.gender] || 'genderPreferNot')}` : ''}
+              </p>
               {profile.dob && (
                 <p className="text-xs text-gray-400 mt-0.5 flex items-center gap-1">
                   <Calendar className="h-3 w-3" />
-                  DOB: {new Date(profile.dob).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}
+                  {t('dobLabel')}{new Date(profile.dob).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}
                 </p>
               )}
             </div>
             <div className="flex flex-col items-end gap-2 flex-shrink-0">
               <div className="grid grid-cols-3 gap-2 text-center">
                 {[
-                  { label: 'Documents', value: reports.length },
-                  { label: 'Tracked values', value: markers.length },
-                  { label: 'Flagged (all time)', value: flagCounts.critical + flagCounts.high + flagCounts.low },
+                  { label: t('statDocuments'), value: reports.length },
+                  { label: t('statTrackedValues'), value: markers.length },
+                  { label: t('statFlaggedAllTime'), value: flagCounts.critical + flagCounts.high + flagCounts.low },
                 ].map(({ label, value }) => (
                   <div key={label} className="bg-white rounded-xl px-3 py-2 border border-gray-100">
                     <p className={`text-lg font-black ${theme.text}`}>{value}</p>
@@ -205,16 +215,16 @@ export default function ProfileDetailPage({ params }) {
           <div className="bg-white rounded-2xl border border-gray-100 p-5">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-sm font-bold text-gray-800 flex items-center gap-2">
-                <Activity className="h-4 w-4 text-emerald-600" /> Latest Values ({snapshot.length})
+                <Activity className="h-4 w-4 text-emerald-600" /> {t('latestValuesTitle', { count: snapshot.length })}
               </h2>
               <button
                 onClick={resync}
                 disabled={syncing}
                 className="flex items-center gap-1.5 text-xs font-semibold text-emerald-600 hover:text-emerald-700 disabled:opacity-50"
-                title="Re-read values from all documents in this profile"
+                title={t('resyncTooltip')}
               >
                 {syncing ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <RefreshCw className="h-3.5 w-3.5" />}
-                {syncing ? 'Syncing…' : 'Re-sync values'}
+                {syncing ? t('syncingLabel') : t('resyncButton')}
               </button>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -238,8 +248,8 @@ export default function ProfileDetailPage({ params }) {
         ) : reports.length > 0 ? (
           <div className="bg-white rounded-2xl border border-gray-100 p-5 flex items-center justify-between gap-4">
             <div>
-              <p className="text-sm font-semibold text-gray-700">No tracked values yet</p>
-              <p className="text-xs text-gray-400 mt-0.5">This profile has documents. Re-sync to read all lab values from them.</p>
+              <p className="text-sm font-semibold text-gray-700">{t('noTrackedValuesTitle')}</p>
+              <p className="text-xs text-gray-400 mt-0.5">{t('noTrackedValuesDesc')}</p>
             </div>
             <button
               onClick={resync}
@@ -247,7 +257,7 @@ export default function ProfileDetailPage({ params }) {
               className="flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 disabled:opacity-50 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors flex-shrink-0"
             >
               {syncing ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />}
-              {syncing ? 'Syncing…' : 'Re-sync values'}
+              {syncing ? t('syncingLabel') : t('resyncButton')}
             </button>
           </div>
         ) : null}
@@ -256,7 +266,7 @@ export default function ProfileDetailPage({ params }) {
         {profile.biomarkers?.length > 0 && (
           <div className="bg-white rounded-2xl border border-gray-100 p-5">
             <h2 className="text-sm font-bold text-gray-800 mb-4 flex items-center gap-2">
-              <TrendingUp className="h-4 w-4 text-violet-600" /> Biomarker Timeline
+              <TrendingUp className="h-4 w-4 text-violet-600" /> {t('biomarkerTimelineTitle')}
             </h2>
             <HealthTimeline profile={profile} />
           </div>
@@ -267,10 +277,10 @@ export default function ProfileDetailPage({ params }) {
           <div className="bg-white rounded-2xl border border-gray-100 p-5">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-sm font-bold text-gray-800 flex items-center gap-2">
-                <FileText className="h-4 w-4 text-blue-600" /> Most Recent Report
+                <FileText className="h-4 w-4 text-blue-600" /> {t('mostRecentReportTitle')}
               </h2>
               <Link href={`/reports/${recentReport.id}`} className="text-xs text-emerald-600 font-semibold hover:underline flex items-center gap-1">
-                View full <ExternalLink className="h-3 w-3" />
+                {t('viewFullLink')} <ExternalLink className="h-3 w-3" />
               </Link>
             </div>
             <p className="text-xs text-gray-400 mb-3">
@@ -279,24 +289,24 @@ export default function ProfileDetailPage({ params }) {
             {recentAbnormal.length === 0 ? (
               <div className="flex items-center gap-2 text-emerald-600 bg-emerald-50 rounded-xl px-4 py-3">
                 <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                <p className="text-sm font-medium">All values within normal range</p>
+                <p className="text-sm font-medium">{t('allNormalMessage')}</p>
               </div>
             ) : (
               <div className="space-y-2">
-                {recentAbnormal.slice(0, 5).map((t, i) => {
-                  const fc = getFlagColor(t.flag)
+                {recentAbnormal.slice(0, 5).map((tst, i) => {
+                  const fc = getFlagColor(tst.flag)
                   return (
                     <div key={i} className={`flex items-start gap-2 p-2.5 rounded-xl border ${fc.bg} ${fc.border}`}>
-                      {t.flag === 'critical' ? <AlertTriangle className={`h-3.5 w-3.5 flex-shrink-0 mt-0.5 ${fc.text}`} /> : <TrendingUp className={`h-3.5 w-3.5 flex-shrink-0 mt-0.5 ${fc.text}`} />}
+                      {tst.flag === 'critical' ? <AlertTriangle className={`h-3.5 w-3.5 flex-shrink-0 mt-0.5 ${fc.text}`} /> : <TrendingUp className={`h-3.5 w-3.5 flex-shrink-0 mt-0.5 ${fc.text}`} />}
                       <div className="min-w-0 flex-1">
-                        <p className={`text-xs font-semibold ${fc.text}`}>{t.name}</p>
-                        <p className="text-xs text-gray-500">{t.value}{t.normalRange ? ` · normal: ${t.normalRange}` : ''}</p>
+                        <p className={`text-xs font-semibold ${fc.text}`}>{tst.name}</p>
+                        <p className="text-xs text-gray-500">{tst.value}{tst.normalRange ? ` · ${t('normalRangeLabel')}: ${tst.normalRange}` : ''}</p>
                       </div>
-                      <span className={`text-xs font-bold px-2 py-0.5 rounded-full flex-shrink-0 ${fc.bg} ${fc.text} border ${fc.border}`}>{t.flag}</span>
+                      <span className={`text-xs font-bold px-2 py-0.5 rounded-full flex-shrink-0 ${fc.bg} ${fc.text} border ${fc.border}`}>{tst.flag}</span>
                     </div>
                   )
                 })}
-                {recentAbnormal.length > 5 && <p className="text-xs text-gray-400 text-center">+{recentAbnormal.length - 5} more</p>}
+                {recentAbnormal.length > 5 && <p className="text-xs text-gray-400 text-center">{t('moreCount', { count: recentAbnormal.length - 5 })}</p>}
               </div>
             )}
           </div>
@@ -305,14 +315,13 @@ export default function ProfileDetailPage({ params }) {
         {/* Health record — all documents, filterable by type */}
         <div className="bg-white rounded-2xl border border-gray-100 p-5">
           <h2 className="text-sm font-bold text-gray-800 mb-4 flex items-center gap-2">
-            <FileText className="h-4 w-4 text-gray-600" /> Health Record ({reports.length})
+            <FileText className="h-4 w-4 text-gray-600" /> {t('healthRecordTitle', { count: reports.length })}
           </h2>
 
           {reports.length === 0 ? (
             <div className="text-center py-8 text-sm text-gray-400">
               <FileText className="h-8 w-8 mx-auto mb-2 opacity-30" />
-              No documents assigned yet. Upload any medical document (lab report, doctor letter,
-              prescription, insurance letter) and assign it to this profile.
+              {t('noDocumentsMessage')}
             </div>
           ) : (
             <>
@@ -322,17 +331,17 @@ export default function ProfileDetailPage({ params }) {
                   onClick={() => setDocFilter('all')}
                   className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-all ${docFilter === 'all' ? 'bg-gray-800 text-white border-gray-800' : 'bg-white border-gray-200 text-gray-600 hover:border-gray-300'}`}
                 >
-                  All ({reports.length})
+                  {t('allFilterLabel', { count: reports.length })}
                 </button>
-                {Object.entries(DOC_TYPES).filter(([t]) => docCounts[t]).map(([t, cfg]) => {
+                {Object.entries(DOC_TYPES).filter(([dt]) => docCounts[dt]).map(([dt, cfg]) => {
                   const Icon = cfg.icon
                   return (
                     <button
-                      key={t}
-                      onClick={() => setDocFilter(t)}
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-all ${docFilter === t ? cfg.color : 'bg-white border-gray-200 text-gray-600 hover:border-gray-300'}`}
+                      key={dt}
+                      onClick={() => setDocFilter(dt)}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-all ${docFilter === dt ? cfg.color : 'bg-white border-gray-200 text-gray-600 hover:border-gray-300'}`}
                     >
-                      <Icon className="h-3.5 w-3.5" /> {cfg.label} ({docCounts[t]})
+                      <Icon className="h-3.5 w-3.5" /> {t(cfg.labelKey)} ({docCounts[dt]})
                     </button>
                   )
                 })}
@@ -345,9 +354,9 @@ export default function ProfileDetailPage({ params }) {
                     const exp = typeof r.explanation === 'object' ? r.explanation : JSON.parse(r.explanation || '{}')
                     tests = exp.tests || []
                   } catch {}
-                  const criticals = tests.filter(t => t.flag === 'critical').length
-                  const highs = tests.filter(t => t.flag === 'high' || t.flag === 'low').length
-                  const normals = tests.filter(t => t.flag === 'normal').length
+                  const criticals = tests.filter(tt => tt.flag === 'critical').length
+                  const highs = tests.filter(tt => tt.flag === 'high' || tt.flag === 'low').length
+                  const normals = tests.filter(tt => tt.flag === 'normal').length
                   const dt = reportDocType(r)
                   const cfg = DOC_TYPES[dt]
                   const DocIcon = cfg.icon
@@ -360,16 +369,16 @@ export default function ProfileDetailPage({ params }) {
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2">
-                          <p className="text-sm font-semibold text-gray-800 truncate">{r.fileName || 'Document'}</p>
-                          <span className="text-[10px] uppercase tracking-wide text-gray-400 flex-shrink-0">{cfg.label.replace(/s$/, '')}</span>
+                          <p className="text-sm font-semibold text-gray-800 truncate">{r.fileName || t('documentFallbackName')}</p>
+                          <span className="text-[10px] uppercase tracking-wide text-gray-400 flex-shrink-0">{t(cfg.labelKey).replace(/s$/, '')}</span>
                         </div>
                         {inShort && <p className="text-xs text-gray-500 mt-0.5 line-clamp-2">{inShort}</p>}
                         <p className="text-xs text-gray-400 mt-0.5">{new Date(r.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
                       </div>
                       <div className="flex flex-col items-end gap-1 flex-shrink-0">
-                        {criticals > 0 && <span className="text-xs bg-red-100 text-red-600 font-semibold px-2 py-0.5 rounded-full">{criticals} critical</span>}
-                        {!criticals && highs > 0 && <span className="text-xs bg-orange-100 text-orange-600 font-semibold px-2 py-0.5 rounded-full">{highs} flagged</span>}
-                        {!criticals && !highs && normals > 0 && <span className="text-xs bg-emerald-100 text-emerald-600 font-semibold px-2 py-0.5 rounded-full">All normal</span>}
+                        {criticals > 0 && <span className="text-xs bg-red-100 text-red-600 font-semibold px-2 py-0.5 rounded-full">{t('criticalCount', { count: criticals })}</span>}
+                        {!criticals && highs > 0 && <span className="text-xs bg-orange-100 text-orange-600 font-semibold px-2 py-0.5 rounded-full">{t('flaggedCount', { count: highs })}</span>}
+                        {!criticals && !highs && normals > 0 && <span className="text-xs bg-emerald-100 text-emerald-600 font-semibold px-2 py-0.5 rounded-full">{t('allNormalBadge')}</span>}
                         <ExternalLink className="h-3.5 w-3.5 text-gray-300 group-hover:text-emerald-500" />
                       </div>
                     </Link>
