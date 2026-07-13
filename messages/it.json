@@ -170,7 +170,7 @@
     "text": "Questo è uno strumento educativo e informativo, non un software medico. Medyra spiega il significato dei termini medici ma non fornisce consigli medici, diagnosi o raccomandazioni terapeutiche. Consulta sempre il tuo medico abilitato prima di prendere qualsiasi decisione sulla salute. I tuoi dati sono gestiti in conformità con il GDPR e cancellati automaticamente dopo 30 giorni."
   },
   "footer": {
-    "tagline": "Understand Your Medical Reports in Plain Language",
+    "tagline": "Comprenda i suoi referti medici in linguaggio semplice",
     "privacy": "Informativa sulla privacy",
     "terms": "Termini di servizio",
     "contact": "Contatto",
@@ -598,15 +598,15 @@
       "note": "2 referti gratuiti ogni mese · Senza carta · Disdici in qualsiasi momento"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "Per anziani",
+      "headline1": "Lettere del medico,",
+      "headline2": "finalmente facili da capire.",
+      "desc": "Carichi qualsiasi Arztbrief, Befund o lettera di dimissione. Medyra lo spiega in linguaggio semplice: lo legga lei stesso o lo faccia leggere ad alta voce. Nessuna competenza tecnica necessaria.",
+      "f1": "Nessuna competenza tecnica necessaria: basta caricare",
+      "f2": "Sintesi vocale: ascolti invece di leggere",
+      "f3": "Condivida con la famiglia con esportazione PDF in un clic",
+      "f4": "GDPR: i suoi dati vengono eliminati dopo 30 giorni",
+      "cta": "Provi Per anziani",
       "demoHeader": "Lettera del medico · Referto",
       "demoBadge": "Spiegato",
       "originalLabel": "Originale",
@@ -836,7 +836,7 @@
       "a5": "Un abbonamento copre fino a 5 membri. I 50 referti mensili sono condivisi.",
       "q6": "Cos'è una preparazione alla visita?",
       "a6": "Medyra genera un riepilogo dei tuoi sintomi e biomarcatori da condividere col medico.",
-      "q7": "What AI model powers Medyra?",
+      "q7": "Quale modello di IA alimenta Medyra?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },

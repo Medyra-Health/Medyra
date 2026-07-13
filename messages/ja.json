@@ -170,7 +170,7 @@
     "text": "これは教育および情報ツールであり、医療ソフトウェアではありません。Medyraは医学用語の意味を説明しますが、医療アドバイス、診断、または治療の推奨は提供しません。健康に関する決定を行う前に、必ずお住まいの地域の医師にご相談ください。お客様のデータはGDPRに準拠して取り扱われ、30日後に自動的に削除されます。"
   },
   "footer": {
-    "tagline": "Understand Your Medical Reports in Plain Language",
+    "tagline": "医療レポートをわかりやすい言葉で理解する",
     "privacy": "プライバシーポリシー",
     "terms": "利用規約",
     "contact": "お問い合わせ",
@@ -598,15 +598,15 @@
       "note": "毎月2件無料 · カード不要 · いつでもキャンセル"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "シニア向け",
+      "headline1": "医師からの手紙が、",
+      "headline2": "ついに理解しやすくなりました。",
+      "desc": "Arztbrief、Befund、退院report等を何でもアップロードしてください。Medyraがわかりやすい言葉で説明します。自分で読むか、読み上げてもらうこともできます。技術的な知識は一切不要です。",
+      "f1": "技術的な知識は不要、アップロードするだけ",
+      "f2": "テキスト読み上げ：読む代わりに聞く",
+      "f3": "ワンクリックのPDFエクスポートで家族と共有",
+      "f4": "GDPR：データは30日後に削除されます",
+      "cta": "シニア向けを試す",
       "demoHeader": "診療情報提供書・所見",
       "demoBadge": "説明済み",
       "originalLabel": "原文",
@@ -836,7 +836,7 @@
       "a5": "1つのサブスクリプションで最大5名の家族をカバー。月50件のレポートが共有されます。",
       "q6": "受診準備とは何ですか？",
       "a6": "Medyraは症状とバイオマーカーの傾向の構造化されたサマリーを生成し、医師と共有できます。",
-      "q7": "What AI model powers Medyra?",
+      "q7": "MedyraはどのAIモデルを使用していますか？",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },

@@ -170,7 +170,7 @@
     "text": "Esta é uma ferramenta educacional e informativa, não um software médico. Medyra explica o significado dos termos médicos, mas não fornece conselhos médicos, diagnósticos ou recomendações de tratamento. Sempre consulte seu médico licenciado antes de tomar qualquer decisão de saúde. Seus dados são tratados em conformidade com o GDPR e excluídos automaticamente após 30 dias."
   },
   "footer": {
-    "tagline": "Understand Your Medical Reports in Plain Language",
+    "tagline": "Entenda os seus relatórios médicos em linguagem simples",
     "privacy": "Política de privacidade",
     "terms": "Termos de serviço",
     "contact": "Contato",
@@ -598,15 +598,15 @@
       "note": "2 relatórios gratuitos por mês · Sem cartão · Cancele a qualquer momento"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "Para idosos",
+      "headline1": "Cartas médicas,",
+      "headline2": "finalmente fáceis de entender.",
+      "desc": "Envie qualquer Arztbrief, Befund ou relatório de alta. O Medyra explica em linguagem simples: leia você mesmo ou ouça em voz alta. Não são necessários conhecimentos técnicos.",
+      "f1": "Nenhum conhecimento técnico necessário: basta enviar",
+      "f2": "Texto para voz: ouça em vez de ler",
+      "f3": "Partilhe com a família com exportação em PDF num clique",
+      "f4": "RGPD: os seus dados são eliminados após 30 dias",
+      "cta": "Experimente Para idosos",
       "demoHeader": "Carta médica · Relatório",
       "demoBadge": "Explicado",
       "originalLabel": "Original",
@@ -836,7 +836,7 @@
       "a5": "Uma assinatura cobre até 5 membros. Os 50 relatórios mensais são compartilhados.",
       "q6": "O que é uma preparação para consulta?",
       "a6": "Medyra gera um resumo dos seus sintomas e biomarcadores para compartilhar com seu médico.",
-      "q7": "What AI model powers Medyra?",
+      "q7": "Que modelo de IA potencia o Medyra?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },

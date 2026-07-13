@@ -170,7 +170,7 @@
     "text": "To narzędzie edukacyjne i informacyjne, a nie oprogramowanie medyczne. Medyra wyjaśnia znaczenie terminów medycznych, ale nie udziela porad medycznych, diagnoz ani zaleceń dotyczących leczenia. Zawsze konsultuj się z licencjonowanym lekarzem przed podjęciem jakichkolwiek decyzji zdrowotnych. Twoje dane są przetwarzane zgodnie z RODO i automatycznie usuwane po 30 dniach."
   },
   "footer": {
-    "tagline": "Understand Your Medical Reports in Plain Language",
+    "tagline": "Zrozum swoje raporty medyczne w prostym języku",
     "privacy": "Polityka prywatności",
     "terms": "Warunki świadczenia usług",
     "contact": "Kontakt",
@@ -598,15 +598,15 @@
       "note": "2 bezpłatne raporty co miesiąc · Bez karty · Anuluj w dowolnym momencie"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "Dla seniorów",
+      "headline1": "Pisma od lekarza,",
+      "headline2": "wreszcie łatwe do zrozumienia.",
+      "desc": "Prześlij dowolny Arztbrief, Befund lub wypis ze szpitala. Medyra wyjaśnia to prostym językiem: przeczytaj sam lub posłuchaj na głos. Nie są potrzebne umiejętności techniczne.",
+      "f1": "Nie są potrzebne umiejętności techniczne: wystarczy przesłać",
+      "f2": "Zamiana tekstu na mowę: słuchaj zamiast czytać",
+      "f3": "Udostępnij rodzinie dzięki eksportowi do PDF jednym kliknięciem",
+      "f4": "RODO: Twoje dane są usuwane po 30 dniach",
+      "cta": "Wypróbuj Dla seniorów",
       "demoHeader": "List lekarski · Wynik",
       "demoBadge": "Wyjaśnione",
       "originalLabel": "Oryginał",
@@ -836,7 +836,7 @@
       "a5": "Jedno konto obejmuje do 5 członków rodziny. 50 miesięcznych raportów jest współdzielonych.",
       "q6": "Czym jest przygotowanie do wizyty?",
       "a6": "Medyra generuje strukturalne podsumowanie objawów do udostępnienia lekarzowi.",
-      "q7": "What AI model powers Medyra?",
+      "q7": "Jaki model AI napędza Medyra?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },

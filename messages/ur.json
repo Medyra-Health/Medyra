@@ -170,7 +170,7 @@
     "text": "Medyra ایک تعلیمی ٹول ہے جو طبی اصطلاحات کی وضاحت کرتا ہے: یہ طبی مشورہ، تشخیص، یا علاج کی سفارشات فراہم نہیں کرتا۔ کوئی بھی صحت کا فیصلہ کرنے سے پہلے ہمیشہ اپنے لائسنس یافتہ ڈاکٹر سے مشورہ کریں۔ آپ کا ڈیٹا GDPR کی تعمیل میں سنبھالا جاتا ہے اور 30 دن بعد خودکار طور پر حذف ہو جاتا ہے۔"
   },
   "footer": {
-    "tagline": "اپنی طبی رپورٹیں آسان زبان میں سمجھیں",
+    "tagline": "اپنی طبی رپورٹس کو سادہ زبان میں سمجھیں",
     "privacy": "رازداری کی پالیسی",
     "terms": "سروس کی شرائط",
     "contact": "رابطہ",
@@ -598,15 +598,15 @@
       "note": "ہر ماہ 2 مفت رپورٹیں · کوئی کارڈ نہیں · کسی بھی وقت منسوخ کریں"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "بزرگوں کے لیے",
+      "headline1": "ڈاکٹر کے خطوط،",
+      "headline2": "بالآخر سمجھنا آسان۔",
+      "desc": "کوئی بھی Arztbrief، Befund، یا ڈسچارج رپورٹ اپ لوڈ کریں۔ Medyra اسے سادہ زبان میں بیان کرتا ہے: خود پڑھیں یا بلند آواز میں سنیں۔ کسی تکنیکی معلومات کی ضرورت نہیں۔",
+      "f1": "کسی تکنیکی معلومات کی ضرورت نہیں: بس اپ لوڈ کریں",
+      "f2": "ٹیکسٹ ٹو اسپیچ: پڑھنے کے بجائے سنیں",
+      "f3": "ایک کلک پی ڈی ایف ایکسپورٹ کے ساتھ خاندان کے ساتھ شیئر کریں",
+      "f4": "GDPR: آپ کا ڈیٹا 30 دن بعد حذف کر دیا جاتا ہے",
+      "cta": "بزرگوں کے لیے آزمائیں",
       "demoHeader": "ڈاکٹر کا خط · رپورٹ",
       "demoBadge": "وضاحت کی گئی",
       "originalLabel": "اصل",
@@ -836,7 +836,7 @@
       "a5": "ایک سبسکرپشن 5 خاندانی ارکان کو کور کرتی ہے۔ 50 ماہانہ رپورٹس شیئر کی جاتی ہیں۔",
       "q6": "ڈاکٹر وزٹ تیاری کیا ہے؟",
       "a6": "Medyra آپ کی علامات کا ایک منظم خلاصہ بناتا ہے جسے آپ ڈاکٹر کے ساتھ شیئر کر سکتے ہیں۔",
-      "q7": "What AI model powers Medyra?",
+      "q7": "Medyra کس AI ماڈل پر چلتا ہے؟",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },

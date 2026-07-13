@@ -170,7 +170,7 @@
     "text": "Ceci est un outil éducatif et d'information, pas un logiciel médical. Medyra explique ce que signifient les termes médicaux mais ne fournit pas de conseils médicaux, de diagnostic ou de recommandations de traitement. Consultez toujours votre médecin agréé avant de prendre toute décision de santé. Vos données sont traitées conformément au RGPD et automatiquement supprimées après 30 jours."
   },
   "footer": {
-    "tagline": "Understand Your Medical Reports in Plain Language",
+    "tagline": "Comprenez vos rapports médicaux en langage simple",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
     "contact": "Contact",
@@ -598,15 +598,15 @@
       "note": "2 rapports gratuits par mois · Sans carte bancaire · Résiliable à tout moment"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "Pour les seniors",
+      "headline1": "Les courriers médicaux,",
+      "headline2": "enfin faciles à comprendre.",
+      "desc": "Téléversez n'importe quel Arztbrief, Befund ou compte-rendu de sortie. Medyra l'explique en langage simple : lisez-le vous-même ou faites-le lire à voix haute. Aucune compétence technique requise.",
+      "f1": "Aucune compétence technique requise : téléversez simplement",
+      "f2": "Synthèse vocale : écoutez au lieu de lire",
+      "f3": "Partagez avec la famille grâce à l'export PDF en un clic",
+      "f4": "RGPD : vos données sont supprimées après 30 jours",
+      "cta": "Essayer Pour les seniors",
       "demoHeader": "Courrier médical · Rapport",
       "demoBadge": "Expliqué",
       "originalLabel": "Original",
@@ -836,7 +836,7 @@
       "a5": "Un abonnement couvre jusqu'à 5 membres. Les 50 rapports mensuels sont partagés.",
       "q6": "Qu'est-ce qu'une préparation de visite?",
       "a6": "Medyra génère un résumé structuré de vos symptômes à partager avec votre médecin.",
-      "q7": "What AI model powers Medyra?",
+      "q7": "Quel modèle d'IA fait fonctionner Medyra ?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },

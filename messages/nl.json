@@ -170,7 +170,7 @@
     "text": "Dit is een educatief en informatief hulpmiddel, geen medische software. Medyra legt uit wat medische termen betekenen maar biedt geen medisch advies, diagnose of behandelingsaanbevelingen. Raadpleeg altijd uw erkende arts voordat u gezondheidsbeslissingen neemt. Uw gegevens worden behandeld in overeenstemming met de GDPR en automatisch verwijderd na 30 dagen."
   },
   "footer": {
-    "tagline": "Understand Your Medical Reports in Plain Language",
+    "tagline": "Begrijp uw medische rapporten in eenvoudige taal",
     "privacy": "Privacybeleid",
     "terms": "Servicevoorwaarden",
     "contact": "Contact",
@@ -598,15 +598,15 @@
       "note": "2 gratis rapporten per maand · Geen creditcard · Opzegbaar"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "Voor senioren",
+      "headline1": "Doktersbrieven,",
+      "headline2": "eindelijk makkelijk te begrijpen.",
+      "desc": "Upload elke Arztbrief, Befund of ontslagbrief. Medyra legt het uit in eenvoudige taal: lees het zelf of laat het voorlezen. Geen technische kennis nodig.",
+      "f1": "Geen technische kennis nodig: gewoon uploaden",
+      "f2": "Tekst-naar-spraak: luister in plaats van lezen",
+      "f3": "Deel met familie met PDF-export in één klik",
+      "f4": "AVG: uw gegevens worden na 30 dagen verwijderd",
+      "cta": "Probeer Voor senioren",
       "demoHeader": "Artsenbrief · Rapport",
       "demoBadge": "Uitgelegd",
       "originalLabel": "Origineel",
@@ -836,7 +836,7 @@
       "a5": "Eén abonnement voor max. 5 familieleden. De 50 maandelijkse rapporten worden gedeeld.",
       "q6": "Wat is een artsbezoekvoorbereiding?",
       "a6": "Medyra genereert een samenvatting van uw symptomen om te delen met uw arts.",
-      "q7": "What AI model powers Medyra?",
+      "q7": "Welk AI-model drijft Medyra aan?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },

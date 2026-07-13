@@ -170,7 +170,7 @@
     "text": "এটি একটি শিক্ষামূলক তথ্য টুল, মেডিকেল সফটওয়্যার নয়। Medyra চিকিৎসা শর্তের অর্থ ব্যাখ্যা করে কিন্তু চিকিৎসা পরামর্শ, রোগ নির্ণয় বা চিকিৎসার সুপারিশ প্রদান করে না। যেকোনো স্বাস্থ্য সিদ্ধান্ত নেওয়ার আগে সবসময় আপনার লাইসেন্সপ্রাপ্ত চিকিৎসকের সাথে পরামর্শ করুন। আপনার ডেটা GDPR মেনে পরিচালিত হয় এবং ৩০ দিন পরে স্বয়ংক্রিয়ভাবে মুছে ফেলা হয়।"
   },
   "footer": {
-    "tagline": "Understand Your Medical Reports in Plain Language",
+    "tagline": "সহজ ভাষায় আপনার মেডিকেল রিপোর্ট বুঝুন",
     "privacy": "গোপনীয়তা নীতি",
     "terms": "সেবার শর্তাবলী",
     "contact": "যোগাযোগ",
@@ -598,15 +598,15 @@
       "note": "প্রতি মাসে ২টি বিনামূল্যে রিপোর্ট · কোনো কার্ড নেই · যেকোনো সময় বাতিল"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "বয়স্কদের জন্য",
+      "headline1": "ডাক্তারের চিঠি,",
+      "headline2": "অবশেষে বোঝা সহজ।",
+      "desc": "যেকোনো Arztbrief, Befund বা ডিসচার্জ সারাংশ আপলোড করুন। Medyra এটি সহজ ভাষায় ব্যাখ্যা করে: নিজে পড়ুন বা জোরে পড়ানো শুনুন। কোনো প্রযুক্তিগত জ্ঞানের প্রয়োজন নেই।",
+      "f1": "কোনো প্রযুক্তিগত জ্ঞানের প্রয়োজন নেই: শুধু আপলোড করুন",
+      "f2": "টেক্সট-টু-স্পিচ: পড়ার পরিবর্তে শুনুন",
+      "f3": "এক-ক্লিক পিডিএফ এক্সপোর্টের মাধ্যমে পরিবারের সাথে শেয়ার করুন",
+      "f4": "GDPR: আপনার ডেটা ৩০ দিন পরে মুছে ফেলা হয়",
+      "cta": "বয়স্কদের জন্য চেষ্টা করুন",
       "demoHeader": "ডাক্তারের চিঠি · রিপোর্ট",
       "demoBadge": "ব্যাখ্যা করা হয়েছে",
       "originalLabel": "মূল",
@@ -836,7 +836,7 @@
       "a5": "একটি সাবস্ক্রিপশন সর্বোচ্চ ৫ সদস্যকে কভার করে। ৫০টি মাসিক রিপোর্ট ভাগ করা হয়।",
       "q6": "ডাক্তার ভিজিট প্রস্তুতি কী?",
       "a6": "Medyra আপনার লক্ষণগুলির একটি কাঠামোগত সারসংক্ষেপ তৈরি করে যা ডাক্তারের সাথে ভাগ করা যায়।",
-      "q7": "What AI model powers Medyra?",
+      "q7": "Medyra কোন AI মডেল দ্বারা চালিত?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },

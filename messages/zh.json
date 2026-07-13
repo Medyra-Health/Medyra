@@ -170,7 +170,7 @@
     "text": "这是一个教育和信息工具，不是医疗软件。Medyra解释医学术语的含义，但不提供医疗建议、诊断或治疗建议。在做出任何健康决定之前，请务必咨询您的执照医生。您的数据按照GDPR处理，并在30天后自动删除。"
   },
   "footer": {
-    "tagline": "Understand Your Medical Reports in Plain Language",
+    "tagline": "用通俗语言理解您的医疗报告",
     "privacy": "隐私政策",
     "terms": "服务条款",
     "contact": "联系我们",
@@ -598,15 +598,15 @@
       "note": "每月2份免费报告 · 无需信用卡 · 随时取消"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "为老年人",
+      "headline1": "医生信件，",
+      "headline2": "终于变得容易理解。",
+      "desc": "上传任何 Arztbrief、Befund 或出院报告。Medyra 用通俗语言解释：自己阅读或朗读收听。无需任何技术知识。",
+      "f1": "无需任何技术知识：只需上传",
+      "f2": "文字转语音：听而不是读",
+      "f3": "一键导出 PDF 与家人分享",
+      "f4": "GDPR：您的数据将在30天后删除",
+      "cta": "体验为老年人",
       "demoHeader": "医生信函 · 报告",
       "demoBadge": "已解释",
       "originalLabel": "原文",
@@ -836,7 +836,7 @@
       "a5": "一个订阅最多涵盖5个家庭成员。50份月度报告在所有成员间共享。",
       "q6": "什么是就诊准备？",
       "a6": "Medyra生成您症状和生物标志物趋势的结构化摘要，供您与医生分享。",
-      "q7": "What AI model powers Medyra?",
+      "q7": "Medyra 由什么 AI 模型驱动？",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },

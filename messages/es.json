@@ -170,7 +170,7 @@
     "text": "Esta es una herramienta educativa e informativa, no un software médico. Medyra explica el significado de los términos médicos pero no proporciona consejos médicos, diagnósticos ni recomendaciones de tratamiento. Siempre consulta a tu médico licenciado antes de tomar cualquier decisión de salud. Tus datos se manejan de conformidad con el GDPR y se eliminan automáticamente después de 30 días."
   },
   "footer": {
-    "tagline": "Understand Your Medical Reports in Plain Language",
+    "tagline": "Entienda sus informes médicos en lenguaje sencillo",
     "privacy": "Política de privacidad",
     "terms": "Términos de servicio",
     "contact": "Contacto",
@@ -598,15 +598,15 @@
       "note": "2 informes gratuitos cada mes · Sin tarjeta · Cancela en cualquier momento"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "Para mayores",
+      "headline1": "Cartas médicas,",
+      "headline2": "por fin fáciles de entender.",
+      "desc": "Suba cualquier informe médico, Befund o informe de alta. Medyra lo explica en lenguaje sencillo: léalo usted mismo o escúchelo en voz alta. No se necesitan conocimientos técnicos.",
+      "f1": "No se necesitan conocimientos técnicos: solo suba el documento",
+      "f2": "Texto a voz: escuche en lugar de leer",
+      "f3": "Comparta con la familia con exportación a PDF en un clic",
+      "f4": "RGPD: sus datos se eliminan después de 30 días",
+      "cta": "Pruebe Para mayores",
       "demoHeader": "Carta médica · Informe",
       "demoBadge": "Explicado",
       "originalLabel": "Original",
@@ -836,7 +836,7 @@
       "a5": "Una suscripción cubre hasta 5 miembros. Los 50 informes mensuales se comparten.",
       "q6": "¿Qué es una preparación de visita médica?",
       "a6": "Medyra genera un resumen de tus síntomas y biomarcadores para compartir con tu médico.",
-      "q7": "What AI model powers Medyra?",
+      "q7": "¿Qué modelo de IA impulsa Medyra?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },

@@ -170,7 +170,7 @@
     "text": "यह एक शैक्षिक और सूचना उपकरण है, चिकित्सा सॉफ्टवेयर नहीं। Medyra चिकित्सा शब्दों का अर्थ समझाता है लेकिन चिकित्सा सलाह, निदान या उपचार की सिफारिशें नहीं देता। कोई भी स्वास्थ्य निर्णय लेने से पहले हमेशा अपने लाइसेंस प्राप्त चिकित्सक से परामर्श करें। आपका डेटा GDPR के अनुपालन में संभाला जाता है और 30 दिनों के बाद स्वचालित रूप से हटा दिया जाता है।"
   },
   "footer": {
-    "tagline": "Understand Your Medical Reports in Plain Language",
+    "tagline": "अपनी मेडिकल रिपोर्ट को सरल भाषा में समझें",
     "privacy": "गोपनीयता नीति",
     "terms": "सेवा की शर्तें",
     "contact": "संपर्क",
@@ -598,15 +598,15 @@
       "note": "हर महीने 2 मुफ्त रिपोर्ट · कोई कार्ड नहीं · कभी भी रद्द करें"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "वरिष्ठों के लिए",
+      "headline1": "डॉक्टर के पत्र,",
+      "headline2": "आखिरकार समझना आसान।",
+      "desc": "कोई भी Arztbrief, Befund या डिस्चार्ज सारांश अपलोड करें। Medyra इसे सरल भाषा में समझाता है: इसे स्वयं पढ़ें या ज़ोर से पढ़वाएं। किसी तकनीकी ज्ञान की आवश्यकता नहीं है।",
+      "f1": "किसी तकनीकी ज्ञान की आवश्यकता नहीं: बस अपलोड करें",
+      "f2": "टेक्स्ट-टू-स्पीच: पढ़ने के बजाय सुनें",
+      "f3": "एक-क्लिक पीडीएफ एक्सपोर्ट के साथ परिवार के साथ साझा करें",
+      "f4": "GDPR: आपका डेटा 30 दिनों के बाद हटा दिया जाता है",
+      "cta": "वरिष्ठों के लिए आज़माएं",
       "demoHeader": "डॉक्टर पत्र · रिपोर्ट",
       "demoBadge": "समझाया गया",
       "originalLabel": "मूल",
@@ -836,7 +836,7 @@
       "a5": "एक सदस्यता 5 परिवार के सदस्यों को कवर करती है। 50 मासिक रिपोर्ट साझा की जाती हैं।",
       "q6": "डॉक्टर विजिट तैयारी क्या है?",
       "a6": "Medyra आपके लक्षणों का एक संरचित सारांश तैयार करता है जिसे आप डॉक्टर के साथ साझा कर सकते हैं।",
-      "q7": "What AI model powers Medyra?",
+      "q7": "Medyra किस AI मॉडल पर चलता है?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },

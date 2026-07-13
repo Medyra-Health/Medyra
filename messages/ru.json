@@ -170,7 +170,7 @@
     "text": "Это образовательный и информационный инструмент, а не медицинское программное обеспечение. Medyra объясняет значение медицинских терминов, но не предоставляет медицинские советы, диагнозы или рекомендации по лечению. Всегда консультируйтесь с лицензированным врачом перед принятием любых решений о здоровье. Ваши данные обрабатываются в соответствии с GDPR и автоматически удаляются через 30 дней."
   },
   "footer": {
-    "tagline": "Understand Your Medical Reports in Plain Language",
+    "tagline": "Понимайте свои медицинские отчёты простым языком",
     "privacy": "Политика конфиденциальности",
     "terms": "Условия использования",
     "contact": "Контакт",
@@ -598,15 +598,15 @@
       "note": "2 бесплатных отчёта каждый месяц · Без карты · Отмена в любое время"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "Для пожилых",
+      "headline1": "Врачебные письма,",
+      "headline2": "наконец-то понятны.",
+      "desc": "Загрузите любой Arztbrief, Befund или выписной эпикриз. Medyra объясняет это простым языком: прочитайте сами или прослушайте вслух. Никаких технических навыков не требуется.",
+      "f1": "Никаких технических навыков не требуется: просто загрузите",
+      "f2": "Синтез речи: слушайте вместо чтения",
+      "f3": "Поделитесь с семьёй с помощью экспорта в PDF в один клик",
+      "f4": "GDPR: ваши данные удаляются через 30 дней",
+      "cta": "Попробовать «Для пожилых»",
       "demoHeader": "Врачебное письмо · Заключение",
       "demoBadge": "Объяснено",
       "originalLabel": "Оригинал",
@@ -836,7 +836,7 @@
       "a5": "Одна подписка охватывает до 5 членов семьи. 50 ежемесячных отчётов делятся между всеми.",
       "q6": "Что такое подготовка к визиту?",
       "a6": "Medyra создаёт структурированное резюме ваших симптомов для передачи врачу.",
-      "q7": "What AI model powers Medyra?",
+      "q7": "Какая модель ИИ используется в Medyra?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },

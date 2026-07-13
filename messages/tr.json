@@ -170,7 +170,7 @@
     "text": "Bu bir eğitim ve bilgi aracıdır, tıbbi yazılım değildir. Medyra tıbbi terimlerin ne anlama geldiğini açıklar ancak tıbbi tavsiye, teşhis veya tedavi önerileri sunmaz. Herhangi bir sağlık kararı vermeden önce her zaman lisanslı doktorunuza danışın. Verileriniz GDPR uyumlu olarak işlenir ve 30 gün sonra otomatik olarak silinir."
   },
   "footer": {
-    "tagline": "Understand Your Medical Reports in Plain Language",
+    "tagline": "Tıbbi raporlarınızı sade bir dille anlayın",
     "privacy": "Gizlilik politikası",
     "terms": "Hizmet şartları",
     "contact": "İletişim",
@@ -598,15 +598,15 @@
       "note": "Her ay 2 ücretsiz rapor · Kart gerekmez · İstediğinizde iptal"
     },
     "senior": {
-      "badge": "For Seniors",
-      "headline1": "Doctor letters,",
-      "headline2": "finally easy to understand.",
-      "desc": "Upload any Arztbrief, Befund, or discharge summary. Medyra explains it in plain language: read it yourself or have it read aloud. No tech skills needed.",
-      "f1": "No technical knowledge needed: just upload",
-      "f2": "Text-to-speech: listen instead of read",
-      "f3": "Share with family with one-click PDF export",
-      "f4": "GDPR: your data is deleted after 30 days",
-      "cta": "Try Für Senioren",
+      "badge": "Yaşlılar için",
+      "headline1": "Doktor mektupları,",
+      "headline2": "sonunda anlaşılması kolay.",
+      "desc": "Herhangi bir Arztbrief, Befund veya taburcu raporu yükleyin. Medyra bunu sade bir dille açıklar: kendiniz okuyun ya da sesli okutun. Teknik bilgi gerekmez.",
+      "f1": "Teknik bilgi gerekmez: sadece yükleyin",
+      "f2": "Metinden sese: okumak yerine dinleyin",
+      "f3": "Tek tıkla PDF dışa aktarma ile aileyle paylaşın",
+      "f4": "GDPR: verileriniz 30 gün sonra silinir",
+      "cta": "Yaşlılar için'i deneyin",
       "demoHeader": "Doktor mektubu · Rapor",
       "demoBadge": "Açıklandı",
       "originalLabel": "Orijinal",
@@ -836,7 +836,7 @@
       "a5": "Bir abonelik 5 aile üyesini kapsar. Aylık 50 rapor paylaşılır.",
       "q6": "Doktor ziyareti hazırlığı nedir?",
       "a6": "Medyra, doktorunuzla paylaşabileceğiniz semptomlarınızın yapılandırılmış bir özetini oluşturur.",
-      "q7": "What AI model powers Medyra?",
+      "q7": "Medyra'yı hangi yapay zeka modeli destekliyor?",
       "a7": "Medyra is powered by Claude AI, made by Anthropic. Claude processes your uploaded documents and generates your explanations."
     }
   },
