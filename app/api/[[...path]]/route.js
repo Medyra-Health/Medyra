@@ -2,12 +2,12 @@ import { MongoClient } from 'mongodb'
 import { v4 as uuidv4 } from 'uuid'
 import { NextResponse } from 'next/server'
 import { auth, currentUser } from '@clerk/nextjs/server'
-import Anthropic from '@anthropic-ai/sdk'
 import pdfParse from 'pdf-parse'
 import Stripe from 'stripe'
 import { Webhook } from 'svix'
 import { encrypt, decrypt } from '@/lib/encryption'
 import { getCheckerEntries } from '@/lib/werte'
+import { generateText, generateVisionText } from '@/lib/aiClient'
 
 function encryptReport(doc) {
   return {
@@ -48,8 +48,6 @@ function decryptReport(report) {
 let mongoClient = null
 let db = null
 let isConnecting = false
-
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
 const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY)
@@ -271,24 +269,11 @@ async function extractTextFromImage(buffer, mimeType) {
   const validMime = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'].includes(mimeType)
     ? mimeType
     : 'image/jpeg'
-  const response = await anthropic.messages.create({
-    model: 'claude-haiku-4-5-20251001',
-    max_tokens: 4096,
-    messages: [{
-      role: 'user',
-      content: [
-        {
-          type: 'image',
-          source: { type: 'base64', media_type: validMime, data: buffer.toString('base64') }
-        },
-        {
-          type: 'text',
-          text: 'Extract all text from this medical report image. Return only the raw extracted text, no commentary.'
-        }
-      ]
-    }]
+  const fullText = await generateVisionText({
+    imageBuffer: buffer,
+    mimeType: validMime,
+    prompt: 'Extract all text from this medical report image. Return only the raw extracted text, no commentary.',
   })
-  const fullText = response.content[0].text.trim()
   if (!fullText || fullText.length < 10) throw new Error('No readable text found in image')
   return fullText
 }
@@ -303,18 +288,16 @@ async function getAIExplanation(extractedText, { docType, language } = {}) {
   const system = MEDICAL_PROMPT
     + `\n\nWrite ALL explanation text (summary, interpretations, sections, questions, next steps) in ${languageName}. Keep the JSON keys and flag/docType/category enum values in English exactly as specified.`
     + (docHint ? `\n\n${docHint}` : '')
-  const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-6',
-    max_tokens: 4096,
+  let text = await generateText({
+    task: 'big',
     system,
     messages: [{
       role: 'user',
       content: `Analyze this medical document and return JSON:\n\n${extractedText.substring(0, 10000)}`
     }],
+    maxTokens: 4096,
     temperature: 0.3
   })
-
-  let text = response.content[0].text.trim()
 
   // Strip markdown code fences
   text = text.replace(/```json\n?/gi, '').replace(/```\n?/g, '').trim()
@@ -881,13 +864,12 @@ async function handleChat(request, reportId) {
   }
   messages.push({ role: 'user', content: question })
 
-  const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-6',
-    max_tokens: 1024,
+  const answer = await generateText({
+    task: 'chat',
     system: chatSystemPrompt,
     messages,
+    maxTokens: 1024,
   })
-  const answer = response.content[0].text
   const newChatUsed = chatUsed + 1
   const { limit: chatLimit } = fairUseCheck
   const chatRemaining = chatLimit === Infinity ? null : Math.max(0, chatLimit - newChatUsed)

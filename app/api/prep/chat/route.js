@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
-import Anthropic from '@anthropic-ai/sdk'
 import { MongoClient } from 'mongodb'
 import { decryptProfile } from '@/lib/encryption'
+import { generateText } from '@/lib/aiClient'
 
 let _client = null, _db = null
 async function getDb() {
@@ -46,8 +46,6 @@ function buildBriefProfileContext(profile) {
   }
   return lines.join('. ')
 }
-
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
 const CHAT_SYSTEM = `You are a warm, professional medical intake assistant for Medyra, helping patients prepare for doctor appointments in Germany.
 
@@ -173,15 +171,13 @@ export async function POST(request) {
       + `\n\nCurrent category: ${category}\nUser locale: ${locale || 'en'}`
       + (profileContext ? `\n\n${profileContext}\nUse this profile data to ask targeted follow-up questions about any abnormal values or trends you see.` : '')
 
-    const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-6',
-      max_tokens: 400,
+    const rawText = await generateText({
+      task: 'chat',
       system: systemWithContext,
       messages: conversationMessages,
+      maxTokens: 400,
       temperature: 0.4,
     })
-
-    const rawText = response.content[0].text.trim()
 
     let parsed
     try {

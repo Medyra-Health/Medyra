@@ -6,7 +6,7 @@ import { useEffect, useState, useCallback } from 'react'
 import {
   Users, FileText, TrendingUp, RefreshCw,
   Crown, Shield, AlertCircle, MessageSquare, Zap, ExternalLink, Euro, Stethoscope, CreditCard, CheckCircle, Clock, XCircle,
-  Globe, MousePointerClick, MonitorSmartphone, BarChart2
+  Globe, MousePointerClick, MonitorSmartphone, BarChart2, Cpu
 } from 'lucide-react'
 import dynamic from 'next/dynamic'
 
@@ -83,6 +83,10 @@ export default function AdminPage() {
   const [activateMsg, setActivateMsg] = useState(null)
   const [gaData, setGaData] = useState(null)
   const [gaLoading, setGaLoading] = useState(false)
+  const [aiSettings, setAiSettings] = useState(null)
+  const [aiLoading, setAiLoading] = useState(true)
+  const [aiSaving, setAiSaving] = useState(false)
+  const [aiSaveMsg, setAiSaveMsg] = useState(null)
 
   async function activateAdmin() {
     setActivating(true)
@@ -110,6 +114,44 @@ export default function AdminPage() {
     } catch { /* silently fail */ }
     finally { setGaLoading(false) }
   }, [])
+
+  const fetchAiSettings = useCallback(async () => {
+    setAiLoading(true)
+    try {
+      const res = await fetch('/api/admin/ai-settings')
+      if (res.ok) setAiSettings(await res.json())
+    } catch { /* silently fail */ }
+    finally { setAiLoading(false) }
+  }, [])
+
+  function updateAiTask(task, field, value) {
+    setAiSettings(prev => ({
+      ...prev,
+      tasks: { ...prev.tasks, [task]: { ...prev.tasks[task], [field]: value } },
+    }))
+  }
+
+  async function saveAiSettings() {
+    setAiSaving(true)
+    setAiSaveMsg(null)
+    try {
+      const res = await fetch('/api/admin/ai-settings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tasks: aiSettings.tasks }),
+      })
+      const body = await res.json()
+      if (res.ok) {
+        setAiSaveMsg({ ok: true, text: 'Saved — takes effect on the next request (cache refreshes within 60s).' })
+      } else {
+        setAiSaveMsg({ ok: false, text: body.error || 'Failed to save' })
+      }
+    } catch (e) {
+      setAiSaveMsg({ ok: false, text: e.message })
+    } finally {
+      setAiSaving(false)
+    }
+  }
 
   const fetchStats = useCallback(async () => {
     try {
@@ -139,7 +181,8 @@ export default function AdminPage() {
     const email = user.emailAddresses?.[0]?.emailAddress
     if (!ADMIN_EMAILS.includes(email)) { router.replace('/'); return }
     fetchStats()
-  }, [isLoaded, user, router, fetchStats])
+    fetchAiSettings()
+  }, [isLoaded, user, router, fetchStats, fetchAiSettings])
 
   // Auto-refresh every 5 minutes
   useEffect(() => {
@@ -231,6 +274,75 @@ export default function AdminPage() {
           >
             {activating ? 'Activating…' : 'Activate Admin Tier'}
           </button>
+        </div>
+
+        {/* AI Provider Settings */}
+        <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+          <div className="flex items-center gap-2 mb-1">
+            <Cpu className="h-4 w-4 text-indigo-600" />
+            <h2 className="text-sm font-semibold text-gray-700">AI Provider Settings</h2>
+          </div>
+          <p className="text-xs text-gray-400 mb-4">
+            Switch which AI provider and model handles each kind of call — no code deploy needed. Requires the matching API key (ANTHROPIC_API_KEY / OPENAI_API_KEY / DEEPSEEK_API_KEY) to be set in Vercel.
+          </p>
+
+          {aiLoading && !aiSettings ? (
+            <p className="text-sm text-gray-400">Loading…</p>
+          ) : aiSettings ? (
+            <div className="space-y-3">
+              {[
+                { key: 'chat', label: 'Chat', hint: 'Prep intake & report follow-up conversations — high volume, low stakes' },
+                { key: 'big', label: 'Big Task', hint: 'Structured summary & report analysis generation — low volume, quality-critical' },
+                { key: 'vision', label: 'Vision / OCR', hint: 'Extracting text from photographed report images' },
+              ].map(({ key, label, hint }) => (
+                <div key={key} className="flex flex-col sm:flex-row sm:items-center gap-2 p-3 rounded-lg border border-gray-100 bg-gray-50">
+                  <div className="sm:w-40 flex-shrink-0">
+                    <p className="text-sm font-medium text-gray-800">{label}</p>
+                    <p className="text-xs text-gray-400">{hint}</p>
+                  </div>
+                  <select
+                    value={aiSettings.tasks[key]?.provider || 'anthropic'}
+                    onChange={e => updateAiTask(key, 'provider', e.target.value)}
+                    className="text-sm border border-gray-200 rounded-lg px-2 py-1.5 bg-white"
+                  >
+                    {(aiSettings.providers || ['anthropic', 'openai', 'deepseek']).map(p => (
+                      <option
+                        key={p}
+                        value={p}
+                        disabled={key === 'vision' && !(aiSettings.visionCapableProviders || []).includes(p)}
+                      >
+                        {p}{key === 'vision' && !(aiSettings.visionCapableProviders || []).includes(p) ? ' (no vision support)' : ''}
+                      </option>
+                    ))}
+                  </select>
+                  <input
+                    type="text"
+                    value={aiSettings.tasks[key]?.model || ''}
+                    onChange={e => updateAiTask(key, 'model', e.target.value)}
+                    placeholder="model id, e.g. claude-haiku-4-5-20251001"
+                    className="text-sm border border-gray-200 rounded-lg px-2 py-1.5 flex-1 min-w-0 font-mono"
+                  />
+                </div>
+              ))}
+
+              <div className="flex items-center gap-3 pt-1">
+                <button
+                  onClick={saveAiSettings}
+                  disabled={aiSaving}
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors disabled:opacity-50"
+                >
+                  {aiSaving ? 'Saving…' : 'Save AI Settings'}
+                </button>
+                {aiSaveMsg && (
+                  <span className={`text-xs font-medium ${aiSaveMsg.ok ? 'text-emerald-700' : 'text-red-600'}`}>
+                    {aiSaveMsg.text}
+                  </span>
+                )}
+              </div>
+            </div>
+          ) : (
+            <p className="text-sm text-red-500">Failed to load AI settings.</p>
+          )}
         </div>
 
         {/* Stat cards */}

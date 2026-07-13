@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
-import Anthropic from '@anthropic-ai/sdk'
 import { MongoClient } from 'mongodb'
 import { encrypt, decrypt, decryptProfile } from '@/lib/encryption'
+import { generateText } from '@/lib/aiClient'
 
 // Monthly prep limits. null = truly unlimited (clinic/admin).
 const PREP_LIMITS = {
@@ -37,8 +37,6 @@ async function getEffectiveTier(userId, mongoTier) {
   } catch {}
   return mongoTier || 'free'
 }
-
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
 const BIOMARKER_META = {
   hemoglobin:  { label: 'Hemoglobin',  unit: 'g/dL',   normalMin: 12,  normalMax: 17.5 },
@@ -259,14 +257,13 @@ export async function POST(request) {
       ? `The patient "${profile.name}" has described their situation as follows:\n\n${cappedInput}\n\nPlease generate the structured doctor summary. Use the patient profile biomarker data provided in the system context to enrich the Vorerkrankungen / Medical History section with actual tracked values, noting any ⚠ ABNORMAL values and significant trends.`
       : `The patient has described their situation as follows:\n\n${cappedInput}\n\nPlease generate the structured doctor summary in the correct language.`
 
-    const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-6',
-      max_tokens: 1800,
+    output = await generateText({
+      task: 'big',
       system: systemPrompt,
       messages: [{ role: 'user', content: userContent }],
+      maxTokens: 1800,
       temperature: 0.2,
     })
-    output = response.content[0].text.trim()
   } catch (err) {
     console.error('Claude error:', err)
     return NextResponse.json({ error: 'AI service unavailable. Please try again.' }, { status: 502 })
