@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "ACTH wordt in de hypofyse aangemaakt en stuurt de cortisolproductie van de bijnier aan. De waarde wordt altijd samen met cortisol beoordeeld om een bijnieraandoening te onderscheiden van een hypofyseaandoening.",
+  "metaDescription": "ACTH verhoogd of laag? Betekenis samen met cortisol eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Bijnierinsufficiëntie (ziekte van Addison)",
+    "ACTH-producerende tumor (zeldzaam)"
+  ],
+  "causesLow": [
+    "Hypofyseaandoening",
+    "Syndroom van Cushing door bijniertumor"
+  ],
+  "doctorQuestions": [
+    "Wat laat de verhouding tussen ACTH en mijn cortisol zien?",
+    "Is verder onderzoek van de hypofyse nodig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal"
+  },
+  "categoryLabel": "Hormonen",
+  "pageTitle": "ACTH uitgelegd | Medyra"
+}

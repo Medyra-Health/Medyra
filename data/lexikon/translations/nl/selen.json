@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Selenium is een spoorelement met antioxidatieve functie, belangrijk voor de schildklier en het immuunsysteem. Een tekort ontstaat meestal door eenzijdige voeding of kunstmatige voeding.",
+  "metaDescription": "Selenium te laag of te hoog? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Overdosering door voedingssupplementen"
+  ],
+  "causesLow": [
+    "Eenzijdige voeding",
+    "Kunstmatige voeding",
+    "Chronische darmziekten"
+  ],
+  "doctorQuestions": [
+    "Zou een seleniumtekort mijn schildklierwaarden kunnen beïnvloeden?",
+    "Moet ik selenium aanvullen?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Sporenelementen",
+  "pageTitle": "Selenium uitgelegd | Medyra"
+}

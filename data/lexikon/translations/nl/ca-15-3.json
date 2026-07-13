@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "CA 15-3 wordt vooral gebruikt om reeds vastgestelde borstkanker te volgen en is minder geschikt voor vroege opsporing, omdat het ook bij goedaardige borstaandoeningen verhoogd kan zijn.",
+  "metaDescription": "CA 15-3 verhoogd? Betekenis van de tumormarker en mogelijke oorzaken uitgelegd.",
+  "causesElevated": [
+    "Goedaardige borstaandoeningen",
+    "Leverfunctiestoornis",
+    "Bekende borstkanker (voor follow-up)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Wordt deze waarde gebruikt om mijn toestand te volgen?",
+    "Moet aanvullende beeldvorming worden gedaan?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Tumormarkers",
+  "pageTitle": "CA 15-3 uitgelegd | Medyra"
+}

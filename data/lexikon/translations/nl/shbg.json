@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "SHBG bindt geslachtshormonen in het bloed en beïnvloedt hoeveel daarvan vrij beschikbaar en actief is. De waarde wordt vaak samen met testosteron gemeten om de werkelijk actieve hormoonfractie beter in te schatten.",
+  "metaDescription": "SHBG verhoogd of laag? Betekenis voor hormoonwaarden eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Hyperthyreoïdie",
+    "Zwangerschap",
+    "Oestrogeentherapie"
+  ],
+  "causesLow": [
+    "Overgewicht",
+    "Insulineresistentie",
+    "Hypothyreoïdie"
+  ],
+  "doctorQuestions": [
+    "Hoe beïnvloedt mijn SHBG de interpretatie van mijn testosteron?",
+    "Moet vrij testosteron worden berekend?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal"
+  },
+  "categoryLabel": "Hormonen",
+  "pageTitle": "SHBG uitgelegd | Medyra"
+}

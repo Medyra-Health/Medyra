@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "TIBC meet hoeveel ijzer het bloed in totaal maximaal zou kunnen transporteren, wat indirect de hoeveelheid transferrine weerspiegelt. Verhoogde waarden komen typisch voor bij ijzertekort.",
+  "metaDescription": "TIBC verhoogd of laag? Betekenis voor ijzertekort uitgelegd.",
+  "causesElevated": [
+    "IJzertekort"
+  ],
+  "causesLow": [
+    "IJzeroverbelasting (hemochromatose)",
+    "Chronische ontsteking",
+    "Leverziekte"
+  ],
+  "doctorQuestions": [
+    "Bevestigt deze waarde een ijzertekort?",
+    "Moeten andere ijzerwaarden worden gemeten?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "IJzerwaarden",
+  "pageTitle": "TIBC: totale ijzerbindingscapaciteit uitgelegd | Medyra"
+}

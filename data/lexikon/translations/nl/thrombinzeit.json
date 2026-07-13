@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "De trombinetijd test de laatste stap van de bloedstolling, de omzetting van fibrinogeen in fibrine. Een verlengde waarde komt vaak voor bij heparinebehandeling.",
+  "metaDescription": "Trombinetijd verlengd? Betekenis voor de bloedstolling eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Heparinebehandeling",
+    "Fibrinogeentekort",
+    "Leverziekte"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Hangt mijn verlengde trombinetijd samen met een medicijn dat ik gebruik?",
+    "Moet mijn fibrinogeen ook worden gecontroleerd?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verlengd"
+  },
+  "categoryLabel": "Stolling",
+  "pageTitle": "Trombinetijd uitgelegd | Medyra"
+}

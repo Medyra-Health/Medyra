@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Het soortelijk gewicht geeft aan hoe geconcentreerd de urine is en geeft aanwijzingen over de vochtbalans en het concentratievermogen van de nieren. Lage waarden kunnen wijzen op veel vochtinname.",
+  "metaDescription": "Soortelijk gewicht urine verhoogd of laag? Betekenis eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Vochttekort (uitdroging)",
+    "Geconcentreerde ochtendurine"
+  ],
+  "causesLow": [
+    "Hoge vochtinname",
+    "Verminderd nierconcentratievermogen",
+    "Diabetes insipidus (zeldzaam)"
+  ],
+  "doctorQuestions": [
+    "Weerspiegelt deze waarde mijn vochtbalans of een nierziekte?",
+    "Moet mijn vochtinname worden aangepast?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal"
+  },
+  "categoryLabel": "Urinewaarden",
+  "pageTitle": "Soortelijk gewicht urine uitgelegd | Medyra"
+}

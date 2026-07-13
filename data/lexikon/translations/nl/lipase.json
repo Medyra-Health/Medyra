@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Lipase is een spijsverteringsenzym van de alvleesklier en geldt als een specifiekere marker voor pancreatitis dan amylase. Duidelijk verhoogde waarden, meestal met sterke buikpijn, moeten snel worden onderzocht.",
+  "metaDescription": "Lipase verhoogd? Betekenis voor pancreatitis eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Acute pancreatitis",
+    "Galstenen",
+    "Verminderde nierfunctie"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Hoe dringend moet mijn verhoogde lipase worden onderzocht?",
+    "Is beeldvorming van de alvleesklier nodig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Alvleesklierwaarden",
+  "pageTitle": "Lipase uitgelegd | Medyra"
+}

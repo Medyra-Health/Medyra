@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "C-peptide ontstaat bij de eigen insulineaanmaak en laat zien hoeveel insuline de alvleesklier nog zelf aanmaakt. Lage waarden wijzen op insulinetekort zoals bij type 1-diabetes.",
+  "metaDescription": "C-peptide verhoogd of laag? Betekenis voor de eigen insulineaanmaak uitgelegd.",
+  "causesElevated": [
+    "Insulineresistentie",
+    "Beginnende type 2-diabetes",
+    "Insulinoom (zeldzaam)"
+  ],
+  "causesLow": [
+    "Type 1-diabetes",
+    "Gevorderd insulinetekort"
+  ],
+  "doctorQuestions": [
+    "Maakt mijn alvleesklier nog voldoende insuline aan?",
+    "Welk type diabetes zou ik kunnen hebben?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Stofwisseling",
+  "pageTitle": "C-peptide uitgelegd | Medyra"
+}

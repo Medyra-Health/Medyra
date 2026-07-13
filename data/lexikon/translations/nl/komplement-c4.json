@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Complementfactor C4 behoort, net als C3, tot het complementsysteem van de immuunafweer. Lage waarden worden vaak samen met C3 gemeten bij verdenking op auto-immuunziekten zoals lupus.",
+  "metaDescription": "Complementfactor C4 verhoogd of laag? Betekenis voor auto-immuunziekten uitgelegd.",
+  "causesElevated": [
+    "Acute ontsteking of infectie"
+  ],
+  "causesLow": [
+    "Auto-immuunziekten (bijv. systemische lupus erythematodes)",
+    "Aangeboren complementtekort"
+  ],
+  "doctorQuestions": [
+    "Wat betekent mijn C4 samen met mijn C3 en mijn klachten?",
+    "Moet een reumatoloog worden geraadpleegd?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Immuunsysteem",
+  "pageTitle": "Complement C4 uitgelegd | Medyra"
+}

@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "LDH is een enzym dat in veel lichaamscellen voorkomt, waaronder lever, hart en spieren. Verhoogde waarden zijn niet-specifiek en kunnen wijzen op celschade in verschillende organen.",
+  "metaDescription": "LDH verhoogd? Betekenis van lactaatdehydrogenase, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Leverschade",
+    "Hartinfarct",
+    "Hemolyse (afbraak van rode bloedcellen)",
+    "Spierletsel",
+    "Sommige tumorziekten"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Welk orgaan zou mijn verhoogde LDH kunnen verklaren?",
+    "Is verder onderzoek nodig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Leverwaarden",
+  "pageTitle": "LDH: lactaatdehydrogenase uitgelegd | Medyra"
+}

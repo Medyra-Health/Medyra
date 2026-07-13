@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Albumine is het belangrijkste eiwit in het bloed en wordt door de lever aangemaakt. Lage waarden kunnen wijzen op een leverziekte, ondervoeding of eiwitverlies via de nieren.",
+  "metaDescription": "Albumine te laag? Betekenis, normale waarden en mogelijke oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Vochttekort (uitdroging)"
+  ],
+  "causesLow": [
+    "Leverziekte",
+    "Ondervoeding",
+    "Nierziekte met eiwitverlies",
+    "Chronische ontsteking"
+  ],
+  "doctorQuestions": [
+    "Wat zou mijn lage albumine kunnen verklaren?",
+    "Moet mijn lever- of nierfunctie verder worden onderzocht?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd (meestal uitdroging)"
+  },
+  "categoryLabel": "Leverwaarden",
+  "pageTitle": "Albumine uitgelegd | Medyra"
+}

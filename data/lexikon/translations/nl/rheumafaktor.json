@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "De reumafactor is een antistof die vaak voorkomt bij reumatoïde artritis, maar ook positief kan zijn bij andere ziekten of zelfs bij gezonde mensen. Een positieve waarde alleen is geen diagnose.",
+  "metaDescription": "Reumafactor verhoogd? Betekenis voor reumatoïde artritis eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Reumatoïde artritis",
+    "Andere auto-immuunziekten",
+    "Chronische infecties",
+    "Kan ook licht verhoogd zijn bij gezonde mensen"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bevestigt deze waarde reumatoïde artritis?",
+    "Moet ook anti-CCP worden gemeten?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Ontstekingsmarkers",
+  "pageTitle": "Reumafactor uitgelegd | Medyra"
+}

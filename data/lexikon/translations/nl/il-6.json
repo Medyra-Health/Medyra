@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Interleukine-6 is een boodschapper van het immuunsysteem die vroeg stijgt bij acute ontstekingen en infecties, vaak voordat CRP meetbaar verhoogd is.",
+  "metaDescription": "Interleukine-6 (IL-6) verhoogd? Betekenis als vroege ontstekingsmarker uitgelegd.",
+  "causesElevated": [
+    "Acute infectie",
+    "Ernstige ontstekingsreactie",
+    "Auto-immuunziekten",
+    "Na operatie"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Waarom werd IL-6 naast CRP gemeten?",
+    "Hoe ernstig is mijn ontstekingsreactie?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Ontstekingsmarkers",
+  "pageTitle": "Interleukine-6 (IL-6) uitgelegd | Medyra"
+}

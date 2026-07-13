@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Insuline is het hormoon dat bloedsuiker in cellen laat opnemen. Verhoogde nuchtere insulinewaarden kunnen wijzen op beginnende insulineresistentie, vaak al voordat de bloedsuiker zelf verhoogd is.",
+  "metaDescription": "Insuline verhoogd of laag? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Insulineresistentie",
+    "Polycysteus-ovariumsyndroom (PCOS)",
+    "Beginnende type 2-diabetes",
+    "Overgewicht"
+  ],
+  "causesLow": [
+    "Type 1-diabetes",
+    "Gevorderde type 2-diabetes"
+  ],
+  "doctorQuestions": [
+    "Wijst mijn insulinewaarde op insulineresistentie?",
+    "Moet de HOMA-index worden berekend?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Stofwisseling",
+  "pageTitle": "Insuline (nuchter) uitgelegd | Medyra"
+}

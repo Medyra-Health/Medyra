@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Vitamine A is belangrijk voor het gezichtsvermogen, de huid en het immuunsysteem. Een tekort ontstaat meestal door een vetopnamestoornis of ondervoeding.",
+  "metaDescription": "Vitamine A verhoogd of laag? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Overdosering door voedingssupplementen"
+  ],
+  "causesLow": [
+    "Ondervoeding",
+    "Vetopnamestoornis (bijv. coeliakie)",
+    "Leverziekte"
+  ],
+  "doctorQuestions": [
+    "Verklaart mijn vitamine A-waarde mijn klachten?",
+    "Moet ik vitamine A aanvullen of verminderen?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Vitaminen",
+  "pageTitle": "Vitamine A uitgelegd | Medyra"
+}

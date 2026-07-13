@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Anti-HBs-antistoffen geven aan dat er voldoende immuunbescherming tegen hepatitis B bestaat, hetzij door vaccinatie of na een doorgemaakte infectie. Deze waarde wordt vaak gemeten om de vaccinatiebescherming te controleren.",
+  "metaDescription": "Anti-HBs verhoogd of laag? Betekenis voor de hepatitis B-vaccinatiebescherming uitgelegd.",
+  "causesElevated": [
+    "Succesvolle hepatitis B-vaccinatie",
+    "Doorgemaakte hepatitis B-infectie met immuniteit"
+  ],
+  "causesLow": [
+    "Geen of onvoldoende vaccinatiebescherming",
+    "Afnemende vaccinatiebescherming in de tijd"
+  ],
+  "doctorQuestions": [
+    "Is mijn vaccinatiebescherming tegen hepatitis B nog voldoende?",
+    "Moet ik een herhalingsvaccinatie krijgen?"
+  ],
+  "rangeLabels": {
+    "low": "Onvoldoende bescherming",
+    "normal": "Voldoende vaccinatiebescherming"
+  },
+  "categoryLabel": "Infectiemarkers",
+  "pageTitle": "Anti-HBs uitgelegd | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Calcitonine wordt aangemaakt door speciale cellen van de schildklier en speelt een rol bij de calciumstofwisseling. Duidelijk verhoogde waarden zijn zeldzaam en kunnen wijzen op een toename van deze cellen of, zelden, medullair schildkliercarcinoom.",
+  "metaDescription": "Calcitonine verhoogd? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Toename van C-cellen (C-celhyperplasie)",
+    "Medullair schildkliercarcinoom (zeldzaam)",
+    "Bepaalde medicijnen"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Welk verder onderzoek is nuttig bij verhoogde calcitonine?",
+    "Hoe dringend is een onderzoek?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Schildklier",
+  "pageTitle": "Calcitonine uitgelegd | Medyra"
+}

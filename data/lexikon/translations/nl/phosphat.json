@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "Fosfaat is belangrijk voor botten, celenergie en de zuur-basebalans, en wordt nauw gereguleerd samen met calcium en vitamine D. Verhoogde waarden komen vaak voor bij verminderde nierfunctie.",
+  "metaDescription": "Fosfaat verhoogd of laag? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Verminderde nierfunctie",
+    "Overschot aan vitamine D",
+    "Hypoparathyreoïdie"
+  ],
+  "causesLow": [
+    "Vitamine D-tekort",
+    "Hyperparathyreoïdie",
+    "Ondervoeding",
+    "Alcoholisme"
+  ],
+  "doctorQuestions": [
+    "Hangt mijn fosfaat samen met mijn nierfunctie?",
+    "Moeten mijn vitamine D- en calciumniveaus ook worden gecontroleerd?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Elektrolyten",
+  "pageTitle": "Fosfaat uitgelegd | Medyra"
+}

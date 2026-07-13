@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Complementfactor C3 maakt deel uit van een systeem dat ziekteverwekkers direct bestrijdt en ontstekingsreacties ondersteunt. Lage waarden kunnen wijzen op verhoogd verbruik bij auto-immuunziekten zoals lupus.",
+  "metaDescription": "Complementfactor C3 verhoogd of laag? Betekenis voor auto-immuunziekten uitgelegd.",
+  "causesElevated": [
+    "Acute ontsteking of infectie"
+  ],
+  "causesLow": [
+    "Auto-immuunziekten (bijv. systemische lupus erythematodes)",
+    "Aangeboren complementtekort",
+    "Chronische leverziekte"
+  ],
+  "doctorQuestions": [
+    "Wijst mijn lage C3 op een auto-immuunziekte?",
+    "Moeten ook C4 en ANA worden gemeten?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Immuunsysteem",
+  "pageTitle": "Complement C3 uitgelegd | Medyra"
+}

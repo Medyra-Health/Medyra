@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Fibrinogeen is een eiwit dat nodig is voor de bloedstolling en dient ook als ontstekingsmarker. Verhoogde waarden komen vaak voor bij ontsteking of infecties.",
+  "metaDescription": "Fibrinogeen verhoogd of laag? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Ontsteking of infectie",
+    "Na operatie",
+    "Zwangerschap"
+  ],
+  "causesLow": [
+    "Verbruikscoagulopathie",
+    "Leverziekte",
+    "Zeldzame aangeboren stollingsstoornis"
+  ],
+  "doctorQuestions": [
+    "Wat zou mijn afwijkende fibrinogeenwaarde kunnen verklaren?",
+    "Is er een verhoogd bloedings- of trombose risico?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Stolling",
+  "pageTitle": "Fibrinogeen uitgelegd | Medyra"
+}

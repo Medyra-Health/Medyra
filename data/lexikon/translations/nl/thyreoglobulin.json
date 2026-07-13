@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Thyreoglobuline is een opslageiwit dat uitsluitend in de schildklier wordt aangemaakt. De waarde wordt vooral gebruikt voor follow-up na operatieve verwijdering van de schildklier bij schildklierkanker.",
+  "metaDescription": "Thyreoglobuline verhoogd? Betekenis voor schildklier-follow-up eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Actief schildklierweefsel",
+    "Na schildklieroperatie: mogelijk teken van recidief",
+    "Schildklierontsteking"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Wat betekent deze waarde voor mijn follow-up na de schildklieroperatie?",
+    "Moeten mijn anti-Tg-antistoffen ook worden meegewogen?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal (met aanwezige schildklier)"
+  },
+  "categoryLabel": "Schildklier",
+  "pageTitle": "Thyreoglobuline uitgelegd | Medyra"
+}

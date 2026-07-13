@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "IGF-1 weerspiegelt de groeihormoonactiviteit en wordt gebruikt om groeistoornissen bij kinderen te beoordelen, evenals verdenking op hypofysefunctiestoornis bij volwassenen.",
+  "metaDescription": "IGF-1 verhoogd of laag? Betekenis voor de groeihormoonfunctie uitgelegd.",
+  "causesElevated": [
+    "Overproductie van groeihormoon (acromegalie)"
+  ],
+  "causesLow": [
+    "Groeihormoontekort",
+    "Ondervoeding",
+    "Chronische ziekten"
+  ],
+  "doctorQuestions": [
+    "Wat betekent mijn IGF-1 voor mijn groeihormoonfunctie?",
+    "Zijn verdere hormoononderzoeken nuttig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal (sterk leeftijdsafhankelijk)"
+  },
+  "categoryLabel": "Hormonen",
+  "pageTitle": "IGF-1 uitgelegd | Medyra"
+}

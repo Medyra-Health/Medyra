@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Zink is betrokken bij veel enzymreacties, wondgenezing en het immuunsysteem. Een tekort kan zich uiten in haaruitval, genezingsstoornissen of verhoogde vatbaarheid voor infecties.",
+  "metaDescription": "Zink te laag of te hoog? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Overdosering door voedingssupplementen"
+  ],
+  "causesLow": [
+    "Eenzijdige voeding",
+    "Chronische darmziekten",
+    "Verhoogde behoefte (bijv. zwangerschap)"
+  ],
+  "doctorQuestions": [
+    "Zou een zinktekort mijn klachten kunnen verklaren?",
+    "Moet ik zink aanvullen?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Sporenelementen",
+  "pageTitle": "Zink uitgelegd | Medyra"
+}

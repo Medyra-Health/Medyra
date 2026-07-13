@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Cortisol is het belangrijkste stresshormoon van de bijnier en volgt een dagritme met de hoogste waarden in de ochtend. Aanhoudend verhoogde waarden kunnen wijzen op chronische stress.",
+  "metaDescription": "Cortisol te hoog of te laag? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Chronische stress",
+    "Syndroom van Cushing",
+    "Cortisonebehandeling"
+  ],
+  "causesLow": [
+    "Bijnierinsufficiëntie (ziekte van Addison)",
+    "Hypofyseaandoening",
+    "Plotseling stoppen van een cortisonebehandeling"
+  ],
+  "doctorQuestions": [
+    "Komt mijn cortisol overeen met het tijdstip van de bloedafname?",
+    "Moet ook ACTH worden gemeten?"
+  ],
+  "rangeLabels": {
+    "low": "Laag (ochtend)",
+    "normal": "Normaal (ochtend)",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Hormonen",
+  "pageTitle": "Cortisol uitgelegd | Medyra"
+}

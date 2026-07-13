@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Totaal-IgE is een antistof die verhoogd is bij allergieën en soms bij parasitaire infecties. Een verhoogde waarde bevestigt een algemene neiging tot allergieën, maar geeft niet aan tegen welke stof.",
+  "metaDescription": "IgE verhoogd? Betekenis voor allergieën en mogelijke oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Allergische aandoeningen (bijv. hooikoorts, astma, eczeem)",
+    "Parasitaire infectie",
+    "Bepaalde immuunstoornissen"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Moet een specifieke allergietest worden gedaan?",
+    "Welke allergieën zouden in mijn geval kunnen gelden?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Immuunsysteem",
+  "pageTitle": "IgE uitgelegd | Medyra"
+}

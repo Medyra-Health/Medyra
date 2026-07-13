@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Anti-TPO-antistoffen richten zich tegen een enzym van de schildklier en zijn de belangrijkste aanwijzing voor een auto-immuunziekte van de schildklier zoals Hashimoto-thyreoïditis.",
+  "metaDescription": "Anti-TPO-antistoffen verhoogd? Betekenis voor Hashimoto en schildklierziekten uitgelegd.",
+  "causesElevated": [
+    "Hashimoto-thyreoïditis",
+    "Ziekte van Graves",
+    "Andere auto-immuunziekten"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bevestigt deze waarde een auto-immuunziekte van de schildklier?",
+    "Moet mijn schildklierfunctie regelmatig worden gecontroleerd?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Schildklier",
+  "pageTitle": "Anti-TPO-antistoffen uitgelegd | Medyra"
+}

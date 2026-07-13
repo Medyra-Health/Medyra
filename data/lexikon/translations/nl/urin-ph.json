@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "De pH-waarde van urine laat zien of deze eerder zuur of basisch is, en wordt onder andere beïnvloed door voeding, stofwisseling en bepaalde ziekten. Het speelt ook een rol bij het ontstaan van bepaalde soorten nierstenen.",
+  "metaDescription": "Urine-pH verhoogd of laag? Betekenis en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Vegetarische/alkaliserende voeding",
+    "Urineweginfectie",
+    "Nierfunctiestoornis"
+  ],
+  "causesLow": [
+    "Eiwitrijke voeding",
+    "Metabole ontsporing (bijv. ketoacidose)"
+  ],
+  "doctorQuestions": [
+    "Beïnvloedt mijn urine-pH de vorming van nierstenen?",
+    "Moet mijn voeding worden aangepast?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal"
+  },
+  "categoryLabel": "Urinewaarden",
+  "pageTitle": "Urine-pH uitgelegd | Medyra"
+}

@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "RDW meet hoe sterk rode bloedcellen in grootte variëren. Een verhoogde waarde kan wijzen op een beginnend ijzer-, vitamine B12- of foliumzuurtekort, vooral in combinatie met een afwijkende MCV. Bespreek een verhoogde RDW met uw arts.",
+  "metaDescription": "RDW verhoogd? Betekenis van de rode bloedcelverdelingsbreedte, normale waarden en mogelijke oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "IJzertekort",
+    "Vitamine B12- of foliumzuurtekort",
+    "Gemengde bloedarmoede",
+    "Na bloedtransfusie"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Wat betekent mijn verhoogde RDW samen met mijn MCV?",
+    "Moeten mijn ijzer- en vitaminestatus worden gecontroleerd?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Bloedbeeld",
+  "pageTitle": "RDW: rode bloedcelverdelingsbreedte uitgelegd | Medyra"
+}

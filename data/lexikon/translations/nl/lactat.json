@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Lactaat ontstaat bij de energieopwekking, vooral wanneer spieren of weefsel onvoldoende zuurstof krijgen. Licht verhoogde waarden na lichamelijke inspanning zijn normaal.",
+  "metaDescription": "Lactaat verhoogd? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Lichamelijke inspanning",
+    "Zuurstoftekort in weefsel",
+    "Ernstige infectie (sepsis)",
+    "Bepaalde medicijnen"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Hoe dringend moet mijn verhoogde lactaat worden onderzocht?",
+    "Wat is de onderliggende oorzaak in mijn geval?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Stofwisseling",
+  "pageTitle": "Lactaat uitgelegd | Medyra"
+}

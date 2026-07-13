@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Koper is betrokken bij bloedaanmaak, bindweefsel en het zenuwstelsel. Een tekort is zeldzaam en komt vooral voor na maagoperaties, verhoogde waarden kunnen ontstaan door hormonale invloeden.",
+  "metaDescription": "Koper te laag of te hoog? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Hormonale invloeden (anticonceptiepil, zwangerschap)",
+    "Ontstekingsziekten"
+  ],
+  "causesLow": [
+    "Toestand na maagoperatie",
+    "Ondervoeding",
+    "Zeldzame genetische ziekten (ziekte van Wilson)"
+  ],
+  "doctorQuestions": [
+    "Wat zou mijn afwijkende koperwaarde kunnen verklaren?",
+    "Is verder onderzoek nodig?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Sporenelementen",
+  "pageTitle": "Koper uitgelegd | Medyra"
+}

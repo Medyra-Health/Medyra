@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Oestradiol is het belangrijkste vrouwelijke geslachtshormoon en schommelt sterk tijdens de cyclus, zwangerschap en menopauze. Lage waarden kunnen wijzen op de menopauze of een eierstokfunctiestoornis.",
+  "metaDescription": "Oestradiol te laag of te hoog? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Bepaalde cyclusfasen (bijv. eisprong)",
+    "Zwangerschap",
+    "Oestrogeenproducerende tumoren (zeldzaam)"
+  ],
+  "causesLow": [
+    "Menopauze",
+    "Eierstokfunctiestoornis",
+    "Aanzienlijk gewichtsverlies of topsport"
+  ],
+  "doctorQuestions": [
+    "Komt mijn oestradiol overeen met mijn huidige cyclusfase?",
+    "Moeten andere hormoonwaarden worden gemeten?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal (cyclusafhankelijk)"
+  },
+  "categoryLabel": "Hormonen",
+  "pageTitle": "Oestradiol uitgelegd | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Basofielen zijn het zeldzaamste type witte bloedcellen en spelen een rol bij allergische reacties en chronische ontsteking. Licht verhoogde waarden zijn vaak onschuldig, duidelijk verhoogde waarden moeten door een arts worden beoordeeld.",
+  "metaDescription": "Basofielen verhoogd? Betekenis en mogelijke oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Allergische reacties",
+    "Chronische ontsteking",
+    "Bepaalde bloedziekten"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Is mijn verhoogde basofielenaantal klinisch relevant?",
+    "Is verder onderzoek nodig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Bloedbeeld",
+  "pageTitle": "Basofielen uitgelegd | Medyra"
+}

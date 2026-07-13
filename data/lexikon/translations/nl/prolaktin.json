@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Prolactine staat vooral bekend om de melkproductie na de bevalling, maar kan bij mannen en vrouwen daar los van verhoogd zijn. Verhoogde waarden kunnen cyclusstoornissen of libidoverlies veroorzaken.",
+  "metaDescription": "Prolactine verhoogd? Betekenis, normale waarden en mogelijke oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Stress of slaaptekort",
+    "Bepaalde medicijnen (bijv. sommige antidepressiva)",
+    "Goedaardige hypofysetumor (prolactinoom)",
+    "Hypothyreoïdie"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Welke oorzaak zou mijn verhoogde prolactine kunnen verklaren?",
+    "Is beeldvorming van de hypofyse nuttig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Hormonen",
+  "pageTitle": "Prolactine uitgelegd | Medyra"
+}

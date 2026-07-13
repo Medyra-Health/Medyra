@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "TRAb zijn antistoffen die de TSH-receptor van de schildklier activeren en zo overactiviteit kunnen veroorzaken. Een verhoogde waarde is typisch voor de ziekte van Graves.",
+  "metaDescription": "TRAb verhoogd? Betekenis voor de ziekte van Graves en schildklieroveractiviteit uitgelegd.",
+  "causesElevated": [
+    "Ziekte van Graves",
+    "Auto-immune schildklieroveractiviteit"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bevestigt deze waarde de ziekte van Graves?",
+    "Hoe wordt mijn schildklieroveractiviteit verder behandeld?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Schildklier",
+  "pageTitle": "TRAb uitgelegd | Medyra"
+}

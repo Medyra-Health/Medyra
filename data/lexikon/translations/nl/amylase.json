@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Amylase is een spijsverteringsenzym dat vooral in de alvleesklier en speekselklieren wordt aangemaakt. Zeer verhoogde waarden komen typisch voor bij acute pancreatitis.",
+  "metaDescription": "Amylase verhoogd? Betekenis voor de alvleesklier eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Acute pancreatitis",
+    "Speekselklierontsteking",
+    "Galstenen"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Wijst mijn verhoogde amylase op pancreatitis?",
+    "Moet ook lipase worden gemeten?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Alvleesklierwaarden",
+  "pageTitle": "Amylase uitgelegd | Medyra"
+}

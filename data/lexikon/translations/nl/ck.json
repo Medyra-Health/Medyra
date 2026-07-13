@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Creatinekinase komt vooral voor in hart- en skeletspieren en stijgt bij spierschade, bijvoorbeeld na intensieve lichamelijke inspanning, maar ook bij een hartinfarct.",
+  "metaDescription": "Creatinekinase (CK) verhoogd? Betekenis voor spier- en hartschade uitgelegd.",
+  "causesElevated": [
+    "Intensieve lichamelijke inspanning",
+    "Spierletsel",
+    "Hartinfarct",
+    "Bepaalde medicijnen (bijv. statines)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Komt mijn verhoogde CK van de spieren of het hart?",
+    "Moeten ook CK-MB of troponine worden gemeten?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Hartmarkers",
+  "pageTitle": "Creatinekinase (CK) uitgelegd | Medyra"
+}

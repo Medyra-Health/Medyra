@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "D-dimeren ontstaan bij de afbraak van bloedstolsels en zijn een belangrijk element bij de beoordeling van een mogelijke trombose of longembolie. Een normale waarde maakt een acute trombose onwaarschijnlijker.",
+  "metaDescription": "D-dimeren verhoogd? Betekenis voor trombose en longembolie eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Trombose",
+    "Longembolie",
+    "Na operatie",
+    "Zwangerschap",
+    "Acute ontsteking of infectie"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Moet trombose of longembolie bij mij worden uitgesloten?",
+    "Is verder onderzoek zoals beeldvorming nodig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Stolling",
+  "pageTitle": "D-dimeren uitgelegd | Medyra"
+}

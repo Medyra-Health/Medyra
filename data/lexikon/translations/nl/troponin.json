@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Troponine is een zeer specifieke marker van hartspierschade en de belangrijkste laboratoriumwaarde bij verdenking op een hartinfarct. Zelfs licht verhoogde waarden worden serieus genomen.",
+  "metaDescription": "Troponine verhoogd? Betekenis voor hartinfarct en hartschade uitgelegd.",
+  "causesElevated": [
+    "Hartinfarct",
+    "Myocarditis",
+    "Intensieve lichamelijke inspanning",
+    "Verminderde nierfunctie"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Hoe dringend moet mijn verhoogde troponine worden onderzocht?",
+    "Is een tweede meting gepland?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Hartmarkers",
+  "pageTitle": "Troponine uitgelegd | Medyra"
+}

@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "FSH stuurt de rijping van eicellen bij vrouwen en de aanmaak van zaadcellen bij mannen aan. Bij vrouwen stijgt de waarde aanzienlijk tijdens de menopauze.",
+  "metaDescription": "FSH verhoogd of laag? Betekenis voor menopauze en vruchtbaarheid uitgelegd.",
+  "causesElevated": [
+    "Menopauze",
+    "Verminderde eierstok- of testisfunctie"
+  ],
+  "causesLow": [
+    "Hypofyseaandoening",
+    "Aanzienlijk gewichtsverlies of topsport"
+  ],
+  "doctorQuestions": [
+    "Wijst mijn FSH op het begin van de menopauze?",
+    "Wat betekent deze waarde voor mijn vruchtbaarheid?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal (cyclusafhankelijk bij vrouwen)",
+    "elevated": "Verhoogd (bijv. menopauze)"
+  },
+  "categoryLabel": "Hormonen",
+  "pageTitle": "FSH uitgelegd | Medyra"
+}

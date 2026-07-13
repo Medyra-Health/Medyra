@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "LH veroorzaakt de eisprong bij vrouwen en stimuleert de testosteronproductie bij mannen. De waarde wordt vaak samen met FSH gemeten, bijvoorbeeld bij cyclusstoornissen of kinderwens.",
+  "metaDescription": "LH verhoogd of laag? Betekenis voor cyclus en vruchtbaarheid eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Eisprong (korte stijging)",
+    "Menopauze",
+    "Polycysteus-ovariumsyndroom"
+  ],
+  "causesLow": [
+    "Hypofyseaandoening",
+    "Aanzienlijk gewichtsverlies of topsport"
+  ],
+  "doctorQuestions": [
+    "Wat laat de LH/FSH-verhouding in mijn geval zien?",
+    "Is mijn cyclus of hormoonfunctie normaal?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal (cyclusafhankelijk bij vrouwen)"
+  },
+  "categoryLabel": "Hormonen",
+  "pageTitle": "LH uitgelegd | Medyra"
+}

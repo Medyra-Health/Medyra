@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "NT-proBNP wordt door het hart afgegeven wanneer het onder verhoogde belasting staat, en is de belangrijkste laboratoriumwaarde om hartfalen te beoordelen. Een lage waarde maakt hartfalen minder waarschijnlijk.",
+  "metaDescription": "NT-proBNP verhoogd? Betekenis voor hartfalen eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Hartfalen",
+    "Boezemfibrilleren",
+    "Verminderde nierfunctie",
+    "Hogere leeftijd"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bevestigt deze waarde hartfalen?",
+    "Is een hartecho nuttig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Hartmarkers",
+  "pageTitle": "NT-proBNP uitgelegd | Medyra"
+}

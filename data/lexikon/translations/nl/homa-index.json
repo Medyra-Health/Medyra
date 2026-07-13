@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "De HOMA-index wordt berekend uit nuchtere bloedsuiker en nuchtere insuline en schat hoe goed het lichaam nog op insuline reageert. Een verhoogde waarde wijst op insulineresistentie, die vaak voorafgaat aan type 2-diabetes.",
+  "metaDescription": "HOMA-index verhoogd? Betekenis voor insulineresistentie, normale waarden en oorzaken uitgelegd.",
+  "causesElevated": [
+    "Insulineresistentie",
+    "Metabool syndroom",
+    "Overgewicht",
+    "Polycysteus-ovariumsyndroom (PCOS)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Hoe hoog is mijn diabetesrisico op basis van deze waarde?",
+    "Welke levensstijlveranderingen zouden kunnen helpen?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd (mogelijk insulineresistentie)"
+  },
+  "categoryLabel": "Stofwisseling",
+  "pageTitle": "HOMA-index uitgelegd | Medyra"
+}

@@ -1,0 +1,27 @@
+{
+  "shortAnswer": "Neutrofielen zijn het meest voorkomende type witte bloedcellen en bestrijden vooral bacteriële infecties. Verhoogde waarden wijzen vaak op een acute infectie of ontsteking, lage waarden kunnen het infectierisico verhogen.",
+  "metaDescription": "Neutrofielen verhoogd of laag? Betekenis en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Bacteriële infectie",
+    "Acute ontsteking",
+    "Ernstige lichamelijke stress",
+    "Cortisonebehandeling"
+  ],
+  "causesLow": [
+    "Virale infectie",
+    "Beenmergaandoening",
+    "Chemotherapie",
+    "Bepaalde medicijnen"
+  ],
+  "doctorQuestions": [
+    "Wijst mijn neutrofielenaantal op een bacteriële infectie?",
+    "Is mijn infectierisico momenteel verhoogd?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Bloedbeeld",
+  "pageTitle": "Neutrofielen uitgelegd | Medyra"
+}

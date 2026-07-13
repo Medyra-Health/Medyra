@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Myoglobine is een eiwit uit hart- en skeletspieren dat snel, maar niet specifiek, stijgt bij spier- of hartschade. Vanwege de lage specificiteit wordt het tegenwoordig minder gebruikt.",
+  "metaDescription": "Myoglobine verhoogd? Betekenis voor spier- en hartschade eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Hartinfarct (vroege fase)",
+    "Spierletsel",
+    "Intensieve lichamelijke inspanning",
+    "Verminderde nierfunctie"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Wordt ook troponine gemeten voor een preciezere beoordeling?",
+    "Hoe urgent is verder onderzoek?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Hartmarkers",
+  "pageTitle": "Myoglobine uitgelegd | Medyra"
+}

@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Parathormoon wordt aangemaakt door de bijschildklieren en reguleert samen met vitamine D de calciumbalans. Verhoogde waarden kunnen wijzen op overactiviteit van de bijschildklieren of vitamine D-tekort.",
+  "metaDescription": "Parathormoon (PTH) verhoogd of laag? Betekenis voor de calciumbalans uitgelegd.",
+  "causesElevated": [
+    "Overactiviteit van de bijschildklieren",
+    "Vitamine D-tekort",
+    "Chronische nierziekte"
+  ],
+  "causesLow": [
+    "Hypoparathyreoïdie",
+    "Na schildklieroperatie"
+  ],
+  "doctorQuestions": [
+    "Hangt mijn PTH samen met mijn calcium- of vitamine D-niveau?",
+    "Moet een bijschildklieraandoening worden onderzocht?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Hormonen",
+  "pageTitle": "Parathormoon (PTH) uitgelegd | Medyra"
+}

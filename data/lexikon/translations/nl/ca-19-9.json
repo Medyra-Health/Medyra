@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "CA 19-9 wordt vooral gemeten in verband met de alvleesklier en galwegen, maar kan ook stijgen bij galstuwing, ontsteking of andere goedaardige aandoeningen.",
+  "metaDescription": "CA 19-9 verhoogd? Betekenis van de tumormarker en mogelijke oorzaken uitgelegd.",
+  "causesElevated": [
+    "Galstuwing",
+    "Pancreatitis",
+    "Leverziekte",
+    "Alvleesklierkanker (een van meerdere mogelijke oorzaken)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Welke oorzaak is het meest waarschijnlijk voor mijn verhoogde waarde?",
+    "Is beeldvorming van de alvleesklier nuttig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Tumormarkers",
+  "pageTitle": "CA 19-9 uitgelegd | Medyra"
+}

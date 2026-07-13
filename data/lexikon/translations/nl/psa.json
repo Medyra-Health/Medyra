@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "PSA wordt aangemaakt door de prostaat en kan stijgen bij prostaatvergroting, ontsteking of prostaatkanker. Een verhoogde waarde alleen bewijst geen kanker, veel goedaardige oorzaken komen veel vaker voor.",
+  "metaDescription": "PSA verhoogd? Mogelijke oorzaken en volgende stappen eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Goedaardige prostaatvergroting (BPH)",
+    "Prostaatontsteking",
+    "Na lichamelijke inspanning (bijv. fietsen)",
+    "Prostaatkanker (een van meerdere mogelijke oorzaken)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Welke van de mogelijke oorzaken geldt in mijn geval?",
+    "Is verder urologisch onderzoek nuttig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Tumormarkers",
+  "pageTitle": "PSA: prostaatspecifiek antigeen uitgelegd | Medyra"
+}

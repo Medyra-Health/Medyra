@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Vitamine E is een vetoplosbare antioxidant die cellen beschermt tegen oxidatieve stress. Een tekort is zeldzaam in Duitsland en komt vooral voor bij vetopnamestoornissen.",
+  "metaDescription": "Vitamine E te laag? Betekenis, normale waarden en oorzaken van een tekort eenvoudig uitgelegd.",
+  "causesElevated": [],
+  "causesLow": [
+    "Vetopnamestoornis",
+    "Ondervoeding",
+    "Zeldzame genetische ziekten"
+  ],
+  "doctorQuestions": [
+    "Heb ik een vetopnamestoornis als oorzaak?",
+    "Moet ik vitamine E aanvullen?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal"
+  },
+  "categoryLabel": "Vitaminen",
+  "pageTitle": "Vitamine E uitgelegd | Medyra"
+}

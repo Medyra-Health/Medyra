@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Homocysteïne is een tussenproduct van de eiwitstofwisseling, afgebroken met behulp van vitamine B12, foliumzuur en vitamine B6. Verhoogde waarden ontstaan vaak door een tekort aan deze vitaminen.",
+  "metaDescription": "Homocysteïne verhoogd? Betekenis, normale waarden en oorzaken zoals vitaminetekort uitgelegd.",
+  "causesElevated": [
+    "Vitamine B12-tekort",
+    "Foliumzuurtekort",
+    "Vitamine B6-tekort",
+    "Nierziekte"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Heb ik een vitaminetekort als oorzaak?",
+    "Moet ik vitamine B12 of foliumzuur aanvullen?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Stofwisseling",
+  "pageTitle": "Homocysteïne uitgelegd | Medyra"
+}

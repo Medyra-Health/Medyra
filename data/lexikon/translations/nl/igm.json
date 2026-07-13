@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "IgM is de eerste antistofklasse die bij een nieuwe infectie wordt gevormd, en wijst daarom meestal op een acute of recente infectie. De waarde wordt vaak samen met IgG beoordeeld.",
+  "metaDescription": "IgM verhoogd of laag? Betekenis voor acute infecties eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Acute infectie",
+    "Bepaalde auto-immuunziekten",
+    "Bepaalde bloedziekten (bijv. macroglobulinemie van Waldenström)"
+  ],
+  "causesLow": [
+    "Aangeboren of verworven immuundeficiëntie"
+  ],
+  "doctorQuestions": [
+    "Wijst mijn IgM op een acute infectie?",
+    "Moet ook IgG worden gemeten?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Immuunsysteem",
+  "pageTitle": "IgM uitgelegd | Medyra"
+}

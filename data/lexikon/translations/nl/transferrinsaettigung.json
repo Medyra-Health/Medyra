@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "De transferrineverzadiging laat zien hoeveel van het ijzertransporteiwit transferrine momenteel met ijzer is beladen. Lage waarden wijzen op ijzertekort, hoge waarden kunnen wijzen op ijzeroverbelasting zoals hemochromatose.",
+  "metaDescription": "Transferrineverzadiging verhoogd of laag? Betekenis voor ijzertekort en ijzeroverbelasting uitgelegd.",
+  "causesElevated": [
+    "IJzeroverbelasting (hemochromatose)",
+    "Frequente bloedtransfusies",
+    "Leverziekte"
+  ],
+  "causesLow": [
+    "IJzertekort",
+    "Chronische ontsteking",
+    "Bloedverlies"
+  ],
+  "doctorQuestions": [
+    "Wijst mijn transferrineverzadiging op ijzertekort of ijzeroverbelasting?",
+    "Moet hemochromatose worden uitgesloten?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "IJzerwaarden",
+  "pageTitle": "Transferrineverzadiging uitgelegd | Medyra"
+}

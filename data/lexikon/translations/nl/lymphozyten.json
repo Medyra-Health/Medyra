@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "Lymfocyten zijn witte bloedcellen die een centrale rol spelen bij de afweer tegen virussen. Verhoogde waarden komen vaak voor bij virale infecties, lage waarden kunnen wijzen op een verzwakte afweer.",
+  "metaDescription": "Lymfocyten verhoogd of laag? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Virale infectie",
+    "Chronische infectie",
+    "Bepaalde bloedziekten"
+  ],
+  "causesLow": [
+    "Immuundeficiëntie",
+    "Ernstige stress",
+    "Cortisonebehandeling",
+    "Na chemotherapie"
+  ],
+  "doctorQuestions": [
+    "Wat zou mijn lage of hoge lymfocytenaantal kunnen verklaren?",
+    "Is mijn afweer momenteel verzwakt?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Bloedbeeld",
+  "pageTitle": "Lymfocyten uitgelegd | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Ammoniak ontstaat bij de afbraak van eiwitten en wordt normaal door de lever onschadelijk gemaakt. Verhoogde waarden kunnen wijzen op verminderde leverfunctie en in uitgesproken gevallen de hersenfunctie beïnvloeden.",
+  "metaDescription": "Ammoniak verhoogd? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Gevorderde leverziekte (cirrose)",
+    "Leverfalen",
+    "Bepaalde stofwisselingsstoornissen"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Hoe dringend moet mijn verhoogde ammoniak worden behandeld?",
+    "Wat is de onderliggende oorzaak in mijn geval?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Leverwaarden",
+  "pageTitle": "Ammoniak uitgelegd | Medyra"
+}

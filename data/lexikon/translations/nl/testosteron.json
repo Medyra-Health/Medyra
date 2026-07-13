@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "Testosteron is het belangrijkste mannelijke geslachtshormoon, maar komt ook in kleinere hoeveelheden bij vrouwen voor. Lage waarden bij mannen kunnen zich uiten als vermoeidheid of verminderd libido.",
+  "metaDescription": "Testosteron te laag of te hoog? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Polycysteus-ovariumsyndroom (bij vrouwen)",
+    "Bepaalde bijnieraandoeningen",
+    "Gebruik van anabole steroïden"
+  ],
+  "causesLow": [
+    "Leeftijdsgebonden testosterontekort",
+    "Testisfunctiestoornis",
+    "Hypofyseaandoeningen",
+    "Chronische stress"
+  ],
+  "doctorQuestions": [
+    "Verklaart mijn testosteronwaarde symptomen zoals vermoeidheid?",
+    "Moet hormoonvervangende therapie worden overwogen?"
+  ],
+  "rangeLabels": {
+    "low": "Laag (Man)",
+    "normal": "Normaal (Man)",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Hormonen",
+  "pageTitle": "Testosteron uitgelegd | Medyra"
+}

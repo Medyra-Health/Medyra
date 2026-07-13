@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Eosinofielen zijn witte bloedcellen die vooral bij allergieën en parasitaire infecties toenemen. Een verhoogde waarde kan wijzen op astma, hooikoorts, huidallergieën of een parasitaire infectie.",
+  "metaDescription": "Eosinofielen verhoogd? Betekenis, normale waarden en oorzaken zoals allergieën eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Allergieën (bijv. hooikoorts, astma)",
+    "Parasitaire infectie",
+    "Huidaandoeningen zoals eczeem",
+    "Bepaalde medicijnreacties"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Zou een allergie of parasitaire infectie mijn waarde kunnen verklaren?",
+    "Moet een allergietest worden gedaan?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Bloedbeeld",
+  "pageTitle": "Eosinofielen uitgelegd | Medyra"
+}

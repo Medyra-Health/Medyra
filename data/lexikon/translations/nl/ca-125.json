@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "CA 125 wordt vooral gemeten in verband met de eierstokken, maar stijgt ook bij veel goedaardige aandoeningen zoals endometriose, menstruatie of eierstokcysten. Een verhoogde waarde alleen is geen kankerdiagnose.",
+  "metaDescription": "CA 125 verhoogd? Mogelijke oorzaken en volgende stappen eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Endometriose",
+    "Eierstokcysten",
+    "Menstruatie",
+    "Bekkenontstekingen",
+    "Eierstokkanker (een van meerdere mogelijke oorzaken)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Welke goedaardige oorzaken gelden in mijn geval?",
+    "Is een gynaecologische echo nuttig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Tumormarkers",
+  "pageTitle": "CA 125 uitgelegd | Medyra"
+}

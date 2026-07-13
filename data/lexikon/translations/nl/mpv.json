@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "MPV geeft de gemiddelde grootte van bloedplaatjes aan. Grotere bloedplaatjes zijn vaak nieuw gevormd en wijzen op een verhoogde omzetting, terwijl kleinere wijzen op een verminderde aanmaak door het beenmerg.",
+  "metaDescription": "MPV te hoog of te laag? Betekenis van het gemiddelde bloedplaatjesvolume eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Verhoogde aanmaak van bloedplaatjes",
+    "Immuuntrombocytopenie (ITP)",
+    "Na bloedverlies"
+  ],
+  "causesLow": [
+    "Beenmergaandoeningen",
+    "Verminderde aanmaak van bloedplaatjes"
+  ],
+  "doctorQuestions": [
+    "Komt mijn MPV overeen met mijn bloedplaatjesaantal?",
+    "Is een beenmergonderzoek nodig?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Bloedbeeld",
+  "pageTitle": "MPV: gemiddeld bloedplaatjesvolume uitgelegd | Medyra"
+}

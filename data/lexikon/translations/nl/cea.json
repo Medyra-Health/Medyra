@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "CEA is een niet-specifieke tumormarker die vooral wordt gebruikt om al bekende tumorziekten te volgen, met name in de darm. Verhoogde waarden komen ook voor bij rokers en diverse goedaardige aandoeningen.",
+  "metaDescription": "CEA verhoogd? Betekenis van de tumormarker en mogelijke oorzaken uitgelegd.",
+  "causesElevated": [
+    "Roken",
+    "Chronische ontstekingsdarmziekten",
+    "Lever- of longziekte",
+    "Bekende tumorziekte (voor follow-up)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Wordt deze waarde bij mij gebruikt voor follow-up of eerste beoordeling?",
+    "Welke andere onderzoeken zijn nuttig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal (niet-roker)",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Tumormarkers",
+  "pageTitle": "CEA uitgelegd | Medyra"
+}

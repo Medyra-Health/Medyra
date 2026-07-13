@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Monocyten zijn witte bloedcellen die ziekteverwekkers opnemen en verwijderen en ontstekingsprocessen reguleren. Verhoogde waarden komen vaak voor bij chronische ontstekingen of tijdens herstel na een infectie.",
+  "metaDescription": "Monocyten verhoogd? Betekenis, normale waarden en mogelijke oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Chronische ontsteking",
+    "Herstelfase na infectie",
+    "Bepaalde bloedziekten",
+    "Auto-immuunziekten"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Wat zou mijn verhoogde monocytenaantal kunnen verklaren?",
+    "Is verder onderzoek nodig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Bloedbeeld",
+  "pageTitle": "Monocyten uitgelegd | Medyra"
+}

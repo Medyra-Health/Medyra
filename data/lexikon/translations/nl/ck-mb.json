@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "CK-MB is een subvorm van creatinekinase die vooral in de hartspier voorkomt, en dus een specifiekere aanwijzing voor hartschade dan de totale CK.",
+  "metaDescription": "CK-MB verhoogd? Betekenis voor hartspierschade eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Hartinfarct",
+    "Myocarditis",
+    "Na hartoperatie"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bevestigt CK-MB samen met mijn troponine hartschade?",
+    "Wat is het verdere behandelplan?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Hartmarkers",
+  "pageTitle": "CK-MB uitgelegd | Medyra"
+}

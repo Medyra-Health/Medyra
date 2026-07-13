@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "IgA beschermt vooral de slijmvliezen van de luchtwegen en darmen tegen ziekteverwekkers. IgA-tekort is de meest voorkomende aangeboren immuundeficiëntie en verloopt vaak zonder klachten.",
+  "metaDescription": "IgA verhoogd of laag? Betekenis voor het immuunsysteem eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Chronische slijmvliesontstekingen",
+    "Leverziekte",
+    "Auto-immuunziekten"
+  ],
+  "causesLow": [
+    "Aangeboren IgA-tekort (vaak zonder klachten)",
+    "Bepaalde darmziekten"
+  ],
+  "doctorQuestions": [
+    "Is mijn IgA-tekort klinisch significant?",
+    "Moet hiermee rekening worden gehouden bij toekomstige bloedtransfusies?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Immuunsysteem",
+  "pageTitle": "IgA uitgelegd | Medyra"
+}

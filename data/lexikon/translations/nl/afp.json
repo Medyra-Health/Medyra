@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "AFP is normaal vooral verhoogd tijdens de zwangerschap en wordt buiten de zwangerschap gebruikt om lever- of kiemceltumoren te volgen.",
+  "metaDescription": "AFP verhoogd? Betekenis van de tumormarker en mogelijke oorzaken uitgelegd.",
+  "causesElevated": [
+    "Zwangerschap",
+    "Chronische leverziekte of cirrose",
+    "Leverkanker of kiemceltumoren (een van meerdere mogelijke oorzaken)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Wat is de oorzaak van mijn verhoogde AFP-waarde?",
+    "Is leverbeeldvorming nuttig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal (buiten de zwangerschap)",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Tumormarkers",
+  "pageTitle": "AFP: alfa-foetoproteïne uitgelegd | Medyra"
+}

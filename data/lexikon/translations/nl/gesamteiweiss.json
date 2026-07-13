@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Totaal eiwit meet alle eiwitten in het bloedserum, vooral albumine en immunoglobulinen. Verhoogde waarden kunnen ontstaan door vochttekort of chronische ontstekingen, lage waarden door ondervoeding of lever- of nierziekten.",
+  "metaDescription": "Totaal eiwit verhoogd of laag? Normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Vochttekort (uitdroging)",
+    "Chronische ontsteking",
+    "Bepaalde bloedziekten"
+  ],
+  "causesLow": [
+    "Ondervoeding",
+    "Leverziekte",
+    "Nierziekte met eiwitverlies"
+  ],
+  "doctorQuestions": [
+    "Wat is de oorzaak van mijn afwijkende totaal eiwitwaarde?",
+    "Is een eiwitelektroforese nuttig?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Leverwaarden",
+  "pageTitle": "Totaal eiwit uitgelegd | Medyra"
+}

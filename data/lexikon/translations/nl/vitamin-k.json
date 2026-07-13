@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Vitamine K is nodig voor de bloedstolling en de botstofwisseling. Een tekort kan leiden tot verhoogde bloedingsneiging en komt voor bij vetopnamestoornissen of langdurige antibioticabehandeling.",
+  "metaDescription": "Vitamine K te laag? Betekenis voor bloedstolling, normale waarden en oorzaken uitgelegd.",
+  "causesElevated": [],
+  "causesLow": [
+    "Vetopnamestoornis",
+    "Langdurige antibioticabehandeling",
+    "Ondervoeding",
+    "Leverziekte"
+  ],
+  "doctorQuestions": [
+    "Verklaart een vitamine K-tekort mijn verhoogde bloedingsneiging?",
+    "Moet ik vitamine K aanvullen?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal"
+  },
+  "categoryLabel": "Vitaminen",
+  "pageTitle": "Vitamine K uitgelegd | Medyra"
+}

@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Cholinesterase wordt door de lever aangemaakt en laat zien hoe goed de lever momenteel eiwitten produceert. Lage waarden kunnen wijzen op verminderde leverfunctie of vergiftiging, verhoogde waarden komen voor bij vetlever of diabetes.",
+  "metaDescription": "Cholinesterase te laag of te hoog? Betekenis en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Vetlever",
+    "Diabetes mellitus",
+    "Overgewicht"
+  ],
+  "causesLow": [
+    "Gevorderde leverziekte",
+    "Vergiftiging (bijv. pesticiden)",
+    "Ondervoeding"
+  ],
+  "doctorQuestions": [
+    "Wijst mijn cholinesterasewaarde op verminderde leverfunctie?",
+    "Moeten andere leverwaarden worden gecontroleerd?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Leverwaarden",
+  "pageTitle": "Cholinesterase uitgelegd | Medyra"
+}

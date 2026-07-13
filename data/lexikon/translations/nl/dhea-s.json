@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "DHEA-S wordt bijna uitsluitend in de bijnier aangemaakt en dient als voorloper voor geslachtshormonen. Verhoogde waarden kunnen wijzen op verhoogde bijnierhormoonproductie.",
+  "metaDescription": "DHEA-S verhoogd of laag? Betekenis voor de bijnierfunctie eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Verhoogde bijnieractiviteit",
+    "Polycysteus-ovariumsyndroom",
+    "Zeldzame bijniertumoren"
+  ],
+  "causesLow": [
+    "Leeftijdsgebonden afname",
+    "Bijnierinsufficiëntie"
+  ],
+  "doctorQuestions": [
+    "Zou mijn DHEA-S kunnen samenhangen met verhoogde lichaamsbeharing of cyclusstoornissen?",
+    "Is beeldvorming van de bijnier nuttig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal (leeftijdsafhankelijk)"
+  },
+  "categoryLabel": "Hormonen",
+  "pageTitle": "DHEA-S uitgelegd | Medyra"
+}

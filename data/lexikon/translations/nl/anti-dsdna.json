@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Anti-dsDNA-antistoffen zijn veel specifieker voor systemische lupus erythematodes dan ANA en worden vaak gebruikt om de ziekteactiviteit te bevestigen en te volgen.",
+  "metaDescription": "Anti-dsDNA-antistoffen verhoogd? Betekenis voor systemische lupus erythematodes uitgelegd.",
+  "causesElevated": [
+    "Systemische lupus erythematodes",
+    "Actieve ziektefase bij bekende lupus"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bevestigt deze waarde systemische lupus erythematodes?",
+    "Wijst de waarde op een huidige actieve ziektefase?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Immuunsysteem",
+  "pageTitle": "Anti-dsDNA-antistoffen uitgelegd | Medyra"
+}

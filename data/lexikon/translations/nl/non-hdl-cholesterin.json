@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Non-HDL-cholesterol omvat alle soorten cholesterol behalve het \"goede\" HDL, dus vooral LDL en andere vaatschadelijke deeltjes. Het geldt als een goede algemene indicator van het hart- en vaatrisico.",
+  "metaDescription": "Non-HDL-cholesterol verhoogd? Betekenis voor het hart- en vaatrisico eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Verhoogd LDL-cholesterol",
+    "Verhoogde triglyceriden",
+    "Ongunstige voeding",
+    "Overgewicht"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Hoe hoog is mijn hart- en vaatrisico op basis van deze waarde?",
+    "Moet mijn cholesterolbehandeling worden aangepast?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Stofwisseling",
+  "pageTitle": "Non-HDL-cholesterol uitgelegd | Medyra"
+}

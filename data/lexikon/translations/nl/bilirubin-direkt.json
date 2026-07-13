@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Direct bilirubine is de vorm van bilirubine die al door de lever is verwerkt. Een verhoogde waarde wijst meestal op galstuwing of een lever- of galwegziekte.",
+  "metaDescription": "Direct bilirubine verhoogd? Betekenis, normale waarden en oorzaken eenvoudig uitgelegd.",
+  "causesElevated": [
+    "Galstuwing (bijv. galstenen)",
+    "Leverziekte",
+    "Ontsteking van de galwegen"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Wijst mijn waarde op galstuwing?",
+    "Is een echo van de galwegen nuttig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Leverwaarden",
+  "pageTitle": "Direct bilirubine uitgelegd | Medyra"
+}

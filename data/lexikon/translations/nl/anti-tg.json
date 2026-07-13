@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Anti-Tg-antistoffen richten zich tegen het opslageiwit van de schildklier en worden vaak samen met anti-TPO gemeten bij verdenking op een auto-immuunziekte van de schildklier.",
+  "metaDescription": "Antithyreoglobuline-antistoffen (Anti-Tg) verhoogd? Betekenis voor schildklierziekten uitgelegd.",
+  "causesElevated": [
+    "Hashimoto-thyreoïditis",
+    "Ziekte van Graves",
+    "Auto-immune schildklierontsteking"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Wat betekent deze waarde voor mijn schildklierdiagnose?",
+    "Zijn verdere antistoftests nuttig?"
+  ],
+  "rangeLabels": {
+    "normal": "Normaal",
+    "elevated": "Verhoogd"
+  },
+  "categoryLabel": "Schildklier",
+  "pageTitle": "Antithyreoglobuline-antistoffen uitgelegd | Medyra"
+}

@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "AMH wordt geproduceerd door de follikels in de eierstokken en geldt als marker van de resterende eicelvoorraad. De waarde wordt vaak gemeten in het kader van een vruchtbaarheidsonderzoek of vóór een IVF.",
+  "metaDescription": "AMH (anti-müllerhormoon) verhoogd of laag? Betekenis voor de eicelvoorraad uitgelegd.",
+  "causesElevated": [
+    "Polycysteus-ovariumsyndroom (PCOS)"
+  ],
+  "causesLow": [
+    "Leeftijdsgebonden afname van de eicelvoorraad",
+    "Vroegtijdige menopauze",
+    "Toestand na chemotherapie"
+  ],
+  "doctorQuestions": [
+    "Wat betekent mijn AMH voor mijn eicelvoorraad?",
+    "Beïnvloedt deze waarde de planning van een IVF?"
+  ],
+  "rangeLabels": {
+    "low": "Laag",
+    "normal": "Normaal (leeftijdsafhankelijk)",
+    "elevated": "Verhoogd (bijv. bij PCOS)"
+  },
+  "categoryLabel": "Hormonen",
+  "pageTitle": "AMH: anti-müllerhormoon uitgelegd | Medyra"
+}
