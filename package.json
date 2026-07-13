@@ -2,6 +2,7 @@
     "name": "nextjs-mongo-template",
     "version": "0.1.0",
     "private": true,
+    "license": "UNLICENSED",
     "scripts": {
         "dev": "next dev",
         "dev:no-reload": "next dev --hostname 0.0.0.0 --port 3000",
@@ -51,7 +52,6 @@
         "embla-carousel-react": "^8.6.0",
         "framer-motion": "12.42.2",
         "googleapis": "^173.0.0",
-        "html2pdf.js": "^0.10.2",
         "input-otp": "^1.4.2",
         "lucide-react": "^0.516.0",
         "mongodb": "^6.21.0",
