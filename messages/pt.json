@@ -337,12 +337,20 @@
     "limitReached": "Limite de uso atingido. Atualize seu plano."
   },
   "success": {
-    "verifyingPayment": "Verificando pagamento...",
-    "pleaseWait": "Por favor aguarde enquanto confirmamos sua assinatura",
-    "paymentSuccessful": "Pagamento bem-sucedido!",
-    "subscriptionActive": "Sua assinatura está agora ativa",
-    "thankYou": "Obrigado por assinar o Medyra. Agora você pode começar a enviar e analisar seus relatórios médicos.",
-    "uploadFirstReport": "Enviar seu primeiro relatório"
+    "activating": "Ativando sua assinatura…",
+    "momentNote": "Isso leva apenas um momento",
+    "title": "Pagamento bem-sucedido!",
+    "subtitle": "Sua assinatura já está ativa",
+    "receiptNote": "Um recibo foi enviado para o seu e-mail. Seu plano renova automaticamente todo mês e você pode cancelar a qualquer momento.",
+    "includedLabel": "O que está incluído",
+    "feature1": "Envie e analise relatórios médicos com IA",
+    "feature2": "Criptografado com AES-256, conforme o RGPD",
+    "feature3": "O uso é reiniciado automaticamente todo mês",
+    "feature4": "Cancele a qualquer momento, sem perguntas",
+    "uploadCta": "Enviar seu primeiro relatório",
+    "dashboardCta": "Ir para o painel",
+    "questionsNote": "Dúvidas? Escreva para",
+    "replyNote": "— respondemos em 1 dia útil."
   },
   "prep": {
     "title": "Preparação para consulta",

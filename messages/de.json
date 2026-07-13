@@ -337,12 +337,20 @@
     "limitReached": "Limit erreicht. Bitte Plan upgraden."
   },
   "success": {
-    "verifyingPayment": "Zahlung wird überprüft...",
-    "pleaseWait": "Bitte warten Sie, während wir Ihr Abonnement bestätigen",
-    "paymentSuccessful": "Zahlung erfolgreich!",
-    "subscriptionActive": "Ihr Abonnement ist jetzt aktiv",
-    "thankYou": "Vielen Dank für Ihr Abonnement bei Medyra. Sie können jetzt Ihre medizinischen Berichte hochladen und analysieren.",
-    "uploadFirstReport": "Ersten Bericht hochladen"
+    "activating": "Ihr Abo wird aktiviert…",
+    "momentNote": "Das dauert nur einen Moment",
+    "title": "Zahlung erfolgreich!",
+    "subtitle": "Ihr Abo ist jetzt aktiv",
+    "receiptNote": "Eine Quittung wurde an Ihre E-Mail gesendet. Ihr Plan verlängert sich automatisch jeden Monat und kann jederzeit gekündigt werden.",
+    "includedLabel": "Das ist enthalten",
+    "feature1": "Arztbriefe mit KI hochladen und analysieren",
+    "feature2": "AES-256-verschlüsselt, DSGVO-konform",
+    "feature3": "Nutzung wird jeden Monat automatisch zurückgesetzt",
+    "feature4": "Jederzeit kündbar, ohne Rückfragen",
+    "uploadCta": "Ersten Befund hochladen",
+    "dashboardCta": "Zum Dashboard",
+    "questionsNote": "Fragen? Schreiben Sie uns an",
+    "replyNote": "— wir antworten innerhalb eines Werktages."
   },
   "prep": {
     "title": "Arztbesuch-Vorbereitung",

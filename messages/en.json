@@ -337,12 +337,20 @@
     "limitReached": "Usage limit reached. Please upgrade your plan."
   },
   "success": {
-    "verifyingPayment": "Verifying Payment...",
-    "pleaseWait": "Please wait while we confirm your subscription",
-    "paymentSuccessful": "Payment Successful!",
-    "subscriptionActive": "Your subscription is now active",
-    "thankYou": "Thank you for subscribing to Medyra. You can now start uploading and analyzing your medical reports.",
-    "uploadFirstReport": "Upload Your First Report"
+    "activating": "Activating your subscription…",
+    "momentNote": "This only takes a moment",
+    "title": "Payment Successful!",
+    "subtitle": "Your subscription is now active",
+    "receiptNote": "A receipt has been sent to your email. Your plan renews automatically every month and you can cancel anytime.",
+    "includedLabel": "What's included",
+    "feature1": "Upload & analyse medical reports with AI",
+    "feature2": "AES-256 encrypted, GDPR compliant",
+    "feature3": "Usage resets automatically every month",
+    "feature4": "Cancel anytime, no questions asked",
+    "uploadCta": "Upload Your First Report",
+    "dashboardCta": "Go to Dashboard",
+    "questionsNote": "Questions? Email us at",
+    "replyNote": "— we reply within one business day."
   },
   "prep": {
     "title": "Doctor Visit Prep",

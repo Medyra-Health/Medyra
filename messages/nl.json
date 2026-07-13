@@ -337,12 +337,20 @@
     "limitReached": "Gebruikslimiet bereikt. Upgrade uw abonnement."
   },
   "success": {
-    "verifyingPayment": "Betaling verifiëren...",
-    "pleaseWait": "Even geduld terwijl we uw abonnement bevestigen",
-    "paymentSuccessful": "Betaling geslaagd!",
-    "subscriptionActive": "Uw abonnement is nu actief",
-    "thankYou": "Bedankt voor uw abonnement op Medyra. U kunt nu beginnen met het uploaden en analyseren van uw medische rapporten.",
-    "uploadFirstReport": "Upload uw eerste rapport"
+    "activating": "Uw abonnement wordt geactiveerd…",
+    "momentNote": "Dit duurt maar een moment",
+    "title": "Betaling geslaagd!",
+    "subtitle": "Uw abonnement is nu actief",
+    "receiptNote": "Er is een bon naar uw e-mail gestuurd. Uw abonnement wordt elke maand automatisch verlengd en u kunt op elk moment opzeggen.",
+    "includedLabel": "Wat is inbegrepen",
+    "feature1": "Upload en analyseer medische rapporten met AI",
+    "feature2": "AES-256-versleuteld, AVG-conform",
+    "feature3": "Gebruik wordt elke maand automatisch gereset",
+    "feature4": "Op elk moment opzegbaar, geen vragen",
+    "uploadCta": "Upload uw eerste rapport",
+    "dashboardCta": "Naar dashboard",
+    "questionsNote": "Vragen? Mail ons op",
+    "replyNote": "— wij reageren binnen 1 werkdag."
   },
   "prep": {
     "title": "Artsbezoek voorbereiding",

@@ -337,12 +337,20 @@
     "limitReached": "使用制限に達しました。プランをアップグレードしてください。"
   },
   "success": {
-    "verifyingPayment": "支払いを確認中...",
-    "pleaseWait": "サブスクリプションを確認中です",
-    "paymentSuccessful": "お支払い完了！",
-    "subscriptionActive": "サブスクリプションが有効になりました",
-    "thankYou": "Medyraにご登録いただきありがとうございます。医療レポートのアップロードと分析を開始できます。",
-    "uploadFirstReport": "最初のレポートをアップロード"
+    "activating": "サブスクリプションを有効化しています…",
+    "momentNote": "少々お待ちください",
+    "title": "お支払いが完了しました！",
+    "subtitle": "サブスクリプションが有効になりました",
+    "receiptNote": "領収書がメールに送信されました。プランは毎月自動更新され、いつでも解約できます。",
+    "includedLabel": "含まれる内容",
+    "feature1": "AIで医療報告書をアップロード・分析",
+    "feature2": "AES-256暗号化、GDPR準拠",
+    "feature3": "利用状況は毎月自動的にリセットされます",
+    "feature4": "いつでも解約可能、質問不要",
+    "uploadCta": "最初の報告書をアップロード",
+    "dashboardCta": "ダッシュボードへ移動",
+    "questionsNote": "ご質問がありますか？こちらまでメールしてください：",
+    "replyNote": "— 1営業日以内にご返信します。"
   },
   "prep": {
     "title": "受診準備",

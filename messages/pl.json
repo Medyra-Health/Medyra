@@ -337,12 +337,20 @@
     "limitReached": "Osiągnięto limit użycia. Uaktualnij swój plan."
   },
   "success": {
-    "verifyingPayment": "Weryfikacja płatności...",
-    "pleaseWait": "Poczekaj, aż potwierdzimy Twój abonament",
-    "paymentSuccessful": "Płatność zakończona sukcesem!",
-    "subscriptionActive": "Twój abonament jest teraz aktywny",
-    "thankYou": "Dziękujemy za subskrypcję Medyra. Możesz teraz zacząć przesyłać i analizować swoje raporty medyczne.",
-    "uploadFirstReport": "Prześlij pierwszy raport"
+    "activating": "Aktywowanie subskrypcji…",
+    "momentNote": "To zajmie tylko chwilę",
+    "title": "Płatność zakończona sukcesem!",
+    "subtitle": "Twoja subskrypcja jest teraz aktywna",
+    "receiptNote": "Potwierdzenie zostało wysłane na Twój e-mail. Twój plan odnawia się automatycznie co miesiąc i możesz go anulować w dowolnym momencie.",
+    "includedLabel": "Co jest zawarte",
+    "feature1": "Prześlij i analizuj dokumenty medyczne za pomocą AI",
+    "feature2": "Szyfrowanie AES-256, zgodność z RODO",
+    "feature3": "Wykorzystanie resetuje się automatycznie co miesiąc",
+    "feature4": "Anuluj w dowolnym momencie, bez pytań",
+    "uploadCta": "Prześlij pierwszy dokument",
+    "dashboardCta": "Przejdź do panelu",
+    "questionsNote": "Pytania? Napisz do nas na",
+    "replyNote": "— odpowiadamy w ciągu 1 dnia roboczego."
   },
   "prep": {
     "title": "Przygotowanie do wizyty lekarskiej",

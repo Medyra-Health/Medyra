@@ -337,12 +337,20 @@
     "limitReached": "已达到使用限制。请升级您的计划。"
   },
   "success": {
-    "verifyingPayment": "正在验证付款...",
-    "pleaseWait": "请稍候，我们正在确认您的订阅",
-    "paymentSuccessful": "付款成功！",
-    "subscriptionActive": "您的订阅现已激活",
-    "thankYou": "感谢您订阅Medyra。您现在可以开始上传和分析您的医疗报告了。",
-    "uploadFirstReport": "上传您的第一份报告"
+    "activating": "正在激活您的订阅…",
+    "momentNote": "这只需要片刻",
+    "title": "支付成功！",
+    "subtitle": "您的订阅现已激活",
+    "receiptNote": "收据已发送到您的邮箱。您的套餐每月自动续订，您可以随时取消。",
+    "includedLabel": "包含内容",
+    "feature1": "使用AI上传和分析医疗报告",
+    "feature2": "AES-256加密，符合GDPR标准",
+    "feature3": "使用量每月自动重置",
+    "feature4": "随时取消，无需理由",
+    "uploadCta": "上传您的第一份报告",
+    "dashboardCta": "前往仪表板",
+    "questionsNote": "有问题吗？请发邮件至",
+    "replyNote": "——我们会在1个工作日内回复。"
   },
   "prep": {
     "title": "就诊准备",

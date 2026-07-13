@@ -337,12 +337,20 @@
     "limitReached": "Limite di utilizzo raggiunto. Aggiorna il tuo piano."
   },
   "success": {
-    "verifyingPayment": "Verifica pagamento...",
-    "pleaseWait": "Attendere mentre confermiamo il tuo abbonamento",
-    "paymentSuccessful": "Pagamento riuscito!",
-    "subscriptionActive": "Il tuo abbonamento è ora attivo",
-    "thankYou": "Grazie per esserti iscritto a Medyra. Ora puoi iniziare a caricare e analizzare i tuoi referti medici.",
-    "uploadFirstReport": "Carica il tuo primo referto"
+    "activating": "Attivazione del tuo abbonamento…",
+    "momentNote": "Richiede solo un momento",
+    "title": "Pagamento riuscito!",
+    "subtitle": "Il tuo abbonamento è ora attivo",
+    "receiptNote": "Una ricevuta è stata inviata alla tua email. Il tuo piano si rinnova automaticamente ogni mese e puoi disdire in qualsiasi momento.",
+    "includedLabel": "Cosa è incluso",
+    "feature1": "Carica e analizza referti medici con l’IA",
+    "feature2": "Crittografato AES-256, conforme al GDPR",
+    "feature3": "L’utilizzo si azzera automaticamente ogni mese",
+    "feature4": "Disdici in qualsiasi momento, senza domande",
+    "uploadCta": "Carica il tuo primo referto",
+    "dashboardCta": "Vai alla dashboard",
+    "questionsNote": "Domande? Scrivici a",
+    "replyNote": "— rispondiamo entro un giorno lavorativo."
   },
   "prep": {
     "title": "Preparazione alla visita medica",

@@ -337,12 +337,20 @@
     "limitReached": "Kullanım limiti doldu. Planınızı yükseltin."
   },
   "success": {
-    "verifyingPayment": "Ödeme doğrulanıyor...",
-    "pleaseWait": "Aboneliğinizi onaylarken lütfen bekleyin",
-    "paymentSuccessful": "Ödeme Başarılı!",
-    "subscriptionActive": "Aboneliğiniz şimdi aktif",
-    "thankYou": "Medyra'ya abone olduğunuz için teşekkürler. Artık tıbbi raporlarınızı yükleyip analiz edebilirsiniz.",
-    "uploadFirstReport": "İlk Raporunuzu Yükleyin"
+    "activating": "Aboneliğiniz etkinleştiriliyor…",
+    "momentNote": "Bu sadece bir an sürer",
+    "title": "Ödeme Başarılı!",
+    "subtitle": "Aboneliğiniz artık aktif",
+    "receiptNote": "E-postanıza bir makbuz gönderildi. Planınız her ay otomatik olarak yenilenir ve istediğiniz zaman iptal edebilirsiniz.",
+    "includedLabel": "Neler dahil",
+    "feature1": "Yapay zeka ile tıbbi raporları yükleyin ve analiz edin",
+    "feature2": "AES-256 şifreli, GDPR uyumlu",
+    "feature3": "Kullanım her ay otomatik olarak sıfırlanır",
+    "feature4": "İstediğiniz zaman iptal edin, soru sorulmaz",
+    "uploadCta": "İlk raporunuzu yükleyin",
+    "dashboardCta": "Panele git",
+    "questionsNote": "Sorularınız mı var? Bize yazın:",
+    "replyNote": "— 1 iş günü içinde yanıt veriyoruz."
   },
   "prep": {
     "title": "Doktor Ziyareti Hazırlığı",

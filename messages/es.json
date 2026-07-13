@@ -337,12 +337,20 @@
     "limitReached": "Límite de uso alcanzado. Por favor actualiza tu plan."
   },
   "success": {
-    "verifyingPayment": "Verificando pago...",
-    "pleaseWait": "Por favor espera mientras confirmamos tu suscripción",
-    "paymentSuccessful": "¡Pago exitoso!",
-    "subscriptionActive": "Tu suscripción ya está activa",
-    "thankYou": "Gracias por suscribirte a Medyra. Ahora puedes empezar a subir y analizar tus informes médicos.",
-    "uploadFirstReport": "Subir tu primer informe"
+    "activating": "Activando su suscripción…",
+    "momentNote": "Esto solo tomará un momento",
+    "title": "¡Pago exitoso!",
+    "subtitle": "Su suscripción ya está activa",
+    "receiptNote": "Se ha enviado un recibo a su correo electrónico. Su plan se renueva automáticamente cada mes y puede cancelarlo en cualquier momento.",
+    "includedLabel": "Qué incluye",
+    "feature1": "Suba y analice informes médicos con IA",
+    "feature2": "Cifrado AES-256, conforme al RGPD",
+    "feature3": "El uso se restablece automáticamente cada mes",
+    "feature4": "Cancele en cualquier momento, sin preguntas",
+    "uploadCta": "Subir su primer informe",
+    "dashboardCta": "Ir al panel",
+    "questionsNote": "¿Preguntas? Escríbanos a",
+    "replyNote": "— respondemos en un día hábil."
   },
   "prep": {
     "title": "Preparación para el médico",

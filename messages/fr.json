@@ -337,12 +337,20 @@
     "limitReached": "Limite d'utilisation atteinte. Veuillez passer à un forfait supérieur."
   },
   "success": {
-    "verifyingPayment": "Vérification du paiement...",
-    "pleaseWait": "Veuillez patienter pendant que nous confirmons votre abonnement",
-    "paymentSuccessful": "Paiement réussi!",
-    "subscriptionActive": "Votre abonnement est maintenant actif",
-    "thankYou": "Merci de vous être abonné à Medyra. Vous pouvez maintenant commencer à télécharger et analyser vos rapports médicaux.",
-    "uploadFirstReport": "Télécharger votre premier rapport"
+    "activating": "Activation de votre abonnement…",
+    "momentNote": "Cela ne prend qu’un instant",
+    "title": "Paiement réussi !",
+    "subtitle": "Votre abonnement est maintenant actif",
+    "receiptNote": "Un reçu a été envoyé à votre e-mail. Votre forfait se renouvelle automatiquement chaque mois et vous pouvez annuler à tout moment.",
+    "includedLabel": "Ce qui est inclus",
+    "feature1": "Téléchargez et analysez des rapports médicaux avec l’IA",
+    "feature2": "Chiffré AES-256, conforme au RGPD",
+    "feature3": "L’utilisation se réinitialise automatiquement chaque mois",
+    "feature4": "Annulez à tout moment, sans question",
+    "uploadCta": "Télécharger votre premier rapport",
+    "dashboardCta": "Aller au tableau de bord",
+    "questionsNote": "Des questions ? Écrivez-nous à",
+    "replyNote": "— nous répondons sous un jour ouvré."
   },
   "prep": {
     "title": "Préparation à la consultation",
