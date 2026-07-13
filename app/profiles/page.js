@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useUser } from '@clerk/nextjs'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import {
   ArrowLeft, Plus, Trash2, User, Baby, Users, Heart,
   Crown, Lock, ChevronRight, Loader2, Check, X, Edit2,
@@ -14,17 +15,17 @@ import AppHeader, { HeaderButton } from '@/components/AppHeader'
 import { collectMarkers, latestValue, markerMeta } from '@/components/HealthTimeline'
 
 const RELATIONSHIPS = [
-  { value: 'self',    label: 'Myself',  icon: User,   color: 'emerald' },
-  { value: 'partner', label: 'Partner', icon: Heart,  color: 'rose'    },
-  { value: 'child',   label: 'Child',   icon: Baby,   color: 'blue'    },
-  { value: 'parent',  label: 'Parent',  icon: Users,  color: 'amber'   },
+  { value: 'self',    labelKey: 'relSelf',    icon: User,   color: 'emerald' },
+  { value: 'partner', labelKey: 'relPartner', icon: Heart,  color: 'rose'    },
+  { value: 'child',   labelKey: 'relChild',   icon: Baby,   color: 'blue'    },
+  { value: 'parent',  labelKey: 'relParent',  icon: Users,  color: 'amber'   },
 ]
 
 const GENDERS = [
-  { value: 'male',         label: 'Male'           },
-  { value: 'female',       label: 'Female'         },
-  { value: 'other',        label: 'Other'          },
-  { value: 'prefer_not',   label: 'Prefer not to say' },
+  { value: 'male',       labelKey: 'genderMale'      },
+  { value: 'female',     labelKey: 'genderFemale'    },
+  { value: 'other',      labelKey: 'genderOther'     },
+  { value: 'prefer_not', labelKey: 'genderPreferNot' },
 ]
 
 const COLORS = [
@@ -45,11 +46,11 @@ const COLOR_THEME = {
   teal:    { bg: 'bg-teal-50',    border: 'border-teal-200',    text: 'text-teal-700',    dot: 'bg-teal-500',    icon: 'bg-teal-100 text-teal-600'       },
 }
 
-const TIER_LABELS = {
-  free: 'Free', personal: 'Personal', family: 'Family', clinic: 'Clinic', admin: 'Admin',
+const TIER_LABEL_KEYS = {
+  free: 'tierFree', personal: 'tierPersonal', family: 'tierFamily', clinic: 'tierClinic', admin: 'tierAdmin',
 }
 
-function ProfileCard({ profile, onDelete, onEdit }) {
+function ProfileCard({ profile, onDelete, onEdit, t }) {
   const rel = RELATIONSHIPS.find(r => r.value === profile.relationship) || RELATIONSHIPS[0]
   const RelIcon = rel.icon
   const theme = COLOR_THEME[profile.color] || COLOR_THEME.emerald
@@ -64,7 +65,7 @@ function ProfileCard({ profile, onDelete, onEdit }) {
           </div>
           <div>
             <p className={`font-bold text-base ${theme.text}`}>{profile.name}</p>
-            <p className="text-xs text-gray-500 capitalize">{rel.label} · {profile.gender?.replace('_', ' ')}</p>
+            <p className="text-xs text-gray-500 capitalize">{t(rel.labelKey)} · {profile.gender?.replace('_', ' ')}</p>
           </div>
         </div>
         <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -90,26 +91,26 @@ function ProfileCard({ profile, onDelete, onEdit }) {
 
       {profile.dob && (
         <p className="text-xs text-gray-500 mb-3">
-          DOB: {new Date(profile.dob).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}
+          {t('dobLabel')}{new Date(profile.dob).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}
         </p>
       )}
 
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1.5">
           <div className={`w-2 h-2 rounded-full ${theme.dot}`} />
-          <span className="text-xs text-gray-500">{profile.biomarkers?.length || 0} biomarker entries</span>
+          <span className="text-xs text-gray-500">{t('biomarkerEntries', { count: profile.biomarkers?.length || 0 })}</span>
         </div>
         <Link href={`/profiles/${profile.id}`} className={`text-xs font-semibold ${theme.text} flex items-center gap-0.5 hover:underline`}>
-          View profile <ChevronRight className="h-3 w-3" />
+          {t('viewProfile')} <ChevronRight className="h-3 w-3" />
         </Link>
       </div>
 
-      <ProfileReportsList profile={profile} />
+      <ProfileReportsList profile={profile} t={t} />
     </div>
   )
 }
 
-function CreateModal({ onClose, onCreated }) {
+function CreateModal({ onClose, onCreated, t }) {
   const [name, setName] = useState('')
   const [dob, setDob] = useState('')
   const [relationship, setRelationship] = useState('self')
@@ -119,7 +120,7 @@ function CreateModal({ onClose, onCreated }) {
   const [error, setError] = useState(null)
 
   async function submit() {
-    if (!name.trim()) return setError('Name is required')
+    if (!name.trim()) return setError(t('nameRequiredError'))
     setSaving(true)
     setError(null)
     try {
@@ -131,7 +132,7 @@ function CreateModal({ onClose, onCreated }) {
       const data = await res.json()
       if (!res.ok) { setError(data.message || data.error); return }
       onCreated(data.profile)
-    } catch { setError('Something went wrong') }
+    } catch { setError(t('genericError')) }
     finally { setSaving(false) }
   }
 
@@ -139,7 +140,7 @@ function CreateModal({ onClose, onCreated }) {
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md">
         <div className="flex items-center justify-between p-6 border-b border-gray-100">
-          <h2 className="text-lg font-bold text-gray-900">New Health Profile</h2>
+          <h2 className="text-lg font-bold text-gray-900">{t('createModalTitle')}</h2>
           <button onClick={onClose} className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors">
             <X className="h-4 w-4 text-gray-600" />
           </button>
@@ -147,17 +148,17 @@ function CreateModal({ onClose, onCreated }) {
         <div className="p-6 space-y-5">
           {/* Name */}
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1.5">Full Name *</label>
+            <label className="block text-xs font-semibold text-gray-700 mb-1.5">{t('fullNameLabel')}</label>
             <input
               value={name} onChange={e => setName(e.target.value)}
-              placeholder="e.g. Akash, Baby Lena..."
+              placeholder={t('namePlaceholder')}
               className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent"
             />
           </div>
 
           {/* DOB */}
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1.5">Date of Birth</label>
+            <label className="block text-xs font-semibold text-gray-700 mb-1.5">{t('dobFieldLabel')}</label>
             <input
               type="date" value={dob} onChange={e => setDob(e.target.value)}
               className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400"
@@ -166,14 +167,14 @@ function CreateModal({ onClose, onCreated }) {
 
           {/* Relationship */}
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1.5">Relationship</label>
+            <label className="block text-xs font-semibold text-gray-700 mb-1.5">{t('relationshipLabel')}</label>
             <div className="grid grid-cols-2 gap-2">
               {RELATIONSHIPS.map(r => {
                 const Icon = r.icon
                 return (
                   <button key={r.value} onClick={() => setRelationship(r.value)}
                     className={`flex items-center gap-2 px-3 py-2.5 rounded-xl border-2 text-sm font-medium transition-all ${relationship === r.value ? 'border-emerald-400 bg-emerald-50 text-emerald-700' : 'border-gray-200 text-gray-600 hover:border-gray-300'}`}>
-                    <Icon className="h-4 w-4" /> {r.label}
+                    <Icon className="h-4 w-4" /> {t(r.labelKey)}
                   </button>
                 )
               })}
@@ -182,16 +183,16 @@ function CreateModal({ onClose, onCreated }) {
 
           {/* Gender */}
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1.5">Gender</label>
+            <label className="block text-xs font-semibold text-gray-700 mb-1.5">{t('genderLabel')}</label>
             <select value={gender} onChange={e => setGender(e.target.value)}
               className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400">
-              {GENDERS.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
+              {GENDERS.map(g => <option key={g.value} value={g.value}>{t(g.labelKey)}</option>)}
             </select>
           </div>
 
           {/* Color */}
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-2">Profile Color</label>
+            <label className="block text-xs font-semibold text-gray-700 mb-2">{t('colorLabel')}</label>
             <div className="flex gap-2">
               {COLORS.map(c => (
                 <button key={c.value} onClick={() => setColor(c.value)}
@@ -205,12 +206,12 @@ function CreateModal({ onClose, onCreated }) {
 
         <div className="flex gap-3 p-6 pt-0">
           <button onClick={onClose} className="flex-1 border border-gray-200 text-gray-600 font-semibold py-2.5 rounded-xl hover:bg-gray-50 transition-colors text-sm">
-            Cancel
+            {t('cancelButton')}
           </button>
           <button onClick={submit} disabled={saving || !name.trim()}
             className="flex-1 bg-emerald-500 hover:bg-emerald-600 disabled:opacity-50 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
             {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-4 w-4" />}
-            {saving ? 'Creating…' : 'Create Profile'}
+            {saving ? t('creatingButton') : t('createProfileButton')}
           </button>
         </div>
       </div>
@@ -218,7 +219,7 @@ function CreateModal({ onClose, onCreated }) {
   )
 }
 
-function EditModal({ profile, onClose, onSaved }) {
+function EditModal({ profile, onClose, onSaved, t }) {
   const [name, setName] = useState(profile.name || '')
   const [dob, setDob] = useState(profile.dob ? String(profile.dob).slice(0, 10) : '')
   const [relationship, setRelationship] = useState(profile.relationship || 'self')
@@ -228,7 +229,7 @@ function EditModal({ profile, onClose, onSaved }) {
   const [error, setError] = useState(null)
 
   async function submit() {
-    if (!name.trim()) return setError('Name is required')
+    if (!name.trim()) return setError(t('nameRequiredError'))
     setSaving(true)
     setError(null)
     try {
@@ -240,7 +241,7 @@ function EditModal({ profile, onClose, onSaved }) {
       const data = await res.json()
       if (!res.ok) { setError(data.message || data.error); return }
       onSaved({ ...profile, name: name.trim(), dob, relationship, gender, color })
-    } catch { setError('Something went wrong') }
+    } catch { setError(t('genericError')) }
     finally { setSaving(false) }
   }
 
@@ -248,49 +249,49 @@ function EditModal({ profile, onClose, onSaved }) {
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md">
         <div className="flex items-center justify-between p-6 border-b border-gray-100">
-          <h2 className="text-lg font-bold text-gray-900">Edit Health Profile</h2>
+          <h2 className="text-lg font-bold text-gray-900">{t('editModalTitle')}</h2>
           <button onClick={onClose} className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors">
             <X className="h-4 w-4 text-gray-600" />
           </button>
         </div>
         <div className="p-6 space-y-5">
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1.5">Full Name *</label>
+            <label className="block text-xs font-semibold text-gray-700 mb-1.5">{t('fullNameLabel')}</label>
             <input
               value={name} onChange={e => setName(e.target.value)}
               className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent"
             />
           </div>
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1.5">Date of Birth</label>
+            <label className="block text-xs font-semibold text-gray-700 mb-1.5">{t('dobFieldLabel')}</label>
             <input
               type="date" value={dob} onChange={e => setDob(e.target.value)}
               className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400"
             />
           </div>
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1.5">Relationship</label>
+            <label className="block text-xs font-semibold text-gray-700 mb-1.5">{t('relationshipLabel')}</label>
             <div className="grid grid-cols-2 gap-2">
               {RELATIONSHIPS.map(r => {
                 const Icon = r.icon
                 return (
                   <button key={r.value} onClick={() => setRelationship(r.value)}
                     className={`flex items-center gap-2 px-3 py-2.5 rounded-xl border-2 text-sm font-medium transition-all ${relationship === r.value ? 'border-emerald-400 bg-emerald-50 text-emerald-700' : 'border-gray-200 text-gray-600 hover:border-gray-300'}`}>
-                    <Icon className="h-4 w-4" /> {r.label}
+                    <Icon className="h-4 w-4" /> {t(r.labelKey)}
                   </button>
                 )
               })}
             </div>
           </div>
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1.5">Gender</label>
+            <label className="block text-xs font-semibold text-gray-700 mb-1.5">{t('genderLabel')}</label>
             <select value={gender} onChange={e => setGender(e.target.value)}
               className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400">
-              {GENDERS.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
+              {GENDERS.map(g => <option key={g.value} value={g.value}>{t(g.labelKey)}</option>)}
             </select>
           </div>
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-2">Profile Color</label>
+            <label className="block text-xs font-semibold text-gray-700 mb-2">{t('colorLabel')}</label>
             <div className="flex gap-2">
               {COLORS.map(c => (
                 <button key={c.value} onClick={() => setColor(c.value)}
@@ -302,12 +303,12 @@ function EditModal({ profile, onClose, onSaved }) {
         </div>
         <div className="flex gap-3 p-6 pt-0">
           <button onClick={onClose} className="flex-1 border border-gray-200 text-gray-600 font-semibold py-2.5 rounded-xl hover:bg-gray-50 transition-colors text-sm">
-            Cancel
+            {t('cancelButton')}
           </button>
           <button onClick={submit} disabled={saving || !name.trim()}
             className="flex-1 bg-emerald-500 hover:bg-emerald-600 disabled:opacity-50 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
             {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Check className="h-4 w-4" />}
-            {saving ? 'Saving…' : 'Save changes'}
+            {saving ? t('savingButton') : t('saveChangesButton')}
           </button>
         </div>
       </div>
@@ -316,7 +317,7 @@ function EditModal({ profile, onClose, onSaved }) {
 }
 
 // Account-wide data retention + privacy control.
-function DataPrivacyCard() {
+function DataPrivacyCard({ t }) {
   const [retention, setRetention] = useState(null)
   const [totalReports, setTotalReports] = useState(0)
   const [saving, setSaving] = useState(false)
@@ -348,14 +349,14 @@ function DataPrivacyCard() {
     {
       value: 'keep',
       icon: Shield,
-      title: 'Keep my data (encrypted backup)',
-      desc: 'Your documents and lab history stay available any time, as your personal health archive. Everything is encrypted at rest. You can delete any document, or switch back, whenever you want.',
+      title: t('keepDataTitle'),
+      desc: t('keepDataDesc'),
     },
     {
       value: 'auto30',
       icon: Trash2,
-      title: 'Auto-delete after 30 days (GDPR)',
-      desc: 'Every document is permanently deleted 30 days after upload. Maximum privacy, nothing kept longer than needed.',
+      title: t('autoDeleteTitle'),
+      desc: t('autoDeleteDesc'),
     },
   ]
 
@@ -363,8 +364,8 @@ function DataPrivacyCard() {
     <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden mt-6">
       <div className="flex items-center gap-2 px-5 py-4 border-b border-gray-100">
         <Shield className="h-4 w-4 text-emerald-600" />
-        <h3 className="text-sm font-bold text-gray-800">Data & Privacy</h3>
-        {retention && <span className="text-xs text-gray-400 ml-1">{totalReports} document{totalReports === 1 ? '' : 's'} stored</span>}
+        <h3 className="text-sm font-bold text-gray-800">{t('dataPrivacyTitle')}</h3>
+        {retention && <span className="text-xs text-gray-400 ml-1">{t('documentsStored', { count: totalReports })}</span>}
         {saving && <Loader2 className="h-3.5 w-3.5 animate-spin text-gray-400 ml-auto" />}
       </div>
       <div className="p-5 space-y-3">
@@ -395,9 +396,7 @@ function DataPrivacyCard() {
               )
             })}
             <p className="text-xs text-gray-400 leading-relaxed pt-1">
-              Your health data is encrypted with AES 256 before it is stored, so it is unreadable in the
-              database. You can export or permanently delete everything at any time under GDPR. Changing
-              this setting applies to all your existing documents immediately.
+              {t('privacyFooterNote')}
             </p>
           </>
         )}
@@ -428,7 +427,7 @@ function unionMarkers(profiles) {
   return [...map.values()]
 }
 
-function CompareSection({ profiles }) {
+function CompareSection({ profiles, t }) {
   const [selA, setSelA] = useState(profiles[0]?.id || '')
   const [selB, setSelB] = useState(profiles[1]?.id || '')
 
@@ -454,12 +453,12 @@ function CompareSection({ profiles }) {
     <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden mt-6">
       <div className="flex items-center gap-2 px-5 py-4 border-b border-gray-100">
         <GitCompareArrows className="h-4 w-4 text-emerald-600" />
-        <h3 className="text-sm font-bold text-gray-800">Compare Profiles</h3>
+        <h3 className="text-sm font-bold text-gray-800">{t('compareTitle')}</h3>
       </div>
 
       {/* Profile selectors */}
       <div className="grid grid-cols-2 gap-3 px-5 py-4 bg-gray-50 border-b border-gray-100">
-        {[{ sel: selA, set: setSelA, label: 'Profile A' }, { sel: selB, set: setSelB, label: 'Profile B' }].map(({ sel, set, label }) => (
+        {[{ sel: selA, set: setSelA, label: t('profileALabel') }, { sel: selB, set: setSelB, label: t('profileBLabel') }].map(({ sel, set, label }) => (
           <div key={label}>
             <p className="text-xs font-semibold text-gray-500 mb-1.5">{label}</p>
             <select
@@ -475,14 +474,14 @@ function CompareSection({ profiles }) {
 
       {rows.length === 0 ? (
         <div className="text-center py-10 text-sm text-gray-400">
-          No biomarker data yet. Upload reports assigned to these profiles to see comparison.
+          {t('noComparisonData')}
         </div>
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th className="text-left px-5 py-3 text-xs font-semibold text-gray-500 w-32">Marker</th>
+                <th className="text-left px-5 py-3 text-xs font-semibold text-gray-500 w-32">{t('markerColumnLabel')}</th>
                 <th className="text-center px-4 py-3 text-xs font-semibold text-gray-700">
                   <span className="flex items-center justify-center gap-1.5">
                     <span className={`w-2 h-2 rounded-full ${pA ? dotColor(pA) : 'bg-gray-300'}`} />
@@ -495,7 +494,7 @@ function CompareSection({ profiles }) {
                     {pB?.name || '—'}
                   </span>
                 </th>
-                <th className="text-center px-4 py-3 text-xs font-semibold text-gray-500 hidden sm:table-cell">Difference</th>
+                <th className="text-center px-4 py-3 text-xs font-semibold text-gray-500 hidden sm:table-cell">{t('differenceColumnLabel')}</th>
               </tr>
             </thead>
             <tbody>
@@ -536,7 +535,7 @@ function CompareSection({ profiles }) {
   )
 }
 
-function OverviewSection({ profiles }) {
+function OverviewSection({ profiles, t }) {
   const data = profiles.map(p => ({
     profile: p,
     markers: collectMarkers(p).map(meta => {
@@ -560,8 +559,8 @@ function OverviewSection({ profiles }) {
     <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden mt-4">
       <div className="flex items-center gap-2 px-5 py-4 border-b border-gray-100">
         <BarChart3 className="h-4 w-4 text-violet-600" />
-        <h3 className="text-sm font-bold text-gray-800">Family Overview</h3>
-        <span className="text-xs text-gray-400 ml-1">Latest values across all profiles</span>
+        <h3 className="text-sm font-bold text-gray-800">{t('familyOverviewTitle')}</h3>
+        <span className="text-xs text-gray-400 ml-1">{t('familyOverviewSubtitle')}</span>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 p-5">
         {data.map(({ profile, markers }) => {
@@ -574,7 +573,7 @@ function OverviewSection({ profiles }) {
                 <p className={`text-sm font-bold ${theme.text}`}>{profile.name}</p>
                 {abnormal > 0 && (
                   <span className="ml-auto text-xs bg-orange-100 text-orange-600 px-1.5 py-0.5 rounded-full font-semibold">
-                    {abnormal} flagged
+                    {t('flaggedCount', { count: abnormal })}
                   </span>
                 )}
               </div>
@@ -591,7 +590,7 @@ function OverviewSection({ profiles }) {
               </div>
               <Link href={`/dashboard?profile=${profile.id}`}
                 className={`mt-3 text-xs font-semibold ${theme.text} flex items-center gap-0.5 hover:underline`}>
-                View full timeline <ChevronRight className="h-3 w-3" />
+                {t('viewFullTimeline')} <ChevronRight className="h-3 w-3" />
               </Link>
             </div>
           )
@@ -601,7 +600,7 @@ function OverviewSection({ profiles }) {
   )
 }
 
-function ProfileReportsList({ profile }) {
+function ProfileReportsList({ profile, t }) {
   const [reports, setReports] = useState(null)
   const [open, setOpen] = useState(false)
   const theme = COLOR_THEME[profile.color] || COLOR_THEME.emerald
@@ -634,7 +633,7 @@ function ProfileReportsList({ profile }) {
       >
         <span className="flex items-center gap-1.5">
           <FileText className="h-3.5 w-3.5" />
-          Reports in this profile
+          {t('reportsInProfile')}
         </span>
         <ChevronRight className={`h-3.5 w-3.5 transition-transform ${open ? 'rotate-90' : ''}`} />
       </button>
@@ -646,7 +645,7 @@ function ProfileReportsList({ profile }) {
               <Loader2 className="h-4 w-4 animate-spin text-gray-400" />
             </div>
           ) : reports.length === 0 ? (
-            <p className="text-xs text-gray-400 text-center py-2">No reports assigned yet</p>
+            <p className="text-xs text-gray-400 text-center py-2">{t('noReportsYet')}</p>
           ) : (
             reports.map(r => {
               const exp = typeof r.explanation === 'object' ? r.explanation : {}
@@ -664,8 +663,8 @@ function ProfileReportsList({ profile }) {
                     <p className="text-xs font-medium text-gray-700 truncate">{r.fileName || 'Report'}</p>
                     <p className="text-xs text-gray-400">{new Date(r.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
                   </div>
-                  {criticals > 0 && <span className="text-xs bg-red-100 text-red-600 font-semibold px-1.5 py-0.5 rounded-full flex-shrink-0">{criticals} critical</span>}
-                  {!criticals && highs > 0 && <span className="text-xs bg-orange-100 text-orange-600 font-semibold px-1.5 py-0.5 rounded-full flex-shrink-0">{highs} flagged</span>}
+                  {criticals > 0 && <span className="text-xs bg-red-100 text-red-600 font-semibold px-1.5 py-0.5 rounded-full flex-shrink-0">{t('criticalCount', { count: criticals })}</span>}
+                  {!criticals && highs > 0 && <span className="text-xs bg-orange-100 text-orange-600 font-semibold px-1.5 py-0.5 rounded-full flex-shrink-0">{t('flaggedCount', { count: highs })}</span>}
                   <ExternalLink className="h-3 w-3 text-gray-300 group-hover:text-gray-500 flex-shrink-0" />
                 </Link>
               )
@@ -678,6 +677,7 @@ function ProfileReportsList({ profile }) {
 }
 
 export default function ProfilesPage() {
+  const t = useTranslations('profiles')
   const { user, isLoaded } = useUser()
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -723,9 +723,9 @@ export default function ProfilesPage() {
       <style>{`.font-display { font-family: var(--font-playfair), Georgia, serif; }`}</style>
       <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-teal-100/60 rounded-full blur-3xl pointer-events-none" />
       {/* Header */}
-      <AppHeader back={{ href: '/dashboard', label: 'Dashboard' }} title="Health Profiles" tone="teal" user>
+      <AppHeader back={{ href: '/dashboard', label: 'Dashboard' }} title={t('headerTitle')} tone="teal" user>
         <HeaderButton href="/pricing" variant="soft" tone="teal" className="hidden sm:inline-flex">
-          {TIER_LABELS[tier]} plan
+          {t(TIER_LABEL_KEYS[tier])} {t('planSuffix')}
         </HeaderButton>
       </AppHeader>
 
@@ -734,17 +734,17 @@ export default function ProfilesPage() {
         {/* Page header */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="font-display text-2xl md:text-3xl font-black text-[#0B1F17] mb-1">Health Profiles</h1>
+            <h1 className="font-display text-2xl md:text-3xl font-black text-[#0B1F17] mb-1">{t('headerTitle')}</h1>
             <p className="text-sm text-gray-500">
               {isPaid
-                ? `Tracking health data for ${profiles.length}${limit ? ` of ${limit}` : ''} profile${profiles.length !== 1 ? 's' : ''}`
-                : 'Upgrade to Personal or Family to create health profiles'}
+                ? (limit ? t('trackingSubtitleWithLimit', { count: profiles.length, limit }) : t('trackingSubtitleNoLimit', { count: profiles.length }))
+                : t('upgradeSubtitle')}
             </p>
           </div>
           {canCreate && (
             <button onClick={() => setShowCreate(true)}
               className="flex items-center gap-2 bg-gradient-to-r from-teal-500 to-teal-600 hover:shadow-[0_0_20px_-4px_rgba(20,184,166,0.5)] text-white font-semibold px-4 py-2.5 rounded-xl transition-shadow shadow-sm shadow-teal-200 text-sm">
-              <Plus className="h-4 w-4" /> New Profile
+              <Plus className="h-4 w-4" /> {t('newProfileButton')}
             </button>
           )}
         </div>
@@ -755,15 +755,15 @@ export default function ProfilesPage() {
             <div className="w-14 h-14 bg-teal-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Shield className="h-7 w-7 text-teal-300" />
             </div>
-            <h2 className="font-display text-xl font-bold text-white mb-2">Your Health Vault</h2>
+            <h2 className="font-display text-xl font-bold text-white mb-2">{t('vaultTitle')}</h2>
             <p className="text-gray-400 text-sm mb-6 max-w-md mx-auto">
-              Personal plans include 2 health profiles with longitudinal tracking, biomarker timelines, and AI-powered doctor summaries that pull from your medical history.
+              {t('vaultDesc')}
             </p>
             <div className="grid sm:grid-cols-3 gap-3 mb-6 max-w-lg mx-auto">
               {[
-                { icon: TrendingUp, label: 'Biomarker timeline' },
-                { icon: Sparkles,   label: 'AI delta analysis'  },
-                { icon: Users,      label: 'Family profiles'    },
+                { icon: TrendingUp, label: t('featureBiomarkerTimeline') },
+                { icon: Sparkles,   label: t('featureAiDelta')  },
+                { icon: Users,      label: t('featureFamilyProfiles')    },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
                   <Icon className="h-5 w-5 text-teal-300 mx-auto mb-1.5" />
@@ -773,7 +773,7 @@ export default function ProfilesPage() {
             </div>
             <Link href="/pricing">
               <button className="bg-gradient-to-r from-teal-500 to-teal-600 hover:shadow-[0_0_24px_-4px_rgba(20,184,166,0.6)] text-white font-bold px-8 py-3 rounded-xl transition-shadow">
-                Upgrade to Personal, €4.99/mo
+                {t('upgradeButton')}
               </button>
             </Link>
           </div>
@@ -787,19 +787,19 @@ export default function ProfilesPage() {
                 <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <User className="h-8 w-8 text-emerald-400" />
                 </div>
-                <h3 className="text-base font-bold text-gray-800 mb-2">No profiles yet</h3>
+                <h3 className="text-base font-bold text-gray-800 mb-2">{t('emptyTitle')}</h3>
                 <p className="text-sm text-gray-500 mb-6 max-w-xs mx-auto">
-                  Create your first health profile to start tracking biomarkers and building your medical history.
+                  {t('emptyDesc')}
                 </p>
                 <button onClick={() => setShowCreate(true)}
                   className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-2.5 rounded-xl transition-colors text-sm">
-                  <Plus className="h-4 w-4" /> Create First Profile
+                  <Plus className="h-4 w-4" /> {t('createFirstButton')}
                 </button>
               </div>
             ) : (
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                 {profiles.map(p => (
-                  <ProfileCard key={p.id} profile={p} onDelete={deleteProfile} onEdit={setEditProfile} />
+                  <ProfileCard key={p.id} profile={p} onDelete={deleteProfile} onEdit={setEditProfile} t={t} />
                 ))}
 
                 {/* Add more slot */}
@@ -809,8 +809,8 @@ export default function ProfilesPage() {
                     <div className="w-10 h-10 rounded-xl bg-gray-100 group-hover:bg-emerald-100 flex items-center justify-center transition-colors">
                       <Plus className="h-5 w-5 text-gray-400 group-hover:text-emerald-600 transition-colors" />
                     </div>
-                    <p className="text-sm font-semibold text-gray-500 group-hover:text-emerald-700 transition-colors">Add Profile</p>
-                    {limit ? <p className="text-xs text-gray-400">{profiles.length}/{limit} used</p> : null}
+                    <p className="text-sm font-semibold text-gray-500 group-hover:text-emerald-700 transition-colors">{t('addProfileSlot')}</p>
+                    {limit ? <p className="text-xs text-gray-400">{t('usedCount', { count: profiles.length, limit })}</p> : null}
                   </button>
                 )}
 
@@ -819,8 +819,8 @@ export default function ProfilesPage() {
                   <Link href="/pricing"
                     className="rounded-2xl border-2 border-dashed border-amber-200 bg-amber-50 p-5 flex flex-col items-center justify-center gap-2 hover:border-amber-300 transition-all min-h-[140px]">
                     <Crown className="h-8 w-8 text-amber-500" />
-                    <p className="text-sm font-bold text-amber-700">Upgrade for more</p>
-                    <p className="text-xs text-amber-600 text-center">Family plan: 5 profiles · Clinic: unlimited</p>
+                    <p className="text-sm font-bold text-amber-700">{t('upgradeForMore')}</p>
+                    <p className="text-xs text-amber-600 text-center">{t('upgradeSlotDesc')}</p>
                   </Link>
                 )}
               </div>
@@ -828,12 +828,12 @@ export default function ProfilesPage() {
 
             {/* How it works */}
             <div className="bg-white border border-gray-100 rounded-2xl p-6 mt-4">
-              <h3 className="text-sm font-bold text-gray-800 mb-4">How health profiles work</h3>
+              <h3 className="text-sm font-bold text-gray-800 mb-4">{t('howItWorksTitle')}</h3>
               <div className="grid sm:grid-cols-3 gap-4">
                 {[
-                  { step: '01', title: 'Create a profile', desc: 'Add a profile for yourself or a family member with name and date of birth.' },
-                  { step: '02', title: 'Upload reports', desc: 'When uploading a health document, assign it to a profile. AI extracts biomarker values.' },
-                  { step: '03', title: 'Track over time', desc: 'See biomarker trends, get AI delta analysis, and generate doctor-ready summaries from your history.' },
+                  { step: '01', title: t('step1Title'), desc: t('step1Desc') },
+                  { step: '02', title: t('step2Title'), desc: t('step2Desc') },
+                  { step: '03', title: t('step3Title'), desc: t('step3Desc') },
                 ].map(({ step, title, desc }) => (
                   <div key={step} className="flex gap-3">
                     <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 text-xs font-black flex items-center justify-center flex-shrink-0 mt-0.5">{step}</span>
@@ -847,15 +847,15 @@ export default function ProfilesPage() {
             </div>
 
             {/* Family overview, all profiles side by side */}
-            {profiles.length >= 1 && <OverviewSection profiles={profiles} />}
+            {profiles.length >= 1 && <OverviewSection profiles={profiles} t={t} />}
 
             {/* Compare two profiles */}
-            {profiles.length >= 2 && <CompareSection profiles={profiles} />}
+            {profiles.length >= 2 && <CompareSection profiles={profiles} t={t} />}
           </>
         )}
 
         {/* Data & privacy — retention control, all users */}
-        <DataPrivacyCard />
+        <DataPrivacyCard t={t} />
       </main>
 
       {showCreate && (
@@ -869,6 +869,7 @@ export default function ProfilesPage() {
             }))
             setShowCreate(false)
           }}
+          t={t}
         />
       )}
 
@@ -883,6 +884,7 @@ export default function ProfilesPage() {
             }))
             setEditProfile(null)
           }}
+          t={t}
         />
       )}
     </div>
