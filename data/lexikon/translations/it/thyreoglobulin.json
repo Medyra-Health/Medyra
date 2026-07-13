@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "La tireoglobulina è una proteina di deposito prodotta esclusivamente nella tiroide. Il valore viene utilizzato principalmente per il monitoraggio dopo la rimozione chirurgica della tiroide per cancro tiroideo.",
+  "metaDescription": "Tireoglobulina elevata? Significato per il follow-up tiroideo spiegato semplicemente.",
+  "causesElevated": [
+    "Tessuto tiroideo attivo",
+    "Dopo chirurgia tiroidea: possibile segno di recidiva",
+    "Infiammazione tiroidea"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Cosa significa questo valore per il mio follow-up dopo l'intervento tiroideo?",
+    "I miei anticorpi anti-Tg devono essere considerati?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale (con tiroide presente)"
+  },
+  "categoryLabel": "Tiroide",
+  "pageTitle": "Tireoglobulina spiegata | Medyra"
+}

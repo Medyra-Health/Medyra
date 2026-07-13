@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "L'insulina è l'ormone che fa entrare lo zucchero nel sangue nelle cellule. Valori elevati di insulina a digiuno possono indicare una resistenza insulinica iniziale, spesso prima che la glicemia stessa sia elevata.",
+  "metaDescription": "Insulina elevata o bassa? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Resistenza insulinica",
+    "Sindrome dell'ovaio policistico (PCOS)",
+    "Diabete di tipo 2 iniziale",
+    "Sovrappeso"
+  ],
+  "causesLow": [
+    "Diabete di tipo 1",
+    "Diabete di tipo 2 avanzato"
+  ],
+  "doctorQuestions": [
+    "Il mio valore di insulina indica resistenza insulinica?",
+    "Deve essere calcolato l'indice HOMA?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Insulina (a digiuno) spiegata | Medyra"
+}

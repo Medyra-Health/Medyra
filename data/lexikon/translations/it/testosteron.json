@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "Il testosterone è il più importante ormone sessuale maschile, ma è presente in quantità minori anche nelle donne. Valori bassi negli uomini possono manifestarsi con stanchezza o diminuzione della libido.",
+  "metaDescription": "Testosterone troppo basso o alto? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Sindrome dell'ovaio policistico (nelle donne)",
+    "Alcuni disturbi surrenalici",
+    "Uso di steroidi anabolizzanti"
+  ],
+  "causesLow": [
+    "Carenza di testosterone legata all'età",
+    "Disfunzione testicolare",
+    "Malattie dell'ipofisi",
+    "Stress cronico"
+  ],
+  "doctorQuestions": [
+    "Il mio valore di testosterone spiega sintomi come la stanchezza?",
+    "Dovrebbe essere considerata una terapia sostitutiva ormonale?"
+  ],
+  "rangeLabels": {
+    "low": "Basso (Uomo)",
+    "normal": "Normale (Uomo)",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Ormoni",
+  "pageTitle": "Testosterone spiegato | Medyra"
+}

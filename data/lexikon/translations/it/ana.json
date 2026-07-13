@@ -1,0 +1,16 @@
+{
+  "shortAnswer": "Gli anticorpi antinucleari sono diretti contro componenti del nucleo cellulare e sono un importante test di screening in caso di sospette malattie autoimmuni come il lupus. Un valore positivo da solo non è una diagnosi.",
+  "metaDescription": "ANA (anticorpi antinucleari) positivi? Significato per le malattie autoimmuni spiegato.",
+  "causesElevated": [
+    "Lupus eritematoso sistemico",
+    "Altre malattie autoimmuni (es. sindrome di Sjögren)",
+    "Può comparire anche in persone sane a basso titolo"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Qual è il mio titolo ANA e quale pattern è stato trovato?",
+    "Sono necessari ulteriori test anticorpali specifici?"
+  ],
+  "categoryLabel": "Sistema immunitario",
+  "pageTitle": "ANA: anticorpi antinucleari spiegati | Medyra"
+}

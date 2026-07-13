@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Il peptide C si forma durante la produzione propria di insulina e mostra quanta insulina il pancreas stia ancora producendo. Valori bassi suggeriscono carenza di insulina come nel diabete di tipo 1.",
+  "metaDescription": "Peptide C elevato o basso? Significato per la produzione propria di insulina spiegato.",
+  "causesElevated": [
+    "Resistenza insulinica",
+    "Diabete di tipo 2 iniziale",
+    "Insulinoma (raro)"
+  ],
+  "causesLow": [
+    "Diabete di tipo 1",
+    "Carenza avanzata di insulina"
+  ],
+  "doctorQuestions": [
+    "Il mio pancreas sta ancora producendo abbastanza insulina?",
+    "Quale tipo di diabete potrei avere?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Peptide C spiegato | Medyra"
+}

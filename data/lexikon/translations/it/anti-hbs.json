@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Gli anticorpi anti-HBs indicano che esiste sufficiente protezione immunitaria contro l'epatite B, sia tramite vaccinazione che dopo un'infezione risolta. Questo valore viene spesso misurato per verificare la protezione vaccinale.",
+  "metaDescription": "Anti-HBs elevati o bassi? Significato per la protezione vaccinale contro l'epatite B spiegato.",
+  "causesElevated": [
+    "Vaccinazione riuscita contro l'epatite B",
+    "Infezione da epatite B risolta con immunità"
+  ],
+  "causesLow": [
+    "Nessuna protezione vaccinale sufficiente",
+    "Protezione vaccinale in calo nel tempo"
+  ],
+  "doctorQuestions": [
+    "La mia protezione vaccinale contro l'epatite B è ancora sufficiente?",
+    "Dovrei ricevere una vaccinazione di richiamo?"
+  ],
+  "rangeLabels": {
+    "low": "Protezione insufficiente",
+    "normal": "Protezione vaccinale sufficiente"
+  },
+  "categoryLabel": "Marcatori infettivi",
+  "pageTitle": "Anti-HBs spiegati | Medyra"
+}

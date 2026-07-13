@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Gli anticorpi anti-Tg sono diretti contro la proteina di deposito della tiroide e vengono spesso misurati insieme agli anti-TPO in caso di sospetta malattia autoimmune della tiroide.",
+  "metaDescription": "Anticorpi anti-tireoglobulina (Anti-Tg) elevati? Significato per le malattie tiroidee spiegato.",
+  "causesElevated": [
+    "Tiroidite di Hashimoto",
+    "Morbo di Basedow-Graves",
+    "Tiroidite autoimmune"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Cosa significa questo valore per la mia diagnosi tiroidea?",
+    "Sono utili ulteriori test anticorpali?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Tiroide",
+  "pageTitle": "Anticorpi anti-tireoglobulina spiegati | Medyra"
+}

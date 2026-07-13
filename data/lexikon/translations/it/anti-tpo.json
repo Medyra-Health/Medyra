@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Gli anticorpi anti-TPO sono diretti contro un enzima della tiroide e sono l'indicazione più importante di una malattia autoimmune della tiroide come la tiroidite di Hashimoto.",
+  "metaDescription": "Anticorpi anti-TPO elevati? Significato per Hashimoto e malattie tiroidee spiegato.",
+  "causesElevated": [
+    "Tiroidite di Hashimoto",
+    "Morbo di Basedow-Graves",
+    "Altre malattie autoimmuni"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Questo valore conferma una malattia autoimmune della tiroide?",
+    "La mia funzione tiroidea deve essere controllata regolarmente?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Tiroide",
+  "pageTitle": "Anticorpi anti-TPO spiegati | Medyra"
+}

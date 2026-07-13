@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "L'MPV indica la dimensione media delle piastrine. Piastrine più grandi sono spesso di nuova formazione e suggeriscono un maggiore turnover, mentre piastrine più piccole suggeriscono una produzione ridotta dal midollo osseo.",
+  "metaDescription": "MPV troppo alto o basso? Significato del volume piastrinico medio spiegato semplicemente.",
+  "causesElevated": [
+    "Aumentata produzione di piastrine",
+    "Trombocitopenia immune (PTI)",
+    "Dopo perdita di sangue"
+  ],
+  "causesLow": [
+    "Disturbi del midollo osseo",
+    "Ridotta produzione di piastrine"
+  ],
+  "doctorQuestions": [
+    "Il mio MPV corrisponde alla mia conta piastrinica?",
+    "È necessario un esame del midollo osseo?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Emocromo",
+  "pageTitle": "MPV: volume piastrinico medio spiegato | Medyra"
+}

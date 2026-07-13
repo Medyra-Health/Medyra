@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "I linfociti sono globuli bianchi che svolgono un ruolo centrale nella difesa contro i virus. Valori elevati compaiono spesso con infezioni virali, valori bassi possono indicare una difesa immunitaria indebolita.",
+  "metaDescription": "Linfociti elevati o bassi? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Infezione virale",
+    "Infezione cronica",
+    "Alcune malattie del sangue"
+  ],
+  "causesLow": [
+    "Immunodeficienza",
+    "Forte stress",
+    "Terapia cortisonica",
+    "Dopo chemioterapia"
+  ],
+  "doctorQuestions": [
+    "Cosa potrebbe spiegare il mio conteggio basso o alto di linfociti?",
+    "La mia difesa immunitaria è attualmente indebolita?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Emocromo",
+  "pageTitle": "Linfociti spiegati | Medyra"
+}

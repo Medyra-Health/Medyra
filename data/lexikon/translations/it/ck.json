@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "La creatinchinasi si trova principalmente nel muscolo cardiaco e scheletrico e aumenta con danno muscolare, ad esempio dopo sforzo fisico intenso, ma anche con un infarto.",
+  "metaDescription": "Creatinchinasi (CK) elevata? Significato per il danno muscolare e cardiaco spiegato.",
+  "causesElevated": [
+    "Sforzo fisico intenso",
+    "Lesione muscolare",
+    "Infarto miocardico",
+    "Alcuni farmaci (es. statine)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "La mia CK elevata proviene dal muscolo o dal cuore?",
+    "Devono essere misurati anche CK-MB o troponina?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Marcatori cardiaci",
+  "pageTitle": "Creatinchinasi (CK) spiegata | Medyra"
+}

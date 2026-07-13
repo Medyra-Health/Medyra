@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Il paratormone è prodotto dalle ghiandole paratiroidi e regola l'equilibrio del calcio insieme alla vitamina D. Valori elevati possono indicare iperattività delle paratiroidi o carenza di vitamina D.",
+  "metaDescription": "Paratormone (PTH) elevato o basso? Significato per l'equilibrio del calcio spiegato.",
+  "causesElevated": [
+    "Iperattività delle paratiroidi",
+    "Carenza di vitamina D",
+    "Malattia renale cronica"
+  ],
+  "causesLow": [
+    "Ipoparatiroidismo",
+    "Dopo chirurgia tiroidea"
+  ],
+  "doctorQuestions": [
+    "Il mio PTH è legato al mio livello di calcio o vitamina D?",
+    "Deve essere chiarito un disturbo paratiroideo?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Ormoni",
+  "pageTitle": "Paratormone (PTH) spiegato | Medyra"
+}

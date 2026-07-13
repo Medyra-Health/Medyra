@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Il fattore del complemento C3 fa parte di un sistema che combatte direttamente i patogeni e supporta le reazioni infiammatorie. Valori bassi possono indicare un aumentato consumo in malattie autoimmuni come il lupus.",
+  "metaDescription": "Fattore del complemento C3 elevato o basso? Significato per le malattie autoimmuni spiegato.",
+  "causesElevated": [
+    "Infiammazione o infezione acuta"
+  ],
+  "causesLow": [
+    "Malattie autoimmuni (es. lupus eritematoso sistemico)",
+    "Carenza congenita del complemento",
+    "Malattia epatica cronica"
+  ],
+  "doctorQuestions": [
+    "Il mio C3 basso indica una malattia autoimmune?",
+    "Devono essere misurati anche C4 e ANA?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Sistema immunitario",
+  "pageTitle": "Complemento C3 spiegato | Medyra"
+}

@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "L'omocisteina è un prodotto intermedio del metabolismo proteico, degradato con l'aiuto di vitamina B12, acido folico e vitamina B6. Valori elevati derivano spesso da una carenza di queste vitamine.",
+  "metaDescription": "Omocisteina elevata? Significato, valori normali e cause come la carenza vitaminica spiegati.",
+  "causesElevated": [
+    "Carenza di vitamina B12",
+    "Carenza di acido folico",
+    "Carenza di vitamina B6",
+    "Malattia renale"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Ho una carenza vitaminica come causa?",
+    "Dovrei integrare vitamina B12 o acido folico?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Omocisteina spiegata | Medyra"
+}

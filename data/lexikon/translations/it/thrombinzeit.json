@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Il tempo di trombina testa l'ultimo passaggio della coagulazione del sangue, la conversione del fibrinogeno in fibrina. Un valore prolungato compare spesso con terapia eparinica.",
+  "metaDescription": "Tempo di trombina prolungato? Significato per la coagulazione del sangue spiegato semplicemente.",
+  "causesElevated": [
+    "Terapia eparinica",
+    "Carenza di fibrinogeno",
+    "Malattia epatica"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Il mio tempo di trombina prolungato è legato a un farmaco che assumo?",
+    "Deve essere controllato anche il mio fibrinogeno?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Prolungato"
+  },
+  "categoryLabel": "Coagulazione",
+  "pageTitle": "Tempo di trombina spiegato | Medyra"
+}

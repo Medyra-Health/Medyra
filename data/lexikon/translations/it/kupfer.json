@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Il rame partecipa alla formazione del sangue, al tessuto connettivo e al sistema nervoso. Una carenza è rara e si verifica principalmente dopo chirurgia gastrica, valori elevati possono derivare da influenze ormonali.",
+  "metaDescription": "Rame troppo basso o alto? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Influenze ormonali (pillola anticoncezionale, gravidanza)",
+    "Malattie infiammatorie"
+  ],
+  "causesLow": [
+    "Stato dopo chirurgia gastrica",
+    "Malnutrizione",
+    "Rare malattie genetiche (morbo di Wilson)"
+  ],
+  "doctorQuestions": [
+    "Cosa potrebbe spiegare il mio valore anomalo di rame?",
+    "Sono necessari ulteriori esami?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Oligoelementi",
+  "pageTitle": "Rame spiegato | Medyra"
+}

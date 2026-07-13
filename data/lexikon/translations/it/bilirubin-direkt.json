@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La bilirubina diretta è la forma di bilirubina già elaborata dal fegato. Un valore elevato indica solitamente ristagno biliare o una malattia del fegato o delle vie biliari.",
+  "metaDescription": "Bilirubina diretta elevata? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Ristagno biliare (es. calcoli biliari)",
+    "Malattia epatica",
+    "Infiammazione delle vie biliari"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Il mio valore indica un ristagno biliare?",
+    "È utile un'ecografia delle vie biliari?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Valori epatici",
+  "pageTitle": "Bilirubina diretta spiegata | Medyra"
+}

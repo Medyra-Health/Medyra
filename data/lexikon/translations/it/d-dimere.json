@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "I D-dimeri si formano durante la degradazione dei coaguli di sangue e sono un elemento importante nella valutazione di una possibile trombosi o embolia polmonare. Un valore normale rende improbabile una trombosi acuta.",
+  "metaDescription": "D-dimeri elevati? Significato per trombosi ed embolia polmonare spiegato semplicemente.",
+  "causesElevated": [
+    "Trombosi",
+    "Embolia polmonare",
+    "Dopo intervento chirurgico",
+    "Gravidanza",
+    "Infiammazione o infezione acuta"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Deve essere esclusa una trombosi o embolia polmonare nel mio caso?",
+    "Sono necessari ulteriori esami come imaging?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Coagulazione",
+  "pageTitle": "D-dimeri spiegati | Medyra"
+}

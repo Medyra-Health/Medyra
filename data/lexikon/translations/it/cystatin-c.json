@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "La cistatina C è un marcatore sensibile della funzione renale, indipendente da massa muscolare e dieta. Viene spesso misurata in aggiunta alla creatinina, soprattutto quando questa potrebbe essere distorta dalla massa muscolare o dall'età.",
+  "metaDescription": "Cistatina C elevata? Significato per la funzione renale, valori normali e cause spiegati.",
+  "causesElevated": [
+    "Funzione renale ridotta",
+    "Malattia renale cronica"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Perché è stata misurata la cistatina C oltre alla creatinina?",
+    "Com'è la mia funzione renale complessiva?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Valori renali",
+  "pageTitle": "Cistatina C spiegata | Medyra"
+}

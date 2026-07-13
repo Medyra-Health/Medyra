@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "L'LDH è un enzima presente in molte cellule del corpo, tra cui fegato, cuore e muscoli. Valori elevati sono aspecifici e possono indicare danno cellulare in vari organi, come danno epatico, lesione muscolare o infarto.",
+  "metaDescription": "LDH elevata? Significato della lattato deidrogenasi, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Danno epatico",
+    "Infarto miocardico",
+    "Emolisi (distruzione dei globuli rossi)",
+    "Lesione muscolare",
+    "Alcune malattie tumorali"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quale organo potrebbe spiegare il mio LDH elevato?",
+    "Sono necessari ulteriori esami?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Valori epatici",
+  "pageTitle": "LDH: lattato deidrogenasi spiegata | Medyra"
+}

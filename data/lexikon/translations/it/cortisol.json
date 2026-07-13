@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Il cortisolo è il più importante ormone dello stress della ghiandola surrenale e segue un ritmo giornaliero con i valori più alti al mattino. Valori persistentemente elevati possono indicare stress cronico.",
+  "metaDescription": "Cortisolo troppo alto o basso? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Stress cronico",
+    "Sindrome di Cushing",
+    "Terapia cortisonica"
+  ],
+  "causesLow": [
+    "Insufficienza surrenalica (morbo di Addison)",
+    "Malattia dell'ipofisi",
+    "Sospensione improvvisa di una terapia cortisonica"
+  ],
+  "doctorQuestions": [
+    "Il mio cortisolo corrisponde all'orario del prelievo di sangue?",
+    "Deve essere misurato anche l'ACTH?"
+  ],
+  "rangeLabels": {
+    "low": "Basso (mattina)",
+    "normal": "Normale (mattina)",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Ormoni",
+  "pageTitle": "Cortisolo spiegato | Medyra"
+}

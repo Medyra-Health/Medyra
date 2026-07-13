@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "Il fosfato è importante per le ossa, l'energia cellulare e l'equilibrio acido-base, ed è regolato strettamente insieme a calcio e vitamina D. Valori elevati compaiono spesso con funzione renale ridotta.",
+  "metaDescription": "Fosfato elevato o basso? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Funzione renale ridotta",
+    "Eccesso di vitamina D",
+    "Ipoparatiroidismo"
+  ],
+  "causesLow": [
+    "Carenza di vitamina D",
+    "Iperparatiroidismo",
+    "Malnutrizione",
+    "Alcolismo"
+  ],
+  "doctorQuestions": [
+    "Il mio fosfato è legato alla mia funzione renale?",
+    "Devono essere controllati anche i miei livelli di vitamina D e calcio?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Elettroliti",
+  "pageTitle": "Fosfato spiegato | Medyra"
+}

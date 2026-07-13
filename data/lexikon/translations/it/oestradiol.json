@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "L'estradiolo è il più importante ormone sessuale femminile e fluttua fortemente durante il ciclo, la gravidanza e la menopausa. Valori bassi possono indicare la menopausa o una disfunzione ovarica.",
+  "metaDescription": "Estradiolo troppo basso o alto? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Certe fasi del ciclo (es. ovulazione)",
+    "Gravidanza",
+    "Tumori produttori di estrogeni (raro)"
+  ],
+  "causesLow": [
+    "Menopausa",
+    "Disfunzione ovarica",
+    "Significativa perdita di peso o sport agonistico"
+  ],
+  "doctorQuestions": [
+    "Il mio estradiolo corrisponde alla mia attuale fase del ciclo?",
+    "Devono essere misurati altri valori ormonali?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale (dipende dal ciclo)"
+  },
+  "categoryLabel": "Ormoni",
+  "pageTitle": "Estradiolo spiegato | Medyra"
+}

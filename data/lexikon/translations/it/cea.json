@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Il CEA è un marcatore tumorale aspecifico utilizzato principalmente per monitorare malattie tumorali già note, specialmente nel colon. Valori elevati compaiono anche nei fumatori e in varie condizioni benigne.",
+  "metaDescription": "CEA elevato? Significato del marcatore tumorale e possibili cause spiegati.",
+  "causesElevated": [
+    "Fumo",
+    "Malattie infiammatorie croniche intestinali",
+    "Malattia epatica o polmonare",
+    "Malattia tumorale nota (per monitoraggio)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Questo valore viene usato per monitoraggio o valutazione iniziale nel mio caso?",
+    "Quali altri esami sono utili?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale (non fumatore)",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Marcatori tumorali",
+  "pageTitle": "CEA spiegato | Medyra"
+}

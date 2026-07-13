@@ -1,0 +1,15 @@
+{
+  "shortAnswer": "Gli anticorpi anti-HCV indicano che il corpo è entrato in contatto con il virus dell'epatite C in un certo momento. Un test positivo non significa automaticamente un'infezione attiva.",
+  "metaDescription": "Anti-HCV positivo? Significato per un'infezione da epatite C spiegato semplicemente.",
+  "causesElevated": [
+    "Infezione attuale da epatite C",
+    "Infezione da epatite C risolta e guarita"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "È necessario un test PCR aggiuntivo per la conferma?",
+    "Ho un'infezione attiva o risolta?"
+  ],
+  "categoryLabel": "Marcatori infettivi",
+  "pageTitle": "Anti-HCV spiegato | Medyra"
+}

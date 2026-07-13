@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "La vitamina A è importante per la vista, la pelle e il sistema immunitario. Una carenza deriva solitamente da un disturbo di assorbimento dei grassi o malnutrizione.",
+  "metaDescription": "Vitamina A elevata o bassa? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Sovradosaggio da integratori alimentari"
+  ],
+  "causesLow": [
+    "Malnutrizione",
+    "Disturbo di assorbimento dei grassi (es. celiachia)",
+    "Malattia epatica"
+  ],
+  "doctorQuestions": [
+    "Il mio valore di vitamina A spiega i miei sintomi?",
+    "Dovrei integrare o ridurre la vitamina A?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Vitamine",
+  "pageTitle": "Vitamina A spiegata | Medyra"
+}

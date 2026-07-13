@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "L'AFP è normalmente elevata principalmente durante la gravidanza e, al di fuori della gravidanza, viene utilizzata per monitorare tumori epatici o a cellule germinali.",
+  "metaDescription": "AFP elevata? Significato del marcatore tumorale e possibili cause spiegati.",
+  "causesElevated": [
+    "Gravidanza",
+    "Malattia epatica cronica o cirrosi",
+    "Cancro al fegato o tumori a cellule germinali (una delle possibili cause)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Qual è la causa del mio valore elevato di AFP?",
+    "È utile un'imaging del fegato?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale (al di fuori della gravidanza)",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Marcatori tumorali",
+  "pageTitle": "AFP: alfa-fetoproteina spiegata | Medyra"
+}

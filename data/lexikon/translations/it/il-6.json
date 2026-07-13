@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "L'interleuchina-6 è un messaggero del sistema immunitario che aumenta precocemente in infiammazioni e infezioni acute, spesso prima che la PCR sia misurabilmente elevata.",
+  "metaDescription": "Interleuchina-6 (IL-6) elevata? Significato come marcatore infiammatorio precoce spiegato.",
+  "causesElevated": [
+    "Infezione acuta",
+    "Grave reazione infiammatoria",
+    "Malattie autoimmuni",
+    "Dopo intervento chirurgico"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Perché è stata misurata l'IL-6 oltre alla PCR?",
+    "Quanto è grave la mia reazione infiammatoria?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Marcatori infiammatori",
+  "pageTitle": "Interleuchina-6 (IL-6) spiegata | Medyra"
+}

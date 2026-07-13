@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "L'albumina è la proteina più importante nel sangue ed è prodotta dal fegato. Valori bassi possono indicare una malattia epatica, malnutrizione o perdita di proteine attraverso i reni.",
+  "metaDescription": "Albumina troppo bassa? Significato, valori normali e possibili cause spiegati semplicemente.",
+  "causesElevated": [
+    "Carenza di liquidi (disidratazione)"
+  ],
+  "causesLow": [
+    "Malattia epatica",
+    "Malnutrizione",
+    "Malattia renale con perdita di proteine",
+    "Infiammazione cronica"
+  ],
+  "doctorQuestions": [
+    "Cosa potrebbe spiegare la mia albumina bassa?",
+    "La mia funzione epatica o renale deve essere approfondita?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato (di solito disidratazione)"
+  },
+  "categoryLabel": "Valori epatici",
+  "pageTitle": "Albumina spiegata | Medyra"
+}

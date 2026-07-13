@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "La vitamina K è necessaria per la coagulazione del sangue e il metabolismo osseo. Una carenza può causare aumentata tendenza al sanguinamento e si verifica con disturbi di assorbimento dei grassi o terapia antibiotica prolungata.",
+  "metaDescription": "Vitamina K troppo bassa? Significato per la coagulazione, valori normali e cause spiegati.",
+  "causesElevated": [],
+  "causesLow": [
+    "Disturbo di assorbimento dei grassi",
+    "Terapia antibiotica prolungata",
+    "Malnutrizione",
+    "Malattia epatica"
+  ],
+  "doctorQuestions": [
+    "Una carenza di vitamina K spiega la mia aumentata tendenza al sanguinamento?",
+    "Dovrei integrare vitamina K?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale"
+  },
+  "categoryLabel": "Vitamine",
+  "pageTitle": "Vitamina K spiegata | Medyra"
+}

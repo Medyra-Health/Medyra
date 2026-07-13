@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "L'ammoniaca si forma durante la degradazione delle proteine e normalmente viene resa innocua dal fegato. Valori elevati possono indicare funzione epatica ridotta e, nei casi pronunciati, influire sulla funzione cerebrale.",
+  "metaDescription": "Ammoniaca elevata? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Malattia epatica avanzata (cirrosi)",
+    "Insufficienza epatica",
+    "Alcuni disturbi metabolici"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Con quale urgenza deve essere trattata la mia ammoniaca elevata?",
+    "Qual è la causa sottostante nel mio caso?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Valori epatici",
+  "pageTitle": "Ammoniaca spiegata | Medyra"
+}

@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Lo zinco partecipa a molte reazioni enzimatiche, alla guarigione delle ferite e al sistema immunitario. Una carenza può manifestarsi con caduta dei capelli, problemi di guarigione o maggiore suscettibilità alle infezioni.",
+  "metaDescription": "Zinco troppo basso o alto? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Sovradosaggio da integratori alimentari"
+  ],
+  "causesLow": [
+    "Dieta squilibrata",
+    "Malattie intestinali croniche",
+    "Aumentato fabbisogno (es. gravidanza)"
+  ],
+  "doctorQuestions": [
+    "Una carenza di zinco potrebbe spiegare i miei sintomi?",
+    "Dovrei integrare zinco?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Oligoelementi",
+  "pageTitle": "Zinco spiegato | Medyra"
+}

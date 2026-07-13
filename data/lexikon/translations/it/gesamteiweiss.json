@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "La proteina totale misura tutte le proteine nel siero sanguigno, principalmente albumina e immunoglobuline. Valori elevati possono derivare da carenza di liquidi o infiammazioni croniche, valori bassi da malnutrizione o malattie epatiche o renali.",
+  "metaDescription": "Proteina totale elevata o bassa? Valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Carenza di liquidi (disidratazione)",
+    "Infiammazione cronica",
+    "Alcune malattie del sangue"
+  ],
+  "causesLow": [
+    "Malnutrizione",
+    "Malattia epatica",
+    "Malattia renale con perdita di proteine"
+  ],
+  "doctorQuestions": [
+    "Qual è la causa del mio valore anomalo di proteina totale?",
+    "È utile un'elettroforesi proteica?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Valori epatici",
+  "pageTitle": "Proteina totale spiegata | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La CK-MB è una sottoforma della creatinchinasi presente principalmente nel muscolo cardiaco, e quindi un indizio più specifico di danno cardiaco rispetto alla CK totale.",
+  "metaDescription": "CK-MB elevata? Significato per il danno del muscolo cardiaco spiegato semplicemente.",
+  "causesElevated": [
+    "Infarto miocardico",
+    "Miocardite",
+    "Dopo chirurgia cardiaca"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "La CK-MB insieme alla mia troponina conferma un danno cardiaco?",
+    "Qual è il piano di trattamento successivo?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Marcatori cardiaci",
+  "pageTitle": "CK-MB spiegata | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La microalbuminuria misura quantità molto piccole di proteine nelle urine che uno stick urinario normale non rileva. Un valore elevato è spesso un segno precoce di danno renale iniziale, specialmente con diabete o ipertensione.",
+  "metaDescription": "Microalbumina nelle urine elevata? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Danno renale diabetico iniziale",
+    "Pressione alta",
+    "Infiammazione renale"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Questo è un segno precoce di danno renale?",
+    "La mia pressione o glicemia dovrebbero essere meglio controllate?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Valori renali",
+  "pageTitle": "Microalbumina nelle urine spiegata | Medyra"
+}

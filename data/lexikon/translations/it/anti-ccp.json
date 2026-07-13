@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Gli anticorpi anti-CCP sono un indizio più specifico dell'artrite reumatoide rispetto al fattore reumatoide e talvolta possono essere rilevati anche prima che compaiano i sintomi articolari.",
+  "metaDescription": "Anticorpi anti-CCP elevati? Significato per l'artrite reumatoide spiegato semplicemente.",
+  "causesElevated": [
+    "Artrite reumatoide",
+    "Aumentato rischio di sviluppare artrite reumatoide"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Con quale certezza questo valore conferma un'artrite reumatoide?",
+    "Dovrei essere indirizzato a un reumatologo?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Marcatori infiammatori",
+  "pageTitle": "Anticorpi anti-CCP spiegati | Medyra"
+}

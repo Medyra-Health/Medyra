@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "La prolattina è nota principalmente per la produzione di latte dopo il parto, ma può essere elevata negli uomini e nelle donne indipendentemente da ciò. Valori elevati possono causare disturbi del ciclo o perdita della libido.",
+  "metaDescription": "Prolattina elevata? Significato, valori normali e possibili cause spiegati semplicemente.",
+  "causesElevated": [
+    "Stress o mancanza di sonno",
+    "Alcuni farmaci (es. alcuni antidepressivi)",
+    "Tumore benigno dell'ipofisi (prolattinoma)",
+    "Ipotiroidismo"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quale causa potrebbe spiegare la mia prolattina elevata?",
+    "È utile un'imaging dell'ipofisi?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Ormoni",
+  "pageTitle": "Prolattina spiegata | Medyra"
+}

@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "La mioglobina è una proteina del muscolo cardiaco e scheletrico che aumenta rapidamente, ma in modo aspecifico, con danno muscolare o cardiaco. A causa della sua bassa specificità, viene utilizzata meno oggi.",
+  "metaDescription": "Mioglobina elevata? Significato per il danno muscolare e cardiaco spiegato semplicemente.",
+  "causesElevated": [
+    "Infarto miocardico (fase precoce)",
+    "Lesione muscolare",
+    "Sforzo fisico intenso",
+    "Funzione renale ridotta"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Viene misurata anche la troponina per una valutazione più precisa?",
+    "Quanto è urgente un ulteriore chiarimento?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Marcatori cardiaci",
+  "pageTitle": "Mioglobina spiegata | Medyra"
+}

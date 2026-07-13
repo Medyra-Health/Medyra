@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "I reticolociti sono globuli rossi giovani non ancora completamente maturi. Il loro numero mostra quanto attivamente il midollo osseo produce nuovi globuli rossi. Un valore alto può indicare aumentata produzione dopo perdita di sangue.",
+  "metaDescription": "Reticolociti elevati o bassi? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Aumentata produzione ematica dopo perdita di sangue",
+    "Anemia emolitica",
+    "Dopo terapia con ferro o vitamine"
+  ],
+  "causesLow": [
+    "Debolezza del midollo osseo",
+    "Carenza di ferro o vitamine non trattata",
+    "Chemioterapia"
+  ],
+  "doctorQuestions": [
+    "Cosa indica la mia conta di reticolociti sulla causa della mia anemia?",
+    "Il mio midollo osseo risponde bene al trattamento?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Emocromo",
+  "pageTitle": "Reticolociti spiegati | Medyra"
+}

@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "L'AMH è prodotto dai follicoli delle ovaie ed è considerato un marcatore della riserva ovarica rimanente. Il valore viene spesso misurato nell'ambito di una valutazione della fertilità o prima di una fecondazione in vitro.",
+  "metaDescription": "AMH (ormone antimulleriano) elevato o basso? Significato per la riserva ovarica spiegato.",
+  "causesElevated": [
+    "Sindrome dell'ovaio policistico (PCOS)"
+  ],
+  "causesLow": [
+    "Declino legato all'età della riserva ovarica",
+    "Menopausa precoce",
+    "Stato dopo chemioterapia"
+  ],
+  "doctorQuestions": [
+    "Cosa significa il mio AMH per la mia riserva ovarica?",
+    "Questo valore influenza la pianificazione di una fecondazione in vitro?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale (dipende dall'età)",
+    "elevated": "Elevato (es. con PCOS)"
+  },
+  "categoryLabel": "Ormoni",
+  "pageTitle": "AMH: ormone antimulleriano spiegato | Medyra"
+}

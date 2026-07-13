@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La vitamina E è un antiossidante liposolubile che protegge le cellule dallo stress ossidativo. Una carenza è rara in Germania e si verifica principalmente con disturbi di assorbimento dei grassi.",
+  "metaDescription": "Vitamina E troppo bassa? Significato, valori normali e cause di carenza spiegati semplicemente.",
+  "causesElevated": [],
+  "causesLow": [
+    "Disturbo di assorbimento dei grassi",
+    "Malnutrizione",
+    "Rare malattie genetiche"
+  ],
+  "doctorQuestions": [
+    "Ho un disturbo di assorbimento dei grassi come causa?",
+    "Dovrei integrare vitamina E?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale"
+  },
+  "categoryLabel": "Vitamine",
+  "pageTitle": "Vitamina E spiegata | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "L'amilasi è un enzima digestivo prodotto principalmente nel pancreas e nelle ghiandole salivari. Valori molto elevati compaiono tipicamente con pancreatite acuta.",
+  "metaDescription": "Amilasi elevata? Significato per il pancreas spiegato semplicemente.",
+  "causesElevated": [
+    "Pancreatite acuta",
+    "Infiammazione delle ghiandole salivari",
+    "Calcoli biliari"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "La mia amilasi elevata indica una pancreatite?",
+    "Deve essere misurata anche la lipasi?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Valori pancreatici",
+  "pageTitle": "Amilasi spiegata | Medyra"
+}

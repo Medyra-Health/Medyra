@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Il DHEA-S è prodotto quasi esclusivamente nella ghiandola surrenale e funge da precursore per gli ormoni sessuali. Valori elevati possono indicare aumentata produzione ormonale surrenalica.",
+  "metaDescription": "DHEA-S elevato o basso? Significato per la funzione surrenalica spiegato semplicemente.",
+  "causesElevated": [
+    "Aumentata attività surrenalica",
+    "Sindrome dell'ovaio policistico",
+    "Rari tumori surrenalici"
+  ],
+  "causesLow": [
+    "Declino legato all'età",
+    "Insufficienza surrenalica"
+  ],
+  "doctorQuestions": [
+    "Il mio DHEA-S potrebbe essere legato ad aumentata peluria corporea o disturbi del ciclo?",
+    "È utile un'imaging surrenalico?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale (dipende dall'età)"
+  },
+  "categoryLabel": "Ormoni",
+  "pageTitle": "DHEA-S spiegato | Medyra"
+}

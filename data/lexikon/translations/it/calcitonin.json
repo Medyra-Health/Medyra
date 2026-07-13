@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La calcitonina è prodotta da cellule speciali della tiroide e partecipa al metabolismo del calcio. Valori chiaramente elevati sono rari e possono indicare un aumento di queste cellule o, in rari casi, un carcinoma midollare della tiroide.",
+  "metaDescription": "Calcitonina elevata? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Aumento delle cellule C (iperplasia delle cellule C)",
+    "Carcinoma midollare della tiroide (raro)",
+    "Alcuni farmaci"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quali ulteriori esami sono utili in caso di calcitonina elevata?",
+    "Quanto è urgente un chiarimento?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Tiroide",
+  "pageTitle": "Calcitonina spiegata | Medyra"
+}

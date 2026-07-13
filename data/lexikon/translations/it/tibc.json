@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "La TIBC misura quanto ferro il sangue potrebbe trasportare al massimo in totale, riflettendo indirettamente la quantità di transferrina. Valori elevati compaiono tipicamente con carenza di ferro.",
+  "metaDescription": "TIBC elevata o bassa? Significato per la carenza di ferro spiegato.",
+  "causesElevated": [
+    "Carenza di ferro"
+  ],
+  "causesLow": [
+    "Sovraccarico di ferro (emocromatosi)",
+    "Infiammazione cronica",
+    "Malattia epatica"
+  ],
+  "doctorQuestions": [
+    "Questo valore conferma una carenza di ferro?",
+    "Devono essere misurati altri valori del ferro?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Valori del ferro",
+  "pageTitle": "TIBC: capacità totale di legame del ferro spiegata | Medyra"
+}

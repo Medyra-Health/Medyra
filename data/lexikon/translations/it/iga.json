@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Le IgA proteggono principalmente le mucose delle vie respiratorie e dell'intestino dai patogeni. La carenza di IgA è l'immunodeficienza congenita più comune e spesso decorre senza sintomi.",
+  "metaDescription": "IgA elevate o basse? Significato per il sistema immunitario spiegato semplicemente.",
+  "causesElevated": [
+    "Infiammazioni croniche delle mucose",
+    "Malattia epatica",
+    "Malattie autoimmuni"
+  ],
+  "causesLow": [
+    "Carenza congenita di IgA (spesso senza sintomi)",
+    "Alcune malattie intestinali"
+  ],
+  "doctorQuestions": [
+    "La mia carenza di IgA è clinicamente significativa?",
+    "Deve essere considerata per future trasfusioni di sangue?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Sistema immunitario",
+  "pageTitle": "IgA spiegate | Medyra"
+}

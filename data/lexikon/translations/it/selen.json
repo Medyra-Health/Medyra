@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Il selenio è un oligoelemento con funzione antiossidante, importante per la tiroide e il sistema immunitario. Una carenza deriva solitamente da una dieta squilibrata o nutrizione artificiale.",
+  "metaDescription": "Selenio troppo basso o alto? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Sovradosaggio da integratori alimentari"
+  ],
+  "causesLow": [
+    "Dieta squilibrata",
+    "Nutrizione artificiale",
+    "Malattie intestinali croniche"
+  ],
+  "doctorQuestions": [
+    "Una carenza di selenio potrebbe influenzare i miei valori tiroidei?",
+    "Dovrei integrare selenio?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Oligoelementi",
+  "pageTitle": "Selenio spiegato | Medyra"
+}

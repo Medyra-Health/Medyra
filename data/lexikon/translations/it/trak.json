@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "I TRAb sono anticorpi che attivano il recettore del TSH della tiroide e possono quindi scatenare un'iperattività. Un valore elevato è tipico del morbo di Basedow-Graves.",
+  "metaDescription": "TRAb elevati? Significato per il morbo di Basedow-Graves e l'iperattività tiroidea spiegato.",
+  "causesElevated": [
+    "Morbo di Basedow-Graves",
+    "Iperattività tiroidea autoimmune"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Questo valore conferma il morbo di Basedow-Graves?",
+    "Come sarà trattata la mia iperattività tiroidea?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Tiroide",
+  "pageTitle": "TRAb spiegati | Medyra"
+}

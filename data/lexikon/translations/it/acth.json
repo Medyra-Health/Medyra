@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "L'ACTH è prodotto dall'ipofisi e controlla la produzione di cortisolo della ghiandola surrenale. Il valore viene sempre valutato insieme al cortisolo per distinguere una malattia surrenalica da una malattia dell'ipofisi.",
+  "metaDescription": "ACTH elevata o bassa? Significato insieme al cortisolo spiegato semplicemente.",
+  "causesElevated": [
+    "Insufficienza surrenalica (morbo di Addison)",
+    "Tumore produttore di ACTH (raro)"
+  ],
+  "causesLow": [
+    "Malattia dell'ipofisi",
+    "Sindrome di Cushing da tumore surrenalico"
+  ],
+  "doctorQuestions": [
+    "Cosa mostra il rapporto tra ACTH e il mio cortisolo?",
+    "È necessaria un'ulteriore valutazione dell'ipofisi?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale"
+  },
+  "categoryLabel": "Ormoni",
+  "pageTitle": "ACTH spiegata | Medyra"
+}

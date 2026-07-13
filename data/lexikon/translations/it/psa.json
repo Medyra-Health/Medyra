@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Il PSA è prodotto dalla prostata e può aumentare con ingrossamento prostatico, infiammazione o cancro alla prostata. Un valore elevato da solo non dimostra un cancro, molte cause benigne sono molto più frequenti.",
+  "metaDescription": "PSA elevato? Possibili cause e prossimi passi spiegati semplicemente.",
+  "causesElevated": [
+    "Ingrossamento benigno della prostata (IPB)",
+    "Prostatite",
+    "Dopo sforzo fisico (es. ciclismo)",
+    "Cancro alla prostata (una delle possibili cause)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quale delle possibili cause si applica nel mio caso?",
+    "È utile un'ulteriore valutazione urologica?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Marcatori tumorali",
+  "pageTitle": "PSA: antigene prostatico specifico spiegato | Medyra"
+}

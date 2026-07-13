@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Gli eosinofili sono globuli bianchi particolarmente aumentati in allergie e infestazioni parassitarie. Un valore elevato può indicare asma, raffreddore da fieno, allergie cutanee o un'infestazione parassitaria.",
+  "metaDescription": "Eosinofili elevati? Significato, valori normali e cause come le allergie spiegati semplicemente.",
+  "causesElevated": [
+    "Allergie (es. raffreddore da fieno, asma)",
+    "Infestazione parassitaria",
+    "Malattie della pelle come l'eczema",
+    "Alcune reazioni farmacologiche"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Un'allergia o un'infestazione parassitaria potrebbero spiegare il mio valore?",
+    "Dovrebbe essere fatto un test allergologico?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Emocromo",
+  "pageTitle": "Eosinofili spiegati | Medyra"
+}

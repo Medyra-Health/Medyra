@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Le IgM sono la prima classe di anticorpi formata in caso di nuova infezione, quindi indicano solitamente un'infezione acuta o recente. Il valore viene spesso valutato insieme alle IgG.",
+  "metaDescription": "IgM elevate o basse? Significato per le infezioni acute spiegato semplicemente.",
+  "causesElevated": [
+    "Infezione acuta",
+    "Alcune malattie autoimmuni",
+    "Alcune malattie del sangue (es. macroglobulinemia di Waldenström)"
+  ],
+  "causesLow": [
+    "Immunodeficienza congenita o acquisita"
+  ],
+  "doctorQuestions": [
+    "Le mie IgM indicano un'infezione acuta?",
+    "Devono essere misurate anche le IgG?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Sistema immunitario",
+  "pageTitle": "IgM spiegate | Medyra"
+}

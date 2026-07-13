@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Il peso specifico indica quanto sono concentrate le urine e fornisce indizi sull'equilibrio idrico e sulla capacità di concentrazione dei reni. Valori bassi possono indicare un'elevata assunzione di liquidi.",
+  "metaDescription": "Peso specifico urinario elevato o basso? Significato spiegato semplicemente.",
+  "causesElevated": [
+    "Carenza di liquidi (disidratazione)",
+    "Urina mattutina concentrata"
+  ],
+  "causesLow": [
+    "Elevata assunzione di liquidi",
+    "Ridotta capacità di concentrazione renale",
+    "Diabete insipido (raro)"
+  ],
+  "doctorQuestions": [
+    "Questo valore riflette il mio equilibrio idrico o una malattia renale?",
+    "La mia assunzione di liquidi deve essere adattata?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale"
+  },
+  "categoryLabel": "Valori urinari",
+  "pageTitle": "Peso specifico urinario spiegato | Medyra"
+}

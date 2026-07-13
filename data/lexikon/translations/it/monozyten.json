@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "I monociti sono globuli bianchi che assorbono ed eliminano gli agenti patogeni e regolano i processi infiammatori. Valori elevati compaiono spesso con infiammazioni croniche o durante la fase di recupero dopo un'infezione.",
+  "metaDescription": "Monociti elevati? Significato, valori normali e possibili cause spiegati semplicemente.",
+  "causesElevated": [
+    "Infiammazione cronica",
+    "Fase di recupero dopo infezione",
+    "Alcune malattie del sangue",
+    "Malattie autoimmuni"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Cosa potrebbe spiegare il mio conteggio elevato di monociti?",
+    "Sono necessari ulteriori esami?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Emocromo",
+  "pageTitle": "Monociti spiegati | Medyra"
+}

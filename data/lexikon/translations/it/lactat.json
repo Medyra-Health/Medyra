@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Il lattato si forma durante la produzione di energia, specialmente quando muscoli o tessuti non ricevono abbastanza ossigeno. Valori leggermente elevati dopo sforzo fisico sono normali.",
+  "metaDescription": "Lattato elevato? Significato, valori normali e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Sforzo fisico",
+    "Carenza di ossigeno nei tessuti",
+    "Infezione grave (sepsi)",
+    "Alcuni farmaci"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Con quale urgenza deve essere chiarito il mio lattato elevato?",
+    "Qual è la causa sottostante nel mio caso?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Lattato spiegato | Medyra"
+}

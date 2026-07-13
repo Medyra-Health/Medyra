@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "La colinesterasi è prodotta dal fegato e mostra quanto bene il fegato stia attualmente producendo proteine. Valori bassi possono indicare funzione epatica ridotta o avvelenamento, valori elevati compaiono con fegato grasso o diabete.",
+  "metaDescription": "Colinesterasi troppo bassa o alta? Significato e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Fegato grasso",
+    "Diabete mellito",
+    "Sovrappeso"
+  ],
+  "causesLow": [
+    "Malattia epatica avanzata",
+    "Avvelenamento (es. pesticidi)",
+    "Malnutrizione"
+  ],
+  "doctorQuestions": [
+    "Il mio valore di colinesterasi indica una funzione epatica ridotta?",
+    "Devono essere controllati altri valori epatici?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Valori epatici",
+  "pageTitle": "Colinesterasi spiegata | Medyra"
+}

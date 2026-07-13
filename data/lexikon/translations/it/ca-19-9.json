@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Il CA 19-9 viene misurato principalmente in relazione al pancreas e alle vie biliari, ma può anche aumentare con ristagno biliare, infiammazione o altre condizioni benigne.",
+  "metaDescription": "CA 19-9 elevato? Significato del marcatore tumorale e possibili cause spiegati.",
+  "causesElevated": [
+    "Ristagno biliare",
+    "Pancreatite",
+    "Malattia epatica",
+    "Cancro al pancreas (una delle possibili cause)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quale causa è più probabile per il mio valore elevato?",
+    "È utile un'imaging del pancreas?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Marcatori tumorali",
+  "pageTitle": "CA 19-9 spiegato | Medyra"
+}

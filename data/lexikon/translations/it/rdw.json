@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "L'RDW misura quanto variano di dimensione i globuli rossi. Un valore elevato può indicare una carenza iniziale di ferro, vitamina B12 o acido folico, soprattutto se associato a un MCV anomalo. Discuta un RDW elevato con il suo medico.",
+  "metaDescription": "RDW elevato? Significato dell'ampiezza di distribuzione eritrocitaria, valori normali e possibili cause spiegati semplicemente.",
+  "causesElevated": [
+    "Carenza di ferro",
+    "Carenza di vitamina B12 o acido folico",
+    "Anemia mista",
+    "Dopo trasfusione di sangue"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Cosa significa il mio RDW elevato insieme al mio MCV?",
+    "Devono essere controllati i miei valori di ferro e vitamine?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Emocromo",
+  "pageTitle": "RDW: ampiezza di distribuzione eritrocitaria spiegata | Medyra"
+}

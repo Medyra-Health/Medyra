@@ -1,0 +1,27 @@
+{
+  "shortAnswer": "I neutrofili sono il tipo più comune di globuli bianchi e combattono principalmente le infezioni batteriche. Valori elevati indicano spesso un'infezione o infiammazione acuta, valori bassi possono aumentare il rischio di infezione.",
+  "metaDescription": "Neutrofili elevati o bassi? Significato e cause spiegati semplicemente.",
+  "causesElevated": [
+    "Infezione batterica",
+    "Infiammazione acuta",
+    "Forte stress fisico",
+    "Terapia cortisonica"
+  ],
+  "causesLow": [
+    "Infezione virale",
+    "Malattia del midollo osseo",
+    "Chemioterapia",
+    "Alcuni farmaci"
+  ],
+  "doctorQuestions": [
+    "Il mio conteggio di neutrofili indica un'infezione batterica?",
+    "Il mio rischio di infezione è attualmente elevato?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Emocromo",
+  "pageTitle": "Neutrofili spiegati | Medyra"
+}

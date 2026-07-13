@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La lipasi è un enzima digestivo del pancreas ed è considerata un marcatore più specifico di pancreatite rispetto all'amilasi. Valori chiaramente elevati, solitamente con forte dolore addominale, devono essere chiariti rapidamente.",
+  "metaDescription": "Lipasi elevata? Significato per la pancreatite spiegato semplicemente.",
+  "causesElevated": [
+    "Pancreatite acuta",
+    "Calcoli biliari",
+    "Funzione renale ridotta"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Con quale urgenza deve essere chiarita la mia lipasi elevata?",
+    "È necessaria un'imaging del pancreas?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Valori pancreatici",
+  "pageTitle": "Lipasi spiegata | Medyra"
+}

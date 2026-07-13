@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "La saturazione della transferrina mostra quanto della proteina di trasporto del ferro transferrina sia attualmente caricata di ferro. Valori bassi suggeriscono carenza di ferro, valori alti possono indicare sovraccarico di ferro come l'emocromatosi.",
+  "metaDescription": "Saturazione della transferrina elevata o bassa? Significato per carenza e sovraccarico di ferro spiegato.",
+  "causesElevated": [
+    "Sovraccarico di ferro (emocromatosi)",
+    "Trasfusioni di sangue frequenti",
+    "Malattia epatica"
+  ],
+  "causesLow": [
+    "Carenza di ferro",
+    "Infiammazione cronica",
+    "Perdita di sangue"
+  ],
+  "doctorQuestions": [
+    "La mia saturazione della transferrina indica carenza o sovraccarico di ferro?",
+    "Deve essere esclusa un'emocromatosi?"
+  ],
+  "rangeLabels": {
+    "low": "Basso",
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Valori del ferro",
+  "pageTitle": "Saturazione della transferrina spiegata | Medyra"
+}

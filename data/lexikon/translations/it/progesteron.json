@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Il progesterone viene prodotto dopo l'ovulazione e prepara il corpo a una possibile gravidanza. Valori bassi nella seconda metà del ciclo possono essere legati a disturbi del ciclo o assenza di ovulazione.",
+  "metaDescription": "Progesterone troppo basso? Significato per il ciclo e il desiderio di maternità spiegato.",
+  "causesElevated": [
+    "Gravidanza",
+    "Certa fase del ciclo dopo l'ovulazione"
+  ],
+  "causesLow": [
+    "Assenza di ovulazione",
+    "Disturbi del ciclo",
+    "Complicazione precoce della gravidanza"
+  ],
+  "doctorQuestions": [
+    "Cosa significa il mio progesterone per il mio ciclo o desiderio di maternità?",
+    "Il valore deve essere misurato di nuovo in un altro momento?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale (dipende dal ciclo)"
+  },
+  "categoryLabel": "Ormoni",
+  "pageTitle": "Progesterone spiegato | Medyra"
+}

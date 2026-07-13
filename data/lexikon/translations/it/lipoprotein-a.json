@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "La lipoproteina(a) è un valore lipidico determinato geneticamente che può influenzare il rischio cardiovascolare indipendentemente da dieta e stile di vita. Poiché viene solitamente misurata una volta nella vita, è particolarmente rilevante con familiarità cardiovascolare.",
+  "metaDescription": "Lipoproteina(a) elevata? Significato per il rischio cardiovascolare spiegato semplicemente.",
+  "causesElevated": [
+    "Origine genetica (ereditaria)",
+    "Può essere elevata indipendentemente dallo stile di vita"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "La mia Lp(a) aumenta il mio rischio cardiovascolare?",
+    "I miei altri valori lipidici devono essere controllati più rigorosamente?"
+  ],
+  "rangeLabels": {
+    "normal": "Normale",
+    "elevated": "Elevato"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Lipoproteina(a) spiegata | Medyra"
+}
