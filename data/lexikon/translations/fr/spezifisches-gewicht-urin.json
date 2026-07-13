@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "La densité spécifique indique à quel point l'urine est concentrée et donne des indices sur l'équilibre hydrique et la capacité de concentration des reins. Des valeurs basses peuvent indiquer un apport hydrique élevé.",
+  "metaDescription": "Densité urinaire élevée ou basse ? Signification expliquée simplement.",
+  "causesElevated": [
+    "Manque de liquide (déshydratation)",
+    "Urine matinale concentrée"
+  ],
+  "causesLow": [
+    "Apport hydrique élevé",
+    "Capacité de concentration rénale réduite",
+    "Diabète insipide (rare)"
+  ],
+  "doctorQuestions": [
+    "Cette valeur reflète-t-elle mon équilibre hydrique ou une maladie rénale ?",
+    "Mon apport en liquide doit-il être ajusté ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Valeurs urinaires",
+  "pageTitle": "Densité urinaire expliquée | Medyra"
+}

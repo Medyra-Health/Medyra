@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Les anticorps anti-Tg ciblent la protéine de stockage de la thyroïde et sont souvent mesurés avec les anti-TPO en cas de suspicion de maladie auto-immune thyroïdienne. Ils sont aussi utilisés après une chirurgie thyroïdienne pour le suivi.",
+  "metaDescription": "Anticorps anti-thyroglobuline (Anti-Tg) élevés ? Signification pour les maladies thyroïdiennes expliquée.",
+  "causesElevated": [
+    "Thyroïdite de Hashimoto",
+    "Maladie de Basedow",
+    "Thyroïdite auto-immune"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quelle est l'importance de cette valeur pour mon diagnostic thyroïdien ?",
+    "D'autres tests d'anticorps sont-ils utiles ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Thyroïde",
+  "pageTitle": "Anticorps anti-thyroglobuline expliqués | Medyra"
+}

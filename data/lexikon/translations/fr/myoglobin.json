@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "La myoglobine est une protéine du muscle cardiaque et squelettique qui augmente rapidement, mais de façon non spécifique, en cas de lésion musculaire ou cardiaque.",
+  "metaDescription": "Myoglobine élevée ? Signification pour les lésions musculaires et cardiaques expliquée simplement.",
+  "causesElevated": [
+    "Infarctus du myocarde (phase précoce)",
+    "Lésion musculaire",
+    "Effort physique intense",
+    "Fonction rénale réduite"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "La troponine est-elle aussi mesurée pour une évaluation plus précise ?",
+    "Quelle est l'urgence d'une clarification supplémentaire ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs cardiaques",
+  "pageTitle": "Myoglobine expliquée | Medyra"
+}

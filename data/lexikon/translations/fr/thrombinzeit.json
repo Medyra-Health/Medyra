@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Le temps de thrombine teste la dernière étape de la coagulation sanguine, la conversion du fibrinogène en fibrine. Une valeur prolongée survient souvent sous traitement par héparine.",
+  "metaDescription": "Temps de thrombine prolongé ? Signification pour la coagulation sanguine expliquée simplement.",
+  "causesElevated": [
+    "Traitement par héparine",
+    "Carence en fibrinogène",
+    "Maladie du foie"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Mon temps de thrombine prolongé est-il lié à un médicament que je prends ?",
+    "Mon fibrinogène doit-il aussi être vérifié ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Prolongé"
+  },
+  "categoryLabel": "Coagulation",
+  "pageTitle": "Temps de thrombine expliqué | Medyra"
+}

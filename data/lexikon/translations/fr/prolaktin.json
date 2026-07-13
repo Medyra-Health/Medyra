@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "La prolactine est surtout connue pour la production de lait après l'accouchement, mais peut être élevée chez l'homme et la femme indépendamment de cela. Des valeurs élevées peuvent causer des troubles du cycle ou une perte de libido.",
+  "metaDescription": "Prolactine élevée ? Signification, valeurs normales et causes possibles expliquées simplement.",
+  "causesElevated": [
+    "Stress ou manque de sommeil",
+    "Certains médicaments (par ex. antidépresseurs)",
+    "Tumeur bénigne de l'hypophyse (prolactinome)",
+    "Hypothyroïdie"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quelle cause pourrait expliquer ma prolactine élevée ?",
+    "Une imagerie de l'hypophyse est-elle utile ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "Prolactine expliquée | Medyra"
+}

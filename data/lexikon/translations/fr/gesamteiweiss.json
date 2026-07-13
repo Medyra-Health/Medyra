@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "La protéinémie totale mesure toutes les protéines du sérum sanguin, principalement l'albumine et les immunoglobulines. Des valeurs élevées peuvent résulter d'un manque de liquide ou d'inflammations chroniques, des valeurs basses de malnutrition ou de maladies hépatiques ou rénales.",
+  "metaDescription": "Protéinémie totale élevée ou basse ? Valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Manque de liquide (déshydratation)",
+    "Inflammation chronique",
+    "Certaines maladies du sang"
+  ],
+  "causesLow": [
+    "Malnutrition",
+    "Maladie du foie",
+    "Maladie rénale avec perte de protéines"
+  ],
+  "doctorQuestions": [
+    "Quelle est la cause de ma protéinémie totale anormale ?",
+    "Une électrophorèse des protéines est-elle utile ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Valeurs hépatiques",
+  "pageTitle": "Protéinémie totale expliquée | Medyra"
+}

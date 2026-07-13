@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "Les lymphocytes sont des globules blancs qui jouent un rôle central dans la défense contre les virus. Des valeurs élevées apparaissent souvent lors d'infections virales, des valeurs basses peuvent indiquer une défense immunitaire affaiblie.",
+  "metaDescription": "Lymphocytes élevés ou bas ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Infection virale",
+    "Infection chronique",
+    "Certaines maladies du sang"
+  ],
+  "causesLow": [
+    "Immunodéficience",
+    "Stress important",
+    "Traitement à la cortisone",
+    "Après chimiothérapie"
+  ],
+  "doctorQuestions": [
+    "Qu'est-ce qui pourrait expliquer mon taux de lymphocytes bas ou élevé ?",
+    "Ma défense immunitaire est-elle actuellement affaiblie ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Numération sanguine",
+  "pageTitle": "Lymphocytes expliqués | Medyra"
+}

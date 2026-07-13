@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La bilirubine directe est la forme de bilirubine déjà traitée par le foie. Une valeur élevée indique généralement une stase biliaire ou une maladie du foie ou des voies biliaires, contrairement à la bilirubine indirecte qui augmente plutôt en cas de destruction cellulaire accrue.",
+  "metaDescription": "Bilirubine directe élevée ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Stase biliaire (par ex. calculs biliaires)",
+    "Maladie du foie",
+    "Inflammation des voies biliaires"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Ma valeur indique-t-elle une stase biliaire ?",
+    "Une échographie des voies biliaires est-elle utile ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Valeurs hépatiques",
+  "pageTitle": "Bilirubine directe expliquée | Medyra"
+}

@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "L'insuline est l'hormone qui fait entrer le sucre sanguin dans les cellules. Des valeurs élevées d'insuline à jeun peuvent indiquer une résistance à l'insuline débutante, souvent avant même une glycémie élevée.",
+  "metaDescription": "Insuline élevée ou basse ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Résistance à l'insuline",
+    "Syndrome des ovaires polykystiques (SOPK)",
+    "Diabète de type 2 débutant",
+    "Surpoids"
+  ],
+  "causesLow": [
+    "Diabète de type 1",
+    "Diabète de type 2 avancé"
+  ],
+  "doctorQuestions": [
+    "Mon insuline indique-t-elle une résistance à l'insuline ?",
+    "L'indice HOMA doit-il être calculé ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Métabolisme",
+  "pageTitle": "Insuline (à jeun) expliquée | Medyra"
+}

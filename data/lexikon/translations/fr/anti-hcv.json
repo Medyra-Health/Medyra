@@ -1,0 +1,15 @@
+{
+  "shortAnswer": "Les anticorps anti-VHC indiquent que le corps a été en contact avec le virus de l'hépatite C à un moment donné. Un test positif ne signifie pas automatiquement une infection active.",
+  "metaDescription": "Anti-VHC positif ? Signification pour une infection par l'hépatite C expliquée simplement.",
+  "causesElevated": [
+    "Infection actuelle par l'hépatite C",
+    "Infection par l'hépatite C guérie"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Un test PCR supplémentaire est-il nécessaire pour confirmation ?",
+    "Ai-je une infection active ou guérie ?"
+  ],
+  "categoryLabel": "Marqueurs infectieux",
+  "pageTitle": "Anti-VHC expliqué | Medyra"
+}

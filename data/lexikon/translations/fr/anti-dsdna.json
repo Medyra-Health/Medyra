@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Les anticorps anti-ADNdb sont nettement plus spécifiques du lupus érythémateux systémique que les ANA et sont souvent utilisés pour confirmer et suivre l'activité de la maladie.",
+  "metaDescription": "Anticorps anti-ADNdb élevés ? Signification pour le lupus érythémateux systémique expliquée.",
+  "causesElevated": [
+    "Lupus érythémateux systémique",
+    "Phase active de la maladie chez un lupus connu"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Cette valeur confirme-t-elle un lupus érythémateux systémique ?",
+    "La valeur indique-t-elle une phase active actuelle de la maladie ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Système immunitaire",
+  "pageTitle": "Anticorps anti-ADNdb expliqués | Medyra"
+}

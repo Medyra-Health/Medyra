@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "La testostérone est la principale hormone sexuelle masculine, mais est aussi présente en plus faible quantité chez la femme. Des valeurs basses chez l'homme peuvent se manifester par de la fatigue ou une baisse de libido.",
+  "metaDescription": "Testostérone trop basse ou trop élevée ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Syndrome des ovaires polykystiques (chez la femme)",
+    "Certains troubles surrénaliens",
+    "Prise de stéroïdes anabolisants"
+  ],
+  "causesLow": [
+    "Carence en testostérone liée à l'âge",
+    "Dysfonction testiculaire",
+    "Maladies de l'hypophyse",
+    "Stress chronique"
+  ],
+  "doctorQuestions": [
+    "Ma testostérone explique-t-elle des symptômes comme la fatigue ?",
+    "Un traitement hormonal substitutif doit-il être envisagé ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas (Homme)",
+    "normal": "Normal (Homme)",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "Testostérone expliquée | Medyra"
+}

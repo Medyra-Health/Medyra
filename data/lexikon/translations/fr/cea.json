@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "L'ACE est un marqueur tumoral non spécifique surtout utilisé pour surveiller des maladies tumorales déjà connues, notamment au niveau du côlon. Des valeurs élevées surviennent aussi chez les fumeurs.",
+  "metaDescription": "ACE élevé ? Signification du marqueur tumoral et causes possibles expliquées.",
+  "causesElevated": [
+    "Tabagisme",
+    "Maladies inflammatoires chroniques de l'intestin",
+    "Maladie du foie ou des poumons",
+    "Maladie tumorale connue (pour suivi)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Cette valeur est-elle utilisée pour un suivi ou un premier bilan dans mon cas ?",
+    "Quels autres examens sont utiles ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (non-fumeur)",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs tumoraux",
+  "pageTitle": "ACE expliqué | Medyra"
+}

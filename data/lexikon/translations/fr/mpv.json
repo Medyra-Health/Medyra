@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Le VPM indique la taille moyenne des plaquettes. Des plaquettes plus grosses sont souvent nouvellement formées et suggèrent un renouvellement accru, tandis que des plaquettes plus petites suggèrent une production réduite par la moelle osseuse.",
+  "metaDescription": "VPM trop élevé ou trop bas ? Signification du volume plaquettaire moyen expliquée simplement.",
+  "causesElevated": [
+    "Production accrue de plaquettes",
+    "Thrombopénie immunitaire (PTI)",
+    "Après une perte de sang"
+  ],
+  "causesLow": [
+    "Troubles de la moelle osseuse",
+    "Production réduite de plaquettes"
+  ],
+  "doctorQuestions": [
+    "Mon VPM correspond-il à mon nombre de plaquettes ?",
+    "Un examen de la moelle osseuse est-il nécessaire ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Numération sanguine",
+  "pageTitle": "VPM : volume plaquettaire moyen expliqué | Medyra"
+}

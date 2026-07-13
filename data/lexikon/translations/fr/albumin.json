@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "L'albumine est la protéine la plus importante du sang et est produite par le foie. Des valeurs basses peuvent indiquer une maladie du foie, une malnutrition ou une perte de protéines par les reins.",
+  "metaDescription": "Albumine trop basse ? Signification, valeurs normales et causes possibles expliquées simplement.",
+  "causesElevated": [
+    "Manque de liquide (déshydratation)"
+  ],
+  "causesLow": [
+    "Maladie du foie",
+    "Malnutrition",
+    "Maladie rénale avec perte de protéines",
+    "Inflammation chronique"
+  ],
+  "doctorQuestions": [
+    "Qu'est-ce qui pourrait expliquer mon albumine basse ?",
+    "Ma fonction hépatique ou rénale doit-elle être approfondie ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé (généralement déshydratation)"
+  },
+  "categoryLabel": "Valeurs hépatiques",
+  "pageTitle": "Albumine expliquée | Medyra"
+}

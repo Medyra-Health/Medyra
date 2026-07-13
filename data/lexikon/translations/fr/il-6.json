@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "L'interleukine-6 est un messager du système immunitaire qui augmente précocement lors d'inflammations et d'infections aiguës, souvent avant que la CRP ne soit mesurablement élevée.",
+  "metaDescription": "Interleukine-6 (IL-6) élevée ? Signification comme marqueur inflammatoire précoce expliquée.",
+  "causesElevated": [
+    "Infection aiguë",
+    "Réaction inflammatoire sévère",
+    "Maladies auto-immunes",
+    "Après chirurgie"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Pourquoi l'IL-6 a-t-elle été mesurée en plus de la CRP ?",
+    "Quelle est la gravité de ma réaction inflammatoire ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs inflammatoires",
+  "pageTitle": "Interleukine-6 (IL-6) expliquée | Medyra"
+}

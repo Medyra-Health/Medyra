@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "La cholinestérase est produite par le foie et indique dans quelle mesure le foie produit actuellement des protéines. Des valeurs basses peuvent indiquer une fonction hépatique réduite ou une intoxication, des valeurs élevées surviennent notamment en cas de stéatose hépatique ou de diabète.",
+  "metaDescription": "Cholinestérase trop basse ou trop élevée ? Signification et causes expliquées simplement.",
+  "causesElevated": [
+    "Stéatose hépatique",
+    "Diabète sucré",
+    "Surpoids"
+  ],
+  "causesLow": [
+    "Maladie hépatique avancée",
+    "Intoxication (par ex. pesticides)",
+    "Malnutrition"
+  ],
+  "doctorQuestions": [
+    "Ma cholinestérase indique-t-elle une fonction hépatique réduite ?",
+    "D'autres valeurs hépatiques doivent-elles être vérifiées ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Valeurs hépatiques",
+  "pageTitle": "Cholinestérase expliquée | Medyra"
+}

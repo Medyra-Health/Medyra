@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "L'AMH est produite par les follicules des ovaires et est considérée comme un marqueur de la réserve ovarienne restante. La valeur est souvent mesurée dans le cadre d'un bilan de fertilité ou avant une FIV.",
+  "metaDescription": "AMH (hormone anti-müllérienne) élevée ou basse ? Signification pour la réserve ovarienne expliquée.",
+  "causesElevated": [
+    "Syndrome des ovaires polykystiques (SOPK)"
+  ],
+  "causesLow": [
+    "Déclin lié à l'âge de la réserve ovarienne",
+    "Ménopause précoce",
+    "État après chimiothérapie"
+  ],
+  "doctorQuestions": [
+    "Que signifie mon AMH pour ma réserve ovarienne ?",
+    "Cette valeur influence-t-elle la planification d'une FIV ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal (dépend de l'âge)",
+    "elevated": "Élevé (par ex. SOPK)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "AMH : hormone anti-müllérienne expliquée | Medyra"
+}

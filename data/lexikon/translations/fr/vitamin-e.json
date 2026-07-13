@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La vitamine E est un antioxydant liposoluble qui protège les cellules du stress oxydatif. Une carence est rare en Allemagne et survient surtout en cas de troubles de l'absorption des graisses.",
+  "metaDescription": "Vitamine E trop basse ? Signification, valeurs normales et causes de carence expliquées simplement.",
+  "causesElevated": [],
+  "causesLow": [
+    "Trouble de l'absorption des graisses",
+    "Malnutrition",
+    "Maladies génétiques rares"
+  ],
+  "doctorQuestions": [
+    "Ai-je un trouble de l'absorption des graisses comme cause ?",
+    "Dois-je supplémenter en vitamine E ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal"
+  },
+  "categoryLabel": "Vitamines",
+  "pageTitle": "Vitamine E expliquée | Medyra"
+}

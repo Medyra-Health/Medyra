@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Les anticorps anti-CCP sont un indice plus spécifique de la polyarthrite rhumatoïde que le facteur rhumatoïde et peuvent parfois être détectés avant même l'apparition des douleurs articulaires.",
+  "metaDescription": "Anticorps anti-CCP élevés ? Signification pour la polyarthrite rhumatoïde expliquée simplement.",
+  "causesElevated": [
+    "Polyarthrite rhumatoïde",
+    "Risque accru de développer une polyarthrite rhumatoïde"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Avec quelle certitude cette valeur confirme-t-elle une polyarthrite rhumatoïde ?",
+    "Dois-je être orienté vers un rhumatologue ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs inflammatoires",
+  "pageTitle": "Anticorps anti-CCP expliqués | Medyra"
+}

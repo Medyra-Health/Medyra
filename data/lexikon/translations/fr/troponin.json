@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "La troponine est un marqueur très spécifique d'une lésion du muscle cardiaque et la valeur de laboratoire la plus importante en cas de suspicion d'infarctus. Même des valeurs légèrement élevées sont prises au sérieux.",
+  "metaDescription": "Troponine élevée ? Signification pour l'infarctus et les lésions cardiaques expliquée.",
+  "causesElevated": [
+    "Infarctus du myocarde",
+    "Myocardite",
+    "Effort physique intense",
+    "Fonction rénale réduite"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Avec quelle urgence ma troponine élevée doit-elle être clarifiée ?",
+    "Une deuxième mesure est-elle prévue ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs cardiaques",
+  "pageTitle": "Troponine expliquée | Medyra"
+}

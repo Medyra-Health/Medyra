@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "La cystatine C est un marqueur sensible de la fonction rénale, indépendant de la masse musculaire et de l'alimentation. Elle est souvent mesurée en complément de la créatinine, surtout lorsque celle-ci pourrait être faussée par la masse musculaire ou l'âge.",
+  "metaDescription": "Cystatine C élevée ? Signification pour la fonction rénale, valeurs normales et causes expliquées.",
+  "causesElevated": [
+    "Fonction rénale réduite",
+    "Maladie rénale chronique"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Pourquoi la cystatine C a-t-elle été mesurée en plus de la créatinine ?",
+    "Quelle est ma fonction rénale globale ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Valeurs rénales",
+  "pageTitle": "Cystatine C expliquée | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La microalbuminurie mesure de très petites quantités de protéines dans l'urine qu'une bandelette urinaire normale ne détecte pas. Une valeur élevée est souvent un signe précoce d'atteinte rénale débutante, notamment en cas de diabète ou d'hypertension.",
+  "metaDescription": "Microalbumine dans l'urine élevée ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Atteinte rénale diabétique débutante",
+    "Hypertension artérielle",
+    "Inflammation rénale"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Est-ce un signe précoce d'atteinte rénale ?",
+    "Ma tension artérielle ou ma glycémie doivent-elles être mieux contrôlées ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Valeurs rénales",
+  "pageTitle": "Microalbumine urinaire expliquée | Medyra"
+}

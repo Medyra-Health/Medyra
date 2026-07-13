@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Le sélénium est un oligo-élément à fonction antioxydante, important pour la thyroïde et le système immunitaire. Une carence résulte le plus souvent d'une alimentation déséquilibrée ou d'une nutrition artificielle.",
+  "metaDescription": "Sélénium trop bas ou trop élevé ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Surdosage par compléments alimentaires"
+  ],
+  "causesLow": [
+    "Alimentation déséquilibrée",
+    "Nutrition artificielle",
+    "Maladies intestinales chroniques"
+  ],
+  "doctorQuestions": [
+    "Une carence en sélénium pourrait-elle affecter mes valeurs thyroïdiennes ?",
+    "Dois-je supplémenter en sélénium ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Oligo-éléments",
+  "pageTitle": "Sélénium expliqué | Medyra"
+}

@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "L'œstradiol est la principale hormone sexuelle féminine et fluctue fortement au cours du cycle, de la grossesse et de la ménopause. Des valeurs basses peuvent indiquer la ménopause ou un trouble ovarien.",
+  "metaDescription": "Œstradiol trop bas ou trop élevé ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Certaines phases du cycle (par ex. ovulation)",
+    "Grossesse",
+    "Tumeurs productrices d'œstrogènes (rare)"
+  ],
+  "causesLow": [
+    "Ménopause",
+    "Trouble de la fonction ovarienne",
+    "Perte de poids importante ou sport de haut niveau"
+  ],
+  "doctorQuestions": [
+    "Mon œstradiol correspond-il à ma phase de cycle actuelle ?",
+    "D'autres valeurs hormonales doivent-elles être mesurées ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (dépend du cycle)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "Œstradiol expliqué | Medyra"
+}

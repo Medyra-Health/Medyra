@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Les D-dimères se forment lors de la dégradation des caillots sanguins et sont un élément important dans l'évaluation d'une thrombose ou embolie pulmonaire possible. Une valeur normale rend une thrombose aiguë peu probable.",
+  "metaDescription": "D-dimères élevés ? Signification pour la thrombose et l'embolie pulmonaire expliquée simplement.",
+  "causesElevated": [
+    "Thrombose",
+    "Embolie pulmonaire",
+    "Après chirurgie",
+    "Grossesse",
+    "Inflammation ou infection aiguë"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Une thrombose ou embolie pulmonaire doit-elle être exclue chez moi ?",
+    "D'autres examens comme une imagerie sont-ils nécessaires ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Coagulation",
+  "pageTitle": "D-dimères expliqués | Medyra"
+}

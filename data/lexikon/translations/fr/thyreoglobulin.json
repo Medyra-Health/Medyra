@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "La thyroglobuline est une protéine de stockage produite exclusivement dans la thyroïde. La valeur est surtout utilisée pour le suivi après l'ablation chirurgicale de la thyroïde en cas de cancer thyroïdien.",
+  "metaDescription": "Thyroglobuline élevée ? Signification pour le suivi thyroïdien expliquée simplement.",
+  "causesElevated": [
+    "Tissu thyroïdien actif",
+    "Après chirurgie thyroïdienne : signe possible de récidive",
+    "Inflammation thyroïdienne"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Que signifie cette valeur pour mon suivi après chirurgie thyroïdienne ?",
+    "Mes anticorps anti-Tg doivent-ils aussi être pris en compte ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (avec thyroïde présente)"
+  },
+  "categoryLabel": "Thyroïde",
+  "pageTitle": "Thyroglobuline expliquée | Medyra"
+}

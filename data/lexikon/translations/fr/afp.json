@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "L'AFP est normalement élevée surtout pendant la grossesse et est utilisée en dehors de la grossesse pour surveiller les tumeurs hépatiques ou germinales.",
+  "metaDescription": "AFP élevée ? Signification du marqueur tumoral et causes possibles expliquées.",
+  "causesElevated": [
+    "Grossesse",
+    "Maladie hépatique chronique ou cirrhose",
+    "Cancer du foie ou tumeurs germinales (une des causes possibles)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quelle est la cause de mon AFP élevée ?",
+    "Une imagerie du foie est-elle utile ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (en dehors de la grossesse)",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs tumoraux",
+  "pageTitle": "AFP : alpha-fœtoprotéine expliquée | Medyra"
+}

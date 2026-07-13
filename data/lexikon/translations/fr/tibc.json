@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "La CTF mesure la quantité maximale de fer que le sang pourrait transporter au total, reflétant indirectement la quantité de transferrine. Des valeurs élevées surviennent typiquement en cas de carence en fer.",
+  "metaDescription": "CTF élevée ou basse ? Signification pour la carence en fer expliquée.",
+  "causesElevated": [
+    "Carence en fer"
+  ],
+  "causesLow": [
+    "Surcharge en fer (hémochromatose)",
+    "Inflammation chronique",
+    "Maladie du foie"
+  ],
+  "doctorQuestions": [
+    "Cette valeur confirme-t-elle une carence en fer ?",
+    "D'autres valeurs du fer doivent-elles être mesurées ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Valeurs du fer",
+  "pageTitle": "CTF : capacité totale de fixation du fer expliquée | Medyra"
+}

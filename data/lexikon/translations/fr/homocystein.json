@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "L'homocystéine est un produit intermédiaire du métabolisme des protéines, dégradé grâce à la vitamine B12, l'acide folique et la vitamine B6. Des valeurs élevées résultent souvent d'une carence en ces vitamines et sont associées à un risque vasculaire accru.",
+  "metaDescription": "Homocystéine élevée ? Signification, valeurs normales et causes comme la carence en vitamines expliquées.",
+  "causesElevated": [
+    "Carence en vitamine B12",
+    "Carence en acide folique",
+    "Carence en vitamine B6",
+    "Maladie rénale"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Ai-je une carence en vitamines comme cause ?",
+    "Dois-je supplémenter en vitamine B12 ou en acide folique ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Métabolisme",
+  "pageTitle": "Homocystéine expliquée | Medyra"
+}

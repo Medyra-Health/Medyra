@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Les basophiles sont le type de globules blancs le plus rare et jouent un rôle dans les réactions allergiques et l'inflammation chronique. Des valeurs légèrement élevées sont souvent sans danger, des valeurs nettement élevées doivent être clarifiées par un médecin.",
+  "metaDescription": "Basophiles élevés ? Signification et causes possibles expliquées simplement.",
+  "causesElevated": [
+    "Réactions allergiques",
+    "Inflammation chronique",
+    "Certaines maladies du sang"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Mon taux élevé de basophiles est-il cliniquement pertinent ?",
+    "D'autres examens sont-ils nécessaires ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Numération sanguine",
+  "pageTitle": "Basophiles expliqués | Medyra"
+}

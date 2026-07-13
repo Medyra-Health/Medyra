@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "L'IDR mesure la variation de taille des globules rouges. Une valeur élevée peut indiquer une carence débutante en fer, en vitamine B12 ou en acide folique, surtout associée à un MCV anormal. Discutez d'un IDR élevé avec votre médecin.",
+  "metaDescription": "IDR élevé ? Signification de l'indice de distribution des globules rouges, valeurs normales et causes possibles expliquées simplement.",
+  "causesElevated": [
+    "Carence en fer",
+    "Carence en vitamine B12 ou en acide folique",
+    "Anémie mixte",
+    "Après transfusion sanguine"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Que signifie mon IDR élevé associé à mon MCV ?",
+    "Faut-il vérifier mon statut en fer et en vitamines ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Numération sanguine",
+  "pageTitle": "IDR : indice de distribution des globules rouges expliqué | Medyra"
+}

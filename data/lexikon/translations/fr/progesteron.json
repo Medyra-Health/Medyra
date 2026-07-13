@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "La progestérone est produite après l'ovulation et prépare le corps à une éventuelle grossesse. Des valeurs basses en deuxième moitié de cycle peuvent être liées à des troubles du cycle ou à une absence d'ovulation.",
+  "metaDescription": "Progestérone trop basse ? Signification pour le cycle et le désir d'enfant expliquée simplement.",
+  "causesElevated": [
+    "Grossesse",
+    "Certaine phase du cycle après l'ovulation"
+  ],
+  "causesLow": [
+    "Absence d'ovulation",
+    "Troubles du cycle",
+    "Complication précoce de grossesse"
+  ],
+  "doctorQuestions": [
+    "Que signifie ma progestérone pour mon cycle ou mon désir d'enfant ?",
+    "La valeur doit-elle être mesurée à nouveau à un autre moment ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (dépend du cycle)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "Progestérone expliquée | Medyra"
+}

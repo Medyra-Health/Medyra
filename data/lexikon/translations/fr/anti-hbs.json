@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Les anticorps anti-HBs indiquent qu'une protection immunitaire suffisante contre l'hépatite B existe, soit par vaccination, soit après une infection guérie. Cette valeur est souvent mesurée pour vérifier la protection vaccinale.",
+  "metaDescription": "Anti-HBs élevés ou bas ? Signification pour la protection vaccinale contre l'hépatite B expliquée.",
+  "causesElevated": [
+    "Vaccination réussie contre l'hépatite B",
+    "Infection par l'hépatite B guérie avec immunité"
+  ],
+  "causesLow": [
+    "Aucune protection vaccinale suffisante",
+    "Protection vaccinale décroissante avec le temps"
+  ],
+  "doctorQuestions": [
+    "Ma protection vaccinale contre l'hépatite B est-elle encore suffisante ?",
+    "Dois-je recevoir un rappel vaccinal ?"
+  ],
+  "rangeLabels": {
+    "low": "Protection insuffisante",
+    "normal": "Protection vaccinale suffisante"
+  },
+  "categoryLabel": "Marqueurs infectieux",
+  "pageTitle": "Anti-HBs expliqués | Medyra"
+}

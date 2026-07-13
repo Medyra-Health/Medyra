@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "La saturation de la transferrine montre la quantité de protéine de transport du fer transferrine actuellement chargée en fer. Des valeurs basses suggèrent une carence en fer, des valeurs élevées une surcharge en fer comme l'hémochromatose.",
+  "metaDescription": "Saturation de la transferrine élevée ou basse ? Signification pour la carence et la surcharge en fer expliquée.",
+  "causesElevated": [
+    "Surcharge en fer (hémochromatose)",
+    "Transfusions sanguines fréquentes",
+    "Maladie du foie"
+  ],
+  "causesLow": [
+    "Carence en fer",
+    "Inflammation chronique",
+    "Perte de sang"
+  ],
+  "doctorQuestions": [
+    "Ma saturation de la transferrine indique-t-elle une carence ou une surcharge en fer ?",
+    "Une hémochromatose doit-elle être exclue ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Valeurs du fer",
+  "pageTitle": "Saturation de la transferrine expliquée | Medyra"
+}

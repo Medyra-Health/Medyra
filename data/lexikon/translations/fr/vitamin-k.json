@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "La vitamine K est nécessaire à la coagulation sanguine et au métabolisme osseux. Une carence peut entraîner une tendance accrue aux saignements et survient notamment en cas de trouble de l'absorption des graisses ou d'antibiothérapie prolongée.",
+  "metaDescription": "Vitamine K trop basse ? Signification pour la coagulation, valeurs normales et causes expliquées.",
+  "causesElevated": [],
+  "causesLow": [
+    "Trouble de l'absorption des graisses",
+    "Antibiothérapie prolongée",
+    "Malnutrition",
+    "Maladie du foie"
+  ],
+  "doctorQuestions": [
+    "Une carence en vitamine K explique-t-elle ma tendance accrue aux saignements ?",
+    "Dois-je supplémenter en vitamine K ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal"
+  },
+  "categoryLabel": "Vitamines",
+  "pageTitle": "Vitamine K expliquée | Medyra"
+}

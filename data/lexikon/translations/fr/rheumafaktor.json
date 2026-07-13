@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Le facteur rhumatoïde est un anticorps souvent présent en cas de polyarthrite rhumatoïde, mais qui peut aussi être positif dans d'autres maladies ou même chez des personnes en bonne santé.",
+  "metaDescription": "Facteur rhumatoïde élevé ? Signification pour la polyarthrite rhumatoïde expliquée simplement.",
+  "causesElevated": [
+    "Polyarthrite rhumatoïde",
+    "Autres maladies auto-immunes",
+    "Infections chroniques",
+    "Peut aussi être légèrement élevé chez des personnes en bonne santé"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Cette valeur confirme-t-elle une polyarthrite rhumatoïde ?",
+    "L'anti-CCP doit-il aussi être mesuré ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs inflammatoires",
+  "pageTitle": "Facteur rhumatoïde expliqué | Medyra"
+}

@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Les IgM sont la première classe d'anticorps formée lors d'une nouvelle infection, et indiquent donc généralement une infection aiguë ou récente. La valeur est souvent évaluée avec les IgG.",
+  "metaDescription": "IgM élevées ou basses ? Signification pour les infections aiguës expliquée simplement.",
+  "causesElevated": [
+    "Infection aiguë",
+    "Certaines maladies auto-immunes",
+    "Certaines maladies du sang (par ex. maladie de Waldenström)"
+  ],
+  "causesLow": [
+    "Immunodéficience congénitale ou acquise"
+  ],
+  "doctorQuestions": [
+    "Mes IgM indiquent-elles une infection aiguë ?",
+    "Les IgG doivent-elles aussi être mesurées ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Système immunitaire",
+  "pageTitle": "IgM expliquées | Medyra"
+}

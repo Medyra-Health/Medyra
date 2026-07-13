@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "La vitamine A est importante pour la vision, la peau et le système immunitaire. Une carence résulte le plus souvent d'un trouble de l'absorption des graisses ou d'une malnutrition et peut se manifester par une cécité nocturne ou une peau sèche.",
+  "metaDescription": "Vitamine A élevée ou basse ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Surdosage par compléments alimentaires"
+  ],
+  "causesLow": [
+    "Malnutrition",
+    "Trouble de l'absorption des graisses (par ex. maladie cœliaque)",
+    "Maladie du foie"
+  ],
+  "doctorQuestions": [
+    "Ma vitamine A explique-t-elle mes symptômes ?",
+    "Dois-je supplémenter ou réduire la vitamine A ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Vitamines",
+  "pageTitle": "Vitamine A expliquée | Medyra"
+}

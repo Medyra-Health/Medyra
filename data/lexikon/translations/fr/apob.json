@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "L'apolipoprotéine B fait partie des particules de « mauvais » cholestérol (dont le LDL) et est considérée comme un marqueur précis du risque cardiovasculaire, car elle reflète le nombre total de ces particules.",
+  "metaDescription": "Apolipoprotéine B (ApoB) élevée ? Signification pour le risque cardiovasculaire expliquée.",
+  "causesElevated": [
+    "Cholestérol LDL élevé",
+    "Risque cardiovasculaire accru",
+    "Alimentation défavorable",
+    "Troubles métaboliques"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quelle est l'importance de l'ApoB par rapport à mon LDL ?",
+    "Mon traitement du cholestérol doit-il être ajusté ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Métabolisme",
+  "pageTitle": "Apolipoprotéine B (ApoB) expliquée | Medyra"
+}

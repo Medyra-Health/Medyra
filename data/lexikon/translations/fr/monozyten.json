@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Les monocytes sont des globules blancs qui absorbent et éliminent les agents pathogènes et régulent les processus inflammatoires. Des valeurs élevées surviennent souvent lors d'inflammations chroniques ou pendant la phase de récupération après une infection.",
+  "metaDescription": "Monocytes élevés ? Signification, valeurs normales et causes possibles expliquées simplement.",
+  "causesElevated": [
+    "Inflammation chronique",
+    "Phase de récupération après une infection",
+    "Certaines maladies du sang",
+    "Maladies auto-immunes"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Qu'est-ce qui pourrait expliquer mon taux élevé de monocytes ?",
+    "D'autres examens sont-ils nécessaires ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Numération sanguine",
+  "pageTitle": "Monocytes expliqués | Medyra"
+}

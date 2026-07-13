@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "Le phosphate est important pour les os, l'énergie cellulaire et l'équilibre acido-basique, et est régulé étroitement avec le calcium et la vitamine D. Des valeurs élevées surviennent souvent en cas de fonction rénale réduite.",
+  "metaDescription": "Phosphate élevé ou bas ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Fonction rénale réduite",
+    "Excès de vitamine D",
+    "Hypoparathyroïdie"
+  ],
+  "causesLow": [
+    "Carence en vitamine D",
+    "Hyperparathyroïdie",
+    "Malnutrition",
+    "Alcoolisme"
+  ],
+  "doctorQuestions": [
+    "Mon phosphate est-il lié à ma fonction rénale ?",
+    "Mes taux de vitamine D et de calcium doivent-ils aussi être vérifiés ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Électrolytes",
+  "pageTitle": "Phosphate expliqué | Medyra"
+}

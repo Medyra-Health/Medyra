@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "La LDH est une enzyme présente dans de nombreuses cellules du corps, notamment le foie, le cœur et les muscles. Des valeurs élevées sont non spécifiques et peuvent indiquer des lésions cellulaires dans divers organes, comme une atteinte hépatique, une lésion musculaire ou un infarctus.",
+  "metaDescription": "LDH élevée ? Signification de la lactate déshydrogénase, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Atteinte hépatique",
+    "Infarctus du myocarde",
+    "Hémolyse (destruction des globules rouges)",
+    "Lésion musculaire",
+    "Certaines maladies tumorales"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quel organe pourrait expliquer ma LDH élevée ?",
+    "D'autres examens sont-ils nécessaires ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Valeurs hépatiques",
+  "pageTitle": "LDH : lactate déshydrogénase expliquée | Medyra"
+}

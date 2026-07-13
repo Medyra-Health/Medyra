@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La CK-MB est une sous-forme de la créatine kinase surtout présente dans le muscle cardiaque, et donc un indice plus spécifique d'une lésion cardiaque que la CK totale.",
+  "metaDescription": "CK-MB élevée ? Signification pour les lésions du muscle cardiaque expliquée simplement.",
+  "causesElevated": [
+    "Infarctus du myocarde",
+    "Myocardite",
+    "Après chirurgie cardiaque"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "La CK-MB confirme-t-elle une lésion cardiaque avec ma troponine ?",
+    "Quel est le plan de traitement à suivre ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs cardiaques",
+  "pageTitle": "CK-MB expliquée | Medyra"
+}

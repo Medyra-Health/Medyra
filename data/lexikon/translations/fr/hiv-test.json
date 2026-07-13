@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "Le test VIH détecte des anticorps et parfois des composants du virus VIH dans le sang. Un résultat positif est toujours confirmé par un second test indépendant avant qu'une conclusion finale ne soit tirée.",
+  "metaDescription": "Test VIH positif ? Signification et prochaines étapes expliquées clairement et factuellement.",
+  "causesElevated": [
+    "Infection par le VIH (après test de confirmation)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Un test de confirmation a-t-il déjà été effectué ?",
+    "Quelles sont les prochaines étapes utiles maintenant ?"
+  ],
+  "categoryLabel": "Marqueurs infectieux",
+  "pageTitle": "Test VIH expliqué | Medyra"
+}

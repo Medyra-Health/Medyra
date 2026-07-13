@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "La FSH contrôle la maturation des ovules chez la femme et la production de spermatozoïdes chez l'homme. Chez la femme, la valeur augmente nettement à la ménopause.",
+  "metaDescription": "FSH élevée ou basse ? Signification pour la ménopause et la fertilité expliquée.",
+  "causesElevated": [
+    "Ménopause",
+    "Fonction ovarienne ou testiculaire réduite"
+  ],
+  "causesLow": [
+    "Maladie de l'hypophyse",
+    "Perte de poids importante ou sport de haut niveau"
+  ],
+  "doctorQuestions": [
+    "Ma FSH indique-t-elle le début de la ménopause ?",
+    "Que signifie cette valeur pour mon désir d'enfant ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (dépend du cycle chez la femme)",
+    "elevated": "Élevé (par ex. ménopause)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "FSH expliquée | Medyra"
+}

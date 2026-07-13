@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Les TRAK sont des anticorps qui activent le récepteur de la TSH de la thyroïde et peuvent ainsi déclencher une hyperactivité. Une valeur élevée est typique de la maladie de Basedow.",
+  "metaDescription": "TRAK élevés ? Signification pour la maladie de Basedow et l'hyperactivité thyroïdienne expliquée.",
+  "causesElevated": [
+    "Maladie de Basedow",
+    "Hyperactivité thyroïdienne auto-immune"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Cette valeur confirme-t-elle une maladie de Basedow ?",
+    "Comment mon hyperactivité thyroïdienne sera-t-elle traitée ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Thyroïde",
+  "pageTitle": "TRAK expliqués | Medyra"
+}

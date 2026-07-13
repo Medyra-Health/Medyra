@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "La parathormone est produite par les glandes parathyroïdes et régule l'équilibre du calcium avec la vitamine D. Des valeurs élevées peuvent indiquer une hyperactivité des parathyroïdes ou une carence en vitamine D.",
+  "metaDescription": "Parathormone (PTH) élevée ou basse ? Signification pour l'équilibre calcique expliquée.",
+  "causesElevated": [
+    "Hyperactivité des parathyroïdes",
+    "Carence en vitamine D",
+    "Maladie rénale chronique"
+  ],
+  "causesLow": [
+    "Hypoparathyroïdie",
+    "Après chirurgie thyroïdienne"
+  ],
+  "doctorQuestions": [
+    "Ma PTH est-elle liée à mon taux de calcium ou de vitamine D ?",
+    "Une maladie parathyroïdienne doit-elle être clarifiée ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "Parathormone (PTH) expliquée | Medyra"
+}

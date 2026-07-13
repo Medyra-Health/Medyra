@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Le cuivre est impliqué dans la formation du sang, le tissu conjonctif et le système nerveux. Une carence est rare et survient surtout après une chirurgie gastrique, des valeurs élevées peuvent résulter d'influences hormonales.",
+  "metaDescription": "Cuivre trop bas ou trop élevé ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Influences hormonales (pilule contraceptive, grossesse)",
+    "Maladies inflammatoires"
+  ],
+  "causesLow": [
+    "État après chirurgie gastrique",
+    "Malnutrition",
+    "Maladies génétiques rares (maladie de Wilson)"
+  ],
+  "doctorQuestions": [
+    "Qu'est-ce qui pourrait expliquer mon taux de cuivre anormal ?",
+    "D'autres examens sont-ils nécessaires ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Oligo-éléments",
+  "pageTitle": "Cuivre expliqué | Medyra"
+}

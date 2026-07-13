@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "L'IgE totale est un anticorps élevé en cas d'allergies et parfois d'infections parasitaires. Une valeur élevée confirme une tendance générale aux allergies, mais ne dit pas contre quelle substance.",
+  "metaDescription": "IgE élevées ? Signification pour les allergies et causes possibles expliquée simplement.",
+  "causesElevated": [
+    "Maladies allergiques (rhume des foins, asthme, eczéma)",
+    "Infestation parasitaire",
+    "Certains troubles immunitaires"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Un test allergique spécifique doit-il être fait ?",
+    "Quelles allergies pourraient s'appliquer à moi ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Système immunitaire",
+  "pageTitle": "IgE expliquées | Medyra"
+}

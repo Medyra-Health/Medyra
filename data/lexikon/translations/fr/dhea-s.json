@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "La DHEA-S est produite presque exclusivement dans la surrénale et sert de précurseur aux hormones sexuelles. Des valeurs élevées peuvent indiquer une production hormonale surrénalienne accrue.",
+  "metaDescription": "DHEA-S élevée ou basse ? Signification pour la fonction surrénalienne expliquée simplement.",
+  "causesElevated": [
+    "Activité surrénalienne accrue",
+    "Syndrome des ovaires polykystiques",
+    "Tumeurs surrénaliennes rares"
+  ],
+  "causesLow": [
+    "Déclin lié à l'âge",
+    "Insuffisance surrénalienne"
+  ],
+  "doctorQuestions": [
+    "Ma DHEA-S pourrait-elle être liée à une pilosité accrue ou des troubles du cycle ?",
+    "Une imagerie surrénalienne est-elle utile ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (dépend de l'âge)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "DHEA-S expliquée | Medyra"
+}

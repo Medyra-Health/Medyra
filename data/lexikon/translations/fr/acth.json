@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "L'ACTH est produite par l'hypophyse et contrôle la production de cortisol par la surrénale. La valeur est toujours évaluée avec le cortisol pour distinguer une maladie surrénalienne d'une maladie de l'hypophyse.",
+  "metaDescription": "ACTH élevée ou basse ? Signification en lien avec le cortisol expliquée simplement.",
+  "causesElevated": [
+    "Insuffisance surrénalienne (maladie d'Addison)",
+    "Tumeur productrice d'ACTH (rare)"
+  ],
+  "causesLow": [
+    "Maladie de l'hypophyse",
+    "Syndrome de Cushing dû à une tumeur surrénalienne"
+  ],
+  "doctorQuestions": [
+    "Que montre le rapport entre l'ACTH et mon cortisol ?",
+    "Une évaluation approfondie de l'hypophyse est-elle nécessaire ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "ACTH expliquée | Medyra"
+}

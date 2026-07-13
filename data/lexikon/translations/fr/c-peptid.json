@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Le peptide C est produit lors de la production d'insuline par l'organisme et montre combien d'insuline le pancréas produit encore lui-même. Des valeurs basses suggèrent une carence en insuline comme dans le diabète de type 1.",
+  "metaDescription": "Peptide C élevé ou bas ? Signification pour la production d'insuline propre expliquée.",
+  "causesElevated": [
+    "Résistance à l'insuline",
+    "Diabète de type 2 débutant",
+    "Insulinome (rare)"
+  ],
+  "causesLow": [
+    "Diabète de type 1",
+    "Carence avancée en insuline"
+  ],
+  "doctorQuestions": [
+    "Mon pancréas produit-il encore suffisamment d'insuline ?",
+    "Quel type de diabète pourrais-je avoir ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Métabolisme",
+  "pageTitle": "Peptide C expliqué | Medyra"
+}

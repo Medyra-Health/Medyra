@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Le lactate est produit lors de la production d'énergie, surtout lorsque les muscles ou les tissus ne sont pas suffisamment approvisionnés en oxygène. Des valeurs légèrement élevées après un effort physique sont normales.",
+  "metaDescription": "Lactate élevé ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Effort physique",
+    "Manque d'oxygène dans les tissus",
+    "Infection grave (sepsis)",
+    "Certains médicaments"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Avec quelle urgence mon lactate élevé doit-il être clarifié ?",
+    "Quelle est la cause sous-jacente dans mon cas ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Métabolisme",
+  "pageTitle": "Lactate expliqué | Medyra"
+}

@@ -1,0 +1,27 @@
+{
+  "shortAnswer": "Les neutrophiles sont le type de globules blancs le plus courant et combattent principalement les infections bactériennes. Des valeurs élevées indiquent souvent une infection ou une inflammation aiguë, des valeurs basses peuvent augmenter le risque d'infection.",
+  "metaDescription": "Neutrophiles élevés ou bas ? Signification et causes expliquées simplement.",
+  "causesElevated": [
+    "Infection bactérienne",
+    "Inflammation aiguë",
+    "Stress physique important",
+    "Traitement à la cortisone"
+  ],
+  "causesLow": [
+    "Infection virale",
+    "Maladie de la moelle osseuse",
+    "Chimiothérapie",
+    "Certains médicaments"
+  ],
+  "doctorQuestions": [
+    "Mon taux de neutrophiles indique-t-il une infection bactérienne ?",
+    "Mon risque d'infection est-il actuellement élevé ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Numération sanguine",
+  "pageTitle": "Neutrophiles expliqués | Medyra"
+}

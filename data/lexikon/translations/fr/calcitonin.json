@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La calcitonine est produite par des cellules spéciales de la thyroïde et participe au métabolisme du calcium. Des valeurs nettement élevées sont rares et peuvent indiquer une augmentation de ces cellules ou, rarement, un cancer médullaire de la thyroïde.",
+  "metaDescription": "Calcitonine élevée ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Augmentation des cellules C (hyperplasie des cellules C)",
+    "Cancer médullaire de la thyroïde (rare)",
+    "Certains médicaments"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quels examens supplémentaires sont utiles en cas de calcitonine élevée ?",
+    "Quelle est l'urgence d'une clarification ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Thyroïde",
+  "pageTitle": "Calcitonine expliquée | Medyra"
+}

@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Les réticulocytes sont de jeunes globules rouges pas encore complètement matures. Leur nombre indique à quel point la moelle osseuse produit activement de nouveaux globules rouges. Une valeur élevée peut indiquer une production accrue après une perte de sang, une valeur basse une fonction médullaire réduite.",
+  "metaDescription": "Réticulocytes élevés ou bas ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Production sanguine accrue après une perte de sang",
+    "Anémie hémolytique",
+    "Après traitement en fer ou en vitamines"
+  ],
+  "causesLow": [
+    "Faiblesse de la moelle osseuse",
+    "Carence en fer ou en vitamines non traitée",
+    "Chimiothérapie"
+  ],
+  "doctorQuestions": [
+    "Que révèle mon taux de réticulocytes sur la cause de mon anémie ?",
+    "Ma moelle osseuse répond-elle bien au traitement ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Numération sanguine",
+  "pageTitle": "Réticulocytes expliqués | Medyra"
+}

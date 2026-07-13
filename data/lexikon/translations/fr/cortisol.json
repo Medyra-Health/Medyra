@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Le cortisol est l'hormone du stress la plus importante de la surrénale et suit un rythme quotidien avec les valeurs les plus élevées le matin. Des valeurs durablement élevées peuvent indiquer un stress chronique.",
+  "metaDescription": "Cortisol trop élevé ou trop bas ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Stress chronique",
+    "Syndrome de Cushing",
+    "Traitement à la cortisone"
+  ],
+  "causesLow": [
+    "Insuffisance surrénalienne (maladie d'Addison)",
+    "Maladie de l'hypophyse",
+    "Arrêt soudain d'un traitement à la cortisone"
+  ],
+  "doctorQuestions": [
+    "Mon cortisol correspond-il à l'heure du prélèvement sanguin ?",
+    "L'ACTH doit-il aussi être mesuré ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas (matin)",
+    "normal": "Normal (matin)",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "Cortisol expliqué | Medyra"
+}

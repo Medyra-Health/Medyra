@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Les IgG sont la classe d'anticorps la plus courante et assurent la protection à long terme après des infections ou des vaccinations. Des valeurs basses peuvent indiquer une immunodéficience.",
+  "metaDescription": "IgG élevées ou basses ? Signification pour le système immunitaire expliquée simplement.",
+  "causesElevated": [
+    "Infection chronique",
+    "Maladie auto-immune",
+    "Certaines maladies du sang"
+  ],
+  "causesLow": [
+    "Immunodéficience congénitale ou acquise",
+    "Perte de protéines par le rein ou l'intestin"
+  ],
+  "doctorQuestions": [
+    "Mes IgG indiquent-elles une immunodéficience ?",
+    "D'autres immunoglobulines doivent-elles être mesurées ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Système immunitaire",
+  "pageTitle": "IgG expliquées | Medyra"
+}

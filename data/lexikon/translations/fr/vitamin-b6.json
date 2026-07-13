@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La vitamine B6 est impliquée dans de nombreux processus métaboliques, notamment le métabolisme nerveux et protéique. Une carence peut entraîner fatigue, problèmes nerveux ou changements cutanés.",
+  "metaDescription": "Vitamine B6 trop basse ? Signification, valeurs normales et causes de carence expliquées simplement.",
+  "causesElevated": [],
+  "causesLow": [
+    "Alimentation déséquilibrée",
+    "Alcoolisme",
+    "Certains médicaments (antihypertenseurs, antituberculeux)"
+  ],
+  "doctorQuestions": [
+    "Ma carence en vitamine B6 pourrait-elle expliquer mes symptômes ?",
+    "Dois-je supplémenter en vitamine B6 ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal"
+  },
+  "categoryLabel": "Vitamines",
+  "pageTitle": "Vitamine B6 expliquée | Medyra"
+}

@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Le facteur du complément C4, comme le C3, appartient au système du complément de la défense immunitaire. Des valeurs basses sont souvent mesurées avec le C3 en cas de suspicion de maladies auto-immunes comme le lupus.",
+  "metaDescription": "Facteur du complément C4 élevé ou bas ? Signification pour les maladies auto-immunes expliquée.",
+  "causesElevated": [
+    "Inflammation ou infection aiguë"
+  ],
+  "causesLow": [
+    "Maladies auto-immunes (par ex. lupus érythémateux systémique)",
+    "Carence congénitale en complément"
+  ],
+  "doctorQuestions": [
+    "Que signifie mon C4 avec mon C3 et mes symptômes ?",
+    "Un rhumatologue doit-il être consulté ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Système immunitaire",
+  "pageTitle": "Complément C4 expliqué | Medyra"
+}

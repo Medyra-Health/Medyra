@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Les éosinophiles sont des globules blancs particulièrement augmentés lors d'allergies et d'infections parasitaires. Une valeur élevée peut indiquer de l'asthme, un rhume des foins, des allergies cutanées ou une infestation parasitaire.",
+  "metaDescription": "Éosinophiles élevés ? Signification, valeurs normales et causes comme les allergies expliquées simplement.",
+  "causesElevated": [
+    "Allergies (rhume des foins, asthme)",
+    "Infestation parasitaire",
+    "Maladies cutanées comme l'eczéma",
+    "Certaines réactions médicamenteuses"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Une allergie ou une infestation parasitaire pourrait-elle expliquer ma valeur ?",
+    "Un test allergique doit-il être fait ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Numération sanguine",
+  "pageTitle": "Éosinophiles expliqués | Medyra"
+}

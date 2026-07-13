@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "La LH déclenche l'ovulation chez la femme et stimule la production de testostérone chez l'homme. La valeur est souvent mesurée avec la FSH, par exemple en cas de troubles du cycle ou de désir d'enfant.",
+  "metaDescription": "LH élevée ou basse ? Signification pour le cycle et la fertilité expliquée simplement.",
+  "causesElevated": [
+    "Ovulation (augmentation brève)",
+    "Ménopause",
+    "Syndrome des ovaires polykystiques"
+  ],
+  "causesLow": [
+    "Maladie de l'hypophyse",
+    "Perte de poids importante ou sport de haut niveau"
+  ],
+  "doctorQuestions": [
+    "Que montre le rapport LH/FSH dans mon cas ?",
+    "Mon cycle ou ma fonction hormonale est-il normal ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (dépend du cycle chez la femme)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "LH expliquée | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "L'ammoniac est produit lors de la dégradation des protéines et est normalement rendu inoffensif par le foie. Des valeurs élevées peuvent indiquer une fonction hépatique réduite et, dans les cas prononcés, affecter la fonction cérébrale.",
+  "metaDescription": "Ammoniac élevé ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Maladie hépatique avancée (cirrhose)",
+    "Insuffisance hépatique",
+    "Certains troubles métaboliques"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Avec quelle urgence mon ammoniac élevé doit-il être traité ?",
+    "Quelle est la cause sous-jacente dans mon cas ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Valeurs hépatiques",
+  "pageTitle": "Ammoniac expliqué | Medyra"
+}

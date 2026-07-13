@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Le NT-proBNP est libéré par le cœur lorsqu'il est soumis à une charge accrue, et constitue la valeur de laboratoire la plus importante pour évaluer une insuffisance cardiaque.",
+  "metaDescription": "NT-proBNP élevé ? Signification pour l'insuffisance cardiaque expliquée simplement.",
+  "causesElevated": [
+    "Insuffisance cardiaque",
+    "Fibrillation auriculaire",
+    "Fonction rénale réduite",
+    "Âge avancé"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Cette valeur confirme-t-elle une insuffisance cardiaque ?",
+    "Une échocardiographie est-elle utile ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs cardiaques",
+  "pageTitle": "NT-proBNP expliqué | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Les anticorps anti-TPO ciblent une enzyme de la thyroïde et constituent l'indice le plus important d'une maladie auto-immune thyroïdienne comme la thyroïdite de Hashimoto.",
+  "metaDescription": "Anticorps anti-TPO élevés ? Signification pour Hashimoto et les maladies thyroïdiennes expliquée.",
+  "causesElevated": [
+    "Thyroïdite de Hashimoto",
+    "Maladie de Basedow",
+    "Autres maladies auto-immunes"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Cette valeur confirme-t-elle une maladie auto-immune thyroïdienne ?",
+    "Ma fonction thyroïdienne doit-elle être contrôlée régulièrement ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Thyroïde",
+  "pageTitle": "Anticorps anti-TPO expliqués | Medyra"
+}

@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Le PSA est produit par la prostate et peut augmenter en cas d'hypertrophie prostatique, d'inflammation ou de cancer de la prostate. Une valeur élevée seule ne prouve pas un cancer.",
+  "metaDescription": "PSA élevé ? Causes possibles et prochaines étapes expliquées simplement.",
+  "causesElevated": [
+    "Hypertrophie bénigne de la prostate (HBP)",
+    "Prostatite",
+    "Après effort physique (par ex. vélo)",
+    "Cancer de la prostate (une des causes possibles)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Laquelle des causes possibles s'applique à moi ?",
+    "Un examen urologique approfondi est-il utile ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs tumoraux",
+  "pageTitle": "PSA : antigène prostatique spécifique expliqué | Medyra"
+}

@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Le zinc est impliqué dans de nombreuses réactions enzymatiques, la cicatrisation et le système immunitaire. Une carence peut se manifester par une chute de cheveux, des troubles de cicatrisation ou une sensibilité accrue aux infections.",
+  "metaDescription": "Zinc trop bas ou trop élevé ? Signification, valeurs normales et causes expliquées simplement.",
+  "causesElevated": [
+    "Surdosage par compléments alimentaires"
+  ],
+  "causesLow": [
+    "Alimentation déséquilibrée",
+    "Maladies intestinales chroniques",
+    "Besoin accru (par ex. grossesse)"
+  ],
+  "doctorQuestions": [
+    "Une carence en zinc pourrait-elle expliquer mes symptômes ?",
+    "Dois-je supplémenter en zinc ?"
+  ],
+  "rangeLabels": {
+    "low": "Bas",
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Oligo-éléments",
+  "pageTitle": "Zinc expliqué | Medyra"
+}

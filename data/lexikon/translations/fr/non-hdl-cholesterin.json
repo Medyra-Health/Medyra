@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Le cholestérol non-HDL comprend tous les types de cholestérol sauf le « bon » HDL, donc principalement le LDL et d'autres particules nocives pour les vaisseaux. Il est considéré comme un bon indicateur global du risque cardiovasculaire.",
+  "metaDescription": "Cholestérol non-HDL élevé ? Signification pour le risque cardiovasculaire expliquée simplement.",
+  "causesElevated": [
+    "Cholestérol LDL élevé",
+    "Triglycérides élevés",
+    "Alimentation défavorable",
+    "Surpoids"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quel est mon risque cardiovasculaire d'après cette valeur ?",
+    "Mon traitement du cholestérol doit-il être ajusté ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Métabolisme",
+  "pageTitle": "Cholestérol non-HDL expliqué | Medyra"
+}

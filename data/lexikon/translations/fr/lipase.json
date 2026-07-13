@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La lipase est une enzyme digestive du pancréas et est considérée comme un marqueur plus spécifique de pancréatite que l'amylase. Des valeurs nettement élevées, généralement avec de fortes douleurs abdominales, doivent être clarifiées rapidement.",
+  "metaDescription": "Lipase élevée ? Signification pour la pancréatite expliquée simplement.",
+  "causesElevated": [
+    "Pancréatite aiguë",
+    "Calculs biliaires",
+    "Fonction rénale réduite"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Avec quelle urgence ma lipase élevée doit-elle être clarifiée ?",
+    "Une imagerie du pancréas est-elle nécessaire ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Valeurs pancréatiques",
+  "pageTitle": "Lipase expliquée | Medyra"
+}

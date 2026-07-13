@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "L'amylase est une enzyme digestive surtout produite dans le pancréas et les glandes salivaires. Des valeurs très élevées surviennent typiquement en cas de pancréatite aiguë.",
+  "metaDescription": "Amylase élevée ? Signification pour le pancréas expliquée simplement.",
+  "causesElevated": [
+    "Pancréatite aiguë",
+    "Inflammation des glandes salivaires",
+    "Calculs biliaires"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Mon amylase élevée indique-t-elle une pancréatite ?",
+    "La lipase doit-elle aussi être mesurée ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Valeurs pancréatiques",
+  "pageTitle": "Amylase expliquée | Medyra"
+}

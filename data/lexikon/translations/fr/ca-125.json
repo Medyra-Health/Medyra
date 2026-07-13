@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Le CA 125 est surtout mesuré en lien avec les ovaires, mais augmente aussi avec de nombreuses affections bénignes comme l'endométriose, les règles ou les kystes ovariens.",
+  "metaDescription": "CA 125 élevé ? Causes possibles et prochaines étapes expliquées simplement.",
+  "causesElevated": [
+    "Endométriose",
+    "Kystes ovariens",
+    "Menstruation",
+    "Inflammations pelviennes",
+    "Cancer de l'ovaire (une des causes possibles)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Quelles causes bénignes s'appliquent à moi ?",
+    "Une échographie gynécologique est-elle utile ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs tumoraux",
+  "pageTitle": "CA 125 expliqué | Medyra"
+}

@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "La SHBG lie les hormones sexuelles dans le sang et influence la part disponible et active. La valeur est souvent mesurée avec la testostérone pour mieux estimer la fraction hormonale réellement active.",
+  "metaDescription": "SHBG élevée ou basse ? Signification pour les valeurs hormonales expliquée simplement.",
+  "causesElevated": [
+    "Hyperthyroïdie",
+    "Grossesse",
+    "Traitement œstrogénique"
+  ],
+  "causesLow": [
+    "Surpoids",
+    "Résistance à l'insuline",
+    "Hypothyroïdie"
+  ],
+  "doctorQuestions": [
+    "Comment ma SHBG influence-t-elle l'interprétation de ma testostérone ?",
+    "La testostérone libre doit-elle être calculée ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "SHBG expliquée | Medyra"
+}

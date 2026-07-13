@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Le pH de l'urine montre si elle est plutôt acide ou basique, et est influencé notamment par l'alimentation, le métabolisme et certaines maladies. Il joue aussi un rôle dans la formation de certains types de calculs rénaux.",
+  "metaDescription": "pH urinaire élevé ou bas ? Signification et causes expliquées simplement.",
+  "causesElevated": [
+    "Alimentation végétarienne/alcalinisante",
+    "Infection urinaire",
+    "Trouble de la fonction rénale"
+  ],
+  "causesLow": [
+    "Alimentation riche en protéines",
+    "Déséquilibre métabolique (par ex. acidocétose)"
+  ],
+  "doctorQuestions": [
+    "Mon pH urinaire influence-t-il la formation de calculs rénaux ?",
+    "Mon alimentation doit-elle être ajustée ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Valeurs urinaires",
+  "pageTitle": "pH urinaire expliqué | Medyra"
+}

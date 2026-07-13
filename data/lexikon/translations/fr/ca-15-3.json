@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Le CA 15-3 est surtout utilisé pour surveiller un cancer du sein déjà diagnostiqué et convient moins au dépistage précoce, car il peut aussi être élevé lors d'affections bénignes du sein.",
+  "metaDescription": "CA 15-3 élevé ? Signification du marqueur tumoral et causes possibles expliquées.",
+  "causesElevated": [
+    "Affections bénignes du sein",
+    "Trouble de la fonction hépatique",
+    "Cancer du sein connu (pour suivi)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Cette valeur est-elle utilisée pour surveiller mon état ?",
+    "Une imagerie supplémentaire doit-elle être faite ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs tumoraux",
+  "pageTitle": "CA 15-3 expliqué | Medyra"
+}

@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "La créatine kinase se trouve surtout dans le muscle cardiaque et squelettique et augmente en cas de lésion musculaire, par exemple après un effort physique intense, mais aussi lors d'un infarctus.",
+  "metaDescription": "Créatine kinase (CK) élevée ? Signification pour les lésions musculaires et cardiaques expliquée.",
+  "causesElevated": [
+    "Effort physique intense",
+    "Lésion musculaire",
+    "Infarctus du myocarde",
+    "Certains médicaments (par ex. statines)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Ma CK élevée provient-elle des muscles ou du cœur ?",
+    "La CK-MB ou la troponine doivent-elles aussi être mesurées ?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Élevé"
+  },
+  "categoryLabel": "Marqueurs cardiaques",
+  "pageTitle": "Créatine kinase (CK) expliquée | Medyra"
+}
