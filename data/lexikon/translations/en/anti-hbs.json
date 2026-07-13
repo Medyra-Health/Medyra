@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Anti-HBs antibodies indicate that sufficient immune protection against hepatitis B exists, either through vaccination or after a resolved infection. This value is often measured to check vaccination protection, such as for medical staff.",
+  "metaDescription": "Anti-HBs elevated or low? Meaning for hepatitis B vaccination protection explained.",
+  "causesElevated": [
+    "Successful hepatitis B vaccination",
+    "Resolved hepatitis B infection with immunity"
+  ],
+  "causesLow": [
+    "No or insufficient vaccination protection",
+    "Waning vaccination protection over time"
+  ],
+  "doctorQuestions": [
+    "Is my hepatitis B vaccination protection still sufficient?",
+    "Should I get a booster vaccination?"
+  ],
+  "rangeLabels": {
+    "low": "No sufficient protection",
+    "normal": "Sufficient vaccination protection"
+  },
+  "categoryLabel": "Infection Markers",
+  "pageTitle": "Anti-HBs explained | Medyra"
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "ca-15-3",
+  "acronym": "CA 15-3",
+  "fullName": "Cancer Antigen 15-3",
+  "category": "Tumormarker",
+  "shortAnswer": "CA 15-3 wird hauptsächlich zur Verlaufskontrolle bei bereits diagnostiziertem Brustkrebs eingesetzt und eignet sich weniger zur Früherkennung, da er auch bei gutartigen Brusterkrankungen erhöht sein kann. Die Einordnung erfolgt immer im ärztlichen Gesamtkontext.",
+  "unit": "U/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 25,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 25,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Gutartige Brusterkrankungen",
+    "Leberfunktionsstörung",
+    "Bekannter Brustkrebs (zur Verlaufskontrolle)"
+  ],
+  "causesLow": [],
+  "relatedValues": [],
+  "doctorQuestions": [
+    "Wird dieser Wert bei mir zur Verlaufskontrolle genutzt?",
+    "Sollte zusätzlich eine Bildgebung erfolgen?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "CA 15-3 erhöht? Bedeutung des Tumormarkers und mögliche Ursachen einfach erklärt."
+}

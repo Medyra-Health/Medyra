@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Vitamin K is needed for blood clotting and bone metabolism. A deficiency can lead to increased bleeding tendency and occurs with fat malabsorption disorders, long-term antibiotic therapy, or malnutrition, among other causes.",
+  "metaDescription": "Vitamin K too low? Meaning for blood clotting, normal ranges, and causes explained.",
+  "causesElevated": [],
+  "causesLow": [
+    "Fat malabsorption disorder",
+    "Long-term antibiotic therapy",
+    "Malnutrition",
+    "Liver disease"
+  ],
+  "doctorQuestions": [
+    "Does a vitamin K deficiency explain my increased bleeding tendency?",
+    "Should I supplement vitamin K?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal"
+  },
+  "categoryLabel": "Vitamins",
+  "pageTitle": "Vitamin K explained | Medyra"
+}

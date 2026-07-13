@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Fibrinogen is a protein necessary for blood clotting and also serves as an inflammation marker. Elevated values often occur with inflammation or infections, low values can indicate a clotting disorder or liver disease.",
+  "metaDescription": "Fibrinogen elevated or low? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Inflammation or infection",
+    "After surgery",
+    "Pregnancy"
+  ],
+  "causesLow": [
+    "Consumptive coagulopathy",
+    "Liver disease",
+    "Rare congenital clotting disorder"
+  ],
+  "doctorQuestions": [
+    "What could explain my abnormal fibrinogen value?",
+    "Is there an increased bleeding or thrombosis risk?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Coagulation",
+  "pageTitle": "Fibrinogen explained | Medyra"
+}

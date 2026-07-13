@@ -1,0 +1,37 @@
+{
+  "slug": "oestradiol",
+  "acronym": "E2",
+  "fullName": "Östradiol",
+  "category": "Hormone",
+  "shortAnswer": "Östradiol ist das wichtigste weibliche Geschlechtshormon und schwankt im Laufe des Zyklus, in der Schwangerschaft und in den Wechseljahren stark. Niedrige Werte können auf die Wechseljahre oder eine Eierstockfunktionsstörung hindeuten, der Referenzbereich hängt stark von Zyklusphase und Alter ab.",
+  "unit": "pg/ml",
+  "ranges": {
+    "normal": {
+      "min": 20,
+      "max": 400,
+      "label": "Normal (zyklusabhängig)"
+    }
+  },
+  "causesElevated": [
+    "Bestimmte Zyklusphasen (z. B. Eisprung)",
+    "Schwangerschaft",
+    "Östrogenproduzierende Tumoren (selten)"
+  ],
+  "causesLow": [
+    "Wechseljahre (Menopause)",
+    "Eierstockfunktionsstörung",
+    "Starker Gewichtsverlust oder Leistungssport"
+  ],
+  "relatedValues": [
+    "fsh",
+    "lh",
+    "progesteron"
+  ],
+  "doctorQuestions": [
+    "Passt mein Östradiolwert zu meiner aktuellen Zyklusphase bzw. Lebensphase?",
+    "Sollten weitere Hormonwerte bestimmt werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Östradiol zu niedrig oder zu hoch? Bedeutung, Normwerte und Ursachen einfach erklärt."
+}

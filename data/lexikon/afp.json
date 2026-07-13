@@ -1,0 +1,37 @@
+{
+  "slug": "afp",
+  "acronym": "AFP",
+  "fullName": "Alpha-1-Fetoprotein",
+  "category": "Tumormarker",
+  "shortAnswer": "AFP ist normalerweise vor allem in der Schwangerschaft erhöht und wird außerhalb einer Schwangerschaft zur Verlaufskontrolle bei Leber- oder Keimzelltumoren genutzt. Auch chronische Lebererkrankungen können den Wert erhöhen, ohne dass ein Tumor vorliegt.",
+  "unit": "ng/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 10,
+      "label": "Normal (außerhalb der Schwangerschaft)"
+    },
+    "elevated": {
+      "min": 10,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Schwangerschaft",
+    "Chronische Lebererkrankung oder Leberzirrhose",
+    "Leberkrebs oder Keimzelltumoren (eine von mehreren möglichen Ursachen)"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "got-ast",
+    "gpt-alt"
+  ],
+  "doctorQuestions": [
+    "Welche Ursache kommt bei meinem erhöhten AFP-Wert infrage?",
+    "Ist eine Bildgebung der Leber sinnvoll?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "AFP erhöht? Bedeutung des Tumormarkers und mögliche Ursachen einfach erklärt."
+}

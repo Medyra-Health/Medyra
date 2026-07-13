@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "PSA is produced by the prostate and can rise with prostate enlargement, inflammation, or prostate cancer. An elevated value alone doesn't prove cancer, many benign causes are far more common, so medical assessment is important.",
+  "metaDescription": "PSA value elevated? Possible causes and next steps explained simply.",
+  "causesElevated": [
+    "Benign prostate enlargement (BPH)",
+    "Prostate inflammation",
+    "After physical exertion (e.g. cycling)",
+    "Prostate cancer (one of several possible causes)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Which of the possible causes applies to me?",
+    "Is further urological evaluation useful?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Tumor Markers",
+  "pageTitle": "PSA: Prostate-Specific Antigen explained | Medyra"
+}

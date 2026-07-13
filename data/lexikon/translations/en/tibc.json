@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "TIBC measures how much iron the blood could maximally transport in total, indirectly reflecting the amount of transferrin. Elevated values typically occur with iron deficiency, reduced values with iron overload or chronic inflammation.",
+  "metaDescription": "TIBC elevated or low? Meaning for iron deficiency explained.",
+  "causesElevated": [
+    "Iron deficiency"
+  ],
+  "causesLow": [
+    "Iron overload (hemochromatosis)",
+    "Chronic inflammation",
+    "Liver disease"
+  ],
+  "doctorQuestions": [
+    "Does this value confirm iron deficiency?",
+    "Should other iron values be measured?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Iron Values",
+  "pageTitle": "TIBC: Total Iron-Binding Capacity explained | Medyra"
+}

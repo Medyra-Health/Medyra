@@ -1,0 +1,15 @@
+{
+  "shortAnswer": "Anti-HCV antibodies indicate that the body has had contact with the hepatitis C virus at some point. A positive test doesn't automatically mean an active infection, it must be confirmed by an additional test for the virus itself (PCR).",
+  "metaDescription": "Anti-HCV positive? Meaning for a hepatitis C infection explained simply.",
+  "causesElevated": [
+    "Current hepatitis C infection",
+    "Resolved, cured hepatitis C infection"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Is an additional PCR test needed for confirmation?",
+    "Do I have an active or resolved infection?"
+  ],
+  "categoryLabel": "Infection Markers",
+  "pageTitle": "Anti-HCV explained | Medyra"
+}

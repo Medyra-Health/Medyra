@@ -1,0 +1,36 @@
+{
+  "slug": "amylase",
+  "acronym": "Amylase",
+  "fullName": "Amylase",
+  "category": "Pankreaswerte",
+  "shortAnswer": "Amylase ist ein Verdauungsenzym, das vor allem in der Bauchspeicheldrüse und den Speicheldrüsen gebildet wird. Stark erhöhte Werte treten typischerweise bei einer akuten Entzündung der Bauchspeicheldrüse auf, leicht erhöhte Werte können auch von den Speicheldrüsen stammen.",
+  "unit": "U/l",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 100,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 100,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Akute Bauchspeicheldrüsenentzündung (Pankreatitis)",
+    "Speicheldrüsenentzündung",
+    "Gallensteine"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "lipase"
+  ],
+  "doctorQuestions": [
+    "Deutet meine erhöhte Amylase auf eine Bauchspeicheldrüsenentzündung hin?",
+    "Sollte zusätzlich Lipase bestimmt werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Amylase erhöht? Bedeutung für die Bauchspeicheldrüse einfach erklärt auf Deutsch."
+}

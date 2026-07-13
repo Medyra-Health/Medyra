@@ -1,0 +1,16 @@
+{
+  "shortAnswer": "Antinuclear antibodies target components of the cell nucleus and are an important screening test when autoimmune diseases like lupus are suspected. A positive value alone is not a diagnosis, since ANA can also be detectable in many healthy people and other conditions.",
+  "metaDescription": "ANA (antinuclear antibodies) positive? Meaning for autoimmune diseases explained.",
+  "causesElevated": [
+    "Systemic lupus erythematosus",
+    "Other autoimmune diseases (e.g. Sjögren's syndrome)",
+    "Can also occur in healthy people at low titer"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "What is my ANA titer and which pattern was found?",
+    "Are further specific antibody tests necessary?"
+  ],
+  "categoryLabel": "Immune System",
+  "pageTitle": "ANA: Antinuclear Antibodies explained | Medyra"
+}

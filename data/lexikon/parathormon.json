@@ -1,0 +1,46 @@
+{
+  "slug": "parathormon",
+  "acronym": "PTH",
+  "fullName": "Parathormon (Parathyrin)",
+  "category": "Hormone",
+  "shortAnswer": "Parathormon wird in den Nebenschilddrüsen gebildet und reguliert gemeinsam mit Vitamin D den Kalziumhaushalt. Erhöhte Werte können auf eine Überfunktion der Nebenschilddrüsen oder einen Vitamin-D-Mangel hindeuten, niedrige Werte sind seltener und können zu niedrigem Kalzium führen.",
+  "unit": "pg/ml",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 15,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 15,
+      "max": 65,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 65,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Überfunktion der Nebenschilddrüsen",
+    "Vitamin-D-Mangel",
+    "Chronische Nierenerkrankung"
+  ],
+  "causesLow": [
+    "Unterfunktion der Nebenschilddrüsen",
+    "Nach Schilddrüsenoperation"
+  ],
+  "relatedValues": [
+    "calcium",
+    "vitamin-d",
+    "phosphat"
+  ],
+  "doctorQuestions": [
+    "Hängt mein PTH-Wert mit meinem Kalzium- oder Vitamin-D-Spiegel zusammen?",
+    "Sollte eine Nebenschilddrüsenerkrankung abgeklärt werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Parathormon (PTH) erhöht oder erniedrigt? Bedeutung für den Kalziumhaushalt erklärt."
+}

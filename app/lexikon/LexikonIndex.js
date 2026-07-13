@@ -17,13 +17,23 @@ const CATEGORY_COLORS = {
   'Vitamine':         { bg: 'bg-yellow-50',  border: 'border-yellow-200', text: 'text-yellow-700', dot: 'bg-yellow-400', pill: 'bg-yellow-100 text-yellow-700', badge: 'bg-yellow-500' },
   'Gerinnung':        { bg: 'bg-indigo-50',  border: 'border-indigo-200', text: 'text-indigo-700', dot: 'bg-indigo-400', pill: 'bg-indigo-100 text-indigo-700', badge: 'bg-indigo-500' },
   'Urinwerte':        { bg: 'bg-emerald-50', border: 'border-emerald-200',text: 'text-emerald-700',dot: 'bg-emerald-400',pill: 'bg-emerald-100 text-emerald-700',badge:'bg-emerald-500'},
+  'Spurenelemente':   { bg: 'bg-lime-50',    border: 'border-lime-200',   text: 'text-lime-700',   dot: 'bg-lime-400',   pill: 'bg-lime-100 text-lime-700',    badge: 'bg-lime-500'   },
+  'Hormone':          { bg: 'bg-fuchsia-50', border: 'border-fuchsia-200',text: 'text-fuchsia-700',dot: 'bg-fuchsia-400',pill: 'bg-fuchsia-100 text-fuchsia-700',badge:'bg-fuchsia-500'},
+  'Tumormarker':      { bg: 'bg-purple-50',  border: 'border-purple-200', text: 'text-purple-700', dot: 'bg-purple-400', pill: 'bg-purple-100 text-purple-700', badge: 'bg-purple-500' },
+  'Herzwerte':        { bg: 'bg-pink-50',    border: 'border-pink-200',   text: 'text-pink-700',   dot: 'bg-pink-400',   pill: 'bg-pink-100 text-pink-700',    badge: 'bg-pink-500'   },
+  'Immunsystem':      { bg: 'bg-cyan-50',    border: 'border-cyan-200',   text: 'text-cyan-700',   dot: 'bg-cyan-400',   pill: 'bg-cyan-100 text-cyan-700',    badge: 'bg-cyan-500'   },
+  'Infektionswerte':  { bg: 'bg-red-50',     border: 'border-red-200',    text: 'text-red-800',    dot: 'bg-red-500',    pill: 'bg-red-100 text-red-800',      badge: 'bg-red-600'    },
+  'Pankreaswerte':    { bg: 'bg-orange-50',  border: 'border-orange-200', text: 'text-orange-800', dot: 'bg-orange-500', pill: 'bg-orange-100 text-orange-800', badge: 'bg-orange-600' },
+  'Blutgruppe':       { bg: 'bg-slate-50',   border: 'border-slate-200',  text: 'text-slate-700',  dot: 'bg-slate-400',  pill: 'bg-slate-100 text-slate-700',  badge: 'bg-slate-500'  },
 }
 const DEFAULT_COLOR = { bg: 'bg-gray-50', border: 'border-gray-200', text: 'text-gray-700', dot: 'bg-gray-400', pill: 'bg-gray-100 text-gray-700', badge: 'bg-gray-500' }
 
 const CATEGORY_ORDER = [
   'Blutbild','Leberwerte','Nierenwerte','Entzündungswerte',
   'Stoffwechsel','Schilddrüse','Elektrolyte','Eisenwerte',
-  'Vitamine','Gerinnung','Urinwerte',
+  'Vitamine','Spurenelemente','Gerinnung','Urinwerte',
+  'Hormone','Tumormarker','Herzwerte','Immunsystem',
+  'Infektionswerte','Pankreaswerte','Blutgruppe',
 ]
 
 const LEXIKON_URL_LANGS = new Set(['en','tr','bn','fr','ar','es','it','pt','nl','pl','zh','ja','ko','hi','ur','ru'])

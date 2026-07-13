@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Microalbumin measures tiny amounts of protein in urine that a standard urine dipstick cannot detect. An elevated value is often an early sign of kidney damage, especially with diabetes or high blood pressure, and should be followed up by a doctor.",
+  "metaDescription": "Microalbumin in urine elevated? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Early diabetic kidney damage",
+    "High blood pressure",
+    "Kidney inflammation"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Is this an early sign of kidney damage?",
+    "Should my blood pressure or blood sugar be better controlled?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Kidney Values",
+  "pageTitle": "Microalbumin in Urine explained | Medyra"
+}

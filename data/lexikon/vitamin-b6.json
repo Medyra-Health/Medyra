@@ -1,0 +1,38 @@
+{
+  "slug": "vitamin-b6",
+  "acronym": "Vit. B6",
+  "fullName": "Vitamin B6 (Pyridoxin)",
+  "category": "Vitamine",
+  "shortAnswer": "Vitamin B6 ist an zahlreichen Stoffwechselprozessen beteiligt, unter anderem am Nerven- und Eiweißstoffwechsel. Ein Mangel kann zu Müdigkeit, Nervenproblemen oder Hautveränderungen führen und kommt unter anderem bei einseitiger Ernährung oder bestimmten Medikamenten vor.",
+  "unit": "µg/l",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 5,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 5,
+      "max": 30,
+      "label": "Normal"
+    }
+  },
+  "causesElevated": [],
+  "causesLow": [
+    "Einseitige Ernährung",
+    "Alkoholismus",
+    "Bestimmte Medikamente (z. B. manche Blutdruck- oder Tuberkulosemedikamente)"
+  ],
+  "relatedValues": [
+    "vitamin-b12",
+    "folsaeure",
+    "homocystein"
+  ],
+  "doctorQuestions": [
+    "Könnte mein Vitamin-B6-Mangel meine Symptome erklären?",
+    "Sollte ich Vitamin B6 ergänzen?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Vitamin B6 zu niedrig? Bedeutung, Normwerte und Ursachen für einen Mangel einfach erklärt."
+}

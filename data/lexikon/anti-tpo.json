@@ -1,0 +1,39 @@
+{
+  "slug": "anti-tpo",
+  "acronym": "TPO-AK",
+  "fullName": "Thyreoperoxidase-Antikörper",
+  "category": "Schilddrüse",
+  "shortAnswer": "Anti-TPO-Antikörper richten sich gegen ein Enzym der Schilddrüse und sind der wichtigste Hinweis auf eine Autoimmunerkrankung der Schilddrüse wie Hashimoto-Thyreoiditis. Erhöhte Werte bestätigen häufig, aber nicht immer, eine solche Erkrankung.",
+  "unit": "IU/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 34,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 34,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Hashimoto-Thyreoiditis",
+    "Morbus Basedow",
+    "Andere Autoimmunerkrankungen"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "tsh",
+    "ft3",
+    "ft4",
+    "anti-tg"
+  ],
+  "doctorQuestions": [
+    "Bestätigt dieser Wert eine Autoimmunerkrankung der Schilddrüse?",
+    "Sollte meine Schilddrüsenfunktion regelmäßig kontrolliert werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Anti-TPO-Antikörper erhöht? Bedeutung für Hashimoto und Schilddrüsenerkrankungen erklärt."
+}

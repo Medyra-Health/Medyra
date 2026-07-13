@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Transferrin saturation shows how much of the iron transport protein transferrin is currently loaded with iron. Low values suggest iron deficiency, high values can indicate iron overload such as in hemochromatosis.",
+  "metaDescription": "Transferrin saturation elevated or low? Meaning for iron deficiency and overload explained.",
+  "causesElevated": [
+    "Iron overload (hemochromatosis)",
+    "Frequent blood transfusions",
+    "Liver disease"
+  ],
+  "causesLow": [
+    "Iron deficiency",
+    "Chronic inflammation",
+    "Blood loss"
+  ],
+  "doctorQuestions": [
+    "Does my transferrin saturation indicate iron deficiency or overload?",
+    "Should hemochromatosis be ruled out?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Iron Values",
+  "pageTitle": "Transferrin Saturation explained | Medyra"
+}

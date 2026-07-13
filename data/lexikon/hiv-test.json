@@ -1,0 +1,20 @@
+{
+  "slug": "hiv-test",
+  "acronym": "HIV-Test",
+  "fullName": "HIV-Antikörper/Antigen-Test",
+  "category": "Infektionswerte",
+  "shortAnswer": "Der HIV-Test weist Antikörper und teils auch Bestandteile des HIV-Virus im Blut nach. Ein positives Ergebnis wird immer durch einen zweiten, unabhängigen Test bestätigt, bevor eine endgültige Aussage getroffen wird. Bei Fragen zu Ihrem Testergebnis wenden Sie sich an Ihren Arzt oder eine Beratungsstelle.",
+  "unit": "",
+  "causesElevated": [
+    "HIV-Infektion (nach Bestätigungstest)"
+  ],
+  "causesLow": [],
+  "relatedValues": [],
+  "doctorQuestions": [
+    "Wurde bereits ein Bestätigungstest durchgeführt?",
+    "Welche nächsten Schritte sind jetzt sinnvoll?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "HIV-Test positiv? Bedeutung und nächste Schritte einfach und sachlich erklärt."
+}

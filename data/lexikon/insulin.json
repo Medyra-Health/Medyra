@@ -1,0 +1,48 @@
+{
+  "slug": "insulin",
+  "acronym": "Insulin",
+  "fullName": "Insulin (nüchtern)",
+  "category": "Stoffwechsel",
+  "shortAnswer": "Insulin ist das Hormon, das den Blutzucker in die Zellen schleust. Erhöhte Nüchterninsulinwerte können auf eine beginnende Insulinresistenz hindeuten, oft schon vor einem erhöhten Blutzucker. Niedrige Werte kommen bei fortgeschrittenem Insulinmangel wie bei Typ-1-Diabetes vor.",
+  "unit": "µU/ml",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 2.6,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 2.6,
+      "max": 24.9,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 24.9,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Insulinresistenz",
+    "Polyzystisches Ovarialsyndrom (PCOS)",
+    "Beginnender Typ-2-Diabetes",
+    "Übergewicht"
+  ],
+  "causesLow": [
+    "Typ-1-Diabetes",
+    "Fortgeschrittener Typ-2-Diabetes"
+  ],
+  "relatedValues": [
+    "blutzucker",
+    "hba1c",
+    "homa-index",
+    "c-peptid"
+  ],
+  "doctorQuestions": [
+    "Deutet mein Insulinwert auf eine Insulinresistenz hin?",
+    "Sollte der HOMA-Index berechnet werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Insulin erhöht oder erniedrigt? Bedeutung, Normwerte und Ursachen einfach erklärt auf Deutsch."
+}

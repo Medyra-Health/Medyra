@@ -1,0 +1,36 @@
+{
+  "slug": "shbg",
+  "acronym": "SHBG",
+  "fullName": "Sexualhormon-bindendes Globulin",
+  "category": "Hormone",
+  "shortAnswer": "SHBG bindet Geschlechtshormone im Blut und beeinflusst, wie viel davon frei und wirksam verfügbar ist. Der Wert wird oft zusammen mit Testosteron bestimmt, um den tatsächlich wirksamen Hormonanteil besser einschätzen zu können.",
+  "unit": "nmol/l",
+  "ranges": {
+    "normal": {
+      "min": 20,
+      "max": 130,
+      "label": "Normal"
+    }
+  },
+  "causesElevated": [
+    "Schilddrüsenüberfunktion",
+    "Schwangerschaft",
+    "Östrogentherapie"
+  ],
+  "causesLow": [
+    "Übergewicht",
+    "Insulinresistenz",
+    "Schilddrüsenunterfunktion"
+  ],
+  "relatedValues": [
+    "testosteron",
+    "oestradiol"
+  ],
+  "doctorQuestions": [
+    "Wie beeinflusst mein SHBG-Wert die Aussagekraft meines Testosteronwertes?",
+    "Sollte freies Testosteron berechnet werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "SHBG erhöht oder erniedrigt? Bedeutung für Hormonwerte einfach erklärt auf Deutsch."
+}

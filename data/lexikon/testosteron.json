@@ -1,0 +1,48 @@
+{
+  "slug": "testosteron",
+  "acronym": "Testo",
+  "fullName": "Testosteron",
+  "category": "Hormone",
+  "shortAnswer": "Testosteron ist das wichtigste männliche Geschlechtshormon, kommt aber auch bei Frauen in geringeren Mengen vor. Niedrige Werte bei Männern können sich durch Müdigkeit, verminderte Libido oder Muskelabbau äußern, erhöhte Werte bei Frauen unter anderem beim polyzystischen Ovarialsyndrom.",
+  "unit": "ng/dl",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 300,
+      "label": "Niedrig (Mann)"
+    },
+    "normal": {
+      "min": 300,
+      "max": 1000,
+      "label": "Normal (Mann)"
+    },
+    "elevated": {
+      "min": 1000,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Polyzystisches Ovarialsyndrom (bei Frauen)",
+    "Bestimmte Nebennierenerkrankungen",
+    "Anabolika-Einnahme"
+  ],
+  "causesLow": [
+    "Altersbedingter Testosteronmangel",
+    "Hodenfunktionsstörung",
+    "Erkrankungen der Hirnanhangsdrüse",
+    "Chronischer Stress"
+  ],
+  "relatedValues": [
+    "shbg",
+    "lh",
+    "fsh"
+  ],
+  "doctorQuestions": [
+    "Erklärt mein Testosteronwert meine Symptome wie Müdigkeit?",
+    "Sollte eine Hormonersatztherapie in Betracht gezogen werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Testosteron zu niedrig oder zu hoch? Bedeutung, Normwerte und Ursachen einfach erklärt."
+}

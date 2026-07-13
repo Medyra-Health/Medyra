@@ -1,0 +1,40 @@
+{
+  "slug": "fsh",
+  "acronym": "FSH",
+  "fullName": "Follikelstimulierendes Hormon",
+  "category": "Hormone",
+  "shortAnswer": "FSH steuert bei Frauen die Reifung der Eizellen und bei Männern die Spermienbildung. Bei Frauen steigt der Wert in den Wechseljahren deutlich an, bei beiden Geschlechtern kann ein erhöhter Wert auf eine eingeschränkte Keimdrüsenfunktion hindeuten.",
+  "unit": "IU/l",
+  "ranges": {
+    "normal": {
+      "min": 1.5,
+      "max": 12.4,
+      "label": "Normal (zyklusabhängig bei Frauen)"
+    },
+    "elevated": {
+      "min": 25,
+      "max": null,
+      "label": "Erhöht (z. B. Wechseljahre)"
+    }
+  },
+  "causesElevated": [
+    "Wechseljahre (Menopause)",
+    "Eingeschränkte Eierstock- oder Hodenfunktion"
+  ],
+  "causesLow": [
+    "Erkrankung der Hirnanhangsdrüse",
+    "Starker Gewichtsverlust oder Leistungssport"
+  ],
+  "relatedValues": [
+    "lh",
+    "oestradiol",
+    "testosteron"
+  ],
+  "doctorQuestions": [
+    "Deutet mein FSH-Wert auf den Beginn der Wechseljahre hin?",
+    "Was bedeutet dieser Wert für meinen Kinderwunsch?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "FSH erhöht oder erniedrigt? Bedeutung für Wechseljahre und Fruchtbarkeit erklärt."
+}

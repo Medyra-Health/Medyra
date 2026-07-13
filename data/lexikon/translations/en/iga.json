@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "IgA mainly protects the mucous membranes of the respiratory tract and gut from pathogens. IgA deficiency is the most common congenital immune deficiency and often causes no symptoms; elevated values occur with chronic mucosal inflammation or liver disease.",
+  "metaDescription": "IgA elevated or low? Meaning for the immune system explained simply.",
+  "causesElevated": [
+    "Chronic mucosal inflammation",
+    "Liver disease",
+    "Autoimmune diseases"
+  ],
+  "causesLow": [
+    "Congenital IgA deficiency (often without symptoms)",
+    "Certain bowel diseases"
+  ],
+  "doctorQuestions": [
+    "Is my IgA deficiency clinically significant?",
+    "Does this need to be considered for future blood transfusions?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Immune System",
+  "pageTitle": "IgA explained | Medyra"
+}

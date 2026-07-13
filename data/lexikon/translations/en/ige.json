@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Total IgE is an antibody elevated with allergies and sometimes parasitic infections. An elevated value confirms a general tendency toward allergies but doesn't say which substance is involved, specific IgE tests are needed for that.",
+  "metaDescription": "IgE elevated? Meaning for allergies and possible causes explained simply.",
+  "causesElevated": [
+    "Allergic diseases (e.g. hay fever, asthma, eczema)",
+    "Parasitic infection",
+    "Certain immune disorders"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Should a specific allergy test be done?",
+    "Which allergies could apply to me?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Immune System",
+  "pageTitle": "IgE explained | Medyra"
+}

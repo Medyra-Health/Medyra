@@ -1,0 +1,37 @@
+{
+  "slug": "calcitonin",
+  "acronym": "CT",
+  "fullName": "Calcitonin",
+  "category": "Schilddrüse",
+  "shortAnswer": "Calcitonin wird von speziellen Zellen der Schilddrüse gebildet und ist am Kalziumstoffwechsel beteiligt. Deutlich erhöhte Werte sind selten und können auf eine Vermehrung dieser Zellen oder in seltenen Fällen auf ein medulläres Schilddrüsenkarzinom hindeuten, weshalb sie ärztlich abgeklärt werden sollten.",
+  "unit": "pg/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 10,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 10,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Vermehrung der C-Zellen (C-Zell-Hyperplasie)",
+    "Medulläres Schilddrüsenkarzinom (selten)",
+    "Bestimmte Medikamente"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "tsh",
+    "thyreoglobulin"
+  ],
+  "doctorQuestions": [
+    "Welche weiteren Untersuchungen sind bei einem erhöhten Calcitonin sinnvoll?",
+    "Wie dringend ist eine Abklärung?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Calcitonin erhöht? Bedeutung, Normwerte und Ursachen einfach erklärt auf Deutsch."
+}

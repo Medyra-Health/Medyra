@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Selenium is a trace element with antioxidant function that's important for the thyroid and immune system. A deficiency usually results from an unbalanced diet or artificial feeding; an overdose is rare with normal diet.",
+  "metaDescription": "Selenium too low or too high? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Overdose from dietary supplements"
+  ],
+  "causesLow": [
+    "Unbalanced diet",
+    "Artificial feeding",
+    "Chronic bowel diseases"
+  ],
+  "doctorQuestions": [
+    "Could a selenium deficiency affect my thyroid values?",
+    "Should I supplement selenium?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Trace Elements",
+  "pageTitle": "Selenium explained | Medyra"
+}

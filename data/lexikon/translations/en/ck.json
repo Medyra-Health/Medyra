@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Creatine kinase is mainly found in heart and skeletal muscle and rises with muscle damage, for example after intense physical exertion, but also with a heart attack. CK-MB or troponin is often measured additionally for more precise assessment.",
+  "metaDescription": "Creatine kinase (CK) elevated? Meaning for muscle and heart damage explained.",
+  "causesElevated": [
+    "Intense physical exertion",
+    "Muscle injury",
+    "Heart attack",
+    "Certain medications (e.g. statins)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Is my elevated CK from muscle or the heart?",
+    "Should CK-MB or troponin also be measured?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Cardiac Markers",
+  "pageTitle": "Creatine Kinase (CK) explained | Medyra"
+}

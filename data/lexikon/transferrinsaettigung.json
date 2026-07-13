@@ -1,0 +1,48 @@
+{
+  "slug": "transferrinsaettigung",
+  "acronym": "TSAT",
+  "fullName": "Transferrinsättigung",
+  "category": "Eisenwerte",
+  "shortAnswer": "Die Transferrinsättigung zeigt, wie viel des Eisentransportproteins Transferrin gerade mit Eisen beladen ist. Niedrige Werte sprechen für einen Eisenmangel, hohe Werte können auf eine Eisenüberladung wie bei der Hämochromatose hindeuten.",
+  "unit": "%",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 16,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 16,
+      "max": 45,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 45,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Eisenüberladung (Hämochromatose)",
+    "Häufige Bluttransfusionen",
+    "Lebererkrankung"
+  ],
+  "causesLow": [
+    "Eisenmangel",
+    "Chronische Entzündung",
+    "Blutverlust"
+  ],
+  "relatedValues": [
+    "eisen",
+    "ferritin",
+    "transferrin",
+    "tibc"
+  ],
+  "doctorQuestions": [
+    "Deutet meine Transferrinsättigung auf einen Eisenmangel oder eine Eisenüberladung hin?",
+    "Sollte eine Hämochromatose ausgeschlossen werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Transferrinsättigung erhöht oder erniedrigt? Bedeutung für Eisenmangel und Eisenüberladung erklärt."
+}

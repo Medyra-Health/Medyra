@@ -1,0 +1,39 @@
+{
+  "slug": "rdw",
+  "acronym": "RDW",
+  "fullName": "Erythrozytenverteilungsbreite",
+  "category": "Blutbild",
+  "shortAnswer": "RDW misst, wie stark die roten Blutkörperchen in ihrer Größe variieren. Ein erhöhter Wert kann auf einen beginnenden Eisen-, Vitamin-B12- oder Folsäuremangel hindeuten, besonders in Kombination mit einem auffälligen MCV. Besprechen Sie einen erhöhten RDW-Wert mit Ihrem Arzt.",
+  "unit": "%",
+  "ranges": {
+    "normal": {
+      "min": 11.5,
+      "max": 14.5,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 14.5,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Eisenmangel",
+    "Vitamin-B12- oder Folsäuremangel",
+    "Gemischte Anämie",
+    "Nach Bluttransfusion"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "mcv",
+    "haemoglobin",
+    "ferritin"
+  ],
+  "doctorQuestions": [
+    "Was bedeutet mein erhöhter RDW-Wert zusammen mit dem MCV?",
+    "Sollte mein Eisen- und Vitaminstatus überprüft werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "RDW erhöht? Bedeutung der Erythrozytenverteilungsbreite, Normwerte und mögliche Ursachen einfach erklärt auf Deutsch."
+}

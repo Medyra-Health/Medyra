@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Albumin is the most important protein in the blood and is produced by the liver. Low values can indicate liver disease, malnutrition, or protein loss through the kidneys. The value is usually assessed together with other liver and kidney values.",
+  "metaDescription": "Albumin too low? Meaning, normal ranges, and possible causes explained simply.",
+  "causesElevated": [
+    "Fluid deficiency (dehydration)"
+  ],
+  "causesLow": [
+    "Liver disease",
+    "Malnutrition",
+    "Kidney disease with protein loss",
+    "Chronic inflammation"
+  ],
+  "doctorQuestions": [
+    "What could explain my low albumin?",
+    "Should my liver or kidney function be investigated further?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated (usually dehydration)"
+  },
+  "categoryLabel": "Liver Values",
+  "pageTitle": "Albumin explained | Medyra"
+}

@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Rheumatoid factor is an antibody that often occurs with rheumatoid arthritis, but can also be positive with other diseases or even in healthy people. A positive value alone is not a diagnosis and must always be assessed together with symptoms and other findings.",
+  "metaDescription": "Rheumatoid factor elevated? Meaning for rheumatoid arthritis explained simply.",
+  "causesElevated": [
+    "Rheumatoid arthritis",
+    "Other autoimmune diseases",
+    "Chronic infections",
+    "Can also be mildly elevated in healthy people"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Does this value confirm rheumatoid arthritis?",
+    "Should Anti-CCP also be measured?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Inflammatory Markers",
+  "pageTitle": "Rheumatoid Factor (RF) explained | Medyra"
+}

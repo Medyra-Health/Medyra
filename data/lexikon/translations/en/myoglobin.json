@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Myoglobin is a protein from heart and skeletal muscle that rises quickly, but nonspecifically, with muscle or heart damage. Due to its low specificity, it's used less often today and mostly replaced or supplemented by troponin.",
+  "metaDescription": "Myoglobin elevated? Meaning for muscle and heart damage explained simply.",
+  "causesElevated": [
+    "Heart attack (early phase)",
+    "Muscle injury",
+    "Intense physical exertion",
+    "Reduced kidney function"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Is troponin also being measured for more precise assessment?",
+    "How urgent is further evaluation?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Cardiac Markers",
+  "pageTitle": "Myoglobin explained | Medyra"
+}

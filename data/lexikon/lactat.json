@@ -1,0 +1,37 @@
+{
+  "slug": "lactat",
+  "acronym": "Lactat",
+  "fullName": "Laktat (Milchsäure)",
+  "category": "Stoffwechsel",
+  "shortAnswer": "Laktat entsteht bei der Energiegewinnung, besonders wenn Muskeln oder Gewebe nicht ausreichend mit Sauerstoff versorgt werden. Leicht erhöhte Werte nach körperlicher Anstrengung sind normal, deutlich erhöhte Werte in Ruhe können auf einen Sauerstoffmangel im Körper hindeuten und sollten zeitnah abgeklärt werden.",
+  "unit": "mmol/l",
+  "ranges": {
+    "normal": {
+      "min": 0.5,
+      "max": 2.2,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 2.2,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Körperliche Anstrengung",
+    "Sauerstoffmangel im Gewebe",
+    "Schwere Infektion (Sepsis)",
+    "Bestimmte Medikamente"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "crp"
+  ],
+  "doctorQuestions": [
+    "Wie dringend muss mein erhöhter Laktatwert abgeklärt werden?",
+    "Welche Ursache liegt bei mir vor?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Laktat (Milchsäure) erhöht? Bedeutung, Normwerte und Ursachen einfach erklärt auf Deutsch."
+}

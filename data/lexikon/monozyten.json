@@ -1,0 +1,38 @@
+{
+  "slug": "monozyten",
+  "acronym": "Mono",
+  "fullName": "Monozyten",
+  "category": "Blutbild",
+  "shortAnswer": "Monozyten sind weiße Blutkörperchen, die Krankheitserreger aufnehmen und beseitigen und Entzündungsprozesse regulieren. Erhöhte Werte treten häufig bei chronischen Entzündungen oder in der Erholungsphase nach einer Infektion auf. Niedrige Werte sind meist ohne Krankheitswert.",
+  "unit": "/nl",
+  "ranges": {
+    "normal": {
+      "min": 0.1,
+      "max": 0.8,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 0.8,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Chronische Entzündung",
+    "Erholungsphase nach Infektion",
+    "Bestimmte Blutkrankheiten",
+    "Autoimmunerkrankungen"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "leukozyten",
+    "crp"
+  ],
+  "doctorQuestions": [
+    "Was könnte meinen erhöhten Monozytenwert erklären?",
+    "Ist eine weitere Abklärung nötig?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Monozyten erhöht? Bedeutung, Normwerte und mögliche Ursachen einfach erklärt auf Deutsch."
+}

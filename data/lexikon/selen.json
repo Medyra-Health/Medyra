@@ -1,0 +1,44 @@
+{
+  "slug": "selen",
+  "acronym": "Se",
+  "fullName": "Selen",
+  "category": "Spurenelemente",
+  "shortAnswer": "Selen ist ein Spurenelement mit antioxidativer Funktion und wichtig für die Schilddrüse und das Immunsystem. Ein Mangel entsteht meist durch einseitige Ernährung oder künstliche Ernährung, eine Überdosierung ist bei üblicher Ernährung selten.",
+  "unit": "µg/l",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 50,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 50,
+      "max": 120,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 120,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Überdosierung durch Nahrungsergänzungsmittel"
+  ],
+  "causesLow": [
+    "Einseitige Ernährung",
+    "Künstliche Ernährung",
+    "Chronische Darmerkrankungen"
+  ],
+  "relatedValues": [
+    "zink",
+    "tsh"
+  ],
+  "doctorQuestions": [
+    "Könnte ein Selenmangel meine Schilddrüsenwerte beeinflussen?",
+    "Sollte ich Selen ergänzen?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Selen zu niedrig oder zu hoch? Bedeutung, Normwerte und Ursachen einfach erklärt auf Deutsch."
+}

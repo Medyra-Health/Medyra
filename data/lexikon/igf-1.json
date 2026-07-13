@@ -1,0 +1,34 @@
+{
+  "slug": "igf-1",
+  "acronym": "IGF-1",
+  "fullName": "Insulin-like Growth Factor 1 (Somatomedin C)",
+  "category": "Hormone",
+  "shortAnswer": "IGF-1 spiegelt die Aktivität des Wachstumshormons wider und wird zur Beurteilung von Wachstumsstörungen bei Kindern sowie bei Verdacht auf eine Über- oder Unterfunktion der Hirnanhangsdrüse bei Erwachsenen genutzt. Der Referenzbereich ist stark altersabhängig.",
+  "unit": "ng/ml",
+  "ranges": {
+    "normal": {
+      "min": 100,
+      "max": 300,
+      "label": "Normal (stark altersabhängig)"
+    }
+  },
+  "causesElevated": [
+    "Überproduktion von Wachstumshormon (Akromegalie)"
+  ],
+  "causesLow": [
+    "Wachstumshormonmangel",
+    "Mangelernährung",
+    "Chronische Erkrankungen"
+  ],
+  "relatedValues": [
+    "acth",
+    "cortisol"
+  ],
+  "doctorQuestions": [
+    "Was bedeutet mein IGF-1-Wert für meine Wachstumshormonfunktion?",
+    "Sind weitere Hormonuntersuchungen sinnvoll?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "IGF-1 erhöht oder erniedrigt? Bedeutung für die Wachstumshormonfunktion erklärt."
+}

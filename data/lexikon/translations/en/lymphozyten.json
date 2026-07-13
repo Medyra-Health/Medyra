@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "Lymphocytes are white blood cells that play a central role in defending against viruses. Elevated values often occur with viral infections, low values can indicate a weakened immune defense. Abnormal values should be assessed by a doctor in the context of your symptoms.",
+  "metaDescription": "Lymphocytes elevated or low? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Viral infection",
+    "Chronic infection",
+    "Certain blood disorders"
+  ],
+  "causesLow": [
+    "Immune deficiency",
+    "Severe stress",
+    "Corticosteroid therapy",
+    "After chemotherapy"
+  ],
+  "doctorQuestions": [
+    "What could explain my low or high lymphocyte count?",
+    "Is my immune defense currently weakened?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Blood Count",
+  "pageTitle": "Lymphocytes explained | Medyra"
+}

@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "D-dimers are produced during the breakdown of blood clots and are an important building block in evaluating a possible thrombosis or pulmonary embolism. A normal value makes an acute thrombosis less likely, but an elevated value alone doesn't prove a thrombosis, since many situations can raise it.",
+  "metaDescription": "D-dimers elevated? Meaning for thrombosis and pulmonary embolism explained simply.",
+  "causesElevated": [
+    "Thrombosis",
+    "Pulmonary embolism",
+    "After surgery",
+    "Pregnancy",
+    "Acute inflammation or infection"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Should a thrombosis or pulmonary embolism be ruled out for me?",
+    "Are further tests like imaging needed?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Coagulation",
+  "pageTitle": "D-Dimers explained | Medyra"
+}

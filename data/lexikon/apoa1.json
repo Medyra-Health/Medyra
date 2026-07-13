@@ -1,0 +1,37 @@
+{
+  "slug": "apoa1",
+  "acronym": "ApoA1",
+  "fullName": "Apolipoprotein A1",
+  "category": "Stoffwechsel",
+  "shortAnswer": "Apolipoprotein A1 ist der Haupteiweißbestandteil des „guten\" HDL-Cholesterins und unterstützt den Rücktransport von Cholesterin zur Leber. Niedrige Werte werden mit einem erhöhten Herz-Kreislauf-Risiko in Verbindung gebracht, höhere Werte gelten allgemein als günstig.",
+  "unit": "mg/dl",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 120,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 120,
+      "max": null,
+      "label": "Normal (höher ist günstiger)"
+    }
+  },
+  "causesElevated": [],
+  "causesLow": [
+    "Erhöhtes Herz-Kreislauf-Risiko",
+    "Niedriges HDL-Cholesterin",
+    "Rauchen"
+  ],
+  "relatedValues": [
+    "hdl",
+    "apob"
+  ],
+  "doctorQuestions": [
+    "Was bedeutet mein ApoA1-Wert für mein Herz-Kreislauf-Risiko?",
+    "Kann ich meinen Wert durch Lebensstiländerungen verbessern?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Apolipoprotein A1 (ApoA1) zu niedrig? Bedeutung für das Herz-Kreislauf-Risiko erklärt."
+}

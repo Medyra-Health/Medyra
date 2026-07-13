@@ -1,0 +1,39 @@
+{
+  "slug": "homa-index",
+  "acronym": "HOMA-IR",
+  "fullName": "HOMA-Index (Insulinresistenz)",
+  "category": "Stoffwechsel",
+  "shortAnswer": "Der HOMA-Index wird aus Nüchternblutzucker und Nüchterninsulin berechnet und schätzt, wie gut der Körper noch auf Insulin anspricht. Ein erhöhter Wert weist auf eine Insulinresistenz hin, die häufig einem Typ-2-Diabetes vorausgeht.",
+  "unit": "",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 2.5,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 2.5,
+      "max": null,
+      "label": "Erhöht (Insulinresistenz möglich)"
+    }
+  },
+  "causesElevated": [
+    "Insulinresistenz",
+    "Metabolisches Syndrom",
+    "Übergewicht",
+    "Polyzystisches Ovarialsyndrom (PCOS)"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "insulin",
+    "blutzucker",
+    "hba1c"
+  ],
+  "doctorQuestions": [
+    "Wie hoch ist mein Diabetesrisiko basierend auf diesem Wert?",
+    "Welche Lebensstiländerungen könnten helfen?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "HOMA-Index erhöht? Bedeutung für Insulinresistenz, Normwerte und Ursachen einfach erklärt."
+}

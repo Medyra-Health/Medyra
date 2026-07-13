@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Zinc is involved in many enzyme reactions, wound healing, and the immune system. A deficiency can show as hair loss, wound healing problems, or increased susceptibility to infection, and occurs with an unbalanced diet or chronic bowel diseases, among other causes.",
+  "metaDescription": "Zinc too low or too high? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Overdose from dietary supplements"
+  ],
+  "causesLow": [
+    "Unbalanced diet",
+    "Chronic bowel diseases",
+    "Increased demand (e.g. pregnancy)"
+  ],
+  "doctorQuestions": [
+    "Could a zinc deficiency explain my symptoms?",
+    "Should I supplement zinc?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Trace Elements",
+  "pageTitle": "Zinc explained | Medyra"
+}

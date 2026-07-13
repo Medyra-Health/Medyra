@@ -1,0 +1,20 @@
+{
+  "slug": "rhesusfaktor",
+  "acronym": "Rhesusfaktor",
+  "fullName": "Rhesusfaktor (Rh)",
+  "category": "Blutgruppe",
+  "shortAnswer": "Der Rhesusfaktor gibt an, ob ein bestimmtes Eiweiß (Rhesus-D) auf den roten Blutkörperchen vorhanden ist (positiv) oder nicht (negativ). Er ist besonders in der Schwangerschaft wichtig, da bei einer Rhesus-negativen Mutter und einem Rhesus-positiven Kind eine vorbeugende Behandlung sinnvoll sein kann.",
+  "unit": "",
+  "causesElevated": [],
+  "causesLow": [],
+  "relatedValues": [
+    "blutgruppe"
+  ],
+  "doctorQuestions": [
+    "Muss wegen meines Rhesusfaktors in der Schwangerschaft etwas beachtet werden?",
+    "Ist eine Anti-D-Prophylaxe für mich empfohlen?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Rhesusfaktor positiv oder negativ? Bedeutung, besonders in der Schwangerschaft, einfach erklärt."
+}

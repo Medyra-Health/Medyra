@@ -1,0 +1,36 @@
+{
+  "slug": "ige",
+  "acronym": "IgE",
+  "fullName": "Immunglobulin E (Gesamt-IgE)",
+  "category": "Immunsystem",
+  "shortAnswer": "Gesamt-IgE ist ein Antikörper, der bei Allergien und manchmal bei Parasitenbefall erhöht ist. Ein erhöhter Wert bestätigt eine allgemeine Neigung zu Allergien, sagt aber nicht, gegen welchen Stoff diese besteht — dafür sind spezifische IgE-Tests notwendig.",
+  "unit": "IU/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 100,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 100,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Allergische Erkrankungen (z. B. Heuschnupfen, Asthma, Neurodermitis)",
+    "Parasitenbefall",
+    "Bestimmte Immunerkrankungen"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "eosinophile"
+  ],
+  "doctorQuestions": [
+    "Sollte ein spezifischer Allergietest gemacht werden?",
+    "Welche Allergien kommen bei mir infrage?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "IgE erhöht? Bedeutung für Allergien und mögliche Ursachen einfach erklärt auf Deutsch."
+}

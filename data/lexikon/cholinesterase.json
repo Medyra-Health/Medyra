@@ -1,0 +1,47 @@
+{
+  "slug": "cholinesterase",
+  "acronym": "ChE",
+  "fullName": "Cholinesterase",
+  "category": "Leberwerte",
+  "shortAnswer": "Cholinesterase wird in der Leber gebildet und zeigt an, wie gut die Leber aktuell Eiweiße produziert. Niedrige Werte können auf eine eingeschränkte Leberfunktion oder eine Vergiftung hindeuten, erhöhte Werte kommen unter anderem bei einer Fettleber oder Diabetes vor.",
+  "unit": "kU/l",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 5.3,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 5.3,
+      "max": 12.9,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 12.9,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Fettleber",
+    "Diabetes mellitus",
+    "Übergewicht"
+  ],
+  "causesLow": [
+    "Fortgeschrittene Lebererkrankung",
+    "Vergiftung (z. B. Pflanzenschutzmittel)",
+    "Mangelernährung"
+  ],
+  "relatedValues": [
+    "got-ast",
+    "gpt-alt",
+    "albumin"
+  ],
+  "doctorQuestions": [
+    "Deutet mein Cholinesterase-Wert auf eine eingeschränkte Leberfunktion hin?",
+    "Sollten weitere Leberwerte kontrolliert werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Cholinesterase zu niedrig oder zu hoch? Bedeutung und Ursachen einfach erklärt auf Deutsch."
+}

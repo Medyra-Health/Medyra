@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "FSH controls egg maturation in women and sperm production in men. In women, the value rises significantly during menopause; in both sexes, an elevated value can indicate reduced gonad function.",
+  "metaDescription": "FSH elevated or low? Meaning for menopause and fertility explained.",
+  "causesElevated": [
+    "Menopause",
+    "Reduced ovarian or testicular function"
+  ],
+  "causesLow": [
+    "Pituitary gland disorder",
+    "Significant weight loss or competitive sports"
+  ],
+  "doctorQuestions": [
+    "Does my FSH value indicate the start of menopause?",
+    "What does this value mean for my fertility?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (cycle-dependent in women)",
+    "elevated": "Elevated (e.g. menopause)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "FSH explained | Medyra"
+}

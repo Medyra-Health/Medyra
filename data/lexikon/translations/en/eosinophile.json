@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Eosinophils are white blood cells that are especially increased in allergies and parasitic infections. An elevated value can indicate asthma, hay fever, skin allergies, or a parasitic infection. Low values are usually unremarkable.",
+  "metaDescription": "Eosinophils elevated? Meaning, normal ranges, and causes like allergies explained simply.",
+  "causesElevated": [
+    "Allergies (e.g. hay fever, asthma)",
+    "Parasitic infection",
+    "Skin conditions like eczema",
+    "Certain drug reactions"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Could an allergy or parasitic infection explain my value?",
+    "Should an allergy test be done?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Blood Count",
+  "pageTitle": "Eosinophils explained | Medyra"
+}

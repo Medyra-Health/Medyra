@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "SHBG binds sex hormones in the blood and affects how much of them is freely available and active. The value is often measured together with testosterone to better estimate the actually active hormone fraction.",
+  "metaDescription": "SHBG elevated or low? Meaning for hormone values explained simply.",
+  "causesElevated": [
+    "Thyroid overactivity",
+    "Pregnancy",
+    "Estrogen therapy"
+  ],
+  "causesLow": [
+    "Overweight",
+    "Insulin resistance",
+    "Underactive thyroid"
+  ],
+  "doctorQuestions": [
+    "How does my SHBG value affect the interpretation of my testosterone?",
+    "Should free testosterone be calculated?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "SHBG explained | Medyra"
+}

@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "IGF-1 reflects growth hormone activity and is used to assess growth disorders in children as well as suspected pituitary over- or underactivity in adults. The reference range is strongly age-dependent.",
+  "metaDescription": "IGF-1 elevated or low? Meaning for growth hormone function explained.",
+  "causesElevated": [
+    "Overproduction of growth hormone (acromegaly)"
+  ],
+  "causesLow": [
+    "Growth hormone deficiency",
+    "Malnutrition",
+    "Chronic diseases"
+  ],
+  "doctorQuestions": [
+    "What does my IGF-1 value mean for my growth hormone function?",
+    "Are further hormone tests useful?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (strongly age-dependent)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "IGF-1 explained | Medyra"
+}

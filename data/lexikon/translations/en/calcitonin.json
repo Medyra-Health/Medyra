@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Calcitonin is produced by special cells of the thyroid and is involved in calcium metabolism. Significantly elevated values are rare and can indicate an increase in these cells or, in rare cases, medullary thyroid cancer, so should be evaluated by a doctor.",
+  "metaDescription": "Calcitonin elevated? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Increase in C-cells (C-cell hyperplasia)",
+    "Medullary thyroid cancer (rare)",
+    "Certain medications"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "What further tests are useful for elevated calcitonin?",
+    "How urgent is a workup?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Thyroid",
+  "pageTitle": "Calcitonin explained | Medyra"
+}

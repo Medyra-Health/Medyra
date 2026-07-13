@@ -1,0 +1,35 @@
+{
+  "slug": "dhea-s",
+  "acronym": "DHEA-S",
+  "fullName": "Dehydroepiandrosteron-Sulfat",
+  "category": "Hormone",
+  "shortAnswer": "DHEA-S wird fast ausschließlich in der Nebenniere gebildet und dient als Vorstufe für Geschlechtshormone. Erhöhte Werte können auf eine vermehrte Hormonproduktion der Nebenniere hindeuten, niedrige Werte nehmen normalerweise mit dem Alter ab.",
+  "unit": "µg/dl",
+  "ranges": {
+    "normal": {
+      "min": 35,
+      "max": 430,
+      "label": "Normal (altersabhängig)"
+    }
+  },
+  "causesElevated": [
+    "Vermehrte Nebennierenaktivität",
+    "Polyzystisches Ovarialsyndrom",
+    "Seltene Nebennierentumoren"
+  ],
+  "causesLow": [
+    "Altersbedingter Rückgang",
+    "Nebenniereninsuffizienz"
+  ],
+  "relatedValues": [
+    "testosteron",
+    "cortisol"
+  ],
+  "doctorQuestions": [
+    "Könnte mein DHEA-S-Wert mit vermehrter Körperbehaarung oder Zyklusstörungen zusammenhängen?",
+    "Ist eine Bildgebung der Nebenniere sinnvoll?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "DHEA-S erhöht oder erniedrigt? Bedeutung für die Nebennierenfunktion einfach erklärt."
+}

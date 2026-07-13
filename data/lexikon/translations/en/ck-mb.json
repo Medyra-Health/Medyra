@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "CK-MB is a subtype of creatine kinase mainly found in heart muscle, and is therefore a more specific indicator of heart damage than total CK. It's usually measured together with troponin when a heart attack is suspected.",
+  "metaDescription": "CK-MB elevated? Meaning for heart muscle damage explained simply.",
+  "causesElevated": [
+    "Heart attack",
+    "Heart muscle inflammation (myocarditis)",
+    "After heart surgery"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Does CK-MB together with my troponin confirm heart damage?",
+    "What is the further treatment plan?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Cardiac Markers",
+  "pageTitle": "CK-MB explained | Medyra"
+}

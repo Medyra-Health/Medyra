@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Progesterone is produced after ovulation and prepares the body for a possible pregnancy. Low values in the second half of the cycle can be related to cycle disorders or an absent ovulation, and are often measured as part of a fertility workup.",
+  "metaDescription": "Progesterone too low? Meaning for cycle and fertility explained simply.",
+  "causesElevated": [
+    "Pregnancy",
+    "Certain cycle phase after ovulation"
+  ],
+  "causesLow": [
+    "Absent ovulation",
+    "Cycle disorders",
+    "Early pregnancy complication"
+  ],
+  "doctorQuestions": [
+    "What does my progesterone value mean for my cycle or fertility?",
+    "Should the value be measured again at a different time?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (cycle-dependent)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "Progesterone explained | Medyra"
+}

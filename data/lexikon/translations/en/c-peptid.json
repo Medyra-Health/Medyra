@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "C-peptide is produced during the body's own insulin production and shows how much insulin the pancreas itself is still producing. Low values suggest insulin deficiency as in type 1 diabetes, elevated values can indicate insulin resistance.",
+  "metaDescription": "C-peptide elevated or low? Meaning for the body's own insulin production explained.",
+  "causesElevated": [
+    "Insulin resistance",
+    "Early type 2 diabetes",
+    "Insulinoma (rare)"
+  ],
+  "causesLow": [
+    "Type 1 diabetes",
+    "Advanced insulin deficiency"
+  ],
+  "doctorQuestions": [
+    "Is my pancreas still producing enough insulin?",
+    "Which type of diabetes could I have?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Metabolism",
+  "pageTitle": "C-Peptide explained | Medyra"
+}

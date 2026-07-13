@@ -1,0 +1,37 @@
+{
+  "slug": "lipoprotein-a",
+  "acronym": "Lp(a)",
+  "fullName": "Lipoprotein(a)",
+  "category": "Stoffwechsel",
+  "shortAnswer": "Lipoprotein(a) ist ein genetisch bestimmter Blutfettwert, der unabhängig von Ernährung und Lebensstil das Risiko für Herz-Kreislauf-Erkrankungen beeinflussen kann. Da der Wert meist einmal im Leben bestimmt wird, ist er besonders bei familiärer Vorbelastung von Interesse.",
+  "unit": "mg/dl",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 30,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 30,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Genetisch bedingt (erblich)",
+    "Kann unabhängig von Lebensstil erhöht sein"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "ldl",
+    "cholesterin",
+    "apob"
+  ],
+  "doctorQuestions": [
+    "Erhöht mein Lp(a)-Wert mein Herz-Kreislauf-Risiko?",
+    "Sollten meine anderen Blutfettwerte strenger eingestellt werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Lipoprotein(a) erhöht? Bedeutung für das Herz-Kreislauf-Risiko einfach erklärt auf Deutsch."
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "komplement-c4",
+  "acronym": "C4",
+  "fullName": "Komplementfaktor C4",
+  "category": "Immunsystem",
+  "shortAnswer": "Komplementfaktor C4 gehört wie C3 zum Komplementsystem der Immunabwehr. Niedrige Werte werden häufig zusammen mit C3 bei Verdacht auf Autoimmunerkrankungen wie Lupus bestimmt, da beide Faktoren bei aktiver Erkrankung oft erniedrigt sind.",
+  "unit": "g/l",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 0.1,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 0.1,
+      "max": 0.4,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 0.4,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Akute Entzündung oder Infektion"
+  ],
+  "causesLow": [
+    "Autoimmunerkrankungen (z. B. systemischer Lupus erythematodes)",
+    "Angeborener Komplementmangel"
+  ],
+  "relatedValues": [
+    "komplement-c3",
+    "ana"
+  ],
+  "doctorQuestions": [
+    "Was bedeutet mein C4-Wert zusammen mit C3 und meinen Beschwerden?",
+    "Sollte ein Rheumatologe hinzugezogen werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Komplementfaktor C4 erhöht oder erniedrigt? Bedeutung für Autoimmunerkrankungen erklärt."
+}

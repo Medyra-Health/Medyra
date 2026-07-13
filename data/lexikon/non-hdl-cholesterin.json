@@ -1,0 +1,39 @@
+{
+  "slug": "non-hdl-cholesterin",
+  "acronym": "Non-HDL",
+  "fullName": "Non-HDL-Cholesterin",
+  "category": "Stoffwechsel",
+  "shortAnswer": "Non-HDL-Cholesterin umfasst alle Cholesterinarten außer dem „guten\" HDL, also vor allem LDL und weitere gefäßschädigende Partikel. Es gilt als guter Gesamtindikator für das Herz-Kreislauf-Risiko, besonders wenn die Triglyzeride erhöht sind.",
+  "unit": "mg/dl",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 130,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 130,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Erhöhtes LDL-Cholesterin",
+    "Erhöhte Triglyzeride",
+    "Ungünstige Ernährung",
+    "Übergewicht"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "ldl",
+    "cholesterin",
+    "triglyzeride"
+  ],
+  "doctorQuestions": [
+    "Wie hoch ist mein Herz-Kreislauf-Risiko basierend auf diesem Wert?",
+    "Sollte meine Cholesterintherapie angepasst werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Non-HDL-Cholesterin erhöht? Bedeutung für das Herz-Kreislauf-Risiko einfach erklärt."
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "myoglobin",
+  "acronym": "Myo",
+  "fullName": "Myoglobin",
+  "category": "Herzwerte",
+  "shortAnswer": "Myoglobin ist ein Eiweiß aus Herz- und Skelettmuskulatur, das bei einer Muskel- oder Herzschädigung schnell, aber unspezifisch ansteigt. Wegen der geringen Spezifität wird es heute seltener genutzt und meist durch Troponin ersetzt oder ergänzt.",
+  "unit": "ng/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 90,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 90,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Herzinfarkt (frühe Phase)",
+    "Muskelverletzung",
+    "Starke körperliche Anstrengung",
+    "Eingeschränkte Nierenfunktion"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "troponin",
+    "ck"
+  ],
+  "doctorQuestions": [
+    "Wird bei mir zusätzlich Troponin zur genaueren Einordnung bestimmt?",
+    "Wie dringend ist die weitere Abklärung?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Myoglobin erhöht? Bedeutung für Muskel- und Herzschädigung einfach erklärt auf Deutsch."
+}

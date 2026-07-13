@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Cortisol is the adrenal gland's most important stress hormone and follows a daily rhythm with the highest values in the morning. Persistently elevated values can indicate chronic stress or adrenal overactivity, low values can indicate underactivity.",
+  "metaDescription": "Cortisol too high or too low? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Chronic stress",
+    "Cushing's syndrome",
+    "Corticosteroid therapy"
+  ],
+  "causesLow": [
+    "Adrenal insufficiency (Addison's disease)",
+    "Pituitary gland disorder",
+    "Sudden discontinuation of corticosteroid therapy"
+  ],
+  "doctorQuestions": [
+    "Does my cortisol value match the time of day the blood was drawn?",
+    "Should ACTH also be measured?"
+  ],
+  "rangeLabels": {
+    "low": "Low (morning)",
+    "normal": "Normal (morning)",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "Cortisol explained | Medyra"
+}

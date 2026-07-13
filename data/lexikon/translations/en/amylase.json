@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Amylase is a digestive enzyme mainly produced in the pancreas and salivary glands. Strongly elevated values typically occur with acute pancreatitis, mildly elevated values can also originate from the salivary glands.",
+  "metaDescription": "Amylase elevated? Meaning for the pancreas explained simply.",
+  "causesElevated": [
+    "Acute pancreatitis",
+    "Salivary gland inflammation",
+    "Gallstones"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Does my elevated amylase indicate pancreatitis?",
+    "Should lipase also be measured?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Pancreatic Values",
+  "pageTitle": "Amylase explained | Medyra"
+}

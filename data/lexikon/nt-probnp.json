@@ -1,0 +1,37 @@
+{
+  "slug": "nt-probnp",
+  "acronym": "NT-proBNP",
+  "fullName": "N-terminales pro-B-Typ natriuretisches Peptid",
+  "category": "Herzwerte",
+  "shortAnswer": "NT-proBNP wird vom Herzen ausgeschüttet, wenn es unter erhöhter Belastung steht, und ist der wichtigste Laborwert zur Abklärung einer Herzschwäche (Herzinsuffizienz). Ein niedriger Wert macht eine Herzschwäche eher unwahrscheinlich, ein erhöhter Wert sollte ärztlich weiter abgeklärt werden.",
+  "unit": "pg/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 125,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 125,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Herzschwäche (Herzinsuffizienz)",
+    "Vorhofflimmern",
+    "Eingeschränkte Nierenfunktion",
+    "Höheres Lebensalter"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "troponin"
+  ],
+  "doctorQuestions": [
+    "Bestätigt dieser Wert eine Herzschwäche?",
+    "Ist eine Herzultraschalluntersuchung (Echokardiografie) sinnvoll?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "NT-proBNP erhöht? Bedeutung für Herzschwäche (Herzinsuffizienz) einfach erklärt."
+}

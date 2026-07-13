@@ -1,0 +1,33 @@
+{
+  "slug": "acth",
+  "acronym": "ACTH",
+  "fullName": "Adrenocorticotropes Hormon",
+  "category": "Hormone",
+  "shortAnswer": "ACTH wird in der Hirnanhangsdrüse gebildet und steuert die Cortisolproduktion der Nebenniere. Der Wert wird immer zusammen mit Cortisol beurteilt, um zwischen einer Erkrankung der Nebenniere und einer Erkrankung der Hirnanhangsdrüse zu unterscheiden.",
+  "unit": "pg/ml",
+  "ranges": {
+    "normal": {
+      "min": 10,
+      "max": 60,
+      "label": "Normal"
+    }
+  },
+  "causesElevated": [
+    "Nebenniereninsuffizienz (Morbus Addison)",
+    "ACTH-produzierender Tumor (selten)"
+  ],
+  "causesLow": [
+    "Erkrankung der Hirnanhangsdrüse",
+    "Cushing-Syndrom durch Nebennierentumor"
+  ],
+  "relatedValues": [
+    "cortisol"
+  ],
+  "doctorQuestions": [
+    "Was zeigt das Verhältnis von ACTH zu meinem Cortisolwert?",
+    "Ist eine weitere Abklärung der Hirnanhangsdrüse nötig?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "ACTH erhöht oder erniedrigt? Bedeutung im Zusammenspiel mit Cortisol einfach erklärt."
+}

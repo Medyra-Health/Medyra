@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Anti-CCP antibodies are a more specific indicator of rheumatoid arthritis than rheumatoid factor and can sometimes be detected even before joint symptoms appear. A positive value should be assessed by a doctor together with symptoms and other findings.",
+  "metaDescription": "Anti-CCP antibodies elevated? Meaning for rheumatoid arthritis explained simply.",
+  "causesElevated": [
+    "Rheumatoid arthritis",
+    "Increased risk of developing rheumatoid arthritis"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "How certain does this value confirm rheumatoid arthritis?",
+    "Should I be referred to a rheumatologist?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Inflammatory Markers",
+  "pageTitle": "Anti-CCP Antibodies explained | Medyra"
+}

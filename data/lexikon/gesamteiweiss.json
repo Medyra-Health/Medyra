@@ -1,0 +1,46 @@
+{
+  "slug": "gesamteiweiss",
+  "acronym": "TP",
+  "fullName": "Gesamteiweiß (Gesamtprotein)",
+  "category": "Leberwerte",
+  "shortAnswer": "Der Gesamteiweißwert misst alle Eiweiße im Blutserum, vor allem Albumin und Immunglobuline. Erhöhte Werte können durch Flüssigkeitsmangel oder chronische Entzündungen entstehen, niedrige Werte durch Mangelernährung, Leber- oder Nierenerkrankungen.",
+  "unit": "g/l",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 64,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 64,
+      "max": 83,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 83,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Flüssigkeitsmangel (Dehydratation)",
+    "Chronische Entzündung",
+    "Bestimmte Bluterkrankungen"
+  ],
+  "causesLow": [
+    "Mangelernährung",
+    "Lebererkrankung",
+    "Nierenerkrankung mit Eiweißverlust"
+  ],
+  "relatedValues": [
+    "albumin",
+    "got-ast"
+  ],
+  "doctorQuestions": [
+    "Was ist die Ursache meines auffälligen Gesamteiweißwertes?",
+    "Ist eine Eiweißelektrophorese sinnvoll?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Gesamteiweiß erhöht oder erniedrigt? Normwerte und Ursachen einfach erklärt auf Deutsch."
+}

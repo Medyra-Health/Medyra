@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "Testosterone is the most important male sex hormone but is also present in smaller amounts in women. Low values in men can show as fatigue, reduced libido, or muscle loss; elevated values in women occur with polycystic ovary syndrome, among other causes.",
+  "metaDescription": "Testosterone too low or too high? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Polycystic ovary syndrome (in women)",
+    "Certain adrenal gland disorders",
+    "Anabolic steroid use"
+  ],
+  "causesLow": [
+    "Age-related testosterone deficiency",
+    "Testicular dysfunction",
+    "Pituitary gland disorders",
+    "Chronic stress"
+  ],
+  "doctorQuestions": [
+    "Does my testosterone value explain symptoms like fatigue?",
+    "Should hormone replacement therapy be considered?"
+  ],
+  "rangeLabels": {
+    "low": "Low (Male)",
+    "normal": "Normal (Male)",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "Testosterone explained | Medyra"
+}

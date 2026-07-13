@@ -1,0 +1,27 @@
+{
+  "shortAnswer": "Neutrophils are the most common type of white blood cell and mainly fight bacterial infections. Elevated values often indicate an acute infection or inflammation, low values can increase infection risk. The value is always considered together with the rest of the blood count.",
+  "metaDescription": "Neutrophils elevated or low? Meaning and causes explained simply.",
+  "causesElevated": [
+    "Bacterial infection",
+    "Acute inflammation",
+    "Severe physical stress",
+    "Corticosteroid therapy"
+  ],
+  "causesLow": [
+    "Viral infection",
+    "Bone marrow disorder",
+    "Chemotherapy",
+    "Certain medications"
+  ],
+  "doctorQuestions": [
+    "Does my neutrophil count indicate a bacterial infection?",
+    "Is my infection risk currently elevated?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Blood Count",
+  "pageTitle": "Neutrophils explained | Medyra"
+}

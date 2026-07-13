@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "ACTH is produced by the pituitary gland and controls the adrenal gland's cortisol production. The value is always assessed together with cortisol to distinguish between an adrenal gland disorder and a pituitary gland disorder.",
+  "metaDescription": "ACTH elevated or low? Meaning together with cortisol explained simply.",
+  "causesElevated": [
+    "Adrenal insufficiency (Addison's disease)",
+    "ACTH-producing tumor (rare)"
+  ],
+  "causesLow": [
+    "Pituitary gland disorder",
+    "Cushing's syndrome from an adrenal tumor"
+  ],
+  "doctorQuestions": [
+    "What does the ratio of ACTH to my cortisol value show?",
+    "Is further evaluation of the pituitary gland needed?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "ACTH explained | Medyra"
+}

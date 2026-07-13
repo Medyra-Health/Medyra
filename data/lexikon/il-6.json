@@ -1,0 +1,38 @@
+{
+  "slug": "il-6",
+  "acronym": "IL-6",
+  "fullName": "Interleukin-6",
+  "category": "Entzündungswerte",
+  "shortAnswer": "Interleukin-6 ist ein Botenstoff des Immunsystems, der bei akuten Entzündungen und Infektionen früh ansteigt, oft noch bevor CRP messbar erhöht ist. Er wird vor allem in Kliniken zur frühen Einschätzung schwerer Entzündungsreaktionen genutzt.",
+  "unit": "pg/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 7,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 7,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Akute Infektion",
+    "Schwere Entzündungsreaktion",
+    "Autoimmunerkrankungen",
+    "Nach Operationen"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "crp",
+    "procalcitonin"
+  ],
+  "doctorQuestions": [
+    "Warum wurde zusätzlich zu CRP auch IL-6 bestimmt?",
+    "Wie schwer ist meine Entzündungsreaktion einzuschätzen?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Interleukin-6 (IL-6) erhöht? Bedeutung als früher Entzündungsmarker einfach erklärt."
+}

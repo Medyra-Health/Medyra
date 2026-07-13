@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Cholinesterase is produced by the liver and shows how well the liver is currently producing proteins. Low values can indicate reduced liver function or poisoning, elevated values occur with fatty liver or diabetes among other causes.",
+  "metaDescription": "Cholinesterase too low or too high? Meaning and causes explained simply.",
+  "causesElevated": [
+    "Fatty liver",
+    "Diabetes mellitus",
+    "Overweight"
+  ],
+  "causesLow": [
+    "Advanced liver disease",
+    "Poisoning (e.g. pesticides)",
+    "Malnutrition"
+  ],
+  "doctorQuestions": [
+    "Does my cholinesterase value indicate reduced liver function?",
+    "Should other liver values be checked?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Liver Values",
+  "pageTitle": "Cholinesterase explained | Medyra"
+}

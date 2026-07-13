@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "The HOMA index is calculated from fasting blood sugar and fasting insulin and estimates how well the body still responds to insulin. An elevated value indicates insulin resistance, which often precedes type 2 diabetes.",
+  "metaDescription": "HOMA index elevated? Meaning for insulin resistance, normal ranges, and causes explained.",
+  "causesElevated": [
+    "Insulin resistance",
+    "Metabolic syndrome",
+    "Overweight",
+    "Polycystic ovary syndrome (PCOS)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "What is my diabetes risk based on this value?",
+    "What lifestyle changes could help?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated (insulin resistance possible)"
+  },
+  "categoryLabel": "Metabolism",
+  "pageTitle": "HOMA Index explained | Medyra"
+}

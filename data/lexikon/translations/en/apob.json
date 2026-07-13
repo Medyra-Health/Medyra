@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Apolipoprotein B is a component of the \"bad\" cholesterol particles (including LDL) and is considered a precise marker of cardiovascular risk, as it reflects the total number of these particles. Elevated values are associated with increased risk of vascular deposits.",
+  "metaDescription": "Apolipoprotein B (ApoB) elevated? Meaning for cardiovascular risk explained.",
+  "causesElevated": [
+    "Elevated LDL cholesterol",
+    "Increased cardiovascular risk",
+    "Unfavorable diet",
+    "Metabolic disorders"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "How important is ApoB compared to my LDL value?",
+    "Should my cholesterol therapy be adjusted?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Metabolism",
+  "pageTitle": "Apolipoprotein B (ApoB) explained | Medyra"
+}

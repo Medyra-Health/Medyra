@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Non-HDL cholesterol includes all cholesterol types except the \"good\" HDL, so mainly LDL and other vessel-damaging particles. It's considered a good overall indicator of cardiovascular risk, especially when triglycerides are elevated.",
+  "metaDescription": "Non-HDL cholesterol elevated? Meaning for cardiovascular risk explained simply.",
+  "causesElevated": [
+    "Elevated LDL cholesterol",
+    "Elevated triglycerides",
+    "Unfavorable diet",
+    "Overweight"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "What is my cardiovascular risk based on this value?",
+    "Should my cholesterol therapy be adjusted?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Metabolism",
+  "pageTitle": "Non-HDL Cholesterol explained | Medyra"
+}

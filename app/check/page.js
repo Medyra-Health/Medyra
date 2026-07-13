@@ -9,7 +9,7 @@ import { CONTENT } from './content'
 export const metadata = {
   title: 'Laborwert-Checker: Blutwerte sofort einordnen | Medyra',
   description:
-    'Ist Ihr Laborwert normal, erhöht oder zu niedrig? Kostenloser Laborwert-Checker: TSH, HbA1c, Ferritin, LDL, CRP und 40+ weitere Blutwerte sofort einordnen. Ohne Anmeldung.',
+    'Ist Ihr Laborwert normal, erhöht oder zu niedrig? Kostenloser Laborwert-Checker: TSH, HbA1c, Ferritin, LDL, CRP und 120+ weitere Blutwerte sofort einordnen. Ohne Anmeldung.',
   alternates: { canonical: 'https://medyra.de/check' },
   openGraph: {
     title: 'Laborwert-Checker: Blutwerte sofort einordnen',
@@ -32,6 +32,14 @@ const CATEGORY_COLORS = {
   'Vitamine': 'text-yellow-700 bg-yellow-50 border-yellow-200',
   'Gerinnung': 'text-indigo-700 bg-indigo-50 border-indigo-200',
   'Urinwerte': 'text-emerald-700 bg-emerald-50 border-emerald-200',
+  'Spurenelemente': 'text-lime-700 bg-lime-50 border-lime-200',
+  'Hormone': 'text-fuchsia-700 bg-fuchsia-50 border-fuchsia-200',
+  'Tumormarker': 'text-purple-700 bg-purple-50 border-purple-200',
+  'Herzwerte': 'text-pink-700 bg-pink-50 border-pink-200',
+  'Immunsystem': 'text-cyan-700 bg-cyan-50 border-cyan-200',
+  'Infektionswerte': 'text-red-800 bg-red-50 border-red-200',
+  'Pankreaswerte': 'text-orange-800 bg-orange-50 border-orange-200',
+  'Blutgruppe': 'text-slate-700 bg-slate-50 border-slate-200',
 }
 
 export default async function CheckPage() {

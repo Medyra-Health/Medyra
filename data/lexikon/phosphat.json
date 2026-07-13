@@ -1,0 +1,48 @@
+{
+  "slug": "phosphat",
+  "acronym": "P",
+  "fullName": "Phosphat (anorganisch)",
+  "category": "Elektrolyte",
+  "shortAnswer": "Phosphat ist wichtig für Knochen, Zellenergie und den Säure-Basen-Haushalt und wird eng mit Kalzium und Vitamin D reguliert. Erhöhte Werte kommen häufig bei eingeschränkter Nierenfunktion vor, niedrige Werte bei Vitamin-D-Mangel oder Mangelernährung.",
+  "unit": "mmol/l",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 0.84,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 0.84,
+      "max": 1.45,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 1.45,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Eingeschränkte Nierenfunktion",
+    "Überschuss an Vitamin D",
+    "Schilddrüsenunterfunktion der Nebenschilddrüse"
+  ],
+  "causesLow": [
+    "Vitamin-D-Mangel",
+    "Überfunktion der Nebenschilddrüse",
+    "Mangelernährung",
+    "Alkoholismus"
+  ],
+  "relatedValues": [
+    "calcium",
+    "vitamin-d",
+    "kreatinin"
+  ],
+  "doctorQuestions": [
+    "Hängt mein Phosphatwert mit meiner Nierenfunktion zusammen?",
+    "Sollte mein Vitamin-D- und Kalziumspiegel ebenfalls geprüft werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Phosphat erhöht oder erniedrigt? Bedeutung, Normwerte und Ursachen einfach erklärt auf Deutsch."
+}

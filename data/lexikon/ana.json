@@ -1,0 +1,26 @@
+{
+  "slug": "ana",
+  "acronym": "ANA",
+  "fullName": "Antinukleäre Antikörper",
+  "category": "Immunsystem",
+  "shortAnswer": "Antinukleäre Antikörper richten sich gegen Bestandteile des Zellkerns und sind ein wichtiger Suchtest bei Verdacht auf Autoimmunerkrankungen wie Lupus. Ein positiver Wert allein ist jedoch keine Diagnose, da ANA auch bei vielen gesunden Menschen und anderen Erkrankungen nachweisbar sein können.",
+  "unit": "",
+  "causesElevated": [
+    "Systemischer Lupus erythematodes",
+    "Andere Autoimmunerkrankungen (z. B. Sjögren-Syndrom)",
+    "Kann auch bei Gesunden in niedrigem Titer vorkommen"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "komplement-c3",
+    "komplement-c4",
+    "rheumafaktor"
+  ],
+  "doctorQuestions": [
+    "Wie hoch ist mein ANA-Titer und welches Muster wurde gefunden?",
+    "Sind weitere spezifische Antikörpertests notwendig?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "ANA (antinukleäre Antikörper) positiv? Bedeutung für Autoimmunerkrankungen einfach erklärt."
+}

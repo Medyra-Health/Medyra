@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "IgM is the first antibody class formed with a new infection, and therefore usually indicates an acute or recently occurred infection. The value is often assessed together with IgG to distinguish acute from past infections.",
+  "metaDescription": "IgM elevated or low? Meaning for acute infections explained simply.",
+  "causesElevated": [
+    "Acute infection",
+    "Certain autoimmune diseases",
+    "Certain blood disorders (e.g. Waldenström's macroglobulinemia)"
+  ],
+  "causesLow": [
+    "Congenital or acquired immune deficiency"
+  ],
+  "doctorQuestions": [
+    "Does my IgM value indicate an acute infection?",
+    "Should IgG also be measured?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Immune System",
+  "pageTitle": "IgM explained | Medyra"
+}

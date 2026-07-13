@@ -1,0 +1,44 @@
+{
+  "slug": "mpv",
+  "acronym": "MPV",
+  "fullName": "Mittleres Thrombozytenvolumen",
+  "category": "Blutbild",
+  "shortAnswer": "MPV gibt die durchschnittliche Größe der Blutplättchen an. Größere Thrombozyten werden oft neu gebildet und deuten auf einen gesteigerten Plättchenumsatz hin, kleinere auf eine verminderte Bildung im Knochenmark. Der Wert wird meist gemeinsam mit den Thrombozyten selbst beurteilt.",
+  "unit": "fl",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 7,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 7,
+      "max": 11,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 11,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Gesteigerte Thrombozytenneubildung",
+    "Immunthrombozytopenie (ITP)",
+    "Nach Blutverlust"
+  ],
+  "causesLow": [
+    "Knochenmarkserkrankungen",
+    "Verminderte Thrombozytenbildung"
+  ],
+  "relatedValues": [
+    "thrombozyten"
+  ],
+  "doctorQuestions": [
+    "Passt mein MPV-Wert zu meiner Thrombozytenzahl?",
+    "Ist eine Knochenmarksuntersuchung nötig?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "MPV zu hoch oder zu niedrig? Was das mittlere Thrombozytenvolumen bedeutet, einfach erklärt auf Deutsch."
+}

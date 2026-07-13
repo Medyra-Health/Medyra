@@ -1,0 +1,38 @@
+{
+  "slug": "eosinophile",
+  "acronym": "Eos",
+  "fullName": "Eosinophile Granulozyten",
+  "category": "Blutbild",
+  "shortAnswer": "Eosinophile Granulozyten sind weiße Blutkörperchen, die vor allem bei Allergien und Parasitenbefall vermehrt gebildet werden. Ein erhöhter Wert kann auf Asthma, Heuschnupfen, Hautallergien oder eine Wurmerkrankung hindeuten. Niedrige Werte sind meist unauffällig.",
+  "unit": "/nl",
+  "ranges": {
+    "normal": {
+      "min": 0.02,
+      "max": 0.5,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 0.5,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Allergien (z. B. Heuschnupfen, Asthma)",
+    "Parasitenbefall",
+    "Hauterkrankungen wie Neurodermitis",
+    "Bestimmte Medikamentenreaktionen"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "leukozyten",
+    "ige"
+  ],
+  "doctorQuestions": [
+    "Könnte eine Allergie oder ein Parasitenbefall meinen Wert erklären?",
+    "Sollte ein Allergietest gemacht werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Eosinophile Granulozyten erhöht? Bedeutung, Normwerte und Ursachen wie Allergien einfach erklärt."
+}

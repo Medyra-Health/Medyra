@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Complement factor C3 is part of a system that directly fights pathogens and supports inflammatory reactions. Low values can indicate increased consumption with autoimmune diseases like lupus, elevated values occur with acute inflammation.",
+  "metaDescription": "Complement factor C3 elevated or low? Meaning for autoimmune diseases explained.",
+  "causesElevated": [
+    "Acute inflammation or infection"
+  ],
+  "causesLow": [
+    "Autoimmune diseases (e.g. systemic lupus erythematosus)",
+    "Congenital complement deficiency",
+    "Chronic liver disease"
+  ],
+  "doctorQuestions": [
+    "Does my low C3 value indicate an autoimmune disease?",
+    "Should C4 and ANA also be measured?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Immune System",
+  "pageTitle": "Complement C3 explained | Medyra"
+}

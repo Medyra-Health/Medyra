@@ -1,0 +1,48 @@
+{
+  "slug": "neutrophile",
+  "acronym": "Neutro",
+  "fullName": "Neutrophile Granulozyten",
+  "category": "Blutbild",
+  "shortAnswer": "Neutrophile Granulozyten sind die häufigste Art weißer Blutkörperchen und bekämpfen vor allem bakterielle Infektionen. Erhöhte Werte deuten oft auf eine akute Infektion oder Entzündung hin, niedrige Werte können das Infektionsrisiko erhöhen. Der Wert wird immer im Zusammenhang mit den übrigen Blutbildwerten betrachtet.",
+  "unit": "/nl",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 1.8,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 1.8,
+      "max": 7.7,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 7.7,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Bakterielle Infektion",
+    "Akute Entzündung",
+    "Starker körperlicher Stress",
+    "Kortisontherapie"
+  ],
+  "causesLow": [
+    "Virusinfektion",
+    "Knochenmarkserkrankung",
+    "Chemotherapie",
+    "Bestimmte Medikamente"
+  ],
+  "relatedValues": [
+    "leukozyten",
+    "crp"
+  ],
+  "doctorQuestions": [
+    "Deutet mein Neutrophilenwert auf eine bakterielle Infektion hin?",
+    "Ist mein Infektionsrisiko aktuell erhöht?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Neutrophile Granulozyten erhöht oder erniedrigt? Bedeutung und Ursachen einfach erklärt auf Deutsch."
+}

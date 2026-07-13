@@ -1,0 +1,44 @@
+{
+  "slug": "vitamin-a",
+  "acronym": "Vit. A",
+  "fullName": "Vitamin A (Retinol)",
+  "category": "Vitamine",
+  "shortAnswer": "Vitamin A ist wichtig für Sehvermögen, Haut und Immunsystem. Ein Mangel entsteht meist durch Fettresorptionsstörungen oder Mangelernährung und kann sich unter anderem durch Nachtblindheit oder trockene Haut äußern. Zu hohe Werte durch Nahrungsergänzung können ebenfalls schädlich sein.",
+  "unit": "µg/l",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 300,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 300,
+      "max": 800,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 800,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Überdosierung durch Nahrungsergänzungsmittel"
+  ],
+  "causesLow": [
+    "Mangelernährung",
+    "Fettresorptionsstörung (z. B. bei Zöliakie)",
+    "Lebererkrankung"
+  ],
+  "relatedValues": [
+    "vitamin-e",
+    "vitamin-d"
+  ],
+  "doctorQuestions": [
+    "Erklärt mein Vitamin-A-Wert meine Beschwerden?",
+    "Sollte ich Vitamin A ergänzen oder reduzieren?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Vitamin A erhöht oder erniedrigt? Bedeutung, Normwerte und Ursachen einfach erklärt."
+}

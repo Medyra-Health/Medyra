@@ -1,0 +1,23 @@
+{
+  "slug": "beta-hcg",
+  "acronym": "β-hCG",
+  "fullName": "Beta-Humanes Choriongonadotropin",
+  "category": "Tumormarker",
+  "shortAnswer": "Beta-hCG ist vor allem als Schwangerschaftshormon bekannt und steigt in den ersten Schwangerschaftswochen stark an. Außerhalb einer Schwangerschaft wird es als Tumormarker bei bestimmten Keimzelltumoren genutzt. Die Interpretation hängt stark vom jeweiligen Kontext ab.",
+  "unit": "IU/l",
+  "causesElevated": [
+    "Schwangerschaft",
+    "Keimzelltumoren (selten, außerhalb einer Schwangerschaft)"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "afp"
+  ],
+  "doctorQuestions": [
+    "In welchem Zusammenhang wurde bei mir Beta-hCG bestimmt?",
+    "Welche weiteren Schritte sind sinnvoll?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Beta-hCG erhöht? Bedeutung für Schwangerschaft und als Tumormarker einfach erklärt."
+}

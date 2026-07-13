@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Anti-Tg antibodies target the thyroid's storage protein and are often measured together with Anti-TPO when an autoimmune thyroid disease is suspected. They're also used after thyroid surgery for follow-up monitoring.",
+  "metaDescription": "Thyroglobulin antibodies (Anti-Tg) elevated? Meaning for thyroid disease explained.",
+  "causesElevated": [
+    "Hashimoto's thyroiditis",
+    "Graves' disease",
+    "Autoimmune thyroiditis"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "What does this value mean for my thyroid diagnosis?",
+    "Are further antibody tests useful?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Thyroid",
+  "pageTitle": "Thyroglobulin Antibodies (Anti-Tg) explained | Medyra"
+}

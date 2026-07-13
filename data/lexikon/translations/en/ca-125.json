@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "CA 125 is mainly measured in connection with the ovaries, but also rises with many benign conditions like endometriosis, menstruation, or ovarian cysts. An elevated value alone is not a cancer diagnosis and is always assessed together with imaging and symptoms.",
+  "metaDescription": "CA 125 elevated? Possible causes and next steps explained simply.",
+  "causesElevated": [
+    "Endometriosis",
+    "Ovarian cysts",
+    "Menstruation",
+    "Pelvic inflammation",
+    "Ovarian cancer (one of several possible causes)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Which benign causes apply to me?",
+    "Is a gynecological ultrasound useful?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Tumor Markers",
+  "pageTitle": "CA 125 explained | Medyra"
+}

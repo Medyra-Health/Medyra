@@ -1,0 +1,39 @@
+{
+  "slug": "apob",
+  "acronym": "ApoB",
+  "fullName": "Apolipoprotein B",
+  "category": "Stoffwechsel",
+  "shortAnswer": "Apolipoprotein B ist Bestandteil der „schlechten\" Cholesterinpartikel (u. a. LDL) und gilt als präziser Marker für das Herz-Kreislauf-Risiko, da er die Gesamtzahl dieser Partikel widerspiegelt. Erhöhte Werte werden mit einem erhöhten Risiko für Gefäßablagerungen in Verbindung gebracht.",
+  "unit": "mg/dl",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 100,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 100,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Erhöhtes LDL-Cholesterin",
+    "Erhöhtes Herz-Kreislauf-Risiko",
+    "Ungünstige Ernährung",
+    "Stoffwechselerkrankungen"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "ldl",
+    "cholesterin",
+    "lipoprotein-a"
+  ],
+  "doctorQuestions": [
+    "Wie wichtig ist ApoB im Vergleich zu meinem LDL-Wert?",
+    "Sollte meine Cholesterintherapie angepasst werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Apolipoprotein B (ApoB) erhöht? Bedeutung für das Herz-Kreislauf-Risiko einfach erklärt."
+}

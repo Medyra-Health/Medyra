@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Cystatin C is a sensitive marker of kidney function that is independent of muscle mass and diet. It is often measured in addition to creatinine, especially when creatinine might be skewed by muscle mass or age. Elevated values indicate reduced kidney function.",
+  "metaDescription": "Cystatin C elevated? Meaning for kidney function, normal ranges, and causes explained.",
+  "causesElevated": [
+    "Reduced kidney function",
+    "Chronic kidney disease"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Why was Cystatin C measured in addition to creatinine?",
+    "How is my overall kidney function?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Kidney Values",
+  "pageTitle": "Cystatin C explained | Medyra"
+}

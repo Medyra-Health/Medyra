@@ -1,0 +1,38 @@
+{
+  "slug": "ammoniak",
+  "acronym": "NH3",
+  "fullName": "Ammoniak",
+  "category": "Leberwerte",
+  "shortAnswer": "Ammoniak entsteht beim Eiweißabbau und wird normalerweise von der Leber unschädlich gemacht. Erhöhte Werte können auf eine eingeschränkte Leberfunktion hindeuten und in ausgeprägten Fällen die Gehirnfunktion beeinträchtigen. Deutlich erhöhte Werte sollten zeitnah ärztlich abgeklärt werden.",
+  "unit": "µmol/l",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 50,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 50,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Fortgeschrittene Lebererkrankung (Leberzirrhose)",
+    "Leberversagen",
+    "Bestimmte Stoffwechselerkrankungen"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "got-ast",
+    "gpt-alt",
+    "albumin"
+  ],
+  "doctorQuestions": [
+    "Wie dringend muss mein erhöhter Ammoniakwert behandelt werden?",
+    "Welche Ursache liegt bei mir zugrunde?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Ammoniak (NH3) erhöht? Bedeutung, Normwerte und Ursachen einfach erklärt auf Deutsch."
+}

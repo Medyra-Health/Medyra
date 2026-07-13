@@ -1,0 +1,25 @@
+{
+  "slug": "hbs-antigen",
+  "acronym": "HBsAg",
+  "fullName": "Hepatitis-B-Oberflächenantigen",
+  "category": "Infektionswerte",
+  "shortAnswer": "HBsAg ist ein Bestandteil der Virushülle des Hepatitis-B-Virus und der wichtigste Marker für eine akute oder chronische Hepatitis-B-Infektion. Ein positives Ergebnis bedeutet, dass das Virus im Körper aktiv nachweisbar ist, und sollte ärztlich weiter abgeklärt werden.",
+  "unit": "",
+  "causesElevated": [
+    "Akute Hepatitis-B-Infektion",
+    "Chronische Hepatitis-B-Infektion"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "anti-hbs",
+    "got-ast",
+    "gpt-alt"
+  ],
+  "doctorQuestions": [
+    "Handelt es sich um eine akute oder chronische Infektion?",
+    "Ist eine Behandlung oder weitere Kontrolle notwendig?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "HBsAg positiv? Bedeutung für eine Hepatitis-B-Infektion einfach erklärt auf Deutsch."
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "ck-mb",
+  "acronym": "CK-MB",
+  "fullName": "Kreatinkinase-MB",
+  "category": "Herzwerte",
+  "shortAnswer": "CK-MB ist eine Unterform der Kreatinkinase, die vor allem im Herzmuskel vorkommt und daher spezifischer auf eine Herzschädigung hinweist als die Gesamt-CK. Sie wird meist zusammen mit Troponin bei Verdacht auf einen Herzinfarkt bestimmt.",
+  "unit": "U/l",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 25,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 25,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Herzinfarkt",
+    "Herzmuskelentzündung (Myokarditis)",
+    "Nach Herzoperationen"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "ck",
+    "troponin"
+  ],
+  "doctorQuestions": [
+    "Bestätigt CK-MB zusammen mit meinem Troponinwert eine Herzschädigung?",
+    "Wie ist der weitere Behandlungsplan?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "CK-MB erhöht? Bedeutung für eine Herzmuskelschädigung einfach erklärt auf Deutsch."
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "spezifisches-gewicht-urin",
+  "acronym": "SG (Urin)",
+  "fullName": "Spezifisches Gewicht (Urin)",
+  "category": "Urinwerte",
+  "shortAnswer": "Das spezifische Gewicht zeigt an, wie stark der Urin konzentriert ist, und gibt Hinweise auf den Flüssigkeitshaushalt und die Konzentrationsfähigkeit der Nieren. Niedrige Werte können auf viel Flüssigkeitszufuhr oder eine eingeschränkte Nierenfunktion hindeuten, hohe Werte auf Flüssigkeitsmangel.",
+  "unit": "",
+  "ranges": {
+    "normal": {
+      "min": 1.005,
+      "max": 1.03,
+      "label": "Normal"
+    }
+  },
+  "causesElevated": [
+    "Flüssigkeitsmangel (Dehydratation)",
+    "Konzentrierter Morgenurin"
+  ],
+  "causesLow": [
+    "Hohe Flüssigkeitszufuhr",
+    "Eingeschränkte Konzentrationsfähigkeit der Nieren",
+    "Diabetes insipidus (selten)"
+  ],
+  "relatedValues": [
+    "urin-ph",
+    "kreatinin"
+  ],
+  "doctorQuestions": [
+    "Spiegelt dieser Wert meinen Flüssigkeitshaushalt oder eine Nierenerkrankung wider?",
+    "Sollte meine Trinkmenge angepasst werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Spezifisches Gewicht im Urin erhöht oder erniedrigt? Bedeutung einfach erklärt auf Deutsch."
+}

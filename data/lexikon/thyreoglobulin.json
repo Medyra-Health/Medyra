@@ -1,0 +1,32 @@
+{
+  "slug": "thyreoglobulin",
+  "acronym": "Tg",
+  "fullName": "Thyreoglobulin",
+  "category": "Schilddrüse",
+  "shortAnswer": "Thyreoglobulin ist ein Speicherprotein, das ausschließlich in der Schilddrüse gebildet wird. Der Wert wird vor allem nach operativer Entfernung der Schilddrüse bei Schilddrüsenkrebs zur Verlaufskontrolle genutzt, da ansteigende Werte auf ein Wiederauftreten hindeuten können.",
+  "unit": "ng/ml",
+  "ranges": {
+    "normal": {
+      "min": 1.4,
+      "max": 78,
+      "label": "Normal (bei vorhandener Schilddrüse)"
+    }
+  },
+  "causesElevated": [
+    "Aktives Schilddrüsengewebe",
+    "Nach Schilddrüsen-OP: möglicher Hinweis auf Rezidiv",
+    "Schilddrüsenentzündung"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "anti-tg",
+    "tsh"
+  ],
+  "doctorQuestions": [
+    "Was bedeutet dieser Wert für meine Nachsorge nach der Schilddrüsen-OP?",
+    "Sind meine Anti-Tg-Antikörper dabei zu berücksichtigen?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Thyreoglobulin erhöht? Bedeutung für die Schilddrüsen-Nachsorge einfach erklärt auf Deutsch."
+}

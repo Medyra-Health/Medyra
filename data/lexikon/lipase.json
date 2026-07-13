@@ -1,0 +1,37 @@
+{
+  "slug": "lipase",
+  "acronym": "Lipase",
+  "fullName": "Lipase",
+  "category": "Pankreaswerte",
+  "shortAnswer": "Lipase ist ein Verdauungsenzym der Bauchspeicheldrüse und gilt als spezifischerer Marker für eine Bauchspeicheldrüsenentzündung als Amylase. Deutlich erhöhte Werte, meist zusammen mit starken Bauchschmerzen, sollten zeitnah ärztlich abgeklärt werden.",
+  "unit": "U/l",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 60,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 60,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Akute Bauchspeicheldrüsenentzündung (Pankreatitis)",
+    "Gallensteine",
+    "Eingeschränkte Nierenfunktion"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "amylase",
+    "ca-19-9"
+  ],
+  "doctorQuestions": [
+    "Wie dringend muss meine erhöhte Lipase abgeklärt werden?",
+    "Ist eine Bildgebung der Bauchspeicheldrüse notwendig?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Lipase erhöht? Bedeutung für eine Bauchspeicheldrüsenentzündung einfach erklärt."
+}

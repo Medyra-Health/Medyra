@@ -1,0 +1,36 @@
+{
+  "slug": "cystatin-c",
+  "acronym": "Cystatin C",
+  "fullName": "Cystatin C",
+  "category": "Nierenwerte",
+  "shortAnswer": "Cystatin C ist ein empfindlicher Marker für die Nierenfunktion, der unabhängig von Muskelmasse und Ernährung ist. Er wird oft zusätzlich zum Kreatinin bestimmt, insbesondere wenn dieses durch Muskelmasse oder Alter verfälscht sein könnte. Erhöhte Werte deuten auf eine eingeschränkte Nierenfunktion hin.",
+  "unit": "mg/l",
+  "ranges": {
+    "normal": {
+      "min": 0.5,
+      "max": 0.96,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 0.96,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Eingeschränkte Nierenfunktion",
+    "Chronische Nierenerkrankung"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "kreatinin",
+    "gfr"
+  ],
+  "doctorQuestions": [
+    "Warum wurde zusätzlich zum Kreatinin auch Cystatin C bestimmt?",
+    "Wie steht es um meine Nierenfunktion insgesamt?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Cystatin C erhöht? Bedeutung für die Nierenfunktion, Normwerte und Ursachen einfach erklärt."
+}

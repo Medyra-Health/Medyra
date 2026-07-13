@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Direct bilirubin is the form of bilirubin already processed by the liver. An elevated value usually indicates bile congestion or a disease of the liver or bile ducts, unlike indirect bilirubin, which tends to rise with increased cell breakdown.",
+  "metaDescription": "Direct bilirubin elevated? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Bile congestion (e.g. from gallstones)",
+    "Liver disease",
+    "Bile duct inflammation"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Does my value indicate bile congestion?",
+    "Is an ultrasound of the bile ducts useful?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Liver Values",
+  "pageTitle": "Direct Bilirubin explained | Medyra"
+}

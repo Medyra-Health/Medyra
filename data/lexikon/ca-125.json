@@ -1,0 +1,36 @@
+{
+  "slug": "ca-125",
+  "acronym": "CA 125",
+  "fullName": "Cancer Antigen 125",
+  "category": "Tumormarker",
+  "shortAnswer": "CA 125 wird vor allem im Zusammenhang mit den Eierstöcken bestimmt, steigt aber auch bei vielen gutartigen Erkrankungen wie Endometriose, Menstruation oder Eierstockzysten an. Ein erhöhter Wert allein ist keine Krebsdiagnose und wird immer zusammen mit Bildgebung und Beschwerden beurteilt.",
+  "unit": "U/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 35,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 35,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Endometriose",
+    "Eierstockzysten",
+    "Menstruation",
+    "Unterleibsentzündungen",
+    "Eierstockkrebs (eine von mehreren möglichen Ursachen)"
+  ],
+  "causesLow": [],
+  "relatedValues": [],
+  "doctorQuestions": [
+    "Welche gutartigen Ursachen kommen bei mir infrage?",
+    "Ist eine gynäkologische Ultraschalluntersuchung sinnvoll?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "CA 125 erhöht? Mögliche Ursachen und nächste Schritte einfach erklärt auf Deutsch."
+}

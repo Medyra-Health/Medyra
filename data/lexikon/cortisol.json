@@ -1,0 +1,45 @@
+{
+  "slug": "cortisol",
+  "acronym": "Cortisol",
+  "fullName": "Cortisol",
+  "category": "Hormone",
+  "shortAnswer": "Cortisol ist das wichtigste Stresshormon der Nebenniere und folgt einem Tagesrhythmus mit den höchsten Werten am Morgen. Dauerhaft erhöhte Werte können auf chronischen Stress oder eine Überfunktion der Nebenniere hindeuten, niedrige Werte auf eine Unterfunktion.",
+  "unit": "µg/dl",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 5,
+      "label": "Niedrig (morgens)"
+    },
+    "normal": {
+      "min": 5,
+      "max": 25,
+      "label": "Normal (morgens)"
+    },
+    "elevated": {
+      "min": 25,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Chronischer Stress",
+    "Cushing-Syndrom",
+    "Kortisontherapie"
+  ],
+  "causesLow": [
+    "Nebenniereninsuffizienz (Morbus Addison)",
+    "Erkrankung der Hirnanhangsdrüse",
+    "Plötzliches Absetzen einer Kortisontherapie"
+  ],
+  "relatedValues": [
+    "acth"
+  ],
+  "doctorQuestions": [
+    "Passt mein Cortisolwert zur Tageszeit der Blutabnahme?",
+    "Sollte ACTH ebenfalls bestimmt werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Cortisol zu hoch oder zu niedrig? Bedeutung, Normwerte und Ursachen einfach erklärt."
+}

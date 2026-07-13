@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Insulin is the hormone that moves blood sugar into cells. Elevated fasting insulin values can indicate early insulin resistance, often before blood sugar itself is elevated. Low values occur with advanced insulin deficiency, as in type 1 diabetes.",
+  "metaDescription": "Insulin elevated or low? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Insulin resistance",
+    "Polycystic ovary syndrome (PCOS)",
+    "Early type 2 diabetes",
+    "Overweight"
+  ],
+  "causesLow": [
+    "Type 1 diabetes",
+    "Advanced type 2 diabetes"
+  ],
+  "doctorQuestions": [
+    "Does my insulin value indicate insulin resistance?",
+    "Should the HOMA index be calculated?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Metabolism",
+  "pageTitle": "Insulin (Fasting) explained | Medyra"
+}

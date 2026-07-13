@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Copper is involved in blood formation, connective tissue, and the nervous system. A deficiency is rare and mainly occurs after stomach surgery; elevated values can result from hormonal influences such as birth control pills or pregnancy, among other causes.",
+  "metaDescription": "Copper too low or too high? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Hormonal influences (e.g. birth control pill, pregnancy)",
+    "Inflammatory diseases"
+  ],
+  "causesLow": [
+    "Status after stomach surgery",
+    "Malnutrition",
+    "Rare genetic disorders (Wilson's disease can alter copper values)"
+  ],
+  "doctorQuestions": [
+    "What could explain my abnormal copper value?",
+    "Are further tests necessary?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Trace Elements",
+  "pageTitle": "Copper explained | Medyra"
+}

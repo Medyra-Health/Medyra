@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Estradiol is the most important female sex hormone and fluctuates strongly during the cycle, pregnancy, and menopause. Low values can indicate menopause or an ovarian dysfunction; the reference range depends heavily on cycle phase and age.",
+  "metaDescription": "Estradiol too low or too high? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Certain cycle phases (e.g. ovulation)",
+    "Pregnancy",
+    "Estrogen-producing tumors (rare)"
+  ],
+  "causesLow": [
+    "Menopause",
+    "Ovarian dysfunction",
+    "Significant weight loss or competitive sports"
+  ],
+  "doctorQuestions": [
+    "Does my estradiol value match my current cycle phase or life stage?",
+    "Should other hormone values be measured?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (cycle-dependent)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "Estradiol explained | Medyra"
+}

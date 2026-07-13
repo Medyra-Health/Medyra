@@ -1,0 +1,24 @@
+{
+  "slug": "nitrit-urin",
+  "acronym": "Nitrit (Urin)",
+  "fullName": "Nitrit im Urin",
+  "category": "Urinwerte",
+  "shortAnswer": "Nitrit im Urin entsteht, wenn bestimmte Bakterien Nitrat im Urin umwandeln, und ist ein deutlicher Hinweis auf eine Harnwegsinfektion. Ein positives Ergebnis wird meist zusammen mit Leukozyten im Urin und den Beschwerden beurteilt.",
+  "unit": "",
+  "causesElevated": [
+    "Harnwegsinfektion",
+    "Bakterielle Besiedlung der Harnwege"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "leukozyten-urin",
+    "protein-urin"
+  ],
+  "doctorQuestions": [
+    "Bestätigt dieser Befund eine Harnweginfektion?",
+    "Ist eine Antibiotikatherapie notwendig?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Nitrit im Urin positiv? Bedeutung für Harnwegsinfektionen einfach erklärt auf Deutsch."
+}

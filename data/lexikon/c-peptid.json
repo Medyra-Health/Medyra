@@ -1,0 +1,46 @@
+{
+  "slug": "c-peptid",
+  "acronym": "C-Peptid",
+  "fullName": "C-Peptid",
+  "category": "Stoffwechsel",
+  "shortAnswer": "C-Peptid entsteht bei der körpereigenen Insulinproduktion und zeigt an, wie viel Insulin die Bauchspeicheldrüse selbst noch bildet. Niedrige Werte sprechen für einen Insulinmangel wie bei Typ-1-Diabetes, erhöhte Werte können auf eine Insulinresistenz hindeuten.",
+  "unit": "ng/ml",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 0.9,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 0.9,
+      "max": 4,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 4,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Insulinresistenz",
+    "Beginnender Typ-2-Diabetes",
+    "Insulinom (selten)"
+  ],
+  "causesLow": [
+    "Typ-1-Diabetes",
+    "Fortgeschrittener Insulinmangel"
+  ],
+  "relatedValues": [
+    "insulin",
+    "blutzucker",
+    "hba1c"
+  ],
+  "doctorQuestions": [
+    "Produziert meine Bauchspeicheldrüse noch ausreichend Insulin?",
+    "Welcher Diabetestyp könnte bei mir vorliegen?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "C-Peptid erhöht oder erniedrigt? Bedeutung für die körpereigene Insulinproduktion erklärt."
+}

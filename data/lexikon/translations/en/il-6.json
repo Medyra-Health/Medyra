@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Interleukin-6 is an immune system messenger that rises early in acute inflammation and infection, often before CRP is measurably elevated. It's mainly used in hospitals to assess severe inflammatory reactions early.",
+  "metaDescription": "Interleukin-6 (IL-6) elevated? Meaning as an early inflammation marker explained.",
+  "causesElevated": [
+    "Acute infection",
+    "Severe inflammatory reaction",
+    "Autoimmune diseases",
+    "After surgery"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Why was IL-6 measured in addition to CRP?",
+    "How severe is my inflammatory reaction?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Inflammatory Markers",
+  "pageTitle": "Interleukin-6 (IL-6) explained | Medyra"
+}

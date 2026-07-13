@@ -1,0 +1,44 @@
+{
+  "slug": "kupfer",
+  "acronym": "Cu",
+  "fullName": "Kupfer",
+  "category": "Spurenelemente",
+  "shortAnswer": "Kupfer ist an der Blutbildung, dem Bindegewebe und dem Nervensystem beteiligt. Ein Mangel ist selten und kommt vor allem nach Magen-Operationen vor, erhöhte Werte können unter anderem durch hormonelle Einflüsse wie die Antibabypille oder Schwangerschaft entstehen.",
+  "unit": "µg/dl",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 70,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 70,
+      "max": 140,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 140,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Hormonelle Einflüsse (z. B. Antibabypille, Schwangerschaft)",
+    "Entzündliche Erkrankungen"
+  ],
+  "causesLow": [
+    "Zustand nach Magenoperation",
+    "Mangelernährung",
+    "Seltene genetische Erkrankungen (Morbus Wilson kann Kupferwerte verändern)"
+  ],
+  "relatedValues": [
+    "zink"
+  ],
+  "doctorQuestions": [
+    "Was könnte meinen auffälligen Kupferwert erklären?",
+    "Sind weitere Untersuchungen notwendig?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Kupfer zu niedrig oder zu hoch? Bedeutung, Normwerte und Ursachen einfach erklärt auf Deutsch."
+}

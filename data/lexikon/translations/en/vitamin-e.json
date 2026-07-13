@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Vitamin E is a fat-soluble antioxidant that protects cells from oxidative stress. A deficiency is rare in Germany and mainly occurs with fat malabsorption disorders. It can manifest as muscle weakness or nerve problems.",
+  "metaDescription": "Vitamin E too low? Meaning, normal ranges, and causes of deficiency explained simply.",
+  "causesElevated": [],
+  "causesLow": [
+    "Fat malabsorption disorder",
+    "Malnutrition",
+    "Rare genetic disorders"
+  ],
+  "doctorQuestions": [
+    "Do I have a fat malabsorption disorder as the cause?",
+    "Should I supplement vitamin E?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal"
+  },
+  "categoryLabel": "Vitamins",
+  "pageTitle": "Vitamin E explained | Medyra"
+}

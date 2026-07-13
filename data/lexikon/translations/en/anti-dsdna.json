@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Anti-dsDNA antibodies are significantly more specific for systemic lupus erythematosus than ANA and are often used to confirm and monitor disease activity. They're almost always measured in connection with an already positive ANA finding.",
+  "metaDescription": "Anti-dsDNA antibodies elevated? Meaning for systemic lupus erythematosus explained.",
+  "causesElevated": [
+    "Systemic lupus erythematosus",
+    "Active disease phase with known lupus"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Does this value confirm systemic lupus erythematosus?",
+    "Does the value indicate a currently active disease phase?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Immune System",
+  "pageTitle": "Anti-dsDNA Antibodies explained | Medyra"
+}

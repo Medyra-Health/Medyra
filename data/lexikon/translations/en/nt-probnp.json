@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "NT-proBNP is released by the heart when it's under increased strain, and is the most important lab value for evaluating heart failure. A low value makes heart failure less likely, an elevated value should be further evaluated by a doctor.",
+  "metaDescription": "NT-proBNP elevated? Meaning for heart failure explained simply.",
+  "causesElevated": [
+    "Heart failure",
+    "Atrial fibrillation",
+    "Reduced kidney function",
+    "Older age"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Does this value confirm heart failure?",
+    "Is a heart ultrasound (echocardiogram) useful?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Cardiac Markers",
+  "pageTitle": "NT-proBNP explained | Medyra"
+}

@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Specific gravity indicates how concentrated the urine is and gives clues about fluid balance and the kidneys' ability to concentrate urine. Low values can indicate high fluid intake or reduced kidney function, high values fluid deficiency.",
+  "metaDescription": "Urine specific gravity elevated or low? Meaning explained simply.",
+  "causesElevated": [
+    "Fluid deficiency (dehydration)",
+    "Concentrated morning urine"
+  ],
+  "causesLow": [
+    "High fluid intake",
+    "Reduced kidney concentrating ability",
+    "Diabetes insipidus (rare)"
+  ],
+  "doctorQuestions": [
+    "Does this value reflect my fluid balance or a kidney disease?",
+    "Should my fluid intake be adjusted?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Urine Values",
+  "pageTitle": "Urine Specific Gravity explained | Medyra"
+}

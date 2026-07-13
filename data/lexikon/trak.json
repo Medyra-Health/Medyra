@@ -1,0 +1,37 @@
+{
+  "slug": "trak",
+  "acronym": "TRAK",
+  "fullName": "TSH-Rezeptor-Antikörper",
+  "category": "Schilddrüse",
+  "shortAnswer": "TRAK sind Antikörper, die den TSH-Rezeptor der Schilddrüse aktivieren und dadurch eine Überfunktion auslösen können. Ein erhöhter Wert ist typisch für Morbus Basedow und hilft, diese Erkrankung von anderen Ursachen einer Schilddrüsenüberfunktion zu unterscheiden.",
+  "unit": "IU/l",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 1.75,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 1.75,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Morbus Basedow",
+    "Autoimmune Schilddrüsenüberfunktion"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "tsh",
+    "ft3",
+    "ft4"
+  ],
+  "doctorQuestions": [
+    "Bestätigt dieser Wert einen Morbus Basedow?",
+    "Wie wird meine Schilddrüsenüberfunktion weiter behandelt?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "TRAK erhöht? Bedeutung für Morbus Basedow und Schilddrüsenüberfunktion einfach erklärt."
+}

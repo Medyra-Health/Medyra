@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Apolipoprotein A1 is the main protein component of \"good\" HDL cholesterol and supports the return transport of cholesterol to the liver. Low values are associated with increased cardiovascular risk, higher values are generally considered favorable.",
+  "metaDescription": "Apolipoprotein A1 (ApoA1) too low? Meaning for cardiovascular risk explained.",
+  "causesElevated": [],
+  "causesLow": [
+    "Increased cardiovascular risk",
+    "Low HDL cholesterol",
+    "Smoking"
+  ],
+  "doctorQuestions": [
+    "What does my ApoA1 value mean for my cardiovascular risk?",
+    "Can I improve my value through lifestyle changes?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal (higher is more favorable)"
+  },
+  "categoryLabel": "Metabolism",
+  "pageTitle": "Apolipoprotein A1 (ApoA1) explained | Medyra"
+}

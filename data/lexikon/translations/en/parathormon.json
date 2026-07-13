@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "Parathyroid hormone is produced by the parathyroid glands and regulates calcium balance together with vitamin D. Elevated values can indicate overactive parathyroid glands or vitamin D deficiency; low values are less common and can lead to low calcium.",
+  "metaDescription": "Parathyroid hormone (PTH) elevated or low? Meaning for calcium balance explained.",
+  "causesElevated": [
+    "Overactive parathyroid glands",
+    "Vitamin D deficiency",
+    "Chronic kidney disease"
+  ],
+  "causesLow": [
+    "Underactive parathyroid glands",
+    "After thyroid surgery"
+  ],
+  "doctorQuestions": [
+    "Is my PTH value related to my calcium or vitamin D level?",
+    "Should a parathyroid disorder be evaluated?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "Parathyroid Hormone (PTH) explained | Medyra"
+}

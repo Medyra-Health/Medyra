@@ -1,0 +1,37 @@
+{
+  "slug": "anti-ccp",
+  "acronym": "Anti-CCP",
+  "fullName": "Antikörper gegen citrullinierte Peptide",
+  "category": "Entzündungswerte",
+  "shortAnswer": "Anti-CCP-Antikörper sind ein spezifischerer Hinweis auf eine rheumatoide Arthritis als der Rheumafaktor und können teilweise schon vor dem Auftreten von Gelenkbeschwerden nachweisbar sein. Ein positiver Wert sollte gemeinsam mit den Beschwerden und weiteren Befunden ärztlich beurteilt werden.",
+  "unit": "U/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 17,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 17,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Rheumatoide Arthritis",
+    "Erhöhtes Risiko für die Entwicklung einer rheumatoiden Arthritis"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "rheumafaktor",
+    "crp",
+    "bsg"
+  ],
+  "doctorQuestions": [
+    "Wie sicher bestätigt dieser Wert eine rheumatoide Arthritis?",
+    "Sollte ich zu einem Rheumatologen überwiesen werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Anti-CCP-Antikörper erhöht? Bedeutung für rheumatoide Arthritis einfach erklärt."
+}

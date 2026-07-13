@@ -1,0 +1,25 @@
+{
+  "slug": "glukose-urin",
+  "acronym": "Glukose (Urin)",
+  "fullName": "Glukose im Urin",
+  "category": "Urinwerte",
+  "shortAnswer": "Normalerweise wird Zucker vollständig in der Niere zurückgewonnen und erscheint nicht im Urin. Ein positiver Befund tritt meist erst bei deutlich erhöhtem Blutzucker auf, zum Beispiel bei nicht ausreichend eingestelltem Diabetes, kann in der Schwangerschaft aber auch harmlos sein.",
+  "unit": "",
+  "causesElevated": [
+    "Nicht ausreichend eingestellter Diabetes mellitus",
+    "Schwangerschaft (vorübergehend häufig)",
+    "Nierenerkrankung mit gestörter Zuckerrückresorption"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "blutzucker",
+    "hba1c"
+  ],
+  "doctorQuestions": [
+    "Sollte mein Blutzucker weiter kontrolliert werden?",
+    "Ist eine Anpassung meiner Diabetestherapie nötig?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Glukose im Urin positiv? Bedeutung für Diabetes und Blutzucker einfach erklärt auf Deutsch."
+}

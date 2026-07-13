@@ -28,6 +28,14 @@ const CATEGORY_COLORS = {
   'Vitamine':         { bg: 'bg-yellow-50',  text: 'text-yellow-700', border: 'border-yellow-200', accent: '#eab308' },
   'Gerinnung':        { bg: 'bg-indigo-50',  text: 'text-indigo-700', border: 'border-indigo-200', accent: '#6366f1' },
   'Urinwerte':        { bg: 'bg-emerald-50', text: 'text-emerald-700',border: 'border-emerald-200',accent: '#10b981' },
+  'Spurenelemente':   { bg: 'bg-lime-50',    text: 'text-lime-700',   border: 'border-lime-200',   accent: '#84cc16' },
+  'Hormone':          { bg: 'bg-fuchsia-50', text: 'text-fuchsia-700',border: 'border-fuchsia-200',accent: '#d946ef' },
+  'Tumormarker':      { bg: 'bg-purple-50',  text: 'text-purple-700', border: 'border-purple-200', accent: '#a855f7' },
+  'Herzwerte':        { bg: 'bg-pink-50',    text: 'text-pink-700',   border: 'border-pink-200',   accent: '#ec4899' },
+  'Immunsystem':      { bg: 'bg-cyan-50',    text: 'text-cyan-700',   border: 'border-cyan-200',   accent: '#06b6d4' },
+  'Infektionswerte':  { bg: 'bg-red-50',     text: 'text-red-800',    border: 'border-red-200',    accent: '#dc2626' },
+  'Pankreaswerte':    { bg: 'bg-orange-50',  text: 'text-orange-800', border: 'border-orange-200', accent: '#ea580c' },
+  'Blutgruppe':       { bg: 'bg-slate-50',   text: 'text-slate-700',  border: 'border-slate-200',  accent: '#64748b' },
 }
 const DEFAULT_COLOR = { bg: 'bg-gray-50', text: 'text-gray-700', border: 'border-gray-200', accent: '#10b981' }
 

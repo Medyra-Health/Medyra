@@ -1,0 +1,37 @@
+{
+  "slug": "vitamin-e",
+  "acronym": "Vit. E",
+  "fullName": "Vitamin E (Tocopherol)",
+  "category": "Vitamine",
+  "shortAnswer": "Vitamin E ist ein fettlösliches Antioxidans, das Zellen vor oxidativem Stress schützt. Ein Mangel ist in Deutschland selten und tritt vor allem bei Fettresorptionsstörungen auf. Er kann sich durch Muskelschwäche oder Nervenprobleme äußern.",
+  "unit": "mg/l",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 5,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 5,
+      "max": 18,
+      "label": "Normal"
+    }
+  },
+  "causesElevated": [],
+  "causesLow": [
+    "Fettresorptionsstörung",
+    "Mangelernährung",
+    "Seltene genetische Erkrankungen"
+  ],
+  "relatedValues": [
+    "vitamin-a",
+    "vitamin-d"
+  ],
+  "doctorQuestions": [
+    "Liegt bei mir eine Fettresorptionsstörung als Ursache vor?",
+    "Sollte ich Vitamin E ergänzen?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Vitamin E zu niedrig? Bedeutung, Normwerte und Ursachen für einen Mangel einfach erklärt."
+}

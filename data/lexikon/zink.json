@@ -1,0 +1,44 @@
+{
+  "slug": "zink",
+  "acronym": "Zn",
+  "fullName": "Zink",
+  "category": "Spurenelemente",
+  "shortAnswer": "Zink ist an vielen Enzymreaktionen, der Wundheilung und dem Immunsystem beteiligt. Ein Mangel kann sich durch Haarausfall, Wundheilungsstörungen oder eine erhöhte Infektanfälligkeit zeigen und kommt unter anderem bei einseitiger Ernährung oder chronischen Darmerkrankungen vor.",
+  "unit": "µg/dl",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 70,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 70,
+      "max": 150,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 150,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Überdosierung durch Nahrungsergänzungsmittel"
+  ],
+  "causesLow": [
+    "Einseitige Ernährung",
+    "Chronische Darmerkrankungen",
+    "Erhöhter Bedarf (z. B. Schwangerschaft)"
+  ],
+  "relatedValues": [
+    "kupfer",
+    "selen"
+  ],
+  "doctorQuestions": [
+    "Könnte ein Zinkmangel meine Symptome erklären?",
+    "Sollte ich Zink ergänzen?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Zink zu niedrig oder zu hoch? Bedeutung, Normwerte und Ursachen einfach erklärt auf Deutsch."
+}

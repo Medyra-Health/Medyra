@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "MPV indicates the average size of platelets. Larger platelets are often newly formed and suggest increased platelet turnover, while smaller ones suggest reduced bone marrow production. The value is usually assessed together with the platelet count itself.",
+  "metaDescription": "MPV too high or too low? What mean platelet volume means, explained simply.",
+  "causesElevated": [
+    "Increased platelet production",
+    "Immune thrombocytopenia (ITP)",
+    "After blood loss"
+  ],
+  "causesLow": [
+    "Bone marrow disorders",
+    "Reduced platelet production"
+  ],
+  "doctorQuestions": [
+    "Does my MPV match my platelet count?",
+    "Is a bone marrow examination needed?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Blood Count",
+  "pageTitle": "MPV: Mean Platelet Volume explained | Medyra"
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "prolaktin",
+  "acronym": "PRL",
+  "fullName": "Prolaktin",
+  "category": "Hormone",
+  "shortAnswer": "Prolaktin ist vor allem für die Milchbildung nach der Geburt bekannt, kann aber bei Männern und Frauen unabhängig davon erhöht sein. Erhöhte Werte können Zyklusstörungen, Libidoverlust oder eine Milchabsonderung außerhalb der Stillzeit verursachen und haben verschiedene mögliche Ursachen.",
+  "unit": "ng/ml",
+  "ranges": {
+    "normal": {
+      "min": 4,
+      "max": 23,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 23,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Stress oder Schlafmangel",
+    "Bestimmte Medikamente (z. B. manche Antidepressiva)",
+    "Gutartiger Tumor der Hirnanhangsdrüse (Prolaktinom)",
+    "Schilddrüsenunterfunktion"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "tsh",
+    "oestradiol",
+    "testosteron"
+  ],
+  "doctorQuestions": [
+    "Welche Ursache könnte meinem erhöhten Prolaktinwert zugrunde liegen?",
+    "Ist eine Bildgebung der Hirnanhangsdrüse sinnvoll?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Prolaktin erhöht? Bedeutung, Normwerte und mögliche Ursachen einfach erklärt auf Deutsch."
+}

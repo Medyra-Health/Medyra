@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Reticulocytes are young, not yet fully mature red blood cells. Their number shows how actively the bone marrow is currently producing new red blood cells. A high value can indicate increased blood production after blood loss, a low value can indicate reduced bone marrow function.",
+  "metaDescription": "Reticulocytes elevated or low? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Increased blood production after blood loss",
+    "Hemolytic anemia",
+    "After iron or vitamin therapy"
+  ],
+  "causesLow": [
+    "Bone marrow weakness",
+    "Untreated iron or vitamin deficiency",
+    "Chemotherapy"
+  ],
+  "doctorQuestions": [
+    "What does my reticulocyte count say about the cause of my anemia?",
+    "Is my bone marrow responding well to treatment?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Blood Count",
+  "pageTitle": "Reticulocytes explained | Medyra"
+}

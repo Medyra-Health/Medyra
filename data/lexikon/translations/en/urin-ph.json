@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "The pH value of urine shows whether it is more acidic or basic, and is influenced by diet, metabolism, and certain conditions, among other factors. It also plays a role in the formation of certain types of kidney stones.",
+  "metaDescription": "Urine pH elevated or low? Meaning and causes explained simply.",
+  "causesElevated": [
+    "Vegetarian/alkaline diet",
+    "Urinary tract infection",
+    "Kidney function disorder"
+  ],
+  "causesLow": [
+    "Protein-rich diet",
+    "Metabolic derangement (e.g. ketoacidosis)"
+  ],
+  "doctorQuestions": [
+    "Does my urine pH affect kidney stone formation?",
+    "Should my diet be adjusted?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Urine Values",
+  "pageTitle": "Urine pH explained | Medyra"
+}

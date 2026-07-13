@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Complement factor C4, like C3, belongs to the complement system of immune defense. Low values are often measured together with C3 when autoimmune diseases like lupus are suspected, since both factors are often reduced with active disease.",
+  "metaDescription": "Complement factor C4 elevated or low? Meaning for autoimmune diseases explained.",
+  "causesElevated": [
+    "Acute inflammation or infection"
+  ],
+  "causesLow": [
+    "Autoimmune diseases (e.g. systemic lupus erythematosus)",
+    "Congenital complement deficiency"
+  ],
+  "doctorQuestions": [
+    "What does my C4 value mean together with C3 and my symptoms?",
+    "Should a rheumatologist be consulted?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Immune System",
+  "pageTitle": "Complement C4 explained | Medyra"
+}

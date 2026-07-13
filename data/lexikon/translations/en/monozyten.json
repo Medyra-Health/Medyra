@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Monocytes are white blood cells that absorb and remove pathogens and regulate inflammatory processes. Elevated values often occur with chronic inflammation or during recovery from an infection. Low values usually have no clinical significance.",
+  "metaDescription": "Monocytes elevated? Meaning, normal ranges, and possible causes explained simply.",
+  "causesElevated": [
+    "Chronic inflammation",
+    "Recovery phase after infection",
+    "Certain blood disorders",
+    "Autoimmune diseases"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "What could explain my elevated monocyte count?",
+    "Is further investigation needed?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Blood Count",
+  "pageTitle": "Monocytes explained | Medyra"
+}

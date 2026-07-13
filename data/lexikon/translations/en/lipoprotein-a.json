@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Lipoprotein(a) is a genetically determined blood fat value that can influence cardiovascular disease risk independent of diet and lifestyle. Since it's usually measured once in a lifetime, it's especially relevant with a family history of heart disease.",
+  "metaDescription": "Lipoprotein(a) elevated? Meaning for cardiovascular risk explained simply.",
+  "causesElevated": [
+    "Genetically determined (hereditary)",
+    "Can be elevated independent of lifestyle"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Does my Lp(a) increase my cardiovascular risk?",
+    "Should my other blood fat values be controlled more strictly?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Metabolism",
+  "pageTitle": "Lipoprotein(a) explained | Medyra"
+}

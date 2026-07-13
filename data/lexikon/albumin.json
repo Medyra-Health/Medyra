@@ -1,0 +1,46 @@
+{
+  "slug": "albumin",
+  "acronym": "Alb",
+  "fullName": "Albumin",
+  "category": "Leberwerte",
+  "shortAnswer": "Albumin ist das wichtigste Eiweiß im Blut und wird in der Leber gebildet. Niedrige Werte können auf eine Lebererkrankung, Mangelernährung oder einen Eiweißverlust über die Nieren hindeuten. Der Wert wird meist zusammen mit anderen Leber- und Nierenwerten beurteilt.",
+  "unit": "g/l",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 35,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 35,
+      "max": 52,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 52,
+      "max": null,
+      "label": "Erhöht (meist Dehydratation)"
+    }
+  },
+  "causesElevated": [
+    "Flüssigkeitsmangel (Dehydratation)"
+  ],
+  "causesLow": [
+    "Lebererkrankung",
+    "Mangelernährung",
+    "Nierenerkrankung mit Eiweißverlust",
+    "Chronische Entzündung"
+  ],
+  "relatedValues": [
+    "gesamteiweiss",
+    "got-ast",
+    "gpt-alt"
+  ],
+  "doctorQuestions": [
+    "Was könnte meinen niedrigen Albuminwert erklären?",
+    "Sollte meine Leber- oder Nierenfunktion weiter untersucht werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Albumin zu niedrig? Bedeutung, Normwerte und mögliche Ursachen einfach erklärt auf Deutsch."
+}

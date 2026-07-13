@@ -1,0 +1,38 @@
+{
+  "slug": "homocystein",
+  "acronym": "Hcy",
+  "fullName": "Homocystein",
+  "category": "Stoffwechsel",
+  "shortAnswer": "Homocystein ist ein Zwischenprodukt des Eiweißstoffwechsels, das mit Hilfe von Vitamin B12, Folsäure und Vitamin B6 abgebaut wird. Erhöhte Werte entstehen häufig durch einen Mangel an diesen Vitaminen und werden mit einem erhöhten Gefäßrisiko in Verbindung gebracht.",
+  "unit": "µmol/l",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 15,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 15,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Vitamin-B12-Mangel",
+    "Folsäuremangel",
+    "Vitamin-B6-Mangel",
+    "Nierenerkrankung"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "vitamin-b12",
+    "folsaeure"
+  ],
+  "doctorQuestions": [
+    "Liegt bei mir ein Vitaminmangel als Ursache vor?",
+    "Sollte ich Vitamin B12 oder Folsäure ergänzen?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Homocystein erhöht? Bedeutung, Normwerte und Ursachen wie Vitaminmangel einfach erklärt."
+}

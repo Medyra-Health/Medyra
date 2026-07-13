@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "Vitamin A is important for vision, skin, and the immune system. A deficiency usually results from fat malabsorption or malnutrition and can manifest as night blindness or dry skin. Excessively high values from supplements can also be harmful.",
+  "metaDescription": "Vitamin A elevated or low? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Overdose from dietary supplements"
+  ],
+  "causesLow": [
+    "Malnutrition",
+    "Fat malabsorption (e.g. celiac disease)",
+    "Liver disease"
+  ],
+  "doctorQuestions": [
+    "Does my vitamin A value explain my symptoms?",
+    "Should I supplement or reduce vitamin A?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Vitamins",
+  "pageTitle": "Vitamin A explained | Medyra"
+}

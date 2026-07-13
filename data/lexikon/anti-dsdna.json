@@ -1,0 +1,37 @@
+{
+  "slug": "anti-dsdna",
+  "acronym": "Anti-dsDNA",
+  "fullName": "Antikörper gegen doppelsträngige DNA",
+  "category": "Immunsystem",
+  "shortAnswer": "Anti-dsDNA-Antikörper sind deutlich spezifischer für einen systemischen Lupus erythematodes als ANA und werden häufig zur Bestätigung sowie zur Verlaufskontrolle der Krankheitsaktivität genutzt. Sie werden fast immer im Zusammenhang mit einem bereits positiven ANA-Befund bestimmt.",
+  "unit": "IU/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 10,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 10,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Systemischer Lupus erythematodes",
+    "Aktive Krankheitsphase bei bekanntem Lupus"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "ana",
+    "komplement-c3",
+    "komplement-c4"
+  ],
+  "doctorQuestions": [
+    "Bestätigt dieser Wert einen systemischen Lupus erythematodes?",
+    "Zeigt der Wert eine aktuell aktive Krankheitsphase an?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Anti-dsDNA-Antikörper erhöht? Bedeutung für systemischen Lupus erythematodes erklärt."
+}

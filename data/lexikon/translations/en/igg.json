@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "IgG is the most common antibody class and provides long-term protection after infections or vaccinations. Low values can indicate an immune deficiency, elevated values chronic infections or inflammation.",
+  "metaDescription": "IgG elevated or low? Meaning for the immune system explained simply.",
+  "causesElevated": [
+    "Chronic infection",
+    "Autoimmune disease",
+    "Certain blood disorders"
+  ],
+  "causesLow": [
+    "Congenital or acquired immune deficiency",
+    "Protein loss via kidney or bowel"
+  ],
+  "doctorQuestions": [
+    "Does my IgG value indicate an immune deficiency?",
+    "Should other immunoglobulins be measured?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Immune System",
+  "pageTitle": "IgG explained | Medyra"
+}

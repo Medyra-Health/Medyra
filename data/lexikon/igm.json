@@ -1,0 +1,39 @@
+{
+  "slug": "igm",
+  "acronym": "IgM",
+  "fullName": "Immunglobulin M",
+  "category": "Immunsystem",
+  "shortAnswer": "IgM ist die erste Antikörperklasse, die bei einer neuen Infektion gebildet wird, und zeigt daher meist eine akute oder kürzlich durchgemachte Infektion an. Der Wert wird oft zusammen mit IgG beurteilt, um akute von zurückliegenden Infektionen zu unterscheiden.",
+  "unit": "g/l",
+  "ranges": {
+    "normal": {
+      "min": 0.4,
+      "max": 2.3,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 2.3,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Akute Infektion",
+    "Bestimmte Autoimmunerkrankungen",
+    "Bestimmte Blutkrankheiten (z. B. Morbus Waldenström)"
+  ],
+  "causesLow": [
+    "Angeborene oder erworbene Immunschwäche"
+  ],
+  "relatedValues": [
+    "igg",
+    "iga"
+  ],
+  "doctorQuestions": [
+    "Deutet mein IgM-Wert auf eine akute Infektion hin?",
+    "Sollte zusätzlich IgG bestimmt werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "IgM erhöht oder erniedrigt? Bedeutung für akute Infektionen einfach erklärt."
+}

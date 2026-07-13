@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "DHEA-S is produced almost exclusively in the adrenal gland and serves as a precursor for sex hormones. Elevated values can indicate increased adrenal hormone production, low values normally decrease with age.",
+  "metaDescription": "DHEA-S elevated or low? Meaning for adrenal gland function explained simply.",
+  "causesElevated": [
+    "Increased adrenal activity",
+    "Polycystic ovary syndrome",
+    "Rare adrenal tumors"
+  ],
+  "causesLow": [
+    "Age-related decline",
+    "Adrenal insufficiency"
+  ],
+  "doctorQuestions": [
+    "Could my DHEA-S value be related to increased body hair or cycle disorders?",
+    "Is adrenal imaging useful?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (age-dependent)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "DHEA-S explained | Medyra"
+}

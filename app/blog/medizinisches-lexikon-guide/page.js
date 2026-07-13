@@ -5,7 +5,7 @@ import AppHeader from '@/components/AppHeader'
 export const metadata = {
   title: 'Medyra Lexikon: How to Look Up Any Lab Value in Plain German, Complete Guide',
   description:
-    'A step-by-step guide to using the Medyra Medical Lexikon, 46 German lab value pages that explain what each value means, what causes abnormal results, and what to ask your doctor.',
+    'A step-by-step guide to using the Medyra Medical Lexikon, 138 German lab value pages that explain what each value means, what causes abnormal results, and what to ask your doctor.',
   alternates: { canonical: 'https://medyra.de/blog/medizinisches-lexikon-guide' },
   openGraph: {
     title: 'Medyra Lexikon: How to Look Up Any Lab Value in Plain German',
@@ -25,7 +25,7 @@ export const metadata = {
   ],
 }
 
-// The 46 lexikon entries grouped by category, for the reference table
+// The 138 lexikon entries grouped by category, for the reference table
 const LEXIKON_TERMS = [
   { cat: 'Blutbild', color: 'red', terms: [
     { slug: 'leukozyten', label: 'Leukozyten' },
@@ -36,6 +36,14 @@ const LEXIKON_TERMS = [
     { slug: 'mcv', label: 'MCV' },
     { slug: 'mch', label: 'MCH' },
     { slug: 'mchc', label: 'MCHC' },
+    { slug: 'rdw', label: 'RDW' },
+    { slug: 'mpv', label: 'MPV' },
+    { slug: 'retikulozyten', label: 'Retikulozyten' },
+    { slug: 'neutrophile', label: 'Neutrophile' },
+    { slug: 'lymphozyten', label: 'Lymphozyten' },
+    { slug: 'monozyten', label: 'Monozyten' },
+    { slug: 'eosinophile', label: 'Eosinophile' },
+    { slug: 'basophile', label: 'Basophile' },
   ]},
   { cat: 'Leber', color: 'amber', terms: [
     { slug: 'gpt-alt', label: 'GPT / ALT' },
@@ -43,17 +51,28 @@ const LEXIKON_TERMS = [
     { slug: 'ggt', label: 'GGT' },
     { slug: 'bilirubin', label: 'Bilirubin' },
     { slug: 'alkalische-phosphatase', label: 'Alk. Phosphatase' },
+    { slug: 'albumin', label: 'Albumin' },
+    { slug: 'gesamteiweiss', label: 'Gesamteiweiß' },
+    { slug: 'ldh', label: 'LDH' },
+    { slug: 'cholinesterase', label: 'Cholinesterase' },
+    { slug: 'bilirubin-direkt', label: 'Bilirubin (direkt)' },
+    { slug: 'ammoniak', label: 'Ammoniak' },
   ]},
   { cat: 'Niere', color: 'blue', terms: [
     { slug: 'kreatinin', label: 'Kreatinin' },
     { slug: 'harnstoff', label: 'Harnstoff' },
     { slug: 'gfr', label: 'GFR / eGFR' },
     { slug: 'harnsaeure', label: 'Harnsäure' },
+    { slug: 'cystatin-c', label: 'Cystatin C' },
+    { slug: 'mikroalbumin', label: 'Mikroalbumin' },
   ]},
   { cat: 'Entzündung', color: 'orange', terms: [
     { slug: 'crp', label: 'CRP' },
     { slug: 'bsg', label: 'BSG' },
     { slug: 'procalcitonin', label: 'Procalcitonin' },
+    { slug: 'il-6', label: 'IL-6' },
+    { slug: 'rheumafaktor', label: 'Rheumafaktor' },
+    { slug: 'anti-ccp', label: 'Anti-CCP' },
   ]},
   { cat: 'Stoffwechsel', color: 'violet', terms: [
     { slug: 'hba1c', label: 'HbA1c' },
@@ -62,11 +81,25 @@ const LEXIKON_TERMS = [
     { slug: 'hdl', label: 'HDL' },
     { slug: 'ldl', label: 'LDL' },
     { slug: 'triglyzeride', label: 'Triglyzeride' },
+    { slug: 'insulin', label: 'Insulin' },
+    { slug: 'homa-index', label: 'HOMA-Index' },
+    { slug: 'lipoprotein-a', label: 'Lp(a)' },
+    { slug: 'homocystein', label: 'Homocystein' },
+    { slug: 'apob', label: 'ApoB' },
+    { slug: 'apoa1', label: 'ApoA1' },
+    { slug: 'c-peptid', label: 'C-Peptid' },
+    { slug: 'non-hdl-cholesterin', label: 'Non-HDL-Cholesterin' },
+    { slug: 'lactat', label: 'Laktat' },
   ]},
   { cat: 'Schilddrüse', color: 'teal', terms: [
     { slug: 'tsh', label: 'TSH' },
     { slug: 'ft3', label: 'fT3' },
     { slug: 'ft4', label: 'fT4' },
+    { slug: 'anti-tpo', label: 'Anti-TPO' },
+    { slug: 'anti-tg', label: 'Anti-Tg' },
+    { slug: 'thyreoglobulin', label: 'Thyreoglobulin' },
+    { slug: 'calcitonin', label: 'Calcitonin' },
+    { slug: 'trak', label: 'TRAK' },
   ]},
   { cat: 'Elektrolyte', color: 'sky', terms: [
     { slug: 'natrium', label: 'Natrium' },
@@ -74,41 +107,122 @@ const LEXIKON_TERMS = [
     { slug: 'calcium', label: 'Calcium' },
     { slug: 'magnesium', label: 'Magnesium' },
     { slug: 'chlorid', label: 'Chlorid' },
+    { slug: 'phosphat', label: 'Phosphat' },
   ]},
   { cat: 'Eisen', color: 'rose', terms: [
     { slug: 'ferritin', label: 'Ferritin' },
     { slug: 'transferrin', label: 'Transferrin' },
     { slug: 'eisen', label: 'Eisen' },
+    { slug: 'transferrinsaettigung', label: 'Transferrinsättigung' },
+    { slug: 'tibc', label: 'TIBC' },
   ]},
   { cat: 'Vitamine', color: 'yellow', terms: [
     { slug: 'vitamin-d', label: 'Vitamin D' },
     { slug: 'vitamin-b12', label: 'Vitamin B12' },
     { slug: 'folsaeure', label: 'Folsäure' },
+    { slug: 'vitamin-b6', label: 'Vitamin B6' },
+    { slug: 'vitamin-a', label: 'Vitamin A' },
+    { slug: 'vitamin-e', label: 'Vitamin E' },
+    { slug: 'vitamin-k', label: 'Vitamin K' },
+  ]},
+  { cat: 'Spurenelemente', color: 'lime', terms: [
+    { slug: 'zink', label: 'Zink' },
+    { slug: 'selen', label: 'Selen' },
+    { slug: 'kupfer', label: 'Kupfer' },
   ]},
   { cat: 'Gerinnung', color: 'indigo', terms: [
     { slug: 'inr', label: 'INR' },
     { slug: 'ptt', label: 'PTT' },
     { slug: 'quick', label: 'Quick' },
+    { slug: 'd-dimere', label: 'D-Dimere' },
+    { slug: 'fibrinogen', label: 'Fibrinogen' },
+    { slug: 'thrombinzeit', label: 'Thrombinzeit' },
   ]},
   { cat: 'Urin', color: 'emerald', terms: [
     { slug: 'leukozyten-urin', label: 'Leukozyten (Urin)' },
     { slug: 'erythrozyten-urin', label: 'Erythrozyten (Urin)' },
     { slug: 'protein-urin', label: 'Protein (Urin)' },
+    { slug: 'nitrit-urin', label: 'Nitrit (Urin)' },
+    { slug: 'glukose-urin', label: 'Glukose (Urin)' },
+    { slug: 'ketone-urin', label: 'Ketone (Urin)' },
+    { slug: 'urin-ph', label: 'pH (Urin)' },
+    { slug: 'spezifisches-gewicht-urin', label: 'Spez. Gewicht (Urin)' },
+  ]},
+  { cat: 'Hormone', color: 'fuchsia', terms: [
+    { slug: 'testosteron', label: 'Testosteron' },
+    { slug: 'oestradiol', label: 'Östradiol' },
+    { slug: 'progesteron', label: 'Progesteron' },
+    { slug: 'prolaktin', label: 'Prolaktin' },
+    { slug: 'cortisol', label: 'Cortisol' },
+    { slug: 'acth', label: 'ACTH' },
+    { slug: 'parathormon', label: 'Parathormon' },
+    { slug: 'fsh', label: 'FSH' },
+    { slug: 'lh', label: 'LH' },
+    { slug: 'shbg', label: 'SHBG' },
+    { slug: 'dhea-s', label: 'DHEA-S' },
+    { slug: 'igf-1', label: 'IGF-1' },
+    { slug: 'amh', label: 'AMH' },
+  ]},
+  { cat: 'Tumormarker', color: 'purple', terms: [
+    { slug: 'psa', label: 'PSA' },
+    { slug: 'cea', label: 'CEA' },
+    { slug: 'ca-125', label: 'CA 125' },
+    { slug: 'ca-19-9', label: 'CA 19-9' },
+    { slug: 'ca-15-3', label: 'CA 15-3' },
+    { slug: 'afp', label: 'AFP' },
+    { slug: 'beta-hcg', label: 'β-hCG' },
+  ]},
+  { cat: 'Herz', color: 'pink', terms: [
+    { slug: 'troponin', label: 'Troponin' },
+    { slug: 'ck', label: 'CK' },
+    { slug: 'ck-mb', label: 'CK-MB' },
+    { slug: 'nt-probnp', label: 'NT-proBNP' },
+    { slug: 'myoglobin', label: 'Myoglobin' },
+  ]},
+  { cat: 'Immunsystem', color: 'cyan', terms: [
+    { slug: 'ige', label: 'IgE' },
+    { slug: 'igg', label: 'IgG' },
+    { slug: 'igm', label: 'IgM' },
+    { slug: 'iga', label: 'IgA' },
+    { slug: 'komplement-c3', label: 'Komplement C3' },
+    { slug: 'komplement-c4', label: 'Komplement C4' },
+    { slug: 'ana', label: 'ANA' },
+    { slug: 'anti-dsdna', label: 'Anti-dsDNA' },
+  ]},
+  { cat: 'Infektionswerte', color: 'red', terms: [
+    { slug: 'hbs-antigen', label: 'HBsAg' },
+    { slug: 'anti-hbs', label: 'Anti-HBs' },
+    { slug: 'anti-hcv', label: 'Anti-HCV' },
+    { slug: 'hiv-test', label: 'HIV-Test' },
+  ]},
+  { cat: 'Pankreas', color: 'orange', terms: [
+    { slug: 'amylase', label: 'Amylase' },
+    { slug: 'lipase', label: 'Lipase' },
+  ]},
+  { cat: 'Blutgruppe', color: 'slate', terms: [
+    { slug: 'blutgruppe', label: 'Blutgruppe' },
+    { slug: 'rhesusfaktor', label: 'Rhesusfaktor' },
   ]},
 ]
 
 const COLOR_MAP = {
-  red:    { bg: 'bg-red-50',    text: 'text-red-700',    border: 'border-red-200',    dot: 'bg-red-400'    },
-  amber:  { bg: 'bg-amber-50',  text: 'text-amber-700',  border: 'border-amber-200',  dot: 'bg-amber-400'  },
-  blue:   { bg: 'bg-blue-50',   text: 'text-blue-700',   border: 'border-blue-200',   dot: 'bg-blue-400'   },
-  orange: { bg: 'bg-orange-50', text: 'text-orange-700', border: 'border-orange-200', dot: 'bg-orange-400' },
-  violet: { bg: 'bg-violet-50', text: 'text-violet-700', border: 'border-violet-200', dot: 'bg-violet-400' },
-  teal:   { bg: 'bg-teal-50',   text: 'text-teal-700',   border: 'border-teal-200',   dot: 'bg-teal-400'   },
-  sky:    { bg: 'bg-sky-50',    text: 'text-sky-700',    border: 'border-sky-200',    dot: 'bg-sky-400'    },
-  rose:   { bg: 'bg-rose-50',   text: 'text-rose-700',   border: 'border-rose-200',   dot: 'bg-rose-400'   },
-  yellow: { bg: 'bg-yellow-50', text: 'text-yellow-700', border: 'border-yellow-200', dot: 'bg-yellow-400' },
-  indigo: { bg: 'bg-indigo-50', text: 'text-indigo-700', border: 'border-indigo-200', dot: 'bg-indigo-400' },
-  emerald:{ bg: 'bg-emerald-50',text: 'text-emerald-700',border: 'border-emerald-200',dot: 'bg-emerald-400'},
+  red:     { bg: 'bg-red-50',     text: 'text-red-700',     border: 'border-red-200',     dot: 'bg-red-400'     },
+  amber:   { bg: 'bg-amber-50',   text: 'text-amber-700',   border: 'border-amber-200',   dot: 'bg-amber-400'   },
+  blue:    { bg: 'bg-blue-50',    text: 'text-blue-700',    border: 'border-blue-200',    dot: 'bg-blue-400'    },
+  orange:  { bg: 'bg-orange-50',  text: 'text-orange-700',  border: 'border-orange-200',  dot: 'bg-orange-400'  },
+  violet:  { bg: 'bg-violet-50',  text: 'text-violet-700',  border: 'border-violet-200',  dot: 'bg-violet-400'  },
+  teal:    { bg: 'bg-teal-50',    text: 'text-teal-700',    border: 'border-teal-200',    dot: 'bg-teal-400'    },
+  sky:     { bg: 'bg-sky-50',     text: 'text-sky-700',     border: 'border-sky-200',     dot: 'bg-sky-400'     },
+  rose:    { bg: 'bg-rose-50',    text: 'text-rose-700',    border: 'border-rose-200',    dot: 'bg-rose-400'    },
+  yellow:  { bg: 'bg-yellow-50',  text: 'text-yellow-700',  border: 'border-yellow-200',  dot: 'bg-yellow-400'  },
+  indigo:  { bg: 'bg-indigo-50',  text: 'text-indigo-700',  border: 'border-indigo-200',  dot: 'bg-indigo-400'  },
+  emerald: { bg: 'bg-emerald-50', text: 'text-emerald-700', border: 'border-emerald-200', dot: 'bg-emerald-400' },
+  lime:    { bg: 'bg-lime-50',    text: 'text-lime-700',    border: 'border-lime-200',    dot: 'bg-lime-400'    },
+  fuchsia: { bg: 'bg-fuchsia-50', text: 'text-fuchsia-700', border: 'border-fuchsia-200', dot: 'bg-fuchsia-400' },
+  purple:  { bg: 'bg-purple-50',  text: 'text-purple-700',  border: 'border-purple-200',  dot: 'bg-purple-400'  },
+  pink:    { bg: 'bg-pink-50',    text: 'text-pink-700',    border: 'border-pink-200',    dot: 'bg-pink-400'    },
+  cyan:    { bg: 'bg-cyan-50',    text: 'text-cyan-700',    border: 'border-cyan-200',    dot: 'bg-cyan-400'    },
+  slate:   { bg: 'bg-slate-50',   text: 'text-slate-700',   border: 'border-slate-200',   dot: 'bg-slate-400'   },
 }
 
 export default function BlogPost() {
@@ -142,7 +256,8 @@ export default function BlogPost() {
 
           <p>
             The Medyra Lexikon was built for exactly this moment. It is a free German medical dictionary covering
-            46 of the most common laboratory values, searchable, plain-language, and structured to give you the
+            138 of the most common laboratory values, from routine blood counts to hormone panels, tumor markers,
+            and cardiac markers, searchable, plain-language, and structured to give you the
             answer you actually need: <em>what does this mean for me, and what should I ask my doctor?</em>
           </p>
 
@@ -208,7 +323,7 @@ export default function BlogPost() {
 
           <h3 className="text-base font-bold text-gray-800 mt-6">Method 2, Browse by category</h3>
           <p>
-            The index page groups all 46 terms into 11 medical categories. If you know roughly what your result
+            The index page groups all 138 terms into 19 medical categories. If you know roughly what your result
             relates to, liver, kidneys, thyroid, blood count, scroll to that section and scan the list. Each
             category has a colour so you can orient yourself at a glance.
           </p>
@@ -274,7 +389,7 @@ export default function BlogPost() {
           </div>
 
           {/* Full term reference */}
-          <h2 className="text-xl font-bold text-gray-900 mt-10">All 46 terms, quick reference</h2>
+          <h2 className="text-xl font-bold text-gray-900 mt-10">All 138 terms, quick reference</h2>
           <p>
             Here is every term currently in the Lexikon, grouped by category. Click any term to go directly to its page.
           </p>
@@ -453,7 +568,7 @@ export default function BlogPost() {
               },
               {
                 q: 'Will more terms be added?',
-                a: 'Yes. The current 46 terms cover the most commonly ordered lab tests in Germany. Additional terms, including hormone panels, cardiac markers, and autoimmune markers, will be added over time.',
+                a: 'Yes. The Lexikon now covers 138 terms, including hormone panels, tumor markers, cardiac markers, and autoimmune markers, and will keep growing over time.',
               },
             ].map(item => (
               <details key={item.q} className="group border border-gray-200 rounded-xl overflow-hidden">
@@ -472,7 +587,7 @@ export default function BlogPost() {
           <div className="bg-gray-900 rounded-2xl p-7 text-center not-prose mt-10 space-y-4">
             <p className="text-white font-bold text-xl">Open the Medyra Lexikon</p>
             <p className="text-gray-400 text-sm leading-relaxed">
-              46 terms · Free · No account required · Updated April 2026
+              138 terms · Free · No account required · Updated July 2026
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/lexikon"

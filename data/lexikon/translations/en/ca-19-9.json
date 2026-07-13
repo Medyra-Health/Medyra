@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "CA 19-9 is mainly measured in connection with the pancreas and bile ducts, but can also rise with bile congestion, inflammation, or other benign conditions. It's used more often for monitoring than initial diagnosis.",
+  "metaDescription": "CA 19-9 elevated? Meaning of the tumor marker and possible causes explained.",
+  "causesElevated": [
+    "Bile congestion",
+    "Pancreatitis",
+    "Liver disease",
+    "Pancreatic cancer (one of several possible causes)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Which cause is most likely for my elevated value?",
+    "Is pancreatic imaging useful?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Tumor Markers",
+  "pageTitle": "CA 19-9 explained | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "CA 15-3 is mainly used for monitoring already diagnosed breast cancer and is less suitable for early detection, since it can also be elevated with benign breast conditions. Interpretation is always done in the overall medical context.",
+  "metaDescription": "CA 15-3 elevated? Meaning of the tumor marker and possible causes explained.",
+  "causesElevated": [
+    "Benign breast conditions",
+    "Liver function disorder",
+    "Known breast cancer (for monitoring)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Is this value being used to monitor my condition?",
+    "Should additional imaging be done?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Tumor Markers",
+  "pageTitle": "CA 15-3 explained | Medyra"
+}

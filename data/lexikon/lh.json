@@ -1,0 +1,36 @@
+{
+  "slug": "lh",
+  "acronym": "LH",
+  "fullName": "Luteinisierendes Hormon",
+  "category": "Hormone",
+  "shortAnswer": "LH löst bei Frauen den Eisprung aus und regt bei Männern die Testosteronproduktion an. Der Wert wird häufig zusammen mit FSH bestimmt, etwa bei Zyklusstörungen, Kinderwunsch oder Verdacht auf eine Störung der Keimdrüsenfunktion.",
+  "unit": "IU/l",
+  "ranges": {
+    "normal": {
+      "min": 1.7,
+      "max": 8.6,
+      "label": "Normal (zyklusabhängig bei Frauen)"
+    }
+  },
+  "causesElevated": [
+    "Eisprung (kurzzeitiger Anstieg)",
+    "Wechseljahre",
+    "Polyzystisches Ovarialsyndrom"
+  ],
+  "causesLow": [
+    "Erkrankung der Hirnanhangsdrüse",
+    "Starker Gewichtsverlust oder Leistungssport"
+  ],
+  "relatedValues": [
+    "fsh",
+    "oestradiol",
+    "testosteron"
+  ],
+  "doctorQuestions": [
+    "Was zeigt das Verhältnis von LH zu FSH bei mir?",
+    "Ist mein Zyklus bzw. meine Hormonfunktion normal?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "LH erhöht oder erniedrigt? Bedeutung für Zyklus und Fruchtbarkeit einfach erklärt."
+}

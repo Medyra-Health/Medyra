@@ -1,0 +1,47 @@
+{
+  "slug": "fibrinogen",
+  "acronym": "Fibrinogen",
+  "fullName": "Fibrinogen",
+  "category": "Gerinnung",
+  "shortAnswer": "Fibrinogen ist ein Eiweiß, das für die Blutgerinnung notwendig ist und zusätzlich als Entzündungsmarker dient. Erhöhte Werte treten häufig bei Entzündungen oder Infektionen auf, niedrige Werte können auf eine Gerinnungsstörung oder Lebererkrankung hindeuten.",
+  "unit": "g/l",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 1.8,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 1.8,
+      "max": 3.5,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 3.5,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Entzündung oder Infektion",
+    "Nach Operationen",
+    "Schwangerschaft"
+  ],
+  "causesLow": [
+    "Verbrauchskoagulopathie",
+    "Lebererkrankung",
+    "Seltene angeborene Gerinnungsstörung"
+  ],
+  "relatedValues": [
+    "ptt",
+    "quick",
+    "d-dimere"
+  ],
+  "doctorQuestions": [
+    "Was könnte meinen auffälligen Fibrinogenwert erklären?",
+    "Besteht ein erhöhtes Blutungs- oder Thromboserisiko?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Fibrinogen erhöht oder erniedrigt? Bedeutung, Normwerte und Ursachen einfach erklärt."
+}

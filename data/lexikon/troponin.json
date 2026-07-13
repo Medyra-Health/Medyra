@@ -1,0 +1,39 @@
+{
+  "slug": "troponin",
+  "acronym": "Trop",
+  "fullName": "Troponin (T/I)",
+  "category": "Herzwerte",
+  "shortAnswer": "Troponin ist ein hochspezifischer Marker für eine Schädigung des Herzmuskels und der wichtigste Laborwert bei Verdacht auf einen Herzinfarkt. Bereits leicht erhöhte Werte werden ernst genommen und in der Klinik meist im Verlauf mit einer zweiten Messung kontrolliert.",
+  "unit": "ng/l",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 14,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 14,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Herzinfarkt",
+    "Herzmuskelentzündung (Myokarditis)",
+    "Starke körperliche Belastung",
+    "Eingeschränkte Nierenfunktion"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "ck",
+    "ck-mb",
+    "nt-probnp"
+  ],
+  "doctorQuestions": [
+    "Wie dringend muss mein erhöhter Troponinwert abgeklärt werden?",
+    "Ist eine zweite Messung im Verlauf geplant?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Troponin erhöht? Bedeutung für Herzinfarkt und Herzmuskelschädigung einfach erklärt."
+}

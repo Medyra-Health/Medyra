@@ -1,0 +1,24 @@
+{
+  "slug": "anti-hcv",
+  "acronym": "Anti-HCV",
+  "fullName": "Hepatitis-C-Antikörper",
+  "category": "Infektionswerte",
+  "shortAnswer": "Anti-HCV-Antikörper zeigen an, dass der Körper zu irgendeinem Zeitpunkt Kontakt mit dem Hepatitis-C-Virus hatte. Ein positiver Test bedeutet nicht automatisch eine aktive Infektion, sondern muss durch einen zusätzlichen Test auf das Virus selbst (PCR) bestätigt werden.",
+  "unit": "",
+  "causesElevated": [
+    "Aktuelle Hepatitis-C-Infektion",
+    "Überstandene, ausgeheilte Hepatitis-C-Infektion"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "got-ast",
+    "gpt-alt"
+  ],
+  "doctorQuestions": [
+    "Ist zusätzlich ein PCR-Test zur Bestätigung notwendig?",
+    "Liegt bei mir eine aktive oder ausgeheilte Infektion vor?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Anti-HCV positiv? Bedeutung für eine Hepatitis-C-Infektion einfach erklärt auf Deutsch."
+}

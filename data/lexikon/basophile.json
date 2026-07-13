@@ -1,0 +1,37 @@
+{
+  "slug": "basophile",
+  "acronym": "Baso",
+  "fullName": "Basophile Granulozyten",
+  "category": "Blutbild",
+  "shortAnswer": "Basophile Granulozyten sind die seltenste Art weißer Blutkörperchen und spielen eine Rolle bei allergischen Reaktionen und chronischen Entzündungen. Leicht erhöhte Werte sind häufig unbedenklich, deutlich erhöhte Werte sollten ärztlich abgeklärt werden.",
+  "unit": "/nl",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 0.2,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 0.2,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Allergische Reaktionen",
+    "Chronische Entzündung",
+    "Bestimmte Blutkrankheiten"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "leukozyten",
+    "eosinophile"
+  ],
+  "doctorQuestions": [
+    "Ist mein erhöhter Basophilenwert klinisch relevant?",
+    "Sind weitere Untersuchungen nötig?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Basophile Granulozyten erhöht? Bedeutung und mögliche Ursachen einfach erklärt auf Deutsch."
+}

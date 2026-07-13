@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Ammonia is produced during protein breakdown and is normally rendered harmless by the liver. Elevated values can indicate reduced liver function and, in pronounced cases, can affect brain function. Significantly elevated values should be evaluated by a doctor promptly.",
+  "metaDescription": "Ammonia elevated? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Advanced liver disease (cirrhosis)",
+    "Liver failure",
+    "Certain metabolic disorders"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "How urgently does my elevated ammonia need to be treated?",
+    "What is the underlying cause in my case?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Liver Values",
+  "pageTitle": "Ammonia explained | Medyra"
+}

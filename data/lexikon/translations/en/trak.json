@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "TRAb are antibodies that activate the thyroid's TSH receptor and can trigger overactivity. An elevated value is typical for Graves' disease and helps distinguish it from other causes of thyroid overactivity.",
+  "metaDescription": "TRAb elevated? Meaning for Graves' disease and thyroid overactivity explained.",
+  "causesElevated": [
+    "Graves' disease",
+    "Autoimmune thyroid overactivity"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Does this value confirm Graves' disease?",
+    "How will my thyroid overactivity be treated further?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Thyroid",
+  "pageTitle": "TRAb: TSH Receptor Antibodies explained | Medyra"
+}

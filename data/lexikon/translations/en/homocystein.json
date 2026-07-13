@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Homocysteine is a byproduct of protein metabolism that is broken down with the help of vitamin B12, folic acid, and vitamin B6. Elevated values often result from a deficiency in these vitamins and are associated with increased vascular risk.",
+  "metaDescription": "Homocysteine elevated? Meaning, normal ranges, and causes like vitamin deficiency explained.",
+  "causesElevated": [
+    "Vitamin B12 deficiency",
+    "Folic acid deficiency",
+    "Vitamin B6 deficiency",
+    "Kidney disease"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Do I have a vitamin deficiency as the cause?",
+    "Should I supplement vitamin B12 or folic acid?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Metabolism",
+  "pageTitle": "Homocysteine explained | Medyra"
+}

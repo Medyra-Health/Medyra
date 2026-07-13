@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "AFP is normally elevated mainly during pregnancy and, outside of pregnancy, is used to monitor liver or germ cell tumors. Chronic liver disease can also elevate the value without a tumor being present.",
+  "metaDescription": "AFP elevated? Meaning of the tumor marker and possible causes explained.",
+  "causesElevated": [
+    "Pregnancy",
+    "Chronic liver disease or cirrhosis",
+    "Liver cancer or germ cell tumors (one of several possible causes)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "What is the cause of my elevated AFP value?",
+    "Is liver imaging useful?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (outside of pregnancy)",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Tumor Markers",
+  "pageTitle": "AFP: Alpha-Fetoprotein explained | Medyra"
+}

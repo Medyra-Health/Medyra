@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "Phosphate is important for bones, cell energy, and acid-base balance, and is closely regulated with calcium and vitamin D. Elevated values often occur with reduced kidney function, low values with vitamin D deficiency or malnutrition.",
+  "metaDescription": "Phosphate elevated or low? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Reduced kidney function",
+    "Excess vitamin D",
+    "Underactive parathyroid gland"
+  ],
+  "causesLow": [
+    "Vitamin D deficiency",
+    "Overactive parathyroid gland",
+    "Malnutrition",
+    "Alcoholism"
+  ],
+  "doctorQuestions": [
+    "Is my phosphate value related to my kidney function?",
+    "Should my vitamin D and calcium levels also be checked?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Electrolytes",
+  "pageTitle": "Phosphate explained | Medyra"
+}

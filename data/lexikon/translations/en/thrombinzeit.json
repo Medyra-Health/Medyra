@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Thrombin time tests the last step of blood clotting, the conversion of fibrinogen into fibrin. A prolonged value often occurs with heparin therapy, but also with fibrinogen deficiency.",
+  "metaDescription": "Thrombin time prolonged? Meaning for blood clotting explained simply.",
+  "causesElevated": [
+    "Heparin therapy",
+    "Fibrinogen deficiency",
+    "Liver disease"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Is my prolonged thrombin time related to a medication I'm taking?",
+    "Should my fibrinogen also be checked?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Prolonged"
+  },
+  "categoryLabel": "Coagulation",
+  "pageTitle": "Thrombin Time explained | Medyra"
+}

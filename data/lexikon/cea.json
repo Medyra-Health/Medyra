@@ -1,0 +1,35 @@
+{
+  "slug": "cea",
+  "acronym": "CEA",
+  "fullName": "Karzinoembryonales Antigen",
+  "category": "Tumormarker",
+  "shortAnswer": "CEA ist ein unspezifischer Tumormarker, der vor allem zur Verlaufskontrolle bei bereits bekannten Tumorerkrankungen genutzt wird, insbesondere im Darm. Erhöhte Werte kommen auch bei Rauchern und verschiedenen gutartigen Erkrankungen vor und sind allein kein Beweis für eine Krebserkrankung.",
+  "unit": "ng/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 5,
+      "label": "Normal (Nichtraucher)"
+    },
+    "elevated": {
+      "min": 5,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Rauchen",
+    "Chronisch-entzündliche Darmerkrankungen",
+    "Leber- oder Lungenerkrankungen",
+    "Bekannte Tumorerkrankung (zur Verlaufskontrolle)"
+  ],
+  "causesLow": [],
+  "relatedValues": [],
+  "doctorQuestions": [
+    "Wird dieser Wert bei mir zur Verlaufskontrolle oder zur Erstabklärung genutzt?",
+    "Welche weiteren Untersuchungen sind sinnvoll?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "CEA erhöht? Bedeutung des Tumormarkers und mögliche Ursachen einfach erklärt."
+}

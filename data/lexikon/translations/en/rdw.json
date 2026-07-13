@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "RDW measures how much red blood cells vary in size. An elevated value can indicate early iron, vitamin B12, or folic acid deficiency, especially combined with an abnormal MCV. Discuss an elevated RDW with your doctor.",
+  "metaDescription": "RDW elevated? Meaning of red cell distribution width, normal ranges, and possible causes explained simply.",
+  "causesElevated": [
+    "Iron deficiency",
+    "Vitamin B12 or folic acid deficiency",
+    "Mixed anemia",
+    "After blood transfusion"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "What does my elevated RDW mean together with my MCV?",
+    "Should my iron and vitamin status be checked?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Blood Count",
+  "pageTitle": "RDW: Red Cell Distribution Width explained | Medyra"
+}

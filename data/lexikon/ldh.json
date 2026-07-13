@@ -1,0 +1,40 @@
+{
+  "slug": "ldh",
+  "acronym": "LDH",
+  "fullName": "Laktatdehydrogenase",
+  "category": "Leberwerte",
+  "shortAnswer": "LDH ist ein Enzym, das in vielen Körperzellen vorkommt, unter anderem in Leber, Herz und Muskulatur. Erhöhte Werte sind unspezifisch und können auf eine Zellschädigung in verschiedenen Organen hindeuten, zum Beispiel durch Leberschäden, Muskelverletzungen oder einen Herzinfarkt.",
+  "unit": "U/l",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 250,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 250,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Leberschädigung",
+    "Herzinfarkt",
+    "Hämolyse (Zerfall roter Blutkörperchen)",
+    "Muskelverletzung",
+    "Manche Tumorerkrankungen"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "got-ast",
+    "gpt-alt",
+    "crp"
+  ],
+  "doctorQuestions": [
+    "Welches Organ könnte meinen erhöhten LDH-Wert erklären?",
+    "Sind weitere Untersuchungen notwendig?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "LDH erhöht? Bedeutung der Laktatdehydrogenase, Normwerte und Ursachen einfach erklärt auf Deutsch."
+}

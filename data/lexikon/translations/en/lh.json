@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "LH triggers ovulation in women and stimulates testosterone production in men. The value is often measured together with FSH, such as with cycle disorders, fertility concerns, or suspected gonad dysfunction.",
+  "metaDescription": "LH elevated or low? Meaning for cycle and fertility explained simply.",
+  "causesElevated": [
+    "Ovulation (brief rise)",
+    "Menopause",
+    "Polycystic ovary syndrome"
+  ],
+  "causesLow": [
+    "Pituitary gland disorder",
+    "Significant weight loss or competitive sports"
+  ],
+  "doctorQuestions": [
+    "What does the ratio of LH to FSH show in my case?",
+    "Is my cycle or hormone function normal?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (cycle-dependent in women)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "LH explained | Medyra"
+}

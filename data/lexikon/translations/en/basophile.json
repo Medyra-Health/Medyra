@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Basophils are the rarest type of white blood cell and play a role in allergic reactions and chronic inflammation. Mildly elevated values are often harmless, significantly elevated values should be clarified by a doctor.",
+  "metaDescription": "Basophils elevated? Meaning and possible causes explained simply.",
+  "causesElevated": [
+    "Allergic reactions",
+    "Chronic inflammation",
+    "Certain blood disorders"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Is my elevated basophil count clinically relevant?",
+    "Are further tests needed?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Blood Count",
+  "pageTitle": "Basophils explained | Medyra"
+}

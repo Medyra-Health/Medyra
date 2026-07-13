@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Lipase is a digestive enzyme from the pancreas and is considered a more specific marker for pancreatitis than amylase. Significantly elevated values, usually with severe abdominal pain, should be evaluated by a doctor promptly.",
+  "metaDescription": "Lipase elevated? Meaning for pancreatitis explained simply.",
+  "causesElevated": [
+    "Acute pancreatitis",
+    "Gallstones",
+    "Reduced kidney function"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "How urgently does my elevated lipase need to be evaluated?",
+    "Is pancreatic imaging necessary?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Pancreatic Values",
+  "pageTitle": "Lipase explained | Medyra"
+}

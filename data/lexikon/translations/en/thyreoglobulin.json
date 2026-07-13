@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Thyroglobulin is a storage protein produced exclusively in the thyroid. The value is mainly used for follow-up monitoring after surgical removal of the thyroid for thyroid cancer, as rising values can indicate a recurrence.",
+  "metaDescription": "Thyroglobulin elevated? Meaning for thyroid follow-up care explained simply.",
+  "causesElevated": [
+    "Active thyroid tissue",
+    "After thyroid surgery: possible sign of recurrence",
+    "Thyroid inflammation"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "What does this value mean for my follow-up after thyroid surgery?",
+    "Should my Anti-Tg antibodies also be considered?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (with thyroid present)"
+  },
+  "categoryLabel": "Thyroid",
+  "pageTitle": "Thyroglobulin explained | Medyra"
+}

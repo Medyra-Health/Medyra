@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "LDH is an enzyme found in many body cells, including the liver, heart, and muscles. Elevated values are nonspecific and can indicate cell damage in various organs, such as liver damage, muscle injury, or a heart attack.",
+  "metaDescription": "LDH elevated? Meaning of lactate dehydrogenase, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Liver damage",
+    "Heart attack",
+    "Hemolysis (breakdown of red blood cells)",
+    "Muscle injury",
+    "Some tumor diseases"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Which organ could explain my elevated LDH?",
+    "Are further tests necessary?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Liver Values",
+  "pageTitle": "LDH: Lactate Dehydrogenase explained | Medyra"
+}

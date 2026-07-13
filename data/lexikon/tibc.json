@@ -1,0 +1,45 @@
+{
+  "slug": "tibc",
+  "acronym": "TIBC",
+  "fullName": "Totale Eisenbindungskapazität",
+  "category": "Eisenwerte",
+  "shortAnswer": "TIBC misst, wie viel Eisen das Blut insgesamt maximal transportieren könnte, und spiegelt indirekt die Menge an Transferrin wider. Erhöhte Werte treten typischerweise bei Eisenmangel auf, erniedrigte Werte bei Eisenüberladung oder chronischen Entzündungen.",
+  "unit": "µg/dl",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 250,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 250,
+      "max": 450,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 450,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Eisenmangel"
+  ],
+  "causesLow": [
+    "Eisenüberladung (Hämochromatose)",
+    "Chronische Entzündung",
+    "Lebererkrankung"
+  ],
+  "relatedValues": [
+    "eisen",
+    "ferritin",
+    "transferrinsaettigung"
+  ],
+  "doctorQuestions": [
+    "Bestätigt dieser Wert einen Eisenmangel?",
+    "Sollten weitere Eisenwerte bestimmt werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "TIBC (Eisenbindungskapazität) erhöht oder erniedrigt? Bedeutung für Eisenmangel erklärt."
+}

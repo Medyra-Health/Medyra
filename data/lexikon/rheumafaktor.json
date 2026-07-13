@@ -1,0 +1,39 @@
+{
+  "slug": "rheumafaktor",
+  "acronym": "RF",
+  "fullName": "Rheumafaktor",
+  "category": "Entzündungswerte",
+  "shortAnswer": "Der Rheumafaktor ist ein Antikörper, der häufig bei rheumatoider Arthritis vorkommt, aber auch bei anderen Erkrankungen oder sogar bei gesunden Menschen positiv sein kann. Ein positiver Wert allein ist daher keine Diagnose und muss immer im Zusammenhang mit Beschwerden und weiteren Befunden beurteilt werden.",
+  "unit": "IU/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 14,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 14,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Rheumatoide Arthritis",
+    "Andere Autoimmunerkrankungen",
+    "Chronische Infektionen",
+    "Kann auch bei Gesunden leicht erhöht sein"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "anti-ccp",
+    "crp",
+    "bsg"
+  ],
+  "doctorQuestions": [
+    "Bestätigt dieser Wert eine rheumatoide Arthritis?",
+    "Sollte zusätzlich Anti-CCP bestimmt werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Rheumafaktor erhöht? Bedeutung für rheumatoide Arthritis einfach erklärt auf Deutsch."
+}

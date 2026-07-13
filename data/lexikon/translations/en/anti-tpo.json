@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "Anti-TPO antibodies target an enzyme of the thyroid and are the most important indicator of an autoimmune thyroid disease like Hashimoto's thyroiditis. Elevated values often, but not always, confirm such a disease.",
+  "metaDescription": "Anti-TPO antibodies elevated? Meaning for Hashimoto's and thyroid disease explained.",
+  "causesElevated": [
+    "Hashimoto's thyroiditis",
+    "Graves' disease",
+    "Other autoimmune diseases"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Does this value confirm an autoimmune thyroid disease?",
+    "Should my thyroid function be checked regularly?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Thyroid",
+  "pageTitle": "Anti-TPO Antibodies explained | Medyra"
+}

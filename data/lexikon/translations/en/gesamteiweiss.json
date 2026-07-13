@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Total protein measures all proteins in the blood serum, mainly albumin and immunoglobulins. Elevated values can result from fluid deficiency or chronic inflammation, low values from malnutrition, liver, or kidney disease.",
+  "metaDescription": "Total protein elevated or low? Normal ranges and causes explained simply.",
+  "causesElevated": [
+    "Fluid deficiency (dehydration)",
+    "Chronic inflammation",
+    "Certain blood disorders"
+  ],
+  "causesLow": [
+    "Malnutrition",
+    "Liver disease",
+    "Kidney disease with protein loss"
+  ],
+  "doctorQuestions": [
+    "What is causing my abnormal total protein value?",
+    "Is protein electrophoresis useful?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Liver Values",
+  "pageTitle": "Total Protein explained | Medyra"
+}

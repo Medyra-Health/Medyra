@@ -1,0 +1,20 @@
+{
+  "slug": "blutgruppe",
+  "acronym": "Blutgruppe",
+  "fullName": "Blutgruppe (AB0-System)",
+  "category": "Blutgruppe",
+  "shortAnswer": "Die Blutgruppe (A, B, AB oder 0) beschreibt bestimmte Merkmale auf der Oberfläche der roten Blutkörperchen und ist genetisch festgelegt. Sie ist vor allem für Bluttransfusionen, Organspenden und in der Schwangerschaft wichtig und hat im Alltag keinen Krankheitswert.",
+  "unit": "",
+  "causesElevated": [],
+  "causesLow": [],
+  "relatedValues": [
+    "rhesusfaktor"
+  ],
+  "doctorQuestions": [
+    "Welche Bedeutung hat meine Blutgruppe für eine geplante Operation oder Schwangerschaft?",
+    "Wo wird meine Blutgruppe dokumentiert?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Blutgruppe A, B, AB oder 0: Bedeutung des AB0-Systems einfach erklärt auf Deutsch."
+}

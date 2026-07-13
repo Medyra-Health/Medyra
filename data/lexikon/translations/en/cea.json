@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "CEA is a nonspecific tumor marker mainly used to monitor already known tumor diseases, especially in the colon. Elevated values also occur in smokers and various benign conditions, and are not proof of cancer on their own.",
+  "metaDescription": "CEA elevated? Meaning of the tumor marker and possible causes explained.",
+  "causesElevated": [
+    "Smoking",
+    "Chronic inflammatory bowel diseases",
+    "Liver or lung disease",
+    "Known tumor disease (for monitoring)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Is this value being used for follow-up monitoring or initial workup in my case?",
+    "What further tests are useful?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (Non-smoker)",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Tumor Markers",
+  "pageTitle": "CEA explained | Medyra"
+}

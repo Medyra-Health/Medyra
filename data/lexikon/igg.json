@@ -1,0 +1,45 @@
+{
+  "slug": "igg",
+  "acronym": "IgG",
+  "fullName": "Immunglobulin G",
+  "category": "Immunsystem",
+  "shortAnswer": "IgG ist die häufigste Antikörperklasse und sorgt für den langfristigen Schutz nach überstandenen Infektionen oder Impfungen. Niedrige Werte können auf eine Immunschwäche hindeuten, erhöhte Werte auf chronische Infektionen oder Entzündungen.",
+  "unit": "g/l",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 7,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 7,
+      "max": 16,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 16,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Chronische Infektion",
+    "Autoimmunerkrankung",
+    "Bestimmte Blutkrankheiten"
+  ],
+  "causesLow": [
+    "Angeborene oder erworbene Immunschwäche",
+    "Eiweißverlust über Niere oder Darm"
+  ],
+  "relatedValues": [
+    "igm",
+    "iga"
+  ],
+  "doctorQuestions": [
+    "Deutet mein IgG-Wert auf eine Immunschwäche hin?",
+    "Sollten weitere Immunglobuline bestimmt werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "IgG erhöht oder erniedrigt? Bedeutung für das Immunsystem einfach erklärt auf Deutsch."
+}

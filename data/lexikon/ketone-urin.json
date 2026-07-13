@@ -1,0 +1,26 @@
+{
+  "slug": "ketone-urin",
+  "acronym": "Ketone (Urin)",
+  "fullName": "Ketonkörper im Urin",
+  "category": "Urinwerte",
+  "shortAnswer": "Ketonkörper im Urin entstehen, wenn der Körper vermehrt Fett statt Zucker zur Energiegewinnung nutzt, etwa beim Fasten, bei sehr kohlenhydratarmer Ernährung oder bei unzureichend eingestelltem Diabetes. Bei bekanntem Diabetes mit gleichzeitig hohem Blutzucker sollte dies zeitnah ärztlich abgeklärt werden.",
+  "unit": "",
+  "causesElevated": [
+    "Fasten oder sehr kohlenhydratarme Ernährung",
+    "Unzureichend eingestellter Diabetes (Risiko einer Ketoazidose)",
+    "Erbrechen oder Flüssigkeitsmangel"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "blutzucker",
+    "hba1c",
+    "glukose-urin"
+  ],
+  "doctorQuestions": [
+    "Besteht bei mir das Risiko einer Ketoazidose?",
+    "Muss meine Diabetestherapie angepasst werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Ketonkörper im Urin positiv? Bedeutung, mögliche Ursachen und Diabetes-Zusammenhang erklärt."
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "ck",
+  "acronym": "CK",
+  "fullName": "Kreatinkinase",
+  "category": "Herzwerte",
+  "shortAnswer": "Kreatinkinase kommt vor allem in Herz- und Skelettmuskulatur vor und steigt bei Muskelschädigungen an, zum Beispiel nach starker körperlicher Anstrengung, aber auch bei einem Herzinfarkt. Zur genaueren Einordnung wird oft zusätzlich CK-MB oder Troponin bestimmt.",
+  "unit": "U/l",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 190,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 190,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Starke körperliche Anstrengung",
+    "Muskelverletzung",
+    "Herzinfarkt",
+    "Bestimmte Medikamente (z. B. Statine)"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "ck-mb",
+    "troponin",
+    "myoglobin"
+  ],
+  "doctorQuestions": [
+    "Kommt meine erhöhte CK von der Muskulatur oder dem Herzen?",
+    "Sollte CK-MB oder Troponin ebenfalls bestimmt werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Kreatinkinase (CK) erhöht? Bedeutung für Muskel- und Herzschädigung einfach erklärt."
+}

@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "AMH is produced by follicles in the ovaries and is considered a marker of remaining egg reserve. The value is often measured as part of a fertility workup or before IVF, and naturally decreases with age.",
+  "metaDescription": "AMH (Anti-Müllerian Hormone) elevated or low? Meaning for egg reserve explained.",
+  "causesElevated": [
+    "Polycystic ovary syndrome (PCOS)"
+  ],
+  "causesLow": [
+    "Age-related decline in egg reserve",
+    "Premature menopause",
+    "Status after chemotherapy"
+  ],
+  "doctorQuestions": [
+    "What does my AMH value mean for my egg reserve?",
+    "Does this value affect planning for IVF?"
+  ],
+  "rangeLabels": {
+    "low": "Low",
+    "normal": "Normal (age-dependent)",
+    "elevated": "Elevated (e.g. with PCOS)"
+  },
+  "categoryLabel": "Hormones",
+  "pageTitle": "AMH: Anti-Müllerian Hormone explained | Medyra"
+}

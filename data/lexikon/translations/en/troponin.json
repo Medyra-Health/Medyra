@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Troponin is a highly specific marker of heart muscle damage and the most important lab value when a heart attack is suspected. Even mildly elevated values are taken seriously and are usually checked with a second measurement in the clinic.",
+  "metaDescription": "Troponin elevated? Meaning for heart attack and heart muscle damage explained.",
+  "causesElevated": [
+    "Heart attack",
+    "Heart muscle inflammation (myocarditis)",
+    "Intense physical exertion",
+    "Reduced kidney function"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "How urgently does my elevated troponin need to be evaluated?",
+    "Is a second measurement planned?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Cardiac Markers",
+  "pageTitle": "Troponin explained | Medyra"
+}

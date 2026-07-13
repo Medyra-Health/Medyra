@@ -1,0 +1,44 @@
+{
+  "slug": "amh",
+  "acronym": "AMH",
+  "fullName": "Anti-Müller-Hormon",
+  "category": "Hormone",
+  "shortAnswer": "AMH wird von den Eierschließen in den Eierstöcken gebildet und gilt als Marker für die verbleibende Eizellreserve. Der Wert wird häufig im Rahmen einer Kinderwunschabklärung oder vor einer künstlichen Befruchtung bestimmt und nimmt mit dem Alter natürlicherweise ab.",
+  "unit": "ng/ml",
+  "ranges": {
+    "low": {
+      "min": null,
+      "max": 1,
+      "label": "Niedrig"
+    },
+    "normal": {
+      "min": 1,
+      "max": 4,
+      "label": "Normal (altersabhängig)"
+    },
+    "elevated": {
+      "min": 4,
+      "max": null,
+      "label": "Erhöht (z. B. bei PCOS)"
+    }
+  },
+  "causesElevated": [
+    "Polyzystisches Ovarialsyndrom (PCOS)"
+  ],
+  "causesLow": [
+    "Altersbedingt abnehmende Eizellreserve",
+    "Vorzeitige Wechseljahre",
+    "Zustand nach Chemotherapie"
+  ],
+  "relatedValues": [
+    "fsh",
+    "oestradiol"
+  ],
+  "doctorQuestions": [
+    "Was bedeutet mein AMH-Wert für meine Eizellreserve?",
+    "Beeinflusst dieser Wert die Planung einer künstlichen Befruchtung?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "AMH (Anti-Müller-Hormon) erhöht oder erniedrigt? Bedeutung für die Eizellreserve erklärt."
+}

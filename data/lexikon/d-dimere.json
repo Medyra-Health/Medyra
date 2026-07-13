@@ -1,0 +1,40 @@
+{
+  "slug": "d-dimere",
+  "acronym": "D-Dimere",
+  "fullName": "D-Dimere",
+  "category": "Gerinnung",
+  "shortAnswer": "D-Dimere entstehen beim Abbau von Blutgerinnseln und sind ein wichtiger Baustein bei der Abklärung einer möglichen Thrombose oder Lungenembolie. Ein normaler Wert macht eine akute Thrombose eher unwahrscheinlich, ein erhöhter Wert allein beweist jedoch keine Thrombose, da viele Situationen ihn erhöhen können.",
+  "unit": "µg/l",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 500,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 500,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Thrombose",
+    "Lungenembolie",
+    "Nach Operationen",
+    "Schwangerschaft",
+    "Akute Entzündung oder Infektion"
+  ],
+  "causesLow": [],
+  "relatedValues": [
+    "ptt",
+    "quick",
+    "fibrinogen"
+  ],
+  "doctorQuestions": [
+    "Ist bei mir eine Thrombose oder Lungenembolie auszuschließen?",
+    "Sind weitere Untersuchungen wie eine Bildgebung nötig?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "D-Dimere erhöht? Bedeutung für Thrombose und Lungenembolie einfach erklärt auf Deutsch."
+}

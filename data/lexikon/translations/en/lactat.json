@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "Lactate is produced during energy generation, especially when muscles or tissue aren't sufficiently supplied with oxygen. Mildly elevated values after physical exertion are normal; significantly elevated values at rest can indicate oxygen deficiency in the body and should be evaluated promptly.",
+  "metaDescription": "Lactate elevated? Meaning, normal ranges, and causes explained simply.",
+  "causesElevated": [
+    "Physical exertion",
+    "Tissue oxygen deficiency",
+    "Severe infection (sepsis)",
+    "Certain medications"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "How urgently does my elevated lactate need to be evaluated?",
+    "What is the underlying cause in my case?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevated"
+  },
+  "categoryLabel": "Metabolism",
+  "pageTitle": "Lactate explained | Medyra"
+}

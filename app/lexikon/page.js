@@ -10,7 +10,7 @@ const SUPPORTED_LANGS = ['en','tr','bn','fr','ar','es','it','pt','nl','pl','zh',
 
 export const metadata = {
   title: 'Medizinisches Lexikon, Laborwerte einfach erklärt | Medyra',
-  description: 'Verstehen Sie Ihre Laborwerte: CRP, HbA1c, TSH, Cholesterin und 40+ weitere Blutwerte einfach erklärt auf Deutsch. Mit Normwerten, Ursachen und Fragen für Ihren Arzt.',
+  description: 'Verstehen Sie Ihre Laborwerte: CRP, HbA1c, TSH, Cholesterin und 130+ weitere Blutwerte einfach erklärt auf Deutsch. Mit Normwerten, Ursachen und Fragen für Ihren Arzt.',
   alternates: {
     canonical: 'https://medyra.de/lexikon',
     languages: {
@@ -21,7 +21,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Medizinisches Lexikon, Laborwerte einfach erklärt',
-    description: 'Verstehen Sie Ihre Laborwerte: CRP, HbA1c, TSH, Cholesterin und 40+ weitere Blutwerte einfach erklärt auf Deutsch.',
+    description: 'Verstehen Sie Ihre Laborwerte: CRP, HbA1c, TSH, Cholesterin und 130+ weitere Blutwerte einfach erklärt auf Deutsch.',
     url: 'https://medyra.de/lexikon',
   },
 }

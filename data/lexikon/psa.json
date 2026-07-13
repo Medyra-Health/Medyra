@@ -1,0 +1,35 @@
+{
+  "slug": "psa",
+  "acronym": "PSA",
+  "fullName": "Prostataspezifisches Antigen",
+  "category": "Tumormarker",
+  "shortAnswer": "PSA wird von der Prostata gebildet und kann bei Prostatavergrößerung, Entzündung oder Prostatakrebs ansteigen. Ein erhöhter Wert allein beweist keinen Krebs, viele gutartige Ursachen kommen deutlich häufiger vor, weshalb eine ärztliche Einordnung wichtig ist.",
+  "unit": "ng/ml",
+  "ranges": {
+    "normal": {
+      "min": 0,
+      "max": 4,
+      "label": "Normal"
+    },
+    "elevated": {
+      "min": 4,
+      "max": null,
+      "label": "Erhöht"
+    }
+  },
+  "causesElevated": [
+    "Gutartige Prostatavergrößerung (BPH)",
+    "Prostataentzündung",
+    "Nach körperlicher Belastung (z. B. Fahrradfahren)",
+    "Prostatakrebs (eine von mehreren möglichen Ursachen)"
+  ],
+  "causesLow": [],
+  "relatedValues": [],
+  "doctorQuestions": [
+    "Welche der möglichen Ursachen kommt bei mir infrage?",
+    "Ist eine weitere urologische Abklärung sinnvoll?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "PSA-Wert erhöht? Mögliche Ursachen und nächste Schritte einfach erklärt auf Deutsch."
+}

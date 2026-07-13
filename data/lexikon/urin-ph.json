@@ -1,0 +1,35 @@
+{
+  "slug": "urin-ph",
+  "acronym": "pH (Urin)",
+  "fullName": "Urin-pH-Wert",
+  "category": "Urinwerte",
+  "shortAnswer": "Der pH-Wert des Urins zeigt, ob dieser eher sauer oder basisch ist, und wird unter anderem von Ernährung, Stoffwechsel und manchen Erkrankungen beeinflusst. Er spielt auch eine Rolle bei der Entstehung bestimmter Nierensteinarten.",
+  "unit": "",
+  "ranges": {
+    "normal": {
+      "min": 5,
+      "max": 7,
+      "label": "Normal"
+    }
+  },
+  "causesElevated": [
+    "Vegetarische/basenreiche Ernährung",
+    "Harnwegsinfektion",
+    "Nierenfunktionsstörung"
+  ],
+  "causesLow": [
+    "Eiweißreiche Ernährung",
+    "Stoffwechselentgleisung (z. B. Ketoazidose)"
+  ],
+  "relatedValues": [
+    "nitrit-urin",
+    "protein-urin"
+  ],
+  "doctorQuestions": [
+    "Beeinflusst mein Urin-pH die Bildung von Nierensteinen?",
+    "Sollte meine Ernährung angepasst werden?"
+  ],
+  "lastReviewed": "2026-07-13",
+  "medicallyReviewedBy": null,
+  "metaDescription": "Urin-pH-Wert erhöht oder erniedrigt? Bedeutung und Ursachen einfach erklärt auf Deutsch."
+}
