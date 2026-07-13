@@ -723,5 +723,22 @@
     "faqNudge": "Veri ve gizlilik bilgisi mi arıyorsunuz?",
     "privacyPolicy": "Gizlilik Politikası",
     "termsOfService": "Kullanım Koşulları"
+  },
+  "share": {
+    "ownReportCta": "Kendi raporunuzu anlayın",
+    "ownReportCtaShort": "Kendiniz deneyin",
+    "loading": "Yükleniyor…",
+    "linkInvalidTitle": "Bu bağlantı artık geçerli değil",
+    "linkInvalidText": "Bağlantının süresi doldu veya iptal edildi. Gizlilik nedeniyle paylaşılan raporlar en fazla 7 gün erişilebilir.",
+    "backToMedyra": "Medyra’ya git →",
+    "sharedBanner": "Paylaşılan, salt okunur görünüm · {date} tarihine kadar geçerli",
+    "disclaimerLabel": "Not: ",
+    "disclaimerFallback": "Bu anlaşılır bir özet olup tıbbi tavsiye değildir. Bulgularınızı her zaman doktorunuzla görüşün.",
+    "valuesTitle": "Değerler",
+    "normalRangeLabel": "Normal aralık: ",
+    "questionsTitle": "Doktorunuz için sorular",
+    "viralTitle": "Sizin de anlamadığınız bir raporunuz mu var?",
+    "viralText": "Medyra tahlil değerlerini, doktor mektuplarını ve ilaç planlarını anlaşılır dille açıklar. Ayda 3 belge ücretsiz.",
+    "viralCta": "Ücretsiz deneyin"
   }
 }

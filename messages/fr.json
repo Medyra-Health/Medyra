@@ -723,5 +723,22 @@
     "faqNudge": "Vous cherchez des informations sur les données et la confidentialité ?",
     "privacyPolicy": "Politique de confidentialité",
     "termsOfService": "Conditions d’utilisation"
+  },
+  "share": {
+    "ownReportCta": "Comprendre votre propre rapport",
+    "ownReportCtaShort": "Essayer",
+    "loading": "Chargement…",
+    "linkInvalidTitle": "Ce lien n’est plus valide",
+    "linkInvalidText": "Le lien a expiré ou a été révoqué. Les rapports partagés sont disponibles pendant 7 jours maximum, pour des raisons de confidentialité.",
+    "backToMedyra": "Aller sur Medyra →",
+    "sharedBanner": "Vue partagée, lecture seule · disponible jusqu’au {date}",
+    "disclaimerLabel": "Remarque : ",
+    "disclaimerFallback": "Ceci est un résumé en langage clair, pas un avis médical. Discutez toujours des résultats avec votre médecin.",
+    "valuesTitle": "Valeurs",
+    "normalRangeLabel": "Plage normale : ",
+    "questionsTitle": "Questions pour votre médecin",
+    "viralTitle": "Vous avez aussi un rapport que vous ne comprenez pas ?",
+    "viralText": "Medyra explique les valeurs de laboratoire, les lettres de médecin et les plans de médication en langage clair. 3 documents par mois gratuits.",
+    "viralCta": "Essayer gratuitement"
   }
 }

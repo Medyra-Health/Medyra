@@ -723,5 +723,22 @@
     "faqNudge": "Cerchi informazioni su dati e privacy?",
     "privacyPolicy": "Informativa sulla privacy",
     "termsOfService": "Termini di servizio"
+  },
+  "share": {
+    "ownReportCta": "Capisci il tuo referto",
+    "ownReportCtaShort": "Provalo",
+    "loading": "Caricamento…",
+    "linkInvalidTitle": "Questo link non è più valido",
+    "linkInvalidText": "Il link è scaduto o è stato revocato. I referti condivisi sono disponibili per un massimo di 7 giorni per motivi di privacy.",
+    "backToMedyra": "Vai su Medyra →",
+    "sharedBanner": "Vista condivisa, sola lettura · disponibile fino al {date}",
+    "disclaimerLabel": "Nota: ",
+    "disclaimerFallback": "Questo è un riepilogo in linguaggio semplice, non un consiglio medico. Discuti sempre i risultati con il tuo medico.",
+    "valuesTitle": "Valori",
+    "normalRangeLabel": "Intervallo normale: ",
+    "questionsTitle": "Domande per il tuo medico",
+    "viralTitle": "Hai anche tu un referto che non capisci?",
+    "viralText": "Medyra spiega valori di laboratorio, lettere del medico e piani terapeutici in linguaggio semplice. 3 referti al mese gratis.",
+    "viralCta": "Provalo gratis"
   }
 }

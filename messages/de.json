@@ -723,5 +723,22 @@
     "faqNudge": "Suchen Sie Informationen zu Daten & Datenschutz?",
     "privacyPolicy": "Datenschutzerklärung",
     "termsOfService": "Nutzungsbedingungen"
+  },
+  "share": {
+    "ownReportCta": "Eigenen Befund verstehen",
+    "ownReportCtaShort": "Selbst testen",
+    "loading": "Wird geladen…",
+    "linkInvalidTitle": "Dieser Link ist nicht mehr gültig",
+    "linkInvalidText": "Der Link ist abgelaufen oder wurde widerrufen. Geteilte Befunde sind aus Datenschutzgründen maximal 7 Tage abrufbar.",
+    "backToMedyra": "Zu Medyra →",
+    "sharedBanner": "Geteilte, schreibgeschützte Ansicht · verfügbar bis {date}",
+    "disclaimerLabel": "Hinweis: ",
+    "disclaimerFallback": "Dies ist eine verständliche Aufbereitung, keine medizinische Beratung. Besprechen Sie Befunde immer mit Ärztin oder Arzt.",
+    "valuesTitle": "Werte",
+    "normalRangeLabel": "Normalbereich: ",
+    "questionsTitle": "Fragen für das Arztgespräch",
+    "viralTitle": "Auch einen Befund, den Sie nicht verstehen?",
+    "viralText": "Medyra erklärt Laborwerte, Arztbriefe und Medikationspläne in verständlicher Sprache. 3 Dokumente pro Monat kostenlos.",
+    "viralCta": "Kostenlos ausprobieren"
   }
 }

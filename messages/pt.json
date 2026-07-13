@@ -723,5 +723,22 @@
     "faqNudge": "Procurando informações sobre dados e privacidade?",
     "privacyPolicy": "Política de Privacidade",
     "termsOfService": "Termos de Serviço"
+  },
+  "share": {
+    "ownReportCta": "Entenda seu próprio relatório",
+    "ownReportCtaShort": "Experimente você mesmo",
+    "loading": "Carregando…",
+    "linkInvalidTitle": "Este link não é mais válido",
+    "linkInvalidText": "O link expirou ou foi revogado. Relatórios compartilhados ficam disponíveis por no máximo 7 dias por motivos de privacidade.",
+    "backToMedyra": "Ir para a Medyra →",
+    "sharedBanner": "Visualização compartilhada, somente leitura · disponível até {date}",
+    "disclaimerLabel": "Nota: ",
+    "disclaimerFallback": "Este é um resumo em linguagem simples, não um conselho médico. Sempre discuta os resultados com seu médico.",
+    "valuesTitle": "Valores",
+    "normalRangeLabel": "Faixa normal: ",
+    "questionsTitle": "Perguntas para seu médico",
+    "viralTitle": "Você também tem um relatório que não entende?",
+    "viralText": "A Medyra explica valores laboratoriais, cartas médicas e planos de medicação em linguagem simples. 3 documentos por mês grátis.",
+    "viralCta": "Experimente grátis"
   }
 }

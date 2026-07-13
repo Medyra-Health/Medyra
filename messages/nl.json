@@ -723,5 +723,22 @@
     "faqNudge": "Op zoek naar informatie over gegevens & privacy?",
     "privacyPolicy": "Privacybeleid",
     "termsOfService": "Gebruiksvoorwaarden"
+  },
+  "share": {
+    "ownReportCta": "Begrijp uw eigen rapport",
+    "ownReportCtaShort": "Probeer het zelf",
+    "loading": "Bezig met laden…",
+    "linkInvalidTitle": "Deze link is niet meer geldig",
+    "linkInvalidText": "De link is verlopen of ingetrokken. Gedeelde rapporten zijn om privacyredenen maximaal 7 dagen beschikbaar.",
+    "backToMedyra": "Naar Medyra →",
+    "sharedBanner": "Gedeelde, alleen-lezen weergave · beschikbaar tot {date}",
+    "disclaimerLabel": "Let op: ",
+    "disclaimerFallback": "Dit is een begrijpelijke samenvatting, geen medisch advies. Bespreek bevindingen altijd met uw arts.",
+    "valuesTitle": "Waarden",
+    "normalRangeLabel": "Normaalbereik: ",
+    "questionsTitle": "Vragen voor uw arts",
+    "viralTitle": "Heeft u ook een rapport dat u niet begrijpt?",
+    "viralText": "Medyra legt labwaarden, doktersbrieven en medicatieschema’s uit in duidelijke taal. 3 documenten per maand gratis.",
+    "viralCta": "Gratis proberen"
   }
 }

@@ -723,5 +723,22 @@
     "faqNudge": "데이터 및 개인정보 보호 정보를 찾고 계신가요?",
     "privacyPolicy": "개인정보 처리방침",
     "termsOfService": "서비스 약관"
+  },
+  "share": {
+    "ownReportCta": "내 보고서 이해하기",
+    "ownReportCtaShort": "직접 사용해보기",
+    "loading": "로딩 중…",
+    "linkInvalidTitle": "이 링크는 더 이상 유효하지 않습니다",
+    "linkInvalidText": "링크가 만료되었거나 취소되었습니다. 개인정보 보호를 위해 공유된 보고서는 최대 7일간만 제공됩니다.",
+    "backToMedyra": "Medyra로 이동 →",
+    "sharedBanner": "공유된 읽기 전용 보기 · {date}까지 이용 가능",
+    "disclaimerLabel": "참고: ",
+    "disclaimerFallback": "이것은 쉬운 언어로 된 요약이며 의료 조언이 아닙니다. 검사 결과는 항상 의사와 상의하세요.",
+    "valuesTitle": "수치",
+    "normalRangeLabel": "정상 범위: ",
+    "questionsTitle": "의사에게 물어볼 질문",
+    "viralTitle": "이해하기 어려운 보고서가 또 있으신가요?",
+    "viralText": "Medyra는 검사 수치, 의사 편지, 복약 계획표를 쉬운 언어로 설명합니다. 월 3건 문서 무료.",
+    "viralCta": "무료로 사용해보기"
   }
 }

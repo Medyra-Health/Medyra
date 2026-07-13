@@ -723,5 +723,22 @@
     "faqNudge": "データとプライバシーの情報をお探しですか？",
     "privacyPolicy": "プライバシーポリシー",
     "termsOfService": "利用規約"
+  },
+  "share": {
+    "ownReportCta": "ご自身の報告書を理解する",
+    "ownReportCtaShort": "自分で試す",
+    "loading": "読み込み中…",
+    "linkInvalidTitle": "このリンクは無効になりました",
+    "linkInvalidText": "リンクの有効期限が切れたか、取り消されました。プライバシー保護のため、共有された報告書は最大7日間のみ閲覧可能です。",
+    "backToMedyra": "Medyraへ移動 →",
+    "sharedBanner": "共有・閲覧専用ビュー · {date}まで有効",
+    "disclaimerLabel": "注意：",
+    "disclaimerFallback": "これは分かりやすい要約であり、医療アドバイスではありません。検査結果については必ず医師と話し合ってください。",
+    "valuesTitle": "数値",
+    "normalRangeLabel": "基準範囲：",
+    "questionsTitle": "医師への質問",
+    "viralTitle": "あなたにも理解できない報告書はありませんか？",
+    "viralText": "Medyraは検査値、医師の手紙、服薬プランを分かりやすい言葉で説明します。月3件の文書が無料。",
+    "viralCta": "無料で試す"
   }
 }

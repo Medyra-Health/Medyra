@@ -723,5 +723,22 @@
     "faqNudge": "在寻找数据和隐私信息吗？",
     "privacyPolicy": "隐私政策",
     "termsOfService": "服务条款"
+  },
+  "share": {
+    "ownReportCta": "看懂您自己的报告",
+    "ownReportCtaShort": "亲自试试",
+    "loading": "加载中…",
+    "linkInvalidTitle": "此链接已失效",
+    "linkInvalidText": "该链接已过期或已被撤销。出于隐私原因，共享报告最多可保留7天。",
+    "backToMedyra": "前往Medyra →",
+    "sharedBanner": "共享只读视图 · 有效期至{date}",
+    "disclaimerLabel": "提示：",
+    "disclaimerFallback": "这是通俗易懂的摘要，不是医疗建议。请始终与您的医生讨论检查结果。",
+    "valuesTitle": "数值",
+    "normalRangeLabel": "正常范围：",
+    "questionsTitle": "给医生的问题",
+    "viralTitle": "您是否也有看不懂的报告？",
+    "viralText": "Medyra用通俗易懂的语言解释化验值、医生信件和用药计划。每月3份文件免费。",
+    "viralCta": "免费试用"
   }
 }

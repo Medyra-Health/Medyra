@@ -723,5 +723,22 @@
     "faqNudge": "Szukasz informacji o danych i prywatności?",
     "privacyPolicy": "Polityka prywatności",
     "termsOfService": "Warunki korzystania z usługi"
+  },
+  "share": {
+    "ownReportCta": "Zrozum swój wynik",
+    "ownReportCtaShort": "Wypróbuj sam",
+    "loading": "Ładowanie…",
+    "linkInvalidTitle": "Ten link jest już nieważny",
+    "linkInvalidText": "Link wygasł lub został unieważniony. Udostępnione wyniki są dostępne maksymalnie przez 7 dni ze względów prywatności.",
+    "backToMedyra": "Przejdź do Medyra →",
+    "sharedBanner": "Udostępniony widok tylko do odczytu · dostępny do {date}",
+    "disclaimerLabel": "Uwaga: ",
+    "disclaimerFallback": "To jest zrozumiałe podsumowanie, a nie porada medyczna. Zawsze omawiaj wyniki z lekarzem.",
+    "valuesTitle": "Wartości",
+    "normalRangeLabel": "Zakres prawidłowy: ",
+    "questionsTitle": "Pytania do lekarza",
+    "viralTitle": "Masz też wynik, którego nie rozumiesz?",
+    "viralText": "Medyra wyjaśnia wyniki laboratoryjne, pisma lekarskie i plany leków w zrozumiałym języku. 3 dokumenty miesięcznie za darmo.",
+    "viralCta": "Wypróbuj za darmo"
   }
 }
