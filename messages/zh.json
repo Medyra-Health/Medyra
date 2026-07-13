@@ -693,5 +693,27 @@
     "descMeds": "每种药物的用途和服用方法，一目了然。",
     "descInsurance": "决定、费用和期限，没有官僚德语。",
     "descLanguages": "完整解读以您的语言呈现，包括问答聊天。"
+  },
+  "contact": {
+    "metaTitle": "联系我们，Medyra",
+    "metaDescription": "直接联系Medyra创始人，咨询问题、反馈、合作伙伴关系和支持。",
+    "heroTitle": "联系我们",
+    "heroSub": "没有工单系统，没有聊天机器人。直接给我们写信。我们会阅读每一条消息并亲自回复。",
+    "peopleLabel": "Medyra背后的团队",
+    "meetTitle": "认识创始人",
+    "akashRole": "联合创始人兼首席执行官",
+    "akashBio": "软件工程师，拥有波茨坦大学和哈索·普拉特纳研究所的数字健康硕士学位。",
+    "philippRole": "联合创始人兼首席医疗官",
+    "philippBio": "认证内科医生，在柏林医院拥有超过五年的临床经验。",
+    "emailComingSoon": "直接邮箱即将推出",
+    "generalEnquiries": "一般咨询",
+    "companyEmail": "公司邮箱",
+    "generalDesc": "用于账单、数据隐私、GDPR请求或媒体咨询。",
+    "replyTime": "我们将在1个工作日内回复",
+    "replyTimeSub": "通常会快得多",
+    "location": "总部位于德国波茨坦 · 中欧时区",
+    "faqNudge": "在寻找数据和隐私信息吗？",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款"
   }
 }

@@ -693,5 +693,27 @@
     "descMeds": "A cosa serve ogni farmaco e come assumerlo, con chiarezza.",
     "descInsurance": "Decisioni, costi e scadenze senza gergo burocratico.",
     "descLanguages": "La spiegazione completa arriva nella tua lingua, chat inclusa."
+  },
+  "contact": {
+    "metaTitle": "Contatti, Medyra",
+    "metaDescription": "Contatta direttamente i fondatori di Medyra per domande, feedback, collaborazioni e supporto.",
+    "heroTitle": "Contattaci",
+    "heroSub": "Niente sistemi di ticket, niente chatbot. Scrivici direttamente. Leggiamo ogni messaggio e rispondiamo personalmente.",
+    "peopleLabel": "Le persone dietro Medyra",
+    "meetTitle": "Conosci i fondatori",
+    "akashRole": "Co-fondatore e CEO",
+    "akashBio": "Ingegnere del software con un master in Digital Health presso l’Università di Potsdam e l’Hasso Plattner Institute.",
+    "philippRole": "Co-fondatore e direttore medico",
+    "philippBio": "Internista certificato con oltre cinque anni di esperienza clinica in ospedali di Berlino.",
+    "emailComingSoon": "Email diretta in arrivo",
+    "generalEnquiries": "Richieste generali",
+    "companyEmail": "Email aziendale",
+    "generalDesc": "Per fatturazione, privacy dei dati, richieste GDPR o richieste stampa.",
+    "replyTime": "Rispondiamo entro 1 giorno lavorativo",
+    "replyTimeSub": "Di solito molto più velocemente",
+    "location": "Con sede a Potsdam, Germania · fuso orario CET",
+    "faqNudge": "Cerchi informazioni su dati e privacy?",
+    "privacyPolicy": "Informativa sulla privacy",
+    "termsOfService": "Termini di servizio"
   }
 }

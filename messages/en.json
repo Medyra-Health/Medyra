@@ -693,5 +693,27 @@
     "descMeds": "What each medication is for and how to take it, made clear.",
     "descInsurance": "Decisions, costs and deadlines without the bureaucracy German.",
     "descLanguages": "The full explanation arrives in your language, chat included."
+  },
+  "contact": {
+    "metaTitle": "Contact, Medyra",
+    "metaDescription": "Get in touch with the Medyra founders. Direct access for questions, feedback, partnerships, and support.",
+    "heroTitle": "Get in Touch",
+    "heroSub": "No ticket systems, no chatbots. Write to us directly. We read every message and reply personally.",
+    "peopleLabel": "The people behind Medyra",
+    "meetTitle": "Meet the Founders",
+    "akashRole": "Co-Founder & CEO",
+    "akashBio": "Software engineer with a Master’s in Digital Health from the University of Potsdam and Hasso Plattner Institute.",
+    "philippRole": "Co-Founder & CMO · Chief Medical Officer",
+    "philippBio": "Board certified Internist with over five years of clinical experience in Berlin hospitals.",
+    "emailComingSoon": "Direct email coming soon",
+    "generalEnquiries": "General Enquiries",
+    "companyEmail": "Company email",
+    "generalDesc": "For billing, data privacy, GDPR requests, or press enquiries.",
+    "replyTime": "We reply within 1 business day",
+    "replyTimeSub": "Usually much faster",
+    "location": "Based in Potsdam, Germany · CET timezone",
+    "faqNudge": "Looking for data & privacy info?",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
   }
 }

@@ -693,5 +693,27 @@
     "descMeds": "各薬が何のためか、どう飲むかを明快に。",
     "descInsurance": "決定、費用、期限をお役所言葉なしで。",
     "descLanguages": "完全な解説があなたの言語で届きます。チャットも対応。"
+  },
+  "contact": {
+    "metaTitle": "お問い合わせ、Medyra",
+    "metaDescription": "質問、フィードバック、提携、サポートについて、Medyraの創業者に直接ご連絡ください。",
+    "heroTitle": "お問い合わせ",
+    "heroSub": "チケットシステムもチャットボットもありません。直接メッセージをお送りください。すべてのメッセージを読み、個人的に返信します。",
+    "peopleLabel": "Medyraを支える人々",
+    "meetTitle": "創業者を紹介します",
+    "akashRole": "共同創業者兼CEO",
+    "akashBio": "ポツダム大学とハッソ・プラットナー研究所でデジタルヘルスの修士号を取得したソフトウェアエンジニア。",
+    "philippRole": "共同創業者兼最高医療責任者",
+    "philippBio": "ベルリンの病院で5年以上の臨床経験を持つ認定内科医。",
+    "emailComingSoon": "直接メールは近日公開",
+    "generalEnquiries": "一般のお問い合わせ",
+    "companyEmail": "会社のメール",
+    "generalDesc": "請求、データプライバシー、GDPRリクエスト、報道関係のお問い合わせについて。",
+    "replyTime": "1営業日以内にご返信します",
+    "replyTimeSub": "通常はもっと早く",
+    "location": "ドイツ・ポツダムを拠点 · 中央ヨーロッパ時間",
+    "faqNudge": "データとプライバシーの情報をお探しですか？",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約"
   }
 }

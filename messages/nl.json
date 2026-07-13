@@ -693,5 +693,27 @@
     "descMeds": "Waar elk medicijn voor is en hoe u het inneemt, helder uitgelegd.",
     "descInsurance": "Besluiten, kosten en termijnen zonder ambtelijk jargon.",
     "descLanguages": "De volledige uitleg komt in uw taal, chat inbegrepen."
+  },
+  "contact": {
+    "metaTitle": "Contact, Medyra",
+    "metaDescription": "Neem rechtstreeks contact op met de oprichters van Medyra voor vragen, feedback, samenwerkingen en ondersteuning.",
+    "heroTitle": "Neem contact op",
+    "heroSub": "Geen ticketsystemen, geen chatbots. Schrijf ons rechtstreeks. Wij lezen elk bericht en reageren persoonlijk.",
+    "peopleLabel": "De mensen achter Medyra",
+    "meetTitle": "Maak kennis met de oprichters",
+    "akashRole": "Medeoprichter & CEO",
+    "akashBio": "Software-engineer met een master in Digital Health van de Universiteit van Potsdam en het Hasso Plattner Institute.",
+    "philippRole": "Medeoprichter & CMO · Chief Medical Officer",
+    "philippBio": "Erkend internist met meer dan vijf jaar klinische ervaring in Berlijnse ziekenhuizen.",
+    "emailComingSoon": "Rechtstreeks e-mailadres volgt binnenkort",
+    "generalEnquiries": "Algemene vragen",
+    "companyEmail": "Bedrijfs-e-mail",
+    "generalDesc": "Voor facturering, gegevensbescherming, AVG-verzoeken of persaanvragen.",
+    "replyTime": "Wij reageren binnen 1 werkdag",
+    "replyTimeSub": "Meestal veel sneller",
+    "location": "Gevestigd in Potsdam, Duitsland · CET-tijdzone",
+    "faqNudge": "Op zoek naar informatie over gegevens & privacy?",
+    "privacyPolicy": "Privacybeleid",
+    "termsOfService": "Gebruiksvoorwaarden"
   }
 }

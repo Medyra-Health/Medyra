@@ -693,5 +693,27 @@
     "descMeds": "Do czego służy każdy lek i jak go przyjmować, jasno wyjaśnione.",
     "descInsurance": "Decyzje, koszty i terminy bez urzędniczego języka.",
     "descLanguages": "Pełne wyjaśnienie przychodzi w Twoim języku, razem z czatem."
+  },
+  "contact": {
+    "metaTitle": "Kontakt, Medyra",
+    "metaDescription": "Skontaktuj się bezpośrednio z założycielami Medyra w sprawie pytań, opinii, partnerstw i wsparcia.",
+    "heroTitle": "Skontaktuj się z nami",
+    "heroSub": "Żadnych systemów zgłoszeń, żadnych chatbotów. Napisz do nas bezpośrednio. Czytamy każdą wiadomość i odpowiadamy osobiście.",
+    "peopleLabel": "Ludzie stojący za Medyra",
+    "meetTitle": "Poznaj założycieli",
+    "akashRole": "Współzałożyciel i CEO",
+    "akashBio": "Inżynier oprogramowania z tytułem magistra Digital Health na Uniwersytecie w Poczdamie i Hasso Plattner Institute.",
+    "philippRole": "Współzałożyciel i dyrektor medyczny",
+    "philippBio": "Certyfikowany internista z ponad pięcioletnim doświadczeniem klinicznym w berlińskich szpitalach.",
+    "emailComingSoon": "Bezpośredni e-mail wkrótce",
+    "generalEnquiries": "Zapytania ogólne",
+    "companyEmail": "E-mail firmowy",
+    "generalDesc": "W sprawach rozliczeń, ochrony danych, wniosków RODO lub zapytań prasowych.",
+    "replyTime": "Odpowiadamy w ciągu 1 dnia roboczego",
+    "replyTimeSub": "Zazwyczaj znacznie szybciej",
+    "location": "Siedziba w Poczdamie, Niemcy · strefa czasowa CET",
+    "faqNudge": "Szukasz informacji o danych i prywatności?",
+    "privacyPolicy": "Polityka prywatności",
+    "termsOfService": "Warunki korzystania z usługi"
   }
 }

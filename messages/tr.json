@@ -693,5 +693,27 @@
     "descMeds": "Her ilacın ne için olduğu ve nasıl alınacağı, net şekilde.",
     "descInsurance": "Kararlar, masraflar ve süreler; bürokrasi Almancası olmadan.",
     "descLanguages": "Eksiksiz açıklama sizin dilinizde gelir, sohbet dahil."
+  },
+  "contact": {
+    "metaTitle": "İletişim, Medyra",
+    "metaDescription": "Sorular, geri bildirim, ortaklıklar ve destek için Medyra kurucularıyla doğrudan iletişime geçin.",
+    "heroTitle": "Bize Ulaşın",
+    "heroSub": "Ticket sistemi yok, chatbot yok. Bize doğrudan yazın. Her mesajı okuyoruz ve kişisel olarak yanıtlıyoruz.",
+    "peopleLabel": "Medyra’nın arkasındaki insanlar",
+    "meetTitle": "Kurucularla tanışın",
+    "akashRole": "Kurucu Ortak & CEO",
+    "akashBio": "Potsdam Üniversitesi ve Hasso Plattner Institute’ten Dijital Sağlık alanında yüksek lisans derecesine sahip yazılım mühendisi.",
+    "philippRole": "Kurucu Ortak & CMO · Baş Hekim",
+    "philippBio": "Berlin hastanelerinde beş yılı aşkın klinik deneyime sahip, uzman iç hastalıkları hekimi.",
+    "emailComingSoon": "Doğrudan e-posta yakında",
+    "generalEnquiries": "Genel Sorular",
+    "companyEmail": "Şirket e-postası",
+    "generalDesc": "Faturalandırma, veri gizliliği, GDPR talepleri veya basın soruları için.",
+    "replyTime": "1 iş günü içinde yanıt veriyoruz",
+    "replyTimeSub": "Genellikle çok daha hızlı",
+    "location": "Potsdam, Almanya merkezli · CET saat dilimi",
+    "faqNudge": "Veri ve gizlilik bilgisi mi arıyorsunuz?",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Kullanım Koşulları"
   }
 }

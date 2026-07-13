@@ -1,33 +1,39 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Mail, MessageSquare, Clock, Building2, MapPin, Stethoscope, Rocket } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 import AppHeader from '@/components/AppHeader'
 
-export const metadata = {
-  title: 'Contact, Medyra',
-  description: 'Get in touch with the Medyra founders. Direct access for questions, feedback, partnerships, and support.',
+export async function generateMetadata() {
+  const t = await getTranslations('contact')
+  return {
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+  }
 }
 
-const founders = [
-  {
-    name: 'Mohammad Abralur Rahman Akash',
-    role: 'Co-Founder & CEO',
-    photo: '/team/akash-rahman.jpg',
-    icon: Rocket,
-    bio: 'Software engineer with a Master’s in Digital Health from the University of Potsdam and Hasso Plattner Institute.',
-    email: 'akash@medyra.de',
-  },
-  {
-    name: 'Dr. med. Philipp Mattar',
-    role: 'Co-Founder & CMO · Chief Medical Officer',
-    photo: '/team/phillip-mattar.jpg',
-    icon: Stethoscope,
-    bio: 'Board certified Internist with over five years of clinical experience in Berlin hospitals.',
-    email: 'philipp@medyra.de',
-  },
-]
+export default async function ContactPage() {
+  const t = await getTranslations('contact')
 
-export default function ContactPage() {
+  const founders = [
+    {
+      name: 'Mohammad Abralur Rahman Akash',
+      role: t('akashRole'),
+      photo: '/team/akash-rahman.jpg',
+      icon: Rocket,
+      bio: t('akashBio'),
+      email: 'akash@medyra.de',
+    },
+    {
+      name: 'Dr. med. Philipp Mattar',
+      role: t('philippRole'),
+      photo: '/team/phillip-mattar.jpg',
+      icon: Stethoscope,
+      bio: t('philippBio'),
+      email: 'philipp@medyra.de',
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       <AppHeader back={{ href: '/', label: 'Back to Medyra' }} title="Contact" tone="emerald" />
@@ -39,16 +45,16 @@ export default function ContactPage() {
           <div className="w-14 h-14 bg-emerald-50 border border-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
             <MessageSquare className="h-6 w-6 text-emerald-600" />
           </div>
-          <h1 className="text-4xl font-black text-[#0B1F17] mb-3" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>Get in Touch</h1>
+          <h1 className="text-4xl font-black text-[#0B1F17] mb-3" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>{t('heroTitle')}</h1>
           <p className="text-gray-500 text-lg leading-relaxed max-w-md mx-auto">
-            No ticket systems, no chatbots. Write to us directly. We read every message and reply personally.
+            {t('heroSub')}
           </p>
         </div>
 
         {/* Founders */}
         <div className="text-center mb-8">
-          <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">The people behind Medyra</p>
-          <h2 className="text-2xl font-black text-gray-900">Meet the Founders</h2>
+          <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">{t('peopleLabel')}</p>
+          <h2 className="text-2xl font-black text-gray-900">{t('meetTitle')}</h2>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6 mb-14">
@@ -89,7 +95,7 @@ export default function ContactPage() {
                 ) : (
                   <div className="inline-flex items-center gap-2 bg-gray-100 text-gray-400 font-semibold text-sm px-4 py-2.5 rounded-xl w-full justify-center select-none">
                     <Mail className="h-4 w-4" />
-                    Direct email coming soon
+                    {t('emailComingSoon')}
                   </div>
                 )}
               </div>
@@ -105,12 +111,12 @@ export default function ContactPage() {
                 <Building2 className="h-5 w-5 text-gray-500" />
               </div>
               <div>
-                <p className="font-bold text-gray-900 text-sm">General Enquiries</p>
-                <p className="text-xs text-gray-500 font-medium">Company email</p>
+                <p className="font-bold text-gray-900 text-sm">{t('generalEnquiries')}</p>
+                <p className="text-xs text-gray-500 font-medium">{t('companyEmail')}</p>
               </div>
             </div>
             <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-              For billing, data privacy, GDPR requests, or press enquiries.
+              {t('generalDesc')}
             </p>
             <a
               href="mailto:hello@medyra.de"
@@ -127,23 +133,23 @@ export default function ContactPage() {
                 <Clock className="h-5 w-5 text-blue-500" />
               </div>
               <div>
-                <p className="font-bold text-blue-900 text-sm">We reply within 1 business day</p>
-                <p className="text-xs text-blue-600 font-medium">Usually much faster</p>
+                <p className="font-bold text-blue-900 text-sm">{t('replyTime')}</p>
+                <p className="text-xs text-blue-600 font-medium">{t('replyTimeSub')}</p>
               </div>
             </div>
             <p className="text-sm text-blue-800/70 leading-relaxed inline-flex items-start gap-1.5">
               <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
-              Based in Potsdam, Germany · CET timezone
+              {t('location')}
             </p>
           </div>
         </div>
 
         {/* FAQ nudge */}
         <div className="text-center text-sm text-gray-400">
-          Looking for data & privacy info?{' '}
-          <Link href="/privacy" className="text-emerald-600 hover:underline font-medium">Privacy Policy</Link>
+          {t('faqNudge')}{' '}
+          <Link href="/privacy" className="text-emerald-600 hover:underline font-medium">{t('privacyPolicy')}</Link>
           {' '}·{' '}
-          <Link href="/terms" className="text-emerald-600 hover:underline font-medium">Terms of Service</Link>
+          <Link href="/terms" className="text-emerald-600 hover:underline font-medium">{t('termsOfService')}</Link>
         </div>
       </main>
     </div>

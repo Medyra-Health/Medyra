@@ -693,5 +693,27 @@
     "descMeds": "Wofür jedes Medikament ist und wie Sie es einnehmen, klar erklärt.",
     "descInsurance": "Bescheide, Kosten und Fristen ohne Amtsdeutsch.",
     "descLanguages": "Die komplette Erklärung kommt in Ihrer Sprache, Chat inklusive."
+  },
+  "contact": {
+    "metaTitle": "Kontakt, Medyra",
+    "metaDescription": "Kontaktieren Sie die Medyra-Gründer direkt, für Fragen, Feedback, Partnerschaften und Support.",
+    "heroTitle": "Kontaktieren Sie uns",
+    "heroSub": "Keine Ticketsysteme, keine Chatbots. Schreiben Sie uns direkt. Wir lesen jede Nachricht und antworten persönlich.",
+    "peopleLabel": "Die Menschen hinter Medyra",
+    "meetTitle": "Lernen Sie die Gründer kennen",
+    "akashRole": "Mitgründer & CEO",
+    "akashBio": "Softwareingenieur mit einem Master in Digital Health von der Universität Potsdam und dem Hasso-Plattner-Institut.",
+    "philippRole": "Mitgründer & CMO · Chief Medical Officer",
+    "philippBio": "Facharzt für Innere Medizin mit über fünf Jahren klinischer Erfahrung in Berliner Krankenhäusern.",
+    "emailComingSoon": "Direkte E-Mail folgt in Kürze",
+    "generalEnquiries": "Allgemeine Anfragen",
+    "companyEmail": "Firmen-E-Mail",
+    "generalDesc": "Für Abrechnung, Datenschutz, DSGVO-Anfragen oder Presseanfragen.",
+    "replyTime": "Wir antworten innerhalb eines Werktages",
+    "replyTimeSub": "Meist deutlich schneller",
+    "location": "Ansässig in Potsdam, Deutschland · MEZ-Zeitzone",
+    "faqNudge": "Suchen Sie Informationen zu Daten & Datenschutz?",
+    "privacyPolicy": "Datenschutzerklärung",
+    "termsOfService": "Nutzungsbedingungen"
   }
 }
