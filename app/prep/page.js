@@ -17,43 +17,11 @@ import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations, useLocale } from 'next-intl'
 
 // ── Categories ────────────────────────────────────────────────────────────
-const CATEGORIES = [
-  {
-    id: 'symptoms',
-    icon: Stethoscope,
-    label: 'I have symptoms',
-    labelDe: 'Ich habe Symptome',
-    desc: "Describe what you're feeling to get a structured summary",
-    descDe: 'Beschreiben Sie Ihre Beschwerden für eine strukturierte Zusammenfassung',
-    color: 'emerald',
-  },
-  {
-    id: 'diagnosis',
-    icon: Pill,
-    label: 'I have a diagnosis',
-    labelDe: 'Ich habe eine Diagnose',
-    desc: 'Already diagnosed? Prepare questions for your follow-up',
-    descDe: 'Bereits diagnostiziert? Bereiten Sie Fragen für Ihre Nachsorge vor',
-    color: 'blue',
-  },
-  {
-    id: 'results',
-    icon: FlaskConical,
-    label: 'I have test results',
-    labelDe: 'Ich habe Testergebnisse',
-    desc: 'Lab work, scans, or reports, understand what to ask',
-    descDe: 'Labor, Scans oder Berichte, verstehen Sie, was Sie fragen sollen',
-    color: 'violet',
-  },
-  {
-    id: 'general',
-    icon: HelpCircle,
-    label: 'General question',
-    labelDe: 'Allgemeine Frage',
-    desc: 'Find a doctor, understand the system, or get advice',
-    descDe: 'Arzt finden, System verstehen oder Rat einholen',
-    color: 'amber',
-  },
+const CATEGORY_DEFS = [
+  { id: 'symptoms', icon: Stethoscope, labelKey: 'catSymptomsLabel', descKey: 'catSymptomsDesc', color: 'emerald' },
+  { id: 'diagnosis', icon: Pill, labelKey: 'catDiagnosisLabel', descKey: 'catDiagnosisDesc', color: 'blue' },
+  { id: 'results', icon: FlaskConical, labelKey: 'catResultsLabel', descKey: 'catResultsDesc', color: 'violet' },
+  { id: 'general', icon: HelpCircle, labelKey: 'catGeneralLabel', descKey: 'catGeneralDesc', color: 'amber' },
 ]
 
 const COLOR_MAP = {
@@ -140,7 +108,7 @@ function OutputCard({ text, onPrint, t }) {
           if (sec.type === 'section') return (
             <div key={i} className="space-y-2">
               <h3 className="text-xs font-bold uppercase tracking-wider text-[#10B981]">{sec.heading}</h3>
-              {sec.items.length === 0 && <p className="text-gray-400 italic text-xs">Keine Angaben</p>}
+              {sec.items.length === 0 && <p className="text-gray-400 italic text-xs">{t('prep.noAnswers')}</p>}
               {sec.items.map((item, j) => {
                 if (item.type === 'bullet') return (
                   <div key={j} className="flex items-start gap-2">
@@ -284,6 +252,10 @@ export default function PrepPage() {
   const t = useTranslations()
   const locale = useLocale()
 
+  const CATEGORIES = CATEGORY_DEFS.map(c => ({
+    ...c, label: t(`prep.${c.labelKey}`), desc: t(`prep.${c.descKey}`),
+  }))
+
   // Flow: 'category' | 'chat' | 'summary'
   const [step, setStep] = useState('category')
   const [category, setCategory] = useState(null)
@@ -354,7 +326,7 @@ export default function PrepPage() {
       setSuggestions(data.suggestions || [])
       setReadyToGenerate(data.readyToGenerate || false)
     } catch {
-      toast.error('Failed to start session. Please try again.')
+      toast.error(t('prep.failedToStartSession'))
     } finally {
       setChatLoading(false)
     }
@@ -384,7 +356,7 @@ export default function PrepPage() {
       setSuggestions(data.suggestions || [])
       setReadyToGenerate(data.readyToGenerate || false)
     } catch {
-      toast.error('Failed to send message.')
+      toast.error(t('prep.failedToSendMessage'))
     } finally {
       setChatLoading(false)
       setTimeout(() => inputRef.current?.focus(), 100)
@@ -467,7 +439,7 @@ export default function PrepPage() {
       <div className="min-h-screen bg-[#FAF9FD] relative" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
         <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-violet-100/60 rounded-full blur-3xl pointer-events-none print:hidden" />
         {/* Header */}
-        <AppHeader back={{ href: '/dashboard', label: 'Dashboard' }} title="Doctor Visit" tone="violet" />
+        <AppHeader back={{ href: '/dashboard', label: t('nav.dashboard') }} title={t('prep.headerTitle')} tone="violet" />
 
         <div className="container mx-auto px-4 py-8 max-w-2xl">
 
@@ -482,7 +454,7 @@ export default function PrepPage() {
               </Badge>
               {step !== 'category' && (
                 <button onClick={reset} className="ml-auto flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                  <RotateCcw className="h-3 w-3" /> {locale === 'de' ? 'Neu starten' : 'Start over'}
+                  <RotateCcw className="h-3 w-3" /> {t('prep.restart')}
                 </button>
               )}
             </div>
@@ -534,7 +506,7 @@ export default function PrepPage() {
           {profiles.length > 0 && step === 'category' && (
             <div className="mb-5">
               <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
-                {locale === 'de' ? 'Für wen ist dieser Arztbrief?' : 'Who is this prep for?'}
+                {t('prep.whoIsThisFor')}
               </p>
               <div className="flex flex-wrap gap-2">
                 {profiles.map(p => {
@@ -558,7 +530,7 @@ export default function PrepPage() {
                       {p.name}
                       {isSelected && (
                         <span className="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-1.5 py-0.5 rounded-full">
-                          {locale === 'de' ? 'Gewählt' : 'Selected'}
+                          {t('prep.selected')}
                         </span>
                       )}
                     </button>
@@ -572,15 +544,13 @@ export default function PrepPage() {
                       : 'border-gray-200 bg-white text-gray-400 hover:border-gray-300'
                   }`}
                 >
-                  {locale === 'de' ? 'Kein Profil' : 'No profile'}
+                  {t('prep.noProfile')}
                 </button>
               </div>
               {selectedProfileId && (
                 <p className="text-xs text-emerald-600 mt-2 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  {locale === 'de'
-                    ? 'Laborwerte aus dem Health Vault werden automatisch einbezogen'
-                    : 'Lab values from Health Vault will be included automatically'}
+                  {t('prep.profileNote')}
                 </p>
               )}
             </div>
@@ -590,12 +560,11 @@ export default function PrepPage() {
           {step === 'category' && (
             <div className="space-y-3">
               <p className="text-sm font-semibold text-gray-700 mb-4">
-                {locale === 'de' ? 'Was führt Sie heute her?' : "What brings you in today?"}
+                {t('prep.categoryIntro')}
               </p>
               {CATEGORIES.map(cat => {
                 const Icon = cat.icon
                 const colors = COLOR_MAP[cat.color]
-                const isDE = locale === 'de'
                 return (
                   <button
                     key={cat.id}
@@ -608,10 +577,10 @@ export default function PrepPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-semibold text-gray-800 group-hover:text-gray-900">
-                        {isDE ? cat.labelDe : cat.label}
+                        {cat.label}
                       </p>
                       <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">
-                        {isDE ? cat.descDe : cat.desc}
+                        {cat.desc}
                       </p>
                     </div>
                     <ChevronRight className="h-4 w-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 transition-colors" />
@@ -635,7 +604,7 @@ export default function PrepPage() {
                         <Icon className="h-3.5 w-3.5" />
                       </div>
                       <span className="text-sm font-semibold text-gray-700">
-                        {locale === 'de' ? category.labelDe : category.label}
+                        {category.label}
                       </span>
                     </>
                   )
@@ -648,7 +617,7 @@ export default function PrepPage() {
                   )}
                   <div className="flex items-center gap-1.5">
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-xs text-gray-400">AI Guide</span>
+                    <span className="text-xs text-gray-400">{t('prep.aiGuideLabel')}</span>
                   </div>
                 </div>
               </div>
@@ -670,7 +639,7 @@ export default function PrepPage() {
                 {readyToGenerate ? (
                   <div className="flex flex-col gap-2">
                     <p className="text-xs text-gray-500 text-center">
-                      {locale === 'de' ? 'Bereit, Ihre strukturierte Zusammenfassung zu erstellen' : 'Ready to generate your structured summary'}
+                      {t('prep.readyToGenerateLabel')}
                     </p>
                     <Button
                       onClick={generateSummary}
@@ -678,13 +647,13 @@ export default function PrepPage() {
                       className="w-full bg-[#10B981] hover:bg-emerald-600 text-white font-semibold h-11"
                     >
                       {summaryLoading ? (
-                        <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> {locale === 'de' ? 'Zusammenfassung wird erstellt...' : 'Generating summary...'}</>
+                        <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> {t('prep.generatingSummary')}</>
                       ) : (
-                        <><Sparkles className="h-4 w-4 mr-2" /> {locale === 'de' ? 'Arztbrief erstellen' : 'Generate doctor summary'}</>
+                        <><Sparkles className="h-4 w-4 mr-2" /> {t('prep.generateDoctorSummary')}</>
                       )}
                     </Button>
                     <button onClick={() => setReadyToGenerate(false)} className="text-xs text-gray-400 hover:text-gray-600 text-center">
-                      {locale === 'de' ? 'Weitere Fragen beantworten' : 'Continue answering questions instead'}
+                      {t('prep.continueAnswering')}
                     </button>
                   </div>
                 ) : (
@@ -694,7 +663,7 @@ export default function PrepPage() {
                       value={chatInput}
                       onChange={e => setChatInput(e.target.value)}
                       disabled={chatLoading}
-                      placeholder={locale === 'de' ? 'Ihre Antwort eingeben...' : 'Type your answer...'}
+                      placeholder={t('prep.typeYourAnswer')}
                       className="flex-1 text-sm rounded-xl border border-gray-200 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-400 disabled:opacity-50"
                     />
                     <Button type="submit" disabled={!chatInput.trim() || chatLoading}
@@ -714,7 +683,7 @@ export default function PrepPage() {
                 <div className="bg-white border border-gray-200 rounded-2xl p-12 flex flex-col items-center gap-4">
                   <Loader2 className="h-8 w-8 animate-spin text-emerald-500" />
                   <p className="text-sm text-gray-500">
-                    {locale === 'de' ? 'Arztbrief wird erstellt...' : 'Generating your doctor summary...'}
+                    {t('prep.generatingDoctorSummary')}
                   </p>
                 </div>
               ) : output ? (
@@ -723,11 +692,11 @@ export default function PrepPage() {
                   <div className="flex gap-3">
                     <Button onClick={reset} variant="outline" className="flex-1">
                       <RotateCcw className="h-4 w-4 mr-2" />
-                      {locale === 'de' ? 'Neue Sitzung' : 'Start new session'}
+                      {t('prep.startNewSession')}
                     </Button>
                     <Button onClick={() => setStep('chat')} variant="outline" className="flex-1">
                       <ArrowLeft className="h-4 w-4 mr-2" />
-                      {locale === 'de' ? 'Zurück zum Chat' : 'Back to chat'}
+                      {t('prep.backToChat')}
                     </Button>
                   </div>
                 </>
@@ -760,7 +729,7 @@ export default function PrepPage() {
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-violet-500" />
                 <h2 className="text-base font-bold text-gray-800">
-                  {locale === 'de' ? 'Frühere Zusammenfassungen' : 'Previous Summaries'}
+                  {t('prep.previousSummaries')}
                 </h2>
                 {history.length > 0 && (
                   <span className="text-xs text-violet-600 bg-violet-50 border border-violet-100 px-2 py-0.5 rounded-full font-semibold">{history.length}</span>
@@ -774,10 +743,10 @@ export default function PrepPage() {
                   <FileText className="h-5 w-5 text-violet-400" />
                 </div>
                 <p className="text-sm font-semibold text-gray-500">
-                  {locale === 'de' ? 'Noch keine Zusammenfassungen' : 'No summaries yet'}
+                  {t('prep.noSummariesYet')}
                 </p>
                 <p className="text-xs text-gray-400 mt-1">
-                  {locale === 'de' ? 'Ihre erstellten Arztbriefe erscheinen hier' : 'Your generated doctor summaries will appear here'}
+                  {t('prep.summariesWillAppear')}
                 </p>
               </div>
             ) : (
@@ -797,7 +766,7 @@ export default function PrepPage() {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2 flex-wrap mb-1">
                             <span className="text-sm font-semibold text-gray-800">
-                              {locale === 'de' ? 'Arztbrief' : 'Doctor Summary'}
+                              {t('prep.doctorSummaryLabel')}
                             </span>
                             {doc.profileName && (
                               <span className="text-[10px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded-full">{doc.profileName}</span>
@@ -806,7 +775,7 @@ export default function PrepPage() {
                           </div>
                           {inputPreview && (
                             <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">
-                              <span className="font-medium text-gray-400">{locale === 'de' ? 'Sie: ' : 'You: '}</span>{inputPreview}
+                              <span className="font-medium text-gray-400">{t('prep.youLabel')}</span>{inputPreview}
                             </p>
                           )}
                         </div>
@@ -817,7 +786,7 @@ export default function PrepPage() {
                           {doc.input && (
                             <div className="px-4 pt-4 pb-3">
                               <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
-                                {locale === 'de' ? 'Ihre Beschreibung' : 'Your Description'}
+                                {t('prep.yourDescription')}
                               </p>
                               <div className="bg-gray-50 border border-gray-100 rounded-xl px-4 py-3">
                                 <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-wrap">{doc.input}</p>
@@ -826,7 +795,7 @@ export default function PrepPage() {
                           )}
                           <div className="px-4 pb-4">
                             <p className="text-[10px] font-bold uppercase tracking-widest text-violet-500 mb-2">
-                              {locale === 'de' ? 'Medyra Zusammenfassung' : 'Medyra Summary'}
+                              {t('prep.medyraSummaryLabel')}
                             </p>
                             <OutputCard text={doc.output} onPrint={() => handlePrint(doc.output)} t={t} />
                           </div>

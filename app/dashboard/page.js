@@ -20,9 +20,14 @@ import AppHeader, { HeaderButton } from '@/components/AppHeader'
 import ReferralCard from '@/components/dashboard/ReferralCard'
 
 // Lazy-load recharts to avoid SSR issues
+function ChartLoading() {
+  const t = useTranslations()
+  return <div className="h-48 flex items-center justify-center text-sm text-gray-400">{t('dashboard.loadingChart')}</div>
+}
+
 const HealthTimeline = dynamic(() => import('@/components/HealthTimeline'), {
   ssr: false,
-  loading: () => <div className="h-48 flex items-center justify-center text-sm text-gray-400">Loading chart…</div>,
+  loading: () => <ChartLoading />,
 })
 
 const PLAN_META = {
@@ -40,6 +45,7 @@ const COLOR_DOT = {
 const REL_ICONS = { self: User, partner: '❤️', child: '👶', parent: '👴' }
 
 function ManageSubscriptionButton() {
+  const t = useTranslations()
   const [loading, setLoading] = useState(false)
 
   async function handleManage() {
@@ -66,12 +72,13 @@ function ManageSubscriptionButton() {
       className="text-xs font-semibold text-gray-500 hover:text-gray-700 flex items-center gap-1 transition-colors disabled:opacity-50"
     >
       {loading ? <RefreshCw className="h-3 w-3 animate-spin" /> : <Settings className="h-3 w-3" />}
-      Manage plan
+      {t('dashboard.managePlanButton')}
     </button>
   )
 }
 
 function ProfileSwitcher({ profiles, selected, onChange, canCreate, tier }) {
+  const t = useTranslations()
   const [open, setOpen] = useState(false)
   const current = profiles.find(p => p.id === selected) || profiles[0]
 
@@ -86,7 +93,7 @@ function ProfileSwitcher({ profiles, selected, onChange, canCreate, tier }) {
         {current && (
           <span className={`w-2 h-2 rounded-full flex-shrink-0 ${COLOR_DOT[current.color] || 'bg-emerald-500'}`} />
         )}
-        <span className="max-w-[120px] truncate">{current?.name || 'Select profile'}</span>
+        <span className="max-w-[120px] truncate">{current?.name || t('dashboard.selectProfilePlaceholder')}</span>
         <ChevronDown className={`h-3.5 w-3.5 text-gray-400 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
 
@@ -107,7 +114,7 @@ function ProfileSwitcher({ profiles, selected, onChange, canCreate, tier }) {
             <Link href="/profiles"
               className="flex items-center gap-2 px-3 py-2.5 text-sm text-emerald-600 hover:bg-emerald-50 transition-colors">
               <Plus className="h-3.5 w-3.5" />
-              {canCreate ? 'Add profile' : 'Manage profiles'}
+              {canCreate ? t('dashboard.addProfile') : t('dashboard.manageProfiles')}
             </Link>
           </div>
         </div>
@@ -117,10 +124,16 @@ function ProfileSwitcher({ profiles, selected, onChange, canCreate, tier }) {
 }
 
 function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canCreate }) {
+  const t = useTranslations()
   const isPaid = tier !== 'free'
   const selectedProfile = profiles.find(p => p.id === selectedProfileId) || profiles[0]
 
   if (!isPaid) {
+    const FEATURES = [
+      { icon: TrendingUp, label: t('dashboard.vaultFeature1Label'), desc: t('dashboard.vaultFeature1Desc') },
+      { icon: Sparkles,   label: t('dashboard.vaultFeature2Label'), desc: t('dashboard.vaultFeature2Desc') },
+      { icon: Users,      label: t('dashboard.vaultFeature3Label'), desc: t('dashboard.vaultFeature3Desc') },
+    ]
     return (
       <div className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 rounded-2xl p-6 border border-white/5">
         <div className="flex items-center justify-between mb-5">
@@ -129,18 +142,14 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
               <Shield className="h-4 w-4 text-emerald-400" />
             </div>
             <div>
-              <h2 className="text-sm font-bold text-white">Health Vault</h2>
-              <p className="text-xs text-gray-500">Longitudinal tracking & profiles</p>
+              <h2 className="text-sm font-bold text-white">{t('dashboard.vaultTitle')}</h2>
+              <p className="text-xs text-gray-500">{t('dashboard.vaultSubtitle')}</p>
             </div>
           </div>
           <Lock className="h-4 w-4 text-gray-600" />
         </div>
         <div className="grid grid-cols-3 gap-3 mb-5">
-          {[
-            { icon: TrendingUp, label: 'Biomarker timeline', desc: 'Track values over time' },
-            { icon: Sparkles,   label: 'AI delta analysis',  desc: 'Spot important changes' },
-            { icon: Users,      label: 'Family profiles',    desc: 'Up to 5 members' },
-          ].map(({ icon: Icon, label, desc }) => (
+          {FEATURES.map(({ icon: Icon, label, desc }) => (
             <div key={label} className="bg-white/5 rounded-xl p-3 text-center border border-white/8">
               <Icon className="h-4 w-4 text-gray-400 mx-auto mb-1.5" />
               <p className="text-[10px] font-semibold text-gray-300 mb-0.5">{label}</p>
@@ -150,10 +159,10 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
         </div>
         <Link href="/pricing">
           <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition-colors flex items-center justify-center gap-2">
-            Unlock Health Vault <ArrowRight className="h-4 w-4" />
+            {t('dashboard.unlockVaultButton')} <ArrowRight className="h-4 w-4" />
           </button>
         </Link>
-        <p className="text-center text-[10px] text-gray-600 mt-2">Personal plan, €4.99/mo · Family plan, €9.99/mo</p>
+        <p className="text-center text-[10px] text-gray-600 mt-2">{t('dashboard.vaultPricingNote')}</p>
       </div>
     )
   }
@@ -164,16 +173,22 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
         <div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center mx-auto mb-3">
           <User className="h-5 w-5 text-emerald-500" />
         </div>
-        <p className="text-sm font-bold text-gray-700 mb-1">No health profiles yet</p>
-        <p className="text-xs text-gray-400 mb-4">Create profiles for yourself and family members to start tracking biomarkers over time.</p>
+        <p className="text-sm font-bold text-gray-700 mb-1">{t('dashboard.noProfilesTitle')}</p>
+        <p className="text-xs text-gray-400 mb-4">{t('dashboard.noProfilesDesc')}</p>
         <Link href="/profiles">
           <button className="inline-flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm px-4 py-2 rounded-xl transition-colors">
-            <Plus className="h-3.5 w-3.5" /> Create Profile
+            <Plus className="h-3.5 w-3.5" /> {t('dashboard.createProfileButton')}
           </button>
         </Link>
       </div>
     )
   }
+
+  const QUICK_STATS = [
+    { label: t('dashboard.statReportsLabel'),   value: selectedProfile?.biomarkers?.length || 0 },
+    { label: t('dashboard.statBiomarkersLabel'), value: selectedProfile?.biomarkers?.reduce((n, e) => n + (e.values?.length || e.key ? 1 : 0), 0) || 0 },
+    { label: t('dashboard.statTrackedSinceLabel'), value: selectedProfile?.createdAt ? new Date(selectedProfile.createdAt).toLocaleDateString('en-GB', { month: 'short', year: '2-digit' }) : '—' },
+  ]
 
   return (
     <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
@@ -184,8 +199,8 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
             <Activity className="h-3.5 w-3.5 text-emerald-600" />
           </div>
           <div>
-            <h2 className="text-sm font-bold text-gray-800">Health Timeline</h2>
-            <p className="text-xs text-gray-400">Viewing: <span className="font-semibold text-gray-600">{selectedProfile?.name}</span></p>
+            <h2 className="text-sm font-bold text-gray-800">{t('dashboard.healthTimelineTitle')}</h2>
+            <p className="text-xs text-gray-400">{t('dashboard.viewingLabel')} <span className="font-semibold text-gray-600">{selectedProfile?.name}</span></p>
           </div>
         </div>
         <div className="flex items-center gap-2">
@@ -197,7 +212,7 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
             tier={tier}
           />
           <Link href={selectedProfile ? `/profiles/${selectedProfile.id}` : '/profiles'} className="text-xs text-emerald-600 hover:text-emerald-700 font-semibold">
-            View Profile
+            {t('dashboard.viewProfileLink')}
           </Link>
         </div>
       </div>
@@ -210,11 +225,7 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
       {/* Quick profile stats */}
       <div className="px-5 pb-5">
         <div className="grid grid-cols-3 gap-3">
-          {[
-            { label: 'Reports',   value: selectedProfile?.biomarkers?.length || 0 },
-            { label: 'Biomarkers', value: selectedProfile?.biomarkers?.reduce((n, e) => n + (e.values?.length || e.key ? 1 : 0), 0) || 0 },
-            { label: 'Tracked since', value: selectedProfile?.createdAt ? new Date(selectedProfile.createdAt).toLocaleDateString('en-GB', { month: 'short', year: '2-digit' }) : '—' },
-          ].map(({ label, value }) => (
+          {QUICK_STATS.map(({ label, value }) => (
             <div key={label} className="text-center bg-gray-50 rounded-xl p-3">
               <p className="text-lg font-black text-gray-800">{value}</p>
               <p className="text-[10px] text-gray-500 mt-0.5">{label}</p>
@@ -269,7 +280,7 @@ export default function DashboardPage() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="w-10 h-10 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto mb-3" />
-          <p className="text-sm text-gray-400">Loading your health dashboard…</p>
+          <p className="text-sm text-gray-400">{t('dashboard.loadingDashboard')}</p>
         </div>
       </div>
     )
@@ -296,7 +307,7 @@ export default function DashboardPage() {
       {/* Header */}
       <AppHeader user tone="emerald" homeHref="/">
         <HeaderButton href="/profiles" variant="soft" icon={<Users className="h-4 w-4" />} className="hidden sm:inline-flex">
-          Profiles
+          {t('dashboard.profilesNavLabel')}
         </HeaderButton>
       </AppHeader>
 
@@ -306,19 +317,19 @@ export default function DashboardPage() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div>
             <h1 className="font-display text-xl md:text-2xl font-black text-[#0B1F17]">
-              {t('dashboard.welcome')}, {user?.firstName || 'there'} 👋
+              {t('dashboard.welcome')}, {user?.firstName || t('dashboard.greetingFallbackName')} 👋
             </h1>
-            <p className="text-sm text-gray-500 mt-0.5">Here's your health overview</p>
+            <p className="text-sm text-gray-500 mt-0.5">{t('dashboard.heroSubtitle')}</p>
           </div>
           <div className="flex items-center gap-3">
             <span className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full ${meta.bg} ${meta.color}`}>
               {PlanIcon && <PlanIcon className="h-3.5 w-3.5" />}
-              {meta.label} Plan
+              {meta.label} {t('dashboard.planLabelSuffix')}
             </span>
             {!isPaid ? (
               <Link href="/pricing">
                 <button className="text-xs font-semibold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 transition-colors">
-                  Upgrade <ArrowRight className="h-3 w-3" />
+                  {t('dashboard.upgradeButton')} <ArrowRight className="h-3 w-3" />
                 </button>
               </Link>
             ) : (
@@ -331,13 +342,13 @@ export default function DashboardPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
           {[
             {
-              label: 'Reports this month', value: thisMonthReports.length,
-              sub: isUnlimited ? 'Unlimited' : `${remaining} remaining`,
+              label: t('dashboard.statReportsThisMonth'), value: thisMonthReports.length,
+              sub: isUnlimited ? t('dashboard.statUnlimited') : t('dashboard.statRemaining', { count: remaining }),
               color: remaining === 0 && !isUnlimited ? 'text-red-600' : 'text-emerald-600',
             },
-            { label: 'Total reports', value: reports.length, color: 'text-gray-800' },
-            { label: 'Doctor summaries', value: prepHistory.length, color: 'text-violet-700' },
-            { label: 'Profiles', value: profiles.length, color: 'text-blue-700', sub: isPaid ? `/ ${meta.profileLimit ?? '∞'}` : 'Upgrade to unlock' },
+            { label: t('dashboard.statTotalReports'), value: reports.length, color: 'text-gray-800' },
+            { label: t('dashboard.statDoctorSummaries'), value: prepHistory.length, color: 'text-violet-700' },
+            { label: t('dashboard.statProfiles'), value: profiles.length, color: 'text-blue-700', sub: isPaid ? `/ ${meta.profileLimit ?? '∞'}` : t('dashboard.statUpgradeToUnlock') },
           ].map(({ label, value, sub, color }) => (
             <div key={label} className="bg-white rounded-2xl border border-gray-100 p-4 shadow-sm">
               <p className={`text-2xl font-black ${color}`}>{value}</p>
@@ -351,16 +362,16 @@ export default function DashboardPage() {
         {!isUnlimited && (
           <div className="bg-white border border-gray-100 rounded-2xl p-4 mb-6 shadow-sm">
             <div className="flex items-center justify-between mb-2">
-              <p className="text-xs font-semibold text-gray-600">Monthly report usage</p>
-              <p className="text-xs text-gray-400">{used} / {limit} reports used this month</p>
+              <p className="text-xs font-semibold text-gray-600">{t('dashboard.monthlyUsage')}</p>
+              <p className="text-xs text-gray-400">{t('dashboard.usedOfLimit', { used, limit })}</p>
             </div>
             <Progress value={usagePct} className="h-2" />
             {usagePct >= 100 && (
               <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
                 <p className="text-xs text-red-600 font-medium flex items-center gap-1">
-                  <AlertCircle className="h-3.5 w-3.5" /> Limit reached, upgrade to continue
+                  <AlertCircle className="h-3.5 w-3.5" /> {t('dashboard.limitReachedMsg')}
                 </p>
-                <Link href="/pricing"><Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white text-xs h-7">Upgrade</Button></Link>
+                <Link href="/pricing"><Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white text-xs h-7">{t('dashboard.upgradeButton')}</Button></Link>
               </div>
             )}
           </div>
@@ -378,22 +389,22 @@ export default function DashboardPage() {
                 <Link href="/upload">
                   <button className="w-full flex items-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors shadow-sm shadow-emerald-200 disabled:opacity-50"
                     disabled={!isUnlimited && remaining === 0}>
-                    <Upload className="h-4 w-4 flex-shrink-0" /> Analyse a Report
+                    <Upload className="h-4 w-4 flex-shrink-0" /> {t('dashboard.analyseReportButton')}
                   </button>
                 </Link>
                 <Link href="/prep">
                   <button className="w-full flex items-center gap-2.5 bg-violet-500 hover:bg-violet-600 text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors shadow-sm shadow-violet-200">
-                    <Stethoscope className="h-4 w-4 flex-shrink-0" /> Doctor Visit Prep
+                    <Stethoscope className="h-4 w-4 flex-shrink-0" /> {t('dashboard.doctorVisitPrepButton')}
                   </button>
                 </Link>
                 <Link href="/profiles">
                   <button className="w-full flex items-center gap-2.5 bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors shadow-sm shadow-blue-200">
-                    <Users className="h-4 w-4 flex-shrink-0" /> Health Profiles
+                    <Users className="h-4 w-4 flex-shrink-0" /> {t('dashboard.healthProfilesButton')}
                   </button>
                 </Link>
                 <Link href="/reports">
                   <button className="w-full flex items-center gap-2.5 border border-gray-200 hover:border-gray-300 text-gray-700 font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors bg-white">
-                    <FileText className="h-4 w-4 flex-shrink-0" /> All Reports
+                    <FileText className="h-4 w-4 flex-shrink-0" /> {t('dashboard.allReportsButton')}
                   </button>
                 </Link>
               </div>
@@ -456,24 +467,24 @@ export default function DashboardPage() {
                 <Stethoscope className="h-3.5 w-3.5 text-violet-600" />
               </div>
               <div>
-                <h2 className="text-sm font-bold text-gray-800">Doctor Visit Summaries</h2>
-                <p className="text-xs text-gray-400">AI-generated clinical summaries for your appointments</p>
+                <h2 className="text-sm font-bold text-gray-800">{t('dashboard.doctorSummariesTitle')}</h2>
+                <p className="text-xs text-gray-400">{t('dashboard.doctorSummariesSubtitle')}</p>
               </div>
             </div>
             <Link href="/prep">
               <button className="flex items-center gap-1 text-xs font-semibold text-violet-600 hover:text-violet-700 transition-colors">
-                New summary <Plus className="h-3 w-3" />
+                {t('dashboard.newSummaryButton')} <Plus className="h-3 w-3" />
               </button>
             </Link>
           </div>
           {prepHistory.length === 0 ? (
             <div className="text-center py-10">
               <Stethoscope className="h-10 w-10 mx-auto text-gray-200 mb-3" />
-              <p className="text-sm font-semibold text-gray-500 mb-1">No summaries yet</p>
-              <p className="text-xs text-gray-400 mb-5 max-w-xs mx-auto">Describe your symptoms and get a structured German clinical summary for your doctor, generated in seconds.</p>
+              <p className="text-sm font-semibold text-gray-500 mb-1">{t('dashboard.noSummariesTitle')}</p>
+              <p className="text-xs text-gray-400 mb-5 max-w-xs mx-auto">{t('dashboard.noSummariesDesc')}</p>
               <Link href="/prep">
                 <button className="inline-flex items-center gap-2 bg-violet-500 hover:bg-violet-600 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors">
-                  <Stethoscope className="h-4 w-4" /> Prepare for Doctor Visit
+                  <Stethoscope className="h-4 w-4" /> {t('dashboard.prepareVisitButton')}
                 </button>
               </Link>
             </div>
@@ -497,7 +508,7 @@ export default function DashboardPage() {
               ))}
               {prepHistory.length > 4 && (
                 <div className="px-5 py-3 text-center">
-                  <Link href="/prep"><span className="text-xs text-violet-600 font-semibold hover:underline">View all {prepHistory.length} summaries →</span></Link>
+                  <Link href="/prep"><span className="text-xs text-violet-600 font-semibold hover:underline">{t('dashboard.viewAllSummaries', { count: prepHistory.length })}</span></Link>
                 </div>
               )}
             </div>

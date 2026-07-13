@@ -4,10 +4,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, Upload, LayoutDashboard, BookOpen, Tag } from 'lucide-react';
 import { useUser } from '@clerk/nextjs';
+import { useTranslations } from 'next-intl';
 
 export default function MobileNav() {
   const pathname = usePathname();
   const { isSignedIn } = useUser();
+  const t = useTranslations('nav');
 
   // Only show on public/home pages — hide on dashboard/upload/report/admin
   const hideOn = ['/upload', '/admin'];
@@ -15,16 +17,16 @@ export default function MobileNav() {
 
   const navItems = isSignedIn
     ? [
-        { href: '/', icon: Home, label: 'Home' },
-        { href: '/upload', icon: Upload, label: 'Upload' },
-        { href: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
-        { href: '/pricing', icon: Tag, label: 'Pricing' },
-        { href: '/blog', icon: BookOpen, label: 'Blog' },
+        { href: '/', icon: Home, label: t('home') },
+        { href: '/upload', icon: Upload, label: t('upload') },
+        { href: '/dashboard', icon: LayoutDashboard, label: t('dashboard') },
+        { href: '/pricing', icon: Tag, label: t('pricing') },
+        { href: '/blog', icon: BookOpen, label: t('blog') },
       ]
     : [
-        { href: '/', icon: Home, label: 'Home' },
-        { href: '/pricing', icon: Tag, label: 'Pricing' },
-        { href: '/blog', icon: BookOpen, label: 'Blog' },
+        { href: '/', icon: Home, label: t('home') },
+        { href: '/pricing', icon: Tag, label: t('pricing') },
+        { href: '/blog', icon: BookOpen, label: t('blog') },
       ];
 
   return (

@@ -288,10 +288,10 @@ export default function ReportDetailPage({ params }) {
   const total = tests.length
 
   const pieData = [
-    { name: 'Normal', value: counts.normal, color: '#10B981' },
-    { name: 'Low', value: counts.low, color: '#EAB308' },
-    { name: 'High', value: counts.high, color: '#F97316' },
-    { name: 'Critical', value: counts.critical, color: '#EF4444' },
+    { name: t('report.normal'), value: counts.normal, color: '#10B981' },
+    { name: t('report.low'), value: counts.low, color: '#EAB308' },
+    { name: t('report.high'), value: counts.high, color: '#F97316' },
+    { name: t('report.critical'), value: counts.critical, color: '#EF4444' },
   ].filter(d => d.value > 0)
 
   // Key action items, abnormal tests sorted by severity
@@ -363,12 +363,12 @@ export default function ReportDetailPage({ params }) {
       doc.setFont('helvetica', 'normal')
       doc.setFontSize(8.5)
       doc.setTextColor(110, 231, 183)
-      doc.text('Medical Report Analysis', M, 23)
+      doc.text(t('pdfExport.subtitle'), M, 23)
       // File + date (right)
       const dateStr = new Date(report.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })
       doc.setFontSize(8)
       doc.setTextColor(167, 243, 208)
-      doc.text(report.fileName || 'Report', W - M, 15, { align: 'right' })
+      doc.text(report.fileName || t('pdfExport.defaultFileName'), W - M, 15, { align: 'right' })
       doc.text(dateStr, W - M, 21, { align: 'right' })
       // Disclaimer bar
       doc.setFillColor(0, 0, 0)
@@ -377,17 +377,17 @@ export default function ReportDetailPage({ params }) {
       doc.setGState && doc.setGState(new doc.GState({ opacity: 1 }))
       doc.setFontSize(7)
       doc.setTextColor(209, 250, 229)
-      doc.text('Educational information only, not medical advice. Always consult a qualified healthcare professional.', W / 2, 36.5, { align: 'center' })
+      doc.text(t('pdfExport.disclaimerBar'), W / 2, 36.5, { align: 'center' })
 
       y = 48
 
       // ── STATS ROW ──
       const statW = CW / 4
       const statData = [
-        { label: 'Normal', count: counts.normal, bg: [240,253,244], bd: [187,247,208], tx: [22,101,52] },
-        { label: 'Low',    count: counts.low,    bg: [254,252,232], bd: [253,230,138], tx: [133,77,14] },
-        { label: 'High',   count: counts.high,   bg: [255,247,237], bd: [254,215,170], tx: [154,52,18] },
-        { label: 'Critical', count: counts.critical, bg: [254,242,242], bd: [254,202,202], tx: [153,27,27] },
+        { label: t('pdfExport.statNormal'), count: counts.normal, bg: [240,253,244], bd: [187,247,208], tx: [22,101,52] },
+        { label: t('pdfExport.statLow'),    count: counts.low,    bg: [254,252,232], bd: [253,230,138], tx: [133,77,14] },
+        { label: t('pdfExport.statHigh'),   count: counts.high,   bg: [255,247,237], bd: [254,215,170], tx: [154,52,18] },
+        { label: t('pdfExport.statCritical'), count: counts.critical, bg: [254,242,242], bd: [254,202,202], tx: [153,27,27] },
       ]
       statData.forEach((s, i) => {
         const sx = M + i * statW
@@ -404,7 +404,7 @@ export default function ReportDetailPage({ params }) {
       if (explanation.inShort) {
         check(16)
         doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(17, 24, 39)
-        doc.text('IN SHORT', M, y)
+        doc.text(t('pdfExport.inShort'), M, y)
         doc.setDrawColor(209, 213, 219); doc.line(M + 25, y - 0.5, W - M, y - 0.5)
         y += 5
         doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); doc.setTextColor(6, 78, 59)
@@ -417,7 +417,7 @@ export default function ReportDetailPage({ params }) {
       if (explanation.summary) {
         check(16)
         doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(17, 24, 39)
-        doc.text('SUMMARY', M, y)
+        doc.text(t('pdfExport.summary'), M, y)
         doc.setDrawColor(209, 213, 219); doc.line(M + 25, y - 0.5, W - M, y - 0.5)
         y += 5
         doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(55, 65, 81)
@@ -430,7 +430,7 @@ export default function ReportDetailPage({ params }) {
       if (tests.length > 0) {
         check(14)
         doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(17, 24, 39)
-        doc.text('TEST RESULTS', M, y)
+        doc.text(t('pdfExport.testResults'), M, y)
         doc.setDrawColor(209, 213, 219); doc.line(M + 36, y - 0.5, W - M, y - 0.5)
         y += 6
 
@@ -469,8 +469,8 @@ export default function ReportDetailPage({ params }) {
           doc.setFont('helvetica', 'bold'); doc.setFontSize(6); doc.setTextColor(255, 255, 255)
           doc.text(fLabel, W - M - bw / 2 - 0.5, y + 6, { align: 'center' })
           // Value line
-          let valText = `Value: ${test.value || ''}`
-          if (test.normalRange) valText += `  ·  Normal: ${test.normalRange}`
+          let valText = `${t('pdfExport.valueLabel')}: ${test.value || ''}`
+          if (test.normalRange) valText += `  ·  ${t('pdfExport.normalLabel')}: ${test.normalRange}`
           doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(...fc.tx)
           doc.text(valText, cx, y + 11.5)
 
@@ -493,7 +493,7 @@ export default function ReportDetailPage({ params }) {
       if (explanation.questionsForDoctor?.length > 0) {
         y += 2; check(16)
         doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(17, 24, 39)
-        doc.text('QUESTIONS TO ASK YOUR DOCTOR', M, y)
+        doc.text(t('pdfExport.questionsForDoctor'), M, y)
         doc.setDrawColor(209, 213, 219); doc.line(M + 79, y - 0.5, W - M, y - 0.5)
         y += 6
 
@@ -517,7 +517,7 @@ export default function ReportDetailPage({ params }) {
       if (explanation.nextSteps?.length > 0) {
         y += 2; check(16)
         doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(17, 24, 39)
-        doc.text('SUGGESTED NEXT STEPS', M, y)
+        doc.text(t('pdfExport.nextSteps'), M, y)
         doc.setDrawColor(209, 213, 219); doc.line(M + 58, y - 0.5, W - M, y - 0.5)
         y += 6
 
@@ -542,8 +542,8 @@ export default function ReportDetailPage({ params }) {
         doc.setFillColor(4, 78, 59)
         doc.rect(0, H - 12, W, 12, 'F')
         doc.setFont('helvetica', 'normal'); doc.setFontSize(6.5); doc.setTextColor(110, 231, 183)
-        doc.text('Generated by Medyra · medyra.de', M, H - 5)
-        doc.text('Not a substitute for professional medical advice', W - M, H - 5, { align: 'right' })
+        doc.text(t('pdfExport.footerGenerated'), M, H - 5)
+        doc.text(t('pdfExport.footerDisclaimer'), W - M, H - 5, { align: 'right' })
         if (totalPages > 1) {
           doc.setTextColor(167, 243, 208)
           doc.text(`${p} / ${totalPages}`, W / 2, H - 5, { align: 'center' })
@@ -553,7 +553,7 @@ export default function ReportDetailPage({ params }) {
       doc.save(`medyra-${(report.fileName || 'report').replace(/\.[^.]+$/, '')}.pdf`)
     } catch (err) {
       console.error('PDF export error:', err)
-      toast.error('Failed to export PDF. Please try again.')
+      toast.error(t('pdfExport.exportFailed'))
     } finally {
       setExporting(false)
     }
@@ -603,7 +603,7 @@ export default function ReportDetailPage({ params }) {
             <div className="flex items-start justify-between gap-2 mb-3">
               <div className="flex items-center gap-2">
                 <UserCircle className="h-4 w-4 text-emerald-600 flex-shrink-0" />
-                <p className="text-sm font-semibold text-gray-800">Save this report to a profile</p>
+                <p className="text-sm font-semibold text-gray-800">{t('report.saveToProfile')}</p>
               </div>
               <button onClick={() => setShowAssignBanner(false)} className="text-gray-400 hover:text-gray-600 flex-shrink-0">
                 <X className="h-4 w-4" />
@@ -622,7 +622,7 @@ export default function ReportDetailPage({ params }) {
                   }`}
                 >
                   <span className={`w-2 h-2 rounded-full bg-${p.color || 'emerald'}-500`} />
-                  {assigningProfile === p.id ? 'Saving…' : p.name}
+                  {assigningProfile === p.id ? t('report.savingEllipsis') : p.name}
                 </button>
               ))}
             </div>
@@ -649,7 +649,7 @@ export default function ReportDetailPage({ params }) {
         {(explanation.inShort || explanation.summary) && (
           <div className="rounded-2xl overflow-hidden border border-emerald-100 shadow-sm mb-5 bg-white">
             <div className="bg-gradient-to-r from-emerald-900 to-emerald-700 px-4 sm:px-5 py-2.5 flex items-center justify-between">
-              <p className="text-xs font-bold tracking-widest text-emerald-200 uppercase">The short version</p>
+              <p className="text-xs font-bold tracking-widest text-emerald-200 uppercase">{t('report.shortVersion')}</p>
               <p className="text-xs text-emerald-300/80 font-medium">Medyra Brief</p>
             </div>
             <div className="px-4 sm:px-5 py-4">
@@ -668,7 +668,7 @@ export default function ReportDetailPage({ params }) {
               )}
               {explanation.nextSteps?.length > 0 && (
                 <div className="mt-4 border-t border-gray-100 pt-3">
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">Suggested next steps</p>
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">{t('report.suggestedNextSteps')}</p>
                   <ul className="space-y-1.5">
                     {explanation.nextSteps.map((s, i) => (
                       <li key={i} className="flex gap-2.5 text-sm text-gray-700">
@@ -720,7 +720,7 @@ export default function ReportDetailPage({ params }) {
                           <Cell key={i} fill={entry.color} />
                         ))}
                       </Pie>
-                      <Tooltip formatter={(v, n) => [`${v} tests`, n]} contentStyle={{ fontSize: '11px', borderRadius: '8px', border: '1px solid #e5e7eb' }} />
+                      <Tooltip formatter={(v, n) => [`${v} ${t('report.testsUnit')}`, n]} contentStyle={{ fontSize: '11px', borderRadius: '8px', border: '1px solid #e5e7eb' }} />
                     </PieChart>
                   </ResponsiveContainer>
                 </div>
@@ -755,7 +755,7 @@ export default function ReportDetailPage({ params }) {
                         <div className="flex-shrink-0 mt-0.5">{getFlagIcon(test.flag)}</div>
                         <div className="min-w-0">
                           <p className="text-xs font-semibold truncate">{test.name}</p>
-                          <p className="text-xs opacity-80 truncate">{test.value}{test.normalRange ? ` · normal: ${test.normalRange}` : ''}</p>
+                          <p className="text-xs opacity-80 truncate">{test.value}{test.normalRange ? ` · ${t('report.normal').toLowerCase()}: ${test.normalRange}` : ''}</p>
                         </div>
                         <Badge variant="outline" className={`text-xs flex-shrink-0 border-current ${getFlagColor(test.flag)}`}>{getFlagLabel(test.flag)}</Badge>
                       </div>
@@ -832,7 +832,7 @@ export default function ReportDetailPage({ params }) {
                       <div className="flex items-center justify-between pt-1">
                         <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">{cat}</p>
                         <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${flagged > 0 ? 'bg-orange-100 text-orange-600' : 'bg-emerald-100 text-emerald-600'}`}>
-                          {flagged > 0 ? `${flagged} flagged` : 'All normal'}
+                          {flagged > 0 ? t('report.flaggedCount', { count: flagged }) : t('report.allNormalBadge')}
                         </span>
                       </div>
                     )}
@@ -851,7 +851,7 @@ export default function ReportDetailPage({ params }) {
                           {/* Value + where it sits in the reference range */}
                           <div className="mt-2 space-y-1">
                             <div className="flex justify-between text-xs text-gray-500">
-                              <span><span className="font-semibold text-gray-800">{test.value}</span>{test.normalRange && <span className="ml-1 opacity-70">· normal: {test.normalRange}</span>}</span>
+                              <span><span className="font-semibold text-gray-800">{test.value}</span>{test.normalRange && <span className="ml-1 opacity-70">· {t('report.normal').toLowerCase()}: {test.normalRange}</span>}</span>
                             </div>
                             <RangeBar value={test.value} normalRange={test.normalRange} flag={test.flag} />
                           </div>
@@ -919,7 +919,7 @@ export default function ReportDetailPage({ params }) {
                   {chatUsed}/{chatLimit}
                 </span>
               ) : (
-                <span className="text-xs bg-emerald-100 text-emerald-600 px-2 py-0.5 rounded-full font-semibold">∞ unlimited</span>
+                <span className="text-xs bg-emerald-100 text-emerald-600 px-2 py-0.5 rounded-full font-semibold">∞ {t('report.unlimitedLabel')}</span>
               )}
               {chatCollapsed ? <ChevronDown className="h-4 w-4 text-gray-400" /> : <ChevronUp className="h-4 w-4 text-gray-400" />}
             </div>

@@ -16,9 +16,9 @@ import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { useTranslations } from 'next-intl'
 
 const STATUS_META = {
-  completed: { label: 'Analyzed', color: 'bg-emerald-100 text-emerald-700 border-emerald-200', dot: 'bg-emerald-500' },
-  processing: { label: 'Processing', color: 'bg-blue-100 text-blue-700 border-blue-200',    dot: 'bg-blue-500' },
-  failed:     { label: 'Failed',     color: 'bg-red-100 text-red-700 border-red-200',       dot: 'bg-red-500' },
+  completed: { labelKey: 'statusCompleted', color: 'bg-emerald-100 text-emerald-700 border-emerald-200', dot: 'bg-emerald-500' },
+  processing: { labelKey: 'statusProcessing', color: 'bg-blue-100 text-blue-700 border-blue-200',    dot: 'bg-blue-500' },
+  failed:     { labelKey: 'statusFailed',     color: 'bg-red-100 text-red-700 border-red-200',       dot: 'bg-red-500' },
 }
 
 function formatDate(dateStr) {
@@ -87,7 +87,7 @@ export default function ReportsPage() {
     <div className="min-h-screen bg-[#F7FBF9]" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
       <style>{`.font-display { font-family: var(--font-playfair), Georgia, serif; }`}</style>
       {/* Header */}
-      <AppHeader back={{ href: '/dashboard', label: 'Dashboard' }} title="Reports" tone="emerald" />
+      <AppHeader back={{ href: '/dashboard', label: t('nav.dashboard') }} title={t('reportsPage.pageTitle')} tone="emerald" />
 
       <div className="container mx-auto px-4 py-8 max-w-3xl">
 
@@ -98,16 +98,16 @@ export default function ReportsPage() {
               <div className="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center">
                 <FileText className="h-5 w-5 text-emerald-600" />
               </div>
-              <h1 className="font-display text-2xl font-bold text-[#0B1F17]">My Reports</h1>
+              <h1 className="font-display text-2xl font-bold text-[#0B1F17]">{t('reportsPage.title')}</h1>
               {reports.length > 0 && (
                 <span className="text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100 px-2 py-0.5 rounded-full">{reports.length}</span>
               )}
             </div>
-            <p className="text-sm text-gray-500">All your uploaded medical reports and their AI explanations</p>
+            <p className="text-sm text-gray-500">{t('reportsPage.subtitle')}</p>
           </div>
           <Link href="/upload" className="flex-shrink-0">
             <Button className="bg-emerald-500 hover:bg-emerald-600 text-white shadow-sm shadow-emerald-200 font-semibold gap-2">
-              <Upload className="h-4 w-4" /> Upload New
+              <Upload className="h-4 w-4" /> {t('reportsPage.uploadNew')}
             </Button>
           </Link>
         </div>
@@ -117,13 +117,13 @@ export default function ReportsPage() {
           <div className="grid grid-cols-3 gap-3 mb-6">
             <div className="bg-white border border-gray-200 rounded-2xl p-4 text-center shadow-sm">
               <p className="text-2xl font-bold text-gray-900">{reports.length}</p>
-              <p className="text-xs text-gray-500 mt-0.5">Total reports</p>
+              <p className="text-xs text-gray-500 mt-0.5">{t('reportsPage.statTotal')}</p>
             </div>
             <div className="bg-white border border-gray-200 rounded-2xl p-4 text-center shadow-sm">
               <p className="text-2xl font-bold text-gray-900">
                 {isUnlimited ? '∞' : remaining}
               </p>
-              <p className="text-xs text-gray-500 mt-0.5">{isUnlimited ? 'Unlimited' : 'Remaining'}</p>
+              <p className="text-xs text-gray-500 mt-0.5">{isUnlimited ? t('reportsPage.statUnlimited') : t('reportsPage.statRemaining')}</p>
             </div>
             <div className="bg-white border border-gray-200 rounded-2xl p-4 text-center shadow-sm">
               <p className="text-2xl font-bold text-gray-900">
@@ -133,7 +133,7 @@ export default function ReportsPage() {
                   return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear()
                 }).length}
               </p>
-              <p className="text-xs text-gray-500 mt-0.5">This month</p>
+              <p className="text-xs text-gray-500 mt-0.5">{t('reportsPage.statThisMonth')}</p>
             </div>
           </div>
         )}
@@ -142,8 +142,8 @@ export default function ReportsPage() {
         {subscription && !isUnlimited && (
           <div className="bg-white border border-gray-200 rounded-2xl p-4 mb-6 shadow-sm">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-semibold text-gray-600">Report usage</span>
-              <span className="text-xs text-gray-500">{usedCount} of {limitCount} used</span>
+              <span className="text-xs font-semibold text-gray-600">{t('reportsPage.usageLabel')}</span>
+              <span className="text-xs text-gray-500">{t('reportsPage.usedOf', { used: usedCount, limit: limitCount })}</span>
             </div>
             <div className="w-full bg-gray-100 rounded-full h-2 mb-2">
               <div
@@ -153,15 +153,15 @@ export default function ReportsPage() {
             </div>
             {remaining === 0 ? (
               <div className="flex items-center justify-between">
-                <p className="text-xs text-red-600 font-medium">Limit reached</p>
+                <p className="text-xs text-red-600 font-medium">{t('reportsPage.limitReached')}</p>
                 <Link href="/pricing">
                   <Button size="sm" className="h-7 text-xs bg-emerald-500 hover:bg-emerald-600 text-white font-semibold">
-                    <TrendingUp className="h-3 w-3 mr-1" /> Upgrade
+                    <TrendingUp className="h-3 w-3 mr-1" /> {t('reportsPage.upgrade')}
                   </Button>
                 </Link>
               </div>
             ) : (
-              <p className="text-xs text-gray-400">{remaining} report{remaining !== 1 ? 's' : ''} remaining on your plan</p>
+              <p className="text-xs text-gray-400">{t('reportsPage.remainingOnPlan', { count: remaining })}</p>
             )}
           </div>
         )}
@@ -172,7 +172,7 @@ export default function ReportsPage() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
             <input
               type="text"
-              placeholder="Search by file name..."
+              placeholder={t('reportsPage.searchPlaceholder')}
               value={search}
               onChange={e => setSearch(e.target.value)}
               className="w-full pl-9 pr-4 py-2.5 text-sm border border-gray-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-400"
@@ -184,27 +184,27 @@ export default function ReportsPage() {
         {loading ? (
           <div className="flex flex-col items-center justify-center py-20 gap-3">
             <Loader2 className="h-8 w-8 animate-spin text-emerald-500" />
-            <p className="text-sm text-gray-400">Loading your reports...</p>
+            <p className="text-sm text-gray-400">{t('reportsPage.loadingReports')}</p>
           </div>
         ) : reports.length === 0 ? (
           <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl py-16 text-center">
             <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mx-auto mb-4">
               <FileText className="h-7 w-7 text-blue-400" />
             </div>
-            <h3 className="text-base font-bold text-gray-700 mb-1">No reports yet</h3>
+            <h3 className="text-base font-bold text-gray-700 mb-1">{t('reportsPage.emptyTitle')}</h3>
             <p className="text-sm text-gray-400 mb-6 max-w-xs mx-auto">
-              Upload your first medical report to get an AI-powered plain language explanation.
+              {t('reportsPage.emptyDesc')}
             </p>
             <Link href="/upload">
               <Button className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold gap-2 shadow-sm shadow-emerald-200">
-                <Upload className="h-4 w-4" /> Upload your first report
+                <Upload className="h-4 w-4" /> {t('reportsPage.uploadFirst')}
               </Button>
             </Link>
           </div>
         ) : filtered.length === 0 ? (
           <div className="bg-white border border-gray-200 rounded-2xl py-12 text-center">
             <Search className="h-8 w-8 text-gray-300 mx-auto mb-3" />
-            <p className="text-sm text-gray-500">No reports match your search</p>
+            <p className="text-sm text-gray-500">{t('reportsPage.noMatch')}</p>
           </div>
         ) : (
           <div className="space-y-8">
@@ -215,7 +215,7 @@ export default function ReportsPage() {
                   <Calendar className="h-4 w-4 text-gray-400" />
                   <span className="text-xs font-bold uppercase tracking-widest text-gray-400">{month}</span>
                   <div className="flex-1 h-px bg-gray-100" />
-                  <span className="text-xs text-gray-400">{grouped[month].length} report{grouped[month].length !== 1 ? 's' : ''}</span>
+                  <span className="text-xs text-gray-400">{t('reportsPage.reportCount', { count: grouped[month].length })}</span>
                 </div>
 
                 <div className="space-y-3">
@@ -237,7 +237,7 @@ export default function ReportsPage() {
                               <div className="flex items-start justify-between gap-2">
                                 <div className="min-w-0">
                                   <p className="text-sm font-semibold text-gray-900 truncate group-hover:text-emerald-700 transition-colors">
-                                    {report.fileName || 'Medical Report'}
+                                    {report.fileName || t('reportsPage.defaultFileName')}
                                   </p>
                                   <div className="flex items-center gap-2 mt-0.5 flex-wrap">
                                     <span className="text-xs text-gray-400">{formatDate(report.createdAt)} · {formatTime(report.createdAt)}</span>
@@ -249,7 +249,7 @@ export default function ReportsPage() {
                                 <div className="flex items-center gap-2 flex-shrink-0">
                                   <Badge className={`text-[10px] px-2 py-0.5 border font-medium ${status.color}`}>
                                     <span className={`w-1.5 h-1.5 rounded-full mr-1.5 inline-block ${status.dot}`} />
-                                    {status.label}
+                                    {t(`reportsPage.${status.labelKey}`)}
                                   </Badge>
                                   <ChevronRight className="h-4 w-4 text-gray-300 group-hover:text-emerald-500 transition-colors" />
                                 </div>
@@ -267,12 +267,12 @@ export default function ReportsPage() {
                                 <div className="flex items-center gap-2 mt-2.5 flex-wrap">
                                   {abnormals.length > 0 && (
                                     <span className="inline-flex items-center gap-1 text-[10px] font-semibold bg-amber-50 text-amber-700 border border-amber-200 px-2 py-0.5 rounded-full">
-                                      <AlertCircle className="h-3 w-3" /> {abnormals.length} flagged
+                                      <AlertCircle className="h-3 w-3" /> {t('reportsPage.flaggedCount', { count: abnormals.length })}
                                     </span>
                                   )}
                                   {normals.length > 0 && (
                                     <span className="inline-flex items-center gap-1 text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded-full">
-                                      <CheckCircle className="h-3 w-3" /> {normals.length} normal
+                                      <CheckCircle className="h-3 w-3" /> {t('reportsPage.normalCount', { count: normals.length })}
                                     </span>
                                   )}
                                 </div>
@@ -297,13 +297,13 @@ export default function ReportsPage() {
             </div>
             <div className="flex-1">
               <p className="text-sm font-bold text-gray-800">
-                {remaining === 0 ? 'You\'ve used all your free reports' : 'Almost out of reports'}
+                {remaining === 0 ? t('reportsPage.usedUpAll') : t('reportsPage.almostOut')}
               </p>
-              <p className="text-xs text-gray-500 mt-0.5">Upgrade to Personal or Family for unlimited reports and full history</p>
+              <p className="text-xs text-gray-500 mt-0.5">{t('reportsPage.upgradeDesc')}</p>
             </div>
             <Link href="/pricing" className="flex-shrink-0">
               <Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-sm">
-                Upgrade
+                {t('reportsPage.upgrade')}
               </Button>
             </Link>
           </div>

@@ -51,12 +51,6 @@ async function compressImage(file) {
   })
 }
 
-const STEPS = [
-  { icon: '📄', label: 'Upload', desc: 'Drop your file' },
-  { icon: '🔍', label: 'Extract', desc: 'Text is read by AI' },
-  { icon: '✨', label: 'Explain', desc: 'Plain language result' },
-]
-
 const FORMATS = [
   { icon: FileText, label: 'PDF', color: 'text-red-500 bg-red-50 border-red-100' },
   { icon: Image, label: 'JPG / PNG', color: 'text-blue-500 bg-blue-50 border-blue-100' },
@@ -93,6 +87,12 @@ export default function UploadPage() {
   const [isDragOver, setIsDragOver] = useState(false)
   const [profiles, setProfiles] = useState([])
   const [selectedProfile, setSelectedProfile] = useState(null)
+
+  const STEPS = [
+    { icon: '📄', label: t('upload.stepUploadLabel'), desc: t('upload.stepUploadDesc') },
+    { icon: '🔍', label: t('upload.stepExtractLabel'), desc: t('upload.stepExtractDesc') },
+    { icon: '✨', label: t('upload.stepExplainLabel'), desc: t('upload.stepExplainDesc') },
+  ]
 
   useEffect(() => {
     // Preselect document type when arriving from a feature page (?type=letter|medication|lab|insurance)
@@ -167,8 +167,8 @@ export default function UploadPage() {
       const data = await response.json()
       toast.success(
         data.biomarkersExtracted > 0
-          ? `Analysis complete — ${data.biomarkersExtracted} values added to health trends`
-          : 'Analysis complete!'
+          ? t('upload.analysisCompleteCount', { count: data.biomarkersExtracted })
+          : t('upload.analysisCompleteSimple')
       )
       router.push(`/reports/${data.reportId}`)
     } catch (error) {
@@ -230,30 +230,30 @@ export default function UploadPage() {
             <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <AlertCircle className="h-7 w-7 text-gray-400" />
             </div>
-            <h2 className="text-lg font-bold text-gray-900 mb-2">Upload not available</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">{t('upload.declineTitle')}</h2>
             <p className="text-sm text-gray-500 mb-6 leading-relaxed">
-              You chose not to consent to health data processing. No data was stored. You can change your mind at any time.
+              {t('upload.declineDesc')}
             </p>
             <div className="space-y-2">
               <Button onClick={() => setConsentStatus('needed')} className="w-full bg-emerald-500 hover:bg-emerald-600 text-white">
-                I changed my mind
+                {t('upload.changedMind')}
               </Button>
               <Link href="/dashboard" className="block">
-                <Button variant="ghost" className="w-full text-gray-500">Back to Dashboard</Button>
+                <Button variant="ghost" className="w-full text-gray-500">{t('upload.backToDashboardButton')}</Button>
               </Link>
             </div>
           </div>
         </div>
       )}
 
-      <AppHeader back={{ href: '/dashboard', label: t('upload.backToDashboard') }} title="Upload" tone="emerald" />
+      <AppHeader back={{ href: '/dashboard', label: t('upload.backToDashboard') }} title={t('upload.title')} tone="emerald" />
 
       <div className="container mx-auto px-4 py-10 max-w-xl">
 
         {/* Title */}
         <div className="text-center mb-8">
-          <h1 className="font-display text-2xl md:text-3xl font-bold text-[#0B1F17] mb-2">Upload your medical report</h1>
-          <p className="text-gray-500 text-sm">Get a plain language explanation in under 60 seconds</p>
+          <h1 className="font-display text-2xl md:text-3xl font-bold text-[#0B1F17] mb-2">{t('upload.title')}</h1>
+          <p className="text-gray-500 text-sm">{t('upload.heroSubtitle')}</p>
         </div>
 
         {/* How it works, 3 steps */}
@@ -280,12 +280,12 @@ export default function UploadPage() {
             <div className="flex gap-3">
               <AlertCircle className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-red-700 text-sm mb-1">File too large (max 4 MB)</p>
-                <p className="text-xs text-red-600 mb-2">Please compress your PDF first, it takes a few seconds:</p>
+                <p className="font-semibold text-red-700 text-sm mb-1">{t('upload.fileTooLargeTitle')}</p>
+                <p className="text-xs text-red-600 mb-2">{t('upload.fileTooLargeDesc')}</p>
                 <ul className="text-xs text-red-600 space-y-0.5">
                   <li>• <strong>ilovepdf.com/compress_pdf</strong>, free, no sign up</li>
                   <li>• <strong>smallpdf.com/compress-pdf</strong>, free online</li>
-                  <li>• Mac: Preview → Export as PDF → Reduce File Size</li>
+                  <li>• {t('upload.macCompressNote')}</li>
                 </ul>
               </div>
             </div>
@@ -321,7 +321,7 @@ export default function UploadPage() {
         {profiles.length > 0 && (
           <div className="bg-white border border-gray-200 rounded-2xl p-4 mb-5 shadow-sm">
             <p className="text-xs font-semibold text-gray-500 mb-2.5">
-              Save to health profile <span className="font-normal text-gray-400">· lab values are added to their trends automatically</span>
+              {t('upload.saveToProfileLabel')} <span className="font-normal text-gray-400">{t('upload.saveToProfileHint')}</span>
             </p>
             <div className="flex flex-wrap gap-2">
               {profiles.map(p => {
@@ -355,7 +355,7 @@ export default function UploadPage() {
                     : 'bg-gray-50 border-gray-200 text-gray-400 hover:text-gray-600'
                 }`}
               >
-                No profile
+                {t('upload.noProfileOption')}
               </button>
             </div>
           </div>
@@ -381,7 +381,7 @@ export default function UploadPage() {
                 <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-5">
                   <Loader2 className="h-8 w-8 text-emerald-600 animate-spin" />
                 </div>
-                <p className="text-sm font-semibold text-gray-800 mb-4">Analyzing your report…</p>
+                <p className="text-sm font-semibold text-gray-800 mb-4">{t('upload.analyzing')}</p>
                 <div className="space-y-2.5 max-w-xs mx-auto">
                   {PROGRESS_STEPS.map((step, i) => (
                     <div
@@ -413,7 +413,7 @@ export default function UploadPage() {
                   </svg>
                 </div>
                 <p className="text-lg font-bold text-emerald-700">{t('upload.dropActive')}</p>
-                <p className="text-sm text-emerald-600 mt-1">Release to upload</p>
+                <p className="text-sm text-emerald-600 mt-1">{t('upload.releaseToUpload')}</p>
               </>
             ) : (
               <>
@@ -446,7 +446,7 @@ export default function UploadPage() {
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
                       </svg>
-                      Browse files
+                      {t('upload.browseFilesButton')}
                     </label>
                     <label className="flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl cursor-pointer border border-gray-200 shadow-sm transition-all hover:scale-105 active:scale-95">
                       <input
@@ -463,7 +463,7 @@ export default function UploadPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
-                      Take photo
+                      {t('upload.takePhotoButton')}
                     </label>
                   </div>
                 </div>

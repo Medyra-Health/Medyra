@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
 import AppHeader from '@/components/AppHeader'
+import { getTranslations } from 'next-intl/server'
 
 export const metadata = {
   title: 'Health & Lab Results Blog, Medyra',
@@ -120,18 +121,20 @@ const POSTS = [
   },
 ]
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const t = await getTranslations('blogIndex')
+  const tFooter = await getTranslations('footer')
   return (
     <div className="min-h-screen bg-[#FDFBF7] relative" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
       <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-amber-100/50 rounded-full blur-3xl pointer-events-none" />
-      <AppHeader back={{ href: '/', label: 'Back to Medyra' }} title="Blog" tone="amber" />
+      <AppHeader back={{ href: '/', label: t('backToMedyra') }} title={t('pageTitle')} tone="amber" />
 
       <main className="container mx-auto px-4 py-14 max-w-2xl">
         <div className="mb-10 relative">
-          <p className="text-xs font-semibold text-amber-600 uppercase tracking-widest mb-2">Medyra Blog</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#0B1F17] mb-3" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>Health & Lab Results</h1>
+          <p className="text-xs font-semibold text-amber-600 uppercase tracking-widest mb-2">{t('badge')}</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#0B1F17] mb-3" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>{t('title')}</h1>
           <p className="text-gray-500 text-base leading-relaxed">
-            Plain language guides for understanding your medical reports. No jargon, just clear explanations written for patients.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -145,7 +148,7 @@ export default function BlogPage() {
               }`}>
                 <div className="flex flex-wrap gap-2 mb-3">
                   {post.highlight && (
-                    <span className="text-xs bg-amber-500 text-white px-2 py-0.5 rounded-full font-semibold">New</span>
+                    <span className="text-xs bg-amber-500 text-white px-2 py-0.5 rounded-full font-semibold">{t('newBadge')}</span>
                   )}
                   {post.tags.map((tag) => (
                     <span key={tag} className="text-xs bg-amber-50 text-amber-700 border border-amber-100 px-2 py-0.5 rounded-full font-medium">{tag}</span>
@@ -164,21 +167,21 @@ export default function BlogPage() {
         </div>
 
         <div className="mt-14 p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
-          <p className="text-sm font-semibold text-emerald-800 mb-1">Want instant explanations for your own results?</p>
+          <p className="text-sm font-semibold text-emerald-800 mb-1">{t('ctaTitle')}</p>
           <p className="text-xs text-emerald-700 leading-relaxed mb-3">
-            Upload your medical report and Medyra will explain every value in plain language, in under 60 seconds, in your language, GDPR compliant.
+            {t('ctaDesc')}
           </p>
           <Link
             href="/upload"
             className="inline-flex items-center gap-1.5 bg-emerald-600 text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors"
           >
-            Analyse my report, it&apos;s free →
+            {t('ctaButton')}
           </Link>
         </div>
       </main>
 
       <footer className="border-t border-gray-100 py-6 text-center text-xs text-gray-400 mt-8">
-        © 2026 Medyra · <Link href="/privacy" className="hover:text-gray-600">Privacy</Link> · <Link href="/terms" className="hover:text-gray-600">Terms</Link>
+        © 2026 Medyra · <Link href="/privacy" className="hover:text-gray-600">{tFooter('privacy')}</Link> · <Link href="/terms" className="hover:text-gray-600">{tFooter('terms')}</Link>
       </footer>
     </div>
   )

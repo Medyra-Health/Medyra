@@ -31,7 +31,7 @@ const LANGUAGES = [
   { code: 'PK', name: 'اردو' },
   { code: 'BD', name: 'বাংলা' },
   { code: 'IT', name: 'Italiano' },
-  { code: 'NL', name: 'Dutch' },
+  { code: 'NL', name: 'Nederlands' },
   { code: 'PL', name: 'Polski' },
   { code: 'KR', name: '한국어' },
 ]
@@ -284,11 +284,11 @@ export default function LandingPage() {
               </div>
               <div className="space-y-2">
                 {[
-                  { icon: CheckCircle, color: 'text-emerald-600', bg: 'bg-emerald-50 border-emerald-100', text: 'Your thyroid (TSH) is within the normal range, no action needed.' },
-                  { icon: AlertCircle, color: 'text-orange-500', bg: 'bg-orange-50 border-orange-100',   text: 'Blood sugar (HbA1c) slightly elevated. Discuss pre-diabetes risk with your doctor.' },
-                  { icon: AlertCircle, color: 'text-orange-500', bg: 'bg-orange-50 border-orange-100',   text: 'Kidney filtration (eGFR) mildly reduced, worth monitoring over time.' },
-                  { icon: AlertTriangle, color: 'text-red-500', bg: 'bg-red-50 border-red-100',          text: 'Inflammation (CRP) elevated. Your doctor should investigate soon.' },
-                  { icon: AlertCircle, color: 'text-orange-500', bg: 'bg-orange-50 border-orange-100',   text: 'Iron stores (Ferritin) low. This may cause fatigue.' },
+                  { icon: CheckCircle, color: 'text-emerald-600', bg: 'bg-emerald-50 border-emerald-100', text: t('landing.beforeAfter.result1') },
+                  { icon: AlertCircle, color: 'text-orange-500', bg: 'bg-orange-50 border-orange-100',   text: t('landing.beforeAfter.result2') },
+                  { icon: AlertCircle, color: 'text-orange-500', bg: 'bg-orange-50 border-orange-100',   text: t('landing.beforeAfter.result3') },
+                  { icon: AlertTriangle, color: 'text-red-500', bg: 'bg-red-50 border-red-100',          text: t('landing.beforeAfter.result4') },
+                  { icon: AlertCircle, color: 'text-orange-500', bg: 'bg-orange-50 border-orange-100',   text: t('landing.beforeAfter.result5') },
                 ].map(({ icon: Icon, color, bg, text }, i) => (
                   <div key={i} className={`flex gap-2.5 items-start px-3 py-2.5 rounded-xl border ${bg} transition-colors`}>
                     <Icon className={`h-3.5 w-3.5 flex-shrink-0 mt-0.5 ${color}`} />
@@ -423,7 +423,7 @@ export default function LandingPage() {
                 <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/5">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-xs font-semibold text-[#E8F5F0]/80">Beispiel-Ausgabe</span>
+                    <span className="text-xs font-semibold text-[#E8F5F0]/80">{t('landing.doctorVisit.sampleLabel')}</span>
                   </div>
                   <span className="text-[10px] text-[#E8F5F0]/50 bg-white/5 border border-white/15 px-2 py-0.5 rounded-full">Deutsch</span>
                 </div>
@@ -442,7 +442,7 @@ export default function LandingPage() {
                       ))}
                     </div>
                   ))}
-                  <p className="text-[10px] text-[#E8F5F0]/40 italic border-t border-white/10 pt-3">Dieses Dokument stellt keine medizinische Diagnose dar.</p>
+                  <p className="text-[10px] text-[#E8F5F0]/40 italic border-t border-white/10 pt-3">{t('landing.doctorVisit.disclaimer')}</p>
                 </div>
               </div>
             </div>
@@ -491,14 +491,14 @@ export default function LandingPage() {
           {/* Header */}
           <div className="text-center mb-14 scroll-fade">
             <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
-              <Shield className="h-3 w-3" /> Health Vault
+              <Shield className="h-3 w-3" /> {t('landing.healthVault.badge')}
             </div>
             <h2 className="font-display text-3xl md:text-5xl font-black text-[#0B1F17] mb-4 leading-tight">
-              Your health history.<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#059669] to-[#10B981]">Every person. Every trend.</span>
+              {t('landing.healthVault.title1')}<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#059669] to-[#10B981]">{t('landing.healthVault.title2')}</span>
             </h2>
             <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              One account for the whole family. Medyra tracks biomarkers across reports over time and surfaces trends before your next appointment.
+              {t('landing.healthVault.subtitle')}
             </p>
           </div>
 
@@ -518,7 +518,7 @@ export default function LandingPage() {
                     ))}
                   </div>
                 </div>
-                <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-widest">Health Vault</span>
+                <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-widest">{t('landing.healthVault.badge')}</span>
               </div>
 
               {/* Biomarker tabs: highlight cycles through the markers */}
@@ -543,9 +543,9 @@ export default function LandingPage() {
               {/* Stats row: pops in after the bars grow */}
               <div className="grid grid-cols-3 gap-3">
                 {[
-                  {label:'Latest',value:'13.8',unit:'g/dL',ok:true},
-                  {label:'Normal range',value:'12–17.5',unit:'g/dL',ok:true},
-                  {label:'Change',value:'+7.2%',unit:'since Jan',ok:true},
+                  {label:t('landing.healthVault.statLatest'),value:'13.8',unit:'g/dL',ok:true},
+                  {label:t('landing.healthVault.statNormalRange'),value:'12–17.5',unit:'g/dL',ok:true},
+                  {label:t('landing.healthVault.statChange'),value:'+7.2%',unit:t('landing.healthVault.statSinceJan'),ok:true},
                 ].map((s,i)=>(
                   <div key={s.label} className={`sr-pop d${i+2} bg-white/5 rounded-xl p-2.5 text-center`}>
                     <p className="text-[10px] text-[#E8F5F0]/50 mb-1">{s.label}</p>
@@ -561,26 +561,26 @@ export default function LandingPage() {
               {[
                 {
                   icon: '👨‍👩‍👧‍👦',
-                  title: 'One account, whole family',
-                  desc: 'Create separate profiles for each family member, including partner, children, and elderly parents. Each has their own private health timeline.',
+                  title: t('landing.healthVault.feature1Title'),
+                  desc: t('landing.healthVault.feature1Desc'),
                   color: 'text-emerald-700',
                 },
                 {
                   icon: '📈',
-                  title: 'Automatic biomarker tracking',
-                  desc: 'Hemoglobin, ferritin, TSH, HbA1c, cholesterol, vitamin D, CRP, eGFR. Medyra reads them from every uploaded report and plots them automatically.',
+                  title: t('landing.healthVault.feature2Title'),
+                  desc: t('landing.healthVault.feature2Desc'),
                   color: 'text-emerald-700',
                 },
                 {
                   icon: '🧾',
-                  title: 'Every value, not just the famous ones',
-                  desc: 'Medyra tracks every numeric value from your reports, with your lab\'s own units and reference ranges. Nothing gets lost between appointments.',
+                  title: t('landing.healthVault.feature3Title'),
+                  desc: t('landing.healthVault.feature3Desc'),
                   color: 'text-emerald-700',
                 },
                 {
                   icon: '🩺',
-                  title: 'Doctor prep with full history',
-                  desc: 'When you generate a doctor summary, select a profile. Your lab history is automatically pulled in. No typing, no forgetting, no gaps.',
+                  title: t('landing.healthVault.feature4Title'),
+                  desc: t('landing.healthVault.feature4Desc'),
                   color: 'text-emerald-700',
                 },
               ].map((f, i) => (
@@ -598,10 +598,10 @@ export default function LandingPage() {
           {/* Profile limit cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 scroll-fade">
             {[
-              { plan: 'Free', profiles: '0', desc: 'Stateless analysis', color: 'border-gray-200 bg-white', badge: '' },
-              { plan: 'Personal', profiles: '2', desc: 'You + partner', color: 'border-emerald-300 bg-emerald-50', badge: 'Most Popular' },
-              { plan: 'Family', profiles: '5', desc: 'Whole household', color: 'border-gray-200 bg-white', badge: '' },
-              { plan: 'Clinic', profiles: '∞', desc: 'Unlimited profiles', color: 'border-gray-200 bg-white', badge: '' },
+              { plan: t('profiles.tierFree'), profiles: '0', desc: t('landing.healthVault.planFreeDesc'), color: 'border-gray-200 bg-white', badge: '' },
+              { plan: t('profiles.tierPersonal'), profiles: '2', desc: t('landing.healthVault.planPersonalDesc'), color: 'border-emerald-300 bg-emerald-50', badge: t('landing.healthVault.mostPopular') },
+              { plan: t('profiles.tierFamily'), profiles: '5', desc: t('landing.healthVault.planFamilyDesc'), color: 'border-gray-200 bg-white', badge: '' },
+              { plan: t('profiles.tierClinic'), profiles: '∞', desc: t('landing.healthVault.planClinicDesc'), color: 'border-gray-200 bg-white', badge: '' },
             ].map(p => (
               <div key={p.plan} className={`relative rounded-2xl border p-5 text-center ${p.color}`}>
                 {p.badge && (
@@ -617,10 +617,10 @@ export default function LandingPage() {
           {/* CTA */}
           <div className="text-center scroll-fade">
             <Link href="/profiles" className="inline-flex items-center gap-2 bg-gradient-to-r from-[#10B981] to-[#059669] hover:shadow-[0_0_32px_-6px_rgba(16,185,129,0.6)] text-white font-bold px-8 py-4 rounded-xl transition-all text-sm shadow-lg shadow-emerald-900/40 mr-3">
-              Open Health Vault <ArrowRight className="h-4 w-4" />
+              {t('landing.healthVault.openVault')} <ArrowRight className="h-4 w-4" />
             </Link>
             <Link href="/blog/health-vault-profiles-guide" className="inline-flex items-center gap-2 border border-emerald-300 hover:border-emerald-500 hover:bg-emerald-50 text-emerald-700 font-semibold px-6 py-4 rounded-xl transition-colors text-sm">
-              Learn more
+              {t('landing.healthVault.learnMore')}
             </Link>
           </div>
         </div>
@@ -645,10 +645,10 @@ export default function LandingPage() {
           {/* Data flow: clear step-by-step */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5 scroll-fade delay-1">
             {[
-              { step: 1, icon: FileText,  label: 'You upload', sub: 'PDF, image, or text', color: 'border-gray-200 bg-white' },
-              { step: 2, icon: Lock,      label: 'Encrypted at rest', sub: 'AES-256-GCM, only ciphertext stored', color: 'border-emerald-300 bg-emerald-50', glow: true },
-              { step: 3, icon: Brain,     label: 'AI analysis', sub: 'Temp decrypted, sent to Claude, not stored', color: 'border-gray-200 bg-white' },
-              { step: 4, icon: CheckCircle, label: 'Answer to you', sub: 'Plain language, on your screen', color: 'border-gray-200 bg-white' },
+              { step: 1, icon: FileText,  label: t('landing.security.flowStep1Label'), sub: t('landing.security.flowStep1Sub'), color: 'border-gray-200 bg-white' },
+              { step: 2, icon: Lock,      label: t('landing.security.flowStep2Label'), sub: t('landing.security.flowStep2Sub'), color: 'border-emerald-300 bg-emerald-50', glow: true },
+              { step: 3, icon: Brain,     label: t('landing.security.flowStep3Label'), sub: t('landing.security.flowStep3Sub'), color: 'border-gray-200 bg-white' },
+              { step: 4, icon: CheckCircle, label: t('landing.security.flowStep4Label'), sub: t('landing.security.flowStep4Sub'), color: 'border-gray-200 bg-white' },
             ].map(({ step, icon: Icon, label, sub, color, glow }) => (
               <div key={step} className={`rounded-2xl border p-4 text-center relative ${color}`}>
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-3 ${glow ? 'bg-emerald-100' : 'bg-gray-100'}`}>
@@ -666,20 +666,20 @@ export default function LandingPage() {
             {[
               {
                 icon: '🔒',
-                title: 'We cannot read your data',
-                desc: 'Everything is locked with bank grade encryption before it touches our database. Only your account can unlock it, not even we can.',
+                title: t('landing.security.promise1Title'),
+                desc: t('landing.security.promise1Desc'),
                 accent: 'border-emerald-200 bg-emerald-50/60',
               },
               {
                 icon: '🗑️',
-                title: 'You decide how long we keep it',
-                desc: 'By default everything is deleted automatically after 30 days. Want to track trends? Choose to keep your history. Changed your mind? Delete everything instantly. Always your choice.',
+                title: t('landing.security.promise2Title'),
+                desc: t('landing.security.promise2Desc'),
                 accent: 'border-teal-200 bg-teal-50/60',
               },
               {
                 icon: '🚫',
-                title: 'Never used to train AI',
-                desc: 'Your report is analyzed once and the answer comes back to you. It is not stored by the AI provider and never used for training.',
+                title: t('landing.security.promise3Title'),
+                desc: t('landing.security.promise3Desc'),
                 accent: 'border-emerald-200 bg-emerald-50/60',
               },
             ].map(({ icon, title, desc, accent }, i) => (
@@ -750,29 +750,29 @@ export default function LandingPage() {
                   <div className="flex items-center justify-between px-5 py-4 border-b border-white/5">
                     <div className="flex items-center gap-2.5">
                       <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                      <span className="text-[#E8F5F0] font-semibold text-sm">Arztbrief · Befund</span>
+                      <span className="text-[#E8F5F0] font-semibold text-sm">{t('landing.senior.demoHeader')}</span>
                     </div>
-                    <span className="text-xs text-emerald-300 bg-emerald-400/10 px-2.5 py-1 rounded-full font-medium border border-emerald-400/20">Erklärt</span>
+                    <span className="text-xs text-emerald-300 bg-emerald-400/10 px-2.5 py-1 rounded-full font-medium border border-emerald-400/20">{t('landing.senior.demoBadge')}</span>
                   </div>
                   {/* Content */}
                   <div className="p-5 space-y-3">
                     <div className="bg-white/[0.04] border border-white/10 rounded-xl p-4">
-                      <p className="text-xs font-semibold text-[#E8F5F0]/50 uppercase tracking-widest mb-1">Original</p>
+                      <p className="text-xs font-semibold text-[#E8F5F0]/50 uppercase tracking-widest mb-1">{t('landing.senior.originalLabel')}</p>
                       <p className="text-xs text-[#E8F5F0]/60 leading-relaxed font-mono">"Ejektionsfraktion 45%, Sinusrhythmus, kein Anhalt für Perikarderguss."</p>
                     </div>
                     <div className="flex justify-center text-[#E8F5F0]/40">
                       <ArrowRight className="h-4 w-4 rotate-90" />
                     </div>
                     <div className="bg-emerald-950/50 border border-emerald-500/15 rounded-xl p-4">
-                      <p className="text-xs font-semibold text-emerald-400 uppercase tracking-widest mb-2">Einfache Erklärung</p>
+                      <p className="text-xs font-semibold text-emerald-400 uppercase tracking-widest mb-2">{t('landing.senior.explainedLabel')}</p>
                       <p className="text-xs text-[#E8F5F0]/70 leading-relaxed">Ihr Herz pumpt das Blut gut, aber die Pumpleistung ist leicht eingeschränkt. Kein Flüssigkeitsansammlung um das Herz. Regelmäßiger Herzrhythmus.</p>
                     </div>
                     <div className="flex items-center gap-2 pt-1">
                       <button className="flex-1 flex items-center gap-1.5 justify-center py-2 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-xs text-emerald-300 font-medium">
-                        <Volume2 className="h-3.5 w-3.5" /> Vorlesen lassen
+                        <Volume2 className="h-3.5 w-3.5" /> {t('landing.senior.listenButton')}
                       </button>
                       <button className="flex-1 flex items-center gap-1.5 justify-center py-2 rounded-lg bg-white/5 border border-white/15 text-xs text-[#E8F5F0]/60">
-                        <Download className="h-3.5 w-3.5" /> PDF teilen
+                        <Download className="h-3.5 w-3.5" /> {t('landing.senior.shareButton')}
                       </button>
                     </div>
                   </div>
@@ -792,24 +792,24 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 max-w-5xl relative">
           <div className="sr text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-              <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" /> Kostenloses Lexikon
+              <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" /> {t('landing.lexikonSection.badge')}
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-black text-[#0B1F17] mb-3 leading-tight">
-              Laborwerte verstehen.<br className="hidden sm:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#059669] to-[#10B981]">Ohne Medizinstudium.</span>
+              {t('landing.lexikonSection.title1')}<br className="hidden sm:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#059669] to-[#10B981]">{t('landing.lexikonSection.title2')}</span>
             </h2>
             <p className="text-gray-500 text-base max-w-xl mx-auto">
-              46 Blutwerte einfach erklärt: Normwerte, Ursachen, wann zum Arzt. Kostenlos. Keine Anmeldung.
+              {t('landing.lexikonSection.subtitle')}
             </p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mb-10">
             {[
-              { slug: 'crp',         acronym: 'CRP',   name: 'Entzündungs­wert', color: 'bg-white border-gray-200 text-gray-800 hover:border-emerald-400' },
-              { slug: 'hba1c',       acronym: 'HbA1c', name: 'Langzeit­zucker',  color: 'bg-white border-gray-200 text-gray-800 hover:border-emerald-400' },
-              { slug: 'tsh',         acronym: 'TSH',   name: 'Schilddrüse',      color: 'bg-white border-gray-200 text-gray-800 hover:border-emerald-400' },
-              { slug: 'cholesterin', acronym: 'TC',    name: 'Cholesterin',      color: 'bg-white border-gray-200 text-gray-800 hover:border-emerald-400' },
-              { slug: 'haemoglobin', acronym: 'Hb',    name: 'Hämoglobin',       color: 'bg-white border-gray-200 text-gray-800 hover:border-emerald-400' },
-              { slug: 'vitamin-d',   acronym: 'Vit.D', name: 'Vitamin D',        color: 'bg-white border-gray-200 text-gray-800 hover:border-emerald-400' },
+              { slug: 'crp',         acronym: 'CRP',   name: t('landing.lexikonSection.term1Name'), color: 'bg-white border-gray-200 text-gray-800 hover:border-emerald-400' },
+              { slug: 'hba1c',       acronym: 'HbA1c', name: t('landing.lexikonSection.term2Name'), color: 'bg-white border-gray-200 text-gray-800 hover:border-emerald-400' },
+              { slug: 'tsh',         acronym: 'TSH',   name: t('landing.lexikonSection.term3Name'), color: 'bg-white border-gray-200 text-gray-800 hover:border-emerald-400' },
+              { slug: 'cholesterin', acronym: 'TC',    name: t('landing.lexikonSection.term4Name'), color: 'bg-white border-gray-200 text-gray-800 hover:border-emerald-400' },
+              { slug: 'haemoglobin', acronym: 'Hb',    name: t('landing.lexikonSection.term5Name'), color: 'bg-white border-gray-200 text-gray-800 hover:border-emerald-400' },
+              { slug: 'vitamin-d',   acronym: 'Vit.D', name: t('landing.lexikonSection.term6Name'), color: 'bg-white border-gray-200 text-gray-800 hover:border-emerald-400' },
             ].map((term, i) => (
               <Link key={term.slug} href={`/lexikon/${term.slug}`}
                 className={`sr d${i + 1} group flex flex-col items-center text-center border rounded-2xl px-3 py-5 shadow-sm transition-all hover:shadow-lg hover:shadow-emerald-100 hover:-translate-y-0.5 ${term.color}`}>
@@ -822,9 +822,9 @@ export default function LandingPage() {
           <div className="text-center sr">
             <Link href="/lexikon"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#10B981] to-[#059669] hover:shadow-[0_0_32px_-6px_rgba(16,185,129,0.6)] text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-emerald-900/40">
-              Alle 46 Laborwerte im Lexikon <ArrowRight className="h-4 w-4" />
+              {t('landing.lexikonSection.cta')} <ArrowRight className="h-4 w-4" />
             </Link>
-            <p className="text-gray-400 text-xs mt-3">Kostenlos · Keine Anmeldung erforderlich · Auf Deutsch</p>
+            <p className="text-gray-400 text-xs mt-3">{t('landing.lexikonSection.footerNote')}</p>
           </div>
         </div>
       </section>
@@ -837,16 +837,16 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 max-w-4xl relative sr">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-              <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" /> Free to start
+              <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" /> {t('landing.pricingChips.badge')}
             </div>
             <h2 className="font-display text-3xl md:text-5xl font-black text-[#0B1F17] mb-4 leading-tight">{t('pricingCta.title')}</h2>
             <p className="text-gray-600 mb-10 text-lg max-w-xl mx-auto">{t('pricingCta.subtitle')}</p>
           </div>
           <div className="grid grid-cols-3 gap-4 mb-10 max-w-2xl mx-auto">
             {[
-              { label: 'Free forever', sub: '3 reports/month', icon: CheckCircle, color: 'text-emerald-600' },
-              { label: 'No credit card', sub: 'Start instantly', icon: Shield, color: 'text-emerald-600' },
-              { label: 'Cancel anytime', sub: 'No lock-in', icon: Lock, color: 'text-emerald-600' },
+              { label: t('landing.pricingChips.chip1Label'), sub: t('landing.pricingChips.chip1Sub'), icon: CheckCircle, color: 'text-emerald-600' },
+              { label: t('landing.pricingChips.chip2Label'), sub: t('landing.pricingChips.chip2Sub'), icon: Shield, color: 'text-emerald-600' },
+              { label: t('landing.pricingChips.chip3Label'), sub: t('landing.pricingChips.chip3Sub'), icon: Lock, color: 'text-emerald-600' },
             ].map(({ label, sub, icon: Icon, color }) => (
               <div key={label} className="text-center bg-[#F3FAF6] border border-emerald-100 rounded-2xl p-4">
                 <Icon className={`h-5 w-5 mx-auto mb-2 ${color}`} />
@@ -883,9 +883,9 @@ export default function LandingPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {[
-              { href: '/blog/doctor-visit-prep-germany',           tag: 'Doctor Visit · New', accent: 'border-l-emerald-500', tagColor: 'text-emerald-600', title: "How to Prepare for a Doctor's Appointment in Germany",         desc: 'Describe symptoms in any language. Medyra generates a structured German summary for your doctor.', time: '6 min' },
-              { href: '/blog/arztbrief-verstehen-fur-senioren',    tag: 'Für Senioren · Neu', accent: 'border-l-emerald-500', tagColor: 'text-emerald-600', title: 'Ihren Arztbrief einfach verstehen, Medyra für Senioren',       desc: 'Befund erhalten und nicht verstanden? Medyra erklärt alles auf Deutsch, zum Lesen oder Vorlesen lassen.', time: '5 Min.' },
-              { href: '/blog/how-to-read-lab-results-germany-expat', tag: 'Germany · Expat',  accent: 'border-l-emerald-500', tagColor: 'text-emerald-600', title: 'How to Read Your Lab Results in Germany as an Expat',           desc: 'Decode your Laborbefund. Abbreviations, reference ranges, and what flagged values actually mean.', time: '7 min' },
+              { href: '/blog/doctor-visit-prep-germany',           tag: t('landing.blogPreview.post1Tag'), accent: 'border-l-emerald-500', tagColor: 'text-emerald-600', title: t('landing.blogPreview.post1Title'), desc: t('landing.blogPreview.post1Desc'), time: '6 min' },
+              { href: '/blog/arztbrief-verstehen-fur-senioren',    tag: t('landing.blogPreview.post2Tag'), accent: 'border-l-emerald-500', tagColor: 'text-emerald-600', title: t('landing.blogPreview.post2Title'), desc: t('landing.blogPreview.post2Desc'), time: '5' },
+              { href: '/blog/how-to-read-lab-results-germany-expat', tag: t('landing.blogPreview.post3Tag'),  accent: 'border-l-emerald-500', tagColor: 'text-emerald-600', title: t('landing.blogPreview.post3Title'), desc: t('landing.blogPreview.post3Desc'), time: '7 min' },
             ].map((post, i) => (
               <Link key={post.href} href={post.href} className={`block group sr d${i+1}`}>
                 <div className={`bg-white rounded-2xl border border-gray-100 border-l-2 ${post.accent} p-5 h-full shadow-sm glow-card hover:border-l-2 hover:shadow-xl hover:shadow-emerald-900/5`}>
