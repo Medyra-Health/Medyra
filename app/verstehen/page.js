@@ -3,6 +3,7 @@
 import { SignedIn, SignedOut, SignInButton, useUser } from '@clerk/nextjs'
 import { useState, useCallback, useRef, useEffect } from 'react'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { useDropzone } from 'react-dropzone'
 import {
   Shield, Volume2, VolumeX, Loader2,
@@ -49,6 +50,8 @@ async function compressImage(file) {
   })
 }
 
+// Report content itself is always generated and spoken in German — only the
+// surrounding UI chrome is localized.
 function buildSpeechText(report) {
   const parts = []
   const summary = report.analysis?.summary || report.explanation?.summary
@@ -82,14 +85,15 @@ function StatusIcon({ status }) {
   return <AlertCircle className="h-8 w-8 text-gray-400 flex-shrink-0 mt-0.5" />
 }
 
-function statusLabel(status) {
-  if (status === 'normal') return { text: 'In Ordnung',  color: 'bg-emerald-100 text-emerald-800' }
-  if (status === 'high')   return { text: 'Erhöht',      color: 'bg-orange-100 text-orange-800' }
-  if (status === 'low')    return { text: 'Zu niedrig',  color: 'bg-blue-100 text-blue-800' }
-  return                          { text: 'Auffällig',   color: 'bg-gray-100 text-gray-700' }
+function statusLabel(status, t) {
+  if (status === 'normal') return { text: t('statusNormal'),  color: 'bg-emerald-100 text-emerald-800' }
+  if (status === 'high')   return { text: t('statusHigh'),    color: 'bg-orange-100 text-orange-800' }
+  if (status === 'low')    return { text: t('statusLow'),     color: 'bg-blue-100 text-blue-800' }
+  return                          { text: t('statusUnknown'), color: 'bg-gray-100 text-gray-700' }
 }
 
 export default function VerstehensPage() {
+  const t = useTranslations('verstehen')
   const { isLoaded } = useUser()
   const [stage, setStage] = useState('upload') // upload | analyzing | result | error
   const [report, setReport] = useState(null)
@@ -122,9 +126,9 @@ export default function VerstehensPage() {
       const res = await fetch('/api/reports/analyze', { method: 'POST', body: formData })
       if (!res.ok) {
         const err = await res.json().catch(() => ({}))
-        if (res.status === 429) throw new Error('Sie haben Ihr monatliches Limit erreicht. Bitte wenden Sie sich an Ihre Familie oder upgraden Sie Ihren Plan.')
-        if (res.status === 401) throw new Error('Bitte melden Sie sich zuerst an.')
-        throw new Error(err.error || 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.')
+        if (res.status === 429) throw new Error(t('errorLimitReached'))
+        if (res.status === 401) throw new Error(t('errorLoginFirst'))
+        throw new Error(err.error || t('errorGeneric'))
       }
       const { reportId } = await res.json()
 
@@ -140,7 +144,7 @@ export default function VerstehensPage() {
       setStage('result')
       setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200)
     } catch (e) {
-      setErrorMsg(e.message || 'Unbekannter Fehler')
+      setErrorMsg(e.message || t('errorUnknown'))
       setStage('error')
     }
   }
@@ -192,9 +196,9 @@ export default function VerstehensPage() {
     if (typeof navigator === 'undefined') return
     const url = window.location.origin + '/verstehen'
     if (navigator.share) {
-      navigator.share({ title: 'Medyra – Arztbrief auf Deutsch erklärt', url })
+      navigator.share({ title: t('shareTitle'), url })
     } else {
-      navigator.clipboard.writeText(url).then(() => alert('Link kopiert!'))
+      navigator.clipboard.writeText(url).then(() => alert(t('linkCopied')))
     }
   }
 
@@ -224,7 +228,7 @@ export default function VerstehensPage() {
       )}
 
       {/* ── Header ── */}
-      <AppHeader back={{ href: '/', label: 'Zurück zur Startseite' }} tone="blue" />
+      <AppHeader back={{ href: '/', label: t('backToHome') }} tone="blue" />
 
       {/* ══════════════════════════════════════════════════
           UPLOAD / ERROR STAGE
@@ -235,20 +239,20 @@ export default function VerstehensPage() {
 
             {/* Headline */}
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-[#0B1F17] leading-[1.12] mb-5">
-              Ihr Arztbrief,<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">einfach erklärt.</span>
+              {t('headline1')}<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">{t('headlineHighlight')}</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 leading-relaxed mb-12 max-w-md mx-auto">
-              Laden Sie Ihren Befund hoch, wir erklären alles auf Deutsch, ohne Fachbegriffe.
+              {t('subtitle')}
             </p>
 
             {/* Error banner */}
             {stage === 'error' && (
               <div className="mb-8 bg-red-50 border-2 border-red-200 rounded-2xl p-6 text-left">
-                <p className="text-lg font-semibold text-red-700 mb-2">Ein Fehler ist aufgetreten</p>
+                <p className="text-lg font-semibold text-red-700 mb-2">{t('errorTitle')}</p>
                 <p className="text-base text-red-600 leading-relaxed">{errorMsg}</p>
                 <button onClick={() => setStage('upload')} className="mt-4 text-base text-red-700 underline font-medium">
-                  Nochmal versuchen
+                  {t('retryButton')}
                 </button>
               </div>
             )}
@@ -260,12 +264,12 @@ export default function VerstehensPage() {
                   <Upload className="h-11 w-11 text-emerald-600" />
                 </div>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Um Ihr Dokument zu erklären,<br />
-                  melden Sie sich kurz an.
+                  {t('signedOutText1')}<br />
+                  {t('signedOutText2')}
                 </p>
                 <SignInButton mode="modal">
                   <button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:shadow-[0_0_28px_-4px_rgba(59,130,246,0.5)] active:scale-95 text-white font-bold text-xl px-10 py-5 rounded-2xl transition-all shadow-lg shadow-blue-200 cursor-pointer">
-                    Anmelden und Dokument hochladen
+                    {t('signInButton')}
                   </button>
                 </SignInButton>
               </div>
@@ -290,19 +294,19 @@ export default function VerstehensPage() {
                 </div>
 
                 {isDragActive ? (
-                  <p className="text-2xl font-bold text-emerald-700">Jetzt loslassen</p>
+                  <p className="text-2xl font-bold text-emerald-700">{t('dropActive')}</p>
                 ) : (
                   <>
                     <p className="text-2xl font-bold text-gray-800 mb-3">
-                      Dokument hier hinziehen
+                      {t('dropTitle')}
                     </p>
-                    <p className="text-lg text-gray-400 mb-8">oder</p>
+                    <p className="text-lg text-gray-400 mb-8">{t('orLabel')}</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <button
                         type="button"
                         className="bg-gradient-to-r from-blue-500 to-blue-600 hover:shadow-[0_0_28px_-4px_rgba(59,130,246,0.5)] active:scale-95 text-white font-bold text-xl px-10 py-5 rounded-2xl transition-all shadow-lg shadow-blue-200"
                       >
-                        Datei auswählen
+                        {t('chooseFileButton')}
                       </button>
                       <label
                         onClick={e => e.stopPropagation()}
@@ -318,10 +322,10 @@ export default function VerstehensPage() {
                             if (file) onDrop([file])
                           }}
                         />
-                        Foto aufnehmen
+                        {t('takePhotoButton')}
                       </label>
                     </div>
-                    <p className="text-base text-gray-400 mt-6">PDF, Foto (JPG/PNG) oder Text · bis zu 4 MB</p>
+                    <p className="text-base text-gray-400 mt-6">{t('fileHint')}</p>
                   </>
                 )}
               </div>
@@ -331,15 +335,15 @@ export default function VerstehensPage() {
             <div className="flex flex-wrap items-center justify-center gap-6 mt-10 text-base text-gray-400">
               <span className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-emerald-500" />
-                DSGVO-konform
+                {t('trustGdpr')}
               </span>
               <span className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-emerald-500" />
-                Verschlüsselt
+                {t('trustEncrypted')}
               </span>
               <span className="flex items-center gap-2">
                 <FileText className="h-5 w-5 text-emerald-500" />
-                Keine Weitergabe
+                {t('trustNoSharing')}
               </span>
             </div>
           </div>
@@ -351,16 +355,16 @@ export default function VerstehensPage() {
 
           {/* Share tip for adult children */}
           <div className="mt-10 max-w-md mx-auto bg-blue-50 border border-blue-100 rounded-2xl px-8 py-6 text-center">
-            <p className="text-base font-semibold text-blue-800 mb-1">Für Kinder und Angehörige</p>
+            <p className="text-base font-semibold text-blue-800 mb-1">{t('familyTipTitle')}</p>
             <p className="text-sm text-blue-600 leading-relaxed">
-              Schicken Sie diesen Link an Ihre Eltern:{' '}
+              {t('familyTipText')}{' '}
               <span className="font-mono font-bold">medyra.de/verstehen</span>
             </p>
             <button
               onClick={handleShare}
               className="mt-4 inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800 font-semibold underline"
             >
-              <Share2 className="h-4 w-4" /> Link teilen
+              <Share2 className="h-4 w-4" /> {t('shareLinkButton')}
             </button>
           </div>
         </div>
@@ -375,16 +379,16 @@ export default function VerstehensPage() {
             <Loader2 className="h-16 w-16 text-emerald-500 animate-spin" />
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0B1F17] mb-4">
-            Wir lesen Ihr Dokument …
+            {t('analyzingTitle')}
           </h2>
           <p className="text-xl text-gray-500 max-w-sm leading-relaxed mb-12">
-            Das dauert weniger als 60 Sekunden.<br />Bitte warten Sie kurz.
+            {t('analyzingText1')}<br />{t('analyzingText2')}
           </p>
           <div className="space-y-5 text-left max-w-xs w-full">
             {[
-              'Text aus dem Dokument lesen …',
-              'Fachbegriffe erkennen …',
-              'Verständliche Erklärung erstellen …',
+              t('step1'),
+              t('step2'),
+              t('step3'),
             ].map((step, i) => (
               <div key={i} className="flex items-center gap-4 text-lg text-gray-500">
                 <div
@@ -410,9 +414,9 @@ export default function VerstehensPage() {
               <CheckCircle className="h-10 w-10 text-emerald-600" />
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-[#0B1F17] mb-3">
-              Ihr Dokument wurde erklärt
+              {t('resultTitle')}
             </h2>
-            <p className="text-xl text-gray-500">Hier ist alles in einfacher Sprache</p>
+            <p className="text-xl text-gray-500">{t('resultSubtitle')}</p>
           </div>
 
           {/* ── VORLESEN BUTTON ── */}
@@ -426,14 +430,14 @@ export default function VerstehensPage() {
               }`}
             >
               {speaking ? (
-                <><VolumeX className="h-8 w-8" /> Vorlesen stoppen</>
+                <><VolumeX className="h-8 w-8" /> {t('stopReadingButton')}</>
               ) : (
-                <><Volume2 className="h-8 w-8" /> Vorlesen lassen</>
+                <><Volume2 className="h-8 w-8" /> {t('startReadingButton')}</>
               )}
             </button>
             {speaking && (
               <p className="text-center text-base text-gray-400 mt-3 animate-pulse">
-                Wird gerade vorgelesen …
+                {t('readingNote')}
               </p>
             )}
           </div>
@@ -441,7 +445,7 @@ export default function VerstehensPage() {
           {/* ── Summary ── */}
           {(report.analysis?.summary || report.explanation?.summary) && (
             <div className="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-7 mb-8">
-              <p className="text-sm font-bold text-emerald-600 uppercase tracking-wider mb-3">Zusammenfassung</p>
+              <p className="text-sm font-bold text-emerald-600 uppercase tracking-wider mb-3">{t('summaryLabel')}</p>
               <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">
                 {report.analysis?.summary || report.explanation?.summary}
               </p>
@@ -451,10 +455,10 @@ export default function VerstehensPage() {
           {/* ── Findings ── */}
           {report.analysis?.findings?.length > 0 && (
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-5">Ihre Werte erklärt</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-5">{t('findingsTitle')}</h3>
               <div className="space-y-4">
                 {report.analysis.findings.map((f, i) => {
-                  const { text, color } = statusLabel(f.status)
+                  const { text, color } = statusLabel(f.status, t)
                   return (
                     <div key={i} className="bg-white border-2 border-gray-100 rounded-2xl p-6 hover:border-gray-200 transition-colors">
                       <div className="flex items-start gap-4">
@@ -482,7 +486,7 @@ export default function VerstehensPage() {
           {/* ── Questions for doctor ── */}
           {report.explanation?.questionsForDoctor?.length > 0 && (
             <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-7 mb-8">
-              <h3 className="text-2xl font-bold text-blue-900 mb-5">Fragen für Ihren Arzt</h3>
+              <h3 className="text-2xl font-bold text-blue-900 mb-5">{t('questionsTitle')}</h3>
               <ul className="space-y-4">
                 {report.explanation.questionsForDoctor.map((q, i) => (
                   <li key={i} className="flex gap-3 text-xl text-blue-800 leading-relaxed">
@@ -500,13 +504,13 @@ export default function VerstehensPage() {
               onClick={() => window.print()}
               className="flex items-center justify-center gap-2 py-5 rounded-2xl border-2 border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50 text-gray-700 font-semibold text-lg transition-all"
             >
-              <Printer className="h-6 w-6" /> Drucken
+              <Printer className="h-6 w-6" /> {t('printButton')}
             </button>
             <button
               onClick={handleShare}
               className="flex items-center justify-center gap-2 py-5 rounded-2xl border-2 border-emerald-200 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold text-lg transition-all"
             >
-              <Share2 className="h-6 w-6" /> Teilen
+              <Share2 className="h-6 w-6" /> {t('shareButton')}
             </button>
           </div>
 
@@ -516,14 +520,14 @@ export default function VerstehensPage() {
               onClick={handleReset}
               className="text-lg text-gray-500 hover:text-emerald-600 underline transition-colors"
             >
-              Ein weiteres Dokument hochladen
+              {t('uploadAnotherButton')}
             </button>
           </div>
 
           {/* Trust reminder */}
           <div className="mt-10 text-center text-base text-gray-400">
             <Shield className="h-5 w-5 inline mr-2 text-emerald-400" />
-            Ihre Daten sind verschlüsselt und werden nicht weitergegeben.
+            {t('trustReminder')}
           </div>
         </div>
       )}
@@ -531,12 +535,12 @@ export default function VerstehensPage() {
       {/* ── Footer ── */}
       <footer className="no-print border-t border-gray-100 py-8 text-center text-base text-gray-400 mt-10">
         <p className="mb-3 text-gray-500">
-          Medyra ist kein Arzt und ersetzt keine medizinische Beratung.
+          {t('footerDisclaimer')}
         </p>
         <div className="flex justify-center gap-6">
-          <Link href="/privacy" className="hover:text-gray-700 transition-colors">Datenschutz</Link>
-          <Link href="/terms"   className="hover:text-gray-700 transition-colors">Nutzungsbedingungen</Link>
-          <Link href="/contact" className="hover:text-gray-700 transition-colors">Kontakt</Link>
+          <Link href="/privacy" className="hover:text-gray-700 transition-colors">{t('footerPrivacy')}</Link>
+          <Link href="/terms"   className="hover:text-gray-700 transition-colors">{t('footerTerms')}</Link>
+          <Link href="/contact" className="hover:text-gray-700 transition-colors">{t('footerContact')}</Link>
         </div>
       </footer>
     </div>
