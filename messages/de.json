@@ -82,7 +82,8 @@
           "1 Bericht pro Monat",
           "Grundlegende Analyse",
           "PDF-Export",
-          "E-Mail-Support"
+          "E-Mail-Support",
+          "Keine Kreditkarte erforderlich"
         ],
         "originalPrice": ""
       },
@@ -141,7 +142,8 @@
           "Mehrere Nutzer",
           "Erweiterte Analysen",
           "Dedizierter Support",
-          "API-Zugang (demnächst)"
+          "API-Zugang (demnächst)",
+          "API-Zugang (bald verfügbar)"
         ],
         "originalPrice": ""
       }

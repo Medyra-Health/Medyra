@@ -82,7 +82,8 @@
           "1 relatório por mês",
           "Explicação em linguagem simples",
           "Destaques de faixa normal",
-          "Suporte básico"
+          "Suporte básico",
+          "Não é necessário cartão de crédito"
         ],
         "originalPrice": ""
       },
@@ -141,7 +142,8 @@
           "Integração EHR",
           "Marca personalizada",
           "Suporte dedicado",
-          "Acesso API"
+          "Acesso API",
+          "Acesso à API (em breve)"
         ],
         "originalPrice": ""
       }

@@ -82,7 +82,8 @@
           "Ayda 1 rapor",
           "Sade dilde açıklama",
           "Normal aralık vurguları",
-          "Temel destek"
+          "Temel destek",
+          "Kredi kartı gerekmez"
         ],
         "originalPrice": ""
       },
@@ -141,7 +142,8 @@
           "EHR entegrasyonu",
           "Özel marka",
           "Özel destek",
-          "API erişimi"
+          "API erişimi",
+          "API erişimi (yakında)"
         ],
         "originalPrice": ""
       }

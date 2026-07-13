@@ -82,7 +82,8 @@
           "1 referto al mese",
           "Spiegazione in linguaggio semplice",
           "Evidenziazione intervallo normale",
-          "Supporto base"
+          "Supporto base",
+          "Nessuna carta di credito richiesta"
         ],
         "originalPrice": ""
       },
@@ -141,7 +142,8 @@
           "Integrazione EHR",
           "Marchio personalizzato",
           "Supporto dedicato",
-          "Accesso API"
+          "Accesso API",
+          "Accesso API (prossimamente)"
         ],
         "originalPrice": ""
       }

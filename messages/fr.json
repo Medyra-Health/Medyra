@@ -82,7 +82,8 @@
           "1 rapport par mois",
           "Explication en langage simple",
           "Mise en évidence de la plage normale",
-          "Support de base"
+          "Support de base",
+          "Aucune carte de crédit requise"
         ],
         "originalPrice": ""
       },
@@ -141,7 +142,8 @@
           "Intégration DSE",
           "Marque personnalisée",
           "Support dédié",
-          "Accès API"
+          "Accès API",
+          "Accès API (bientôt disponible)"
         ],
         "originalPrice": ""
       }
