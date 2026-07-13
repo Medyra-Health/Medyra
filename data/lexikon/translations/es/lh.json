@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "La LH desencadena la ovulación en mujeres y estimula la producción de testosterona en hombres. El valor a menudo se mide junto con FSH, por ejemplo en trastornos del ciclo o deseo de tener hijos.",
+  "metaDescription": "¿LH elevada o baja? Significado para el ciclo y la fertilidad explicado de forma sencilla.",
+  "causesElevated": [
+    "Ovulación (aumento breve)",
+    "Menopausia",
+    "Síndrome de ovario poliquístico"
+  ],
+  "causesLow": [
+    "Trastorno de la hipófisis",
+    "Pérdida de peso significativa o deporte de competición"
+  ],
+  "doctorQuestions": [
+    "¿Qué muestra la relación LH/FSH en mi caso?",
+    "¿Es normal mi ciclo o función hormonal?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (depende del ciclo en mujeres)"
+  },
+  "categoryLabel": "Hormonas",
+  "pageTitle": "LH explicada | Medyra"
+}

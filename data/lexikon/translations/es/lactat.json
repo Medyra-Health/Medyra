@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "El lactato se produce durante la generación de energía, especialmente cuando los músculos o tejidos no reciben suficiente oxígeno. Valores ligeramente elevados tras el esfuerzo físico son normales.",
+  "metaDescription": "¿Lactato elevado? Significado, valores normales y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Esfuerzo físico",
+    "Falta de oxígeno en los tejidos",
+    "Infección grave (sepsis)",
+    "Ciertos medicamentos"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Con qué urgencia debe evaluarse mi lactato elevado?",
+    "¿Cuál es la causa subyacente en mi caso?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Lactato explicado | Medyra"
+}

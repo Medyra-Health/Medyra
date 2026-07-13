@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La lipasa es una enzima digestiva del páncreas y se considera un marcador más específico de pancreatitis que la amilasa. Valores claramente elevados, generalmente con fuerte dolor abdominal, deben evaluarse pronto.",
+  "metaDescription": "¿Lipasa elevada? Significado para la pancreatitis explicado de forma sencilla.",
+  "causesElevated": [
+    "Pancreatitis aguda",
+    "Cálculos biliares",
+    "Función renal reducida"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Con qué urgencia debe evaluarse mi lipasa elevada?",
+    "¿Es necesaria una imagen del páncreas?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores pancreáticos",
+  "pageTitle": "Lipasa explicada | Medyra"
+}

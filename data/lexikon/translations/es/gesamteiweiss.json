@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "La proteína total mide todas las proteínas del suero sanguíneo, principalmente albúmina e inmunoglobulinas. Valores elevados pueden deberse a falta de líquidos o inflamaciones crónicas, valores bajos a desnutrición o enfermedades hepáticas o renales.",
+  "metaDescription": "¿Proteína total elevada o baja? Valores normales y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Falta de líquidos (deshidratación)",
+    "Inflamación crónica",
+    "Ciertas enfermedades de la sangre"
+  ],
+  "causesLow": [
+    "Desnutrición",
+    "Enfermedad hepática",
+    "Enfermedad renal con pérdida de proteínas"
+  ],
+  "doctorQuestions": [
+    "¿Cuál es la causa de mi valor anómalo de proteína total?",
+    "¿Es útil una electroforesis de proteínas?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores hepáticos",
+  "pageTitle": "Proteína total explicada | Medyra"
+}

@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "La AMH es producida por los folículos de los ovarios y se considera un marcador de la reserva ovárica restante. El valor a menudo se mide en el contexto de una evaluación de fertilidad o antes de una FIV.",
+  "metaDescription": "¿AMH (hormona antimülleriana) elevada o baja? Significado para la reserva ovárica explicado.",
+  "causesElevated": [
+    "Síndrome de ovario poliquístico (SOP)"
+  ],
+  "causesLow": [
+    "Disminución relacionada con la edad de la reserva ovárica",
+    "Menopausia precoz",
+    "Estado tras quimioterapia"
+  ],
+  "doctorQuestions": [
+    "¿Qué significa mi AMH para mi reserva ovárica?",
+    "¿Influye este valor en la planificación de una FIV?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal (depende de la edad)",
+    "elevated": "Elevado (p. ej. con SOP)"
+  },
+  "categoryLabel": "Hormonas",
+  "pageTitle": "AMH: hormona antimülleriana explicada | Medyra"
+}

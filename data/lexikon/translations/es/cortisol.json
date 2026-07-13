@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "El cortisol es la hormona del estrés más importante de la glándula suprarrenal y sigue un ritmo diario con los valores más altos por la mañana. Valores persistentemente elevados pueden indicar estrés crónico.",
+  "metaDescription": "¿Cortisol demasiado alto o bajo? Significado, valores normales y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Estrés crónico",
+    "Síndrome de Cushing",
+    "Tratamiento con corticoides"
+  ],
+  "causesLow": [
+    "Insuficiencia suprarrenal (enfermedad de Addison)",
+    "Trastorno de la hipófisis",
+    "Suspensión repentina de un tratamiento con corticoides"
+  ],
+  "doctorQuestions": [
+    "¿Coincide mi cortisol con la hora de la extracción de sangre?",
+    "¿Debería medirse también la ACTH?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo (mañana)",
+    "normal": "Normal (mañana)",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hormonas",
+  "pageTitle": "Cortisol explicado | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "El CA 15-3 se usa principalmente para monitorizar un cáncer de mama ya diagnosticado y es menos adecuado para la detección temprana, ya que también puede estar elevado con afecciones mamarias benignas.",
+  "metaDescription": "¿CA 15-3 elevado? Significado del marcador tumoral y posibles causas explicados.",
+  "causesElevated": [
+    "Afecciones mamarias benignas",
+    "Trastorno de la función hepática",
+    "Cáncer de mama conocido (para seguimiento)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Se está usando este valor para monitorizar mi estado?",
+    "¿Debería hacerse una imagen adicional?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Marcadores tumorales",
+  "pageTitle": "CA 15-3 explicado | Medyra"
+}

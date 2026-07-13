@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "El amoníaco se produce durante la descomposición de proteínas y normalmente el hígado lo hace inofensivo. Valores elevados pueden indicar función hepática reducida y, en casos pronunciados, afectar la función cerebral.",
+  "metaDescription": "¿Amoníaco elevado? Significado, valores normales y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Enfermedad hepática avanzada (cirrosis)",
+    "Insuficiencia hepática",
+    "Ciertos trastornos metabólicos"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Con qué urgencia debe tratarse mi amoníaco elevado?",
+    "¿Cuál es la causa subyacente en mi caso?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores hepáticos",
+  "pageTitle": "Amoníaco explicado | Medyra"
+}

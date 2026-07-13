@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "Los reticulocitos son glóbulos rojos jóvenes aún no completamente maduros. Su número muestra cuán activamente produce la médula ósea nuevos glóbulos rojos. Un valor alto puede indicar mayor producción tras pérdida de sangre.",
+  "metaDescription": "¿Reticulocitos elevados o bajos? Significado, valores normales y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Mayor producción sanguínea tras pérdida de sangre",
+    "Anemia hemolítica",
+    "Tras tratamiento con hierro o vitaminas"
+  ],
+  "causesLow": [
+    "Debilidad de la médula ósea",
+    "Deficiencia de hierro o vitaminas no tratada",
+    "Quimioterapia"
+  ],
+  "doctorQuestions": [
+    "¿Qué indica mi recuento de reticulocitos sobre la causa de mi anemia?",
+    "¿Responde bien mi médula ósea al tratamiento?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Reticulocitos explicados | Medyra"
+}

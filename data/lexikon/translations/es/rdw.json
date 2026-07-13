@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "El RDW mide cuánto varía el tamaño de los glóbulos rojos. Un valor elevado puede indicar una deficiencia incipiente de hierro, vitamina B12 o ácido fólico, especialmente combinado con un VCM anómalo. Consulte con su médico un RDW elevado.",
+  "metaDescription": "¿RDW elevado? Significado del ancho de distribución eritrocitaria, valores normales y causas posibles explicados de forma sencilla.",
+  "causesElevated": [
+    "Deficiencia de hierro",
+    "Deficiencia de vitamina B12 o ácido fólico",
+    "Anemia mixta",
+    "Tras una transfusión de sangre"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Qué significa mi RDW elevado junto con mi VCM?",
+    "¿Deberían revisarse mis niveles de hierro y vitaminas?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "RDW: ancho de distribución eritrocitaria explicado | Medyra"
+}

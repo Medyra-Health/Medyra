@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "El zinc participa en muchas reacciones enzimáticas, la cicatrización de heridas y el sistema inmunitario. Una deficiencia puede manifestarse como caída de cabello, problemas de cicatrización o mayor susceptibilidad a infecciones.",
+  "metaDescription": "¿Zinc demasiado bajo o alto? Significado, valores normales y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Sobredosis por suplementos"
+  ],
+  "causesLow": [
+    "Dieta desequilibrada",
+    "Enfermedades intestinales crónicas",
+    "Mayor demanda (p. ej. embarazo)"
+  ],
+  "doctorQuestions": [
+    "¿Podría una deficiencia de zinc explicar mis síntomas?",
+    "¿Debería suplementar zinc?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Oligoelementos",
+  "pageTitle": "Zinc explicado | Medyra"
+}

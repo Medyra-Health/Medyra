@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La CK-MB es una subforma de la creatina quinasa presente principalmente en el músculo cardíaco, y por tanto un indicio más específico de daño cardíaco que la CK total.",
+  "metaDescription": "¿CK-MB elevada? Significado para el daño del músculo cardíaco explicado de forma sencilla.",
+  "causesElevated": [
+    "Infarto de miocardio",
+    "Miocarditis",
+    "Tras cirugía cardíaca"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Confirma la CK-MB junto con mi troponina daño cardíaco?",
+    "¿Cuál es el plan de tratamiento a seguir?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Marcadores cardíacos",
+  "pageTitle": "CK-MB explicada | Medyra"
+}

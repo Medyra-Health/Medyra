@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "El péptido C se produce durante la producción propia de insulina y muestra cuánta insulina sigue produciendo el páncreas. Valores bajos sugieren deficiencia de insulina como en la diabetes tipo 1.",
+  "metaDescription": "¿Péptido C elevado o bajo? Significado para la producción propia de insulina explicado.",
+  "causesElevated": [
+    "Resistencia a la insulina",
+    "Diabetes tipo 2 incipiente",
+    "Insulinoma (raro)"
+  ],
+  "causesLow": [
+    "Diabetes tipo 1",
+    "Deficiencia avanzada de insulina"
+  ],
+  "doctorQuestions": [
+    "¿Sigue mi páncreas produciendo suficiente insulina?",
+    "¿Qué tipo de diabetes podría tener?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Péptido C explicado | Medyra"
+}

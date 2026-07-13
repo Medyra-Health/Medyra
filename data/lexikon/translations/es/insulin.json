@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "La insulina es la hormona que hace que el azúcar en sangre entre en las células. Valores elevados de insulina en ayunas pueden indicar resistencia a la insulina incipiente, a menudo antes de que la glucosa misma esté elevada.",
+  "metaDescription": "¿Insulina elevada o baja? Significado, valores normales y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Resistencia a la insulina",
+    "Síndrome de ovario poliquístico (SOP)",
+    "Diabetes tipo 2 incipiente",
+    "Sobrepeso"
+  ],
+  "causesLow": [
+    "Diabetes tipo 1",
+    "Diabetes tipo 2 avanzada"
+  ],
+  "doctorQuestions": [
+    "¿Indica mi valor de insulina resistencia a la insulina?",
+    "¿Debería calcularse el índice HOMA?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Insulina (en ayunas) explicada | Medyra"
+}

@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "La ACTH es producida por la hipófisis y controla la producción de cortisol de la glándula suprarrenal. El valor siempre se evalúa junto con el cortisol para distinguir una enfermedad suprarrenal de una de la hipófisis.",
+  "metaDescription": "¿ACTH elevada o baja? Significado junto con el cortisol explicado de forma sencilla.",
+  "causesElevated": [
+    "Insuficiencia suprarrenal (enfermedad de Addison)",
+    "Tumor productor de ACTH (raro)"
+  ],
+  "causesLow": [
+    "Trastorno de la hipófisis",
+    "Síndrome de Cushing por un tumor suprarrenal"
+  ],
+  "doctorQuestions": [
+    "¿Qué muestra la relación entre ACTH y mi cortisol?",
+    "¿Es necesaria una evaluación adicional de la hipófisis?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal"
+  },
+  "categoryLabel": "Hormonas",
+  "pageTitle": "ACTH explicada | Medyra"
+}

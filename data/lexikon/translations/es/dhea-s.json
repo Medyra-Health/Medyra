@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "La DHEA-S se produce casi exclusivamente en la glándula suprarrenal y sirve como precursor de las hormonas sexuales. Valores elevados pueden indicar mayor producción hormonal suprarrenal.",
+  "metaDescription": "¿DHEA-S elevada o baja? Significado para la función suprarrenal explicado de forma sencilla.",
+  "causesElevated": [
+    "Mayor actividad suprarrenal",
+    "Síndrome de ovario poliquístico",
+    "Tumores suprarrenales raros"
+  ],
+  "causesLow": [
+    "Disminución relacionada con la edad",
+    "Insuficiencia suprarrenal"
+  ],
+  "doctorQuestions": [
+    "¿Podría mi DHEA-S estar relacionada con mayor vello corporal o trastornos del ciclo?",
+    "¿Es útil una imagen suprarrenal?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (depende de la edad)"
+  },
+  "categoryLabel": "Hormonas",
+  "pageTitle": "DHEA-S explicada | Medyra"
+}

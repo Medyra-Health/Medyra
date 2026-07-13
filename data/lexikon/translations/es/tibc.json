@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "La CTFH mide cuánto hierro podría transportar la sangre en total como máximo, reflejando indirectamente la cantidad de transferrina. Valores elevados aparecen típicamente con deficiencia de hierro.",
+  "metaDescription": "¿CTFH elevada o baja? Significado para la deficiencia de hierro explicado.",
+  "causesElevated": [
+    "Deficiencia de hierro"
+  ],
+  "causesLow": [
+    "Sobrecarga de hierro (hemocromatosis)",
+    "Inflamación crónica",
+    "Enfermedad hepática"
+  ],
+  "doctorQuestions": [
+    "¿Confirma este valor una deficiencia de hierro?",
+    "¿Deberían medirse otros valores de hierro?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores del hierro",
+  "pageTitle": "CTFH: capacidad total de fijación de hierro explicada | Medyra"
+}

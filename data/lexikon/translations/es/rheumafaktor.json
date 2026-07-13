@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "El factor reumatoide es un anticuerpo frecuente en la artritis reumatoide, pero también puede ser positivo en otras enfermedades o incluso en personas sanas. Un valor positivo por sí solo no es un diagnóstico.",
+  "metaDescription": "¿Factor reumatoide elevado? Significado para la artritis reumatoide explicado de forma sencilla.",
+  "causesElevated": [
+    "Artritis reumatoide",
+    "Otras enfermedades autoinmunes",
+    "Infecciones crónicas",
+    "Puede estar ligeramente elevado en personas sanas"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Confirma este valor una artritis reumatoide?",
+    "¿Debería medirse también Anti-CCP?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Marcadores inflamatorios",
+  "pageTitle": "Factor reumatoide explicado | Medyra"
+}

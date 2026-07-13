@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "Los dímeros D se producen durante la descomposición de coágulos sanguíneos y son un elemento importante para evaluar una posible trombosis o embolia pulmonar. Un valor normal hace poco probable una trombosis aguda.",
+  "metaDescription": "¿Dímeros D elevados? Significado para trombosis y embolia pulmonar explicado de forma sencilla.",
+  "causesElevated": [
+    "Trombosis",
+    "Embolia pulmonar",
+    "Tras cirugía",
+    "Embarazo",
+    "Inflamación o infección aguda"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Debe descartarse una trombosis o embolia pulmonar en mi caso?",
+    "¿Son necesarias más pruebas como imágenes?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Coagulación",
+  "pageTitle": "Dímeros D explicados | Medyra"
+}

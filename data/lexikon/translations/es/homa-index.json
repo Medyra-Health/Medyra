@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "El índice HOMA se calcula a partir de la glucosa y la insulina en ayunas y estima qué tan bien responde el cuerpo aún a la insulina. Un valor elevado indica resistencia a la insulina, que a menudo precede a la diabetes tipo 2.",
+  "metaDescription": "¿Índice HOMA elevado? Significado para la resistencia a la insulina, valores normales y causas explicados.",
+  "causesElevated": [
+    "Resistencia a la insulina",
+    "Síndrome metabólico",
+    "Sobrepeso",
+    "Síndrome de ovario poliquístico (SOP)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Cuál es mi riesgo de diabetes según este valor?",
+    "¿Qué cambios de estilo de vida podrían ayudar?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado (posible resistencia a la insulina)"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Índice HOMA explicado | Medyra"
+}

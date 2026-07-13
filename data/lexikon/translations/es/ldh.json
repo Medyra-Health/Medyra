@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "La LDH es una enzima presente en muchas células del cuerpo, incluidas el hígado, el corazón y los músculos. Valores elevados son inespecíficos y pueden indicar daño celular en varios órganos.",
+  "metaDescription": "¿LDH elevada? Significado de la lactato deshidrogenasa, valores normales y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Daño hepático",
+    "Infarto de miocardio",
+    "Hemólisis (destrucción de glóbulos rojos)",
+    "Lesión muscular",
+    "Algunas enfermedades tumorales"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Qué órgano podría explicar mi LDH elevada?",
+    "¿Son necesarias más pruebas?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores hepáticos",
+  "pageTitle": "LDH: lactato deshidrogenasa explicada | Medyra"
+}

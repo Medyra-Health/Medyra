@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "El colesterol no-HDL incluye todos los tipos de colesterol excepto el HDL \"bueno\", es decir, principalmente LDL y otras partículas dañinas para los vasos sanguíneos. Se considera un buen indicador general del riesgo cardiovascular.",
+  "metaDescription": "¿Colesterol no-HDL elevado? Significado para el riesgo cardiovascular explicado de forma sencilla.",
+  "causesElevated": [
+    "Colesterol LDL elevado",
+    "Triglicéridos elevados",
+    "Dieta desfavorable",
+    "Sobrepeso"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Cuál es mi riesgo cardiovascular según este valor?",
+    "¿Debería ajustarse mi tratamiento para el colesterol?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Colesterol no-HDL explicado | Medyra"
+}

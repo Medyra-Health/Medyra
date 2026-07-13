@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Los TRAb son anticuerpos que activan el receptor de TSH de la tiroides y pueden desencadenar una hiperactividad. Un valor elevado es típico de la enfermedad de Graves-Basedow.",
+  "metaDescription": "¿TRAb elevados? Significado para la enfermedad de Graves-Basedow explicado.",
+  "causesElevated": [
+    "Enfermedad de Graves-Basedow",
+    "Hiperactividad tiroidea autoinmune"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Confirma este valor la enfermedad de Graves-Basedow?",
+    "¿Cómo se tratará mi hiperactividad tiroidea?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Tiroides",
+  "pageTitle": "TRAb explicados | Medyra"
+}

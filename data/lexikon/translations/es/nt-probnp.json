@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "El NT-proBNP es liberado por el corazón cuando está bajo mayor carga, y es el valor de laboratorio más importante para evaluar la insuficiencia cardíaca. Un valor bajo hace poco probable la insuficiencia cardíaca.",
+  "metaDescription": "¿NT-proBNP elevado? Significado para la insuficiencia cardíaca explicado de forma sencilla.",
+  "causesElevated": [
+    "Insuficiencia cardíaca",
+    "Fibrilación auricular",
+    "Función renal reducida",
+    "Edad avanzada"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Confirma este valor una insuficiencia cardíaca?",
+    "¿Es útil una ecografía cardíaca?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Marcadores cardíacos",
+  "pageTitle": "NT-proBNP explicado | Medyra"
+}

@@ -1,0 +1,15 @@
+{
+  "shortAnswer": "El HBsAg es un componente de la envoltura del virus de la hepatitis B y el marcador más importante de una infección aguda o crónica por hepatitis B. Un resultado positivo significa que el virus es activamente detectable.",
+  "metaDescription": "¿HBsAg positivo? Significado para una infección por hepatitis B explicado de forma sencilla.",
+  "causesElevated": [
+    "Infección aguda por hepatitis B",
+    "Infección crónica por hepatitis B"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Se trata de una infección aguda o crónica?",
+    "¿Es necesario tratamiento o seguimiento adicional?"
+  ],
+  "categoryLabel": "Marcadores de infección",
+  "pageTitle": "HBsAg: antígeno de superficie de hepatitis B explicado | Medyra"
+}

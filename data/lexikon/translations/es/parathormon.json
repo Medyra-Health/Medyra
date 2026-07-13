@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "La hormona paratiroidea es producida por las glándulas paratiroides y regula el equilibrio de calcio junto con la vitamina D. Valores elevados pueden indicar hiperfunción de las paratiroides o deficiencia de vitamina D.",
+  "metaDescription": "¿Hormona paratiroidea (PTH) elevada o baja? Significado para el equilibrio de calcio explicado.",
+  "causesElevated": [
+    "Hiperfunción de las paratiroides",
+    "Deficiencia de vitamina D",
+    "Enfermedad renal crónica"
+  ],
+  "causesLow": [
+    "Hipoparatiroidismo",
+    "Tras cirugía tiroidea"
+  ],
+  "doctorQuestions": [
+    "¿Está relacionada mi PTH con mi nivel de calcio o vitamina D?",
+    "¿Debería evaluarse un trastorno paratiroideo?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hormonas",
+  "pageTitle": "Hormona paratiroidea (PTH) explicada | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La apolipoproteína A1 es el componente proteico principal del colesterol HDL \"bueno\" y favorece el transporte de regreso del colesterol al hígado. Valores bajos se asocian con mayor riesgo cardiovascular.",
+  "metaDescription": "¿Apolipoproteína A1 (ApoA1) demasiado baja? Significado para el riesgo cardiovascular explicado.",
+  "causesElevated": [],
+  "causesLow": [
+    "Riesgo cardiovascular aumentado",
+    "Colesterol HDL bajo",
+    "Tabaquismo"
+  ],
+  "doctorQuestions": [
+    "¿Qué significa mi valor de ApoA1 para mi riesgo cardiovascular?",
+    "¿Puedo mejorar mi valor con cambios de estilo de vida?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal (más alto es más favorable)"
+  },
+  "categoryLabel": "Metabolismo",
+  "pageTitle": "Apolipoproteína A1 (ApoA1) explicada | Medyra"
+}

@@ -1,0 +1,26 @@
+{
+  "shortAnswer": "Los linfocitos son glóbulos blancos con un papel central en la defensa contra virus. Valores elevados suelen aparecer con infecciones virales, valores bajos pueden indicar una defensa inmunitaria debilitada.",
+  "metaDescription": "¿Linfocitos elevados o bajos? Significado, valores normales y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Infección viral",
+    "Infección crónica",
+    "Ciertas enfermedades de la sangre"
+  ],
+  "causesLow": [
+    "Inmunodeficiencia",
+    "Estrés intenso",
+    "Tratamiento con corticoides",
+    "Tras quimioterapia"
+  ],
+  "doctorQuestions": [
+    "¿Qué podría explicar mi recuento bajo o alto de linfocitos?",
+    "¿Está actualmente debilitada mi defensa inmunitaria?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Hemograma",
+  "pageTitle": "Linfocitos explicados | Medyra"
+}

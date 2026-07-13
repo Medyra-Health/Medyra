@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "El fibrinógeno es una proteína necesaria para la coagulación sanguínea y también sirve como marcador de inflamación. Valores elevados suelen aparecer con inflamación o infecciones.",
+  "metaDescription": "¿Fibrinógeno elevado o bajo? Significado, valores normales y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Inflamación o infección",
+    "Tras cirugía",
+    "Embarazo"
+  ],
+  "causesLow": [
+    "Coagulopatía de consumo",
+    "Enfermedad hepática",
+    "Trastorno congénito raro de la coagulación"
+  ],
+  "doctorQuestions": [
+    "¿Qué podría explicar mi valor anómalo de fibrinógeno?",
+    "¿Existe mayor riesgo de sangrado o trombosis?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Coagulación",
+  "pageTitle": "Fibrinógeno explicado | Medyra"
+}

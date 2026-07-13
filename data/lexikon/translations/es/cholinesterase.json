@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "La colinesterasa es producida por el hígado y muestra qué tan bien está produciendo proteínas actualmente. Valores bajos pueden indicar función hepática reducida o intoxicación, valores elevados aparecen con hígado graso o diabetes.",
+  "metaDescription": "¿Colinesterasa demasiado baja o alta? Significado y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Hígado graso",
+    "Diabetes mellitus",
+    "Sobrepeso"
+  ],
+  "causesLow": [
+    "Enfermedad hepática avanzada",
+    "Intoxicación (p. ej. pesticidas)",
+    "Desnutrición"
+  ],
+  "doctorQuestions": [
+    "¿Indica mi valor de colinesterasa una función hepática reducida?",
+    "¿Deben revisarse otros valores hepáticos?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores hepáticos",
+  "pageTitle": "Colinesterasa explicada | Medyra"
+}

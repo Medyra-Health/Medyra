@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "La albúmina es la proteína más importante de la sangre y es producida por el hígado. Valores bajos pueden indicar una enfermedad hepática, desnutrición o pérdida de proteínas a través de los riñones.",
+  "metaDescription": "¿Albúmina demasiado baja? Significado, valores normales y posibles causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Falta de líquidos (deshidratación)"
+  ],
+  "causesLow": [
+    "Enfermedad hepática",
+    "Desnutrición",
+    "Enfermedad renal con pérdida de proteínas",
+    "Inflamación crónica"
+  ],
+  "doctorQuestions": [
+    "¿Qué podría explicar mi albúmina baja?",
+    "¿Debería investigarse más mi función hepática o renal?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado (generalmente deshidratación)"
+  },
+  "categoryLabel": "Valores hepáticos",
+  "pageTitle": "Albúmina explicada | Medyra"
+}

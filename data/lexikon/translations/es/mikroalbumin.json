@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La microalbúmina mide cantidades muy pequeñas de proteína en la orina que una tira reactiva de orina normal no detecta. Un valor elevado suele ser un signo temprano de daño renal incipiente, especialmente con diabetes o hipertensión.",
+  "metaDescription": "¿Microalbúmina en orina elevada? Significado, valores normales y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Daño renal diabético incipiente",
+    "Presión arterial alta",
+    "Inflamación renal"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Es esto un signo temprano de daño renal?",
+    "¿Deberían controlarse mejor mi presión arterial o glucosa?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores renales",
+  "pageTitle": "Microalbúmina en orina explicada | Medyra"
+}

@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "La creatina quinasa se encuentra principalmente en el músculo cardíaco y esquelético y aumenta con daño muscular, por ejemplo tras esfuerzo físico intenso, pero también con un infarto.",
+  "metaDescription": "¿Creatina quinasa (CK) elevada? Significado para el daño muscular y cardíaco explicado.",
+  "causesElevated": [
+    "Esfuerzo físico intenso",
+    "Lesión muscular",
+    "Infarto de miocardio",
+    "Ciertos medicamentos (p. ej. estatinas)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Proviene mi CK elevada del músculo o del corazón?",
+    "¿Deberían medirse también CK-MB o troponina?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Marcadores cardíacos",
+  "pageTitle": "Creatina quinasa (CK) explicada | Medyra"
+}

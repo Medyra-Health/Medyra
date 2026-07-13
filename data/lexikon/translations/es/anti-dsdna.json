@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "Los anticuerpos anti-ADNbc son mucho más específicos del lupus eritematoso sistémico que los ANA y a menudo se usan para confirmar y monitorizar la actividad de la enfermedad.",
+  "metaDescription": "¿Anticuerpos anti-ADNbc elevados? Significado para el lupus eritematoso sistémico explicado.",
+  "causesElevated": [
+    "Lupus eritematoso sistémico",
+    "Fase activa de la enfermedad con lupus conocido"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Confirma este valor un lupus eritematoso sistémico?",
+    "¿Indica el valor una fase activa actual de la enfermedad?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Sistema inmunitario",
+  "pageTitle": "Anticuerpos anti-ADNbc explicados | Medyra"
+}

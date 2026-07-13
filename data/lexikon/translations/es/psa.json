@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "El PSA es producido por la próstata y puede aumentar con el agrandamiento prostático, inflamación o cáncer de próstata. Un valor elevado por sí solo no demuestra cáncer, muchas causas benignas son mucho más frecuentes.",
+  "metaDescription": "¿PSA elevado? Causas posibles y próximos pasos explicados de forma sencilla.",
+  "causesElevated": [
+    "Agrandamiento benigno de próstata (HBP)",
+    "Prostatitis",
+    "Tras esfuerzo físico (p. ej. ciclismo)",
+    "Cáncer de próstata (una de varias causas posibles)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Cuál de las causas posibles se aplica en mi caso?",
+    "¿Es útil una evaluación urológica adicional?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Marcadores tumorales",
+  "pageTitle": "PSA: antígeno prostático específico explicado | Medyra"
+}

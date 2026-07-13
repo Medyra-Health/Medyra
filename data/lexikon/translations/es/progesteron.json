@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "La progesterona se produce tras la ovulación y prepara al cuerpo para un posible embarazo. Valores bajos en la segunda mitad del ciclo pueden relacionarse con trastornos del ciclo o ausencia de ovulación.",
+  "metaDescription": "¿Progesterona demasiado baja? Significado para el ciclo y la fertilidad explicado de forma sencilla.",
+  "causesElevated": [
+    "Embarazo",
+    "Cierta fase del ciclo tras la ovulación"
+  ],
+  "causesLow": [
+    "Ausencia de ovulación",
+    "Trastornos del ciclo",
+    "Complicación temprana del embarazo"
+  ],
+  "doctorQuestions": [
+    "¿Qué significa mi progesterona para mi ciclo o deseo de tener hijos?",
+    "¿Debería medirse de nuevo en otro momento?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal (depende del ciclo)"
+  },
+  "categoryLabel": "Hormonas",
+  "pageTitle": "Progesterona explicada | Medyra"
+}

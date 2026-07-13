@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "La vitamina A es importante para la visión, la piel y el sistema inmunitario. Una deficiencia suele resultar de un trastorno de absorción de grasas o desnutrición.",
+  "metaDescription": "¿Vitamina A elevada o baja? Significado, valores normales y causas explicados de forma sencilla.",
+  "causesElevated": [
+    "Sobredosis por suplementos"
+  ],
+  "causesLow": [
+    "Desnutrición",
+    "Trastorno de absorción de grasas (p. ej. celiaquía)",
+    "Enfermedad hepática"
+  ],
+  "doctorQuestions": [
+    "¿Explica mi valor de vitamina A mis síntomas?",
+    "¿Debería suplementar o reducir la vitamina A?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Vitaminas",
+  "pageTitle": "Vitamina A explicada | Medyra"
+}

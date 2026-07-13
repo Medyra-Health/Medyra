@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "La vitamina E es un antioxidante liposoluble que protege las células del estrés oxidativo. Una deficiencia es rara en Alemania y ocurre principalmente con trastornos de absorción de grasas.",
+  "metaDescription": "¿Vitamina E demasiado baja? Significado, valores normales y causas de deficiencia explicados de forma sencilla.",
+  "causesElevated": [],
+  "causesLow": [
+    "Trastorno de absorción de grasas",
+    "Desnutrición",
+    "Enfermedades genéticas raras"
+  ],
+  "doctorQuestions": [
+    "¿Tengo un trastorno de absorción de grasas como causa?",
+    "¿Debería suplementar vitamina E?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal"
+  },
+  "categoryLabel": "Vitaminas",
+  "pageTitle": "Vitamina E explicada | Medyra"
+}

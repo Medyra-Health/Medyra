@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "El CA 125 se mide principalmente en relación con los ovarios, pero también aumenta con muchas afecciones benignas como endometriosis, menstruación o quistes ováricos. Un valor elevado por sí solo no es un diagnóstico de cáncer.",
+  "metaDescription": "¿CA 125 elevado? Causas posibles y próximos pasos explicados de forma sencilla.",
+  "causesElevated": [
+    "Endometriosis",
+    "Quistes ováricos",
+    "Menstruación",
+    "Inflamaciones pélvicas",
+    "Cáncer de ovario (una de varias causas posibles)"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "¿Qué causas benignas se aplican en mi caso?",
+    "¿Es útil una ecografía ginecológica?"
+  ],
+  "rangeLabels": {
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Marcadores tumorales",
+  "pageTitle": "CA 125 explicado | Medyra"
+}

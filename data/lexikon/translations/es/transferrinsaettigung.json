@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "La saturación de transferrina muestra cuánta proteína transportadora de hierro está actualmente cargada con hierro. Valores bajos sugieren deficiencia de hierro, valores altos pueden indicar sobrecarga de hierro como en la hemocromatosis.",
+  "metaDescription": "¿Saturación de transferrina elevada o baja? Significado para deficiencia y sobrecarga de hierro explicado.",
+  "causesElevated": [
+    "Sobrecarga de hierro (hemocromatosis)",
+    "Transfusiones de sangre frecuentes",
+    "Enfermedad hepática"
+  ],
+  "causesLow": [
+    "Deficiencia de hierro",
+    "Inflamación crónica",
+    "Pérdida de sangre"
+  ],
+  "doctorQuestions": [
+    "¿Indica mi saturación de transferrina deficiencia o sobrecarga de hierro?",
+    "¿Debería descartarse hemocromatosis?"
+  ],
+  "rangeLabels": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "elevated": "Elevado"
+  },
+  "categoryLabel": "Valores del hierro",
+  "pageTitle": "Saturación de transferrina explicada | Medyra"
+}
