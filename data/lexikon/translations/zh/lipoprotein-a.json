@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "脂蛋白(a)是由遗传决定的血脂值，可独立于饮食和生活方式影响心血管疾病风险。因通常一生测一次，故在有家族史时尤为重要。",
+  "metaDescription": "脂蛋白(a)偏高？对心血管风险的含义简明解释。",
+  "causesElevated": [
+    "遗传决定（遗传性）",
+    "可独立于生活方式而升高"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我的Lp(a)值是否增加心血管风险？",
+    "是否应更严格控制我的其他血脂值？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "代谢指标",
+  "pageTitle": "脂蛋白(a)值：心血管风险解释 | Medyra"
+}

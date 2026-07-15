@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "维生素A对视力、皮肤和免疫系统很重要。缺乏多因脂肪吸收障碍或营养不良，可表现为夜盲或皮肤干燥。因补充剂导致的过高也可能有害。",
+  "metaDescription": "维生素A偏高或偏低？含义、参考值与原因简明解释。",
+  "causesElevated": [
+    "膳食补充剂导致的过量"
+  ],
+  "causesLow": [
+    "营养不良",
+    "脂肪吸收障碍（如乳糜泻）",
+    "肝病"
+  ],
+  "doctorQuestions": [
+    "我的维生素A值是否能解释我的症状？",
+    "我是否应增加或减少维生素A？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "维生素",
+  "pageTitle": "维生素A值：含义与原因解释 | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "抗TPO抗体は甲状腺の酵素に対する抗体で、橋本病など甲状腺の自己免疫疾患の最も重要な指標です。高値はしばしば、常にではありませんが、そうした疾患を裏付けます。",
+  "metaDescription": "抗TPO抗体が高い？橋本病と甲状腺疾患への意味を解説。",
+  "causesElevated": [
+    "橋本病",
+    "バセドウ病",
+    "その他の自己免疫疾患"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "この値は甲状腺の自己免疫疾患を裏付けますか？",
+    "甲状腺機能を定期的に確認すべきですか？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "甲状腺検査",
+  "pageTitle": "抗TPO値：橋本病の抗体の解説 | Medyra"
+}

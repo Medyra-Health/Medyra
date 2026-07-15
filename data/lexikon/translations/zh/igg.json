@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "IgG是最常见的抗体类别，在感染康复或接种疫苗后提供长期保护。偏低可能提示免疫缺陷，升高可能提示慢性感染或炎症。",
+  "metaDescription": "IgG偏高或偏低？对免疫系统的含义简明解释。",
+  "causesElevated": [
+    "慢性感染",
+    "自身免疫病",
+    "某些血液病"
+  ],
+  "causesLow": [
+    "先天性或获得性免疫缺陷",
+    "经肾脏或肠道丢失蛋白"
+  ],
+  "doctorQuestions": [
+    "我的IgG值是否提示免疫缺陷？",
+    "是否应测定其他免疫球蛋白？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "免疫系统指标",
+  "pageTitle": "IgG值：免疫球蛋白G解释 | Medyra"
+}

@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "LDH是存在于许多体细胞（包括肝、心、肌肉）中的酶。升高不特异，可能提示不同器官的细胞损伤，如肝损伤、肌肉损伤或心梗。",
+  "metaDescription": "LDH偏高？乳酸脱氢酶的含义、参考值与原因简明解释。",
+  "causesElevated": [
+    "肝损伤",
+    "心肌梗死",
+    "溶血（红细胞破坏）",
+    "肌肉损伤",
+    "某些肿瘤疾病"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "哪个器官能解释我LDH升高？",
+    "是否需要进一步检查？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肝功能指标",
+  "pageTitle": "LDH值：乳酸脱氢酶解释 | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "维生素B6参与众多代谢过程，包括神经和蛋白质代谢。缺乏可导致疲劳、神经问题或皮肤改变，见于单一饮食或某些药物。",
+  "metaDescription": "维生素B6偏低？含义、参考值与缺乏原因简明解释。",
+  "causesElevated": [],
+  "causesLow": [
+    "单一饮食",
+    "酗酒",
+    "某些药物（如某些降压药或抗结核药）"
+  ],
+  "doctorQuestions": [
+    "我维生素B6缺乏能否解释我的症状？",
+    "我是否应补充维生素B6？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常"
+  },
+  "categoryLabel": "维生素",
+  "pageTitle": "维生素B6值：含义与缺乏解释 | Medyra"
+}

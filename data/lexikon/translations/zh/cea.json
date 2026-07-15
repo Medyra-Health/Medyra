@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "CEA是一种非特异性肿瘤标志物，主要用于已知肿瘤（尤其是肠道）的病程监测。升高也见于吸烟者和多种良性疾病，单凭它并不能证明患癌。",
+  "metaDescription": "CEA偏高？肿瘤标志物的含义与可能原因简明解释。",
+  "causesElevated": [
+    "吸烟",
+    "慢性炎症性肠病",
+    "肝或肺疾病",
+    "已知肿瘤疾病（用于病程监测）"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "该值在我这里是用于病程监测还是初次评估？",
+    "还需做哪些检查？"
+  ],
+  "rangeLabels": {
+    "normal": "正常（不吸烟者）",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肿瘤标志物",
+  "pageTitle": "CEA值：癌胚抗原解释 | Medyra"
+}

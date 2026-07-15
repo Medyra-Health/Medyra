@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "CA 19-9主要在胰腺和胆道相关情况下测定，但也可能在胆汁淤积、炎症或其他良性疾病中升高。用于病程监测多于初次诊断。",
+  "metaDescription": "CA 19-9偏高？肿瘤标志物的含义与可能原因简明解释。",
+  "causesElevated": [
+    "胆汁淤积",
+    "胰腺炎",
+    "肝病",
+    "胰腺癌（多种可能原因之一）"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我升高最可能的原因是什么？",
+    "做胰腺影像学检查是否合理？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肿瘤标志物",
+  "pageTitle": "CA 19-9值：肿瘤标志物解释 | Medyra"
+}

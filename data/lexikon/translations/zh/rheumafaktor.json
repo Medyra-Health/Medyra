@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "类风湿因子是常见于类风湿关节炎的抗体，但也可能在其他疾病甚至健康人中阳性。因此仅阳性并非诊断，须始终结合症状和其他检查结果判读。",
+  "metaDescription": "类风湿因子偏高？对类风湿关节炎的含义简明解释。",
+  "causesElevated": [
+    "类风湿关节炎",
+    "其他自身免疫病",
+    "慢性感染",
+    "健康人也可能轻度升高"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "该值是否确诊类风湿关节炎？",
+    "是否应加测抗CCP？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "炎症指标",
+  "pageTitle": "类风湿因子值：类风湿关节炎解释 | Medyra"
+}

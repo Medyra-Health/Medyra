@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "肌红蛋白是心肌和骨骼肌的蛋白质，肌肉或心脏损伤时快速但不特异地升高。因特异性低，如今较少使用，通常由肌钙蛋白替代或补充。",
+  "metaDescription": "肌红蛋白偏高？对肌肉和心脏损伤的含义简明解释。",
+  "causesElevated": [
+    "心肌梗死（早期）",
+    "肌肉损伤",
+    "剧烈体力活动",
+    "肾功能受损"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "是否为我加测肌钙蛋白以更准确判读？",
+    "进一步查明有多紧急？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "心脏指标",
+  "pageTitle": "肌红蛋白值：肌肉与心脏损伤解释 | Medyra"
+}

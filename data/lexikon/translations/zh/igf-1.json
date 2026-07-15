@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "IGF-1反映生长激素的活性，用于评估儿童生长障碍以及成人怀疑垂体功能亢进或减退。参考范围高度依赖年龄。",
+  "metaDescription": "IGF-1偏高或偏低？对生长激素功能的含义解释。",
+  "causesElevated": [
+    "生长激素过度分泌（肢端肥大症）"
+  ],
+  "causesLow": [
+    "生长激素缺乏",
+    "营养不良",
+    "慢性疾病"
+  ],
+  "doctorQuestions": [
+    "我的IGF-1值对生长激素功能意味着什么？",
+    "是否有必要做进一步激素检查？"
+  ],
+  "rangeLabels": {
+    "normal": "正常（高度依赖年龄）"
+  },
+  "categoryLabel": "激素指标",
+  "pageTitle": "IGF-1值：生长激素指标解释 | Medyra"
+}

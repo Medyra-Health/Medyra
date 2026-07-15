@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "NT-proBNP在心脏负荷增加时释放，是排查心力衰竭最重要的实验室指标。偏低使心衰可能性较低，升高应由医生进一步查明。",
+  "metaDescription": "NT-proBNP偏高？对心力衰竭的含义简明解释。",
+  "causesElevated": [
+    "心力衰竭",
+    "房颤",
+    "肾功能受损",
+    "高龄"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "该值是否确诊心力衰竭？",
+    "做心脏超声（超声心动图）是否合理？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "心脏指标",
+  "pageTitle": "NT-proBNP值：心力衰竭指标解释 | Medyra"
+}

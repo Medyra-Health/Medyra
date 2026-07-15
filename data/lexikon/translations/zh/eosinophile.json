@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "嗜酸性粒细胞是主要在过敏和寄生虫感染时增多的白细胞。升高可能提示哮喘、花粉症、皮肤过敏或蠕虫病。偏低通常无异常。",
+  "metaDescription": "嗜酸性粒细胞偏高？含义、参考值与过敏等原因解释。",
+  "causesElevated": [
+    "过敏（如花粉症、哮喘）",
+    "寄生虫感染",
+    "特应性皮炎等皮肤病",
+    "某些药物反应"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "过敏或寄生虫感染能否解释我的数值？",
+    "是否应做过敏检测？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "血常规",
+  "pageTitle": "嗜酸性粒细胞值：含义解释 | Medyra"
+}

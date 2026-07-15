@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "CK-MBはクレアチンキナーゼの一種で主に心筋に存在するため、総CKより心筋障害に特異的な指標です。通常、心筋梗塞が疑われる際にトロポニンと合わせて測定されます。",
+  "metaDescription": "CK-MBが高い？心筋障害への意味をわかりやすく解説。",
+  "causesElevated": [
+    "心筋梗塞",
+    "心筋炎",
+    "心臓手術後"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "CK-MBはトロポニン値と合わせて心筋障害を裏付けますか？",
+    "今後の治療計画はどうなりますか？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "心臓検査",
+  "pageTitle": "CK-MB値：クレアチンキナーゼMBの解説 | Medyra"
+}

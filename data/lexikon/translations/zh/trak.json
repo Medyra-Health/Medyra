@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "TRAK是激活甲状腺TSH受体、从而可引起功能亢进的抗体。升高是格雷夫斯病的典型表现，有助于将该病与甲亢的其他原因区分。",
+  "metaDescription": "TRAK偏高？对格雷夫斯病和甲亢的含义解释。",
+  "causesElevated": [
+    "格雷夫斯病",
+    "自身免疫性甲状腺功能亢进"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "该值是否确诊格雷夫斯病？",
+    "我的甲亢将如何进一步治疗？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "甲状腺指标",
+  "pageTitle": "TRAK值：TSH受体抗体解释 | Medyra"
+}

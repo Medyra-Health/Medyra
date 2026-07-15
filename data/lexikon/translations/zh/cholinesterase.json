@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "胆碱酯酶由肝脏合成，反映肝脏当前合成蛋白质的能力。偏低可能提示肝功能受损或中毒，升高见于脂肪肝或糖尿病等。",
+  "metaDescription": "胆碱酯酶偏低或偏高？含义与原因简明解释。",
+  "causesElevated": [
+    "脂肪肝",
+    "糖尿病",
+    "超重"
+  ],
+  "causesLow": [
+    "晚期肝病",
+    "中毒（如农药）",
+    "营养不良"
+  ],
+  "doctorQuestions": [
+    "我的胆碱酯酶值是否提示肝功能受损？",
+    "是否应监测其他肝功能指标？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肝功能指标",
+  "pageTitle": "胆碱酯酶值：含义与原因解释 | Medyra"
+}

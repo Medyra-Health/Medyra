@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "肌酸激酶主要存在于心肌和骨骼肌，肌肉损伤时升高，如剧烈运动后，也见于心梗。为更准确判读常加测CK-MB或肌钙蛋白。",
+  "metaDescription": "肌酸激酶（CK）偏高？对肌肉和心脏损伤的含义解释。",
+  "causesElevated": [
+    "剧烈体力活动",
+    "肌肉损伤",
+    "心肌梗死",
+    "某些药物（如他汀）"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我CK升高来自肌肉还是心脏？",
+    "是否也应测定CK-MB或肌钙蛋白？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "心脏指标",
+  "pageTitle": "肌酸激酶（CK）值：含义解释 | Medyra"
+}

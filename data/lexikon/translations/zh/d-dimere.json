@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "D-二聚体在血栓分解时产生，是排查血栓形成或肺栓塞的重要环节。正常值使急性血栓可能性较低，但仅升高并不能证明血栓，因为许多情况都会使其升高。",
+  "metaDescription": "D-二聚体偏高？对血栓和肺栓塞的含义解释。",
+  "causesElevated": [
+    "血栓形成",
+    "肺栓塞",
+    "术后",
+    "妊娠",
+    "急性炎症或感染"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我是否可以排除血栓或肺栓塞？",
+    "是否需要影像学等进一步检查？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "凝血指标",
+  "pageTitle": "D-二聚体值：血栓与栓塞解释 | Medyra"
+}

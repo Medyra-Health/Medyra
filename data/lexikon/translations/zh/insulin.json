@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "胰岛素是把血糖送入细胞的激素。空腹胰岛素升高可能提示早期胰岛素抵抗，常在血糖升高之前。偏低见于晚期胰岛素不足，如1型糖尿病。",
+  "metaDescription": "胰岛素偏高或偏低？含义、参考值与原因简明解释。",
+  "causesElevated": [
+    "胰岛素抵抗",
+    "多囊卵巢综合征（PCOS）",
+    "早期2型糖尿病",
+    "超重"
+  ],
+  "causesLow": [
+    "1型糖尿病",
+    "晚期2型糖尿病"
+  ],
+  "doctorQuestions": [
+    "我的胰岛素值是否提示胰岛素抵抗？",
+    "是否应计算HOMA指数？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "代谢指标",
+  "pageTitle": "胰岛素值：含义、参考值与原因解释 | Medyra"
+}

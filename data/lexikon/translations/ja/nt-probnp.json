@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "NT-proBNPは心臓が負荷を受けたときに分泌され、心不全の精査で最も重要な検査値です。低値なら心不全は考えにくく、高値は医療機関でさらに精査すべきです。",
+  "metaDescription": "NT-proBNPが高い？心不全への意味をわかりやすく解説。",
+  "causesElevated": [
+    "心不全",
+    "心房細動",
+    "腎機能の低下",
+    "高齢"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "この値は心不全を裏付けますか？",
+    "心臓超音波検査（心エコー）は妥当ですか？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "心臓検査",
+  "pageTitle": "NT-proBNP値：心不全指標の解説 | Medyra"
+}

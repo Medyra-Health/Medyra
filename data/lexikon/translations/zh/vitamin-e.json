@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "维生素E是保护细胞免受氧化应激的脂溶性抗氧化剂。缺乏罕见，主要见于脂肪吸收障碍，可表现为肌无力或神经问题。",
+  "metaDescription": "维生素E偏低？含义、参考值与缺乏原因简明解释。",
+  "causesElevated": [],
+  "causesLow": [
+    "脂肪吸收障碍",
+    "营养不良",
+    "罕见遗传病"
+  ],
+  "doctorQuestions": [
+    "我是否因脂肪吸收障碍所致？",
+    "我是否应补充维生素E？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常"
+  },
+  "categoryLabel": "维生素",
+  "pageTitle": "维生素E值：含义与缺乏解释 | Medyra"
+}

@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "甲状旁腺激素由甲状旁腺分泌，与维生素D共同调节钙平衡。升高可能提示甲状旁腺功能亢进或维生素D缺乏，偏低较少见并可能导致低钙。",
+  "metaDescription": "甲状旁腺激素（PTH）偏高或偏低？对钙平衡的含义解释。",
+  "causesElevated": [
+    "甲状旁腺功能亢进",
+    "维生素D缺乏",
+    "慢性肾病"
+  ],
+  "causesLow": [
+    "甲状旁腺功能减退",
+    "甲状腺手术后"
+  ],
+  "doctorQuestions": [
+    "我的PTH值是否与钙或维生素D水平有关？",
+    "是否应查明甲状旁腺疾病？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "激素指标",
+  "pageTitle": "甲状旁腺激素（PTH）值：钙调节解释 | Medyra"
+}

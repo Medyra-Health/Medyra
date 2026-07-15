@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "TIBC测定血液最多能运输多少铁，间接反映转铁蛋白的量。升高典型见于缺铁，降低见于铁过载或慢性炎症。",
+  "metaDescription": "TIBC（总铁结合力）偏高或偏低？对缺铁的含义解释。",
+  "causesElevated": [
+    "缺铁"
+  ],
+  "causesLow": [
+    "铁过载（血色病）",
+    "慢性炎症",
+    "肝病"
+  ],
+  "doctorQuestions": [
+    "该值是否确诊缺铁？",
+    "是否应测定其他铁指标？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "铁代谢指标",
+  "pageTitle": "TIBC值：总铁结合力解释 | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "凝血酶时间检查凝血的最后一步，即纤维蛋白原转化为纤维蛋白。延长常见于肝素治疗，也见于纤维蛋白原缺乏。",
+  "metaDescription": "凝血酶时间延长？对凝血的含义简明解释。",
+  "causesElevated": [
+    "肝素治疗",
+    "纤维蛋白原缺乏",
+    "肝病"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我凝血酶时间延长是否与某种药物有关？",
+    "是否也应检查我的纤维蛋白原？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "延长"
+  },
+  "categoryLabel": "凝血指标",
+  "pageTitle": "凝血酶时间：凝血解释 | Medyra"
+}

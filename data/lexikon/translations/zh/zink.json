@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "锌参与许多酶反应、伤口愈合和免疫系统。缺乏可表现为脱发、伤口愈合障碍或对感染更易感，见于单一饮食或慢性肠道疾病。",
+  "metaDescription": "锌偏低或偏高？含义、参考值与原因简明解释。",
+  "causesElevated": [
+    "膳食补充剂导致的过量"
+  ],
+  "causesLow": [
+    "单一饮食",
+    "慢性肠道疾病",
+    "需求增加（如妊娠）"
+  ],
+  "doctorQuestions": [
+    "锌缺乏是否能解释我的症状？",
+    "我是否应补锌？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "微量元素指标",
+  "pageTitle": "锌值：含义与原因解释 | Medyra"
+}

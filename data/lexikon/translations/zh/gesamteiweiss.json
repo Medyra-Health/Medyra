@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "总蛋白测定血清中所有蛋白质，主要是白蛋白和免疫球蛋白。升高可能因脱水或慢性炎症，偏低因营养不良、肝病或肾病。",
+  "metaDescription": "总蛋白偏高或偏低？参考值与原因简明解释。",
+  "causesElevated": [
+    "脱水",
+    "慢性炎症",
+    "某些血液病"
+  ],
+  "causesLow": [
+    "营养不良",
+    "肝病",
+    "伴蛋白丢失的肾病"
+  ],
+  "doctorQuestions": [
+    "我总蛋白异常的原因是什么？",
+    "做蛋白电泳是否合理？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肝功能指标",
+  "pageTitle": "总蛋白值：含义与原因解释 | Medyra"
+}

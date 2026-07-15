@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "单核细胞是吞噬并清除病原体、调节炎症过程的白细胞。升高常见于慢性炎症或感染后的恢复期。偏低通常无疾病意义。",
+  "metaDescription": "单核细胞偏高？含义、参考值与可能原因简明解释。",
+  "causesElevated": [
+    "慢性炎症",
+    "感染后的恢复期",
+    "某些血液病",
+    "自身免疫病"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我单核细胞升高可能是什么原因？",
+    "是否需要进一步检查？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "血常规",
+  "pageTitle": "单核细胞值：含义与原因解释 | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "アミラーゼは主に膵臓と唾液腺で作られる消化酵素です。著しい高値は典型的に急性膵炎で見られ、軽度の高値は唾液腺由来のこともあります。",
+  "metaDescription": "アミラーゼが高い？膵臓への意味をわかりやすく解説。",
+  "causesElevated": [
+    "急性膵炎",
+    "唾液腺炎",
+    "胆石"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "アミラーゼ高値は膵炎を示しますか？",
+    "リパーゼも測定すべきですか？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "膵臓検査",
+  "pageTitle": "アミラーゼ値：膵臓酵素の解説 | Medyra"
+}

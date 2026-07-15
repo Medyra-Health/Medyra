@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "CA 15-3主要用于已确诊乳腺癌的病程监测，因良性乳腺疾病也可能升高，故不太适合早期筛查。评估始终在整体医学背景下进行。",
+  "metaDescription": "CA 15-3偏高？肿瘤标志物的含义与可能原因简明解释。",
+  "causesElevated": [
+    "良性乳腺疾病",
+    "肝功能异常",
+    "已知乳腺癌（用于病程监测）"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "该值在我这里是用于病程监测吗？",
+    "是否应加做影像学检查？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肿瘤标志物",
+  "pageTitle": "CA 15-3值：肿瘤标志物解释 | Medyra"
+}

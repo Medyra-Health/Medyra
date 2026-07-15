@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "肌钙蛋白是心肌损伤的高度特异性标志物，是怀疑心梗时最重要的实验室指标。即使轻度升高也会被认真对待，医院通常通过动态复测确认。",
+  "metaDescription": "肌钙蛋白偏高？对心梗和心肌损伤的含义解释。",
+  "causesElevated": [
+    "心肌梗死",
+    "心肌炎",
+    "强烈体力负荷",
+    "肾功能受损"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我肌钙蛋白升高需要多紧急查明？",
+    "是否计划动态复测一次？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "心脏指标",
+  "pageTitle": "肌钙蛋白值：心梗指标解释 | Medyra"
+}

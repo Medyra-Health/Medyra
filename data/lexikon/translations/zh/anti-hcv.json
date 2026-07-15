@@ -1,0 +1,15 @@
+{
+  "shortAnswer": "抗HCV抗体表明身体在某个时刻曾接触丙型肝炎病毒。阳性并不自动意味着现症感染，须通过针对病毒本身的额外检测（PCR）确认。",
+  "metaDescription": "抗HCV阳性？丙肝感染的含义简明解释。",
+  "causesElevated": [
+    "现症丙肝感染",
+    "既往已痊愈的丙肝感染"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "是否需要额外的PCR检测来确认？",
+    "我是现症还是已痊愈的感染？"
+  ],
+  "categoryLabel": "感染指标",
+  "pageTitle": "抗HCV值：丙肝抗体解释 | Medyra"
+}

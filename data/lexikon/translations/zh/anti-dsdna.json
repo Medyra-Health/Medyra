@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "抗dsDNA抗体比ANA对系统性红斑狼疮更具特异性，常用于确诊和监测疾病活动度。几乎总是在已呈ANA阳性的基础上测定。",
+  "metaDescription": "抗dsDNA抗体偏高？对系统性红斑狼疮的含义解释。",
+  "causesElevated": [
+    "系统性红斑狼疮",
+    "已知狼疮的活动期"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "该值是否确诊系统性红斑狼疮？",
+    "是否提示目前处于活动期？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "免疫系统指标",
+  "pageTitle": "抗dsDNA值：狼疮抗体解释 | Medyra"
+}

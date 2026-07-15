@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "CA 125主要在卵巢相关情况下测定，但也会在子宫内膜异位症、月经或卵巢囊肿等许多良性疾病中升高。仅升高并非癌症诊断，始终结合影像学和症状判读。",
+  "metaDescription": "CA 125偏高？可能原因与后续步骤简明解释。",
+  "causesElevated": [
+    "子宫内膜异位症",
+    "卵巢囊肿",
+    "月经",
+    "盆腔炎症",
+    "卵巢癌（多种可能原因之一）"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我可能有哪些良性原因？",
+    "做妇科超声检查是否合理？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肿瘤标志物",
+  "pageTitle": "CA 125值：肿瘤标志物解释 | Medyra"
+}

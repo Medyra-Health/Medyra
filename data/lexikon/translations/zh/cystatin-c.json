@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "胱抑素C是不受肌肉量和饮食影响的肾功能敏感标志物。常在肌酐可能因肌肉量或年龄而失真时加测。升高提示肾功能受损。",
+  "metaDescription": "胱抑素C偏高？对肾功能、参考值与原因的解释。",
+  "causesElevated": [
+    "肾功能受损",
+    "慢性肾病"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "为何在肌酐之外还加测胱抑素C？",
+    "我的肾功能整体如何？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肾功能指标",
+  "pageTitle": "胱抑素C值：肾功能解释 | Medyra"
+}

@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "CK-MB是肌酸激酶的一种亚型，主要存在于心肌，因此比总CK更特异地提示心脏损伤。怀疑心梗时通常与肌钙蛋白一起测定。",
+  "metaDescription": "CK-MB偏高？对心肌损伤的含义简明解释。",
+  "causesElevated": [
+    "心肌梗死",
+    "心肌炎",
+    "心脏手术后"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "CK-MB与我的肌钙蛋白值一起是否确诊心脏损伤？",
+    "后续治疗方案如何？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "心脏指标",
+  "pageTitle": "CK-MB值：肌酸激酶MB解释 | Medyra"
+}

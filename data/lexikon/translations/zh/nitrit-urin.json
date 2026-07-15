@@ -1,0 +1,15 @@
+{
+  "shortAnswer": "尿中亚硝酸盐在某些细菌将尿中硝酸盐转化时产生，是尿路感染的明确征象。阳性通常结合尿白细胞和症状判读。",
+  "metaDescription": "尿亚硝酸盐阳性？对尿路感染的含义简明解释。",
+  "causesElevated": [
+    "尿路感染",
+    "尿路细菌定植"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "该结果是否确诊尿路感染？",
+    "是否需要抗生素治疗？"
+  ],
+  "categoryLabel": "尿液指标",
+  "pageTitle": "尿亚硝酸盐：尿路感染解释 | Medyra"
+}

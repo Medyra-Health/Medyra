@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "微量白蛋白测定尿中普通试纸无法检出的极少量蛋白。升高常是早期肾损伤的早期征象，尤其在糖尿病或高血压时，应由医生进一步随访。",
+  "metaDescription": "尿微量白蛋白偏高？含义、参考值与原因简明解释。",
+  "causesElevated": [
+    "早期糖尿病性肾损伤",
+    "高血压",
+    "肾炎"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "这是肾损伤的早期征象吗？",
+    "是否应更好地控制我的血压或血糖？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肾功能指标",
+  "pageTitle": "尿微量白蛋白：含义与原因解释 | Medyra"
+}

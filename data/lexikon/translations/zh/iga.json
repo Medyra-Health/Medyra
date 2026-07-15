@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "IgA主要保护呼吸道和肠道黏膜免受病原体侵害。IgA缺乏是最常见的先天性免疫缺陷，常无症状；升高见于慢性黏膜炎症或肝病。",
+  "metaDescription": "IgA偏高或偏低？对免疫系统的含义简明解释。",
+  "causesElevated": [
+    "慢性黏膜炎症",
+    "肝病",
+    "自身免疫病"
+  ],
+  "causesLow": [
+    "先天性IgA缺乏（常无症状）",
+    "某些肠道疾病"
+  ],
+  "doctorQuestions": [
+    "我的IgA缺乏在临床上重要吗？",
+    "将来输血时是否需考虑此点？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "免疫系统指标",
+  "pageTitle": "IgA值：免疫球蛋白A解释 | Medyra"
+}

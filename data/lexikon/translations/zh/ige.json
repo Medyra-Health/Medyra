@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "总IgE是在过敏、有时寄生虫感染时升高的抗体。升高证实对过敏的总体倾向，但不能说明针对何种物质——需做特异性IgE检测。",
+  "metaDescription": "IgE偏高？对过敏和可能原因的含义简明解释。",
+  "causesElevated": [
+    "过敏性疾病（如花粉症、哮喘、特应性皮炎）",
+    "寄生虫感染",
+    "某些免疫疾病"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "是否应做特异性过敏检测？",
+    "我可能有哪些过敏？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "免疫系统指标",
+  "pageTitle": "IgE值：免疫球蛋白E解释 | Medyra"
+}

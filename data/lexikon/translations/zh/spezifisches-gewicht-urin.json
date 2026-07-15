@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "尿比重表示尿液浓缩程度，可提示水平衡和肾脏的浓缩能力。偏低可能提示大量饮水或肾功能受损，偏高提示脱水。",
+  "metaDescription": "尿比重偏高或偏低？含义简明解释。",
+  "causesElevated": [
+    "脱水",
+    "浓缩的晨尿"
+  ],
+  "causesLow": [
+    "大量饮水",
+    "肾脏浓缩能力下降",
+    "尿崩症（罕见）"
+  ],
+  "doctorQuestions": [
+    "该值反映的是我的水平衡还是肾病？",
+    "是否应调整我的饮水量？"
+  ],
+  "rangeLabels": {
+    "normal": "正常"
+  },
+  "categoryLabel": "尿液指标",
+  "pageTitle": "尿比重：含义解释 | Medyra"
+}

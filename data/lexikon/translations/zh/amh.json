@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "AMH由卵巢卵泡分泌，被视为剩余卵子储备的标志物。常在生育力评估或试管婴儿前测定，并随年龄自然下降。",
+  "metaDescription": "AMH（抗缪勒管激素）偏高或偏低？对卵子储备的含义解释。",
+  "causesElevated": [
+    "多囊卵巢综合征（PCOS）"
+  ],
+  "causesLow": [
+    "年龄相关的卵子储备下降",
+    "过早绝经",
+    "化疗后状态"
+  ],
+  "doctorQuestions": [
+    "我的AMH值对卵子储备意味着什么？",
+    "该值是否影响试管婴儿的计划？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常（随年龄而定）",
+    "elevated": "偏高（如PCOS）"
+  },
+  "categoryLabel": "激素指标",
+  "pageTitle": "AMH值：抗缪勒管激素与卵子储备 | Medyra"
+}

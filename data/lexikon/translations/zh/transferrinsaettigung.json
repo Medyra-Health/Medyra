@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "转铁蛋白饱和度反映铁转运蛋白转铁蛋白当前载铁的程度。偏低提示缺铁，偏高可能提示血色病等铁过载。",
+  "metaDescription": "转铁蛋白饱和度偏高或偏低？对缺铁和铁过载的含义解释。",
+  "causesElevated": [
+    "铁过载（血色病）",
+    "频繁输血",
+    "肝病"
+  ],
+  "causesLow": [
+    "缺铁",
+    "慢性炎症",
+    "失血"
+  ],
+  "doctorQuestions": [
+    "我的转铁蛋白饱和度提示缺铁还是铁过载？",
+    "是否应排除血色病？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "铁代谢指标",
+  "pageTitle": "转铁蛋白饱和度：含义解释 | Medyra"
+}

@@ -1,0 +1,14 @@
+{
+  "shortAnswer": "HIV检测在血液中查抗体，部分也查HIV病毒成分。阳性在做出最终结论前始终由第二个独立检测确认。若对结果有疑问，请联系您的医生或咨询机构。",
+  "metaDescription": "HIV检测阳性？含义与后续步骤客观简明解释。",
+  "causesElevated": [
+    "HIV感染（确认检测后）"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "是否已做确认检测？",
+    "现在哪些后续步骤合理？"
+  ],
+  "categoryLabel": "感染指标",
+  "pageTitle": "HIV检测：抗体/抗原检测解释 | Medyra"
+}

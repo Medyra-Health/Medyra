@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "乳酸在供能时产生，尤其当肌肉或组织供氧不足时。运动后轻度升高属正常，静息时明显升高可能提示体内缺氧，应尽快查明。",
+  "metaDescription": "乳酸（乳酸盐）偏高？含义、参考值与原因简明解释。",
+  "causesElevated": [
+    "体力活动",
+    "组织缺氧",
+    "严重感染（脓毒症）",
+    "某些药物"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我乳酸升高需要多紧急查明？",
+    "我的原因是什么？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "代谢指标",
+  "pageTitle": "乳酸值：含义解释 | Medyra"
+}

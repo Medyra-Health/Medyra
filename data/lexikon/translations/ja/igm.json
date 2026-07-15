@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "IgMは新しい感染で最初に作られる抗体クラスで、通常は急性または最近の感染を示します。急性と過去の感染を区別するため、しばしばIgGと合わせて評価されます。",
+  "metaDescription": "IgMが高い・低い？急性感染への意味をわかりやすく解説。",
+  "causesElevated": [
+    "急性感染",
+    "一部の自己免疫疾患",
+    "一部の血液疾患（例：ワルデンストローム病）"
+  ],
+  "causesLow": [
+    "先天性または後天性の免疫不全"
+  ],
+  "doctorQuestions": [
+    "IgM値は急性感染を示しますか？",
+    "IgGも測定すべきですか？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "免疫系検査",
+  "pageTitle": "IgM値：免疫グロブリンMの解説 | Medyra"
+}

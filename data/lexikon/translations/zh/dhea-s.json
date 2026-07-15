@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "DHEA-S几乎全部由肾上腺分泌，是性激素的前体。升高可能提示肾上腺激素生成增多，偏低通常随年龄下降。",
+  "metaDescription": "DHEA-S偏高或偏低？对肾上腺功能的含义解释。",
+  "causesElevated": [
+    "肾上腺活动增强",
+    "多囊卵巢综合征",
+    "罕见的肾上腺肿瘤"
+  ],
+  "causesLow": [
+    "年龄相关的下降",
+    "肾上腺功能不全"
+  ],
+  "doctorQuestions": [
+    "我的DHEA-S值是否与体毛增多或月经紊乱有关？",
+    "做肾上腺影像学检查是否合理？"
+  ],
+  "rangeLabels": {
+    "normal": "正常（随年龄而定）"
+  },
+  "categoryLabel": "激素指标",
+  "pageTitle": "DHEA-S值：肾上腺激素解释 | Medyra"
+}

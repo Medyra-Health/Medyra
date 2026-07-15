@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "硒是具有抗氧化功能的微量元素，对甲状腺和免疫系统很重要。缺乏多因单一或人工营养，正常饮食下过量罕见。",
+  "metaDescription": "硒偏低或偏高？含义、参考值与原因简明解释。",
+  "causesElevated": [
+    "膳食补充剂导致的过量"
+  ],
+  "causesLow": [
+    "单一饮食",
+    "人工营养",
+    "慢性肠道疾病"
+  ],
+  "doctorQuestions": [
+    "硒缺乏是否会影响我的甲状腺指标？",
+    "我是否应补硒？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "微量元素指标",
+  "pageTitle": "硒值：含义与原因解释 | Medyra"
+}

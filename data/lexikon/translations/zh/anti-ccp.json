@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "抗CCP抗体比类风湿因子对类风湿关节炎更具特异性，有时在关节症状出现前即可检出。阳性应由医生结合症状和其他检查结果判读。",
+  "metaDescription": "抗CCP抗体偏高？对类风湿关节炎的含义简明解释。",
+  "causesElevated": [
+    "类风湿关节炎",
+    "发生类风湿关节炎的风险升高"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "该值对类风湿关节炎的确诊有多可靠？",
+    "我是否应转诊风湿科？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "炎症指标",
+  "pageTitle": "抗CCP值：类风湿关节炎抗体解释 | Medyra"
+}

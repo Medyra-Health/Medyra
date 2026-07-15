@@ -1,0 +1,25 @@
+{
+  "shortAnswer": "纤维蛋白原是凝血所需的蛋白质，同时也作为炎症标志物。升高常见于炎症或感染，偏低可能提示凝血障碍或肝病。",
+  "metaDescription": "纤维蛋白原偏高或偏低？含义、参考值与原因解释。",
+  "causesElevated": [
+    "炎症或感染",
+    "术后",
+    "妊娠"
+  ],
+  "causesLow": [
+    "消耗性凝血障碍（DIC）",
+    "肝病",
+    "罕见的先天性凝血障碍"
+  ],
+  "doctorQuestions": [
+    "我纤维蛋白原异常可能是什么原因？",
+    "是否有出血或血栓风险升高？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "凝血指标",
+  "pageTitle": "纤维蛋白原值：含义与原因解释 | Medyra"
+}

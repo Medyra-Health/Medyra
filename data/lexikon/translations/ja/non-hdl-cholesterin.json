@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "non-HDLコレステロールは「善玉」HDLを除くすべてのコレステロール、つまり主にLDLや他の血管を傷つける粒子を含みます。特に中性脂肪が高いとき、心血管リスクの良い総合指標とされます。",
+  "metaDescription": "non-HDLコレステロールが高い？心血管リスクへの意味を解説。",
+  "causesElevated": [
+    "LDLコレステロールの上昇",
+    "中性脂肪の上昇",
+    "不適切な食事",
+    "肥満"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "この値に基づく私の心血管リスクはどのくらいですか？",
+    "コレステロール治療を調整すべきですか？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "代謝検査",
+  "pageTitle": "non-HDLコレステロール値：心血管リスクの解説 | Medyra"
+}

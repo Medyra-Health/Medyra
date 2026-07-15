@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "RDWは赤血球の大きさのばらつきを測定します。高値は初期の鉄、ビタミンB12、葉酸不足を、特に異常なMCVと合わせて示すことがあります。RDW高値は医師と相談してください。",
+  "metaDescription": "RDWが高い？赤血球分布幅の意味と考えられる原因を解説。",
+  "causesElevated": [
+    "鉄欠乏",
+    "ビタミンB12または葉酸不足",
+    "混合性貧血",
+    "輸血後"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "RDW高値はMCVと合わせて何を意味しますか？",
+    "鉄やビタミンの状態を調べるべきですか？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "血球検査",
+  "pageTitle": "RDW値：赤血球分布幅の解説 | Medyra"
+}

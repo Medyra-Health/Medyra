@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "FSH在女性调控卵子成熟，在男性调控精子生成。女性绝经时明显升高，两性升高均可能提示性腺功能减退。",
+  "metaDescription": "FSH偏高或偏低？对绝经和生育力的含义解释。",
+  "causesElevated": [
+    "绝经",
+    "卵巢或睾丸功能减退"
+  ],
+  "causesLow": [
+    "脑垂体疾病",
+    "严重体重下降或竞技运动"
+  ],
+  "doctorQuestions": [
+    "我的FSH值是否提示绝经开始？",
+    "该值对我的生育意愿意味着什么？"
+  ],
+  "rangeLabels": {
+    "normal": "正常（女性随周期而定）",
+    "elevated": "偏高（如绝经）"
+  },
+  "categoryLabel": "激素指标",
+  "pageTitle": "FSH值：卵泡刺激素解释 | Medyra"
+}

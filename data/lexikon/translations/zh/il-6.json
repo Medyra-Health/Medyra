@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "白细胞介素-6是免疫系统的信使物质，在急性炎症和感染时早期升高，常在CRP可测升高之前。主要在医院用于早期评估严重炎症反应。",
+  "metaDescription": "白细胞介素-6（IL-6）偏高？作为早期炎症标志物的含义解释。",
+  "causesElevated": [
+    "急性感染",
+    "严重炎症反应",
+    "自身免疫病",
+    "术后"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "为何在CRP之外还测定IL-6？",
+    "我的炎症反应有多严重？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "炎症指标",
+  "pageTitle": "白细胞介素-6（IL-6）值：炎症标志物解释 | Medyra"
+}

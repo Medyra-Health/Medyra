@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "非HDL胆固醇涵盖除“好”HDL外的所有胆固醇，即主要为LDL和其他损伤血管的颗粒。被视为心血管风险的良好总体指标，尤其在甘油三酯升高时。",
+  "metaDescription": "非HDL胆固醇偏高？对心血管风险的含义解释。",
+  "causesElevated": [
+    "LDL胆固醇升高",
+    "甘油三酯升高",
+    "不良饮食",
+    "超重"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "根据该值我的心血管风险有多高？",
+    "是否应调整我的胆固醇治疗？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "代谢指标",
+  "pageTitle": "非HDL胆固醇值：心血管风险解释 | Medyra"
+}

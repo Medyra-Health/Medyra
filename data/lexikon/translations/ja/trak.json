@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "TRAKは甲状腺のTSH受容体を活性化し、機能亢進を引き起こしうる抗体です。高値はバセドウ病に典型的で、甲状腺機能亢進の他の原因とこの病気を区別するのに役立ちます。",
+  "metaDescription": "TRAKが高い？バセドウ病と甲状腺機能亢進への意味を解説。",
+  "causesElevated": [
+    "バセドウ病",
+    "自己免疫性甲状腺機能亢進"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "この値はバセドウ病を裏付けますか？",
+    "私の甲状腺機能亢進は今後どう治療されますか？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "甲状腺検査",
+  "pageTitle": "TRAK値：TSH受容体抗体の解説 | Medyra"
+}

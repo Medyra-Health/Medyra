@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "直接胆红素是肝脏已处理的胆红素形式。升高多提示胆汁淤积或肝脏、胆道疾病，与主要在细胞分解增多时升高的间接胆红素不同。",
+  "metaDescription": "直接胆红素偏高？含义、参考值与原因简明解释。",
+  "causesElevated": [
+    "胆汁淤积（如胆结石所致）",
+    "肝病",
+    "胆道炎症"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我的数值是否提示胆汁淤积？",
+    "做胆道超声检查是否合理？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肝功能指标",
+  "pageTitle": "直接胆红素值：含义与原因解释 | Medyra"
+}

@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "IgAは主に気道や腸の粘膜を病原体から守ります。IgA欠乏は最も多い先天性免疫不全で、しばしば無症状です。高値は慢性の粘膜炎症や肝疾患で見られます。",
+  "metaDescription": "IgAが高い・低い？免疫系への意味をわかりやすく解説。",
+  "causesElevated": [
+    "慢性の粘膜炎症",
+    "肝疾患",
+    "自己免疫疾患"
+  ],
+  "causesLow": [
+    "先天性IgA欠乏（しばしば無症状）",
+    "一部の腸疾患"
+  ],
+  "doctorQuestions": [
+    "私のIgA欠乏は臨床的に重要ですか？",
+    "今後の輸血でこれを考慮する必要がありますか？"
+  ],
+  "rangeLabels": {
+    "low": "低い",
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "免疫系検査",
+  "pageTitle": "IgA値：免疫グロブリンAの解説 | Medyra"
+}

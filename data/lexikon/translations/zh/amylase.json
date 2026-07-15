@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "淀粉酶是主要由胰腺和唾液腺分泌的消化酶。明显升高典型见于急性胰腺炎，轻度升高也可能来自唾液腺。",
+  "metaDescription": "淀粉酶偏高？对胰腺的含义简明解释。",
+  "causesElevated": [
+    "急性胰腺炎",
+    "唾液腺炎",
+    "胆结石"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我淀粉酶升高是否提示胰腺炎？",
+    "是否应加测脂肪酶？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "胰腺指标",
+  "pageTitle": "淀粉酶值：胰腺酶解释 | Medyra"
+}

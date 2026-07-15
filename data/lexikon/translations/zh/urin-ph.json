@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "尿液pH值表示尿偏酸还是偏碱，受饮食、代谢和某些疾病影响。也在某些类型肾结石的形成中起作用。",
+  "metaDescription": "尿pH值偏高或偏低？含义与原因简明解释。",
+  "causesElevated": [
+    "素食/富碱饮食",
+    "尿路感染",
+    "肾功能障碍"
+  ],
+  "causesLow": [
+    "富含蛋白的饮食",
+    "代谢紊乱（如酮症酸中毒）"
+  ],
+  "doctorQuestions": [
+    "我的尿pH是否影响肾结石形成？",
+    "是否应调整我的饮食？"
+  ],
+  "rangeLabels": {
+    "normal": "正常"
+  },
+  "categoryLabel": "尿液指标",
+  "pageTitle": "尿pH值：含义与原因解释 | Medyra"
+}

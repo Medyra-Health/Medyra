@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "氨在蛋白质分解时产生，通常由肝脏解毒。升高可能提示肝功能受损，严重时可影响脑功能。明显升高应尽快就医查明。",
+  "metaDescription": "氨（NH3）偏高？含义、参考值与原因简明解释。",
+  "causesElevated": [
+    "晚期肝病（肝硬化）",
+    "肝衰竭",
+    "某些代谢性疾病"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我氨升高需要多紧急处理？",
+    "我的根本原因是什么？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肝功能指标",
+  "pageTitle": "氨（NH3）值：含义与原因解释 | Medyra"
+}

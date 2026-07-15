@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "补体因子C4与C3一样属于免疫防御的补体系统。怀疑狼疮等自身免疫病时常与C3一起测定，因为活动期两个因子常同时降低。",
+  "metaDescription": "补体因子C4偏高或偏低？对自身免疫病的含义解释。",
+  "causesElevated": [
+    "急性炎症或感染"
+  ],
+  "causesLow": [
+    "自身免疫病（如系统性红斑狼疮）",
+    "先天性补体缺乏"
+  ],
+  "doctorQuestions": [
+    "我的C4值结合C3和症状意味着什么？",
+    "是否应请风湿科会诊？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "免疫系统指标",
+  "pageTitle": "补体因子C4值：含义解释 | Medyra"
+}

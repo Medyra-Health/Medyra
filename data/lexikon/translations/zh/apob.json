@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "载脂蛋白B是“坏”胆固醇颗粒（如LDL）的成分，因反映这些颗粒的总数而被视为心血管风险的精确标志物。升高与血管沉积风险升高相关。",
+  "metaDescription": "载脂蛋白B（ApoB）偏高？对心血管风险的含义简明解释。",
+  "causesElevated": [
+    "LDL胆固醇升高",
+    "心血管风险升高",
+    "不良饮食",
+    "代谢性疾病"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "与我的LDL值相比ApoB有多重要？",
+    "是否应调整我的胆固醇治疗？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "代谢指标",
+  "pageTitle": "ApoB值：载脂蛋白B解释 | Medyra"
+}

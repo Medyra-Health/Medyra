@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "HOMA指数由空腹血糖和空腹胰岛素计算，评估身体对胰岛素的反应程度。升高提示胰岛素抵抗，常先于2型糖尿病出现。",
+  "metaDescription": "HOMA指数偏高？对胰岛素抵抗、参考值与原因的解释。",
+  "causesElevated": [
+    "胰岛素抵抗",
+    "代谢综合征",
+    "超重",
+    "多囊卵巢综合征（PCOS）"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "根据该值我的糖尿病风险有多高？",
+    "哪些生活方式改变可能有帮助？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高（可能胰岛素抵抗）"
+  },
+  "categoryLabel": "代谢指标",
+  "pageTitle": "HOMA指数：胰岛素抵抗解释 | Medyra"
+}

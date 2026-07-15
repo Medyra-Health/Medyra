@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "ACTH由脑垂体分泌，调控肾上腺的皮质醇生成。该值始终与皮质醇一起判读，以区分肾上腺疾病和垂体疾病。",
+  "metaDescription": "ACTH偏高或偏低？与皮质醇关系的含义简明解释。",
+  "causesElevated": [
+    "肾上腺功能不全（艾迪生病）",
+    "分泌ACTH的肿瘤（罕见）"
+  ],
+  "causesLow": [
+    "脑垂体疾病",
+    "肾上腺肿瘤导致的库欣综合征"
+  ],
+  "doctorQuestions": [
+    "我的ACTH与皮质醇的比值说明什么？",
+    "是否需要进一步检查脑垂体？"
+  ],
+  "rangeLabels": {
+    "normal": "正常"
+  },
+  "categoryLabel": "激素指标",
+  "pageTitle": "ACTH值：促肾上腺皮质激素解释 | Medyra"
+}

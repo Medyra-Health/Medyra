@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "抗TPO抗体针对甲状腺的一种酶，是桥本甲状腺炎等甲状腺自身免疫病最重要的指标。升高常但不总是提示此类疾病。",
+  "metaDescription": "抗TPO抗体偏高？对桥本病和甲状腺疾病的含义解释。",
+  "causesElevated": [
+    "桥本甲状腺炎",
+    "格雷夫斯病",
+    "其他自身免疫病"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "该值是否确诊甲状腺自身免疫病？",
+    "是否应定期监测我的甲状腺功能？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "甲状腺指标",
+  "pageTitle": "抗TPO值：桥本病抗体解释 | Medyra"
+}

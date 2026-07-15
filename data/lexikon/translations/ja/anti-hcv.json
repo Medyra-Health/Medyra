@@ -1,0 +1,15 @@
+{
+  "shortAnswer": "抗HCV抗体は、体がいずれかの時点でC型肝炎ウイルスに接触したことを示します。陽性は自動的に現在の感染を意味せず、ウイルスそのものの追加検査（PCR）で確認する必要があります。",
+  "metaDescription": "抗HCV陽性？C型肝炎感染への意味をわかりやすく解説。",
+  "causesElevated": [
+    "現在のC型肝炎感染",
+    "治癒したC型肝炎感染"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "確認のための追加PCR検査は必要ですか？",
+    "私の感染は活動性ですか、治癒済みですか？"
+  ],
+  "categoryLabel": "感染症検査",
+  "pageTitle": "抗HCV値：C型肝炎の抗体の解説 | Medyra"
+}

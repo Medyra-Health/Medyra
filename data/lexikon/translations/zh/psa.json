@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "PSA由前列腺分泌，可在前列腺增大、炎症或前列腺癌时升高。仅升高并不能证明癌症，许多良性原因更为常见，故医生评估很重要。",
+  "metaDescription": "PSA值偏高？可能原因与后续步骤简明解释。",
+  "causesElevated": [
+    "良性前列腺增生（BPH）",
+    "前列腺炎",
+    "体力活动后（如骑车）",
+    "前列腺癌（多种可能原因之一）"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "可能的原因中哪个适用于我？",
+    "是否有必要进一步做泌尿科检查？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肿瘤标志物",
+  "pageTitle": "PSA值：前列腺特异性抗原解释 | Medyra"
+}

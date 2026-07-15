@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "アポリポタンパクBは「悪玉」コレステロール粒子（LDLなど）の成分で、これら粒子の総数を反映するため心血管リスクの精密な指標とされます。高値は血管への沈着リスクの上昇と関連します。",
+  "metaDescription": "アポリポタンパクB（ApoB）が高い？心血管リスクへの意味を解説。",
+  "causesElevated": [
+    "LDLコレステロールの上昇",
+    "心血管リスクの上昇",
+    "不適切な食事",
+    "代謝疾患"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "LDL値と比べてApoBはどれくらい重要ですか？",
+    "コレステロール治療を調整すべきですか？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "代謝検査",
+  "pageTitle": "ApoB値：アポリポタンパクBの解説 | Medyra"
+}

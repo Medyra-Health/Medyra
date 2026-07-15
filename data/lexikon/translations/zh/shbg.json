@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "SHBG在血液中结合性激素，影响其中多少处于游离并有效可用状态。常与睾酮一起测定，以更好评估实际有效的激素比例。",
+  "metaDescription": "SHBG偏高或偏低？对激素指标的含义简明解释。",
+  "causesElevated": [
+    "甲状腺功能亢进",
+    "妊娠",
+    "雌激素治疗"
+  ],
+  "causesLow": [
+    "超重",
+    "胰岛素抵抗",
+    "甲状腺功能减退"
+  ],
+  "doctorQuestions": [
+    "我的SHBG值如何影响我睾酮值的意义？",
+    "是否应计算游离睾酮？"
+  ],
+  "rangeLabels": {
+    "normal": "正常"
+  },
+  "categoryLabel": "激素指标",
+  "pageTitle": "SHBG值：性激素结合球蛋白解释 | Medyra"
+}

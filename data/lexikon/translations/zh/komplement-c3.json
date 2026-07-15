@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "补体因子C3是直接对抗病原体并支持炎症反应的系统的一部分。偏低可能提示狼疮等自身免疫病中的消耗增多，升高见于急性炎症。",
+  "metaDescription": "补体因子C3偏高或偏低？对自身免疫病的含义解释。",
+  "causesElevated": [
+    "急性炎症或感染"
+  ],
+  "causesLow": [
+    "自身免疫病（如系统性红斑狼疮）",
+    "先天性补体缺乏",
+    "慢性肝病"
+  ],
+  "doctorQuestions": [
+    "我C3偏低是否提示自身免疫病？",
+    "是否应加测C4和ANA？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "免疫系统指标",
+  "pageTitle": "补体因子C3值：含义解释 | Medyra"
+}

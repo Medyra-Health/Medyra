@@ -1,0 +1,24 @@
+{
+  "shortAnswer": "MPV表示血小板的平均大小。较大的血小板常为新生，提示血小板更新增加；较小的提示骨髓生成减少。该值通常与血小板本身一起判读。",
+  "metaDescription": "MPV偏高或偏低？平均血小板体积的含义简明解释。",
+  "causesElevated": [
+    "血小板生成增加",
+    "免疫性血小板减少症（ITP）",
+    "失血后"
+  ],
+  "causesLow": [
+    "骨髓疾病",
+    "血小板生成减少"
+  ],
+  "doctorQuestions": [
+    "我的MPV值是否与血小板数相符？",
+    "是否需要骨髓检查？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "血常规",
+  "pageTitle": "MPV值：平均血小板体积解释 | Medyra"
+}

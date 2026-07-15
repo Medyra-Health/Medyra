@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "IgM是新感染时最先产生的抗体类别，因此通常提示急性或近期感染。常与IgG一起判读，以区分急性和既往感染。",
+  "metaDescription": "IgM偏高或偏低？对急性感染的含义简明解释。",
+  "causesElevated": [
+    "急性感染",
+    "某些自身免疫病",
+    "某些血液病（如华氏巨球蛋白血症）"
+  ],
+  "causesLow": [
+    "先天性或获得性免疫缺陷"
+  ],
+  "doctorQuestions": [
+    "我的IgM值是否提示急性感染？",
+    "是否应加测IgG？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "免疫系统指标",
+  "pageTitle": "IgM值：免疫球蛋白M解释 | Medyra"
+}

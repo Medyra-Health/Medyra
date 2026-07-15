@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "同型半胱氨酸是蛋白质代谢的中间产物，借助维生素B12、叶酸和维生素B6分解。升高常因这些维生素缺乏，并与血管风险升高相关。",
+  "metaDescription": "同型半胱氨酸偏高？含义、参考值与维生素缺乏等原因解释。",
+  "causesElevated": [
+    "维生素B12缺乏",
+    "叶酸缺乏",
+    "维生素B6缺乏",
+    "肾病"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我是否因维生素缺乏所致？",
+    "我是否应补充维生素B12或叶酸？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "代谢指标",
+  "pageTitle": "同型半胱氨酸值：含义与原因解释 | Medyra"
+}

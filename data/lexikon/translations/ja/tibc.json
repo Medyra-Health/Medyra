@@ -1,0 +1,23 @@
+{
+  "shortAnswer": "TIBCは血液が最大どれだけ鉄を運べるかを測定し、間接的にトランスフェリンの量を反映します。高値は典型的に鉄欠乏で、低値は鉄過剰や慢性炎症で見られます。",
+  "metaDescription": "TIBC（鉄結合能）が高い・低い？鉄欠乏への意味を解説。",
+  "causesElevated": [
+    "鉄欠乏"
+  ],
+  "causesLow": [
+    "鉄過剰（ヘモクロマトーシス）",
+    "慢性炎症",
+    "肝疾患"
+  ],
+  "doctorQuestions": [
+    "この値は鉄欠乏を裏付けますか？",
+    "他の鉄関連値も測定すべきですか？"
+  ],
+  "rangeLabels": {
+    "low": "低い",
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "鉄代謝検査",
+  "pageTitle": "TIBC値：鉄結合能の解説 | Medyra"
+}

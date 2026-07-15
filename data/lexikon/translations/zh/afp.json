@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "AFP通常主要在妊娠期升高，非妊娠时用于监测肝脏或生殖细胞肿瘤的病程。慢性肝病即使无肿瘤也可能使该值升高。",
+  "metaDescription": "AFP偏高？肿瘤标志物的含义与可能原因简明解释。",
+  "causesElevated": [
+    "妊娠",
+    "慢性肝病或肝硬化",
+    "肝癌或生殖细胞肿瘤（多种可能原因之一）"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我AFP升高可能是什么原因？",
+    "做肝脏影像学检查是否合理？"
+  ],
+  "rangeLabels": {
+    "normal": "正常（非妊娠期）",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "肿瘤标志物",
+  "pageTitle": "AFP值：肿瘤标志物甲胎蛋白解释 | Medyra"
+}

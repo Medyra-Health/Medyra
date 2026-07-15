@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "LH在女性触发排卵，在男性促进睾酮生成。常与FSH一起测定，如月经紊乱、生育意愿或怀疑性腺功能障碍时。",
+  "metaDescription": "LH偏高或偏低？对周期和生育力的含义简明解释。",
+  "causesElevated": [
+    "排卵（短暂升高）",
+    "绝经",
+    "多囊卵巢综合征"
+  ],
+  "causesLow": [
+    "脑垂体疾病",
+    "严重体重下降或竞技运动"
+  ],
+  "doctorQuestions": [
+    "我的LH与FSH比值说明什么？",
+    "我的周期或激素功能是否正常？"
+  ],
+  "rangeLabels": {
+    "normal": "正常（女性随周期而定）"
+  },
+  "categoryLabel": "激素指标",
+  "pageTitle": "LH值：黄体生成素解释 | Medyra"
+}

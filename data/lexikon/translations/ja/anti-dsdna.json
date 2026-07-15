@@ -1,0 +1,19 @@
+{
+  "shortAnswer": "抗dsDNA抗体はANAよりも全身性エリテマトーデスにはるかに特異的で、確定診断や疾患活動性の経過観察によく用いられます。ほぼ常にすでにANA陽性の所見と関連して測定されます。",
+  "metaDescription": "抗dsDNA抗体が高い？全身性エリテマトーデスへの意味を解説。",
+  "causesElevated": [
+    "全身性エリテマトーデス",
+    "既知ループスの活動期"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "この値は全身性エリテマトーデスを裏付けますか？",
+    "現在活動期であることを示していますか？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "免疫系検査",
+  "pageTitle": "抗dsDNA値：ループスの抗体の解説 | Medyra"
+}

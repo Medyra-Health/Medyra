@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "嗜碱性粒细胞是最少见的白细胞，参与过敏反应和慢性炎症。轻度升高常无害，明显升高应就医查明。",
+  "metaDescription": "嗜碱性粒细胞偏高？含义与可能原因简明解释。",
+  "causesElevated": [
+    "过敏反应",
+    "慢性炎症",
+    "某些血液病"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我嗜碱性粒细胞升高在临床上重要吗？",
+    "是否需要进一步检查？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "血常规",
+  "pageTitle": "嗜碱性粒细胞值：含义解释 | Medyra"
+}

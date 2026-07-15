@@ -1,0 +1,21 @@
+{
+  "shortAnswer": "维生素K为凝血和骨代谢所必需。缺乏可导致出血倾向增加，见于脂肪吸收障碍、抗生素治疗或营养不良。",
+  "metaDescription": "维生素K偏低？对凝血的含义、参考值与原因解释。",
+  "causesElevated": [],
+  "causesLow": [
+    "脂肪吸收障碍",
+    "长期抗生素治疗",
+    "营养不良",
+    "肝病"
+  ],
+  "doctorQuestions": [
+    "维生素K缺乏是否能解释我出血倾向增加？",
+    "我是否应补充维生素K？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常"
+  },
+  "categoryLabel": "维生素",
+  "pageTitle": "维生素K值：凝血与缺乏解释 | Medyra"
+}

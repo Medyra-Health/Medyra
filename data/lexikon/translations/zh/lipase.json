@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "脂肪酶是胰腺的消化酶，被视为比淀粉酶对胰腺炎更特异的标志物。明显升高（通常伴剧烈腹痛）应尽快就医查明。",
+  "metaDescription": "脂肪酶偏高？对胰腺炎的含义简明解释。",
+  "causesElevated": [
+    "急性胰腺炎",
+    "胆结石",
+    "肾功能受损"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "我脂肪酶升高需要多紧急查明？",
+    "是否需要胰腺影像学检查？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "胰腺指标",
+  "pageTitle": "脂肪酶值：胰腺酶解释 | Medyra"
+}

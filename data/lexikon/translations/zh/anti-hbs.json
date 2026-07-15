@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "抗HBs抗体表明对乙型肝炎具有足够的免疫保护，可来自疫苗接种或既往感染康复。该值常用于检查疫苗保护，如医务人员。",
+  "metaDescription": "抗HBs偏高或偏低？对乙肝疫苗保护的含义解释。",
+  "causesElevated": [
+    "乙肝疫苗接种成功",
+    "既往乙肝感染康复并获得免疫"
+  ],
+  "causesLow": [
+    "无或不足的疫苗保护",
+    "疫苗保护随时间减弱"
+  ],
+  "doctorQuestions": [
+    "我对乙肝的疫苗保护是否仍然足够？",
+    "我是否应接种加强针？"
+  ],
+  "rangeLabels": {
+    "low": "保护不足",
+    "normal": "足够的疫苗保护"
+  },
+  "categoryLabel": "感染指标",
+  "pageTitle": "抗HBs值：乙肝疫苗保护解释 | Medyra"
+}

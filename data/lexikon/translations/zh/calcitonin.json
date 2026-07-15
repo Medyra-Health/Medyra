@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "降钙素由甲状腺特殊细胞分泌，参与钙代谢。明显升高罕见，可能提示这些细胞增生，或在罕见情况下提示甲状腺髓样癌，故应就医查明。",
+  "metaDescription": "降钙素偏高？含义、参考值与原因简明解释。",
+  "causesElevated": [
+    "C细胞增生",
+    "甲状腺髓样癌（罕见）",
+    "某些药物"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "降钙素升高还需做哪些检查？",
+    "查明有多紧急？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "偏高"
+  },
+  "categoryLabel": "甲状腺指标",
+  "pageTitle": "降钙素值：含义与原因解释 | Medyra"
+}

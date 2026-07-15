@@ -1,0 +1,22 @@
+{
+  "shortAnswer": "LDHは肝臓、心臓、筋肉など体の多くの細胞に存在する酵素です。高値は非特異的で、肝障害、筋損傷、心筋梗塞などさまざまな臓器の細胞損傷を示すことがあります。",
+  "metaDescription": "LDHが高い？乳酸脱水素酵素の意味・基準値・原因を解説。",
+  "causesElevated": [
+    "肝障害",
+    "心筋梗塞",
+    "溶血（赤血球の崩壊）",
+    "筋損傷",
+    "一部の腫瘍疾患"
+  ],
+  "causesLow": [],
+  "doctorQuestions": [
+    "どの臓器がLDH高値を説明できますか？",
+    "さらなる検査は必要ですか？"
+  ],
+  "rangeLabels": {
+    "normal": "正常",
+    "elevated": "高い"
+  },
+  "categoryLabel": "肝機能検査",
+  "pageTitle": "LDH値：乳酸脱水素酵素の解説 | Medyra"
+}

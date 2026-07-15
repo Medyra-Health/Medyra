@@ -1,0 +1,20 @@
+{
+  "shortAnswer": "载脂蛋白A1是“好”HDL胆固醇的主要蛋白成分，帮助将胆固醇转运回肝脏。偏低与心血管风险升高相关，偏高通常被视为有利。",
+  "metaDescription": "载脂蛋白A1（ApoA1）偏低？对心血管风险的含义解释。",
+  "causesElevated": [],
+  "causesLow": [
+    "心血管风险升高",
+    "HDL胆固醇偏低",
+    "吸烟"
+  ],
+  "doctorQuestions": [
+    "我的ApoA1值对心血管风险意味着什么？",
+    "通过改变生活方式能否改善该值？"
+  ],
+  "rangeLabels": {
+    "low": "偏低",
+    "normal": "正常（越高越好）"
+  },
+  "categoryLabel": "代谢指标",
+  "pageTitle": "ApoA1值：载脂蛋白A1解释 | Medyra"
+}
