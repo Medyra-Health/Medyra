@@ -1,0 +1,12 @@
+{
+  "shortAnswer": "Test na HIV wykrywa przeciwciała, a częściowo także elementy samego wirusa HIV we krwi. Dodatni wynik jest zawsze potwierdzany drugim, niezależnym testem, zanim postawiona zostanie ostateczna diagnoza. W razie pytań dotyczących wyniku testu skontaktuj się z lekarzem lub poradnią.",
+  "metaDescription": "Test na HIV dodatni? Znaczenie i kolejne kroki wyjaśnione jasno i rzeczowo.",
+  "causesElevated": ["Zakażenie HIV (po teście potwierdzającym)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy wykonano już test potwierdzający?",
+    "Jakie kolejne kroki są teraz sensowne?"
+  ],
+  "categoryLabel": "Wskaźniki infekcji",
+  "pageTitle": "Test na HIV wyjaśniony | Medyra"
+}

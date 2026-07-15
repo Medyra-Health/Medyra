@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Albumina jest najważniejszym białkiem we krwi i jest wytwarzana w wątrobie. Niskie wartości mogą wskazywać na chorobę wątroby, niedożywienie lub utratę białka przez nerki. Wartość jest zwykle oceniana razem z innymi wskaźnikami wątrobowymi i nerkowymi.",
+  "metaDescription": "Albumina zbyt niska? Znaczenie, wartości prawidłowe i możliwe przyczyny wyjaśnione prosto po polsku.",
+  "causesElevated": ["Odwodnienie"],
+  "causesLow": ["Choroba wątroby", "Niedożywienie", "Choroba nerek z utratą białka", "Przewlekłe zapalenie"],
+  "doctorQuestions": [
+    "Co mogłoby wyjaśniać moją niską albuminę?",
+    "Czy moja funkcja wątroby lub nerek powinna być dalej badana?"
+  ],
+  "rangeLabels": { "low": "Niska", "normal": "Normalna", "elevated": "Podwyższona (zwykle odwodnienie)" },
+  "categoryLabel": "Wskaźniki wątrobowe",
+  "pageTitle": "Wartość albuminy: Główne białko krwi wyjaśnione | Medyra"
+}

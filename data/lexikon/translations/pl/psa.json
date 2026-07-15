@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "PSA jest wytwarzany przez prostatę i może wzrastać przy powiększeniu prostaty, jej zapaleniu lub raku prostaty. Sama podwyższona wartość nie dowodzi raka, ponieważ znacznie częściej występują łagodne przyczyny, dlatego ważna jest ocena lekarska.",
+  "metaDescription": "PSA podwyższone? Możliwe przyczyny i kolejne kroki wyjaśnione po polsku.",
+  "causesElevated": ["Łagodny przerost prostaty (BPH)", "Zapalenie prostaty", "Po wysiłku fizycznym (np. jazda na rowerze)", "Rak prostaty (jedna z kilku możliwych przyczyn)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Która z możliwych przyczyn wchodzi w grę w moim przypadku?",
+    "Czy sensowna jest dalsza diagnostyka urologiczna?"
+  ],
+  "rangeLabels": { "normal": "Normalne", "elevated": "Podwyższone" },
+  "categoryLabel": "Markery nowotworowe",
+  "pageTitle": "Wartość PSA wyjaśniona | Medyra"
+}

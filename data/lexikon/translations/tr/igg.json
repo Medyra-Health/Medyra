@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "IgG en yaygın antikor sınıfıdır ve geçirilmiş enfeksiyonlar veya aşılar sonrasında uzun vadeli korumayı sağlar. Düşük değerler bağışıklık yetersizliğine, yüksek değerler ise kronik enfeksiyon veya iltihaplara işaret edebilir.",
+  "metaDescription": "IgG yüksek veya düşük mü? Bağışıklık sistemi için anlamı basitçe açıklandı.",
+  "causesElevated": ["Kronik enfeksiyon", "Otoimmün hastalık", "Bazı kan hastalıkları"],
+  "causesLow": ["Doğuştan veya sonradan kazanılmış bağışıklık yetersizliği", "Böbrek veya bağırsak yoluyla protein kaybı"],
+  "doctorQuestions": [
+    "IgG değerim bir bağışıklık yetersizliğine mi işaret ediyor?",
+    "Diğer immünoglobulinler de ölçülmeli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Bağışıklık Sistemi",
+  "pageTitle": "IgG değeri: İmmünoglobulin G açıklaması | Medyra"
+}

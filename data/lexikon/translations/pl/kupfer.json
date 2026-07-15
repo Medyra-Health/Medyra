@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Miedź uczestniczy w tworzeniu krwi, tkance łącznej i układzie nerwowym. Niedobór jest rzadki i występuje przede wszystkim po operacjach żołądka, podwyższone wartości mogą powstawać między innymi pod wpływem czynników hormonalnych, takich jak tabletki antykoncepcyjne lub ciąża.",
+  "metaDescription": "Miedź zbyt niska lub zbyt wysoka? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Czynniki hormonalne (np. tabletki antykoncepcyjne, ciąża)", "Choroby zapalne"],
+  "causesLow": ["Stan po operacji żołądka", "Niedożywienie", "Rzadkie choroby genetyczne (choroba Wilsona może zmieniać poziom miedzi)"],
+  "doctorQuestions": [
+    "Co mogłoby tłumaczyć moją nieprawidłową wartość miedzi?",
+    "Czy potrzebne są dalsze badania?"
+  ],
+  "rangeLabels": { "low": "Niska", "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Pierwiastki śladowe",
+  "pageTitle": "Wartość miedzi wyjaśniona | Medyra"
+}

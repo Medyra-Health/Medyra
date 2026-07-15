@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Anti-TPO antikorları, tiroidin bir enzimine karşı oluşur ve Hashimoto tiroiditi gibi otoimmün tiroid hastalıklarının en önemli göstergesidir. Yüksek değerler genellikle böyle bir hastalığı doğrular, ancak her zaman değil.",
+  "metaDescription": "Anti-TPO antikorları yüksek mi? Hashimoto ve tiroid hastalıkları için anlamı açıklandı.",
+  "causesElevated": ["Hashimoto tiroiditi", "Graves hastalığı", "Diğer otoimmün hastalıklar"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu değer bir tiroid otoimmün hastalığını doğruluyor mu?",
+    "Tiroid işlevim düzenli olarak kontrol edilmeli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Tiroid",
+  "pageTitle": "Anti-TPO değeri: Tiroid peroksidaz antikorları açıklaması | Medyra"
+}

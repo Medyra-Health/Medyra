@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "CA 19-9 oznacza się przede wszystkim w kontekście trzustki i dróg żółciowych, ale może wzrastać także przy zastoju żółci, stanach zapalnych lub innych łagodnych chorobach. Częściej służy monitorowaniu przebiegu niż pierwotnej diagnostyce.",
+  "metaDescription": "CA 19-9 podwyższony? Znaczenie markera nowotworowego i możliwe przyczyny wyjaśnione.",
+  "causesElevated": ["Zastój żółci", "Zapalenie trzustki", "Choroba wątroby", "Rak trzustki (jedna z kilku możliwych przyczyn)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jaka przyczyna najbardziej wchodzi w grę przy mojej podwyższonej wartości?",
+    "Czy sensowne jest obrazowanie trzustki?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Markery nowotworowe",
+  "pageTitle": "Wartość CA 19-9 wyjaśniona | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Troponin, kalp kası hasarı için oldukça spesifik bir belirteçtir ve kalp krizi şüphesinde en önemli laboratuvar değeridir. Hafif yüksek değerler bile ciddiye alınır ve hastanede genellikle bir süre sonra ikinci bir ölçümle kontrol edilir.",
+  "metaDescription": "Troponin yüksek mi? Kalp krizi ve kalp kası hasarı için anlamı basitçe açıklandı.",
+  "causesElevated": ["Kalp krizi", "Kalp kası iltihabı (miyokardit)", "Yoğun fiziksel efor", "Azalmış böbrek işlevi"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek troponin değerim ne kadar acil incelenmeli?",
+    "İkinci bir ölçüm planlanıyor mu?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kalp Değerleri",
+  "pageTitle": "Troponin değeri: Kalp krizi belirteci açıklaması | Medyra"
+}

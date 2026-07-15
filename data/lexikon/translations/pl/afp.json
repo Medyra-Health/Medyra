@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "AFP jest zwykle podwyższone przede wszystkim w czasie ciąży, a poza ciążą wykorzystywane jest do monitorowania przebiegu nowotworów wątroby lub nowotworów zarodkowych. Także przewlekłe choroby wątroby mogą podnosić tę wartość bez obecności nowotworu.",
+  "metaDescription": "AFP podwyższone? Znaczenie markera nowotworowego i możliwe przyczyny wyjaśnione prosto.",
+  "causesElevated": ["Ciąża", "Przewlekła choroba wątroby lub marskość wątroby", "Rak wątroby lub nowotwory zarodkowe (jedna z kilku możliwych przyczyn)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jaka przyczyna wchodzi w grę przy moim podwyższonym AFP?",
+    "Czy sensowne jest obrazowanie wątroby?"
+  ],
+  "rangeLabels": { "normal": "Normalny (poza ciążą)", "elevated": "Podwyższony" },
+  "categoryLabel": "Markery nowotworowe",
+  "pageTitle": "Wartość AFP: Alfa-fetoproteina wyjaśniona | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Mikroalbumin, standart bir idrar test çubuğuyla saptanamayan çok küçük miktarlardaki idrar proteinini ölçer. Yüksek bir değer, özellikle diyabet veya yüksek tansiyonda, başlayan bir böbrek hasarının erken bir işareti olabilir ve doktor tarafından takip edilmelidir.",
+  "metaDescription": "İdrarda mikroalbumin yüksek mi? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Başlayan diyabetik böbrek hasarı", "Yüksek tansiyon", "Böbrek iltihabı"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu erken bir böbrek hasarı işareti mi?",
+    "Tansiyonum veya kan şekerim daha iyi kontrol altına alınmalı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Böbrek Değerleri",
+  "pageTitle": "Mikroalbumin değeri: Erken böbrek hasarı açıklaması | Medyra"
+}

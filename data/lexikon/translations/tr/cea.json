@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "CEA, spesifik olmayan bir tümör belirtecidir ve özellikle bağırsak kanseri olmak üzere bilinen tümör hastalıklarının takibinde kullanılır. Sigara içenlerde ve çeşitli iyi huylu hastalıklarda da yüksek çıkabilir ve tek başına kanser kanıtı değildir.",
+  "metaDescription": "CEA yüksek mi? Tümör belirtecinin anlamı ve olası nedenleri basitçe açıklandı.",
+  "causesElevated": ["Sigara kullanımı", "Kronik iltihaplı bağırsak hastalıkları", "Karaciğer veya akciğer hastalıkları", "Bilinen tümör hastalığı (takip amaçlı)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu değer takip için mi yoksa ilk değerlendirme için mi kullanılıyor?",
+    "Hangi ileri tetkikler anlamlı olur?"
+  ],
+  "rangeLabels": { "normal": "Normal (sigara içmeyenlerde)", "elevated": "Yüksek" },
+  "categoryLabel": "Tümör Belirteçleri",
+  "pageTitle": "CEA değeri: Karsinoembriyonik antijen açıklaması | Medyra"
+}

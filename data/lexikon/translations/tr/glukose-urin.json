@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Normalde şeker böbrekte tamamen geri emilir ve idrarda görülmez. Pozitif bir bulgu genellikle belirgin şekilde yüksek kan şekerinde, örneğin yeterince kontrol altına alınmamış diyabette ortaya çıkar; gebelikte ise zararsız da olabilir.",
+  "metaDescription": "İdrarda glukoz pozitif mi? Diyabet ve kan şekeri için anlamı basitçe açıklandı.",
+  "causesElevated": ["Yeterince kontrol altına alınmamış diyabetes mellitus", "Gebelik (geçici olarak sık görülür)", "Şeker geri emiliminin bozulduğu böbrek hastalığı"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Kan şekerim daha yakından takip edilmeli mi?",
+    "Diyabet tedavimde bir düzenleme gerekli mi?"
+  ],
+  "rangeLabels": {},
+  "categoryLabel": "İdrar Değerleri",
+  "pageTitle": "İdrarda glukoz: Diyabet ile ilişkisi açıklaması | Medyra"
+}

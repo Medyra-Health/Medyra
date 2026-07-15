@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "DHEA-S neredeyse tamamen böbrek üstü bezinde üretilir ve cinsiyet hormonlarının bir öncüsü olarak görev yapar. Yüksek değerler böbrek üstü bezinin artmış hormon üretimine işaret edebilirken, düşük değerler normalde yaşla birlikte azalır.",
+  "metaDescription": "DHEA-S yüksek veya düşük mü? Böbrek üstü bezi işlevi için anlamı açıklandı.",
+  "causesElevated": ["Artmış böbrek üstü bezi aktivitesi", "Polikistik over sendromu", "Nadir böbrek üstü bezi tümörleri"],
+  "causesLow": ["Yaşa bağlı azalma", "Böbrek üstü bezi yetmezliği"],
+  "doctorQuestions": [
+    "DHEA-S değerim aşırı kıllanma veya adet düzensizliğiyle ilişkili olabilir mi?",
+    "Böbrek üstü bezinin görüntülenmesi anlamlı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal (yaşa bağlı)" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "DHEA-S değeri: Böbrek üstü bezi işlevi açıklaması | Medyra"
+}

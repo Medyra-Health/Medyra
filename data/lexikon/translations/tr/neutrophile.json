@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Nötrofil granülositler, en yaygın beyaz kan hücresi türüdür ve özellikle bakteriyel enfeksiyonlarla mücadele eder. Yüksek değerler sıkça akut enfeksiyon veya iltihaba işaret ederken, düşük değerler enfeksiyon riskini artırabilir. Değer her zaman kan tablosunun diğer değerleriyle birlikte değerlendirilir.",
+  "metaDescription": "Nötrofil granülositler yüksek veya düşük mü? Anlamı ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Bakteriyel enfeksiyon", "Akut iltihap", "Ağır fiziksel stres", "Kortizon tedavisi"],
+  "causesLow": ["Viral enfeksiyon", "Kemik iliği hastalığı", "Kemoterapi", "Bazı ilaçlar"],
+  "doctorQuestions": [
+    "Nötrofil değerim bakteriyel bir enfeksiyona mı işaret ediyor?",
+    "Şu anda enfeksiyon riskim artmış mı?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kan Sayımı",
+  "pageTitle": "Nötrofil değeri: Anlamı basitçe açıklandı | Medyra"
+}

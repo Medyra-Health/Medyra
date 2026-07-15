@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Kalcytonina jest wytwarzana przez specjalne komórki tarczycy i bierze udział w gospodarce wapniowej. Znacznie podwyższone wartości są rzadkie i mogą wskazywać na rozrost tych komórek lub, w rzadkich przypadkach, na rdzeniastego raka tarczycy, dlatego powinny zostać wyjaśnione przez lekarza.",
+  "metaDescription": "Kalcytonina podwyższona? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Rozrost komórek C (hiperplazja komórek C)", "Rdzeniasty rak tarczycy (rzadko)", "Niektóre leki"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jakie dalsze badania są sensowne przy podwyższonej kalcytoninie?",
+    "Jak pilna jest dalsza diagnostyka?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Tarczyca",
+  "pageTitle": "Wartość kalcytoniny wyjaśniona | Medyra"
+}

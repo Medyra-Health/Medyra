@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Czas trombinowy sprawdza ostatni etap krzepnięcia krwi, czyli przekształcenie fibrynogenu w fibrynę. Wydłużona wartość występuje często podczas terapii heparyną, ale także przy niedoborze fibrynogenu.",
+  "metaDescription": "Czas trombinowy wydłużony? Znaczenie dla krzepnięcia krwi wyjaśnione po polsku.",
+  "causesElevated": ["Terapia heparyną", "Niedobór fibrynogenu", "Choroba wątroby"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy mój wydłużony czas trombinowy jest związany z przyjmowanym lekiem?",
+    "Czy powinien zostać dodatkowo skontrolowany mój fibrynogen?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Wydłużony" },
+  "categoryLabel": "Krzepnięcie",
+  "pageTitle": "Czas trombinowy wyjaśniony | Medyra"
+}

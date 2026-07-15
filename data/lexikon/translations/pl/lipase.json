@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Lipaza jest enzymem trawiennym trzustki i uznawana jest za bardziej swoisty marker zapalenia trzustki niż amylaza. Znacznie podwyższone wartości, zwykle razem z silnym bólem brzucha, powinny zostać szybko wyjaśnione przez lekarza.",
+  "metaDescription": "Lipaza podwyższona? Znaczenie dla zapalenia trzustki wyjaśnione po polsku.",
+  "causesElevated": ["Ostre zapalenie trzustki", "Kamienie żółciowe", "Ograniczona funkcja nerek"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jak pilnie należy wyjaśnić moją podwyższoną lipazę?",
+    "Czy konieczne jest obrazowanie trzustki?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Wskaźniki trzustkowe",
+  "pageTitle": "Wartość lipazy wyjaśniona | Medyra"
+}

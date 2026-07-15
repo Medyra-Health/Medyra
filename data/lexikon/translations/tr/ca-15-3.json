@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "CA 15-3, temel olarak daha önce teşhis edilmiş meme kanserinin takibinde kullanılır ve erken teşhis için pek uygun değildir, çünkü iyi huylu meme hastalıklarında da yükselebilir. Değerlendirme her zaman doktorunuzun genel klinik yaklaşımı içinde yapılır.",
+  "metaDescription": "CA 15-3 yüksek mi? Tümör belirtecinin anlamı ve olası nedenleri basitçe açıklandı.",
+  "causesElevated": ["İyi huylu meme hastalıkları", "Karaciğer işlev bozukluğu", "Bilinen meme kanseri (takip amaçlı)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu değer takip amacıyla mı kullanılıyor?",
+    "Ek olarak görüntüleme yapılmalı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Tümör Belirteçleri",
+  "pageTitle": "CA 15-3 değeri: Meme kanseri takibi açıklaması | Medyra"
+}

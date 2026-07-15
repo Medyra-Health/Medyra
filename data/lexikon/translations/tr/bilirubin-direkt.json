@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Direkt bilirubin, karaciğer tarafından zaten işlenmiş bilirubin şeklidir. Yüksek bir değer genellikle safra akışında tıkanma veya karaciğer/safra yolları hastalığına işaret eder; hücre yıkımında artışla daha çok yükselen indirekt bilirubinden farklıdır.",
+  "metaDescription": "Direkt bilirubin yüksek mi? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Safra akışında tıkanma (örn. safra taşları)", "Karaciğer hastalığı", "Safra yolları iltihabı"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Değerim safra akışında bir tıkanmaya mı işaret ediyor?",
+    "Safra yollarının ultrason ile incelenmesi gerekli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Karaciğer Değerleri",
+  "pageTitle": "Direkt bilirubin değeri: Safra akışı açıklaması | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Parathormon jest wytwarzany w przytarczycach i wspólnie z witaminą D reguluje gospodarkę wapniową. Podwyższone wartości mogą wskazywać na nadczynność przytarczyc lub niedobór witaminy D, niskie wartości są rzadsze i mogą prowadzić do niskiego poziomu wapnia.",
+  "metaDescription": "Parathormon (PTH) podwyższony lub obniżony? Znaczenie dla gospodarki wapniowej wyjaśnione.",
+  "causesElevated": ["Nadczynność przytarczyc", "Niedobór witaminy D", "Przewlekła choroba nerek"],
+  "causesLow": ["Niedoczynność przytarczyc", "Po operacji tarczycy"],
+  "doctorQuestions": [
+    "Czy mój poziom PTH jest związany z moim poziomem wapnia lub witaminy D?",
+    "Czy należy wykluczyć chorobę przytarczyc?"
+  ],
+  "rangeLabels": { "low": "Niski", "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "Wartość parathormonu (PTH) wyjaśniona | Medyra"
+}

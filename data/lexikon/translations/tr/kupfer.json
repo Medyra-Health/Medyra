@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Bakır, kan üretimi, bağ dokusu ve sinir sisteminde rol oynar. Eksikliği nadirdir ve en çok mide ameliyatlarından sonra görülür; yüksek değerler ise doğum kontrol hapı veya gebelik gibi hormonal etkilerden kaynaklanabilir.",
+  "metaDescription": "Bakır düşük veya yüksek mü? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Hormonal etkiler (örn. doğum kontrol hapı, gebelik)", "İltihaplı hastalıklar"],
+  "causesLow": ["Mide ameliyatı sonrası durum", "Yetersiz beslenme", "Nadir genetik hastalıklar (Wilson hastalığı bakır değerlerini değiştirebilir)"],
+  "doctorQuestions": [
+    "Anormal bakır değerimin nedeni ne olabilir?",
+    "İleri tetkikler gerekli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Eser Elementler",
+  "pageTitle": "Bakır değeri: Anlamı basitçe açıklandı | Medyra"
+}

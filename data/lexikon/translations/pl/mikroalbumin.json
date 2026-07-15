@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Mikroalbumina mierzy najmniejsze ilości białka w moczu, które nie są wykrywane przez zwykły pasek testowy do moczu. Podwyższona wartość jest często wczesnym objawem początkowego uszkodzenia nerek, zwłaszcza przy cukrzycy lub nadciśnieniu, i powinna być dalej wyjaśniona przez lekarza.",
+  "metaDescription": "Mikroalbumina w moczu podwyższona? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Początkowe uszkodzenie nerek związane z cukrzycą", "Nadciśnienie", "Zapalenie nerek"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy jest to wczesny objaw uszkodzenia nerek?",
+    "Czy moje ciśnienie krwi lub poziom cukru powinny być lepiej kontrolowane?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Wskaźniki nerkowe",
+  "pageTitle": "Mikroalbumina w moczu wyjaśniona | Medyra"
+}

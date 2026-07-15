@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "TRAK는 갑상선의 TSH 수용체를 활성화하여 기능항진을 유발할 수 있는 항체입니다. 상승한 수치는 그레이브스병(바제도병)에 전형적이며, 갑상선기능항진증의 다른 원인과 구별하는 데 도움이 됩니다.",
+  "metaDescription": "TRAK가 높나요? 그레이브스병과 갑상선기능항진증에 대한 의미를 쉽게 설명합니다.",
+  "causesElevated": ["그레이브스병(바제도병)", "자가면역성 갑상선기능항진증"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "이 수치가 그레이브스병을 확인해주나요?",
+    "제 갑상선기능항진증은 앞으로 어떻게 치료되나요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "갑상선 검사",
+  "pageTitle": "TRAK 수치: 쉽게 알아보기 | Medyra"
+}

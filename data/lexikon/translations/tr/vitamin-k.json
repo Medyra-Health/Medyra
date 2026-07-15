@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "K vitamini, kan pıhtılaşması ve kemik metabolizması için gereklidir. Eksikliği artan kanama eğilimine yol açabilir ve yağ emilim bozuklukları, antibiyotik tedavisi veya yetersiz beslenme sonucu ortaya çıkabilir.",
+  "metaDescription": "K vitamini düşük mü? Kan pıhtılaşması için anlamı, normal değerler ve nedenleri açıklandı.",
+  "causesElevated": [],
+  "causesLow": ["Yağ emilim bozukluğu", "Uzun süreli antibiyotik tedavisi", "Yetersiz beslenme", "Karaciğer hastalığı"],
+  "doctorQuestions": [
+    "K vitamini eksikliği artan kanama eğilimimi açıklıyor mu?",
+    "K vitamini takviyesi almalı mıyım?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal" },
+  "categoryLabel": "Vitaminler",
+  "pageTitle": "K vitamini değeri: Anlamı basitçe açıklandı | Medyra"
+}

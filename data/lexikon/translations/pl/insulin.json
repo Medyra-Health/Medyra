@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Insulina to hormon, który wprowadza cukier do komórek. Podwyższone wartości insuliny na czczo mogą wskazywać na początkową insulinooporność, często jeszcze zanim wzrośnie poziom cukru we krwi. Niskie wartości występują przy zaawansowanym niedoborze insuliny, jak w cukrzycy typu 1.",
+  "metaDescription": "Insulina podwyższona lub obniżona? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Insulinooporność", "Zespół policystycznych jajników (PCOS)", "Początkowa cukrzyca typu 2", "Nadwaga"],
+  "causesLow": ["Cukrzyca typu 1", "Zaawansowana cukrzyca typu 2"],
+  "doctorQuestions": [
+    "Czy mój poziom insuliny wskazuje na insulinooporność?",
+    "Czy powinien zostać obliczony wskaźnik HOMA?"
+  ],
+  "rangeLabels": { "low": "Niska", "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Metabolizm",
+  "pageTitle": "Wartość insuliny (na czczo) wyjaśniona | Medyra"
+}

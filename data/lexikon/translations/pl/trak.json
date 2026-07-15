@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "TRAK to przeciwciała aktywujące receptor TSH tarczycy, które mogą powodować jej nadczynność. Podwyższona wartość jest typowa dla choroby Gravesa-Basedowa i pomaga odróżnić ją od innych przyczyn nadczynności tarczycy.",
+  "metaDescription": "TRAK podwyższone? Znaczenie dla choroby Gravesa-Basedowa i nadczynności tarczycy wyjaśnione.",
+  "causesElevated": ["Choroba Gravesa-Basedowa", "Autoimmunologiczna nadczynność tarczycy"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy ta wartość potwierdza chorobę Gravesa-Basedowa?",
+    "Jak dalej będzie leczona moja nadczynność tarczycy?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Tarczyca",
+  "pageTitle": "Wartość TRAK wyjaśniona | Medyra"
+}

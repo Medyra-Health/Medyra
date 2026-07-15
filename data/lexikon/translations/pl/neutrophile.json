@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Granulocyty obojętnochłonne (neutrofile) to najczęstszy rodzaj białych krwinek, zwalczający przede wszystkim infekcje bakteryjne. Podwyższone wartości często wskazują na ostrą infekcję lub stan zapalny, niskie wartości mogą zwiększać ryzyko infekcji. Wartość jest zawsze oceniana w kontekście pozostałych parametrów morfologii krwi.",
+  "metaDescription": "Granulocyty obojętnochłonne (neutrofile) podwyższone lub obniżone? Znaczenie i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Infekcja bakteryjna", "Ostre zapalenie", "Silny stres fizyczny", "Terapia kortyzonem"],
+  "causesLow": ["Infekcja wirusowa", "Choroba szpiku kostnego", "Chemioterapia", "Niektóre leki"],
+  "doctorQuestions": [
+    "Czy mój poziom neutrofilów wskazuje na infekcję bakteryjną?",
+    "Czy moje ryzyko infekcji jest obecnie zwiększone?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone" },
+  "categoryLabel": "Morfologia krwi",
+  "pageTitle": "Wartość neutrofilów wyjaśniona | Medyra"
+}

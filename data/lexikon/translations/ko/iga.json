@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "IgA는 주로 호흡기와 장의 점막을 병원체로부터 보호합니다. IgA 결핍은 가장 흔한 선천성 면역 결핍으로 대개 증상 없이 지나가며, 상승한 수치는 만성 점막 염증이나 간질환에서 나타날 수 있습니다.",
+  "metaDescription": "IgA가 높거나 낮나요? 면역계에 대한 의미를 쉽게 설명합니다.",
+  "causesElevated": ["만성 점막 염증", "간질환", "자가면역질환"],
+  "causesLow": ["선천성 IgA 결핍(대개 증상 없음)", "특정 장질환"],
+  "doctorQuestions": [
+    "제 IgA 결핍이 임상적으로 의미가 있나요?",
+    "향후 수혈 시 이를 고려해야 하나요?"
+  ],
+  "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "면역 검사",
+  "pageTitle": "IgA 수치: 쉽게 알아보기 | Medyra"
+}

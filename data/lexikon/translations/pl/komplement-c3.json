@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Czynnik dopełniacza C3 jest częścią systemu, który bezpośrednio zwalcza drobnoustroje chorobotwórcze i wspiera reakcje zapalne. Niskie wartości mogą wskazywać na zwiększone zużycie przy chorobach autoimmunologicznych, takich jak toczeń, podwyższone wartości występują przy ostrych stanach zapalnych.",
+  "metaDescription": "Czynnik dopełniacza C3 podwyższony lub obniżony? Znaczenie dla chorób autoimmunologicznych wyjaśnione.",
+  "causesElevated": ["Ostre zapalenie lub infekcja"],
+  "causesLow": ["Choroby autoimmunologiczne (np. toczeń rumieniowaty układowy)", "Wrodzony niedobór dopełniacza", "Przewlekła choroba wątroby"],
+  "doctorQuestions": [
+    "Czy mój niski poziom C3 wskazuje na chorobę autoimmunologiczną?",
+    "Czy powinny zostać dodatkowo oznaczone C4 i ANA?"
+  ],
+  "rangeLabels": { "low": "Niski", "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Układ odpornościowy",
+  "pageTitle": "Wartość czynnika dopełniacza C3 wyjaśniona | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Granulocyty kwasochłonne (eozynofile) to białe krwinki, które są wytwarzane w zwiększonej ilości głównie przy alergiach i zarażeniu pasożytami. Podwyższona wartość może wskazywać na astmę, katar sienny, alergie skórne lub zarażenie robakami. Niskie wartości są zwykle bez znaczenia.",
+  "metaDescription": "Granulocyty kwasochłonne (eozynofile) podwyższone? Znaczenie, wartości prawidłowe i przyczyny takie jak alergie wyjaśnione po polsku.",
+  "causesElevated": ["Alergie (np. katar sienny, astma)", "Zarażenie pasożytami", "Choroby skóry, takie jak atopowe zapalenie skóry", "Niektóre reakcje polekowe"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy alergia lub zarażenie pasożytami mogłyby tłumaczyć moją wartość?",
+    "Czy powinien zostać wykonany test alergiczny?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Morfologia krwi",
+  "pageTitle": "Wartość eozynofilów wyjaśniona | Medyra"
+}

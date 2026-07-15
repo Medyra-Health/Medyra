@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Witamina B6 uczestniczy w licznych procesach metabolicznych, między innymi w przemianie nerwowej i białkowej. Niedobór może prowadzić do zmęczenia, problemów neurologicznych lub zmian skórnych i występuje między innymi przy jednostronnej diecie lub przyjmowaniu niektórych leków.",
+  "metaDescription": "Witamina B6 zbyt niska? Znaczenie, wartości prawidłowe i przyczyny niedoboru wyjaśnione.",
+  "causesElevated": [],
+  "causesLow": ["Jednostronna dieta", "Alkoholizm", "Niektóre leki (np. niektóre leki na ciśnienie lub gruźlicę)"],
+  "doctorQuestions": [
+    "Czy mój niedobór witaminy B6 mógłby wyjaśniać moje objawy?",
+    "Czy powinienem/powinnam suplementować witaminę B6?"
+  ],
+  "rangeLabels": { "low": "Niska", "normal": "Normalna" },
+  "categoryLabel": "Witaminy",
+  "pageTitle": "Wartość witaminy B6 wyjaśniona | Medyra"
+}

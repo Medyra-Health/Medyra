@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Lipaz, pankreasın bir sindirim enzimidir ve amilaza kıyasla pankreas iltihabı için daha spesifik bir belirteç kabul edilir. Genellikle şiddetli karın ağrısıyla birlikte görülen belirgin şekilde yüksek değerler kısa süre içinde doktor tarafından değerlendirilmelidir.",
+  "metaDescription": "Lipaz yüksek mi? Pankreas iltihabı için anlamı basitçe açıklandı.",
+  "causesElevated": ["Akut pankreas iltihabı (pankreatit)", "Safra taşları", "Böbrek işlevinde bozulma"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek lipazım ne kadar acil değerlendirilmeli?",
+    "Pankreasın görüntülenmesi gerekli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Pankreas Değerleri",
+  "pageTitle": "Lipaz değeri: Pankreas iltihabı açıklaması | Medyra"
+}

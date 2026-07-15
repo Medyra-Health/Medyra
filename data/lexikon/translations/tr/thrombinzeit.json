@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Trombin zamanı, kan pıhtılaşmasının son adımını, yani fibrinojenin fibrine dönüşümünü test eder. Uzamış bir değer sıklıkla heparin tedavisi sırasında görülür, ama fibrinojen eksikliğinde de görülebilir.",
+  "metaDescription": "Trombin zamanı uzamış mı? Kan pıhtılaşması için anlamı basitçe açıklandı.",
+  "causesElevated": ["Heparin tedavisi", "Fibrinojen eksikliği", "Karaciğer hastalığı"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Uzamış trombin zamanım bir ilaç kullanımıyla mı ilişkili?",
+    "Fibrinojen değerim de kontrol edilmeli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Uzamış" },
+  "categoryLabel": "Pıhtılaşma",
+  "pageTitle": "Trombin zamanı değeri: Anlamı basitçe açıklandı | Medyra"
+}

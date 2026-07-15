@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "ACTH, hipofiz bezinde üretilir ve böbrek üstü bezinin kortizol üretimini yönetir. Bu değer, böbrek üstü bezi ile hipofiz bezi hastalıklarını birbirinden ayırt edebilmek için her zaman kortizol ile birlikte değerlendirilir.",
+  "metaDescription": "ACTH yüksek veya düşük mü? Kortizolle birlikte anlamı basitçe açıklandı.",
+  "causesElevated": ["Böbrek üstü bezi yetmezliği (Addison hastalığı)", "ACTH üreten tümör (nadir)"],
+  "causesLow": ["Hipofiz bezi hastalığı", "Böbrek üstü bezi tümörüne bağlı Cushing sendromu"],
+  "doctorQuestions": [
+    "ACTH ile kortizol değerimin oranı ne gösteriyor?",
+    "Hipofiz bezimin ileri tetkiki gerekli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "ACTH değeri: Adrenokortikotropik Hormon açıklaması | Medyra"
+}

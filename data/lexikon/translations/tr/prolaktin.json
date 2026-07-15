@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Prolaktin, en çok doğumdan sonra süt üretimiyle bilinir, ancak kadınlarda ve erkeklerde bundan bağımsız olarak da yükselebilir. Yüksek değerler döngü bozukluklarına, cinsel isteksizliğe veya emzirme dönemi dışında süt gelmesine neden olabilir ve çeşitli olası nedenleri vardır.",
+  "metaDescription": "Prolaktin yüksek mi? Anlamı, normal değerler ve olası nedenleri basitçe açıklandı.",
+  "causesElevated": ["Stres veya uyku eksikliği", "Bazı ilaçlar (örn. bazı antidepresanlar)", "Hipofiz bezinin iyi huylu tümörü (prolaktinoma)", "Tiroid bezinin az çalışması"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek prolaktin değerimin altında hangi neden yatıyor olabilir?",
+    "Hipofiz bezinin görüntülenmesi gerekli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "Prolaktin değeri: Anlamı basitçe açıklandı | Medyra"
+}

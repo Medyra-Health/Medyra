@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "CA 15-3 wykorzystywany jest głównie do monitorowania przebiegu już zdiagnozowanego raka piersi i mniej nadaje się do wczesnego wykrywania, ponieważ może być podwyższony także przy łagodnych chorobach piersi. Ocena zawsze odbywa się w pełnym kontekście lekarskim.",
+  "metaDescription": "CA 15-3 podwyższony? Znaczenie markera nowotworowego i możliwe przyczyny wyjaśnione.",
+  "causesElevated": ["Łagodne choroby piersi", "Zaburzenie czynności wątroby", "Znany rak piersi (do monitorowania przebiegu)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy ta wartość jest u mnie wykorzystywana do monitorowania przebiegu?",
+    "Czy dodatkowo powinno zostać wykonane obrazowanie?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Markery nowotworowe",
+  "pageTitle": "Wartość CA 15-3 wyjaśniona | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Anti-HBs 항체는 예방접종 또는 감염 회복 후 B형 간염에 대한 충분한 면역력이 있음을 나타냅니다. 이 수치는 의료 종사자 등에서 예방접종 효과를 확인하기 위해 자주 검사됩니다.",
+  "metaDescription": "Anti-HBs가 높거나 낮나요? B형 간염 예방접종 효과에 대한 의미를 설명합니다.",
+  "causesElevated": ["B형 간염 예방접종 성공", "B형 간염 감염 후 회복 및 면역 획득"],
+  "causesLow": ["예방접종 효과 없음 또는 불충분", "시간에 따른 예방접종 효과 감소"],
+  "doctorQuestions": [
+    "제 B형 간염 예방접종 효과가 아직 충분한가요?",
+    "추가 접종이 필요한가요?"
+  ],
+  "rangeLabels": { "low": "충분한 보호 없음", "normal": "충분한 예방접종 효과" },
+  "categoryLabel": "감염 검사",
+  "pageTitle": "Anti-HBs 수치: 쉽게 알아보기 | Medyra"
+}

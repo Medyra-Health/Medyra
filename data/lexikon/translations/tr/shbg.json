@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "SHBG, kandaki cinsiyet hormonlarını bağlar ve bunların ne kadarının serbest ve etkin olarak kullanılabilir olduğunu etkiler. Değer, gerçekte etkili olan hormon oranını daha iyi değerlendirebilmek için genellikle testosteronla birlikte ölçülür.",
+  "metaDescription": "SHBG yüksek veya düşük mü? Hormon değerleri için anlamı basitçe açıklandı.",
+  "causesElevated": ["Tiroid bezinin aşırı çalışması", "Gebelik", "Östrojen tedavisi"],
+  "causesLow": ["Aşırı kilo", "İnsülin direnci", "Tiroid bezinin az çalışması"],
+  "doctorQuestions": [
+    "SHBG değerim testosteron değerimin anlamını nasıl etkiliyor?",
+    "Serbest testosteron hesaplanmalı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "SHBG değeri: Anlamı basitçe açıklandı | Medyra"
+}

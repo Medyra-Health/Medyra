@@ -1,0 +1,12 @@
+{
+  "shortAnswer": "Przeciwciała anty-HCV wskazują, że organizm miał w pewnym momencie kontakt z wirusem zapalenia wątroby typu C. Dodatni wynik nie oznacza automatycznie aktywnej infekcji i musi zostać potwierdzony dodatkowym testem na obecność samego wirusa (PCR).",
+  "metaDescription": "Anty-HCV dodatnie? Znaczenie dla zakażenia wirusem zapalenia wątroby typu C wyjaśnione po polsku.",
+  "causesElevated": ["Aktualna infekcja WZW typu C", "Przebyta, wyleczona infekcja WZW typu C"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy konieczny jest dodatkowy test PCR w celu potwierdzenia?",
+    "Czy mam aktywną, czy wyleczoną infekcję?"
+  ],
+  "categoryLabel": "Wskaźniki infekcji",
+  "pageTitle": "Wartość anty-HCV wyjaśniona | Medyra"
+}

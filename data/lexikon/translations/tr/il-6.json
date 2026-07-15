@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "İnterlökin-6, akut iltihap ve enfeksiyonlarda erken yükselen bir bağışıklık sistemi habercisidir; genellikle CRP ölçülebilir şekilde yükselmeden önce de artar. Başta hastanelerde ciddi iltihap reaksiyonlarının erken değerlendirilmesinde kullanılır.",
+  "metaDescription": "İnterlökin-6 (IL-6) yüksek mi? Erken iltihap belirteci olarak anlamı basitçe açıklandı.",
+  "causesElevated": ["Akut enfeksiyon", "Ciddi iltihap reaksiyonu", "Otoimmün hastalıklar", "Ameliyat sonrası"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "CRP'ye ek olarak neden IL-6 da ölçüldü?",
+    "İltihap reaksiyonum ne kadar ciddi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "İltihap Belirteçleri",
+  "pageTitle": "İnterlökin-6 (IL-6) değeri: Erken iltihap belirteci açıklaması | Medyra"
+}

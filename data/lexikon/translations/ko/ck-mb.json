@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "CK-MB는 크레아틴키나아제의 하위 형태로 주로 심근에 존재하여 전체 CK보다 심장 손상을 더 특이적으로 나타냅니다. 대개 심근경색이 의심될 때 트로포닌과 함께 검사됩니다.",
+  "metaDescription": "CK-MB가 높나요? 심근 손상에 대한 의미를 쉽게 설명합니다.",
+  "causesElevated": ["심근경색", "심근염", "심장 수술 후"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "CK-MB와 제 트로포닌 수치가 함께 심장 손상을 확인해 주나요?",
+    "앞으로의 치료 계획은 어떻게 되나요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "심장 검사",
+  "pageTitle": "CK-MB 수치: 쉽게 알아보기 | Medyra"
+}

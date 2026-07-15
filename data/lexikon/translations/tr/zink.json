@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Çinko, birçok enzim reaksiyonunda, yara iyileşmesinde ve bağışıklık sisteminde rol oynar. Eksikliği saç dökülmesi, yara iyileşme bozuklukları veya artan enfeksiyon eğilimi şeklinde kendini gösterebilir ve tek yönlü beslenme veya kronik bağırsak hastalıklarında görülür.",
+  "metaDescription": "Çinko düşük veya yüksek mi? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Besin takviyeleriyle aşırı doz"],
+  "causesLow": ["Tek yönlü beslenme", "Kronik bağırsak hastalıkları", "Artan ihtiyaç (örn. gebelik)"],
+  "doctorQuestions": [
+    "Çinko eksikliği belirtilerimi açıklıyor olabilir mi?",
+    "Çinko takviyesi almalı mıyım?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Eser Elementler",
+  "pageTitle": "Çinko değeri: Anlamı basitçe açıklandı | Medyra"
+}

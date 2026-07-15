@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Östradiol, en önemli kadın cinsiyet hormonudur ve döngü boyunca, gebelikte ve menopozda büyük ölçüde değişir. Düşük değerler menopoza veya yumurtalık işlev bozukluğuna işaret edebilir; referans aralığı döngü evresine ve yaşa büyük ölçüde bağlıdır.",
+  "metaDescription": "Östradiol düşük veya yüksek mi? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Belirli döngü evreleri (örn. yumurtlama)", "Gebelik", "Östrojen üreten tümörler (nadir)"],
+  "causesLow": ["Menopoz", "Yumurtalık işlev bozukluğu", "Ciddi kilo kaybı veya yoğun sporcu antrenmanı"],
+  "doctorQuestions": [
+    "Östradiol değerim mevcut döngü evreme veya yaşam dönemime uygun mu?",
+    "Ek hormon değerleri ölçülmeli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal (döngüye bağlı)" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "Östradiol değeri: Kadın cinsiyet hormonu açıklaması | Medyra"
+}

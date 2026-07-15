@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "FSH, kadınlarda yumurta hücrelerinin olgunlaşmasını, erkeklerde ise sperm üretimini yönetir. Kadınlarda menopozda değer belirgin şekilde yükselir; her iki cinsiyette de yüksek bir değer üreme bezlerinin işlevinde bozulmaya işaret edebilir.",
+  "metaDescription": "FSH yüksek veya düşük mü? Menopoz ve doğurganlık için anlamı açıklandı.",
+  "causesElevated": ["Menopoz", "Yumurtalık veya testis işlevinde bozulma"],
+  "causesLow": ["Hipofiz bezi hastalığı", "Aşırı kilo kaybı veya performans sporu"],
+  "doctorQuestions": [
+    "FSH değerim menopozun başladığına mı işaret ediyor?",
+    "Bu değer çocuk sahibi olma isteğim için ne anlama geliyor?"
+  ],
+  "rangeLabels": { "normal": "Normal (kadınlarda döngüye bağlı)", "elevated": "Yüksek (örn. menopoz)" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "FSH değeri: Folikül uyarıcı hormon açıklaması | Medyra"
+}

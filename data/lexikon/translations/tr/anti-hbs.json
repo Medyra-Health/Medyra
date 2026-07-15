@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Anti-HBs antikorları, aşılama veya geçirilmiş bir enfeksiyon sonucunda hepatit B'ye karşı yeterli bağışıklığın oluştuğunu gösterir. Bu değer, özellikle sağlık çalışanlarında aşı korumasını kontrol etmek için sıkça ölçülür.",
+  "metaDescription": "Anti-HBs yüksek veya düşük mü? Hepatit B aşı koruması için anlamı basitçe açıklandı.",
+  "causesElevated": ["Başarılı hepatit B aşısı", "Bağışıklıkla sonuçlanan geçirilmiş hepatit B enfeksiyonu"],
+  "causesLow": ["Yetersiz veya hiç aşı koruması olmaması", "Zamanla azalan aşı koruması"],
+  "doctorQuestions": [
+    "Hepatit B aşı korumam hâlâ yeterli mi?",
+    "Rapel aşı yaptırmalı mıyım?"
+  ],
+  "rangeLabels": { "low": "Yetersiz koruma", "normal": "Yeterli aşı koruması" },
+  "categoryLabel": "Enfeksiyon Değerleri",
+  "pageTitle": "Anti-HBs değeri: Hepatit B aşı koruması açıklaması | Medyra"
+}

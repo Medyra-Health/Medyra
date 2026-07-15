@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Retikulocyty to młode, jeszcze nie w pełni dojrzałe czerwone krwinki. Ich liczba pokazuje, jak aktywnie szpik kostny produkuje obecnie nowe krwinki. Wysoka wartość może wskazywać na zwiększoną produkcję krwi po utracie krwi, niska na ograniczoną funkcję szpiku kostnego.",
+  "metaDescription": "Retikulocyty podwyższone lub obniżone? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Zwiększona produkcja krwi po utracie krwi", "Niedokrwistość hemolityczna", "Po terapii żelazem lub witaminami"],
+  "causesLow": ["Osłabienie szpiku kostnego", "Nieleczony niedobór żelaza lub witamin", "Chemioterapia"],
+  "doctorQuestions": [
+    "Co mówi mój poziom retikulocytów o przyczynie mojej niedokrwistości?",
+    "Czy mój szpik kostny dobrze reaguje na leczenie?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone" },
+  "categoryLabel": "Morfologia krwi",
+  "pageTitle": "Wartość retikulocytów wyjaśniona | Medyra"
+}

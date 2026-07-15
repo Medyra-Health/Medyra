@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "CA 125 oznacza się przede wszystkim w kontekście jajników, ale wzrasta on także przy wielu łagodnych schorzeniach, takich jak endometrioza, miesiączka czy torbiele jajników. Sama podwyższona wartość nie jest diagnozą raka i jest zawsze oceniana razem z obrazowaniem i objawami.",
+  "metaDescription": "CA 125 podwyższony? Możliwe przyczyny i kolejne kroki wyjaśnione po polsku.",
+  "causesElevated": ["Endometrioza", "Torbiele jajników", "Miesiączka", "Stany zapalne narządów miednicy", "Rak jajnika (jedna z kilku możliwych przyczyn)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jakie łagodne przyczyny wchodzą w grę w moim przypadku?",
+    "Czy sensowne jest ginekologiczne badanie ultrasonograficzne?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Markery nowotworowe",
+  "pageTitle": "Wartość CA 125 wyjaśniona | Medyra"
+}

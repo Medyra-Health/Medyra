@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "아포지단백A1은 '좋은' HDL 콜레스테롤의 주요 단백질 성분으로, 콜레스테롤을 간으로 되돌려 보내는 역할을 돕습니다. 낮은 수치는 심혈관 위험 증가와 관련이 있으며, 높은 수치가 일반적으로 유리한 것으로 여겨집니다.",
+  "metaDescription": "아포지단백A1(ApoA1)이 낮나요? 심혈관 위험과의 관계를 설명합니다.",
+  "causesElevated": [],
+  "causesLow": ["심혈관 위험 증가", "낮은 HDL 콜레스테롤", "흡연"],
+  "doctorQuestions": [
+    "제 ApoA1 수치가 심혈관 위험에 어떤 의미가 있나요?",
+    "생활습관 개선으로 수치를 높일 수 있나요?"
+  ],
+  "rangeLabels": { "low": "낮음", "normal": "정상(높을수록 유리함)" },
+  "categoryLabel": "대사 검사",
+  "pageTitle": "ApoA1 수치: 아포지단백A1 쉽게 알아보기 | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Romatoid faktör, sıklıkla romatoid artritte görülen ama başka hastalıklarda hatta sağlıklı kişilerde de pozitif çıkabilen bir antikordur. Bu nedenle pozitif bir değer tek başına tanı değildir ve her zaman şikayetler ve diğer bulgularla birlikte değerlendirilmelidir.",
+  "metaDescription": "Romatoid faktör yüksek mi? Romatoid artrit için anlamı basitçe açıklandı.",
+  "causesElevated": ["Romatoid artrit", "Diğer otoimmün hastalıklar", "Kronik enfeksiyonlar", "Sağlıklı kişilerde de hafifçe yüksek olabilir"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu değer romatoid artriti doğruluyor mu?",
+    "Ek olarak Anti-CCP de ölçülmeli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "İltihap Belirteçleri",
+  "pageTitle": "Romatoid faktör değeri: Romatoid artrit açıklaması | Medyra"
+}

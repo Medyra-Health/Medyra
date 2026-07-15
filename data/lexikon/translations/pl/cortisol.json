@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Kortyzol jest najważniejszym hormonem stresu nadnerczy i podlega rytmowi dobowemu z najwyższymi wartościami rano. Trwale podwyższone wartości mogą wskazywać na przewlekły stres lub nadczynność nadnerczy, niskie wartości na ich niedoczynność.",
+  "metaDescription": "Kortyzol zbyt wysoki lub zbyt niski? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione.",
+  "causesElevated": ["Przewlekły stres", "Zespół Cushinga", "Terapia kortyzonem"],
+  "causesLow": ["Niedoczynność kory nadnerczy (choroba Addisona)", "Choroba przysadki mózgowej", "Nagłe odstawienie terapii kortyzonem"],
+  "doctorQuestions": [
+    "Czy mój poziom kortyzolu pasuje do pory dnia pobrania krwi?",
+    "Czy powinno zostać oznaczone również ACTH?"
+  ],
+  "rangeLabels": { "low": "Niski (rano)", "normal": "Normalny (rano)", "elevated": "Podwyższony" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "Wartość kortyzolu wyjaśniona | Medyra"
+}

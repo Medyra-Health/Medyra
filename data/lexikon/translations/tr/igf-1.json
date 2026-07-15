@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "IGF-1, büyüme hormonunun aktivitesini yansıtır ve çocuklarda büyüme bozukluklarının, yetişkinlerde ise hipofiz bezinin aşırı veya az çalışmasının değerlendirilmesinde kullanılır. Referans aralığı büyük ölçüde yaşa bağlıdır.",
+  "metaDescription": "IGF-1 yüksek veya düşük mü? Büyüme hormonu işlevi için anlamı açıklandı.",
+  "causesElevated": ["Büyüme hormonu fazlalığı (akromegali)"],
+  "causesLow": ["Büyüme hormonu eksikliği", "Yetersiz beslenme", "Kronik hastalıklar"],
+  "doctorQuestions": [
+    "IGF-1 değerim büyüme hormonu işlevim için ne anlama geliyor?",
+    "Ek hormon tetkikleri anlamlı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal (büyük ölçüde yaşa bağlı)" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "IGF-1 değeri: Büyüme hormonu işlevi açıklaması | Medyra"
+}

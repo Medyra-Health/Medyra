@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Czynnik dopełniacza C4, podobnie jak C3, należy do systemu dopełniacza odpowiedzi odpornościowej. Niskie wartości są często oznaczane razem z C3 przy podejrzeniu chorób autoimmunologicznych, takich jak toczeń, ponieważ oba czynniki są zwykle obniżone przy aktywnej chorobie.",
+  "metaDescription": "Czynnik dopełniacza C4 podwyższony lub obniżony? Znaczenie dla chorób autoimmunologicznych wyjaśnione.",
+  "causesElevated": ["Ostre zapalenie lub infekcja"],
+  "causesLow": ["Choroby autoimmunologiczne (np. toczeń rumieniowaty układowy)", "Wrodzony niedobór dopełniacza"],
+  "doctorQuestions": [
+    "Co oznacza mój poziom C4 razem z C3 i moimi objawami?",
+    "Czy powinien zostać włączony reumatolog?"
+  ],
+  "rangeLabels": { "low": "Niski", "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Układ odpornościowy",
+  "pageTitle": "Wartość czynnika dopełniacza C4 wyjaśniona | Medyra"
+}

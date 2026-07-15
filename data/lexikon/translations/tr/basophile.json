@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Bazofil granülositler, en nadir beyaz kan hücresi türüdür ve alerjik reaksiyonlarda ve kronik iltihaplarda rol oynar. Hafif yüksek değerler genellikle önemsizdir, belirgin şekilde yüksek değerler ise doktor tarafından değerlendirilmelidir.",
+  "metaDescription": "Bazofil granülositler yüksek mi? Anlamı ve olası nedenleri basitçe açıklandı.",
+  "causesElevated": ["Alerjik reaksiyonlar", "Kronik iltihap", "Bazı kan hastalıkları"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek bazofil değerim klinik olarak önemli mi?",
+    "İleri tetkik gerekli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kan Sayımı",
+  "pageTitle": "Bazofil değeri: Bazofil Granülositler açıklaması | Medyra"
+}

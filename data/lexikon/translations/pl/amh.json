@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "AMH jest wytwarzany przez pęcherzyki jajnikowe i uznawany jest za marker pozostałej rezerwy jajnikowej. Wartość jest często oznaczana w ramach diagnostyki niepłodności lub przed zapłodnieniem in vitro i naturalnie zmniejsza się z wiekiem.",
+  "metaDescription": "AMH (hormon antymüllerowski) podwyższony lub obniżony? Znaczenie dla rezerwy jajnikowej wyjaśnione.",
+  "causesElevated": ["Zespół policystycznych jajników (PCOS)"],
+  "causesLow": ["Związany z wiekiem spadek rezerwy jajnikowej", "Przedwczesna menopauza", "Stan po chemioterapii"],
+  "doctorQuestions": [
+    "Co oznacza mój poziom AMH dla mojej rezerwy jajnikowej?",
+    "Czy ta wartość wpływa na planowanie zapłodnienia in vitro?"
+  ],
+  "rangeLabels": { "low": "Niski", "normal": "Normalny (zależny od wieku)", "elevated": "Podwyższony (np. przy PCOS)" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "Wartość AMH: Hormon antymüllerowski wyjaśniony | Medyra"
+}

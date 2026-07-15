@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Fosfat, kemikler, hücre enerjisi ve asit-baz dengesi için önemlidir ve kalsiyum ile D vitaminiyle sıkı bir şekilde düzenlenir. Yüksek değerler sıklıkla böbrek işlevinin azalmasında görülür; düşük değerler ise D vitamini eksikliği veya yetersiz beslenmede görülür.",
+  "metaDescription": "Fosfat yüksek veya düşük mü? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Azalmış böbrek işlevi", "D vitamini fazlalığı", "Paratiroid bezinin az çalışması"],
+  "causesLow": ["D vitamini eksikliği", "Paratiroid bezinin aşırı çalışması", "Yetersiz beslenme", "Alkolizm"],
+  "doctorQuestions": [
+    "Fosfat değerim böbrek işlevimle ilişkili mi?",
+    "D vitamini ve kalsiyum düzeyim de kontrol edilmeli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Elektrolitler",
+  "pageTitle": "Fosfat değeri: Anlamı basitçe açıklandı | Medyra"
+}

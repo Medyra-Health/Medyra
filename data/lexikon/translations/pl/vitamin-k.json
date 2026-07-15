@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Witamina K jest potrzebna do krzepnięcia krwi i metabolizmu kości. Niedobór może prowadzić do zwiększonej skłonności do krwawień i występuje między innymi przy zaburzeniach wchłaniania tłuszczów, terapii antybiotykowej lub niedożywieniu.",
+  "metaDescription": "Witamina K zbyt niska? Znaczenie dla krzepnięcia krwi, wartości prawidłowe i przyczyny wyjaśnione.",
+  "causesElevated": [],
+  "causesLow": ["Zaburzenie wchłaniania tłuszczów", "Długotrwała antybiotykoterapia", "Niedożywienie", "Choroba wątroby"],
+  "doctorQuestions": [
+    "Czy niedobór witaminy K wyjaśnia moją zwiększoną skłonność do krwawień?",
+    "Czy powinienem/powinnam suplementować witaminę K?"
+  ],
+  "rangeLabels": { "low": "Niska", "normal": "Normalna" },
+  "categoryLabel": "Witaminy",
+  "pageTitle": "Wartość witaminy K wyjaśniona | Medyra"
+}

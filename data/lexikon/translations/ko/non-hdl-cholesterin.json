@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "비-HDL 콜레스테롤은 \"좋은\" HDL을 제외한 모든 콜레스테롤, 즉 주로 LDL과 그 외 혈관에 해로운 입자들을 포함합니다. 특히 중성지방이 상승한 경우 심혈관 질환 위험을 나타내는 좋은 전체 지표로 여겨집니다.",
+  "metaDescription": "비-HDL 콜레스테롤이 높나요? 심혈관 질환 위험에 대한 의미를 쉽게 설명합니다.",
+  "causesElevated": ["LDL 콜레스테롤 상승", "중성지방 상승", "좋지 않은 식습관", "과체중"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "이 수치를 근거로 제 심혈관 질환 위험은 어느 정도인가요?",
+    "콜레스테롤 치료를 조정해야 하나요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "대사 검사",
+  "pageTitle": "비-HDL 콜레스테롤 수치: 쉽게 알아보기 | Medyra"
+}

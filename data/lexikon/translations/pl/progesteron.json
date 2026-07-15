@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Progesteron jest wytwarzany po owulacji i przygotowuje organizm na ewentualną ciążę. Niskie wartości w drugiej połowie cyklu mogą być związane z zaburzeniami cyklu lub brakiem owulacji i są często oznaczane w ramach diagnostyki niepłodności.",
+  "metaDescription": "Progesteron zbyt niski? Znaczenie dla cyklu i płodności wyjaśnione po polsku.",
+  "causesElevated": ["Ciąża", "Określona faza cyklu po owulacji"],
+  "causesLow": ["Brak owulacji", "Zaburzenia cyklu", "Wczesne powikłanie ciąży"],
+  "doctorQuestions": [
+    "Co oznacza mój poziom progesteronu dla mojego cyklu lub starań o dziecko?",
+    "Czy wartość powinna zostać ponownie zmierzona w innym momencie?"
+  ],
+  "rangeLabels": { "normal": "Normalny (zależny od cyklu)" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "Wartość progesteronu wyjaśniona | Medyra"
+}

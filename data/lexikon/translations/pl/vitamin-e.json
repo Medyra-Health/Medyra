@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Witamina E jest rozpuszczalnym w tłuszczach antyoksydantem, który chroni komórki przed stresem oksydacyjnym. Niedobór jest w Niemczech rzadki i występuje przede wszystkim przy zaburzeniach wchłaniania tłuszczów. Może objawiać się osłabieniem mięśni lub problemami neurologicznymi.",
+  "metaDescription": "Witamina E zbyt niska? Znaczenie, wartości prawidłowe i przyczyny niedoboru wyjaśnione.",
+  "causesElevated": [],
+  "causesLow": ["Zaburzenie wchłaniania tłuszczów", "Niedożywienie", "Rzadkie choroby genetyczne"],
+  "doctorQuestions": [
+    "Czy u mnie występuje zaburzenie wchłaniania tłuszczów jako przyczyna?",
+    "Czy powinienem/powinnam suplementować witaminę E?"
+  ],
+  "rangeLabels": { "low": "Niska", "normal": "Normalna" },
+  "categoryLabel": "Witaminy",
+  "pageTitle": "Wartość witaminy E wyjaśniona | Medyra"
+}

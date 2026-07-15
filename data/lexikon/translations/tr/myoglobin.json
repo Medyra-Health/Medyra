@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Miyoglobin, kalp ve iskelet kasından gelen ve kas veya kalp hasarında hızlı ancak spesifik olmayan şekilde yükselen bir proteindir. Düşük özgüllüğü nedeniyle günümüzde daha az kullanılmakta ve genellikle troponin ile değiştirilmekte veya desteklenmektedir.",
+  "metaDescription": "Miyoglobin yüksek mi? Kas ve kalp hasarı için anlamı basitçe açıklandı.",
+  "causesElevated": ["Kalp krizi (erken evre)", "Kas yaralanması", "Yoğun fiziksel efor", "Böbrek işlevinde bozulma"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Daha ayrıntılı değerlendirme için ayrıca troponin de ölçülüyor mu?",
+    "İleri değerlendirme ne kadar acil?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kalp Değerleri",
+  "pageTitle": "Miyoglobin değeri: Kas ve kalp hasarı açıklaması | Medyra"
+}

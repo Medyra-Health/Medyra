@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Kalsitonin, tiroidin özel hücreleri tarafından üretilir ve kalsiyum metabolizmasında rol oynar. Belirgin şekilde yüksek değerler nadirdir ve bu hücrelerin çoğalmasına veya nadir durumlarda medüller tiroid kanserine işaret edebilir; bu nedenle doktor tarafından değerlendirilmelidir.",
+  "metaDescription": "Kalsitonin yüksek mi? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["C hücrelerinin çoğalması (C hücre hiperplazisi)", "Medüller tiroid kanseri (nadir)", "Bazı ilaçlar"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek kalsitoninde hangi ileri tetkikler anlamlı olur?",
+    "Değerlendirme ne kadar acildir?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Tiroid",
+  "pageTitle": "Kalsitonin değeri: Tiroid C hücreleri açıklaması | Medyra"
+}

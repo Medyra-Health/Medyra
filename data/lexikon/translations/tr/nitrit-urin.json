@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "İdrarda nitrit, belirli bakterilerin idrardaki nitratı dönüştürmesiyle oluşur ve bir idrar yolu enfeksiyonunun belirgin bir göstergesidir. Pozitif bir sonuç genellikle idrarda lökosit varlığı ve şikayetlerle birlikte değerlendirilir.",
+  "metaDescription": "İdrarda nitrit pozitif mi? İdrar yolu enfeksiyonları için anlamı basitçe açıklandı.",
+  "causesElevated": ["İdrar yolu enfeksiyonu", "İdrar yollarının bakteriyel kolonizasyonu"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu bulgu bir idrar yolu enfeksiyonunu doğruluyor mu?",
+    "Antibiyotik tedavisi gerekli mi?"
+  ],
+  "rangeLabels": {},
+  "categoryLabel": "İdrar Değerleri",
+  "pageTitle": "İdrarda nitrit: İdrar yolu enfeksiyonu açıklaması | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "D-dimerler, kan pıhtılarının parçalanması sırasında oluşur ve olası bir tromboz veya akciğer embolisi değerlendirmesinde önemli bir unsurdur. Normal bir değer akut trombozu daha az olası kılar; ancak yüksek bir değer tek başına tromboz kanıtı değildir, çünkü birçok durum bu değeri yükseltebilir.",
+  "metaDescription": "D-dimer yüksek mi? Tromboz ve akciğer embolisi için anlamı basitçe açıklandı.",
+  "causesElevated": ["Tromboz", "Akciğer embolisi", "Ameliyat sonrası", "Gebelik", "Akut iltihap veya enfeksiyon"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bende tromboz veya akciğer embolisi dışlanmalı mı?",
+    "Görüntüleme gibi ek tetkikler gerekli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Pıhtılaşma",
+  "pageTitle": "D-dimer değeri: Tromboz belirteci açıklaması | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Monocyty to białe krwinki, które pochłaniają i usuwają drobnoustroje chorobotwórcze oraz regulują procesy zapalne. Podwyższone wartości występują często przy przewlekłych stanach zapalnych lub w fazie zdrowienia po infekcji. Niskie wartości zwykle nie mają znaczenia chorobowego.",
+  "metaDescription": "Monocyty podwyższone? Znaczenie, wartości prawidłowe i możliwe przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Przewlekłe zapalenie", "Faza zdrowienia po infekcji", "Niektóre choroby krwi", "Choroby autoimmunologiczne"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Co mogłoby tłumaczyć mój podwyższony poziom monocytów?",
+    "Czy potrzebna jest dalsza diagnostyka?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Morfologia krwi",
+  "pageTitle": "Wartość monocytów wyjaśniona | Medyra"
+}

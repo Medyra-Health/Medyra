@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Mleczan powstaje podczas produkcji energii, zwłaszcza gdy mięśnie lub tkanki nie są wystarczająco zaopatrzone w tlen. Lekko podwyższone wartości po wysiłku fizycznym są normalne, znacznie podwyższone wartości w spoczynku mogą wskazywać na niedobór tlenu w organizmie i powinny zostać szybko wyjaśnione.",
+  "metaDescription": "Mleczan (kwas mlekowy) podwyższony? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Wysiłek fizyczny", "Niedobór tlenu w tkankach", "Ciężka infekcja (posocznica)", "Niektóre leki"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jak pilnie należy wyjaśnić mój podwyższony poziom mleczanu?",
+    "Jaka przyczyna u mnie występuje?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Metabolizm",
+  "pageTitle": "Wartość mleczanu wyjaśniona | Medyra"
+}

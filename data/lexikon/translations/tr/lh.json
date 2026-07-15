@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "LH, kadınlarda yumurtlamayı tetikler ve erkeklerde testosteron üretimini teşvik eder. Değer genellikle FSH ile birlikte, örneğin adet düzensizliği, çocuk sahibi olma isteği veya üreme bezi işlev bozukluğu şüphesinde ölçülür.",
+  "metaDescription": "LH yüksek veya düşük mü? Döngü ve doğurganlık için anlamı basitçe açıklandı.",
+  "causesElevated": ["Yumurtlama (kısa süreli yükseliş)", "Menopoz", "Polikistik over sendromu"],
+  "causesLow": ["Hipofiz bezi hastalığı", "Aşırı kilo kaybı veya performans sporu"],
+  "doctorQuestions": [
+    "LH ile FSH oranım bende ne gösteriyor?",
+    "Döngüm veya hormon işlevim normal mi?"
+  ],
+  "rangeLabels": { "normal": "Normal (kadınlarda döngüye bağlı)" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "LH değeri: Lüteinleştirici hormon açıklaması | Medyra"
+}

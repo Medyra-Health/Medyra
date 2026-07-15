@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Monositler, hastalık etkenlerini yutup yok eden ve iltihap süreçlerini düzenleyen beyaz kan hücreleridir. Yüksek değerler sıkça kronik iltihaplarda veya bir enfeksiyonun iyileşme döneminde görülür. Düşük değerler genellikle hastalık değeri taşımaz.",
+  "metaDescription": "Monositler yüksek mi? Normal değerler ve olası nedenleri basitçe açıklandı.",
+  "causesElevated": ["Kronik iltihap", "Enfeksiyon sonrası iyileşme dönemi", "Bazı kan hastalıkları", "Otoimmün hastalıklar"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek monosit değerimin nedeni ne olabilir?",
+    "İleri tetkik gerekli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kan Sayımı",
+  "pageTitle": "Monosit değeri: Anlamı basitçe açıklandı | Medyra"
+}

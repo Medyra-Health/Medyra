@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Testosteron, en önemli erkek cinsiyet hormonudur ancak kadınlarda da daha az miktarda bulunur. Erkeklerde düşük değerler yorgunluk, azalmış cinsel istek veya kas kaybı şeklinde kendini gösterebilir; kadınlarda yüksek değerler ise başta polikistik over sendromu olmak üzere çeşitli nedenlerle görülebilir.",
+  "metaDescription": "Testosteron düşük veya yüksek mü? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Polikistik over sendromu (kadınlarda)", "Bazı böbrek üstü bezi hastalıkları", "Anabolik steroid kullanımı"],
+  "causesLow": ["Yaşa bağlı testosteron eksikliği", "Testis işlev bozukluğu", "Hipofiz bezi hastalıkları", "Kronik stres"],
+  "doctorQuestions": [
+    "Testosteron değerim yorgunluk gibi belirtilerimi açıklıyor mu?",
+    "Hormon replasman tedavisi düşünülmeli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük (erkek)", "normal": "Normal (erkek)", "elevated": "Yüksek" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "Testosteron değeri: Anlamı basitçe açıklandı | Medyra"
+}

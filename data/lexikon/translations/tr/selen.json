@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Selenyum, antioksidan işleve sahip bir eser elementtir ve tiroid bezi ile bağışıklık sistemi için önemlidir. Eksikliği genellikle tek yönlü beslenme veya yapay beslenme sonucu ortaya çıkar; olağan beslenmede aşırı doz nadirdir.",
+  "metaDescription": "Selenyum düşük veya yüksek mi? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Besin takviyeleriyle aşırı doz"],
+  "causesLow": ["Tek yönlü beslenme", "Yapay beslenme", "Kronik bağırsak hastalıkları"],
+  "doctorQuestions": [
+    "Selenyum eksikliği tiroid değerlerimi etkiliyor olabilir mi?",
+    "Selenyum takviyesi almalı mıyım?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Eser Elementler",
+  "pageTitle": "Selenyum değeri: Anlamı basitçe açıklandı | Medyra"
+}

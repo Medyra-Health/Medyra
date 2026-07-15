@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "SHBG wiąże hormony płciowe we krwi i wpływa na to, ile z nich jest wolne i biologicznie aktywne. Wartość jest często oznaczana razem z testosteronem, aby lepiej oszacować faktycznie aktywną frakcję hormonu.",
+  "metaDescription": "SHBG podwyższone lub obniżone? Znaczenie dla wartości hormonalnych wyjaśnione po polsku.",
+  "causesElevated": ["Nadczynność tarczycy", "Ciąża", "Terapia estrogenowa"],
+  "causesLow": ["Nadwaga", "Insulinooporność", "Niedoczynność tarczycy"],
+  "doctorQuestions": [
+    "Jak mój poziom SHBG wpływa na interpretację mojego poziomu testosteronu?",
+    "Czy powinien zostać obliczony wolny testosteron?"
+  ],
+  "rangeLabels": { "normal": "Normalny" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "Wartość SHBG wyjaśniona | Medyra"
+}

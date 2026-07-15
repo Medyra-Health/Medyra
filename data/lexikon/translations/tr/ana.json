@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Antinükleer antikorlar, hücre çekirdeğinin bileşenlerine karşı oluşur ve lupus gibi otoimmün hastalıklardan şüphelenildiğinde önemli bir tarama testidir. Ancak pozitif bir sonuç tek başına tanı koydurmaz; çünkü ANA birçok sağlıklı kişide ve başka hastalıklarda da saptanabilir.",
+  "metaDescription": "ANA (antinükleer antikorlar) pozitif mi? Otoimmün hastalıklar için anlamı basitçe açıklandı.",
+  "causesElevated": ["Sistemik lupus eritematozus", "Diğer otoimmün hastalıklar (örn. Sjögren sendromu)", "Sağlıklı kişilerde de düşük titrede görülebilir"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "ANA titrem ne kadar yüksek ve hangi desen bulundu?",
+    "Ek spesifik antikor testleri gerekli mi?"
+  ],
+  "rangeLabels": {},
+  "categoryLabel": "Bağışıklık Sistemi",
+  "pageTitle": "ANA testi: Antinükleer Antikorlar açıklaması | Medyra"
+}

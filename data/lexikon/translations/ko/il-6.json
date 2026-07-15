@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "인터류킨-6은 면역계의 신호 물질로, 급성 염증과 감염 시 CRP가 측정 가능하게 상승하기 전부터 일찍 상승합니다. 주로 병원에서 중증 염증 반응을 조기에 평가하는 데 사용됩니다.",
+  "metaDescription": "인터류킨-6(IL-6)이 높나요? 조기 염증 지표로서의 의미를 쉽게 설명합니다.",
+  "causesElevated": ["급성 감염", "심각한 염증 반응", "자가면역질환", "수술 후"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "CRP 외에 IL-6도 검사한 이유는 무엇인가요?",
+    "제 염증 반응이 얼마나 심각한가요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "염증 지표",
+  "pageTitle": "IL-6 수치: 인터류킨-6 쉽게 알아보기 | Medyra"
+}

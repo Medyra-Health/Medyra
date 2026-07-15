@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Prolaktyna jest znana przede wszystkim z produkcji mleka po porodzie, ale może być podwyższona niezależnie od tego zarówno u mężczyzn, jak i u kobiet. Podwyższone wartości mogą powodować zaburzenia cyklu, spadek libido lub wyciek mleka poza okresem karmienia i mają różne możliwe przyczyny.",
+  "metaDescription": "Prolaktyna podwyższona? Znaczenie, wartości prawidłowe i możliwe przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Stres lub brak snu", "Niektóre leki (np. niektóre leki przeciwdepresyjne)", "Łagodny guz przysadki mózgowej (prolaktinoma)", "Niedoczynność tarczycy"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jaka przyczyna mogłaby leżeć u podstaw mojego podwyższonego poziomu prolaktyny?",
+    "Czy sensowne jest obrazowanie przysadki mózgowej?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "Wartość prolaktyny wyjaśniona | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "İnsülin, kan şekerini hücrelere taşıyan hormondur. Yüksek açlık insülini değerleri, çoğu zaman kan şekeri henüz yükselmeden önce, başlayan bir insülin direncine işaret edebilir. Düşük değerler ise Tip 1 diyabette olduğu gibi ileri düzeyde insülin eksikliğinde görülür.",
+  "metaDescription": "İnsülin yüksek veya düşük mü? Normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["İnsülin direnci", "Polikistik over sendromu (PCOS)", "Başlangıç aşamasında Tip 2 diyabet", "Aşırı kilo"],
+  "causesLow": ["Tip 1 diyabet", "İleri düzeyde Tip 2 diyabet"],
+  "doctorQuestions": [
+    "İnsülin değerim bir insülin direncine mi işaret ediyor?",
+    "HOMA indeksi hesaplanmalı mı?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "İnsülin değeri: Açlık insülini açıklaması | Medyra"
+}

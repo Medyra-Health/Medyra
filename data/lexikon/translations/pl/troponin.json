@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Troponina jest wysoce swoistym markerem uszkodzenia mięśnia sercowego i najważniejszym wskaźnikiem laboratoryjnym przy podejrzeniu zawału serca. Nawet lekko podwyższone wartości są traktowane poważnie i w szpitalu zwykle kontrolowane drugim pomiarem w odstępie czasu.",
+  "metaDescription": "Troponina podwyższona? Znaczenie dla zawału serca i uszkodzenia mięśnia sercowego wyjaśnione.",
+  "causesElevated": ["Zawał serca", "Zapalenie mięśnia sercowego", "Intensywny wysiłek fizyczny", "Ograniczona funkcja nerek"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jak pilnie należy wyjaśnić moją podwyższoną troponinę?",
+    "Czy planowany jest drugi pomiar w odstępie czasu?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Wskaźniki serca",
+  "pageTitle": "Wartość troponiny wyjaśniona | Medyra"
+}

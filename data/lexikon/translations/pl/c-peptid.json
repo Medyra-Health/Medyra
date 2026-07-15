@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Peptyd C powstaje podczas własnej produkcji insuliny przez organizm i pokazuje, ile insuliny trzustka jeszcze samodzielnie wytwarza. Niskie wartości wskazują na niedobór insuliny, jak w cukrzycy typu 1, podwyższone wartości mogą wskazywać na insulinooporność.",
+  "metaDescription": "Peptyd C podwyższony lub obniżony? Znaczenie dla własnej produkcji insuliny wyjaśnione.",
+  "causesElevated": ["Insulinooporność", "Początkowa cukrzyca typu 2", "Insulinoma (rzadko)"],
+  "causesLow": ["Cukrzyca typu 1", "Zaawansowany niedobór insuliny"],
+  "doctorQuestions": [
+    "Czy moja trzustka nadal produkuje wystarczającą ilość insuliny?",
+    "Jaki typ cukrzycy może u mnie występować?"
+  ],
+  "rangeLabels": { "low": "Niski", "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Metabolizm",
+  "pageTitle": "Wartość peptydu C wyjaśniona | Medyra"
+}

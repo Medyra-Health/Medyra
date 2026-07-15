@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Wartość białka całkowitego mierzy wszystkie białka w surowicy krwi, przede wszystkim albuminę i immunoglobuliny. Podwyższone wartości mogą powstawać przy odwodnieniu lub przewlekłych stanach zapalnych, niskie wartości przy niedożywieniu, chorobach wątroby lub nerek.",
+  "metaDescription": "Białko całkowite podwyższone lub obniżone? Wartości prawidłowe i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Odwodnienie", "Przewlekłe zapalenie", "Niektóre choroby krwi"],
+  "causesLow": ["Niedożywienie", "Choroba wątroby", "Choroba nerek z utratą białka"],
+  "doctorQuestions": [
+    "Jaka jest przyczyna mojej nieprawidłowej wartości białka całkowitego?",
+    "Czy sensowna jest elektroforeza białek?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone" },
+  "categoryLabel": "Wskaźniki wątrobowe",
+  "pageTitle": "Wartość białka całkowitego wyjaśniona | Medyra"
+}

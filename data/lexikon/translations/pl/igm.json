@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "IgM to pierwsza klasa przeciwciał wytwarzana przy nowej infekcji, dlatego zwykle wskazuje na ostrą lub niedawno przebytą infekcję. Wartość jest często oceniana razem z IgG, aby odróżnić infekcje ostre od przebytych wcześniej.",
+  "metaDescription": "IgM podwyższone lub obniżone? Znaczenie dla ostrych infekcji wyjaśnione.",
+  "causesElevated": ["Ostra infekcja", "Niektóre choroby autoimmunologiczne", "Niektóre choroby krwi (np. choroba Waldenströma)"],
+  "causesLow": ["Wrodzony lub nabyty niedobór odporności"],
+  "doctorQuestions": [
+    "Czy mój poziom IgM wskazuje na ostrą infekcję?",
+    "Czy powinno zostać dodatkowo oznaczone IgG?"
+  ],
+  "rangeLabels": { "normal": "Normalne", "elevated": "Podwyższone" },
+  "categoryLabel": "Układ odpornościowy",
+  "pageTitle": "Wartość IgM wyjaśniona | Medyra"
+}

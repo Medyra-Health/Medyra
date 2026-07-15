@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "LDH, karaciğer, kalp ve kaslar dahil birçok vücut hücresinde bulunan bir enzimdir. Yüksek değerler spesifik değildir ve karaciğer hasarı, kas yaralanması veya kalp krizi gibi çeşitli organlarda hücre hasarına işaret edebilir.",
+  "metaDescription": "LDH yüksek mi? Laktat dehidrogenazın anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Karaciğer hasarı", "Kalp krizi", "Hemoliz (kırmızı kan hücrelerinin yıkımı)", "Kas yaralanması", "Bazı tümör hastalıkları"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek LDH değerimi hangi organ açıklayabilir?",
+    "İleri tetkikler gerekli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Karaciğer Değerleri",
+  "pageTitle": "LDH değeri: Laktat dehidrogenaz açıklaması | Medyra"
+}

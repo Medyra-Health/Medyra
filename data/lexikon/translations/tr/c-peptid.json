@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "C-peptid, vücudun kendi insülin üretimi sırasında oluşur ve pankreasın hâlâ ne kadar insülin ürettiğini gösterir. Düşük değerler Tip 1 diyabette olduğu gibi insülin eksikliğine işaret ederken, yüksek değerler insülin direncine işaret edebilir.",
+  "metaDescription": "C-peptid yüksek veya düşük mü? Vücudun insülin üretimi için anlamı açıklandı.",
+  "causesElevated": ["İnsülin direnci", "Başlangıç aşamasında Tip 2 diyabet", "İnsülinoma (nadir)"],
+  "causesLow": ["Tip 1 diyabet", "İleri düzeyde insülin eksikliği"],
+  "doctorQuestions": [
+    "Pankreasım hâlâ yeterli insülin üretiyor mu?",
+    "Bende hangi diyabet türü olabilir?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "C-peptid değeri: İnsülin üretimi açıklaması | Medyra"
+}

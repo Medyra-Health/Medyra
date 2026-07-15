@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Witamina A jest ważna dla wzroku, skóry i układu odpornościowego. Niedobór powstaje zwykle przy zaburzeniach wchłaniania tłuszczów lub niedożywieniu i może objawiać się między innymi ślepotą zmierzchową lub suchą skórą. Zbyt wysokie wartości spowodowane suplementacją mogą być również szkodliwe.",
+  "metaDescription": "Witamina A podwyższona lub obniżona? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione.",
+  "causesElevated": ["Przedawkowanie przez suplementy diety"],
+  "causesLow": ["Niedożywienie", "Zaburzenie wchłaniania tłuszczów (np. przy celiakii)", "Choroba wątroby"],
+  "doctorQuestions": [
+    "Czy mój poziom witaminy A wyjaśnia moje dolegliwości?",
+    "Czy powinienem/powinnam suplementować lub ograniczyć witaminę A?"
+  ],
+  "rangeLabels": { "low": "Niska", "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Witaminy",
+  "pageTitle": "Wartość witaminy A wyjaśniona | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Amilaz, başta pankreas ve tükürük bezlerinde üretilen bir sindirim enzimidir. Belirgin şekilde yüksek değerler tipik olarak akut pankreas iltihabında görülür; hafif yüksek değerler tükürük bezlerinden de kaynaklanabilir.",
+  "metaDescription": "Amilaz yüksek mi? Pankreas için anlamı basitçe açıklandı.",
+  "causesElevated": ["Akut pankreas iltihabı (pankreatit)", "Tükürük bezi iltihabı", "Safra taşları"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek amilazım pankreas iltihabına mı işaret ediyor?",
+    "Ayrıca lipaz da ölçülmeli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Pankreas Değerleri",
+  "pageTitle": "Amilaz değeri: Pankreas işlevi açıklaması | Medyra"
+}

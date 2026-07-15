@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "IgA chroni przede wszystkim błony śluzowe dróg oddechowych i jelit przed drobnoustrojami chorobotwórczymi. Niedobór IgA jest najczęstszym wrodzonym niedoborem odporności i zwykle przebiega bez objawów, podwyższone wartości występują przy przewlekłych zapaleniach błon śluzowych lub chorobach wątroby.",
+  "metaDescription": "IgA podwyższone lub obniżone? Znaczenie dla układu odpornościowego wyjaśnione po polsku.",
+  "causesElevated": ["Przewlekłe zapalenia błon śluzowych", "Choroba wątroby", "Choroby autoimmunologiczne"],
+  "causesLow": ["Wrodzony niedobór IgA (często bez objawów)", "Niektóre choroby jelit"],
+  "doctorQuestions": [
+    "Czy mój niedobór IgA jest klinicznie istotny?",
+    "Czy należy to uwzględnić przy przyszłych transfuzjach krwi?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone" },
+  "categoryLabel": "Układ odpornościowy",
+  "pageTitle": "Wartość IgA: Immunoglobulina A wyjaśniona | Medyra"
+}

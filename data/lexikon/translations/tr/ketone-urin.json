@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "İdrarda keton cisimleri, vücut enerji üretimi için şeker yerine daha çok yağ kullandığında ortaya çıkar; örneğin açlıkta, çok düşük karbonhidratlı beslenmede veya yeterince kontrol altına alınmamış diyabette. Bilinen diyabeti olup aynı zamanda kan şekeri yüksek olan kişilerde bu durum kısa süre içinde doktor tarafından değerlendirilmelidir.",
+  "metaDescription": "İdrarda keton pozitif mi? Anlamı, olası nedenleri ve diyabetle ilişkisi açıklandı.",
+  "causesElevated": ["Açlık veya çok düşük karbonhidratlı beslenme", "Yeterince kontrol altına alınmamış diyabet (ketoasidoz riski)", "Kusma veya sıvı eksikliği"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bende ketoasidoz riski var mı?",
+    "Diyabet tedavim düzenlenmeli mi?"
+  ],
+  "rangeLabels": {},
+  "categoryLabel": "İdrar Değerleri",
+  "pageTitle": "İdrarda keton: Diyabet ile ilişkisi açıklaması | Medyra"
+}

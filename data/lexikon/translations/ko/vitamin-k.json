@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "비타민 K는 혈액응고와 뼈 대사에 필요합니다. 결핍은 출혈 경향을 높일 수 있으며 지방 흡수 장애, 항생제 치료, 영양실조 등에서 나타날 수 있습니다.",
+  "metaDescription": "비타민 K가 낮나요? 혈액응고에 대한 의미, 정상 범위, 원인을 쉽게 설명합니다.",
+  "causesElevated": [],
+  "causesLow": ["지방 흡수 장애", "장기간 항생제 치료", "영양실조", "간질환"],
+  "doctorQuestions": [
+    "비타민 K 결핍이 제 출혈 경향 증가를 설명하나요?",
+    "비타민 K를 보충해야 하나요?"
+  ],
+  "rangeLabels": { "low": "낮음", "normal": "정상" },
+  "categoryLabel": "비타민",
+  "pageTitle": "비타민 K 수치: 쉽게 알아보기 | Medyra"
+}

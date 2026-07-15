@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "HBsAg는 B형 간염 바이러스의 외피 성분으로, 급성 또는 만성 B형 간염 감염의 가장 중요한 지표입니다. 양성 결과는 바이러스가 체내에서 활동성으로 검출됨을 의미하며 추가로 의사의 진료를 받아야 합니다.",
+  "metaDescription": "HBsAg가 양성인가요? B형 간염 감염에 대한 의미를 쉽게 설명합니다.",
+  "causesElevated": ["급성 B형 간염 감염", "만성 B형 간염 감염"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "급성 감염인가요, 만성 감염인가요?",
+    "치료나 추가 관리가 필요한가요?"
+  ],
+  "rangeLabels": {},
+  "categoryLabel": "감염 검사",
+  "pageTitle": "HBsAg 검사: 쉽게 알아보기 | Medyra"
+}

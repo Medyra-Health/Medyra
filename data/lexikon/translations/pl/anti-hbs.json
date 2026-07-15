@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Przeciwciała anty-HBs wskazują na wystarczającą ochronę immunologiczną przed wirusowym zapaleniem wątroby typu B, powstałą w wyniku szczepienia lub przebytej infekcji. Wartość ta jest często oznaczana w celu sprawdzenia skuteczności szczepienia, na przykład u personelu medycznego.",
+  "metaDescription": "Anty-HBs podwyższone lub niskie? Znaczenie dla ochrony przed WZW typu B wyjaśnione prosto.",
+  "causesElevated": ["Skuteczne szczepienie przeciw WZW typu B", "Przebyta infekcja WZW typu B z odpornością"],
+  "causesLow": ["Brak lub niewystarczająca ochrona poszczepienna", "Osłabiająca się z czasem ochrona poszczepienna"],
+  "doctorQuestions": [
+    "Czy moja ochrona poszczepienna przeciw WZW typu B jest nadal wystarczająca?",
+    "Czy powinienem/powinnam otrzymać dawkę przypominającą?"
+  ],
+  "rangeLabels": { "low": "Brak wystarczającej ochrony", "normal": "Wystarczająca ochrona poszczepienna" },
+  "categoryLabel": "Wskaźniki infekcji",
+  "pageTitle": "Wartość anty-HBs wyjaśniona | Medyra"
+}

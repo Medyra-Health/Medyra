@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Wartość pH moczu pokazuje, czy mocz jest raczej kwaśny, czy zasadowy, i zależy między innymi od diety, metabolizmu i niektórych chorób. Odgrywa też rolę w powstawaniu określonych rodzajów kamieni nerkowych.",
+  "metaDescription": "pH moczu podwyższone lub obniżone? Znaczenie i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Dieta wegetariańska/zasadotwórcza", "Infekcja dróg moczowych", "Zaburzenie funkcji nerek"],
+  "causesLow": ["Dieta bogata w białko", "Zaburzenie metaboliczne (np. kwasica ketonowa)"],
+  "doctorQuestions": [
+    "Czy moje pH moczu wpływa na powstawanie kamieni nerkowych?",
+    "Czy powinienem/powinnam dostosować swoją dietę?"
+  ],
+  "rangeLabels": { "normal": "Normalne" },
+  "categoryLabel": "Wskaźniki moczu",
+  "pageTitle": "pH moczu wyjaśnione | Medyra"
+}

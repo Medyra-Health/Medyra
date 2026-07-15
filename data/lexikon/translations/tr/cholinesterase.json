@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Kolinesteraz karaciğerde üretilir ve karaciğerin protein üretme kapasitesini şu anda ne kadar iyi yerine getirdiğini gösterir. Düşük değerler karaciğer işlevinde bozulma veya zehirlenmeye işaret edebilirken, yüksek değerler yağlı karaciğer veya diyabet gibi durumlarda görülür.",
+  "metaDescription": "Kolinesteraz düşük veya yüksek mü? Anlamı ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Yağlı karaciğer", "Diabetes mellitus", "Aşırı kilo"],
+  "causesLow": ["İleri karaciğer hastalığı", "Zehirlenme (örn. bitki koruma ürünleri)", "Yetersiz beslenme"],
+  "doctorQuestions": [
+    "Kolinesteraz değerim karaciğer işlevimde bir bozulmaya mı işaret ediyor?",
+    "Diğer karaciğer değerlerim de kontrol edilmeli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Karaciğer Değerleri",
+  "pageTitle": "Kolinesteraz değeri: Karaciğer protein üretimi açıklaması | Medyra"
+}

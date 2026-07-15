@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "HIV 검사는 혈액 내 항체와 경우에 따라 HIV 바이러스의 성분을 검출합니다. 양성 결과는 최종 판단 전에 항상 두 번째의 독립적인 검사로 확인됩니다. 검사 결과에 대해 궁금한 점이 있다면 의사나 상담 기관에 문의하세요.",
+  "metaDescription": "HIV 검사가 양성인가요? 의미와 다음 단계를 사실적이고 쉽게 설명합니다.",
+  "causesElevated": ["HIV 감염(확진 검사 후)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "이미 확진 검사가 진행되었나요?",
+    "지금 어떤 다음 단계가 필요한가요?"
+  ],
+  "rangeLabels": {},
+  "categoryLabel": "감염 검사",
+  "pageTitle": "HIV 검사: 쉽게 알아보기 | Medyra"
+}

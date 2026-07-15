@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Sistatin C, kas kütlesi ve beslenmeden bağımsız, böbrek işlevi için hassas bir belirteçtir. Kreatinin değerinin kas kütlesi veya yaş nedeniyle yanıltıcı olabileceği durumlarda genellikle kreatinine ek olarak ölçülür. Yüksek değerler böbrek işlevinde bozulmaya işaret eder.",
+  "metaDescription": "Sistatin C yüksek mi? Böbrek işlevi için anlamı, normal değerler ve nedenleri açıklandı.",
+  "causesElevated": ["Böbrek işlevinde bozulma", "Kronik böbrek hastalığı"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Kreatinine ek olarak neden sistatin C de ölçüldü?",
+    "Böbrek işlevim genel olarak nasıl durumda?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Böbrek Değerleri",
+  "pageTitle": "Sistatin C değeri: Böbrek işlevi açıklaması | Medyra"
+}

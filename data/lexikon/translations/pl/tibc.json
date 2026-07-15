@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "TIBC mierzy, ile żelaza krew mogłaby maksymalnie transportować, i pośrednio odzwierciedla ilość transferyny. Podwyższone wartości występują typowo przy niedoborze żelaza, obniżone przy przeciążeniu żelazem lub przewlekłych stanach zapalnych.",
+  "metaDescription": "TIBC (zdolność wiązania żelaza) podwyższone lub obniżone? Znaczenie dla niedoboru żelaza wyjaśnione.",
+  "causesElevated": ["Niedobór żelaza"],
+  "causesLow": ["Przeciążenie żelazem (hemochromatoza)", "Przewlekłe zapalenie", "Choroba wątroby"],
+  "doctorQuestions": [
+    "Czy ta wartość potwierdza niedobór żelaza?",
+    "Czy powinny zostać oznaczone dodatkowe wskaźniki żelaza?"
+  ],
+  "rangeLabels": { "low": "Niska", "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Wskaźniki żelaza",
+  "pageTitle": "Wartość TIBC: Całkowita zdolność wiązania żelaza wyjaśniona | Medyra"
+}

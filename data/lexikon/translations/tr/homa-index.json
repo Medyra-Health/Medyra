@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "HOMA indeksi, açlık kan şekeri ve açlık insülini üzerinden hesaplanır ve vücudun insüline hâlâ ne kadar iyi yanıt verdiğini tahmin eder. Yüksek bir değer, genellikle Tip 2 diyabetten önce ortaya çıkan bir insülin direncine işaret eder.",
+  "metaDescription": "HOMA indeksi yüksek mi? İnsülin direnci için anlamı, normal değerler ve nedenleri açıklandı.",
+  "causesElevated": ["İnsülin direnci", "Metabolik sendrom", "Aşırı kilo", "Polikistik over sendromu (PCOS)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu değere göre diyabet riskim ne kadar yüksek?",
+    "Hangi yaşam tarzı değişiklikleri yardımcı olabilir?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek (insülin direnci olası)" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "HOMA indeksi: İnsülin direnci açıklaması | Medyra"
+}

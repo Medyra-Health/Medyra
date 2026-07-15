@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Wskaźnik HOMA jest obliczany na podstawie glukozy i insuliny na czczo i szacuje, jak dobrze organizm nadal reaguje na insulinę. Podwyższona wartość wskazuje na insulinooporność, która często poprzedza cukrzycę typu 2.",
+  "metaDescription": "Wskaźnik HOMA podwyższony? Znaczenie dla insulinooporności, wartości prawidłowe i przyczyny wyjaśnione.",
+  "causesElevated": ["Insulinooporność", "Zespół metaboliczny", "Nadwaga", "Zespół policystycznych jajników (PCOS)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jakie jest moje ryzyko cukrzycy na podstawie tej wartości?",
+    "Jakie zmiany stylu życia mogłyby pomóc?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony (możliwa insulinooporność)" },
+  "categoryLabel": "Metabolizm",
+  "pageTitle": "Wskaźnik HOMA wyjaśniony | Medyra"
+}

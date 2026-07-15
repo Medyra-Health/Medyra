@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "AFP(알파태아단백)는 임신 중에는 정상적으로 상승하며, 임신이 아닌 경우 간암이나 생식세포종양의 경과 관찰에 사용됩니다. 만성 간질환도 종양 없이 수치를 높일 수 있습니다.",
+  "metaDescription": "AFP가 높나요? 종양표지자의 의미와 가능한 원인을 쉽게 설명합니다.",
+  "causesElevated": ["임신", "만성 간질환 또는 간경변", "간암 또는 생식세포종양(여러 원인 중 하나)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "제 AFP 수치 상승의 원인은 무엇일까요?",
+    "간 영상 검사가 필요한가요?"
+  ],
+  "rangeLabels": { "normal": "정상(임신 외)", "elevated": "상승" },
+  "categoryLabel": "종양표지자 검사",
+  "pageTitle": "AFP 수치: 알파태아단백 쉽게 알아보기 | Medyra"
+}

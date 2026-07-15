@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Cystatyna C jest czułym markerem funkcji nerek, niezależnym od masy mięśniowej i diety. Jest często oznaczana dodatkowo do kreatyniny, zwłaszcza gdy ten może być zafałszowany przez masę mięśniową lub wiek. Podwyższone wartości wskazują na ograniczoną funkcję nerek.",
+  "metaDescription": "Cystatyna C podwyższona? Znaczenie dla funkcji nerek, wartości prawidłowe i przyczyny wyjaśnione.",
+  "causesElevated": ["Ograniczona funkcja nerek", "Przewlekła choroba nerek"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Dlaczego dodatkowo do kreatyniny oznaczono u mnie cystatynę C?",
+    "Jak wygląda ogólnie moja funkcja nerek?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Wskaźniki nerkowe",
+  "pageTitle": "Wartość cystatyny C wyjaśniona | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "IgM, yeni bir enfeksiyonda oluşan ilk antikor sınıfıdır ve bu nedenle genellikle akut veya yakın zamanda geçirilmiş bir enfeksiyona işaret eder. Değer, akut enfeksiyonları geçmişte geçirilenlerden ayırt etmek için sıkça IgG ile birlikte değerlendirilir.",
+  "metaDescription": "IgM yüksek veya düşük mü? Akut enfeksiyonlar için anlamı basitçe açıklandı.",
+  "causesElevated": ["Akut enfeksiyon", "Bazı otoimmün hastalıklar", "Bazı kan hastalıkları (örn. Waldenström hastalığı)"],
+  "causesLow": ["Doğuştan veya sonradan kazanılmış bağışıklık yetersizliği"],
+  "doctorQuestions": [
+    "IgM değerim akut bir enfeksiyona mı işaret ediyor?",
+    "Ek olarak IgG de ölçülmeli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Bağışıklık Sistemi",
+  "pageTitle": "IgM değeri: İmmünoglobulin M açıklaması | Medyra"
+}

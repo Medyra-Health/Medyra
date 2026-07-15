@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Przeciwciała anty-TPO są skierowane przeciwko enzymowi tarczycy i są najważniejszym wskaźnikiem autoimmunologicznej choroby tarczycy, takiej jak choroba Hashimoto. Podwyższone wartości często, ale nie zawsze, potwierdzają taką chorobę.",
+  "metaDescription": "Przeciwciała anty-TPO podwyższone? Znaczenie dla choroby Hashimoto i chorób tarczycy wyjaśnione.",
+  "causesElevated": ["Choroba Hashimoto", "Choroba Gravesa-Basedowa", "Inne choroby autoimmunologiczne"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy ta wartość potwierdza autoimmunologiczną chorobę tarczycy?",
+    "Czy moja funkcja tarczycy powinna być regularnie kontrolowana?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Tarczyca",
+  "pageTitle": "Wartość anty-TPO wyjaśniona | Medyra"
+}

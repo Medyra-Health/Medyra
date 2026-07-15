@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "TIBC, kanın toplamda en fazla ne kadar demir taşıyabileceğini ölçer ve dolaylı olarak transferrin miktarını yansıtır. Yüksek değerler tipik olarak demir eksikliğinde görülürken, düşük değerler demir yüklenmesinde veya kronik iltihaplarda görülür.",
+  "metaDescription": "TIBC (demir bağlama kapasitesi) yüksek veya düşük mü? Demir eksikliği için anlamı açıklandı.",
+  "causesElevated": ["Demir eksikliği"],
+  "causesLow": ["Demir yüklenmesi (hemokromatoz)", "Kronik iltihap", "Karaciğer hastalığı"],
+  "doctorQuestions": [
+    "Bu değer bir demir eksikliğini doğruluyor mu?",
+    "Ek demir değerleri ölçülmeli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Demir Değerleri",
+  "pageTitle": "TIBC değeri: Demir bağlama kapasitesi açıklaması | Medyra"
+}

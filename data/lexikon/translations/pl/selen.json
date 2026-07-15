@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Selen jest pierwiastkiem śladowym o działaniu antyoksydacyjnym, ważnym dla tarczycy i układu odpornościowego. Niedobór powstaje zwykle przy jednostronnej diecie lub żywieniu sztucznym, przedawkowanie przy zwykłej diecie jest rzadkie.",
+  "metaDescription": "Selen zbyt niski lub zbyt wysoki? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Przedawkowanie przez suplementy diety"],
+  "causesLow": ["Jednostronna dieta", "Żywienie sztuczne", "Przewlekłe choroby jelit"],
+  "doctorQuestions": [
+    "Czy niedobór selenu mógłby wpływać na moje wartości tarczycowe?",
+    "Czy powinienem/powinnam suplementować selen?"
+  ],
+  "rangeLabels": { "low": "Niski", "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Pierwiastki śladowe",
+  "pageTitle": "Wartość selenu wyjaśniona | Medyra"
+}

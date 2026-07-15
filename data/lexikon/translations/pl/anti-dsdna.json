@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Przeciwciała anty-dsDNA są znacznie bardziej swoiste dla tocznia rumieniowatego układowego niż ANA i są często wykorzystywane do potwierdzenia diagnozy oraz monitorowania aktywności choroby. Oznacza się je niemal zawsze w połączeniu z już dodatnim wynikiem ANA.",
+  "metaDescription": "Przeciwciała anty-dsDNA podwyższone? Znaczenie dla tocznia rumieniowatego układowego wyjaśnione.",
+  "causesElevated": ["Toczeń rumieniowaty układowy", "Aktywna faza choroby przy rozpoznanym toczniu"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy ta wartość potwierdza toczeń rumieniowaty układowy?",
+    "Czy wartość wskazuje na obecnie aktywną fazę choroby?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Układ odpornościowy",
+  "pageTitle": "Wartość anty-dsDNA wyjaśniona | Medyra"
+}

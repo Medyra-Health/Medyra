@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Tyreoglobulina jest białkiem magazynującym, wytwarzanym wyłącznie w tarczycy. Wartość ta jest wykorzystywana przede wszystkim po chirurgicznym usunięciu tarczycy z powodu raka tarczycy do monitorowania przebiegu, ponieważ rosnące wartości mogą wskazywać na nawrót choroby.",
+  "metaDescription": "Tyreoglobulina podwyższona? Znaczenie dla opieki po leczeniu raka tarczycy wyjaśnione po polsku.",
+  "causesElevated": ["Aktywna tkanka tarczycy", "Po operacji tarczycy: możliwa wskazówka nawrotu", "Zapalenie tarczycy"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Co oznacza ta wartość dla mojej opieki pooperacyjnej po usunięciu tarczycy?",
+    "Czy należy uwzględnić moje przeciwciała anty-Tg?"
+  ],
+  "rangeLabels": { "normal": "Normalna (przy obecnej tarczycy)" },
+  "categoryLabel": "Tarczyca",
+  "pageTitle": "Wartość tyreoglobuliny wyjaśniona | Medyra"
+}

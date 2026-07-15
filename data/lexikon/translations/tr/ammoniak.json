@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Amonyak, protein yıkımı sırasında oluşur ve normalde karaciğer tarafından zararsız hale getirilir. Yüksek değerler karaciğer işlevinde bozulmaya işaret edebilir ve belirgin vakalarda beyin fonksiyonunu etkileyebilir. Belirgin şekilde yüksek değerler kısa süre içinde doktor tarafından değerlendirilmelidir.",
+  "metaDescription": "Amonyak (NH3) yüksek mi? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["İleri karaciğer hastalığı (siroz)", "Karaciğer yetmezliği", "Bazı metabolik hastalıklar"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek amonyak değerim ne kadar acil tedavi gerektiriyor?",
+    "Bu durumun altında yatan neden nedir?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Karaciğer Değerleri",
+  "pageTitle": "Amonyak (NH3) değeri: Karaciğer işlevi açıklaması | Medyra"
+}

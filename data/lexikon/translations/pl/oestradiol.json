@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Estradiol jest najważniejszym żeńskim hormonem płciowym i silnie waha się w ciągu cyklu, w ciąży oraz w okresie menopauzy. Niskie wartości mogą wskazywać na menopauzę lub zaburzenie funkcji jajników, a zakres referencyjny silnie zależy od fazy cyklu i wieku.",
+  "metaDescription": "Estradiol zbyt niski lub zbyt wysoki? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione.",
+  "causesElevated": ["Określone fazy cyklu (np. owulacja)", "Ciąża", "Guzy produkujące estrogeny (rzadko)"],
+  "causesLow": ["Menopauza", "Zaburzenie funkcji jajników", "Silna utrata masy ciała lub sport wyczynowy"],
+  "doctorQuestions": [
+    "Czy mój poziom estradiolu pasuje do mojej aktualnej fazy cyklu lub okresu życia?",
+    "Czy powinny zostać oznaczone dodatkowe wartości hormonalne?"
+  ],
+  "rangeLabels": { "normal": "Normalny (zależny od cyklu)" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "Wartość estradiolu wyjaśniona | Medyra"
+}

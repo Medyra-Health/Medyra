@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "IgG는 가장 흔한 항체 종류로 감염이나 예방접종 후 장기적인 면역을 담당합니다. 낮은 수치는 면역 결핍을 시사할 수 있고, 상승한 수치는 만성 감염이나 염증을 나타낼 수 있습니다.",
+  "metaDescription": "IgG가 높거나 낮나요? 면역계에 대한 의미를 쉽게 설명합니다.",
+  "causesElevated": ["만성 감염", "자가면역질환", "특정 혈액질환"],
+  "causesLow": ["선천성 또는 후천성 면역 결핍", "신장 또는 장을 통한 단백질 손실"],
+  "doctorQuestions": [
+    "제 IgG 수치가 면역 결핍을 의미하나요?",
+    "다른 면역글로불린도 검사해야 하나요?"
+  ],
+  "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "면역 검사",
+  "pageTitle": "IgG 수치: 쉽게 알아보기 | Medyra"
+}

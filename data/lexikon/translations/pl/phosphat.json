@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Fosforan jest ważny dla kości, energii komórkowej i gospodarki kwasowo-zasadowej i jest ściśle regulowany razem z wapniem i witaminą D. Podwyższone wartości występują często przy ograniczonej funkcji nerek, niskie wartości przy niedoborze witaminy D lub niedożywieniu.",
+  "metaDescription": "Fosforan podwyższony lub obniżony? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Ograniczona funkcja nerek", "Nadmiar witaminy D", "Niedoczynność przytarczyc"],
+  "causesLow": ["Niedobór witaminy D", "Nadczynność przytarczyc", "Niedożywienie", "Alkoholizm"],
+  "doctorQuestions": [
+    "Czy mój poziom fosforanu jest związany z moją funkcją nerek?",
+    "Czy powinien zostać sprawdzony również poziom witaminy D i wapnia?"
+  ],
+  "rangeLabels": { "low": "Niski", "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Elektrolity",
+  "pageTitle": "Wartość fosforanu wyjaśniona | Medyra"
+}

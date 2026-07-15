@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Czynnik reumatoidalny to przeciwciało, które często występuje przy reumatoidalnym zapaleniu stawów, ale może być dodatnie także przy innych chorobach, a nawet u zdrowych osób. Sam dodatni wynik nie jest więc diagnozą i zawsze musi być oceniany w kontekście objawów i innych wyników badań.",
+  "metaDescription": "Czynnik reumatoidalny podwyższony? Znaczenie dla reumatoidalnego zapalenia stawów wyjaśnione po polsku.",
+  "causesElevated": ["Reumatoidalne zapalenie stawów", "Inne choroby autoimmunologiczne", "Przewlekłe infekcje", "Może być lekko podwyższony także u zdrowych osób"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy ta wartość potwierdza reumatoidalne zapalenie stawów?",
+    "Czy powinno zostać dodatkowo oznaczone anty-CCP?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Markery zapalne",
+  "pageTitle": "Wartość czynnika reumatoidalnego wyjaśniona | Medyra"
+}

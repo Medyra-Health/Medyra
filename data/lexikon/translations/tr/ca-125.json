@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "CA 125 en çok yumurtalıklarla bağlantılı olarak ölçülür, ancak endometriozis, adet dönemi veya yumurtalık kistleri gibi birçok iyi huylu durumda da yükselebilir. Yüksek bir değer tek başına kanser tanısı değildir ve her zaman görüntüleme ile şikayetlerle birlikte değerlendirilir.",
+  "metaDescription": "CA 125 yüksek mi? Olası nedenleri ve sonraki adımlar basitçe açıklandı.",
+  "causesElevated": ["Endometriozis", "Yumurtalık kistleri", "Adet dönemi", "Pelvik iltihaplar", "Yumurtalık kanseri (olası nedenlerden biri)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bende hangi iyi huylu nedenler söz konusu olabilir?",
+    "Jinekolojik ultrason yapılması anlamlı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Tümör Belirteçleri",
+  "pageTitle": "CA 125 değeri: Yumurtalık belirteci açıklaması | Medyra"
+}

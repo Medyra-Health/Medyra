@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Parathormon, paratiroid bezlerinde üretilir ve D vitaminiyle birlikte kalsiyum dengesini düzenler. Yüksek değerler paratiroid bezlerinin aşırı çalışmasına veya D vitamini eksikliğine işaret edebilir; düşük değerler daha nadirdir ve düşük kalsiyuma yol açabilir.",
+  "metaDescription": "Parathormon (PTH) yüksek veya düşük mü? Kalsiyum dengesi için anlamı açıklandı.",
+  "causesElevated": ["Paratiroid bezlerinin aşırı çalışması", "D vitamini eksikliği", "Kronik böbrek hastalığı"],
+  "causesLow": ["Paratiroid bezlerinin az çalışması", "Tiroid ameliyatı sonrası"],
+  "doctorQuestions": [
+    "PTH değerim kalsiyum veya D vitamini düzeyimle ilişkili mi?",
+    "Paratiroid bezi hastalığı araştırılmalı mı?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "PTH değeri: Parathormon açıklaması | Medyra"
+}

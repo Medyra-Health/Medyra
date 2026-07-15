@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Kompleman faktörü C4, C3 gibi bağışıklık sisteminin kompleman sistemine aittir. Düşük değerler genellikle lupus gibi otoimmün hastalıklardan şüphelenildiğinde C3 ile birlikte ölçülür, çünkü aktif hastalıkta her iki faktör de sıkça düşer.",
+  "metaDescription": "Kompleman faktörü C4 yüksek veya düşük mü? Otoimmün hastalıklar için anlamı açıklandı.",
+  "causesElevated": ["Akut iltihap veya enfeksiyon"],
+  "causesLow": ["Otoimmün hastalıklar (örn. sistemik lupus eritematozus)", "Doğuştan kompleman eksikliği"],
+  "doctorQuestions": [
+    "C4 değerim, C3 ve şikayetlerimle birlikte ne anlama geliyor?",
+    "Bir romatolog konsültasyonu gerekli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Bağışıklık Sistemi",
+  "pageTitle": "Kompleman C4 değeri: Otoimmün hastalıklar açıklaması | Medyra"
+}

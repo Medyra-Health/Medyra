@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "ACTH jest wytwarzany przez przysadkę mózgową i kontroluje produkcję kortyzolu przez nadnercza. Wartość jest zawsze oceniana razem z kortyzolem, aby odróżnić chorobę nadnerczy od choroby przysadki.",
+  "metaDescription": "ACTH podwyższony lub obniżony? Znaczenie w połączeniu z kortyzolem wyjaśnione prosto.",
+  "causesElevated": ["Niedoczynność kory nadnerczy (choroba Addisona)", "Guz wydzielający ACTH (rzadko)"],
+  "causesLow": ["Choroba przysadki mózgowej", "Zespół Cushinga spowodowany guzem nadnercza"],
+  "doctorQuestions": [
+    "Co pokazuje stosunek ACTH do mojego poziomu kortyzolu?",
+    "Czy potrzebna jest dalsza diagnostyka przysadki mózgowej?"
+  ],
+  "rangeLabels": { "normal": "Normalny" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "ACTH: Hormon adrenokortykotropowy wyjaśniony | Medyra"
+}

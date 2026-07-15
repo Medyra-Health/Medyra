@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "RDW mierzy, jak bardzo czerwone krwinki różnią się rozmiarem. Podwyższona wartość może wskazywać na początkowy niedobór żelaza, witaminy B12 lub kwasu foliowego, zwłaszcza w połączeniu z nieprawidłowym MCV. Omów podwyższony poziom RDW ze swoim lekarzem.",
+  "metaDescription": "RDW podwyższone? Znaczenie rozpiętości rozkładu objętości krwinek czerwonych, wartości prawidłowe i możliwe przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Niedobór żelaza", "Niedobór witaminy B12 lub kwasu foliowego", "Niedokrwistość mieszana", "Po transfuzji krwi"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Co oznacza mój podwyższony poziom RDW razem z MCV?",
+    "Czy mój status żelaza i witamin powinien zostać sprawdzony?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Morfologia krwi",
+  "pageTitle": "Wartość RDW: Rozpiętość rozkładu objętości krwinek czerwonych wyjaśniona | Medyra"
+}

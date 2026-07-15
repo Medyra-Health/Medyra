@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "D-dimery powstają podczas rozpadu skrzepów krwi i są ważnym elementem diagnostyki przy podejrzeniu zakrzepicy lub zatorowości płucnej. Prawidłowa wartość czyni ostrą zakrzepicę raczej mało prawdopodobną, jednak sama podwyższona wartość nie dowodzi zakrzepicy, ponieważ wiele sytuacji może ją podnosić.",
+  "metaDescription": "D-dimery podwyższone? Znaczenie dla zakrzepicy i zatorowości płucnej wyjaśnione po polsku.",
+  "causesElevated": ["Zakrzepica", "Zatorowość płucna", "Po operacjach", "Ciąża", "Ostre zapalenie lub infekcja"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy u mnie należy wykluczyć zakrzepicę lub zatorowość płucną?",
+    "Czy potrzebne są dalsze badania, na przykład obrazowanie?"
+  ],
+  "rangeLabels": { "normal": "Normalne", "elevated": "Podwyższone" },
+  "categoryLabel": "Krzepnięcie",
+  "pageTitle": "Wartość D-dimerów wyjaśniona | Medyra"
+}

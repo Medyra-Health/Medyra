@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Lipoprotein(a), genetik olarak belirlenen bir kan yağı değeridir ve beslenme ile yaşam tarzından bağımsız olarak kalp-damar hastalığı riskini etkileyebilir. Değer genellikle yaşam boyu bir kez ölçüldüğü için özellikle ailesel yatkınlık durumunda önemlidir.",
+  "metaDescription": "Lipoprotein(a) yüksek mi? Kalp-damar riski için anlamı basitçe açıklandı.",
+  "causesElevated": ["Genetik yatkınlık (kalıtsal)", "Yaşam tarzından bağımsız olarak yüksek olabilir"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Lp(a) değerim kalp-damar riskimi artırıyor mu?",
+    "Diğer kan yağı değerlerim daha sıkı takip edilmeli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "Lipoprotein(a) değeri: Kalp-damar riski açıklaması | Medyra"
+}

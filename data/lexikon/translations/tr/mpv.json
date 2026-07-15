@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "MPV, kan pulcuklarının ortalama büyüklüğünü gösterir. Daha büyük trombositler genellikle yeni üretilmiştir ve artmış bir plaka üretimine işaret ederken, daha küçük olanlar kemik iliğinde azalmış üretime işaret eder. Değer genellikle trombositlerin kendisiyle birlikte değerlendirilir.",
+  "metaDescription": "MPV yüksek veya düşük mü? Ortalama trombosit hacminin anlamı basitçe açıklandı.",
+  "causesElevated": ["Artmış trombosit yeniden üretimi", "İmmün trombositopeni (ITP)", "Kan kaybı sonrası"],
+  "causesLow": ["Kemik iliği hastalıkları", "Azalmış trombosit üretimi"],
+  "doctorQuestions": [
+    "MPV değerim trombosit sayıma uyuyor mu?",
+    "Kemik iliği incelemesi gerekli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kan Sayımı",
+  "pageTitle": "MPV değeri: Ortalama trombosit hacmi açıklaması | Medyra"
+}

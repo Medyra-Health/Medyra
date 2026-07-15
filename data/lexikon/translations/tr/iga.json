@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "IgA, özellikle solunum yolları ve bağırsağın mukoza zarlarını hastalık etkenlerine karşı korur. IgA eksikliği en sık görülen doğuştan bağışıklık yetersizliğidir ve genellikle şikayetsiz seyreder; yüksek değerler kronik mukoza iltihapları veya karaciğer hastalıklarında görülür.",
+  "metaDescription": "IgA yüksek veya düşük mü? Bağışıklık sistemi için anlamı basitçe açıklandı.",
+  "causesElevated": ["Kronik mukoza iltihapları", "Karaciğer hastalığı", "Otoimmün hastalıklar"],
+  "causesLow": ["Doğuştan IgA eksikliği (genellikle şikayetsiz)", "Bazı bağırsak hastalıkları"],
+  "doctorQuestions": [
+    "IgA eksikliğim klinik olarak önemli mi?",
+    "Gelecekteki kan nakillerinde bu göz önünde bulundurulmalı mı?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Bağışıklık Sistemi",
+  "pageTitle": "IgA değeri: İmmünoglobulin A açıklaması | Medyra"
+}

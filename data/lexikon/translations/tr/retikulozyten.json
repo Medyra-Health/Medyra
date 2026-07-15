@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Retikülositler, henüz tam olgunlaşmamış genç kırmızı kan hücreleridir. Sayıları, kemik iliğinin şu anda ne kadar aktif yeni kan hücreleri ürettiğini gösterir. Yüksek bir değer, kan kaybından sonra artan kan üretimine işaret edebilirken, düşük bir değer kemik iliği işlevinin kısıtlandığını gösterebilir.",
+  "metaDescription": "Retikülositler yüksek veya düşük mü? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Kan kaybından sonra artan kan üretimi", "Hemolitik anemi", "Demir veya vitamin tedavisi sonrası"],
+  "causesLow": ["Kemik iliği zayıflığı", "Tedavi edilmemiş demir veya vitamin eksikliği", "Kemoterapi"],
+  "doctorQuestions": [
+    "Retikülosit değerim anemimin nedeni hakkında ne söylüyor?",
+    "Kemik iliğim tedaviye iyi yanıt veriyor mu?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kan Sayımı",
+  "pageTitle": "Retikülosit değeri: Anlamı basitçe açıklandı | Medyra"
+}

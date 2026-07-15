@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "IgG jest najczęstszą klasą przeciwciał i zapewnia długotrwałą ochronę po przebytych infekcjach lub szczepieniach. Niskie wartości mogą wskazywać na niedobór odporności, podwyższone wartości na przewlekłe infekcje lub stany zapalne.",
+  "metaDescription": "IgG podwyższone lub obniżone? Znaczenie dla układu odpornościowego wyjaśnione po polsku.",
+  "causesElevated": ["Przewlekła infekcja", "Choroba autoimmunologiczna", "Niektóre choroby krwi"],
+  "causesLow": ["Wrodzony lub nabyty niedobór odporności", "Utrata białka przez nerki lub jelita"],
+  "doctorQuestions": [
+    "Czy mój poziom IgG wskazuje na niedobór odporności?",
+    "Czy powinny zostać oznaczone dodatkowe immunoglobuliny?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone" },
+  "categoryLabel": "Układ odpornościowy",
+  "pageTitle": "Wartość IgG wyjaśniona | Medyra"
+}

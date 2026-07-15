@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Non-HDL kolesterol, \"iyi\" HDL dışındaki tüm kolesterol türlerini, yani başta LDL olmak üzere damarlara zarar veren diğer parçacıkları kapsar. Özellikle trigliseritler yüksek olduğunda kalp-damar hastalığı riski için iyi bir genel gösterge olarak kabul edilir.",
+  "metaDescription": "Non-HDL kolesterol yüksek mi? Kalp-damar riski için anlamı basitçe açıklandı.",
+  "causesElevated": ["Yüksek LDL kolesterol", "Yüksek trigliserit", "Sağlıksız beslenme", "Aşırı kilo"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu değere göre kalp-damar riskim ne durumda?",
+    "Kolesterol tedavim ayarlanmalı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "Non-HDL kolesterol değeri: Kalp-damar riski açıklaması | Medyra"
+}

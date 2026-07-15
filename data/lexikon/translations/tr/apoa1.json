@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Apolipoprotein A1, \"iyi\" HDL kolesterolün ana protein bileşenidir ve kolesterolün karaciğere geri taşınmasını destekler. Düşük değerler artmış kalp-damar riskiyle ilişkilendirilirken, yüksek değerler genel olarak olumlu kabul edilir.",
+  "metaDescription": "Apolipoprotein A1 (ApoA1) düşük mü? Kalp-damar riski için anlamı açıklandı.",
+  "causesElevated": [],
+  "causesLow": ["Artmış kalp-damar riski", "Düşük HDL kolesterol", "Sigara kullanımı"],
+  "doctorQuestions": [
+    "ApoA1 değerim kalp-damar riskim için ne anlama geliyor?",
+    "Yaşam tarzı değişiklikleriyle değerimi iyileştirebilir miyim?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal (yüksek olması daha iyi)" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "ApoA1 değeri: Apolipoprotein A1 açıklaması | Medyra"
+}

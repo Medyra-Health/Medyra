@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "CK-MB, kreatin kinazın başta kalp kasında bulunan bir alt türüdür ve bu nedenle toplam CK'ya kıyasla kalp hasarına daha spesifik olarak işaret eder. Kalp krizi şüphesinde genellikle troponin ile birlikte ölçülür.",
+  "metaDescription": "CK-MB yüksek mi? Kalp kası hasarı için anlamı basitçe açıklandı.",
+  "causesElevated": ["Kalp krizi", "Kalp kası iltihabı (miyokardit)", "Kalp ameliyatları sonrası"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "CK-MB, troponin değerimle birlikte bir kalp hasarını doğruluyor mu?",
+    "Sonraki tedavi planı nedir?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kalp Değerleri",
+  "pageTitle": "CK-MB değeri: Kalp kası hasarı açıklaması | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Anti-Tg antikorları, tiroidin depo proteinine karşı oluşur ve genellikle tiroidin otoimmün bir hastalığından şüphelenildiğinde Anti-TPO ile birlikte ölçülür. Ayrıca tiroid ameliyatlarından sonra takip amacıyla da kullanılır.",
+  "metaDescription": "Tiroglobulin antikorları (Anti-Tg) yüksek mi? Tiroid hastalıkları için anlamı açıklandı.",
+  "causesElevated": ["Hashimoto tiroiditi", "Graves hastalığı", "Otoimmün tiroid iltihabı"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu değer tiroid tanım için ne anlama geliyor?",
+    "Ek antikor testleri anlamlı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Tiroid",
+  "pageTitle": "Anti-Tg değeri: Tiroglobulin antikorları açıklaması | Medyra"
+}

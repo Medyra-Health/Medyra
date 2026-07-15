@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Amoniak powstaje podczas rozkładu białek i jest normalnie unieszkodliwiany przez wątrobę. Podwyższone wartości mogą wskazywać na ograniczoną czynność wątroby, a w wyraźnych przypadkach mogą zaburzać funkcję mózgu. Znacznie podwyższone wartości powinny zostać szybko wyjaśnione przez lekarza.",
+  "metaDescription": "Amoniak (NH3) podwyższony? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione prosto po polsku.",
+  "causesElevated": ["Zaawansowana choroba wątroby (marskość wątroby)", "Niewydolność wątroby", "Niektóre choroby metaboliczne"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jak pilnie należy leczyć mój podwyższony poziom amoniaku?",
+    "Jaka przyczyna leży u mojej podstawy?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Wskaźniki wątrobowe",
+  "pageTitle": "Wartość amoniaku (NH3) wyjaśniona | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Interleukina-6 jest przekaźnikiem układu odpornościowego, który wcześnie wzrasta przy ostrych stanach zapalnych i infekcjach, często jeszcze zanim CRP jest mierzalnie podwyższone. Wykorzystywana jest przede wszystkim w szpitalach do wczesnej oceny ciężkich reakcji zapalnych.",
+  "metaDescription": "Interleukina-6 (IL-6) podwyższona? Znaczenie jako wczesny marker zapalny wyjaśnione.",
+  "causesElevated": ["Ostra infekcja", "Ciężka reakcja zapalna", "Choroby autoimmunologiczne", "Po operacjach"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Dlaczego dodatkowo do CRP oznaczono u mnie IL-6?",
+    "Jak ciężka jest moja reakcja zapalna?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Markery zapalne",
+  "pageTitle": "Wartość interleukiny-6 (IL-6) wyjaśniona | Medyra"
+}

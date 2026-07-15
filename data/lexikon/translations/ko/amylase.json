@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "아밀라아제는 주로 췌장과 침샘에서 생성되는 소화 효소입니다. 크게 상승한 수치는 전형적으로 급성 췌장염에서 나타나며, 경미하게 상승한 수치는 침샘에서 비롯될 수도 있습니다.",
+  "metaDescription": "아밀라아제가 높나요? 췌장에 대한 의미를 쉽게 설명합니다.",
+  "causesElevated": ["급성 췌장염", "침샘염", "담석"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "아밀라아제 상승이 췌장염을 의미하나요?",
+    "리파아제 검사도 추가로 필요한가요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "췌장 검사",
+  "pageTitle": "아밀라아제 수치: 쉽게 알아보기 | Medyra"
+}

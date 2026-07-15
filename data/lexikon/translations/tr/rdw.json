@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "RDW, kırmızı kan hücrelerinin büyüklük açısından ne kadar farklılık gösterdiğini ölçer. Yüksek bir değer, özellikle MCV'nin de anormal olmasıyla birlikte, başlangıç aşamasındaki bir demir, B12 vitamini veya folik asit eksikliğine işaret edebilir. Yüksek RDW değerinizi doktorunuzla görüşün.",
+  "metaDescription": "RDW yüksek mi? Eritrosit dağılım genişliğinin anlamı, normal değerler ve olası nedenleri basitçe açıklandı.",
+  "causesElevated": ["Demir eksikliği", "B12 vitamini veya folik asit eksikliği", "Karışık tipte anemi", "Kan nakli sonrası"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek RDW değerim MCV ile birlikte ne anlama geliyor?",
+    "Demir ve vitamin durumum kontrol edilmeli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kan Sayımı",
+  "pageTitle": "RDW değeri: Eritrosit dağılım genişliği açıklaması | Medyra"
+}

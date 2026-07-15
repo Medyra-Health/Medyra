@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Kreatin kinaz, başta kalp ve iskelet kaslarında bulunur ve kas hasarlarında yükselir; örneğin yoğun fiziksel efordan sonra veya kalp krizinde. Daha ayrıntılı değerlendirme için genellikle ek olarak CK-MB veya troponin de ölçülür.",
+  "metaDescription": "Kreatin kinaz (CK) yüksek mi? Kas ve kalp hasarı için anlamı basitçe açıklandı.",
+  "causesElevated": ["Yoğun fiziksel efor", "Kas yaralanması", "Kalp krizi", "Bazı ilaçlar (örn. statinler)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek CK değerim kaslardan mı yoksa kalpten mi kaynaklanıyor?",
+    "Ayrıca CK-MB veya troponin de ölçülmeli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kalp Değerleri",
+  "pageTitle": "CK değeri: Kreatin kinaz açıklaması | Medyra"
+}

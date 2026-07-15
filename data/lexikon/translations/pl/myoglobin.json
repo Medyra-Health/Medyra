@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Mioglobina jest białkiem z mięśnia sercowego i mięśni szkieletowych, które szybko, ale niespecyficznie wzrasta przy uszkodzeniu mięśni lub serca. Ze względu na niską swoistość jest obecnie rzadziej wykorzystywana i zwykle zastępowana lub uzupełniana troponiną.",
+  "metaDescription": "Mioglobina podwyższona? Znaczenie dla uszkodzenia mięśni i serca wyjaśnione po polsku.",
+  "causesElevated": ["Zawał serca (wczesna faza)", "Uraz mięśni", "Intensywny wysiłek fizyczny", "Ograniczona funkcja nerek"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy dodatkowo oznaczana jest u mnie troponina w celu dokładniejszej oceny?",
+    "Jak pilna jest dalsza diagnostyka?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Wskaźniki serca",
+  "pageTitle": "Wartość mioglobiny wyjaśniona | Medyra"
+}

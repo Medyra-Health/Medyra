@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Eozinofil granülositler, özellikle alerji ve parazit enfestasyonlarında artan beyaz kan hücreleridir. Yüksek bir değer astım, saman nezlesi, cilt alerjileri veya bir kurt hastalığına işaret edebilir. Düşük değerler genellikle önemsizdir.",
+  "metaDescription": "Eozinofil granülositler yüksek mi? Normal değerler ve alerji gibi nedenleri basitçe açıklandı.",
+  "causesElevated": ["Alerjiler (örn. saman nezlesi, astım)", "Parazit enfestasyonu", "Egzama gibi cilt hastalıkları", "Bazı ilaç reaksiyonları"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bir alerji veya parazit enfestasyonu değerimi açıklayabilir mi?",
+    "Alerji testi yapılmalı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kan Sayımı",
+  "pageTitle": "Eozinofil değeri: Eozinofil Granülositler açıklaması | Medyra"
+}

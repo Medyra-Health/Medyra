@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Laktat, özellikle kaslar veya dokular yeterince oksijen almadığında enerji üretimi sırasında oluşur. Fiziksel efor sonrası hafif yüksek değerler normaldir; dinlenme hâlinde belirgin şekilde yüksek değerler vücutta oksijen eksikliğine işaret edebilir ve kısa süre içinde değerlendirilmelidir.",
+  "metaDescription": "Laktat yüksek mi? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Fiziksel efor", "Dokuda oksijen eksikliği", "Ağır enfeksiyon (sepsis)", "Bazı ilaçlar"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek laktat değerim ne kadar acil değerlendirilmeli?",
+    "Bende hangi neden söz konusu?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "Laktat değeri: Süt asidi açıklaması | Medyra"
+}

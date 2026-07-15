@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "IGF-1 odzwierciedla aktywność hormonu wzrostu i jest wykorzystywany do oceny zaburzeń wzrostu u dzieci oraz przy podejrzeniu nad- lub niedoczynności przysadki mózgowej u dorosłych. Zakres referencyjny jest silnie zależny od wieku.",
+  "metaDescription": "IGF-1 podwyższony lub obniżony? Znaczenie dla funkcji hormonu wzrostu wyjaśnione.",
+  "causesElevated": ["Nadmierna produkcja hormonu wzrostu (akromegalia)"],
+  "causesLow": ["Niedobór hormonu wzrostu", "Niedożywienie", "Choroby przewlekłe"],
+  "doctorQuestions": [
+    "Co oznacza mój poziom IGF-1 dla funkcji hormonu wzrostu?",
+    "Czy sensowne są dalsze badania hormonalne?"
+  ],
+  "rangeLabels": { "normal": "Normalny (silnie zależny od wieku)" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "Wartość IGF-1 wyjaśniona | Medyra"
+}

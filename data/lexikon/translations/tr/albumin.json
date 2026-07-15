@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Albümin, kandaki en önemli protein olup karaciğerde üretilir. Düşük değerler karaciğer hastalığı, yetersiz beslenme veya böbrekler yoluyla protein kaybına işaret edebilir. Değer genellikle diğer karaciğer ve böbrek değerleriyle birlikte değerlendirilir.",
+  "metaDescription": "Albümin düşük mü? Normal değerler ve olası nedenleri basitçe açıklandı.",
+  "causesElevated": ["Sıvı eksikliği (dehidratasyon)"],
+  "causesLow": ["Karaciğer hastalığı", "Yetersiz beslenme", "Protein kaybıyla seyreden böbrek hastalığı", "Kronik iltihap"],
+  "doctorQuestions": [
+    "Düşük albümin değerimin nedeni ne olabilir?",
+    "Karaciğer veya böbrek işlevlerim daha ayrıntılı incelenmeli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek (genellikle dehidratasyon)" },
+  "categoryLabel": "Karaciğer Değerleri",
+  "pageTitle": "Albümin değeri: Kan proteini açıklaması | Medyra"
+}

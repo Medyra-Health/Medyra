@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Kortizol, böbrek üstü bezinin en önemli stres hormonudur ve en yüksek değerlerin sabah görüldüğü bir günlük ritim izler. Sürekli yüksek değerler kronik stres veya böbrek üstü bezi aşırı çalışmasına, düşük değerler ise yetersiz çalışmasına işaret edebilir.",
+  "metaDescription": "Kortizol yüksek veya düşük mü? Normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Kronik stres", "Cushing sendromu", "Kortizon tedavisi"],
+  "causesLow": ["Böbrek üstü bezi yetmezliği (Addison hastalığı)", "Hipofiz bezi hastalığı", "Kortizon tedavisinin aniden kesilmesi"],
+  "doctorQuestions": [
+    "Kortizol değerim kan alma saatine uygun mu?",
+    "ACTH de ölçülmeli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük (sabah)", "normal": "Normal (sabah)", "elevated": "Yüksek" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "Kortizol değeri: Stres hormonu açıklaması | Medyra"
+}

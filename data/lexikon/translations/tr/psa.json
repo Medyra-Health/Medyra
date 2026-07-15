@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "PSA, prostat tarafından üretilir ve prostat büyümesi, iltihap veya prostat kanserinde yükselebilir. Yüksek bir değer tek başına kanser kanıtı değildir; iyi huylu nedenler çok daha sık görülür, bu yüzden bir doktor tarafından değerlendirilmesi önemlidir.",
+  "metaDescription": "PSA değeri yüksek mi? Olası nedenler ve sonraki adımlar basitçe açıklandı.",
+  "causesElevated": ["İyi huylu prostat büyümesi (BPH)", "Prostat iltihabı", "Yoğun fiziksel aktivite sonrası (örn. bisiklete binme)", "Prostat kanseri (olası nedenlerden biri)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bendeki olası nedenlerden hangisi geçerli olabilir?",
+    "İleri ürolojik inceleme gerekli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Tümör Belirteçleri",
+  "pageTitle": "PSA değeri: Prostata özgü antijen açıklaması | Medyra"
+}

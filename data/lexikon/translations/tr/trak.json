@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "TRAK, tiroid bezinin TSH reseptörünü aktive eden ve böylece aşırı çalışmayı tetikleyebilen antikorlardır. Yüksek bir değer Basedow hastalığı için tipiktir ve bu hastalığı tiroid bezinin aşırı çalışmasının diğer nedenlerinden ayırt etmeye yardımcı olur.",
+  "metaDescription": "TRAK yüksek mi? Basedow hastalığı ve tiroid bezinin aşırı çalışması için anlamı açıklandı.",
+  "causesElevated": ["Basedow hastalığı", "Otoimmün tiroid bezi aşırı çalışması"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu değer bir Basedow hastalığını doğruluyor mu?",
+    "Tiroid bezimin aşırı çalışması nasıl tedavi edilecek?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Tiroid",
+  "pageTitle": "TRAK değeri: TSH reseptör antikoru açıklaması | Medyra"
+}

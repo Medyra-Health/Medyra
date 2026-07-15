@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Apolipoprotein B, \"kötü\" kolesterol parçacıklarının (başta LDL) bir bileşenidir ve bu parçacıkların toplam sayısını yansıttığı için kalp-damar riski açısından daha hassas bir belirteç kabul edilir. Yüksek değerler damarlarda birikme riskinin artmasıyla ilişkilendirilir.",
+  "metaDescription": "Apolipoprotein B (ApoB) yüksek mi? Kalp-damar riski için anlamı basitçe açıklandı.",
+  "causesElevated": ["Yüksek LDL kolesterol", "Artmış kalp-damar riski", "Sağlıksız beslenme", "Metabolik hastalıklar"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "ApoB, LDL değerime kıyasla ne kadar önemli?",
+    "Kolesterol tedavim güncellenmeli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "ApoB değeri: Apolipoprotein B açıklaması | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "LH wyzwala u kobiet owulację i pobudza u mężczyzn produkcję testosteronu. Wartość jest często oznaczana razem z FSH, na przykład przy zaburzeniach cyklu, staraniach o dziecko lub podejrzeniu zaburzenia funkcji gonad.",
+  "metaDescription": "LH podwyższone lub obniżone? Znaczenie dla cyklu i płodności wyjaśnione.",
+  "causesElevated": ["Owulacja (krótkotrwały wzrost)", "Menopauza", "Zespół policystycznych jajników"],
+  "causesLow": ["Choroba przysadki mózgowej", "Silna utrata masy ciała lub sport wyczynowy"],
+  "doctorQuestions": [
+    "Co pokazuje stosunek LH do FSH w moim przypadku?",
+    "Czy mój cykl lub funkcja hormonalna są prawidłowe?"
+  ],
+  "rangeLabels": { "normal": "Normalny (zależny od cyklu u kobiet)" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "Wartość LH: Hormon luteinizujący wyjaśniony | Medyra"
+}

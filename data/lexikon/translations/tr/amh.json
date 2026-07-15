@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "AMH, yumurtalıklardaki foliküller tarafından üretilir ve kalan yumurta rezervinin bir göstergesi olarak kabul edilir. Değer genellikle kısırlık değerlendirmesi veya tüp bebek öncesinde ölçülür ve yaşla birlikte doğal olarak azalır.",
+  "metaDescription": "AMH (Anti-Müller Hormonu) yüksek veya düşük mü? Yumurta rezervi için anlamı açıklandı.",
+  "causesElevated": ["Polikistik over sendromu (PCOS)"],
+  "causesLow": ["Yaşa bağlı azalan yumurta rezervi", "Erken menopoz", "Kemoterapi sonrası durum"],
+  "doctorQuestions": [
+    "AMH değerim yumurta rezervim için ne anlama geliyor?",
+    "Bu değer tüp bebek planlamamı etkiler mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal (yaşa bağlı)", "elevated": "Yüksek (örn. PCOS'ta)" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "AMH değeri: Anti-Müller Hormonu açıklaması | Medyra"
+}

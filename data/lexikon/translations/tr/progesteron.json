@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Progesteron, yumurtlamadan sonra üretilir ve vücudu olası bir gebeliğe hazırlar. Döngünün ikinci yarısındaki düşük değerler, döngü bozukluklarıyla veya yumurtlamanın gerçekleşmemesiyle ilişkili olabilir ve genellikle çocuk sahibi olma isteği kapsamında araştırma sırasında ölçülür.",
+  "metaDescription": "Progesteron düşük mü? Döngü ve çocuk sahibi olma isteği için anlamı basitçe açıklandı.",
+  "causesElevated": ["Gebelik", "Yumurtlama sonrası belirli döngü evresi"],
+  "causesLow": ["Yumurtlamanın gerçekleşmemesi", "Döngü bozuklukları", "Erken gebelik komplikasyonu"],
+  "doctorQuestions": [
+    "Progesteron değerim döngüm veya çocuk sahibi olma isteğim için ne anlama geliyor?",
+    "Değer başka bir zamanda tekrar ölçülmeli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal (döngüye bağlı)" },
+  "categoryLabel": "Hormonlar",
+  "pageTitle": "Progesteron değeri: Döngü hormonu açıklaması | Medyra"
+}

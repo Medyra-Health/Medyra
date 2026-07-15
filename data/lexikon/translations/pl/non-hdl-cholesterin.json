@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Cholesterol nie-HDL obejmuje wszystkie rodzaje cholesterolu poza „dobrym\" HDL, czyli przede wszystkim LDL i inne cząstki uszkadzające naczynia. Uznawany jest za dobry wskaźnik całkowitego ryzyka sercowo-naczyniowego, zwłaszcza gdy trójglicerydy są podwyższone.",
+  "metaDescription": "Cholesterol nie-HDL podwyższony? Znaczenie dla ryzyka sercowo-naczyniowego wyjaśnione po polsku.",
+  "causesElevated": ["Podwyższony cholesterol LDL", "Podwyższone trójglicerydy", "Niekorzystna dieta", "Nadwaga"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jak wysokie jest moje ryzyko sercowo-naczyniowe na podstawie tej wartości?",
+    "Czy moje leczenie cholesterolu powinno zostać dostosowane?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Metabolizm",
+  "pageTitle": "Wartość cholesterolu nie-HDL wyjaśniona | Medyra"
+}

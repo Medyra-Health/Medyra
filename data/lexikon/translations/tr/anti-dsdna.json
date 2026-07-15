@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Anti-dsDNA antikorları, ANA'ya kıyasla sistemik lupus eritematozus için belirgin şekilde daha spesifiktir ve genellikle tanıyı doğrulamak ile hastalık aktivitesini izlemek için kullanılır. Neredeyse her zaman zaten pozitif çıkmış bir ANA sonucuyla birlikte bakılır.",
+  "metaDescription": "Anti-dsDNA antikorları yüksek mi? Sistemik lupus eritematozus için anlamı açıklandı.",
+  "causesElevated": ["Sistemik lupus eritematozus", "Bilinen lupusta aktif hastalık dönemi"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu değer sistemik lupus eritematozusu doğruluyor mu?",
+    "Değer şu anda aktif bir hastalık dönemine mi işaret ediyor?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Bağışıklık Sistemi",
+  "pageTitle": "Anti-dsDNA değeri: Sistemik lupus açıklaması | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Anti-CCP antikorları, romatoid faktöre kıyasla romatoid artrit için daha spesifik bir göstergedir ve eklem şikayetleri başlamadan önce bile saptanabilir. Pozitif bir değer, şikayetler ve diğer bulgularla birlikte doktor tarafından değerlendirilmelidir.",
+  "metaDescription": "Anti-CCP antikorları yüksek mi? Romatoid artrit için anlamı basitçe açıklandı.",
+  "causesElevated": ["Romatoid artrit", "Romatoid artrit gelişme riskinde artış"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu değer romatoid artriti ne kadar kesin doğruluyor?",
+    "Bir romatoloğa yönlendirilmeli miyim?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "İltihap Belirteçleri",
+  "pageTitle": "Anti-CCP değeri: Romatoid artrit açıklaması | Medyra"
+}

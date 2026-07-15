@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "AFP, normalde özellikle hamilelikte yükselir; hamilelik dışında ise karaciğer veya germ hücreli tümörlerin takibinde kullanılır. Kronik karaciğer hastalıkları da bir tümör olmadan bu değeri yükseltebilir.",
+  "metaDescription": "AFP yüksek mi? Tümör belirtecinin anlamı ve olası nedenleri basitçe açıklandı.",
+  "causesElevated": ["Hamilelik", "Kronik karaciğer hastalığı veya siroz", "Karaciğer kanseri veya germ hücreli tümörler (olası nedenlerden biri)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek AFP değerimin nedeni ne olabilir?",
+    "Karaciğer görüntülemesi yapılmalı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal (hamilelik dışında)", "elevated": "Yüksek" },
+  "categoryLabel": "Tümör Belirteçleri",
+  "pageTitle": "AFP değeri: Alfa-1-Fetoprotein açıklaması | Medyra"
+}

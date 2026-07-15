@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "FSH kontroluje u kobiet dojrzewanie komórek jajowych, a u mężczyzn produkcję plemników. U kobiet wartość wyraźnie wzrasta w okresie menopauzy, u obu płci podwyższona wartość może wskazywać na ograniczoną funkcję gonad.",
+  "metaDescription": "FSH podwyższone lub obniżone? Znaczenie dla menopauzy i płodności wyjaśnione.",
+  "causesElevated": ["Menopauza", "Ograniczona funkcja jajników lub jąder"],
+  "causesLow": ["Choroba przysadki mózgowej", "Silna utrata masy ciała lub sport wyczynowy"],
+  "doctorQuestions": [
+    "Czy mój poziom FSH wskazuje na początek menopauzy?",
+    "Co oznacza ta wartość dla mojej płodności?"
+  ],
+  "rangeLabels": { "normal": "Normalny (zależny od cyklu u kobiet)", "elevated": "Podwyższony (np. menopauza)" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "Wartość FSH: Hormon folikulotropowy wyjaśniony | Medyra"
+}

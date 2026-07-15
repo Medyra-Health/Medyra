@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "NT-proBNP jest uwalniany przez serce, gdy jest ono poddane zwiększonemu obciążeniu, i jest najważniejszym wskaźnikiem laboratoryjnym w diagnostyce niewydolności serca. Niska wartość czyni niewydolność serca raczej mało prawdopodobną, podwyższona wartość powinna zostać dalej wyjaśniona przez lekarza.",
+  "metaDescription": "NT-proBNP podwyższone? Znaczenie dla niewydolności serca wyjaśnione po polsku.",
+  "causesElevated": ["Niewydolność serca", "Migotanie przedsionków", "Ograniczona funkcja nerek", "Starszy wiek"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy ta wartość potwierdza niewydolność serca?",
+    "Czy sensowne jest badanie echokardiograficzne serca?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Wskaźniki serca",
+  "pageTitle": "Wartość NT-proBNP wyjaśniona | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Limfocyty to białe krwinki, które odgrywają kluczową rolę w obronie immunologicznej przed wirusami. Podwyższone wartości występują często przy infekcjach wirusowych, niskie wartości mogą wskazywać na osłabioną odporność. Nieprawidłowe wartości powinny być oceniane przez lekarza w kontekście objawów.",
+  "metaDescription": "Limfocyty podwyższone lub obniżone? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Infekcja wirusowa", "Infekcja przewlekła", "Niektóre choroby krwi"],
+  "causesLow": ["Niedobór odporności", "Silny stres", "Terapia kortyzonem", "Po chemioterapii"],
+  "doctorQuestions": [
+    "Co mogłoby tłumaczyć mój niski lub wysoki poziom limfocytów?",
+    "Czy moja odporność jest obecnie osłabiona?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone" },
+  "categoryLabel": "Morfologia krwi",
+  "pageTitle": "Wartość limfocytów wyjaśniona | Medyra"
+}

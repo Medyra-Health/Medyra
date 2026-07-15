@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Anti-CCP 항체는 류마티스 인자보다 류마티스 관절염에 더 특이적인 지표이며, 관절 증상이 나타나기 전부터 검출될 수 있습니다. 양성 결과는 증상 및 다른 검사 결과와 함께 의사가 판단해야 합니다.",
+  "metaDescription": "Anti-CCP 항체가 높나요? 류마티스 관절염과의 관계를 쉽게 설명합니다.",
+  "causesElevated": ["류마티스 관절염", "류마티스 관절염 발병 위험 증가"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "이 수치가 류마티스 관절염을 얼마나 확실히 시사하나요?",
+    "류마티스내과 전문의에게 의뢰해야 하나요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "염증 지표",
+  "pageTitle": "Anti-CCP 항체: 쉽게 알아보기 | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Całkowite IgE to przeciwciało, które jest podwyższone przy alergiach, a czasami przy zarażeniu pasożytami. Podwyższona wartość potwierdza ogólną skłonność do alergii, ale nie mówi, na jaki czynnik alergia ta występuje — do tego potrzebne są specyficzne testy IgE.",
+  "metaDescription": "IgE podwyższone? Znaczenie dla alergii i możliwe przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Choroby alergiczne (np. katar sienny, astma, atopowe zapalenie skóry)", "Zarażenie pasożytami", "Niektóre choroby immunologiczne"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy powinien zostać wykonany specyficzny test alergiczny?",
+    "Jakie alergie wchodzą u mnie w grę?"
+  ],
+  "rangeLabels": { "normal": "Normalne", "elevated": "Podwyższone" },
+  "categoryLabel": "Układ odpornościowy",
+  "pageTitle": "Wartość IgE wyjaśniona | Medyra"
+}

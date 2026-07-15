@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Anti-Tg 항체는 갑상선의 저장 단백질에 대해 생성되며, 자가면역 갑상선 질환이 의심될 때 Anti-TPO와 함께 자주 검사됩니다. 갑상선 수술 후 경과 관찰에도 사용됩니다.",
+  "metaDescription": "갑상선글로불린 항체(Anti-Tg)가 높나요? 갑상선 질환과의 관계를 설명합니다.",
+  "causesElevated": ["하시모토 갑상선염", "그레이브스병", "자가면역 갑상선염"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "이 수치가 제 갑상선 진단에 어떤 의미가 있나요?",
+    "추가 항체 검사가 도움이 될까요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "갑상선 검사",
+  "pageTitle": "Anti-Tg 항체: 갑상선글로불린 항체 쉽게 알아보기 | Medyra"
+}

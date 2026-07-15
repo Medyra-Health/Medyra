@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Anti-HCV antikorları, vücudun bir noktada hepatit C virüsüyle temas ettiğini gösterir. Pozitif bir test otomatik olarak aktif bir enfeksiyon anlamına gelmez; virüsün kendisini gösteren ek bir testle (PCR) doğrulanması gerekir.",
+  "metaDescription": "Anti-HCV pozitif mi? Hepatit C enfeksiyonu için anlamı basitçe açıklandı.",
+  "causesElevated": ["Aktif hepatit C enfeksiyonu", "Geçirilmiş ve iyileşmiş hepatit C enfeksiyonu"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Doğrulama için ayrıca PCR testi gerekli mi?",
+    "Bende aktif mi yoksa iyileşmiş bir enfeksiyon mu var?"
+  ],
+  "rangeLabels": {},
+  "categoryLabel": "Enfeksiyon Değerleri",
+  "pageTitle": "Anti-HCV testi: Hepatit C açıklaması | Medyra"
+}

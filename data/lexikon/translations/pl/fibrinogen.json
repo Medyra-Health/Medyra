@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Fibrynogen jest białkiem niezbędnym do krzepnięcia krwi, które służy dodatkowo jako marker stanu zapalnego. Podwyższone wartości występują często przy zapaleniach lub infekcjach, niskie wartości mogą wskazywać na zaburzenie krzepnięcia lub chorobę wątroby.",
+  "metaDescription": "Fibrynogen podwyższony lub obniżony? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione.",
+  "causesElevated": ["Zapalenie lub infekcja", "Po operacjach", "Ciąża"],
+  "causesLow": ["Koagulopatia ze zużycia", "Choroba wątroby", "Rzadkie wrodzone zaburzenie krzepnięcia"],
+  "doctorQuestions": [
+    "Co mogłoby tłumaczyć moją nieprawidłową wartość fibrynogenu?",
+    "Czy istnieje zwiększone ryzyko krwawienia lub zakrzepicy?"
+  ],
+  "rangeLabels": { "low": "Niski", "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Krzepnięcie",
+  "pageTitle": "Wartość fibrynogenu wyjaśniona | Medyra"
+}

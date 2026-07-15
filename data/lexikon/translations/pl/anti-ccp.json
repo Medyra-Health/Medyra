@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Przeciwciała anty-CCP są bardziej swoistym wskaźnikiem reumatoidalnego zapalenia stawów niż czynnik reumatoidalny i mogą być wykrywalne jeszcze przed pojawieniem się dolegliwości stawowych. Dodatni wynik powinien być oceniony przez lekarza razem z objawami i innymi wynikami badań.",
+  "metaDescription": "Przeciwciała anty-CCP podwyższone? Znaczenie dla reumatoidalnego zapalenia stawów wyjaśnione.",
+  "causesElevated": ["Reumatoidalne zapalenie stawów", "Zwiększone ryzyko rozwoju reumatoidalnego zapalenia stawów"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jak pewnie ta wartość potwierdza reumatoidalne zapalenie stawów?",
+    "Czy powinienem/powinnam zostać skierowany/a do reumatologa?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Markery zapalne",
+  "pageTitle": "Wartość anty-CCP wyjaśniona | Medyra"
+}

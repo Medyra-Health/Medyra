@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Transferrin doygunluğu, demir taşıyıcı protein olan transferrinin şu anda ne kadarının demirle dolu olduğunu gösterir. Düşük değerler demir eksikliğine işaret ederken, yüksek değerler hemokromatozdaki gibi bir demir yüklenmesine işaret edebilir.",
+  "metaDescription": "Transferrin doygunluğu yüksek veya düşük mü? Demir eksikliği ve yüklenmesi için anlamı açıklandı.",
+  "causesElevated": ["Demir yüklenmesi (hemokromatoz)", "Sık kan transfüzyonları", "Karaciğer hastalığı"],
+  "causesLow": ["Demir eksikliği", "Kronik iltihap", "Kan kaybı"],
+  "doctorQuestions": [
+    "Transferrin doygunluğum bir demir eksikliğine mi yoksa yüklenmesine mi işaret ediyor?",
+    "Hemokromatoz dışlanmalı mı?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Demir Değerleri",
+  "pageTitle": "Transferrin doygunluğu değeri: Anlamı basitçe açıklandı | Medyra"
+}

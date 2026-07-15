@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Anti-HCV 항체는 신체가 어느 시점에 C형 간염 바이러스에 노출되었음을 나타냅니다. 양성 결과가 자동으로 활동성 감염을 의미하지는 않으며, 바이러스 자체를 확인하는 추가 검사(PCR)로 확진해야 합니다.",
+  "metaDescription": "Anti-HCV가 양성인가요? C형 간염 감염과의 관계를 쉽게 설명합니다.",
+  "causesElevated": ["현재 C형 간염 감염", "회복되어 완치된 C형 간염 감염"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "확진을 위해 추가 PCR 검사가 필요한가요?",
+    "제 경우 활동성 감염인가요, 완치된 감염인가요?"
+  ],
+  "rangeLabels": {},
+  "categoryLabel": "감염 검사",
+  "pageTitle": "Anti-HCV 검사: 쉽게 알아보기 | Medyra"
+}

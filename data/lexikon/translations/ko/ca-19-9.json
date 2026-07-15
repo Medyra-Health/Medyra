@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "CA 19-9는 주로 췌장 및 담도와 관련하여 검사되지만, 담즙 정체, 염증 또는 다른 양성 질환에서도 상승할 수 있습니다. 초기 진단보다는 경과 관찰에 더 자주 사용됩니다.",
+  "metaDescription": "CA 19-9가 높나요? 종양표지자의 의미와 가능한 원인을 설명합니다.",
+  "causesElevated": ["담즙 정체", "췌장염", "간질환", "췌장암(여러 원인 중 하나)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "제 상승 수치의 가장 유력한 원인은 무엇인가요?",
+    "췌장 영상 검사가 필요한가요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "종양표지자 검사",
+  "pageTitle": "CA 19-9 수치: 쉽게 알아보기 | Medyra"
+}

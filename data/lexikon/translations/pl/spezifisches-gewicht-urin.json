@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Ciężar właściwy pokazuje, jak bardzo mocz jest zagęszczony, i dostarcza wskazówek dotyczących gospodarki wodnej oraz zdolności zagęszczającej nerek. Niskie wartości mogą wskazywać na dużą podaż płynów lub ograniczoną funkcję nerek, wysokie wartości na niedobór płynów.",
+  "metaDescription": "Ciężar właściwy moczu podwyższony lub obniżony? Znaczenie wyjaśnione po polsku.",
+  "causesElevated": ["Odwodnienie", "Zagęszczony mocz poranny"],
+  "causesLow": ["Duża podaż płynów", "Ograniczona zdolność zagęszczająca nerek", "Moczówka prosta (rzadko)"],
+  "doctorQuestions": [
+    "Czy ta wartość odzwierciedla moją gospodarkę wodną, czy chorobę nerek?",
+    "Czy powinienem/powinnam dostosować ilość wypijanych płynów?"
+  ],
+  "rangeLabels": { "normal": "Normalny" },
+  "categoryLabel": "Wskaźniki moczu",
+  "pageTitle": "Ciężar właściwy moczu wyjaśniony | Medyra"
+}

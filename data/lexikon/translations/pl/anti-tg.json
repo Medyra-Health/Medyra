@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Przeciwciała anty-Tg są skierowane przeciwko białku magazynującemu tarczycy i są często oznaczane razem z anty-TPO przy podejrzeniu autoimmunologicznej choroby tarczycy. Są również wykorzystywane do monitorowania po operacjach tarczycy.",
+  "metaDescription": "Przeciwciała anty-Tg podwyższone? Znaczenie dla chorób tarczycy wyjaśnione.",
+  "causesElevated": ["Choroba Hashimoto", "Choroba Gravesa-Basedowa", "Autoimmunologiczne zapalenie tarczycy"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jakie znaczenie ma ta wartość dla mojej diagnozy tarczycowej?",
+    "Czy sensowne są dalsze testy przeciwciał?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Tarczyca",
+  "pageTitle": "Wartość anty-Tg: Przeciwciała przeciwtyreoglobulinowe wyjaśnione | Medyra"
+}

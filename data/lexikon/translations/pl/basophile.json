@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Granulocyty zasadochłonne (bazofile) są najrzadszym rodzajem białych krwinek i odgrywają rolę w reakcjach alergicznych oraz przewlekłych stanach zapalnych. Lekko podwyższone wartości są zwykle nieszkodliwe, znacznie podwyższone wartości powinny zostać wyjaśnione przez lekarza.",
+  "metaDescription": "Granulocyty zasadochłonne (bazofile) podwyższone? Znaczenie i możliwe przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Reakcje alergiczne", "Przewlekłe zapalenie", "Niektóre choroby krwi"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy mój podwyższony poziom bazofilów jest klinicznie istotny?",
+    "Czy potrzebne są dalsze badania?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Morfologia krwi",
+  "pageTitle": "Wartość bazofilów wyjaśniona | Medyra"
+}

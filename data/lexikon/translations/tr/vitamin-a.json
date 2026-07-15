@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "A vitamini, görme yeteneği, cilt ve bağışıklık sistemi için önemlidir. Eksikliği genellikle yağ emilim bozuklukları veya yetersiz beslenme sonucu ortaya çıkar ve gece körlüğü veya kuru cilt gibi belirtilerle kendini gösterebilir. Besin takviyeleri nedeniyle çok yüksek değerler de zararlı olabilir.",
+  "metaDescription": "A vitamini yüksek veya düşük mü? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Besin takviyeleriyle aşırı doz"],
+  "causesLow": ["Yetersiz beslenme", "Yağ emilim bozukluğu (örn. çölyak hastalığında)", "Karaciğer hastalığı"],
+  "doctorQuestions": [
+    "A vitamini değerim şikayetlerimi açıklıyor mu?",
+    "A vitamini takviyesi almalı mıyım yoksa azaltmalı mıyım?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Vitaminler",
+  "pageTitle": "A vitamini değeri: Anlamı basitçe açıklandı | Medyra"
+}

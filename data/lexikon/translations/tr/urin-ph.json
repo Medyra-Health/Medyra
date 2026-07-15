@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "İdrarın pH değeri, idrarın asidik mi yoksa bazik mi olduğunu gösterir ve beslenme, metabolizma ve bazı hastalıklardan etkilenir. Belirli böbrek taşı türlerinin oluşumunda da rol oynar.",
+  "metaDescription": "İdrar pH değeri yüksek veya düşük mü? Anlamı ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Vejetaryen/baz ağırlıklı beslenme", "İdrar yolu enfeksiyonu", "Böbrek işlev bozukluğu"],
+  "causesLow": ["Protein ağırlıklı beslenme", "Metabolik bozulma (örn. ketoasidoz)"],
+  "doctorQuestions": [
+    "İdrar pH değerim böbrek taşı oluşumunu etkiliyor mu?",
+    "Beslenmem ayarlanmalı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal" },
+  "categoryLabel": "İdrar Değerleri",
+  "pageTitle": "İdrar pH değeri: Anlamı basitçe açıklandı | Medyra"
+}

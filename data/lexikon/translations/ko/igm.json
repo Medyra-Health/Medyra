@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "IgM은 새로운 감염 시 가장 먼저 생성되는 항체 종류로, 대개 급성 또는 최근에 앓은 감염을 나타냅니다. 급성 감염과 과거 감염을 구별하기 위해 IgG와 함께 평가되는 경우가 많습니다.",
+  "metaDescription": "IgM이 높거나 낮나요? 급성 감염에 대한 의미를 쉽게 설명합니다.",
+  "causesElevated": ["급성 감염", "특정 자가면역질환", "특정 혈액질환(예: 발덴스트룀병)"],
+  "causesLow": ["선천성 또는 후천성 면역 결핍"],
+  "doctorQuestions": [
+    "제 IgM 수치가 급성 감염을 의미하나요?",
+    "IgG도 추가로 검사해야 하나요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "면역 검사",
+  "pageTitle": "IgM 수치: 쉽게 알아보기 | Medyra"
+}

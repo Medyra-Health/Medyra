@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "CK-MB jest podformą kinazy kreatynowej, występującą przede wszystkim w mięśniu sercowym, dlatego jest bardziej swoistym wskaźnikiem uszkodzenia serca niż CK całkowita. Oznacza się ją zwykle razem z troponiną przy podejrzeniu zawału serca.",
+  "metaDescription": "CK-MB podwyższone? Znaczenie dla uszkodzenia mięśnia sercowego wyjaśnione po polsku.",
+  "causesElevated": ["Zawał serca", "Zapalenie mięśnia sercowego", "Po operacjach kardiochirurgicznych"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy CK-MB razem z moim poziomem troponiny potwierdza uszkodzenie serca?",
+    "Jaki jest dalszy plan leczenia?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Wskaźniki serca",
+  "pageTitle": "Wartość CK-MB wyjaśniona | Medyra"
+}

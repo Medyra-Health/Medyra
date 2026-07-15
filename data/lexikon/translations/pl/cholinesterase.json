@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Cholinesteraza jest wytwarzana w wątrobie i pokazuje, jak dobrze wątroba aktualnie produkuje białka. Niskie wartości mogą wskazywać na ograniczoną czynność wątroby lub zatrucie, podwyższone wartości występują między innymi przy stłuszczeniu wątroby lub cukrzycy.",
+  "metaDescription": "Cholinesteraza zbyt niska lub zbyt wysoka? Znaczenie i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Stłuszczenie wątroby", "Cukrzyca", "Nadwaga"],
+  "causesLow": ["Zaawansowana choroba wątroby", "Zatrucie (np. środkami ochrony roślin)", "Niedożywienie"],
+  "doctorQuestions": [
+    "Czy moja cholinesteraza wskazuje na ograniczoną czynność wątroby?",
+    "Czy powinny zostać skontrolowane dodatkowe wskaźniki wątrobowe?"
+  ],
+  "rangeLabels": { "low": "Niska", "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Wskaźniki wątrobowe",
+  "pageTitle": "Wartość cholinesterazy wyjaśniona | Medyra"
+}

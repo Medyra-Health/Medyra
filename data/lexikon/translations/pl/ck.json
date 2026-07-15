@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Kinaza kreatynowa występuje przede wszystkim w mięśniu sercowym i mięśniach szkieletowych i wzrasta przy uszkodzeniach mięśni, na przykład po intensywnym wysiłku fizycznym, ale także przy zawale serca. Dla dokładniejszej oceny często oznacza się dodatkowo CK-MB lub troponinę.",
+  "metaDescription": "Kinaza kreatynowa (CK) podwyższona? Znaczenie dla uszkodzenia mięśni i serca wyjaśnione.",
+  "causesElevated": ["Intensywny wysiłek fizyczny", "Uraz mięśni", "Zawał serca", "Niektóre leki (np. statyny)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy moja podwyższona CK pochodzi z mięśni, czy z serca?",
+    "Czy powinna zostać oznaczona także CK-MB lub troponina?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Wskaźniki serca",
+  "pageTitle": "Wartość CK: Kinaza kreatynowa wyjaśniona | Medyra"
+}

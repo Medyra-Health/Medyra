@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "DHEA-S wytwarzany jest niemal wyłącznie w nadnerczach i służy jako prekursor hormonów płciowych. Podwyższone wartości mogą wskazywać na zwiększoną produkcję hormonów przez nadnercza, niskie wartości zwykle zmniejszają się naturalnie z wiekiem.",
+  "metaDescription": "DHEA-S podwyższony lub obniżony? Znaczenie dla funkcji nadnerczy wyjaśnione prosto.",
+  "causesElevated": ["Zwiększona aktywność nadnerczy", "Zespół policystycznych jajników", "Rzadkie guzy nadnerczy"],
+  "causesLow": ["Spadek związany z wiekiem", "Niedoczynność kory nadnerczy"],
+  "doctorQuestions": [
+    "Czy mój poziom DHEA-S może być związany ze wzmożonym owłosieniem lub zaburzeniami cyklu?",
+    "Czy sensowne jest obrazowanie nadnerczy?"
+  ],
+  "rangeLabels": { "normal": "Normalny (zależny od wieku)" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "Wartość DHEA-S wyjaśniona | Medyra"
+}

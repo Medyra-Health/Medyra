@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "호염기구는 가장 드문 종류의 백혈구로 알레르기 반응과 만성 염증에서 역할을 합니다. 경미한 상승은 대개 문제가 되지 않지만, 크게 상승한 경우는 의사의 진료가 필요합니다.",
+  "metaDescription": "호염기구가 높나요? 의미와 가능한 원인을 쉽게 설명합니다.",
+  "causesElevated": ["알레르기 반응", "만성 염증", "특정 혈액질환"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "제 호염기구 상승이 임상적으로 의미가 있나요?",
+    "추가 검사가 필요한가요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "혈구 검사",
+  "pageTitle": "호염기구 수치: 쉽게 알아보기 | Medyra"
+}

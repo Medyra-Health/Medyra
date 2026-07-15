@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Fibrinojen, kan pıhtılaşması için gerekli olan bir protein olup ek olarak bir iltihap belirteci görevi görür. Yüksek değerler sıkça iltihap veya enfeksiyonlarda görülürken, düşük değerler bir pıhtılaşma bozukluğuna veya karaciğer hastalığına işaret edebilir.",
+  "metaDescription": "Fibrinojen yüksek veya düşük mü? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["İltihap veya enfeksiyon", "Ameliyat sonrası", "Gebelik"],
+  "causesLow": ["Yaygın damar içi pıhtılaşma", "Karaciğer hastalığı", "Nadir doğuştan pıhtılaşma bozukluğu"],
+  "doctorQuestions": [
+    "Anormal fibrinojen değerimin nedeni ne olabilir?",
+    "Kanama veya tromboz riskim artmış mı?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Pıhtılaşma",
+  "pageTitle": "Fibrinojen değeri: Pıhtılaşma proteini açıklaması | Medyra"
+}

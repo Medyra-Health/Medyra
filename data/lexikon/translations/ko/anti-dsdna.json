@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Anti-dsDNA 항체는 ANA보다 전신 홍반 루푸스에 훨씬 특이적이며, 진단 확인 및 질병 활동성의 경과 관찰에 자주 사용됩니다. 이미 ANA 양성인 경우에 거의 항상 함께 검사됩니다.",
+  "metaDescription": "Anti-dsDNA 항체가 높나요? 전신 홍반 루푸스와의 관계를 설명합니다.",
+  "causesElevated": ["전신 홍반 루푸스", "이미 루푸스가 있는 경우 활동기"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "이 수치가 전신 홍반 루푸스를 확진하나요?",
+    "현재 질병이 활동성 단계임을 나타내나요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "면역 검사",
+  "pageTitle": "Anti-dsDNA 항체: 쉽게 알아보기 | Medyra"
+}

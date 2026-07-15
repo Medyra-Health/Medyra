@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Lenfositler, virüslere karşı bağışıklık savunmasında merkezi rol oynayan beyaz kan hücreleridir. Yüksek değerler sıklıkla viral enfeksiyonlarda görülürken, düşük değerler zayıflamış bir bağışıklık savunmasına işaret edebilir. Anormal değerler şikayetlerinizle birlikte doktor tarafından değerlendirilmelidir.",
+  "metaDescription": "Lenfositler yüksek veya düşük mü? Anlamı, normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Viral enfeksiyon", "Kronik enfeksiyon", "Bazı kan hastalıkları"],
+  "causesLow": ["Bağışıklık yetersizliği", "Ağır stres", "Kortizon tedavisi", "Kemoterapi sonrası"],
+  "doctorQuestions": [
+    "Düşük veya yüksek lenfosit değerimi ne açıklayabilir?",
+    "Bağışıklık savunmam şu anda zayıflamış mı?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kan Sayımı",
+  "pageTitle": "Lenfosit değeri: Anlamı basitçe açıklandı | Medyra"
+}

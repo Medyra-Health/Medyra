@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "NT-proBNP, kalp fazla yük altında olduğunda kalp tarafından salgılanır ve kalp yetmezliğinin araştırılmasında en önemli laboratuvar değeridir. Düşük bir değer kalp yetmezliğini daha az olası kılar; yüksek bir değer ise doktor tarafından ileri incelenmelidir.",
+  "metaDescription": "NT-proBNP yüksek mi? Kalp yetmezliği için anlamı basitçe açıklandı.",
+  "causesElevated": ["Kalp yetmezliği", "Atriyal fibrilasyon", "Azalmış böbrek işlevi", "İleri yaş"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu değer kalp yetmezliğini doğruluyor mu?",
+    "Kalp ultrasonu (ekokardiyografi) gerekli mi?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Kalp Değerleri",
+  "pageTitle": "NT-proBNP değeri: Kalp yetmezliği açıklaması | Medyra"
+}

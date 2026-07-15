@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Toplam IgE, alerjilerde ve bazen parazit enfestasyonunda yükselen bir antikordur. Yüksek bir değer genel bir alerji eğilimini doğrular, ancak hangi maddeye karşı olduğunu göstermez; bunun için spesifik IgE testleri gereklidir.",
+  "metaDescription": "IgE yüksek mi? Alerjiler için anlamı basitçe açıklandı.",
+  "causesElevated": ["Alerjik hastalıklar (örn. saman nezlesi, astım, egzama)", "Parazit enfestasyonu", "Bazı bağışıklık hastalıkları"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Spesifik bir alerji testi yapılmalı mı?",
+    "Bende hangi alerjiler söz konusu olabilir?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Bağışıklık Sistemi",
+  "pageTitle": "IgE değeri: İmmünoglobulin E açıklaması | Medyra"
+}

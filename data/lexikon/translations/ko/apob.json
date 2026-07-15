@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "아포지단백B는 '나쁜' 콜레스테롤 입자(LDL 등)의 구성 성분으로, 이러한 입자의 총 개수를 반영하기 때문에 심혈관 위험을 더 정밀하게 나타내는 지표로 여겨집니다. 상승한 수치는 혈관 침착 위험 증가와 관련이 있습니다.",
+  "metaDescription": "아포지단백B(ApoB)가 높나요? 심혈관 위험과의 관계를 쉽게 설명합니다.",
+  "causesElevated": ["LDL 콜레스테롤 상승", "심혈관 위험 증가", "불균형한 식습관", "대사질환"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "ApoB가 제 LDL 수치보다 얼마나 더 중요한가요?",
+    "콜레스테롤 치료를 조정해야 하나요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "대사 검사",
+  "pageTitle": "ApoB 수치: 아포지단백B 쉽게 알아보기 | Medyra"
+}

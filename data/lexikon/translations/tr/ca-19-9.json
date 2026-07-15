@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "CA 19-9 en çok pankreas ve safra yollarıyla bağlantılı olarak ölçülür, ancak safra akışı tıkanıklığı, iltihaplar veya diğer iyi huylu hastalıklarda da yükselebilir. İlk tanıdan çok takip amacıyla kullanılır.",
+  "metaDescription": "CA 19-9 yüksek mi? Tümör belirtecinin anlamı ve olası nedenleri basitçe açıklandı.",
+  "causesElevated": ["Safra akışında tıkanma", "Pankreas iltihabı (pankreatit)", "Karaciğer hastalığı", "Pankreas kanseri (olası nedenlerden biri)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Yüksek değerimin en olası nedeni ne olabilir?",
+    "Pankreasın görüntülenmesi anlamlı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Tümör Belirteçleri",
+  "pageTitle": "CA 19-9 değeri: Pankreas belirteci açıklaması | Medyra"
+}

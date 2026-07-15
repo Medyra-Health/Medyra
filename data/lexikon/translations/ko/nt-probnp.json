@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "NT-proBNP는 심장이 과도한 부담을 받을 때 분비되며, 심부전을 확인하는 데 가장 중요한 검사 수치입니다. 낮은 수치는 심부전 가능성을 낮추고, 상승한 수치는 신속히 의사의 추가 진료가 필요합니다.",
+  "metaDescription": "NT-proBNP가 높나요? 심부전에 대한 의미를 쉽게 설명합니다.",
+  "causesElevated": ["심부전", "심방세동", "신장 기능 저하", "고령"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "이 수치가 심부전을 확인해주나요?",
+    "심장초음파 검사가 필요한가요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "심장 검사",
+  "pageTitle": "NT-proBNP 수치: 쉽게 알아보기 | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "E vitamini, hücreleri oksidatif strese karşı koruyan yağda çözünen bir antioksidandır. Eksikliği nadirdir ve en çok yağ emilim bozukluklarında görülür. Kas zayıflığı veya sinir problemleri şeklinde kendini gösterebilir.",
+  "metaDescription": "E vitamini düşük mü? Anlamı, normal değerler ve eksikliğin nedenleri basitçe açıklandı.",
+  "causesElevated": [],
+  "causesLow": ["Yağ emilim bozukluğu", "Yetersiz beslenme", "Nadir genetik hastalıklar"],
+  "doctorQuestions": [
+    "Bende bir yağ emilim bozukluğu olabilir mi?",
+    "E vitamini takviyesi almalı mıyım?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal" },
+  "categoryLabel": "Vitaminler",
+  "pageTitle": "E vitamini değeri: Anlamı basitçe açıklandı | Medyra"
+}

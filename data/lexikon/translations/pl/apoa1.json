@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Apolipoproteina A1 jest głównym składnikiem białkowym „dobrego\" cholesterolu HDL i wspiera transport zwrotny cholesterolu do wątroby. Niskie wartości są związane z podwyższonym ryzykiem sercowo-naczyniowym, wyższe wartości są ogólnie uważane za korzystne.",
+  "metaDescription": "Apolipoproteina A1 (ApoA1) zbyt niska? Znaczenie dla ryzyka sercowo-naczyniowego wyjaśnione.",
+  "causesElevated": [],
+  "causesLow": ["Podwyższone ryzyko sercowo-naczyniowe", "Niski cholesterol HDL", "Palenie tytoniu"],
+  "doctorQuestions": [
+    "Co oznacza mój poziom ApoA1 dla mojego ryzyka sercowo-naczyniowego?",
+    "Czy mogę poprawić swój wynik poprzez zmianę stylu życia?"
+  ],
+  "rangeLabels": { "low": "Niski", "normal": "Normalny (im wyższy, tym lepiej)" },
+  "categoryLabel": "Metabolizm",
+  "pageTitle": "Wartość ApoA1: Apolipoproteina A1 wyjaśniona | Medyra"
+}

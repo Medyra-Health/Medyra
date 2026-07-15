@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Toplam protein değeri, kan serumundaki tüm proteinleri, özellikle albumin ve immünoglobulinleri ölçer. Yüksek değerler sıvı eksikliği veya kronik iltihaplardan kaynaklanabilirken, düşük değerler yetersiz beslenme, karaciğer veya böbrek hastalıklarından kaynaklanabilir.",
+  "metaDescription": "Toplam protein yüksek veya düşük mü? Normal değerler ve nedenleri basitçe açıklandı.",
+  "causesElevated": ["Sıvı eksikliği (dehidratasyon)", "Kronik iltihap", "Bazı kan hastalıkları"],
+  "causesLow": ["Yetersiz beslenme", "Karaciğer hastalığı", "Protein kaybıyla seyreden böbrek hastalığı"],
+  "doctorQuestions": [
+    "Anormal toplam protein değerimin nedeni nedir?",
+    "Protein elektroforezi yapılması anlamlı mı?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Karaciğer Değerleri",
+  "pageTitle": "Toplam protein değeri: Normal değerler açıklaması | Medyra"
+}

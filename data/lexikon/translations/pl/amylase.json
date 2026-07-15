@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Amylaza to enzym trawienny wytwarzany przede wszystkim w trzustce i gruczołach ślinowych. Znacznie podwyższone wartości występują typowo przy ostrym zapaleniu trzustki, lekko podwyższone wartości mogą pochodzić także z gruczołów ślinowych.",
+  "metaDescription": "Amylaza podwyższona? Znaczenie dla trzustki wyjaśnione prosto po polsku.",
+  "causesElevated": ["Ostre zapalenie trzustki", "Zapalenie gruczołów ślinowych", "Kamienie żółciowe"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy moja podwyższona amylaza wskazuje na zapalenie trzustki?",
+    "Czy dodatkowo powinna zostać oznaczona lipaza?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Wskaźniki trzustkowe",
+  "pageTitle": "Wartość amylazy wyjaśniona | Medyra"
+}

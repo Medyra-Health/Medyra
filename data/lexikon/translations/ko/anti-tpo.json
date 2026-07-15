@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Anti-TPO 항체는 갑상선의 한 효소에 대해 생성되며 하시모토 갑상선염 같은 자가면역 갑상선 질환의 가장 중요한 지표입니다. 상승한 수치는 대개, 그러나 항상 그런 것은 아니지만, 이러한 질환을 확인해 줍니다.",
+  "metaDescription": "Anti-TPO 항체가 높나요? 하시모토와 갑상선 질환에 대한 의미를 설명합니다.",
+  "causesElevated": ["하시모토 갑상선염", "그레이브스병", "다른 자가면역질환"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "이 수치가 자가면역 갑상선 질환을 확인해 주나요?",
+    "제 갑상선 기능을 정기적으로 검사해야 하나요?"
+  ],
+  "rangeLabels": { "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "갑상선 검사",
+  "pageTitle": "Anti-TPO 항체: 갑상선과산화효소 항체 쉽게 알아보기 | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Apolipoproteina B jest składnikiem „złych\" cząstek cholesterolu (m.in. LDL) i uznawana jest za precyzyjny wskaźnik ryzyka sercowo-naczyniowego, ponieważ odzwierciedla całkowitą liczbę tych cząstek. Podwyższone wartości są związane z wyższym ryzykiem odkładania się złogów w naczyniach.",
+  "metaDescription": "Apolipoproteina B (ApoB) podwyższona? Znaczenie dla ryzyka sercowo-naczyniowego wyjaśnione prosto.",
+  "causesElevated": ["Podwyższony cholesterol LDL", "Podwyższone ryzyko sercowo-naczyniowe", "Niekorzystna dieta", "Choroby metaboliczne"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Jak ważne jest ApoB w porównaniu z moim poziomem LDL?",
+    "Czy moje leczenie cholesterolu powinno zostać dostosowane?"
+  ],
+  "rangeLabels": { "normal": "Normalny", "elevated": "Podwyższony" },
+  "categoryLabel": "Metabolizm",
+  "pageTitle": "Wartość ApoB: Apolipoproteina B wyjaśniona | Medyra"
+}

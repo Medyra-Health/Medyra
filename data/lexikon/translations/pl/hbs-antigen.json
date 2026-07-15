@@ -1,0 +1,12 @@
+{
+  "shortAnswer": "HBsAg jest składnikiem otoczki wirusa zapalenia wątroby typu B i najważniejszym markerem ostrego lub przewlekłego zakażenia WZW typu B. Dodatni wynik oznacza, że wirus jest aktywnie wykrywalny w organizmie i powinien zostać dalej wyjaśniony przez lekarza.",
+  "metaDescription": "HBsAg dodatnie? Znaczenie dla zakażenia wirusem zapalenia wątroby typu B wyjaśnione po polsku.",
+  "causesElevated": ["Ostra infekcja WZW typu B", "Przewlekła infekcja WZW typu B"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy jest to infekcja ostra, czy przewlekła?",
+    "Czy konieczne jest leczenie lub dalsza kontrola?"
+  ],
+  "categoryLabel": "Wskaźniki infekcji",
+  "pageTitle": "HBsAg wyjaśnione | Medyra"
+}

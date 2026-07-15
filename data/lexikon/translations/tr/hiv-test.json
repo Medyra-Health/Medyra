@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "HIV testi, kanda antikorları ve bazen HIV virüsünün bileşenlerini saptar. Pozitif bir sonuç, kesin bir değerlendirme yapılmadan önce her zaman ikinci, bağımsız bir testle doğrulanır. Test sonucunuzla ilgili sorularınız için doktorunuza veya bir danışma merkezine başvurun.",
+  "metaDescription": "HIV testi pozitif mi? Anlamı ve sonraki adımlar sade ve nesnel bir dille açıklandı.",
+  "causesElevated": ["HIV enfeksiyonu (doğrulama testinden sonra)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Doğrulama testi zaten yapıldı mı?",
+    "Şimdi hangi adımlar atılmalı?"
+  ],
+  "rangeLabels": {},
+  "categoryLabel": "Enfeksiyon Değerleri",
+  "pageTitle": "HIV testi: Anlamı ve sonraki adımlar açıklaması | Medyra"
+}

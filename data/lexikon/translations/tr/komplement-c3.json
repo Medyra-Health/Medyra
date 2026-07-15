@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Kompleman faktörü C3, hastalık etkenleriyle doğrudan mücadele eden ve iltihap reaksiyonlarını destekleyen bir sistemin parçasıdır. Düşük değerler lupus gibi otoimmün hastalıklarda artan tüketime işaret edebilirken, yüksek değerler akut iltihaplarda görülür.",
+  "metaDescription": "Kompleman faktörü C3 yüksek veya düşük mü? Otoimmün hastalıklar için anlamı açıklandı.",
+  "causesElevated": ["Akut iltihap veya enfeksiyon"],
+  "causesLow": ["Otoimmün hastalıklar (örn. sistemik lupus eritematozus)", "Doğuştan kompleman eksikliği", "Kronik karaciğer hastalığı"],
+  "doctorQuestions": [
+    "Düşük C3 değerim bir otoimmün hastalığa mı işaret ediyor?",
+    "Ek olarak C4 ve ANA da ölçülmeli mi?"
+  ],
+  "rangeLabels": { "low": "Düşük", "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Bağışıklık Sistemi",
+  "pageTitle": "Kompleman C3 değeri: Otoimmün hastalıklar açıklaması | Medyra"
+}

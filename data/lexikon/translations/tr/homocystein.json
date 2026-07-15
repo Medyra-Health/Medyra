@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Homosistein, protein metabolizmasının bir ara ürünüdür ve B12 vitamini, folik asit ve B6 vitamini yardımıyla parçalanır. Yüksek değerler genellikle bu vitaminlerin eksikliğinden kaynaklanır ve artmış damar riskiyle ilişkilendirilir.",
+  "metaDescription": "Homosistein yüksek mi? Anlamı, normal değerler ve vitamin eksikliği gibi nedenleri açıklandı.",
+  "causesElevated": ["B12 vitamini eksikliği", "Folik asit eksikliği", "B6 vitamini eksikliği", "Böbrek hastalığı"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bende bir vitamin eksikliği neden olarak söz konusu mu?",
+    "B12 vitamini veya folik asit takviyesi almalı mıyım?"
+  ],
+  "rangeLabels": { "normal": "Normal", "elevated": "Yüksek" },
+  "categoryLabel": "Metabolizma",
+  "pageTitle": "Homosistein değeri: Vitamin eksikliği açıklaması | Medyra"
+}

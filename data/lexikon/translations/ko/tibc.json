@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "TIBC는 혈액이 최대로 운반할 수 있는 철의 총량을 측정하며, 간접적으로 트랜스페린의 양을 반영합니다. 상승한 수치는 대개 철분 결핍에서 나타나고, 낮은 수치는 철 과잉이나 만성 염증에서 나타납니다.",
+  "metaDescription": "TIBC(총철결합능)가 높거나 낮나요? 철분 결핍과의 관계를 쉽게 설명합니다.",
+  "causesElevated": ["철분 결핍"],
+  "causesLow": ["철 과잉(혈색소침착증)", "만성 염증", "간질환"],
+  "doctorQuestions": [
+    "이 수치가 철분 결핍을 확인해주나요?",
+    "다른 철분 관련 수치도 검사해야 하나요?"
+  ],
+  "rangeLabels": { "low": "낮음", "normal": "정상", "elevated": "상승" },
+  "categoryLabel": "철 대사 검사",
+  "pageTitle": "TIBC 수치: 총철결합능 쉽게 알아보기 | Medyra"
+}

@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "CEA jest niespecyficznym markerem nowotworowym, wykorzystywanym przede wszystkim do monitorowania przebiegu już znanych chorób nowotworowych, zwłaszcza jelita grubego. Podwyższone wartości występują także u palaczy i przy różnych łagodnych chorobach i same w sobie nie są dowodem na chorobę nowotworową.",
+  "metaDescription": "CEA podwyższone? Znaczenie markera nowotworowego i możliwe przyczyny wyjaśnione.",
+  "causesElevated": ["Palenie tytoniu", "Przewlekłe zapalne choroby jelit", "Choroby wątroby lub płuc", "Znana choroba nowotworowa (do monitorowania przebiegu)"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy ta wartość jest u mnie wykorzystywana do monitorowania przebiegu, czy do wstępnej diagnostyki?",
+    "Jakie dalsze badania są sensowne?"
+  ],
+  "rangeLabels": { "normal": "Normalny (osoby niepalące)", "elevated": "Podwyższony" },
+  "categoryLabel": "Markery nowotworowe",
+  "pageTitle": "Wartość CEA wyjaśniona | Medyra"
+}

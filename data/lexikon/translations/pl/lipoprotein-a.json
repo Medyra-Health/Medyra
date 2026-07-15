@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Lipoproteina(a) to genetycznie uwarunkowany wskaźnik tłuszczów we krwi, który niezależnie od diety i stylu życia może wpływać na ryzyko chorób sercowo-naczyniowych. Ponieważ wartość ta jest zwykle oznaczana tylko raz w życiu, jest szczególnie istotna przy obciążeniu rodzinnym.",
+  "metaDescription": "Lipoproteina(a) podwyższona? Znaczenie dla ryzyka sercowo-naczyniowego wyjaśnione po polsku.",
+  "causesElevated": ["Uwarunkowanie genetyczne (dziedziczne)", "Może być podwyższona niezależnie od stylu życia"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy mój poziom Lp(a) zwiększa moje ryzyko sercowo-naczyniowe?",
+    "Czy moje pozostałe wskaźniki tłuszczów powinny być ściślej kontrolowane?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Metabolizm",
+  "pageTitle": "Wartość lipoproteiny(a) wyjaśniona | Medyra"
+}

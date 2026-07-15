@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Testosteron jest najważniejszym męskim hormonem płciowym, ale występuje w mniejszych ilościach także u kobiet. Niskie wartości u mężczyzn mogą objawiać się zmęczeniem, obniżonym libido lub zanikiem mięśni, podwyższone wartości u kobiet między innymi przy zespole policystycznych jajników.",
+  "metaDescription": "Testosteron zbyt niski lub zbyt wysoki? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione.",
+  "causesElevated": ["Zespół policystycznych jajników (u kobiet)", "Niektóre choroby nadnerczy", "Stosowanie anabolików"],
+  "causesLow": ["Związany z wiekiem niedobór testosteronu", "Zaburzenie funkcji jąder", "Choroby przysadki mózgowej", "Przewlekły stres"],
+  "doctorQuestions": [
+    "Czy mój poziom testosteronu wyjaśnia moje objawy, takie jak zmęczenie?",
+    "Czy warto rozważyć hormonalną terapię zastępczą?"
+  ],
+  "rangeLabels": { "low": "Niski (mężczyzna)", "normal": "Normalny (mężczyzna)", "elevated": "Podwyższony" },
+  "categoryLabel": "Hormony",
+  "pageTitle": "Wartość testosteronu wyjaśniona | Medyra"
+}

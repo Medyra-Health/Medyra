@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Saturacja transferyny pokazuje, ile z białka transportującego żelazo — transferyny — jest aktualnie obciążone żelazem. Niskie wartości wskazują na niedobór żelaza, wysokie mogą wskazywać na przeciążenie żelazem, jak przy hemochromatozie.",
+  "metaDescription": "Saturacja transferyny podwyższona lub obniżona? Znaczenie dla niedoboru i przeciążenia żelazem wyjaśnione.",
+  "causesElevated": ["Przeciążenie żelazem (hemochromatoza)", "Częste transfuzje krwi", "Choroba wątroby"],
+  "causesLow": ["Niedobór żelaza", "Przewlekłe zapalenie", "Utrata krwi"],
+  "doctorQuestions": [
+    "Czy moja saturacja transferyny wskazuje na niedobór, czy przeciążenie żelazem?",
+    "Czy należy wykluczyć hemochromatozę?"
+  ],
+  "rangeLabels": { "low": "Niska", "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Wskaźniki żelaza",
+  "pageTitle": "Wartość saturacji transferyny wyjaśniona | Medyra"
+}

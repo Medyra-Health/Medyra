@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Homocysteina jest produktem pośrednim przemiany białek, rozkładanym przy udziale witaminy B12, kwasu foliowego i witaminy B6. Podwyższone wartości powstają często przy niedoborze tych witamin i są związane ze zwiększonym ryzykiem naczyniowym.",
+  "metaDescription": "Homocysteina podwyższona? Znaczenie, wartości prawidłowe i przyczyny, takie jak niedobór witamin, wyjaśnione.",
+  "causesElevated": ["Niedobór witaminy B12", "Niedobór kwasu foliowego", "Niedobór witaminy B6", "Choroba nerek"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy przyczyną jest u mnie niedobór witamin?",
+    "Czy powinienem/powinnam suplementować witaminę B12 lub kwas foliowy?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Metabolizm",
+  "pageTitle": "Wartość homocysteiny wyjaśniona | Medyra"
+}

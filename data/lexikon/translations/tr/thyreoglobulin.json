@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Tiroglobulin, yalnızca tiroid bezinde üretilen bir depo proteinidir. Değer, özellikle tiroid kanseri nedeniyle tiroid bezinin ameliyatla alınmasından sonra takip amacıyla kullanılır, çünkü yükselen değerler hastalığın tekrarlamasına işaret edebilir.",
+  "metaDescription": "Tiroglobulin yüksek mi? Tiroid kanseri takibi için anlamı basitçe açıklandı.",
+  "causesElevated": ["Aktif tiroid dokusu", "Tiroid ameliyatı sonrası: olası tekrarlama işareti", "Tiroid iltihabı"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu değer tiroid ameliyatı sonrası takibim için ne anlama geliyor?",
+    "Anti-Tg antikorlarım da dikkate alınmalı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal (tiroid bezi mevcutken)" },
+  "categoryLabel": "Tiroid",
+  "pageTitle": "Tiroglobulin değeri: Tiroid kanseri takibi açıklaması | Medyra"
+}

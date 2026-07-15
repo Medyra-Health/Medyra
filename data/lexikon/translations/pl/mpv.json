@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "MPV podaje przeciętną wielkość płytek krwi. Większe płytki są często nowo wytworzone i wskazują na zwiększony obrót płytkowy, mniejsze na zmniejszoną produkcję w szpiku kostnym. Wartość jest zwykle oceniana razem z liczbą samych płytek krwi.",
+  "metaDescription": "MPV zbyt wysokie lub zbyt niskie? Co oznacza średnia objętość płytki krwi, wyjaśnione po polsku.",
+  "causesElevated": ["Zwiększona nowa produkcja płytek krwi", "Immunologiczna małopłytkowość (ITP)", "Po utracie krwi"],
+  "causesLow": ["Choroby szpiku kostnego", "Zmniejszona produkcja płytek krwi"],
+  "doctorQuestions": [
+    "Czy moja wartość MPV pasuje do liczby moich płytek krwi?",
+    "Czy konieczne jest badanie szpiku kostnego?"
+  ],
+  "rangeLabels": { "low": "Niskie", "normal": "Normalne", "elevated": "Podwyższone" },
+  "categoryLabel": "Morfologia krwi",
+  "pageTitle": "Wartość MPV: Średnia Objętość Płytki Krwi wyjaśniona | Medyra"
+}

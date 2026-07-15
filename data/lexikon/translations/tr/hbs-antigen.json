@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "HBsAg, hepatit B virüsünün kılıf bileşenidir ve akut veya kronik hepatit B enfeksiyonunun en önemli göstergesidir. Pozitif bir sonuç, virüsün vücutta aktif olarak saptanabildiği anlamına gelir ve doktor tarafından ileri şekilde değerlendirilmelidir.",
+  "metaDescription": "HBsAg pozitif mi? Hepatit B enfeksiyonu için anlamı basitçe açıklandı.",
+  "causesElevated": ["Akut hepatit B enfeksiyonu", "Kronik hepatit B enfeksiyonu"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Bu akut mu yoksa kronik bir enfeksiyon mu?",
+    "Tedavi veya ileri kontrol gerekli mi?"
+  ],
+  "rangeLabels": {},
+  "categoryLabel": "Enfeksiyon Değerleri",
+  "pageTitle": "HBsAg testi: Hepatit B açıklaması | Medyra"
+}

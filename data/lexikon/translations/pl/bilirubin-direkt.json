@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Bilirubina bezpośrednia to forma bilirubiny już przetworzona przez wątrobę. Podwyższona wartość zwykle wskazuje na zastój żółci lub chorobę wątroby albo dróg żółciowych, w odróżnieniu od bilirubiny pośredniej, która wzrasta raczej przy zwiększonym rozpadzie komórek.",
+  "metaDescription": "Bilirubina bezpośrednia podwyższona? Znaczenie, wartości prawidłowe i przyczyny wyjaśnione po polsku.",
+  "causesElevated": ["Zastój żółci (np. przez kamienie żółciowe)", "Choroba wątroby", "Zapalenie dróg żółciowych"],
+  "causesLow": [],
+  "doctorQuestions": [
+    "Czy moja wartość wskazuje na zastój żółci?",
+    "Czy sensowne jest badanie ultrasonograficzne dróg żółciowych?"
+  ],
+  "rangeLabels": { "normal": "Normalna", "elevated": "Podwyższona" },
+  "categoryLabel": "Wskaźniki wątrobowe",
+  "pageTitle": "Wartość bilirubiny bezpośredniej wyjaśniona | Medyra"
+}

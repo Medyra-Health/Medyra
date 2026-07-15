@@ -1,0 +1,13 @@
+{
+  "shortAnswer": "Özgül ağırlık, idrarın ne kadar konsantre olduğunu gösterir ve sıvı dengesi ile böbreklerin konsantrasyon yeteneği hakkında ipucu verir. Düşük değerler yüksek sıvı alımına veya azalmış böbrek işlevine işaret edebilirken, yüksek değerler sıvı eksikliğine işaret eder.",
+  "metaDescription": "İdrarda özgül ağırlık yüksek veya düşük mü? Anlamı basitçe açıklandı.",
+  "causesElevated": ["Sıvı eksikliği (dehidratasyon)", "Konsantre sabah idrarı"],
+  "causesLow": ["Yüksek sıvı alımı", "Böbreklerin azalmış konsantrasyon yeteneği", "Diabetes insipidus (nadir)"],
+  "doctorQuestions": [
+    "Bu değer sıvı dengemi mi yoksa bir böbrek hastalığını mı yansıtıyor?",
+    "Sıvı alım miktarım ayarlanmalı mı?"
+  ],
+  "rangeLabels": { "normal": "Normal" },
+  "categoryLabel": "İdrar Değerleri",
+  "pageTitle": "İdrarda özgül ağırlık değeri: Anlamı basitçe açıklandı | Medyra"
+}
