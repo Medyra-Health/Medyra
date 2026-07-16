@@ -1188,5 +1188,20 @@
     "ctaDesc": "Tıbbi raporunuzu yükleyin ve Medyra her değeri sade bir dille, 60 saniyeden kısa sürede, kendi dilinizde, GDPR uyumlu olarak açıklasın.",
     "ctaButton": "Raporumu analiz et, ücretsiz →",
     "newBadge": "Yeni"
+  },
+  "forgotPassword": {
+    "link": "Şifrenizi mi unuttunuz?",
+    "title": "Şifrenizi sıfırlayın",
+    "subtitle": "E postanızı girin, size bir kod gönderelim.",
+    "email": "E posta",
+    "sendCode": "Kod gönder",
+    "codeSent": "{email} adresine bir kod gönderdik.",
+    "code": "Doğrulama kodu",
+    "newPassword": "Yeni şifre",
+    "resetCta": "Yeni şifreyi kaydet",
+    "resetFailed": "Sıfırlama başarısız oldu. Lütfen tekrar deneyin.",
+    "invalidCode": "Geçersiz kod. Lütfen tekrar deneyin.",
+    "passwordTooShort": "Şifre en az 8 karakter olmalıdır.",
+    "backToSignIn": "Girişe geri dön"
   }
 }

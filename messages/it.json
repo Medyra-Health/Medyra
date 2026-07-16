@@ -1188,5 +1188,20 @@
     "ctaDesc": "Carichi il suo referto medico e Medyra spiegherà ogni valore in linguaggio semplice, in meno di 60 secondi, nella sua lingua, conforme al GDPR.",
     "ctaButton": "Analizza il mio referto, gratis →",
     "newBadge": "Nuovo"
+  },
+  "forgotPassword": {
+    "link": "Password dimenticata?",
+    "title": "Reimposta la tua password",
+    "subtitle": "Inserisci la tua email e ti inviamo un codice.",
+    "email": "Email",
+    "sendCode": "Invia codice",
+    "codeSent": "Abbiamo inviato un codice a {email}.",
+    "code": "Codice di verifica",
+    "newPassword": "Nuova password",
+    "resetCta": "Salva la nuova password",
+    "resetFailed": "Reimpostazione non riuscita. Riprova.",
+    "invalidCode": "Codice non valido. Riprova.",
+    "passwordTooShort": "La password deve avere almeno 8 caratteri.",
+    "backToSignIn": "Torna all accesso"
   }
 }

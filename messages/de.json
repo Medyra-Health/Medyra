@@ -1188,5 +1188,20 @@
     "ctaDesc": "Laden Sie Ihren medizinischen Bericht hoch und Medyra erklärt jeden Wert in einfacher Sprache, in unter 60 Sekunden, in Ihrer Sprache, DSGVO-konform.",
     "ctaButton": "Meinen Bericht analysieren, kostenlos →",
     "newBadge": "Neu"
+  },
+  "forgotPassword": {
+    "link": "Passwort vergessen?",
+    "title": "Passwort zurücksetzen",
+    "subtitle": "Geben Sie Ihre E-Mail ein und wir senden Ihnen einen Code.",
+    "email": "E-Mail",
+    "sendCode": "Code senden",
+    "codeSent": "Wir haben einen Code an {email} gesendet.",
+    "code": "Bestätigungscode",
+    "newPassword": "Neues Passwort",
+    "resetCta": "Neues Passwort speichern",
+    "resetFailed": "Zurücksetzen fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "invalidCode": "Ungültiger Code. Bitte versuchen Sie es erneut.",
+    "passwordTooShort": "Das Passwort muss mindestens 8 Zeichen haben.",
+    "backToSignIn": "Zurück zur Anmeldung"
   }
 }

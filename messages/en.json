@@ -1188,5 +1188,20 @@
     "ctaDesc": "Upload your medical report and Medyra will explain every value in plain language, in under 60 seconds, in your language, GDPR compliant.",
     "ctaButton": "Analyse my report, it's free →",
     "newBadge": "New"
+  },
+  "forgotPassword": {
+    "link": "Forgot password?",
+    "title": "Reset your password",
+    "subtitle": "Enter your email and we send you a reset code.",
+    "email": "Email",
+    "sendCode": "Send reset code",
+    "codeSent": "We sent a code to {email}.",
+    "code": "Verification code",
+    "newPassword": "New password",
+    "resetCta": "Set new password",
+    "resetFailed": "Password reset failed. Please try again.",
+    "invalidCode": "Invalid code. Please try again.",
+    "passwordTooShort": "The password must have at least 8 characters.",
+    "backToSignIn": "Back to sign in"
   }
 }

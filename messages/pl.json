@@ -1188,5 +1188,20 @@
     "ctaDesc": "Prześlij swój raport medyczny, a Medyra wyjaśni każdą wartość prostym językiem, w mniej niż 60 sekund, w Twoim języku, zgodnie z RODO.",
     "ctaButton": "Przeanalizuj mój raport, za darmo →",
     "newBadge": "Nowe"
+  },
+  "forgotPassword": {
+    "link": "Nie pamiętasz hasła?",
+    "title": "Zresetuj hasło",
+    "subtitle": "Podaj swój email, a my wyślemy Ci kod.",
+    "email": "Email",
+    "sendCode": "Wyślij kod",
+    "codeSent": "Wysłaliśmy kod na {email}.",
+    "code": "Kod weryfikacyjny",
+    "newPassword": "Nowe hasło",
+    "resetCta": "Zapisz nowe hasło",
+    "resetFailed": "Reset nie powiódł się. Spróbuj ponownie.",
+    "invalidCode": "Nieprawidłowy kod. Spróbuj ponownie.",
+    "passwordTooShort": "Hasło musi mieć co najmniej 8 znaków.",
+    "backToSignIn": "Wróć do logowania"
   }
 }

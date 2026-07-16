@@ -1188,5 +1188,20 @@
     "ctaDesc": "Téléversez votre rapport médical et Medyra expliquera chaque valeur en langage simple, en moins de 60 secondes, dans votre langue, conforme au RGPD.",
     "ctaButton": "Analyser mon rapport, gratuit →",
     "newBadge": "Nouveau"
+  },
+  "forgotPassword": {
+    "link": "Mot de passe oublié ?",
+    "title": "Réinitialisez votre mot de passe",
+    "subtitle": "Saisissez votre email et nous vous envoyons un code.",
+    "email": "Email",
+    "sendCode": "Envoyer le code",
+    "codeSent": "Nous avons envoyé un code à {email}.",
+    "code": "Code de vérification",
+    "newPassword": "Nouveau mot de passe",
+    "resetCta": "Enregistrer le nouveau mot de passe",
+    "resetFailed": "La réinitialisation a échoué. Réessayez.",
+    "invalidCode": "Code invalide. Réessayez.",
+    "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères.",
+    "backToSignIn": "Retour à la connexion"
   }
 }

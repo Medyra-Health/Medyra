@@ -1188,5 +1188,20 @@
     "ctaDesc": "Upload uw medische rapport en Medyra legt elke waarde uit in eenvoudige taal, in minder dan 60 seconden, in uw taal, AVG-conform.",
     "ctaButton": "Analyseer mijn rapport, het is gratis →",
     "newBadge": "Nieuw"
+  },
+  "forgotPassword": {
+    "link": "Wachtwoord vergeten?",
+    "title": "Stel uw wachtwoord opnieuw in",
+    "subtitle": "Voer uw email in en wij sturen u een code.",
+    "email": "Email",
+    "sendCode": "Code versturen",
+    "codeSent": "We hebben een code naar {email} gestuurd.",
+    "code": "Verificatiecode",
+    "newPassword": "Nieuw wachtwoord",
+    "resetCta": "Nieuw wachtwoord opslaan",
+    "resetFailed": "Opnieuw instellen mislukt. Probeer het opnieuw.",
+    "invalidCode": "Ongeldige code. Probeer het opnieuw.",
+    "passwordTooShort": "Het wachtwoord moet minstens 8 tekens hebben.",
+    "backToSignIn": "Terug naar inloggen"
   }
 }

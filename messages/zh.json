@@ -1188,5 +1188,20 @@
     "ctaDesc": "上传您的医疗报告，Medyra 将用通俗语言在60秒内、用您的语言解释每个数值，符合GDPR规定。",
     "ctaButton": "分析我的报告，免费 →",
     "newBadge": "新"
+  },
+  "forgotPassword": {
+    "link": "忘记密码？",
+    "title": "重置您的密码",
+    "subtitle": "输入您的邮箱，我们会向您发送验证码。",
+    "email": "邮箱",
+    "sendCode": "发送验证码",
+    "codeSent": "我们已向 {email} 发送验证码。",
+    "code": "验证码",
+    "newPassword": "新密码",
+    "resetCta": "保存新密码",
+    "resetFailed": "重置失败，请重试。",
+    "invalidCode": "验证码无效，请重试。",
+    "passwordTooShort": "密码至少需要8个字符。",
+    "backToSignIn": "返回登录"
   }
 }

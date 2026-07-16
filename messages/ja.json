@@ -1188,5 +1188,20 @@
     "ctaDesc": "医療レポートをアップロードすると、Medyraが60秒以内にすべての値をあなたの言語でわかりやすく説明します。GDPR準拠。",
     "ctaButton": "私のレポートを分析する、無料 →",
     "newBadge": "新着"
+  },
+  "forgotPassword": {
+    "link": "パスワードをお忘れですか？",
+    "title": "パスワードをリセット",
+    "subtitle": "メールアドレスを入力すると、コードをお送りします。",
+    "email": "メールアドレス",
+    "sendCode": "コードを送信",
+    "codeSent": "{email} にコードを送信しました。",
+    "code": "確認コード",
+    "newPassword": "新しいパスワード",
+    "resetCta": "新しいパスワードを保存",
+    "resetFailed": "リセットに失敗しました。もう一度お試しください。",
+    "invalidCode": "コードが無効です。もう一度お試しください。",
+    "passwordTooShort": "パスワードは8文字以上にしてください。",
+    "backToSignIn": "サインインに戻る"
   }
 }
