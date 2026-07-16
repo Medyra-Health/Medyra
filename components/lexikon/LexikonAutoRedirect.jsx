@@ -11,7 +11,9 @@ export default function LexikonAutoRedirect({ termSlug }) {
     const cookieLang = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('locale='))?.split('=')[1]
     const lang = cookieLang || localStorage.getItem('preferredLanguage')
     if (lang && lang !== 'de' && LEXIKON_URL_LANGS.has(lang)) {
-      router.replace('/lexikon/' + lang + '/' + termSlug)
+      // scroll: false — the redirect fires after hydration; if the user has
+      // already started scrolling, jumping back to the top feels like a glitch
+      router.replace('/lexikon/' + lang + '/' + termSlug, { scroll: false })
     }
   }, [termSlug, router])
   return null
