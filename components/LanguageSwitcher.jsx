@@ -70,6 +70,8 @@ export default function LanguageSwitcher() {
   function setLocaleCookie(lang) {
     localStorage.setItem('preferredLanguage', lang);
     document.cookie = `locale=${lang}; path=/; max-age=31536000; SameSite=Lax`;
+    // Notify client components that render locale-dependent UI without a remount
+    window.dispatchEvent(new CustomEvent('medyra:locale-change', { detail: lang }));
   }
 
   const changeLanguage = (newLocale) => {

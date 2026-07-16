@@ -7,9 +7,13 @@ export default function LexikonHero({ totalCount }) {
   const [lang, setLang] = useState('de')
 
   useEffect(() => {
-    const cookieLang = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('locale='))?.split('=')[1]
-    const detected = cookieLang || localStorage.getItem('preferredLanguage') || 'de'
-    setLang(detected)
+    const detect = () => {
+      const cookieLang = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('locale='))?.split('=')[1]
+      setLang(cookieLang || localStorage.getItem('preferredLanguage') || 'de')
+    }
+    detect()
+    window.addEventListener('medyra:locale-change', detect)
+    return () => window.removeEventListener('medyra:locale-change', detect)
   }, [])
 
   const ui = getIndexUI(lang)
