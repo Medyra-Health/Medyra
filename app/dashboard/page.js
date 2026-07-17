@@ -18,6 +18,7 @@ import { Progress } from '@/components/ui/progress'
 import MedyraLogo, { MedyraIcon } from '@/components/MedyraLogo'
 import AppHeader, { HeaderButton } from '@/components/AppHeader'
 import ReferralCard from '@/components/dashboard/ReferralCard'
+import DataPrivacyCard from '@/components/DataPrivacyCard'
 
 // Lazy-load recharts to avoid SSR issues
 function ChartLoading() {
@@ -193,8 +194,8 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
   return (
     <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
       {/* Vault header */}
-      <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
+      <div className="px-5 py-4 border-b border-gray-100 flex flex-wrap items-center justify-between gap-y-2 gap-x-3">
+        <div className="flex items-center gap-2.5 min-w-0">
           <div className="w-7 h-7 rounded-lg bg-emerald-50 flex items-center justify-center">
             <Activity className="h-3.5 w-3.5 text-emerald-600" />
           </div>
@@ -302,7 +303,7 @@ export default function DashboardPage() {
   })
 
   return (
-    <div className="min-h-screen bg-[#F7FBF9]" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+    <div className="min-h-screen bg-[#F7FBF9] overflow-x-hidden" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
       <style>{`.font-display { font-family: var(--font-playfair), Georgia, serif; }`}</style>
       {/* Header */}
       <AppHeader user tone="emerald" homeHref="/">
@@ -381,7 +382,7 @@ export default function DashboardPage() {
         <div className="grid lg:grid-cols-3 gap-5 mb-5">
 
           {/* Left, actions + recent reports */}
-          <div className="space-y-4">
+          <div className="space-y-4 min-w-0">
             {/* Quick actions */}
             <div className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm">
               <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">{t('dashboard.quickActions')}</p>
@@ -448,7 +449,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Right, vault / timeline (2/3 width) */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 min-w-0">
             <VaultSection
               profiles={profiles}
               selectedProfileId={selectedProfileId}
@@ -457,6 +458,11 @@ export default function DashboardPage() {
               canCreate={profileMeta.canCreate}
             />
           </div>
+        </div>
+
+        {/* Data & privacy: every user picks keep vs auto delete after 30 days */}
+        <div className="mb-5 shadow-sm rounded-2xl">
+          <DataPrivacyCard />
         </div>
 
         {/* Doctor prep history */}
