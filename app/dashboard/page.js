@@ -8,7 +8,7 @@ import {
   Upload, Clock, AlertCircle, ChevronRight, Infinity, FileText,
   TrendingUp, Crown, Zap, Star, Stethoscope, Users, Plus,
   ChevronDown, Shield, Sparkles, Activity, User, RefreshCw,
-  ArrowRight, Lock, Settings,
+  ArrowRight, Lock, Settings, Pill,
 } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import MedyraUserButton from '@/components/MedyraUserButton'
@@ -401,6 +401,11 @@ export default function DashboardPage() {
                 <Link href="/profiles">
                   <button className="w-full flex items-center gap-2.5 bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors shadow-sm shadow-blue-200">
                     <Users className="h-4 w-4 flex-shrink-0" /> {t('dashboard.healthProfilesButton')}
+                  </button>
+                </Link>
+                <Link href="/medplan">
+                  <button className="w-full flex items-center gap-2.5 bg-teal-500 hover:bg-teal-600 text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors shadow-sm shadow-teal-200">
+                    <Pill className="h-4 w-4 flex-shrink-0" /> {t('dashboard.medplanButton')}
                   </button>
                 </Link>
                 <Link href="/reports">

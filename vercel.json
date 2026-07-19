@@ -5,6 +5,7 @@
   "framework": "nextjs",
   "regions": ["fra1"],
   "crons": [
-    { "path": "/api/cron/reminders", "schedule": "0 7 * * *" }
+    { "path": "/api/cron/reminders", "schedule": "0 7 * * *" },
+    { "path": "/api/medplan/cron", "schedule": "30 5 * * *" }
   ]
 }
