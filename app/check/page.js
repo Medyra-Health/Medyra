@@ -7,7 +7,7 @@ import { getPageLocale, pickContent } from '@/lib/pageLocale'
 import { CONTENT } from './content'
 
 export const metadata = {
-  title: 'Laborwert-Checker: Blutwerte sofort einordnen | Medyra',
+  title: 'Laborwert-Checker: Blutwerte sofort einordnen',
   description:
     'Ist Ihr Laborwert normal, erhöht oder zu niedrig? Kostenloser Laborwert-Checker: TSH, HbA1c, Ferritin, LDL, CRP und 120+ weitere Blutwerte sofort einordnen. Ohne Anmeldung.',
   alternates: { canonical: 'https://medyra.de/check' },

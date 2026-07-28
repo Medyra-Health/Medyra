@@ -3,7 +3,7 @@ import { getPageLocale, pickContent } from '@/lib/pageLocale'
 import { CONTENT } from './content'
 
 export const metadata = {
-  title: 'Entlassungsbericht verstehen: Krankenhausbericht einfach erklärt | Medyra',
+  title: 'Entlassungsbericht verstehen: einfach erklärt',
   description:
     'Entlassungsbericht aus dem Krankenhaus voller Abkürzungen und Fachbegriffe? Medyra erklärt Diagnosen, Therapien und Nachsorge-Anweisungen in verständlicher Sprache. In unter 60 Sekunden.',
   alternates: { canonical: 'https://medyra.de/entlassungsbericht' },

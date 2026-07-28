@@ -2,7 +2,7 @@ import Link from 'next/link'
 import AppHeader from '@/components/AppHeader'
 
 export const metadata = {
-  title: 'Everything New at Medyra: Value Checker, 17 Languages, Share Links & More | Medyra',
+  title: 'Everything New at Medyra: Value Checker, 17 Languages, Share Links & More',
   description:
     'Our biggest update yet: a free instant lab value checker, explanations for doctor letters, hospital reports, medication plans and insurance letters, AI answers in 17 languages, secure share links, recheck reminders and a referral program.',
   alternates: { canonical: 'https://medyra.de/blog/medyra-summer-2026-update' },

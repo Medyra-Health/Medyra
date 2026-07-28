@@ -3,7 +3,7 @@ import MedyraLogo from '@/components/MedyraLogo'
 import AppHeader from '@/components/AppHeader'
 
 export const metadata = {
-  title: 'How Medyra Protects Your Medical Data: AES-256-GCM Encryption Explained | Medyra',
+  title: 'How Medyra Protects Your Medical Data: AES-256-GCM Encryption Explained',
   description:
     'Your medical reports contain some of your most sensitive personal data. Here is exactly how Medyra encrypts every field before storing it, and why even we cannot read your data.',
   alternates: { canonical: 'https://medyra.de/blog/how-medyra-protects-your-medical-data' },

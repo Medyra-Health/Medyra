@@ -3,7 +3,7 @@ import MedyraLogo from '@/components/MedyraLogo'
 import AppHeader from '@/components/AppHeader'
 
 export const metadata = {
-  title: 'How to Prepare for a Doctor\'s Appointment in Germany, Medyra Doctor Visit | Medyra',
+  title: 'How to Prepare for a Doctor\'s Appointment in Germany, Medyra Doctor Visit',
   description:
     'Medyra\'s Doctor Visit feature lets you describe your symptoms in any language and generates a structured German summary your doctor can read in seconds. Here\'s how it works.',
   alternates: { canonical: 'https://medyra.de/blog/doctor-visit-prep-germany' },

@@ -3,7 +3,7 @@ import MedyraLogo from '@/components/MedyraLogo'
 import AppHeader from '@/components/AppHeader'
 
 export const metadata = {
-  title: 'Ihren Arztbrief einfach verstehen, Medyra für Senioren | Medyra',
+  title: 'Ihren Arztbrief einfach verstehen, Medyra für Senioren',
   description:
     'Befund, Arztbrief oder Entlassungsbericht erhalten und nicht verstanden? Medyra erklärt Ihren medizinischen Brief auf Deutsch, ohne Fachbegriffe, zum Lesen oder Vorlesen lassen.',
   alternates: { canonical: 'https://medyra.de/blog/arztbrief-verstehen-fur-senioren' },

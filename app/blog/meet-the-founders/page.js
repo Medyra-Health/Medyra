@@ -2,7 +2,7 @@ import Link from 'next/link'
 import AppHeader from '@/components/AppHeader'
 
 export const metadata = {
-  title: 'Meet the Founders: Why We Built Medyra | Medyra',
+  title: 'Meet the Founders: Why We Built Medyra',
   description:
     'Medyra was founded by Mohammad Abralur Rahman Akash and Dr. med. Philipp Mattar in Potsdam. The story behind the mission: nobody should leave a doctor visit more confused than they arrived.',
   alternates: { canonical: 'https://medyra.de/blog/meet-the-founders' },

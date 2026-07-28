@@ -3,7 +3,7 @@ import MedyraLogo from '@/components/MedyraLogo'
 import AppHeader from '@/components/AppHeader'
 
 export const metadata = {
-  title: 'Understanding Your Blood Test Results: A Plain Language Guide | Medyra',
+  title: 'Understanding Your Blood Test Results: A Plain Language Guide',
   description:
     'What do CBC, HbA1c, CRP, and cholesterol results actually mean? This guide explains the most common blood test values in plain language, so you can understand your results before your next appointment.',
   alternates: { canonical: 'https://medyra.de/blog/understanding-your-blood-test-results' },

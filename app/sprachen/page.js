@@ -4,7 +4,7 @@ import FeatureCluster from '@/components/FeatureCluster'
 import { getPageLocale, pickContent } from '@/lib/pageLocale'
 
 export const metadata = {
-  title: 'Deutscher Befund, erklärt in Ihrer Sprache: 17 Sprachen | Medyra',
+  title: 'Deutscher Befund in Ihrer Sprache: 17 Sprachen',
   description:
     'Deutschen Arztbrief oder Laborbefund erhalten, aber die Sprache ist eine Hürde? Medyra erklärt deutsche medizinische Dokumente auf Türkisch, Arabisch, Englisch, Russisch, Polnisch und 12 weiteren Sprachen.',
   alternates: { canonical: 'https://medyra.de/sprachen' },

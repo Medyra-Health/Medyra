@@ -3,7 +3,9 @@ import { getPageLocale, pickContent } from '@/lib/pageLocale'
 import { CONTENT } from './content'
 
 export const metadata = {
-  title: 'Medikationsplan verstehen: Medikamente einfach erklärt | Medyra',
+  // Leads with "Rezept" so this page does not compete with /medplan, which
+  // owns "Medikationsplan erstellen". The term stays in the description.
+  title: 'Medikamente und Rezept verstehen: einfach erklärt',
   description:
     'Medikationsplan oder Rezept voller Abkürzungen? Medyra erklärt jedes Medikament: wofür es ist, wie Sie es einnehmen und worauf Sie achten sollten. In unter 60 Sekunden.',
   alternates: { canonical: 'https://medyra.de/medikamente' },

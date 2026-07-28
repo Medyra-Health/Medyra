@@ -3,7 +3,7 @@ import MedyraLogo from '@/components/MedyraLogo'
 import AppHeader from '@/components/AppHeader'
 
 export const metadata = {
-  title: 'How to Read Your Lab Results in Germany as an Expat | Medyra',
+  title: 'How to Read Your Lab Results in Germany as an Expat',
   description:
     'A plain language guide for expats in Germany on how to understand their Laborbefund, from common abbreviations to knowing when a value outside the reference range actually matters.',
   alternates: { canonical: 'https://medyra.de/blog/how-to-read-lab-results-germany-expat' },

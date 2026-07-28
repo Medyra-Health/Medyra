@@ -3,7 +3,7 @@ import { getPageLocale, pickContent } from '@/lib/pageLocale'
 import { CONTENT } from './content'
 
 export const metadata = {
-  title: 'Arztbrief verstehen: Befund einfach erklärt in 60 Sekunden | Medyra',
+  title: 'Arztbrief verstehen: Befund in 60 Sekunden erklärt',
   description:
     'Arztbrief, Entlassungsbericht oder MRT-Befund voller Fachbegriffe? Medyra übersetzt jedes medizinische Dokument in verständliche Sprache. DSGVO-konform, in unter 60 Sekunden.',
   alternates: { canonical: 'https://medyra.de/arztbrief' },

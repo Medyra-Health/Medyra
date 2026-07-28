@@ -2,7 +2,7 @@ import Link from 'next/link'
 import AppHeader from '@/components/AppHeader'
 
 export const metadata = {
-  title: 'Medyra × Potsdam Transfer: Backed by the University of Potsdam Startup Service | Medyra',
+  title: 'Medyra × Potsdam Transfer: Backed by the University of Potsdam Startup Service',
   description:
     'Medyra is supported by Potsdam Transfer, the central startup service of the University of Potsdam. What that means for the product, and why university backing matters for a health platform.',
   alternates: { canonical: 'https://medyra.de/blog/medyra-potsdam-transfer' },

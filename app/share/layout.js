@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Geteilter Befund | Medyra',
+  title: 'Geteilter Befund',
   robots: { index: false, follow: false },
 }
 

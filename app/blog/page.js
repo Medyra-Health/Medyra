@@ -4,7 +4,7 @@ import AppHeader from '@/components/AppHeader'
 import { getTranslations } from 'next-intl/server'
 
 export const metadata = {
-  title: 'Health & Lab Results Blog, Medyra',
+  title: 'Health & Lab Results Blog',
   description:
     'Practical guides to understanding your medical reports, lab values, and blood test results. Written for patients, not doctors. Available in plain language.',
   alternates: { canonical: 'https://medyra.de/blog' },

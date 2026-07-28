@@ -20,12 +20,13 @@ const dmSans = DM_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'
 export const metadata = {
   metadataBase: new URL('https://medyra.de'),
 
+  // Keep the default under ~60 characters so Google shows it whole
   title: {
-    default: 'Medyra AI – Lab Results & Medical Reports Explained in Plain Language',
+    default: 'Medyra AI – Lab Results Explained in Plain Language',
     template: '%s | Medyra AI',
   },
   description:
-    'Medyra AI explains your lab results and medical reports in plain language in under 60 seconds. Understand TSH, HbA1c, CRP, cholesterol and 100+ values. GDPR compliant. 17 languages. Free to start. Made in Germany.',
+    'Medyra AI explains your lab results and medical reports in plain language in under 60 seconds. Understand TSH, HbA1c, CRP, cholesterol and 138 lab values. Free medication plan. GDPR compliant. 17 languages. Made in Germany.',
 
   keywords: [
     'Medyra AI',

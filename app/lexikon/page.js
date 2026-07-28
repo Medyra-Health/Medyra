@@ -9,7 +9,7 @@ import LexikonHero from './LexikonHero'
 const SUPPORTED_LANGS = ['en','tr','bn','fr','ar','es','it','pt','nl','pl','zh','ja','ko','hi','ur','ru']
 
 export const metadata = {
-  title: 'Medizinisches Lexikon, Laborwerte einfach erklärt | Medyra',
+  title: 'Medizinisches Lexikon, Laborwerte einfach erklärt',
   description: 'Verstehen Sie Ihre Laborwerte: CRP, HbA1c, TSH, Cholesterin und 130+ weitere Blutwerte einfach erklärt auf Deutsch. Mit Normwerten, Ursachen und Fragen für Ihren Arzt.',
   alternates: {
     canonical: 'https://medyra.de/lexikon',

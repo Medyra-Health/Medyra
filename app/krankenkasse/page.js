@@ -3,7 +3,7 @@ import { getPageLocale, pickContent } from '@/lib/pageLocale'
 import { CONTENT } from './content'
 
 export const metadata = {
-  title: 'Krankenkassen-Brief verstehen: Bescheide einfach erklärt | Medyra',
+  title: 'Krankenkassen-Brief verstehen: Bescheid erklärt',
   description:
     'Bescheid, Ablehnung oder Zuzahlungsbrief von der Krankenkasse und nichts verstanden? Medyra übersetzt Amtsdeutsch in klare Sprache: was drinsteht, was es für Sie bedeutet und was Sie jetzt tun müssen.',
   alternates: { canonical: 'https://medyra.de/krankenkasse' },
