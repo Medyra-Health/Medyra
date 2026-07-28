@@ -688,6 +688,7 @@
     "product": "Product",
     "upload": "Upload Report",
     "prep": "Prepare Doctor Visit",
+    "medplan": "Medication Plan",
     "healthVault": "Health Vault",
     "pricing": "Pricing",
     "learn": "Learn",
@@ -1215,6 +1216,7 @@
     "heroSub": "Your personal medication plan with the proven 1-0-1-0 scheme: check off doses, get reminders on your phone, and keep track — for you and your family.",
     "heroCta": "Start free now",
     "heroFree": "No subscription needed — free forever",
+    "heroSignIn": "I already have an account",
     "heroFeature1Title": "Check off with one tap",
     "heroFeature1Desc": "Morning, noon, evening, night: one tap logs your dose — with streaks and statistics.",
     "heroFeature2Title": "Alarms on your phone",
@@ -1227,6 +1229,10 @@
     "upgradeCta": "Upgrade now",
     "todayTab": "Today",
     "historyTab": "History",
+    "weekTab": "Week",
+    "monthTab": "Month",
+    "plannedLabel": "planned",
+    "noDosesDay": "Nothing scheduled",
     "addMed": "Add medication",
     "todayProgress": "Today",
     "dosesLabel": "doses",
@@ -1273,5 +1279,12 @@
     "nameRequired": "Please enter a name.",
     "slotRequired": "Please pick at least one dose time.",
     "medLimit": "Maximum 20 medications per person."
+  },
+  "quickSignup": {
+    "google": "Continue with Google",
+    "or": "or",
+    "email": "Sign up with email",
+    "speed": "Free account in 60 seconds",
+    "retryHint": "That did not work. Please sign up with email."
   }
 }

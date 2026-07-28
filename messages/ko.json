@@ -688,6 +688,7 @@
     "product": "제품",
     "upload": "보고서 업로드",
     "prep": "진료 준비",
+    "medplan": "복약 플랜",
     "healthVault": "헬스 볼트",
     "pricing": "가격",
     "learn": "학습",
@@ -1215,6 +1216,7 @@
     "heroSub": "검증된 1-0-1-0 방식의 개인 복약 계획: 복용을 체크하고, 휴대폰으로 알림을 받고, 항상 확인하세요 — 당신과 가족을 위해.",
     "heroCta": "지금 무료로 시작",
     "heroFree": "구독 불필요 — 영원히 무료",
+    "heroSignIn": "이미 계정이 있습니다",
     "heroFeature1Title": "한 번의 터치로 체크",
     "heroFeature1Desc": "아침, 점심, 저녁, 밤: 한 번의 터치로 복용 기록 — 연속 기록과 통계 포함.",
     "heroFeature2Title": "휴대폰 알람",
@@ -1227,6 +1229,10 @@
     "upgradeCta": "지금 업그레이드",
     "todayTab": "오늘",
     "historyTab": "기록",
+    "weekTab": "주",
+    "monthTab": "월",
+    "plannedLabel": "예정",
+    "noDosesDay": "예정 없음",
     "addMed": "약 추가",
     "todayProgress": "오늘",
     "dosesLabel": "복용",
@@ -1273,5 +1279,12 @@
     "nameRequired": "이름을 입력하세요.",
     "slotRequired": "복용 시간을 하나 이상 선택하세요.",
     "medLimit": "1인당 최대 20개 약물."
+  },
+  "quickSignup": {
+    "google": "Google로 계속하기",
+    "or": "또는",
+    "email": "이메일로 가입",
+    "speed": "60초 만에 무료 계정 생성",
+    "retryHint": "실패했습니다. 이메일로 가입해 주세요."
   }
 }

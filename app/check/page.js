@@ -43,8 +43,8 @@ const CATEGORY_COLORS = {
 }
 
 export default async function CheckPage() {
-  const entries = getCheckerEntries()
   const locale = await getPageLocale()
+  const entries = getCheckerEntries(locale)
   const c = pickContent(CONTENT, locale)
 
   const byCategory = entries.reduce((acc, e) => {

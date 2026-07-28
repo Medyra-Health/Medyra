@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { Search, ArrowRight, ChevronDown, X } from 'lucide-react'
 
 // Status resolution against the lexikon range model:
@@ -110,6 +110,7 @@ function RangeGauge({ ranges, value, dark }) {
 // (used on lexikon pages), `tone` switches dark (landing hero) / light styling.
 export default function ValueChecker({ entries: entriesProp, preselect, tone = 'light', compact = false }) {
   const t = useTranslations()
+  const locale = useLocale()
   const dark = tone === 'dark'
   const [entries, setEntries] = useState(entriesProp || null)
   const [query, setQuery] = useState('')
@@ -118,21 +119,29 @@ export default function ValueChecker({ entries: entriesProp, preselect, tone = '
   const [rawValue, setRawValue] = useState('')
   const boxRef = useRef(null)
 
+  // Explanations and cause lists come from the lexikon, so the dataset itself
+  // is language specific: refetch whenever the user switches language.
   useEffect(() => {
-    if (entriesProp) return
+    if (entriesProp) { setEntries(entriesProp); return }
     let alive = true
-    fetch('/api/werte')
+    fetch(`/api/werte?lang=${encodeURIComponent(locale)}`)
       .then(r => r.json())
       .then(d => { if (alive && d.entries) setEntries(d.entries) })
       .catch(() => {})
     return () => { alive = false }
-  }, [entriesProp])
+  }, [entriesProp, locale])
 
+  // Re-resolve the selection against the current dataset so a language switch
+  // swaps the shown explanation instead of keeping the previous language's copy.
   useEffect(() => {
-    if (preselect && entries) {
-      const hit = entries.find(e => e.slug === preselect)
-      if (hit) setSelected(hit)
-    }
+    if (!entries) return
+    const slug = preselect || selected?.slug
+    if (!slug) return
+    const hit = entries.find(e => e.slug === slug)
+    if (hit && hit !== selected) setSelected(hit)
+    // `selected` is intentionally read but not depended on: this only needs to
+    // run when the dataset (language) or the preselect target changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [preselect, entries])
 
   // Close the suggestion dropdown on outside click

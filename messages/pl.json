@@ -688,6 +688,7 @@
     "product": "Produkt",
     "upload": "Prześlij raport",
     "prep": "Przygotuj wizytę",
+    "medplan": "Plan leków",
     "healthVault": "Health Vault",
     "pricing": "Cennik",
     "learn": "Ucz się",
@@ -1215,6 +1216,7 @@
     "heroSub": "Twój osobisty plan leków według sprawdzonego schematu 1-0-1-0: odhaczaj dawki, otrzymuj przypomnienia na telefon i miej wszystko pod kontrolą — dla Ciebie i Twojej rodziny.",
     "heroCta": "Zacznij za darmo",
     "heroFree": "Bez abonamentu — na zawsze za darmo",
+    "heroSignIn": "Mam już konto",
     "heroFeature1Title": "Odhacz jednym dotknięciem",
     "heroFeature1Desc": "Rano, w południe, wieczorem, w nocy: jedno dotknięcie zapisuje dawkę — z seriami i statystykami.",
     "heroFeature2Title": "Alarmy na telefonie",
@@ -1227,6 +1229,10 @@
     "upgradeCta": "Ulepsz teraz",
     "todayTab": "Dzisiaj",
     "historyTab": "Historia",
+    "weekTab": "Tydzień",
+    "monthTab": "Miesiąc",
+    "plannedLabel": "zaplanowane",
+    "noDosesDay": "Nic nie zaplanowano",
     "addMed": "Dodaj lek",
     "todayProgress": "Dzisiaj",
     "dosesLabel": "dawek",
@@ -1273,5 +1279,12 @@
     "nameRequired": "Podaj nazwę.",
     "slotRequired": "Wybierz co najmniej jedną porę dawki.",
     "medLimit": "Maksymalnie 20 leków na osobę."
+  },
+  "quickSignup": {
+    "google": "Kontynuuj z Google",
+    "or": "lub",
+    "email": "Zarejestruj się e-mailem",
+    "speed": "Darmowe konto w 60 sekund",
+    "retryHint": "Nie udało się. Zarejestruj się e-mailem."
   }
 }

@@ -6,10 +6,11 @@ import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import {
   Sunrise, Sun, Sunset, Moon, AlarmClock, Users, CalendarCheck2,
-  ArrowRight, Check, Sparkles,
+  Check, Sparkles,
 } from 'lucide-react'
 import AppHeader from '@/components/AppHeader'
 import Planner from '@/components/medplan/Planner'
+import QuickSignUp from '@/components/auth/QuickSignUp'
 
 const HERO_SLOTS = [
   { icon: Sunrise, grad: 'from-amber-400 to-orange-500', scheme: '1' },
@@ -79,17 +80,17 @@ function MarketingHero() {
 
             <motion.div
               initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.32 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-3"
+              className="flex flex-col items-center justify-center gap-3"
             >
-              <SignInButton mode="modal" forceRedirectUrl="/medplan">
-                <button className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-gradient-to-r from-teal-400 to-cyan-400 text-slate-900 font-bold text-sm shadow-lg shadow-teal-500/25 hover:shadow-xl hover:-translate-y-0.5 transition-all">
-                  {t('heroCta')}
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
-                </button>
-              </SignInButton>
+              <QuickSignUp redirectUrl="/medplan" tone="dark" />
               <span className="text-xs text-gray-500 inline-flex items-center gap-1.5">
                 <Check className="h-3.5 w-3.5 text-teal-400" /> {t('heroFree')}
               </span>
+              <SignInButton mode="modal" forceRedirectUrl="/medplan">
+                <button className="text-xs font-semibold text-gray-400 hover:text-teal-300 transition-colors">
+                  {t('heroSignIn')}
+                </button>
+              </SignInButton>
             </motion.div>
           </div>
         </div>

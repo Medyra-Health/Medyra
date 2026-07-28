@@ -688,6 +688,7 @@
     "product": "Producto",
     "upload": "Subir informe",
     "prep": "Preparar visita médica",
+    "medplan": "Plan de medicación",
     "healthVault": "Health Vault",
     "pricing": "Precios",
     "learn": "Aprender",
@@ -1215,6 +1216,7 @@
     "heroSub": "Su plan de medicación personal con el esquema probado 1-0-1-0: marque las tomas, reciba recordatorios en su teléfono y mantenga el control — para usted y su familia.",
     "heroCta": "Empezar gratis ahora",
     "heroFree": "Sin suscripción — gratis para siempre",
+    "heroSignIn": "Ya tengo una cuenta",
     "heroFeature1Title": "Marcar con un toque",
     "heroFeature1Desc": "Mañana, mediodía, tarde, noche: un toque registra la toma — con rachas y estadísticas.",
     "heroFeature2Title": "Alarmas en su teléfono",
@@ -1227,6 +1229,10 @@
     "upgradeCta": "Mejorar ahora",
     "todayTab": "Hoy",
     "historyTab": "Historial",
+    "weekTab": "Semana",
+    "monthTab": "Mes",
+    "plannedLabel": "previstas",
+    "noDosesDay": "Nada previsto",
     "addMed": "Añadir medicamento",
     "todayProgress": "Hoy",
     "dosesLabel": "tomas",
@@ -1273,5 +1279,12 @@
     "nameRequired": "Introduzca un nombre.",
     "slotRequired": "Elija al menos una hora de toma.",
     "medLimit": "Máximo 20 medicamentos por persona."
+  },
+  "quickSignup": {
+    "google": "Continuar con Google",
+    "or": "o",
+    "email": "Registrarse con correo",
+    "speed": "Cuenta gratuita en 60 segundos",
+    "retryHint": "No ha funcionado. Regístrese con su correo."
   }
 }

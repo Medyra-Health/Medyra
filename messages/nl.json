@@ -688,6 +688,7 @@
     "product": "Product",
     "upload": "Rapport uploaden",
     "prep": "Doktersbezoek voorbereiden",
+    "medplan": "Medicatieplan",
     "healthVault": "Health Vault",
     "pricing": "Prijzen",
     "learn": "Leren",
@@ -1215,6 +1216,7 @@
     "heroSub": "Uw persoonlijke medicatieplan volgens het beproefde 1-0-1-0-schema: innames afvinken, herinneringen op uw telefoon en altijd overzicht — voor u en uw gezin.",
     "heroCta": "Nu gratis starten",
     "heroFree": "Geen abonnement nodig — voor altijd gratis",
+    "heroSignIn": "Ik heb al een account",
     "heroFeature1Title": "Afvinken met één tik",
     "heroFeature1Desc": "’s Ochtends, ’s middags, ’s avonds, ’s nachts: één tik registreert de inname — met reeksen en statistieken.",
     "heroFeature2Title": "Wekkers op uw telefoon",
@@ -1227,6 +1229,10 @@
     "upgradeCta": "Nu upgraden",
     "todayTab": "Vandaag",
     "historyTab": "Geschiedenis",
+    "weekTab": "Week",
+    "monthTab": "Maand",
+    "plannedLabel": "gepland",
+    "noDosesDay": "Niets gepland",
     "addMed": "Medicijn toevoegen",
     "todayProgress": "Vandaag",
     "dosesLabel": "innames",
@@ -1273,5 +1279,12 @@
     "nameRequired": "Voer een naam in.",
     "slotRequired": "Kies minstens één innametijd.",
     "medLimit": "Maximaal 20 medicijnen per persoon."
+  },
+  "quickSignup": {
+    "google": "Doorgaan met Google",
+    "or": "of",
+    "email": "Aanmelden met e-mail",
+    "speed": "Gratis account in 60 seconden",
+    "retryHint": "Dat werkte niet. Meld u aan met e-mail."
   }
 }

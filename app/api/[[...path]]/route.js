@@ -7,6 +7,7 @@ import Stripe from 'stripe'
 import { Webhook } from 'svix'
 import { encrypt, decrypt } from '@/lib/encryption'
 import { getCheckerEntries } from '@/lib/werte'
+import { SUPPORTED_LANGS as LEXIKON_LANGS } from '@/lib/lexikon'
 import { generateText, generateVisionText } from '@/lib/aiClient'
 
 function encryptReport(doc) {
@@ -1433,7 +1434,10 @@ async function handleRoute(request) {
 
     // PUBLIC: compact lab-value dataset for the interactive checker
     if (route === '/werte' && method === 'GET') {
-      const res = NextResponse.json({ success: true, entries: getCheckerEntries() })
+      const raw = new URL(request.url).searchParams.get('lang')
+      const lang = LEXIKON_LANGS.includes(raw) ? raw : 'de'
+      const res = NextResponse.json({ success: true, entries: getCheckerEntries(lang) })
+      // ?lang= is part of the URL, so it is already part of the shared cache key
       res.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400')
       return handleCORS(res)
     }

@@ -688,6 +688,7 @@
     "product": "製品",
     "upload": "レポートをアップロード",
     "prep": "診察の準備",
+    "medplan": "服薬プラン",
     "healthVault": "ヘルスボルト",
     "pricing": "料金",
     "learn": "学ぶ",
@@ -1215,6 +1216,7 @@
     "heroSub": "実績のある 1-0-1-0 方式の個人服薬プラン：服用をチェックし、スマホにリマインダーを受け取り、しっかり把握 — あなたと家族のために。",
     "heroCta": "今すぐ無料で始める",
     "heroFree": "サブスク不要 — ずっと無料",
+    "heroSignIn": "すでにアカウントをお持ちの方",
     "heroFeature1Title": "ワンタップでチェック",
     "heroFeature1Desc": "朝・昼・夕・夜：ワンタップで服用を記録 — 連続記録と統計付き。",
     "heroFeature2Title": "スマホにアラーム",
@@ -1227,6 +1229,10 @@
     "upgradeCta": "アップグレード",
     "todayTab": "今日",
     "historyTab": "履歴",
+    "weekTab": "週",
+    "monthTab": "月",
+    "plannedLabel": "予定",
+    "noDosesDay": "予定なし",
     "addMed": "薬を追加",
     "todayProgress": "今日",
     "dosesLabel": "回の服用",
@@ -1273,5 +1279,12 @@
     "nameRequired": "名前を入力してください。",
     "slotRequired": "少なくとも 1 つの服用時間を選んでください。",
     "medLimit": "1 人あたり最大 20 種類です。"
+  },
+  "quickSignup": {
+    "google": "Google で続行",
+    "or": "または",
+    "email": "メールで登録",
+    "speed": "60秒で無料アカウント作成",
+    "retryHint": "うまくいきませんでした。メールで登録してください。"
   }
 }

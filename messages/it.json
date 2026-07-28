@@ -688,6 +688,7 @@
     "product": "Prodotto",
     "upload": "Carica referto",
     "prep": "Prepara visita medica",
+    "medplan": "Piano terapeutico",
     "healthVault": "Health Vault",
     "pricing": "Prezzi",
     "learn": "Impara",
@@ -1215,6 +1216,7 @@
     "heroSub": "Il suo piano farmaci personale con il collaudato schema 1-0-1-0: spunti le assunzioni, riceva promemoria sul telefono e mantenga il controllo — per lei e la sua famiglia.",
     "heroCta": "Inizia gratis ora",
     "heroFree": "Nessun abbonamento — gratis per sempre",
+    "heroSignIn": "Ho già un account",
     "heroFeature1Title": "Spunta con un tocco",
     "heroFeature1Desc": "Mattina, mezzogiorno, sera, notte: un tocco registra l’assunzione — con serie e statistiche.",
     "heroFeature2Title": "Sveglie sul telefono",
@@ -1227,6 +1229,10 @@
     "upgradeCta": "Fai l’upgrade",
     "todayTab": "Oggi",
     "historyTab": "Storico",
+    "weekTab": "Settimana",
+    "monthTab": "Mese",
+    "plannedLabel": "previste",
+    "noDosesDay": "Niente in programma",
     "addMed": "Aggiungi farmaco",
     "todayProgress": "Oggi",
     "dosesLabel": "assunzioni",
@@ -1273,5 +1279,12 @@
     "nameRequired": "Inserisca un nome.",
     "slotRequired": "Scelga almeno un orario di assunzione.",
     "medLimit": "Massimo 20 farmaci per persona."
+  },
+  "quickSignup": {
+    "google": "Continua con Google",
+    "or": "oppure",
+    "email": "Registrati con e-mail",
+    "speed": "Account gratuito in 60 secondi",
+    "retryHint": "Non ha funzionato. Registrati con e-mail."
   }
 }

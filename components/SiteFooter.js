@@ -27,6 +27,7 @@ export default function SiteFooter() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/upload" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('upload')}</Link></li>
               <li><Link href="/prep" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('prep')}</Link></li>
+              <li><Link href="/medplan" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('medplan')}</Link></li>
               <li><Link href="/dashboard" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('healthVault')}</Link></li>
               <li><Link href="/verstehen" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('verstehen')}</Link></li>
               <li><Link href="/pricing" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('pricing')}</Link></li>

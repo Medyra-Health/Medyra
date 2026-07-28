@@ -5,6 +5,7 @@ const isPublicRoute = createRouteMatcher([
   '/',
   '/sign-in(.*)',
   '/sign-up(.*)',
+  '/sso-callback(.*)',
   '/forgot-password(.*)',
   '/pricing(.*)',
   '/api/webhook/(.*)',
@@ -21,6 +22,10 @@ const isPublicRoute = createRouteMatcher([
   '/entlassungsbericht(.*)',
   '/krankenkasse(.*)',
   '/medikamente(.*)',
+  // Reachable so signed-out visitors get the sign-up gate instead of a 404.
+  // The planner is still account-only: it renders inside <SignedIn>, and every
+  // /api/medplan handler rejects unauthenticated requests with a 401.
+  '/medplan(.*)',
   '/sprachen(.*)',
   '/share(.*)',
   '/app(.*)',

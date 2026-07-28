@@ -688,6 +688,7 @@
     "product": "Produit",
     "upload": "Télécharger un rapport",
     "prep": "Préparer une consultation",
+    "medplan": "Plan de médication",
     "healthVault": "Health Vault",
     "pricing": "Tarifs",
     "learn": "Apprendre",
@@ -1215,6 +1216,7 @@
     "heroSub": "Votre plan de médication personnel selon le schéma éprouvé 1-0-1-0 : cochez vos prises, recevez des rappels sur votre téléphone et gardez le contrôle — pour vous et votre famille.",
     "heroCta": "Commencer gratuitement",
     "heroFree": "Sans abonnement — gratuit pour toujours",
+    "heroSignIn": "J'ai déjà un compte",
     "heroFeature1Title": "Cocher en un geste",
     "heroFeature1Desc": "Matin, midi, soir, nuit : un geste suffit pour consigner la prise — avec séries et statistiques.",
     "heroFeature2Title": "Alarmes sur votre téléphone",
@@ -1227,6 +1229,10 @@
     "upgradeCta": "Passer au niveau supérieur",
     "todayTab": "Aujourd’hui",
     "historyTab": "Historique",
+    "weekTab": "Semaine",
+    "monthTab": "Mois",
+    "plannedLabel": "prévues",
+    "noDosesDay": "Rien de prévu",
     "addMed": "Ajouter un médicament",
     "todayProgress": "Aujourd’hui",
     "dosesLabel": "prises",
@@ -1273,5 +1279,12 @@
     "nameRequired": "Veuillez saisir un nom.",
     "slotRequired": "Veuillez choisir au moins une heure de prise.",
     "medLimit": "Maximum 20 médicaments par personne."
+  },
+  "quickSignup": {
+    "google": "Continuer avec Google",
+    "or": "ou",
+    "email": "S'inscrire par e-mail",
+    "speed": "Compte gratuit en 60 secondes",
+    "retryHint": "Cela n'a pas fonctionné. Inscrivez-vous par e-mail."
   }
 }

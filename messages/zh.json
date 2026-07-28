@@ -688,6 +688,7 @@
     "product": "产品",
     "upload": "上传报告",
     "prep": "准备就诊",
+    "medplan": "用药计划",
     "healthVault": "健康保险库",
     "pricing": "定价",
     "learn": "学习",
@@ -1215,6 +1216,7 @@
     "heroSub": "按照经过验证的 1-0-1-0 方案制定您的个人用药计划：勾选服药、在手机上接收提醒，随时掌握情况 — 为您和您的家人。",
     "heroCta": "立即免费开始",
     "heroFree": "无需订阅 — 永久免费",
+    "heroSignIn": "我已有账户",
     "heroFeature1Title": "一键勾选",
     "heroFeature1Desc": "早上、中午、晚上、夜间：轻轻一点即可记录服药 — 还有连续天数和统计。",
     "heroFeature2Title": "手机闹钟提醒",
@@ -1227,6 +1229,10 @@
     "upgradeCta": "立即升级",
     "todayTab": "今天",
     "historyTab": "历史",
+    "weekTab": "周",
+    "monthTab": "月",
+    "plannedLabel": "计划",
+    "noDosesDay": "无用药计划",
     "addMed": "添加药物",
     "todayProgress": "今天",
     "dosesLabel": "次服药",
@@ -1273,5 +1279,12 @@
     "nameRequired": "请输入名称。",
     "slotRequired": "请至少选择一个服药时间。",
     "medLimit": "每人最多 20 种药物。"
+  },
+  "quickSignup": {
+    "google": "使用 Google 继续",
+    "or": "或",
+    "email": "使用邮箱注册",
+    "speed": "60 秒创建免费账户",
+    "retryHint": "未能完成，请使用邮箱注册。"
   }
 }

@@ -688,6 +688,7 @@
     "product": "Produkt",
     "upload": "Befund hochladen",
     "prep": "Arzttermin vorbereiten",
+    "medplan": "Medikationsplan",
     "healthVault": "Health Vault",
     "pricing": "Preise",
     "learn": "Wissen",
@@ -1215,6 +1216,7 @@
     "heroSub": "Ihr persönlicher Medikationsplan nach dem bewährten 1-0-1-0-Schema: Einnahmen abhaken, Erinnerungen aufs Handy holen und den Überblick behalten — für Sie und Ihre Familie.",
     "heroCta": "Jetzt kostenlos starten",
     "heroFree": "Kein Abo nötig — dauerhaft kostenlos",
+    "heroSignIn": "Ich habe schon ein Konto",
     "heroFeature1Title": "Einfach abhaken",
     "heroFeature1Desc": "Morgens, mittags, abends, nachts: Ein Tipp genügt und die Einnahme ist dokumentiert — mit Serien und Statistik.",
     "heroFeature2Title": "Wecker aufs Handy",
@@ -1227,6 +1229,10 @@
     "upgradeCta": "Jetzt upgraden",
     "todayTab": "Heute",
     "historyTab": "Verlauf",
+    "weekTab": "Woche",
+    "monthTab": "Monat",
+    "plannedLabel": "geplant",
+    "noDosesDay": "Nichts geplant",
     "addMed": "Medikament hinzufügen",
     "todayProgress": "Heute",
     "dosesLabel": "Einnahmen",
@@ -1273,5 +1279,12 @@
     "nameRequired": "Bitte einen Namen eingeben.",
     "slotRequired": "Bitte mindestens eine Einnahmezeit wählen.",
     "medLimit": "Maximal 20 Medikamente pro Person."
+  },
+  "quickSignup": {
+    "google": "Mit Google fortfahren",
+    "or": "oder",
+    "email": "Mit E-Mail registrieren",
+    "speed": "Kostenloses Konto in 60 Sekunden",
+    "retryHint": "Das hat nicht geklappt. Bitte mit E-Mail registrieren."
   }
 }

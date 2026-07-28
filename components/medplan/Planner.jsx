@@ -11,7 +11,8 @@ import { useTranslations, useLocale } from 'next-intl'
 import {
   Sunrise, Sun, Sunset, Moon, Plus, Flame, CalendarCheck2, Printer,
   AlarmClock, Mail, Loader2, Check, X, Pill, Lock, ChevronDown,
-  History, LayoutList, PartyPopper, Sparkles,
+  CalendarDays, CalendarRange, ChevronLeft, ChevronRight, LayoutList,
+  PartyPopper, Sparkles,
 } from 'lucide-react'
 import { toast } from 'sonner'
 import MedModal, { MED_COLORS, FORM_ICONS } from '@/components/medplan/MedModal'
@@ -22,6 +23,37 @@ export const SLOTS = [
   { id: 'evening', icon: Sunset, grad: 'from-violet-500 to-purple-600', soft: 'bg-violet-50 text-violet-600', ring: 'ring-violet-200' },
   { id: 'night', icon: Moon, grad: 'from-indigo-600 to-slate-800', soft: 'bg-indigo-50 text-indigo-600', ring: 'ring-indigo-200' },
 ]
+
+// The API stores intake dates in Europe/Berlin; every date key the planner
+// builds has to use the same zone or week/month cells miss their stats.
+const BERLIN_DATE = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Berlin', year: 'numeric', month: '2-digit', day: '2-digit' })
+const BERLIN_WEEKDAY = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Berlin', weekday: 'short' })
+const WEEKDAY_ORDER = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+
+const dateKey = d => BERLIN_DATE.format(d)
+const weekdayOf = d => WEEKDAY_ORDER.indexOf(BERLIN_WEEKDAY.format(d))
+
+// Calendar days are anchored at 12:00 UTC. Berlin is then 13:00/14:00 on the
+// same date year round, so stepping in whole days can never skip or repeat a
+// date across a DST change, and the anchor formats to the same day for a
+// visitor in any timezone.
+const dayAnchor = (y, m, d) => new Date(Date.UTC(y, m, d, 12))
+const parseKey = k => { const [y, m, d] = k.split('-').map(Number); return { y, m: m - 1, d } }
+const anchorOf = date => { const p = parseKey(dateKey(date)); return dayAnchor(p.y, p.m, p.d) }
+const addDays = (d, n) => new Date(d.getTime() + n * 24 * 3600 * 1000)
+
+// Day/weekday/month labels must be read in Berlin too, or a visitor an hour
+// off would see a label that disagrees with the cell it sits on.
+const fmtDate = (locale, opts) => new Intl.DateTimeFormat(locale, { timeZone: 'Europe/Berlin', ...opts })
+
+// Adherence tint shared by the week rows, the month cells and the legend.
+function adherenceClass(ratio) {
+  if (ratio === null || ratio === undefined) return 'bg-slate-100 text-slate-300'
+  if (ratio >= 1) return 'bg-teal-500 text-white'
+  if (ratio >= 0.5) return 'bg-teal-300 text-white'
+  if (ratio > 0) return 'bg-amber-300 text-white'
+  return 'bg-rose-200 text-rose-500'
+}
 
 function ProgressRing({ pct, size = 92 }) {
   const r = (size - 10) / 2
@@ -98,6 +130,25 @@ function CheckButton({ status, onCycle }) {
   )
 }
 
+// Shared prev/next bar for the week and month plans
+function PeriodHeader({ label, onPrev, onNext, onReset, resetLabel }) {
+  const navBtn = 'h-8 w-8 rounded-lg flex items-center justify-center text-slate-400 hover:bg-white hover:text-teal-600 hover:shadow-sm transition-all'
+  return (
+    <div className="flex items-center justify-between gap-3 border-b border-slate-100 bg-slate-50/60 px-4 py-3">
+      <button onClick={onPrev} className={navBtn} aria-label="previous"><ChevronLeft className="h-4 w-4" /></button>
+      <div className="flex items-center gap-2 min-w-0">
+        <span className="text-sm font-bold text-slate-700 truncate">{label}</span>
+        {onReset && (
+          <button onClick={onReset} className="text-[10px] font-bold uppercase tracking-wide text-teal-600 hover:text-teal-700 shrink-0">
+            {resetLabel}
+          </button>
+        )}
+      </div>
+      <button onClick={onNext} className={navBtn} aria-label="next"><ChevronRight className="h-4 w-4" /></button>
+    </div>
+  )
+}
+
 export default function Planner() {
   const t = useTranslations('medplan')
   const locale = useLocale()
@@ -109,7 +160,9 @@ export default function Planner() {
 
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [view, setView] = useState('today') // today | history
+  const [view, setView] = useState('day') // day | week | month
+  const [weekOffset, setWeekOffset] = useState(0)
+  const [monthOffset, setMonthOffset] = useState(0)
   const [modal, setModal] = useState(null) // { med } | { med: null } | null
   const [emailSaving, setEmailSaving] = useState(false)
 
@@ -143,6 +196,39 @@ export default function Planner() {
   )
 
   const intakeOf = (medId, slot) => todayIntakes.find(i => i.medicationId === medId && i.slot === slot)?.status || null
+
+  // Which active meds are scheduled on a given weekday, and how many doses that
+  // makes. This is what turns the tracker into a forward-looking planner: future
+  // days have no intake records, but the schedule is already known.
+  const medsOnWeekday = useCallback(
+    wd => meds.filter(m => m.active && (!m.days.length || m.days.includes(wd))),
+    [meds]
+  )
+  const dosesOnWeekday = useCallback(
+    wd => medsOnWeekday(wd).reduce((a, m) => a + SLOTS.filter(s => m.slots[s.id]).length, 0),
+    [medsOnWeekday]
+  )
+
+  // Describe one calendar day: what is planned, and how much of it was taken.
+  const describeDay = useCallback(dt => {
+    const key = dateKey(dt)
+    const wd = weekdayOf(dt)
+    const planned = dosesOnWeekday(wd)
+    const s = data?.stats?.dayStats?.[key]
+    const p = parseKey(key)
+    return {
+      key, wd, date: dt, planned,
+      // Day number and month come from the Berlin key, never from the
+      // visitor's local clock, so the grid matches the stored intake dates.
+      dayNum: p.d,
+      month: p.m,
+      isToday: key === data?.today,
+      isPast: key < (data?.today || ''),
+      taken: s?.taken ?? null,
+      // Adherence only means something once the day has doses on record
+      ratio: s && s.due ? Math.min(1, s.taken / s.due) : null,
+    }
+  }, [data, dosesOnWeekday])
 
   const dueCount = dueToday.reduce((a, m) => a + SLOTS.filter(s => m.slots[s.id]).length, 0)
   const takenCount = dueToday.reduce(
@@ -209,19 +295,47 @@ export default function Planner() {
   const weekStrip = useMemo(() => {
     const out = []
     const stats = data?.stats?.dayStats || {}
+    const today = anchorOf(new Date())
     for (let d = 6; d >= 0; d--) {
-      const dt = new Date(Date.now() - d * 24 * 3600 * 1000)
-      const key = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Berlin', year: 'numeric', month: '2-digit', day: '2-digit' }).format(dt)
+      const dt = addDays(today, -d)
+      const key = dateKey(dt)
       const s = stats[key]
       out.push({
         key,
-        label: new Intl.DateTimeFormat(locale, { weekday: 'narrow' }).format(dt),
+        label: fmtDate(locale, { weekday: 'narrow' }).format(dt),
         pct: s && s.due ? Math.min(1, s.taken / s.due) : null,
         isToday: d === 0,
       })
     }
     return out
   }, [data, locale])
+
+  // Monday-based week, shifted by weekOffset
+  const weekDays = useMemo(() => {
+    const today = anchorOf(new Date())
+    const sinceMonday = (weekdayOf(today) + 6) % 7
+    const start = addDays(today, -sinceMonday + weekOffset * 7)
+    return [...Array(7)].map((_, i) => describeDay(addDays(start, i)))
+  }, [describeDay, weekOffset])
+
+  // Calendar month grid padded to whole Monday-based weeks
+  const monthGrid = useMemo(() => {
+    const t = parseKey(dateKey(new Date()))
+    const first = dayAnchor(t.y, t.m + monthOffset, 1)
+    const month = parseKey(dateKey(first)).m
+    const lead = (weekdayOf(first) + 6) % 7
+    const start = addDays(first, -lead)
+    const cells = []
+    for (let i = 0; i < 42; i++) {
+      const day = describeDay(addDays(start, i))
+      // Stop once a whole week sits past the end of the month
+      if (i >= 28 && i % 7 === 0 && day.month !== month) break
+      cells.push({ ...day, inMonth: day.month === month })
+    }
+    return { first, cells }
+  }, [describeDay, monthOffset])
+
+  const monthPlanned = monthGrid.cells.reduce((a, c) => a + (c.inMonth ? c.planned : 0), 0)
 
   if (loading && !data) {
     return <div className="flex justify-center py-24"><Loader2 className="h-7 w-7 text-teal-500 animate-spin" /></div>
@@ -287,18 +401,23 @@ export default function Planner() {
         {/* View toggle + add */}
         <div className="flex items-center gap-2">
           <div className="flex rounded-xl bg-slate-100 p-1">
-            <button
-              onClick={() => setView('today')}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${view === 'today' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500'}`}
-            >
-              <LayoutList className="h-3.5 w-3.5" /> {t('todayTab')}
-            </button>
-            <button
-              onClick={() => setView('history')}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${view === 'history' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500'}`}
-            >
-              <History className="h-3.5 w-3.5" /> {t('historyTab')}
-            </button>
+            {[
+              { id: 'day', icon: LayoutList, label: t('todayTab') },
+              { id: 'week', icon: CalendarRange, label: t('weekTab') },
+              { id: 'month', icon: CalendarDays, label: t('monthTab') },
+            ].map(tab => {
+              const TabIcon = tab.icon
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setView(tab.id)}
+                  aria-pressed={view === tab.id}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${view === tab.id ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500'}`}
+                >
+                  <TabIcon className="h-3.5 w-3.5" /> {tab.label}
+                </button>
+              )
+            })}
           </div>
           <button
             onClick={() => setModal({ med: null })}
@@ -364,7 +483,7 @@ export default function Planner() {
 
       {/* All done celebration */}
       <AnimatePresence>
-        {allDone && view === 'today' && (
+        {allDone && view === 'day' && (
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 8 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -377,7 +496,7 @@ export default function Planner() {
         )}
       </AnimatePresence>
 
-      {view === 'today' ? (
+      {view === 'day' ? (
         dueToday.length === 0 ? (
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }}
@@ -448,42 +567,128 @@ export default function Planner() {
             })}
           </div>
         )
-      ) : (
-        /* History heatmap */
-        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="rounded-3xl bg-white border border-slate-200/80 shadow-sm p-6">
-          <h3 className="text-sm font-bold text-slate-700 mb-5">{t('last4Weeks')}</h3>
-          <div className="grid grid-cols-7 gap-2 max-w-md">
-            {[...Array(28)].map((_, i) => {
-              const d = 27 - i
-              const dt = new Date(Date.now() - d * 24 * 3600 * 1000)
-              const key = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Berlin', year: 'numeric', month: '2-digit', day: '2-digit' }).format(dt)
-              const s = data?.stats?.dayStats?.[key]
-              const ratio = s && s.due ? Math.min(1, s.taken / s.due) : null
+      ) : view === 'week' ? (
+        /* Week plan: one row per day with the meds scheduled that weekday */
+        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="rounded-3xl bg-white border border-slate-200/80 shadow-sm overflow-hidden">
+          <PeriodHeader
+            label={fmtDate(locale, { day: 'numeric', month: 'short' }).format(weekDays[0].date)
+              + ' – ' + fmtDate(locale, { day: 'numeric', month: 'short', year: 'numeric' }).format(weekDays[6].date)}
+            onPrev={() => setWeekOffset(o => o - 1)}
+            onNext={() => setWeekOffset(o => o + 1)}
+            onReset={weekOffset !== 0 ? () => setWeekOffset(0) : null}
+            resetLabel={t('todayTab')}
+          />
+          <div className="divide-y divide-slate-100">
+            {weekDays.map((d, i) => {
+              const dayMeds = medsOnWeekday(d.wd)
               return (
                 <motion.div
-                  key={key}
-                  initial={{ opacity: 0, scale: 0.6 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: i * 0.012 }}
-                  title={`${key}${s ? ` · ${s.taken}/${s.due}` : ''}`}
-                  className={`aspect-square rounded-lg flex items-center justify-center text-[10px] font-bold ${
-                    ratio === null ? 'bg-slate-100 text-slate-300'
-                      : ratio >= 1 ? 'bg-teal-500 text-white'
-                      : ratio >= 0.5 ? 'bg-teal-300 text-white'
-                      : ratio > 0 ? 'bg-amber-300 text-white'
-                      : 'bg-rose-200 text-rose-500'
-                  }`}
+                  key={d.key}
+                  initial={{ opacity: 0, x: -8 }} animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.04 }}
+                  className={`flex gap-4 px-5 py-4 ${d.isToday ? 'bg-teal-50/50' : ''}`}
                 >
-                  {dt.getDate()}
+                  <div className="w-12 shrink-0 text-center">
+                    <div className={`text-[10px] font-bold uppercase ${d.isToday ? 'text-teal-600' : 'text-slate-400'}`}>
+                      {fmtDate(locale, { weekday: 'short' }).format(d.date)}
+                    </div>
+                    <div className={`text-lg font-extrabold tabular-nums leading-tight ${d.isToday ? 'text-teal-700' : 'text-slate-700'}`}>
+                      {d.dayNum}
+                    </div>
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    {d.planned === 0 ? (
+                      <p className="text-xs text-slate-300 font-semibold pt-2">{t('noDosesDay')}</p>
+                    ) : (
+                      <>
+                        <div className="flex flex-wrap gap-1.5">
+                          {dayMeds.map(m => {
+                            const FormIcon = FORM_ICONS[m.form] || Pill
+                            const slotCount = SLOTS.filter(s => m.slots[s.id]).length
+                            return (
+                              <button
+                                key={m.id}
+                                onClick={() => setModal({ med: m })}
+                                title={SLOTS.filter(s => m.slots[s.id]).map(s => t(`slot_${s.id}`)).join(' · ')}
+                                className={`inline-flex items-center gap-1.5 rounded-lg px-2 py-1 text-[11px] font-bold hover:ring-2 hover:ring-teal-200 transition-all ${MED_COLORS[m.color]?.soft || 'bg-emerald-50 text-emerald-600'}`}
+                              >
+                                <FormIcon className="h-3.5 w-3.5" />
+                                <span className="max-w-[9rem] truncate">{m.name}</span>
+                                <span className="opacity-60 tabular-nums">×{slotCount}</span>
+                              </button>
+                            )
+                          })}
+                        </div>
+                        <p className="text-[10px] text-slate-400 font-semibold mt-1.5 tabular-nums">
+                          {d.isPast || d.isToday
+                            ? `${d.taken ?? 0}/${d.planned} ${t('dosesLabel')}`
+                            : `${d.planned} ${t('plannedLabel')}`}
+                        </p>
+                      </>
+                    )}
+                  </div>
+                  {d.planned > 0 && (
+                    <div
+                      className={`h-8 w-8 shrink-0 self-center rounded-lg flex items-center justify-center text-[10px] font-bold ${
+                        d.isPast || d.isToday ? adherenceClass(d.ratio) : 'bg-slate-50 text-slate-400 border border-dashed border-slate-200'
+                      }`}
+                    >
+                      {d.isPast || d.isToday ? (d.ratio === null ? '—' : `${Math.round(d.ratio * 100)}`) : d.planned}
+                    </div>
+                  )}
                 </motion.div>
               )
             })}
           </div>
-          <div className="flex items-center gap-4 mt-5 text-[11px] text-slate-400 font-semibold">
-            <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-teal-500" /> 100%</span>
-            <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-teal-300" /> ≥50%</span>
-            <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-amber-300" /> &lt;50%</span>
-            <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-slate-100" /> —</span>
+        </motion.div>
+      ) : (
+        /* Month plan: calendar of planned doses + adherence where recorded */
+        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="rounded-3xl bg-white border border-slate-200/80 shadow-sm overflow-hidden">
+          <PeriodHeader
+            label={fmtDate(locale, { month: 'long', year: 'numeric' }).format(monthGrid.first)}
+            onPrev={() => setMonthOffset(o => o - 1)}
+            onNext={() => setMonthOffset(o => o + 1)}
+            onReset={monthOffset !== 0 ? () => setMonthOffset(0) : null}
+            resetLabel={t('todayTab')}
+          />
+          <div className="p-5">
+            <div className="grid grid-cols-7 gap-1.5 mb-2">
+              {weekDays.map(d => (
+                <div key={`h-${d.key}`} className="text-center text-[10px] font-bold uppercase text-slate-400">
+                  {fmtDate(locale, { weekday: 'narrow' }).format(d.date)}
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-7 gap-1.5">
+              {monthGrid.cells.map((c, i) => (
+                <motion.div
+                  key={c.key}
+                  initial={{ opacity: 0, scale: 0.7 }}
+                  animate={{ opacity: c.inMonth ? 1 : 0.35, scale: 1 }}
+                  transition={{ delay: Math.min(i, 20) * 0.012 }}
+                  title={`${c.key} · ${c.isPast || c.isToday
+                    ? `${c.taken ?? 0}/${c.planned}`
+                    : `${c.planned} ${t('plannedLabel')}`}`}
+                  className={`aspect-square rounded-lg flex flex-col items-center justify-center leading-none ${
+                    c.planned === 0 ? 'bg-slate-50 text-slate-300'
+                      : c.isPast || c.isToday ? adherenceClass(c.ratio)
+                      : 'bg-white border border-dashed border-teal-200 text-teal-600'
+                  } ${c.isToday ? 'ring-2 ring-teal-400 ring-offset-1' : ''}`}
+                >
+                  <span className="text-[11px] font-bold">{c.dayNum}</span>
+                  {c.planned > 0 && !c.isPast && !c.isToday && (
+                    <span className="text-[8px] font-bold opacity-70 tabular-nums mt-0.5">{c.planned}</span>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-5 text-[11px] text-slate-400 font-semibold">
+              <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-teal-500" /> 100%</span>
+              <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-teal-300" /> ≥50%</span>
+              <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-amber-300" /> &lt;50%</span>
+              <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded border border-dashed border-teal-300 bg-white" /> {t('plannedLabel')}</span>
+              <span className="ml-auto tabular-nums text-slate-500">{monthPlanned} {t('dosesLabel')}</span>
+            </div>
           </div>
         </motion.div>
       )}
