@@ -1,18 +1,9 @@
-export const metadata = {
-  title: 'Pricing | Plans Starting at €0',
-  description:
-    'Choose the Medyra plan that fits your needs. Start free with 3 reports per month, or upgrade for unlimited AI-powered medical report explanations. No credit card required.',
-  alternates: {
-    canonical: 'https://medyra.de/pricing',
-  },
-  openGraph: {
-    title: 'Medyra Pricing | Start Free, Upgrade Anytime',
-    description:
-      'Free plan with 3 reports/month. Personal €4.99/mo, Family €9.99/mo. GDPR compliant. Cancel anytime.',
-    url: 'https://medyra.de/pricing',
-  },
-}
+import { notFound } from 'next/navigation'
+import { COMMERCE_ENABLED } from '@/lib/commerce'
+
+export const metadata = { robots: { index: false, follow: false } }
 
 export default function PricingLayout({ children }) {
+  if (!COMMERCE_ENABLED) notFound()
   return children
 }

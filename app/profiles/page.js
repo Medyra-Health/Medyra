@@ -1,5 +1,7 @@
 'use client'
 
+import { COMMERCE_ENABLED } from '@/lib/commerce'
+
 import { useState, useEffect } from 'react'
 import { useUser } from '@clerk/nextjs'
 import Link from 'next/link'
@@ -636,9 +638,9 @@ export default function ProfilesPage() {
       <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-teal-100/60 rounded-full blur-3xl pointer-events-none" />
       {/* Header */}
       <AppHeader back={{ href: '/dashboard', label: 'Dashboard' }} title={t('headerTitle')} tone="teal" user>
-        <HeaderButton href="/pricing" variant="soft" tone="teal" className="hidden sm:inline-flex">
+        {COMMERCE_ENABLED && (<HeaderButton href="/pricing" variant="soft" tone="teal" className="hidden sm:inline-flex">
           {t(TIER_LABEL_KEYS[tier])} {t('planSuffix')}
-        </HeaderButton>
+        </HeaderButton>)}
       </AppHeader>
 
       <main className="max-w-5xl mx-auto px-4 py-8">
@@ -650,7 +652,7 @@ export default function ProfilesPage() {
             <p className="text-sm text-gray-500">
               {isPaid
                 ? (limit ? t('trackingSubtitleWithLimit', { count: profiles.length, limit }) : t('trackingSubtitleNoLimit', { count: profiles.length }))
-                : t('upgradeSubtitle')}
+                : null}
             </p>
           </div>
           {canCreate && (
@@ -662,7 +664,7 @@ export default function ProfilesPage() {
         </div>
 
         {/* Upgrade gate for free/onetime */}
-        {!isPaid && (
+        {COMMERCE_ENABLED && !isPaid && (
           <div className="bg-[#08130D] border border-teal-900/60 rounded-2xl p-8 text-center mb-8 shadow-2xl shadow-teal-900/20">
             <div className="w-14 h-14 bg-teal-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Shield className="h-7 w-7 text-teal-300" />
@@ -683,11 +685,11 @@ export default function ProfilesPage() {
                 </div>
               ))}
             </div>
-            <Link href="/pricing">
+            {COMMERCE_ENABLED && (<Link href="/pricing">
               <button className="bg-gradient-to-r from-teal-500 to-teal-600 hover:shadow-[0_0_24px_-4px_rgba(20,184,166,0.6)] text-white font-bold px-8 py-3 rounded-xl transition-shadow">
                 {t('upgradeButton')}
               </button>
-            </Link>
+            </Link>)}
           </div>
         )}
 
@@ -727,7 +729,7 @@ export default function ProfilesPage() {
                 )}
 
                 {/* Upgrade slot when at limit */}
-                {!canCreate && limit !== null && (
+                {COMMERCE_ENABLED && !canCreate && limit !== null && (
                   <Link href="/pricing"
                     className="rounded-2xl border-2 border-dashed border-amber-200 bg-amber-50 p-5 flex flex-col items-center justify-center gap-2 hover:border-amber-300 transition-all min-h-[140px]">
                     <Crown className="h-8 w-8 text-amber-500" />

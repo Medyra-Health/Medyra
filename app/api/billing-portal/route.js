@@ -1,9 +1,13 @@
+
+import { COMMERCE_ENABLED } from '@/lib/commerce'
 import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import Stripe from 'stripe'
 import { MongoClient } from 'mongodb'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: '2024-06-20' })
+const stripe = COMMERCE_ENABLED && process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: '2024-06-20' })
+  : null
 
 let _client = null
 let _db = null
@@ -16,6 +20,7 @@ async function getDb() {
 }
 
 export async function POST(request) {
+  if (!COMMERCE_ENABLED) return NextResponse.json({ error: 'Payments are temporarily unavailable' }, { status: 503 })
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 

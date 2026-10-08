@@ -232,11 +232,7 @@ export default function BlogPost() {
 
           <h2 className="text-xl font-bold text-gray-900 mt-8">How many summaries can I create?</h2>
 
-          <p>
-            The free plan includes one Doctor Visit summary per month. Paid plans (Personal and Family) include
-            unlimited summaries, along with unlimited report uploads. You can see all current plans at{' '}
-            <Link href="/pricing" className="text-emerald-600 hover:underline">medyra.de/pricing</Link>.
-          </p>
+          <p>The number of summaries available is shown in your dashboard.</p>
 
           <h2 className="text-xl font-bold text-gray-900 mt-8">Important: this is not medical advice</h2>
 

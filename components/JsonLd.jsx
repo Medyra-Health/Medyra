@@ -63,34 +63,6 @@ export default function JsonLd() {
         applicationSubCategory: 'MedicalApplication',
         operatingSystem: 'Web Browser, iOS, Android',
         inLanguage: ['en', 'de', 'fr', 'es', 'it', 'pt', 'nl', 'pl', 'tr', 'ar', 'zh', 'ja', 'ko', 'hi', 'bn', 'ru'],
-        offers: [
-          {
-            '@type': 'Offer',
-            name: 'Free',
-            description: '3 medical reports per month at no cost',
-            price: '0',
-            priceCurrency: 'EUR',
-            availability: 'https://schema.org/InStock',
-          },
-          {
-            '@type': 'Offer',
-            name: 'Personal',
-            description: '20 reports/month, 2 health profiles, AI chat & prep summaries',
-            price: '4.99',
-            priceCurrency: 'EUR',
-            eligibleDuration: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' },
-            availability: 'https://schema.org/InStock',
-          },
-          {
-            '@type': 'Offer',
-            name: 'Family',
-            description: '50 reports/month, up to 5 member profiles, multi-user access',
-            price: '9.99',
-            priceCurrency: 'EUR',
-            eligibleDuration: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' },
-            availability: 'https://schema.org/InStock',
-          },
-        ],
         featureList: [
           'AI-powered medical report explanation',
           'Free instant lab value checker',
@@ -163,14 +135,6 @@ export default function JsonLd() {
           },
           {
             '@type': 'Question',
-            name: 'How much does Medyra cost?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Medyra offers a free plan (3 reports/month), Personal at €4.99/month (20 reports, 2 health profiles), and Family at €9.99/month (50 reports, up to 5 profiles). No credit card required.',
-            },
-          },
-          {
-            '@type': 'Question',
             name: 'Which languages does Medyra support?',
             acceptedAnswer: {
               '@type': 'Answer',
@@ -185,14 +149,6 @@ export default function JsonLd() {
               text: 'Medyra explains lab results (Laborbefund), doctor letters (Arztbrief), hospital discharge reports (Entlassungsbericht), radiology reports, medication plans and prescriptions (Medikationsplan, Rezept), and health insurance letters (Krankenkasse). There is also a free instant lab value checker at medyra.de/check.',
             },
           },
-          {
-            '@type': 'Question',
-            name: 'Can I cancel my subscription anytime?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes. You can cancel your subscription at any time from your dashboard with no penalties or hidden fees.',
-            },
-          },
         ],
       },
       {
@@ -205,12 +161,7 @@ export default function JsonLd() {
             name: 'Home',
             item: 'https://medyra.de',
           },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Pricing',
-            item: 'https://medyra.de/pricing',
-          },
+
         ],
       },
     ],

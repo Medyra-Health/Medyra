@@ -1,3 +1,5 @@
+
+import { COMMERCE_ENABLED } from '@/lib/commerce'
 import { MongoClient } from 'mongodb'
 import { v4 as uuidv4 } from 'uuid'
 import { NextResponse } from 'next/server'
@@ -409,7 +411,7 @@ async function handleHealthCheck() {
     message: 'Medyra API v2.0',
     status: 'operational',
     timestamp: new Date().toISOString(),
-    features: { ai: true, payments: !!stripe }
+    features: { ai: true, payments: COMMERCE_ENABLED && !!stripe }
   }))
 }
 
@@ -915,6 +917,7 @@ async function handleGetSubscription() {
 }
 
 async function handleCheckout(request) {
+  if (!COMMERCE_ENABLED) return handleCORS(NextResponse.json({ error: 'Payments are temporarily unavailable' }, { status: 503 }))
   const { userId } = await auth()
   if (!userId) return handleCORS(NextResponse.json({ error: 'Unauthorized' }, { status: 401 }))
   if (!stripe) return handleCORS(NextResponse.json({ error: 'Payments not configured' }, { status: 500 }))

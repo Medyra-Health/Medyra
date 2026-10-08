@@ -1,5 +1,7 @@
 'use client'
 
+import { COMMERCE_ENABLED } from '@/lib/commerce'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import MedyraLogo from '@/components/MedyraLogo'
@@ -104,7 +106,7 @@ export default function SiteFooter() {
               <li><Link href="/medplan" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('medplan')}</Link></li>
               <li><Link href="/dashboard" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('healthVault')}</Link></li>
               <li><Link href="/verstehen" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('verstehen')}</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('pricing')}</Link></li>
+              <li>{COMMERCE_ENABLED && (<Link href="/pricing" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('pricing')}</Link>)}</li>
               <li><Link href="/app" className="text-gray-400 hover:text-emerald-400 transition-colors">{t('app')}</Link></li>
             </ul>
           </div>

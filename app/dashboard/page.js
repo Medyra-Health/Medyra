@@ -1,5 +1,7 @@
 'use client'
 
+import { COMMERCE_ENABLED } from '@/lib/commerce'
+
 import { useUser } from '@clerk/nextjs'
 import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
@@ -129,6 +131,7 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
   const isPaid = tier !== 'free'
   const selectedProfile = profiles.find(p => p.id === selectedProfileId) || profiles[0]
 
+  if (!isPaid && !COMMERCE_ENABLED) return null
   if (!isPaid) {
     const FEATURES = [
       { icon: TrendingUp, label: t('dashboard.vaultFeature1Label'), desc: t('dashboard.vaultFeature1Desc') },
@@ -158,12 +161,12 @@ function VaultSection({ profiles, selectedProfileId, onSelectProfile, tier, canC
             </div>
           ))}
         </div>
-        <Link href="/pricing">
+        {COMMERCE_ENABLED && (<Link href="/pricing">
           <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition-colors flex items-center justify-center gap-2">
             {t('dashboard.unlockVaultButton')} <ArrowRight className="h-4 w-4" />
           </button>
-        </Link>
-        <p className="text-center text-[10px] text-gray-600 mt-2">{t('dashboard.vaultPricingNote')}</p>
+        </Link>)}
+        {COMMERCE_ENABLED && <p className="text-center text-[10px] text-gray-600 mt-2">{t('dashboard.vaultPricingNote')}</p>}
       </div>
     )
   }
@@ -327,7 +330,7 @@ export default function DashboardPage() {
               {PlanIcon && <PlanIcon className="h-3.5 w-3.5" />}
               {meta.label} {t('dashboard.planLabelSuffix')}
             </span>
-            {!isPaid ? (
+            {COMMERCE_ENABLED && (!isPaid ? (
               <Link href="/pricing">
                 <button className="text-xs font-semibold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 transition-colors">
                   {t('dashboard.upgradeButton')} <ArrowRight className="h-3 w-3" />
@@ -335,7 +338,7 @@ export default function DashboardPage() {
               </Link>
             ) : (
               <ManageSubscriptionButton />
-            )}
+            ))}
           </div>
         </div>
 
@@ -349,7 +352,7 @@ export default function DashboardPage() {
             },
             { label: t('dashboard.statTotalReports'), value: reports.length, color: 'text-gray-800' },
             { label: t('dashboard.statDoctorSummaries'), value: prepHistory.length, color: 'text-violet-700' },
-            { label: t('dashboard.statProfiles'), value: profiles.length, color: 'text-blue-700', sub: isPaid ? `/ ${meta.profileLimit ?? '∞'}` : t('dashboard.statUpgradeToUnlock') },
+            { label: t('dashboard.statProfiles'), value: profiles.length, color: 'text-blue-700', sub: isPaid ? `/ ${meta.profileLimit ?? '∞'}` : null },
           ].map(({ label, value, sub, color }) => (
             <div key={label} className="bg-white rounded-2xl border border-gray-100 p-4 shadow-sm">
               <p className={`text-2xl font-black ${color}`}>{value}</p>
@@ -370,9 +373,9 @@ export default function DashboardPage() {
             {usagePct >= 100 && (
               <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
                 <p className="text-xs text-red-600 font-medium flex items-center gap-1">
-                  <AlertCircle className="h-3.5 w-3.5" /> {t('dashboard.limitReachedMsg')}
+                  <AlertCircle className="h-3.5 w-3.5" /> {COMMERCE_ENABLED ? t('dashboard.limitReachedMsg') : t('reportsPage.limitReached')}
                 </p>
-                <Link href="/pricing"><Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white text-xs h-7">{t('dashboard.upgradeButton')}</Button></Link>
+                {COMMERCE_ENABLED && (<Link href="/pricing"><Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white text-xs h-7">{t('dashboard.upgradeButton')}</Button></Link>)}
               </div>
             )}
           </div>

@@ -1,5 +1,7 @@
 'use client'
 
+import { COMMERCE_ENABLED } from '@/lib/commerce'
+
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 import MedyraUserButton from '@/components/MedyraUserButton'
 import Link from 'next/link'
@@ -596,7 +598,7 @@ export default function LandingPage() {
           </div>
 
           {/* Profile limit cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 scroll-fade">
+          {COMMERCE_ENABLED && (<div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 scroll-fade">
             {[
               { plan: t('profiles.tierFree'), profiles: '0', desc: t('landing.healthVault.planFreeDesc'), color: 'border-gray-200 bg-white', badge: '' },
               { plan: t('profiles.tierPersonal'), profiles: '2', desc: t('landing.healthVault.planPersonalDesc'), color: 'border-emerald-300 bg-emerald-50', badge: t('landing.healthVault.mostPopular') },
@@ -612,7 +614,7 @@ export default function LandingPage() {
                 <p className="text-[11px] text-gray-500">{p.desc}</p>
               </div>
             ))}
-          </div>
+          </div>)}
 
           {/* CTA */}
           <div className="text-center scroll-fade">
@@ -830,7 +832,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── PRICING CTA ── */}
-      <section className="relative py-24 bg-white overflow-hidden">
+      {COMMERCE_ENABLED && (<section className="relative py-24 bg-white overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0" style={{background:'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(16,185,129,0.07) 0%, transparent 70%)'}} />
         </div>
@@ -856,15 +858,15 @@ export default function LandingPage() {
             ))}
           </div>
           <div className="text-center">
-            <Link href="/pricing">
+            {COMMERCE_ENABLED && (<Link href="/pricing">
               <Button size="lg" className="bg-gradient-to-r from-[#10B981] to-[#059669] hover:shadow-[0_0_36px_-6px_rgba(16,185,129,0.65)] active:scale-95 text-white font-bold px-12 rounded-xl h-14 text-base shadow-xl shadow-emerald-900/40 transition-all">
                 {t('pricingCta.cta')} <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </Link>
+            </Link>)}
             <p className="text-gray-500 text-sm mt-4">{t('landing.pricingCta.note')}</p>
           </div>
         </div>
-      </section>
+      </section>)}
 
       {/* ── BLOG ── */}
       <section className="py-20 md:py-24 bg-[#F3FAF6] relative overflow-hidden">

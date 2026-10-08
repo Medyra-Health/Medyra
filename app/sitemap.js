@@ -12,7 +12,6 @@ const MARKETING = [
   { path: '/check', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/lexikon', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/medplan', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/pricing', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/app', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/arztbrief', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/medikamente', changeFrequency: 'monthly', priority: 0.9 },

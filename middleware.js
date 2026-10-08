@@ -1,3 +1,5 @@
+
+import { COMMERCE_ENABLED } from '@/lib/commerce'
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 import { NextResponse } from 'next/server'
 
@@ -7,7 +9,6 @@ const isPublicRoute = createRouteMatcher([
   '/sign-up(.*)',
   '/sso-callback(.*)',
   '/forgot-password(.*)',
-  '/pricing(.*)',
   '/api/webhook/(.*)',
   '/api(.*)',
   '/lexikon(.*)',
@@ -53,6 +54,13 @@ function detectLocaleFromHeader(request) {
 }
 
 export default clerkMiddleware(async (auth, request) => {
+  const pathname = request.nextUrl.pathname
+  if (!COMMERCE_ENABLED && /^\/(pricing|success)(\/|$)/.test(pathname)) {
+    return new NextResponse(null, { status: 404, headers: { 'X-Robots-Tag': 'noindex, nofollow' } })
+  }
+  if (!COMMERCE_ENABLED && /^\/api\/(checkout|billing-portal)(\/|$)/.test(pathname)) {
+    return NextResponse.json({ error: 'Payments are temporarily unavailable' }, { status: 503 })
+  }
   if (!isPublicRoute(request)) {
     await auth.protect()
   }

@@ -94,6 +94,7 @@ function statusLabel(status, t) {
 
 export default function VerstehensPage() {
   const t = useTranslations('verstehen')
+  const tReports = useTranslations('reportsPage')
   const { isLoaded } = useUser()
   const [stage, setStage] = useState('upload') // upload | analyzing | result | error
   const [report, setReport] = useState(null)
@@ -126,7 +127,7 @@ export default function VerstehensPage() {
       const res = await fetch('/api/reports/analyze', { method: 'POST', body: formData })
       if (!res.ok) {
         const err = await res.json().catch(() => ({}))
-        if (res.status === 429) throw new Error(t('errorLimitReached'))
+        if (res.status === 429) throw new Error(tReports('limitReached'))
         if (res.status === 401) throw new Error(t('errorLoginFirst'))
         throw new Error(err.error || t('errorGeneric'))
       }

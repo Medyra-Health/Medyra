@@ -1,5 +1,7 @@
 'use client'
 
+import { COMMERCE_ENABLED } from '@/lib/commerce'
+
 // Medikationsplan — daily medication tracker. Slots follow the German
 // 1-0-1-0 scheme (morgens/mittags/abends/nachts). Free tier tracks "myself";
 // paid tiers add family profiles (reusing the existing profiles feature).
@@ -386,11 +388,11 @@ export default function Planner() {
                   <div className="px-3.5 py-3 border-t border-slate-100 mt-1">
                     <div className="flex items-start gap-2">
                       <Lock className="h-3.5 w-3.5 text-slate-400 mt-0.5 shrink-0" />
-                      <p className="text-[11px] text-slate-500 leading-relaxed">{t('profileLocked')}</p>
+                      {COMMERCE_ENABLED && <p className="text-[11px] text-slate-500 leading-relaxed">{t('profileLocked')}</p>}
                     </div>
-                    <Link href="/pricing" className="mt-2 inline-block text-xs font-bold text-teal-600 hover:text-teal-700">
+                    {COMMERCE_ENABLED && (<Link href="/pricing" className="mt-2 inline-block text-xs font-bold text-teal-600 hover:text-teal-700">
                       {t('upgradeCta')} →
-                    </Link>
+                    </Link>)}
                   </div>
                 )}
               </motion.div>

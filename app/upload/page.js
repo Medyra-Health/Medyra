@@ -158,7 +158,7 @@ export default function UploadPage() {
         } catch {
           if (response.status === 413) { setSizeError(true); errorMsg = 'FILE_TOO_LARGE' }
           else if (response.status === 401) errorMsg = t('errors.unauthorized')
-          else if (response.status === 429) errorMsg = t('errors.limitReached')
+          else if (response.status === 429) errorMsg = t('reportsPage.limitReached')
           else errorMsg = response.statusText || errorMsg
         }
         throw new Error(errorMsg)

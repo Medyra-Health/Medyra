@@ -1,5 +1,7 @@
 'use client'
 
+import { COMMERCE_ENABLED } from '@/lib/commerce'
+
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useUser } from '@clerk/nextjs'
@@ -480,7 +482,7 @@ export default function PrepPage() {
                   </>
                 )}
               </div>
-              {isLimitReached && (
+              {COMMERCE_ENABLED && isLimitReached && (
                 <Link href="/pricing" className="font-semibold underline underline-offset-2 hover:no-underline flex items-center gap-1">
                   {t('prep.upgrade')} <ChevronRight className="h-3 w-3" />
                 </Link>
@@ -714,12 +716,12 @@ export default function PrepPage() {
           )}
 
           {/* Upgrade CTA */}
-          {usage && !isUnlimited && step === 'category' && (
+          {COMMERCE_ENABLED && usage && !isUnlimited && step === 'category' && (
             <div className="mt-5 flex items-center justify-center gap-2 text-xs text-gray-400">
-              <span>{t('prep.upgradeCta')}</span>
-              <Link href="/pricing" className="text-emerald-600 font-semibold hover:underline flex items-center gap-0.5">
+              {COMMERCE_ENABLED && <span>{t('prep.upgradeCta')}</span>}
+              {COMMERCE_ENABLED && (<Link href="/pricing" className="text-emerald-600 font-semibold hover:underline flex items-center gap-0.5">
                 {t('prep.upgrade')} <ChevronRight className="h-3 w-3" />
-              </Link>
+              </Link>)}
             </div>
           )}
 

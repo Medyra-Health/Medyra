@@ -1,8 +1,9 @@
 'use client';
 
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Upload, LayoutDashboard, BookOpen, Tag } from 'lucide-react';
+import { Home, Upload, LayoutDashboard, BookOpen } from 'lucide-react';
 import { useUser } from '@clerk/nextjs';
 import { useTranslations } from 'next-intl';
 
@@ -20,12 +21,10 @@ export default function MobileNav() {
         { href: '/', icon: Home, label: t('home') },
         { href: '/upload', icon: Upload, label: t('upload') },
         { href: '/dashboard', icon: LayoutDashboard, label: t('dashboard') },
-        { href: '/pricing', icon: Tag, label: t('pricing') },
         { href: '/blog', icon: BookOpen, label: t('blog') },
       ]
     : [
         { href: '/', icon: Home, label: t('home') },
-        { href: '/pricing', icon: Tag, label: t('pricing') },
         { href: '/blog', icon: BookOpen, label: t('blog') },
       ];
 

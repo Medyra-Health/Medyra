@@ -1,5 +1,7 @@
 'use client'
 
+import { COMMERCE_ENABLED } from '@/lib/commerce'
+
 import { use, useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import { useUser } from '@clerk/nextjs'
@@ -989,10 +991,10 @@ export default function ReportDetailPage({ params }) {
               {chatLimitReached ? (
                 <div className="px-4 py-4 border-t border-gray-100 text-center bg-gray-50">
                   <p className="text-sm text-red-600 font-medium mb-1">{t('report.chatLimitReached')}</p>
-                  <p className="text-xs text-gray-400 mb-3">{t('report.chatLimitInfo')}</p>
-                  <a href="/pricing" className="inline-block text-sm bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-5 py-2 rounded-full transition-colors">
+                  {COMMERCE_ENABLED && <p className="text-xs text-gray-400 mb-3">{t('report.chatLimitInfo')}</p>}
+                  {COMMERCE_ENABLED && (<a href="/pricing" className="inline-block text-sm bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-5 py-2 rounded-full transition-colors">
                     {t('report.chatUpgrade')} →
-                  </a>
+                  </a>)}
                 </div>
               ) : (
                 <div className="px-4 py-3 border-t border-gray-100 flex gap-2 items-end bg-white">

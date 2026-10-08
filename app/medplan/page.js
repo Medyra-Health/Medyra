@@ -1,5 +1,7 @@
 'use client'
 
+import { COMMERCE_ENABLED } from '@/lib/commerce'
+
 import Link from 'next/link'
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 import { motion } from 'framer-motion'
@@ -25,7 +27,7 @@ function MarketingHero() {
   const features = [
     { icon: CalendarCheck2, title: t('heroFeature1Title'), desc: t('heroFeature1Desc') },
     { icon: AlarmClock, title: t('heroFeature2Title'), desc: t('heroFeature2Desc') },
-    { icon: Users, title: t('heroFeature3Title'), desc: t('heroFeature3Desc') },
+    ...(COMMERCE_ENABLED ? [{ icon: Users, title: t('heroFeature3Title'), desc: t('heroFeature3Desc') }] : []),
   ]
 
   return (
@@ -99,7 +101,7 @@ function MarketingHero() {
       {/* Light feature section */}
       <section className="bg-white">
         <div className="container mx-auto px-4 py-14 sm:py-18">
-          <div className="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
             {features.map((f, i) => (
               <motion.div
                 key={i}
@@ -118,9 +120,9 @@ function MarketingHero() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link href="/pricing" className="text-sm font-bold text-teal-600 hover:text-teal-700">
+            {COMMERCE_ENABLED && (<Link href="/pricing" className="text-sm font-bold text-teal-600 hover:text-teal-700">
               {t('heroPricingLink')} →
-            </Link>
+            </Link>)}
           </div>
         </div>
       </section>

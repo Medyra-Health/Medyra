@@ -1,3 +1,5 @@
+
+import { COMMERCE_ENABLED } from '@/lib/commerce'
 import Link from 'next/link'
 import MedyraLogo from '@/components/MedyraLogo'
 import AppHeader from '@/components/AppHeader'
@@ -53,7 +55,7 @@ export default function BlogPost() {
           </p>
 
           <p>
-            With the Personal and Family plans, you can now create health profiles for every member of your
+            You can create health profiles for every member of your
             household, track key biomarkers across months and years, and walk into every appointment with a
             complete, structured history, automatically included in any doctor summary you generate.
           </p>
@@ -107,6 +109,7 @@ export default function BlogPost() {
             set the relationship, Myself, Partner, Child, Parent, which helps Medyra contextualise the data.
           </p>
 
+          {COMMERCE_ENABLED && (<>
           <p>
             Here is how profiles work by plan:
           </p>
@@ -127,6 +130,8 @@ export default function BlogPost() {
               </div>
             ))}
           </div>
+
+          </>)}
 
           {/* How to use */}
           <h2 className="text-xl font-bold text-gray-900 mt-8">How to use it, step by step</h2>
@@ -221,7 +226,7 @@ export default function BlogPost() {
           <h2 className="text-xl font-bold text-gray-900 mt-8">Managing health for a whole family</h2>
 
           <p>
-            The Family plan supports up to five profiles. In practice this is designed for households where
+            Multiple profiles support households where
             one person, usually a parent or caregiver, manages the medical administration for everyone.
           </p>
 
@@ -272,16 +277,16 @@ export default function BlogPost() {
               </svg>
             </div>
             <p className="text-white font-bold text-xl">Start building your Health Vault</p>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            {COMMERCE_ENABLED && (<p className="text-gray-400 text-sm leading-relaxed">
               Personal plan, 2 health profiles · 20 reports/month · AI chat & prep summaries · From €4.99/month
-            </p>
+            </p>)}
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link
+              {COMMERCE_ENABLED && (<Link
                 href="/pricing"
                 className="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm"
               >
                 See plans →
-              </Link>
+              </Link>)}
               <Link
                 href="/profiles"
                 className="inline-block border border-white/20 hover:bg-white/10 text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm"

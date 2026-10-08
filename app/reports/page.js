@@ -1,5 +1,7 @@
 'use client'
 
+import { COMMERCE_ENABLED } from '@/lib/commerce'
+
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useUser } from '@clerk/nextjs'
@@ -154,11 +156,11 @@ export default function ReportsPage() {
             {remaining === 0 ? (
               <div className="flex items-center justify-between">
                 <p className="text-xs text-red-600 font-medium">{t('reportsPage.limitReached')}</p>
-                <Link href="/pricing">
+                {COMMERCE_ENABLED && (<Link href="/pricing">
                   <Button size="sm" className="h-7 text-xs bg-emerald-500 hover:bg-emerald-600 text-white font-semibold">
                     <TrendingUp className="h-3 w-3 mr-1" /> {t('reportsPage.upgrade')}
                   </Button>
-                </Link>
+                </Link>)}
               </div>
             ) : (
               <p className="text-xs text-gray-400">{t('reportsPage.remainingOnPlan', { count: remaining })}</p>
@@ -290,7 +292,7 @@ export default function ReportsPage() {
         )}
 
         {/* Upgrade nudge for free users */}
-        {subscription && !isUnlimited && remaining !== null && remaining <= 1 && (
+        {COMMERCE_ENABLED && subscription && !isUnlimited && remaining !== null && remaining <= 1 && (
           <div className="mt-8 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-2xl p-5 flex items-center gap-4">
             <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center flex-shrink-0">
               <TrendingUp className="h-5 w-5 text-white" />
@@ -301,11 +303,11 @@ export default function ReportsPage() {
               </p>
               <p className="text-xs text-gray-500 mt-0.5">{t('reportsPage.upgradeDesc')}</p>
             </div>
-            <Link href="/pricing" className="flex-shrink-0">
+            {COMMERCE_ENABLED && (<Link href="/pricing" className="flex-shrink-0">
               <Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-sm">
                 {t('reportsPage.upgrade')}
               </Button>
-            </Link>
+            </Link>)}
           </div>
         )}
       </div>
