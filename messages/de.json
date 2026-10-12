@@ -24,7 +24,7 @@
   "features": {
     "ai": {
       "title": "KI-gestuetzte Analyse",
-      "desc": "Modernste KI analysiert Ihre Bluttestergebnisse mit medizinischer Praezision."
+      "desc": "Moderne KI übersetzt komplexe medizinische Fachbegriffe in verständliche Sprache."
     },
     "secure": {
       "title": "Sicher und Privat",
@@ -167,7 +167,7 @@
   },
   "legal": {
     "title": "Rechtlicher Hinweis",
-    "text": "Diese Plattform dient nur zu Informationszwecken und ersetzt keine professionelle medizinische Beratung. Medyra erklaert die Bedeutung medizinischer Begriffe, gibt jedoch keine medizinische Beratung, Diagnose oder Behandlungsempfehlungen. Konsultieren Sie immer Ihren Arzt, bevor Sie Gesundheitsentscheidungen treffen. Ihre Daten werden DSGVO-konform behandelt und nach 30 Tagen automatisch geloescht."
+    "text": "Diese Plattform dient nur zu Informationszwecken und ersetzt keine professionelle medizinische Beratung. Medyra erklärt die Bedeutung medizinischer Begriffe, gibt jedoch keine medizinische Beratung, Diagnose oder Behandlungsempfehlungen. Konsultieren Sie immer Ihren Arzt, bevor Sie Gesundheitsentscheidungen treffen. Ihre Daten werden DSGVO-konform behandelt und nach 30 Tagen automatisch gelöscht."
   },
   "footer": {
     "tagline": "Ihre medizinischen Berichte verständlich erklärt",
@@ -285,7 +285,7 @@
     "vaultFeature1Label": "Biomarker-Zeitverlauf",
     "vaultFeature1Desc": "Werte über Zeit verfolgen",
     "vaultFeature2Label": "KI-Trendanalyse",
-    "vaultFeature2Desc": "Wichtige Veränderungen erkennen",
+    "vaultFeature2Desc": "Veränderungen zwischen Berichten ansehen",
     "vaultFeature3Label": "Familienprofile",
     "vaultFeature3Desc": "Bis zu 5 Mitglieder",
     "unlockVaultButton": "Health Vault freischalten",
@@ -304,10 +304,10 @@
     "manageProfiles": "Profile verwalten",
     "managePlanButton": "Plan verwalten",
     "doctorSummariesTitle": "Arztbesuch-Zusammenfassungen",
-    "doctorSummariesSubtitle": "KI-generierte klinische Zusammenfassungen für Ihre Termine",
+    "doctorSummariesSubtitle": "KI-generierte strukturierte Zusammenfassungen für Ihre Termine",
     "newSummaryButton": "Neue Zusammenfassung",
     "noSummariesTitle": "Noch keine Zusammenfassungen",
-    "noSummariesDesc": "Beschreiben Sie Ihre Symptome und erhalten Sie in Sekunden eine strukturierte deutsche klinische Zusammenfassung für Ihren Arzt.",
+    "noSummariesDesc": "Beschreiben Sie Ihre Symptome und erhalten Sie in Sekunden eine strukturierte deutsche Zusammenfassung für Ihren Arzt.",
     "prepareVisitButton": "Arztbesuch vorbereiten",
     "viewAllSummaries": "Alle {count} Zusammenfassungen ansehen →",
     "loadingDashboard": "Gesundheits-Dashboard wird geladen…",
@@ -344,16 +344,16 @@
     "exportPDF": "PDF exportieren",
     "print": "Drucken",
     "resultsDistribution": "Ergebnisverteilung",
-    "needAttention": "benötigen Aufmerksamkeit",
-    "allValuesNormal": "Alle Werte normal",
+    "needAttention": "außerhalb des Referenzbereichs",
+    "allValuesNormal": "Alle Werte im Referenzbereich",
     "keyTakeaways": "Wichtigste Erkenntnisse",
-    "valuesNeedingAttention": "Werte, die Aufmerksamkeit benötigen",
-    "greatResults": "Gute Ergebnisse: mit Ihrem Arzt besprechen",
+    "valuesNeedingAttention": "Werte außerhalb des Referenzbereichs",
+    "greatResults": "Alle Werte liegen im Referenzbereich. Besprechen Sie sie mit Ihrem Arzt.",
     "allReports": "Alle Berichte",
     "saveAsPdf": "Als PDF speichern",
-    "chatGreeting": "Hallo! Ich habe Ihren Bericht gelesen. Stellen Sie mir Ihre Fragen:",
+    "chatGreeting": "Hallo! Ich habe Ihren Bericht gelesen. Fragen Sie mich zu den Begriffen und Werten darin:",
     "chatQ1": "Fassen Sie die wichtigsten Befunde zusammen",
-    "chatQ2": "Welche Ergebnisse erfordern dringende Aufmerksamkeit?",
+    "chatQ2": "Welche Ergebnisse liegen außerhalb des Referenzbereichs?",
     "chatQ3": "Was soll ich meinen Arzt fragen?",
     "chatQ4": "Wie sind meine Ergebnisse im Vergleich zum letzten Mal?",
     "chatPoweredBy": "Unterstützt von Claude · Nur zu Bildungszwecken",
@@ -391,10 +391,10 @@
     "saveToProfile": "Diesen Bericht einem Profil zuordnen",
     "savingEllipsis": "Wird gespeichert…",
     "shortVersion": "Die Kurzfassung",
-    "suggestedNextSteps": "Empfohlene nächste Schritte",
+    "suggestedNextSteps": "Punkte für das Gespräch mit Ihrem Arzt",
     "testsUnit": "Tests",
     "flaggedCount": "{count} auffällig",
-    "allNormalBadge": "Alles normal",
+    "allNormalBadge": "Alles im Referenzbereich",
     "unlimitedLabel": "unbegrenzt"
   },
   "common": {
@@ -491,7 +491,7 @@
     "catResultsLabel": "Ich habe Testergebnisse",
     "catResultsDesc": "Labor, Scans oder Berichte, verstehen Sie, was Sie fragen sollen",
     "catGeneralLabel": "Allgemeine Frage",
-    "catGeneralDesc": "Arzt finden, System verstehen oder Rat einholen"
+    "catGeneralDesc": "Arzt finden oder das Gesundheitssystem verstehen"
   },
   "landing": {
     "hero": {
@@ -519,7 +519,7 @@
       "step1Desc": "PDF, JPG, PNG oder TXT hochladen. Unsere KI liest den Text: auch aus gescannten Fotos.",
       "step1Detail": "Sofort verschlüsselt",
       "step2Title": "KI analysiert in unter 60 Sekunden",
-      "step2Desc": "Claude AI erkennt alle Testwerte, markiert abnormale Ergebnisse und schreibt eine verständliche Erklärung.",
+      "step2Desc": "Claude AI liest die Werte Ihres Berichts, markiert Werte außerhalb des Referenzbereichs und schreibt eine verständliche Erklärung.",
       "step2Detail": "Kein Fachjargon",
       "step3Title": "Ihre Antworten",
       "step3Desc": "Lesen Sie Ihre Ergebnisse, stellen Sie Nachfragen und exportieren Sie ein PDF für Ihren nächsten Termin.",
@@ -534,7 +534,7 @@
       "step1Title": "In jeder Sprache beschreiben",
       "step1Desc": "Schreiben Sie frei auf Englisch, Arabisch, Hindi oder Türkisch: ganz natürlich. Kein Fachwissen nötig.",
       "step2Title": "KI strukturiert sofort",
-      "step2Desc": "Claude erstellt eine formelle klinische Zusammenfassung: Hauptbeschwerden, Zeitverlauf, Vorgeschichte und Fragen.",
+      "step2Desc": "Claude erstellt aus Ihrer Beschreibung eine strukturierte Zusammenfassung auf Deutsch: Hauptbeschwerden, Zeitverlauf, Vorgeschichte und Fragen.",
       "step3Title": "Ausdrucken & mitbringen",
       "step3Desc": "Ein Klick druckt ein sauberes A4-Blatt: übergeben Sie es Ihrem Arzt zu Beginn des Termins.",
       "cta": "Auf den Termin vorbereiten",
@@ -617,17 +617,17 @@
       "shareButton": "PDF teilen"
     },
     "beforeAfter": {
-      "result1": "Ihre Schilddrüse (TSH) liegt im Normalbereich, keine Maßnahme nötig.",
-      "result2": "Blutzucker (HbA1c) leicht erhöht. Besprechen Sie das Prädiabetes-Risiko mit Ihrem Arzt.",
-      "result3": "Nierenfilterung (eGFR) leicht reduziert, sollte langfristig beobachtet werden.",
-      "result4": "Entzündung (CRP) erhöht. Ihr Arzt sollte dies bald untersuchen.",
-      "result5": "Eisenspeicher (Ferritin) niedrig. Dies kann Müdigkeit verursachen."
+      "result1": "Ihr Schilddrüsenwert (TSH) liegt im Referenzbereich.",
+      "result2": "Der Langzeit-Blutzucker (HbA1c) liegt leicht über dem Referenzbereich. Ihr Arzt kann Ihnen sagen, was das für Sie bedeutet.",
+      "result3": "Die Nierenfilterung (eGFR) liegt leicht unter dem Referenzbereich. Ihr Arzt kann einschätzen, ob eine Verlaufskontrolle sinnvoll ist.",
+      "result4": "Der Entzündungswert (CRP) liegt über dem Referenzbereich. Er ist unspezifisch und kann viele Ursachen haben – besprechen Sie ihn mit Ihrem Arzt.",
+      "result5": "Die Eisenspeicher (Ferritin) liegen unter dem Referenzbereich. Müdigkeit kann viele Ursachen haben – fragen Sie Ihren Arzt, ob das für Sie relevant ist."
     },
     "healthVault": {
       "badge": "Health Vault",
       "title1": "Ihre Gesundheitsgeschichte.",
       "title2": "Jede Person. Jeder Trend.",
-      "subtitle": "Ein Konto für die ganze Familie. Medyra verfolgt Biomarker über Berichte hinweg und zeigt Trends vor Ihrem nächsten Termin.",
+      "subtitle": "Ein Konto für die ganze Familie. Medyra führt Biomarker aus Ihren Berichten über die Zeit zusammen, sodass Sie vor Ihrem nächsten Termin sehen, wie sie sich verändert haben.",
       "statLatest": "Aktuell",
       "statNormalRange": "Normbereich",
       "statChange": "Veränderung",
@@ -637,7 +637,7 @@
       "feature2Title": "Automatische Biomarker-Verfolgung",
       "feature2Desc": "Hämoglobin, Ferritin, TSH, HbA1c, Cholesterin, Vitamin D, CRP, eGFR. Medyra liest sie aus jedem hochgeladenen Bericht und stellt sie automatisch dar.",
       "feature3Title": "Jeder Wert, nicht nur die bekannten",
-      "feature3Desc": "Medyra verfolgt jeden numerischen Wert aus Ihren Berichten, mit den Einheiten und Referenzbereichen Ihres Labors. Nichts geht zwischen Terminen verloren.",
+      "feature3Desc": "Medyra bewahrt jeden numerischen Wert Ihrer Berichte an einem Ort auf, mit den Einheiten und Referenzbereichen Ihres Labors.",
       "feature4Title": "Arztvorbereitung mit vollständiger Historie",
       "feature4Desc": "Wenn Sie eine Arztzusammenfassung erstellen, wählen Sie ein Profil. Ihre Laborhistorie wird automatisch einbezogen. Kein Tippen, kein Vergessen, keine Lücken.",
       "planFreeDesc": "Analyse ohne Speicherung",
@@ -985,8 +985,8 @@
     "findingsTitle": "Ihre Werte erklärt",
     "statusNormal": "In Ordnung",
     "statusHigh": "Erhöht",
-    "statusLow": "Zu niedrig",
-    "statusUnknown": "Auffällig",
+    "statusLow": "Unter dem Referenzbereich",
+    "statusUnknown": "Außerhalb des Referenzbereichs",
     "questionsTitle": "Fragen für Ihren Arzt",
     "printButton": "Drucken",
     "shareButton": "Teilen",
@@ -1107,7 +1107,7 @@
     "biomarkerTimelineTitle": "Biomarker-Zeitleiste",
     "mostRecentReportTitle": "Neuester Bericht",
     "viewFullLink": "Vollständig ansehen",
-    "allNormalMessage": "Alle Werte im Normalbereich",
+    "allNormalMessage": "Alle Werte im Referenzbereich",
     "normalRangeLabel": "normal",
     "moreCount": "+{count} weitere",
     "healthRecordTitle": "Gesundheitsakte ({count})",
@@ -1128,7 +1128,7 @@
     "title": "Medyra AI Report",
     "complete": "Fertig",
     "aiSummary": "KI-Zusammenfassung",
-    "aiSummaryText": "Ihre Schilddrüse (TSH) ist gesund. Blutzucker- und Entzündungswerte benötigen Aufmerksamkeit. Vereinbaren Sie einen Termin bei Ihrem Arzt.",
+    "aiSummaryText": "Ihr Schilddrüsenwert (TSH) liegt im Referenzbereich. Ihre Blutzucker- und Entzündungswerte liegen außerhalb – sprechen Sie darüber mit Ihrem Arzt.",
     "askAI": "KI fragen",
     "savePDF": "PDF speichern"
   },
@@ -1145,7 +1145,7 @@
     "valueLabel": "Wert",
     "normalLabel": "Normal",
     "questionsForDoctor": "FRAGEN FÜR IHREN ARZT",
-    "nextSteps": "EMPFOHLENE NÄCHSTE SCHRITTE",
+    "nextSteps": "PUNKTE FÜR DAS GESPRÄCH MIT IHREM ARZT",
     "footerGenerated": "Erstellt von Medyra · medyra.de",
     "footerDisclaimer": "Kein Ersatz für professionelle medizinische Beratung",
     "defaultFileName": "Bericht",
