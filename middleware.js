@@ -1,4 +1,4 @@
-import { hasPrivateAccess, verifyPrivatePassword, createPrivateSession, PRIVATE_COOKIE } from '@/lib/privateAccess'
+import { hasPrivateAccess } from '@/lib/privateAccess'
 import { maintenancePage } from '@/lib/maintenancePage'
 
 import { COMMERCE_ENABLED } from '@/lib/commerce'
@@ -92,19 +92,11 @@ function privateResponse(error = false) {
 }
 
 export default async function middleware(request, event) {
-  if (request.nextUrl.pathname === '/private-access' && request.method === 'POST') {
-    // Reject cross-site submissions; passwords never appear in URLs or logs.
-    const origin = request.headers.get('origin')
-    if (!origin || origin !== request.nextUrl.origin) return privateResponse(true)
-    let password
-    try { password = (await request.formData()).get('password') } catch { return privateResponse(true) }
-    if (!(await verifyPrivatePassword(password))) return privateResponse(true)
-    const response = NextResponse.redirect(new URL('/', request.url), 303)
-    response.cookies.set(PRIVATE_COOKIE, await createPrivateSession(password), {
-      httpOnly: true, secure: request.nextUrl.protocol === 'https:', sameSite: 'strict', path: '/', maxAge: 60 * 60 * 8,
-    })
-    response.headers.set('Cache-Control', 'private, no-store')
-    return response
+  if (request.method === 'POST' && request.nextUrl.pathname === '/private-access') {
+    return NextResponse.rewrite(new URL('/api/private-access',request.url))
+  }
+  if (request.method === 'POST' && request.nextUrl.pathname === '/api/private-access') {
+    return NextResponse.next()
   }
   if (!(await hasPrivateAccess(request))) {
     if (/^\/(api|trpc)(\/|$)/.test(request.nextUrl.pathname)) {

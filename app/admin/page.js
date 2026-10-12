@@ -15,6 +15,7 @@ import InfraStatusRow from '@/components/admin/InfraStatusRow'
 import MobileAppPanel from '@/components/admin/MobileAppPanel'
 import SearchConsolePanel from '@/components/admin/SearchConsolePanel'
 import AdvancedTools from '@/components/admin/AdvancedTools'
+import AccessAttemptsPanel from '@/components/admin/AccessAttemptsPanel'
 
 const AdminChart = dynamic(() => import('@/components/AdminChart'), {
   ssr: false,
@@ -287,6 +288,7 @@ export default function AdminPage() {
             <TabsTrigger value="ai">AI Settings</TabsTrigger>
             <TabsTrigger value="users">Users & Payments</TabsTrigger>
             <TabsTrigger value="advanced">Advanced</TabsTrigger>
+            <TabsTrigger value="access">Access attempts</TabsTrigger>
           </TabsList>
 
           {/* ── OVERVIEW ── */}
@@ -747,6 +749,7 @@ export default function AdminPage() {
           <TabsContent value="advanced" className="mt-4">
             <AdvancedTools />
           </TabsContent>
+          <TabsContent value="access" className="mt-4"><AccessAttemptsPanel /></TabsContent>
         </Tabs>
 
         <p className="text-xs text-gray-300 text-center pb-4">
