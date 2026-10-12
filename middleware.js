@@ -1,4 +1,5 @@
-import { hasPrivateAccess } from '@/lib/privateAccess'
+import { hasPrivateAccess, verifyPrivatePassword, createPrivateSession, PRIVATE_COOKIE } from '@/lib/privateAccess'
+import { maintenancePage } from '@/lib/maintenancePage'
 
 import { COMMERCE_ENABLED } from '@/lib/commerce'
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
@@ -83,17 +84,33 @@ const appMiddleware = clerkMiddleware(async (auth, request) => {
   return response
 })
 
+function privateResponse(error = false) {
+  return new NextResponse(maintenancePage(error), {
+    status: error ? 401 : 503,
+    headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'private, no-store', 'X-Robots-Tag': 'noindex, nofollow, noarchive', 'Retry-After': '3600' },
+  })
+}
+
 export default async function middleware(request, event) {
-  if (!(await hasPrivateAccess(request))) {
-    return new NextResponse('Medyra is currently private. Please enter the shared access credentials.', {
-      status: 401,
-      headers: {
-        'WWW-Authenticate': 'Basic realm="Medyra private preview", charset="UTF-8"',
-        'Cache-Control': 'private, no-store',
-        'X-Robots-Tag': 'noindex, nofollow, noarchive',
-        'Content-Type': 'text/plain; charset=utf-8',
-      },
+  if (request.nextUrl.pathname === '/private-access' && request.method === 'POST') {
+    // Reject cross-site submissions; passwords never appear in URLs or logs.
+    const origin = request.headers.get('origin')
+    if (!origin || origin !== request.nextUrl.origin) return privateResponse(true)
+    let password
+    try { password = (await request.formData()).get('password') } catch { return privateResponse(true) }
+    if (!(await verifyPrivatePassword(password))) return privateResponse(true)
+    const response = NextResponse.redirect(new URL('/', request.url), 303)
+    response.cookies.set(PRIVATE_COOKIE, await createPrivateSession(password), {
+      httpOnly: true, secure: request.nextUrl.protocol === 'https:', sameSite: 'strict', path: '/', maxAge: 60 * 60 * 8,
     })
+    response.headers.set('Cache-Control', 'private, no-store')
+    return response
+  }
+  if (!(await hasPrivateAccess(request))) {
+    if (/^\/(api|trpc)(\/|$)/.test(request.nextUrl.pathname)) {
+      return NextResponse.json({ error: 'Medyra is temporarily unavailable. Administrator access only.' }, { status: 503, headers: { 'Cache-Control': 'private, no-store', 'X-Robots-Tag': 'noindex, nofollow' } })
+    }
+    return privateResponse()
   }
   const response = await appMiddleware(request, event)
   if (response && process.env.PRIVATE_SITE_ENABLED !== 'false') {
@@ -103,5 +120,4 @@ export default async function middleware(request, event) {
   return response
 }
 
-// Cover pages, API endpoints and direct public file requests.
 export const config = { matcher: ['/:path*'] }
