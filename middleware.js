@@ -1,3 +1,4 @@
+import { hasPrivateAccess } from '@/lib/privateAccess'
 
 import { COMMERCE_ENABLED } from '@/lib/commerce'
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
@@ -54,7 +55,7 @@ function detectLocaleFromHeader(request) {
   return null
 }
 
-export default clerkMiddleware(async (auth, request) => {
+const appMiddleware = clerkMiddleware(async (auth, request) => {
   const pathname = request.nextUrl.pathname
   if (!COMMERCE_ENABLED && /^\/success(\/|$)/.test(pathname)) {
     return new NextResponse(null, { status: 404, headers: { 'X-Robots-Tag': 'noindex, nofollow' } })
@@ -82,9 +83,25 @@ export default clerkMiddleware(async (auth, request) => {
   return response
 })
 
-export const config = {
-  matcher: [
-    '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
-    '/(api|trpc)(.*)',
-  ],
+export default async function middleware(request, event) {
+  if (!(await hasPrivateAccess(request))) {
+    return new NextResponse('Medyra is currently private. Please enter the shared access credentials.', {
+      status: 401,
+      headers: {
+        'WWW-Authenticate': 'Basic realm="Medyra private preview", charset="UTF-8"',
+        'Cache-Control': 'private, no-store',
+        'X-Robots-Tag': 'noindex, nofollow, noarchive',
+        'Content-Type': 'text/plain; charset=utf-8',
+      },
+    })
+  }
+  const response = await appMiddleware(request, event)
+  if (response && process.env.PRIVATE_SITE_ENABLED !== 'false') {
+    response.headers.set('Cache-Control', 'private, no-store')
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive')
+  }
+  return response
 }
+
+// Cover pages, API endpoints and direct public file requests.
+export const config = { matcher: ['/:path*'] }
