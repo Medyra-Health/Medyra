@@ -713,6 +713,8 @@
     "understandLanguages": "17 langues"
   },
   "pricingPage": {
+    "previewNotice": "Les offres et tarifs sont pr?sent?s ? titre informatif. Les inscriptions et achats sur cette page sont temporairement indisponibles.",
+    "previewButton": "Actuellement indisponible",
     "badge": "Tarification simple et transparente",
     "back": "Retour",
     "heroLine1": "Comprenez votre santé.",

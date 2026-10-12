@@ -1,6 +1,5 @@
 'use client'
 
-import { COMMERCE_ENABLED } from '@/lib/commerce'
 
 import { UserButton } from '@clerk/nextjs'
 
@@ -30,7 +29,7 @@ export default function MedyraUserButton({ signOutUrl = '/' }) {
       <UserButton.MenuItems>
         <UserButton.Link label="Dashboard" labelIcon={<DashboardIcon />} href="/dashboard" />
         <UserButton.Link label="Upload Report" labelIcon={<UploadIcon />} href="/upload" />
-        {COMMERCE_ENABLED && <UserButton.Link label="Pricing" labelIcon={<PricingIcon />} href="/pricing" />}
+        <UserButton.Link label="Pricing" labelIcon={<PricingIcon />} href="/pricing" />
         <UserButton.Action label="manageAccount" />
       </UserButton.MenuItems>
     </UserButton>

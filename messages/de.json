@@ -713,6 +713,8 @@
     "understandLanguages": "17 Sprachen"
   },
   "pricingPage": {
+    "previewNotice": "Tarife und Preise dienen nur zur Information. Registrierungen und K?ufe ?ber diese Seite sind vor?bergehend nicht verf?gbar.",
+    "previewButton": "Derzeit nicht verf?gbar",
     "badge": "Einfache, transparente Preise",
     "back": "Zurück",
     "heroLine1": "Ihre Gesundheit verstehen.",

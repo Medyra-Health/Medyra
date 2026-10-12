@@ -713,6 +713,8 @@
     "understandLanguages": "17 lingue"
   },
   "pricingPage": {
+    "previewNotice": "Piani e prezzi sono solo informativi. Registrazioni e acquisti da questa pagina sono temporaneamente sospesi.",
+    "previewButton": "Al momento non disponibile",
     "badge": "Prezzi semplici e trasparenti",
     "back": "Indietro",
     "heroLine1": "Comprendi la tua salute.",

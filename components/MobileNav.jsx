@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Upload, LayoutDashboard, BookOpen } from 'lucide-react';
+import { Home, Upload, LayoutDashboard, BookOpen, CreditCard } from 'lucide-react';
 import { useUser } from '@clerk/nextjs';
 import { useTranslations } from 'next-intl';
 
@@ -22,10 +22,12 @@ export default function MobileNav() {
         { href: '/upload', icon: Upload, label: t('upload') },
         { href: '/dashboard', icon: LayoutDashboard, label: t('dashboard') },
         { href: '/blog', icon: BookOpen, label: t('blog') },
+        { href: '/pricing', icon: CreditCard, label: t('pricing') },
       ]
     : [
         { href: '/', icon: Home, label: t('home') },
         { href: '/blog', icon: BookOpen, label: t('blog') },
+        { href: '/pricing', icon: CreditCard, label: t('pricing') },
       ];
 
   return (

@@ -7,6 +7,7 @@ import {
   ChevronDown, ChevronUp, ArrowRight, ArrowLeft, Sparkles,
   Users, FileText, MessageCircle, Stethoscope, History, Download,
 } from 'lucide-react'
+import { COMMERCE_ENABLED } from '@/lib/commerce'
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 import { useTranslations } from 'next-intl'
 import MedyraLogo from '@/components/MedyraLogo'
@@ -157,6 +158,7 @@ export default function PricingPage() {
   }, [])
 
   async function handleSubscribe(tier) {
+    if (!COMMERCE_ENABLED) return
     if (tier.ctaAction === 'mailto') {
       window.location.href = 'mailto:hello@medyra.de'
       return
@@ -209,6 +211,12 @@ export default function PricingPage() {
           <p className="text-gray-500 text-sm md:text-base max-w-lg mx-auto">{t('subtitle')}</p>
         </div>
 
+        {!COMMERCE_ENABLED && (
+          <p role="status" className="relative mb-8 rounded-xl border border-amber-200 bg-amber-50 px-5 py-4 text-center text-sm text-amber-900">
+            {t('previewNotice')}
+          </p>
+        )}
+
         {/* Pricing cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
           {TIERS.map((tier, idx) => {
@@ -238,6 +246,11 @@ export default function PricingPage() {
                 </div>
 
                 <div className="mb-5">
+                  {!COMMERCE_ENABLED ? (
+                    <Button className="w-full" size="sm" variant="outline" disabled>
+                      {t('previewButton')}
+                    </Button>
+                  ) : (<>
                   {tier.id === 'free' && (
                     <>
                       <SignedOut>
@@ -275,6 +288,7 @@ export default function PricingPage() {
                       </SignedIn>
                     </>
                   )}
+                  </>)}
                 </div>
 
                 <div className="border-t border-gray-100 mb-4" />

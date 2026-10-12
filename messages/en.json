@@ -713,6 +713,8 @@
     "understandLanguages": "17 Languages"
   },
   "pricingPage": {
+    "previewNotice": "Plans and prices are for information only. Sign-ups and purchases from this page are temporarily unavailable.",
+    "previewButton": "Currently unavailable",
     "badge": "Simple, transparent pricing",
     "back": "Back",
     "heroLine1": "Understand your health.",

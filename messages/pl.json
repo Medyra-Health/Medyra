@@ -713,6 +713,8 @@
     "understandLanguages": "17 języków"
   },
   "pricingPage": {
+    "previewNotice": "Plany i ceny maj? charakter informacyjny. Rejestracja i zakupy na tej stronie s? tymczasowo niedost?pne.",
+    "previewButton": "Obecnie niedost?pne",
     "badge": "Proste i przejrzyste ceny",
     "back": "Wstecz",
     "heroLine1": "Zrozum swoje zdrowie.",

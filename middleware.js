@@ -16,6 +16,7 @@ const isPublicRoute = createRouteMatcher([
   '/privacy(.*)',
   '/terms(.*)',
   '/contact(.*)',
+  '/pricing(.*)',
   '/impressum(.*)',
   '/verstehen(.*)',
   '/check(.*)',
@@ -55,7 +56,7 @@ function detectLocaleFromHeader(request) {
 
 export default clerkMiddleware(async (auth, request) => {
   const pathname = request.nextUrl.pathname
-  if (!COMMERCE_ENABLED && /^\/(pricing|success)(\/|$)/.test(pathname)) {
+  if (!COMMERCE_ENABLED && /^\/success(\/|$)/.test(pathname)) {
     return new NextResponse(null, { status: 404, headers: { 'X-Robots-Tag': 'noindex, nofollow' } })
   }
   if (!COMMERCE_ENABLED && /^\/api\/(checkout|billing-portal)(\/|$)/.test(pathname)) {

@@ -713,6 +713,8 @@
     "understandLanguages": "17 talen"
   },
   "pricingPage": {
+    "previewNotice": "Abonnementen en prijzen zijn alleen ter informatie. Registraties en aankopen via deze pagina zijn tijdelijk niet beschikbaar.",
+    "previewButton": "Momenteel niet beschikbaar",
     "badge": "Eenvoudige, transparante prijzen",
     "back": "Terug",
     "heroLine1": "Begrijp uw gezondheid.",

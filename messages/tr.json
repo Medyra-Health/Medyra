@@ -713,6 +713,8 @@
     "understandLanguages": "17 Dil"
   },
   "pricingPage": {
+    "previewNotice": "Planlar ve fiyatlar yaln?zca bilgi ama?l?d?r. Bu sayfadan kay?t ve sat?n alma ge?ici olarak kullan?lam?yor.",
+    "previewButton": "?u anda kullan?lam?yor",
     "badge": "Basit ve şeffaf fiyatlandırma",
     "back": "Geri",
     "heroLine1": "Sağlığınızı anlayın.",
