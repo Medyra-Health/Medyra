@@ -92,6 +92,12 @@ function privateResponse(error = false) {
 }
 
 export default async function middleware(request, event) {
+  // Framework assets must never pass through either authentication gate.
+  // Redirecting a CSS/JS request returns HTML and leaves the page unstyled
+  // or prevents hydration, even after the private-site password was accepted.
+  if (request.nextUrl.pathname.startsWith('/_next/')) {
+    return NextResponse.next()
+  }
   if (request.method === 'POST' && request.nextUrl.pathname === '/private-access') {
     return NextResponse.rewrite(new URL('/api/private-access',request.url))
   }
@@ -103,6 +109,12 @@ export default async function middleware(request, event) {
       return NextResponse.json({ error: 'Medyra is temporarily unavailable. Administrator access only.' }, { status: 503, headers: { 'Cache-Control': 'private, no-store', 'X-Robots-Tag': 'noindex, nofollow' } })
     }
     return privateResponse()
+  }
+  // Public-directory files need the site gate, but not a Clerk account.
+  // Keep API and application routes authenticated even when they contain dots.
+  if (!/^\/(api|trpc)(\/|$)/.test(request.nextUrl.pathname) &&
+      /\.(?:css|js|mjs|map|png|jpe?g|gif|svg|ico|webp|avif|woff2?|ttf|otf|webmanifest|json|xml|txt|pdf)$/i.test(request.nextUrl.pathname)) {
+    return NextResponse.next()
   }
   const response = await appMiddleware(request, event)
   if (response && process.env.PRIVATE_SITE_ENABLED !== 'false') {
